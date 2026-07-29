@@ -35,8 +35,8 @@ const BlogPost = () => {
           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-8">
             {post.excerpt}
           </p>
-          <div className="w-full rounded-2xl overflow-hidden mb-10 shadow-lg border border-border/50">
-             <img src={post.image} alt={post.title} className="w-full h-auto object-contain" />
+          <div className="w-full rounded-2xl overflow-hidden mb-10 shadow-lg border border-border/50 bg-muted/10 flex justify-center">
+             <img src={post.image} alt={post.title} className="w-full max-h-[500px] h-auto object-contain" />
           </div>
         </div>
 
