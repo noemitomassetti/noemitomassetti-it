@@ -52,24 +52,38 @@ const Risorse = () => {
     title: "Strumenti e Risorse per l'Organizzazione | Noemi Tomassetti",
     description: "Scopri gli strumenti, i consigli pratici e le risorse gratuite per ottimizzare i processi della tua attività e recuperare tempo prezioso.",
     canonical: "https://www.noemitomassetti.it/risorse",
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.noemitomassetti.it/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Risorse",
-          "item": "https://www.noemitomassetti.it/risorse"
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.noemitomassetti.it/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Risorse",
+            "item": "https://www.noemitomassetti.it/risorse"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Strumenti e Risorse per l'Organizzazione | Noemi Tomassetti",
+        "description": "Scopri gli strumenti, i consigli pratici e le risorse gratuite consigliate da un'Assistente Virtuale esperta per ottimizzare la tua attività.",
+        "url": "https://www.noemitomassetti.it/risorse",
+        "author": {
+          "@type": "Person",
+          "name": "Noemi Tomassetti",
+          "url": "https://www.noemitomassetti.it"
         }
-      ]
-    }
+      }
+    ]
   });
 
   return (

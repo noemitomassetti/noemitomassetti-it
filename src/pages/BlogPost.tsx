@@ -55,7 +55,9 @@ const BlogPost = () => {
         "author": {
           "@type": "Person",
           "name": "Noemi Tomassetti",
-          "url": "https://www.noemitomassetti.it"
+          "url": "https://www.noemitomassetti.it",
+          "jobTitle": "Assistente Virtuale per Professionisti",
+          "description": "Assistente Virtuale e Segreteria Virtuale con oltre 25 anni di esperienza. Laureata in Mediazione Linguistica con 110 e lode e Master in Traduzione Specialistica."
         },
         "publisher": {
           "@type": "Organization",
@@ -107,6 +109,17 @@ const BlogPost = () => {
             prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+
+        <address rel="author" className="not-italic mt-16 p-6 md:p-8 bg-card border border-border/50 rounded-2xl flex flex-col sm:flex-row gap-6 items-center sm:items-start" itemScope itemType="https://schema.org/Person">
+          <img src="https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg" alt="Noemi Tomassetti" width="100" height="100" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
+          <div className="text-center sm:text-left">
+            <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>
+            <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Assistente Virtuale per Professionisti</p>
+            <p className="text-base text-foreground/80 leading-relaxed" itemProp="description">
+              Con oltre 25 anni di esperienza, supporto liberi professionisti e piccole aziende nella gestione operativa e amministrativa. Laureata in Mediazione Linguistica (110 e lode) e specializzata in Traduzione, offro supporto multilingue (IT, EN, FR, ES) per ottimizzare il tuo tempo e migliorare l'organizzazione della tua attività.
+            </p>
+          </div>
+        </address>
 
         <div className="mt-16 pt-10 border-t border-border/50">
           <h2 className="text-2xl font-bold text-primary mb-6">Potrebbe interessarti anche...</h2>

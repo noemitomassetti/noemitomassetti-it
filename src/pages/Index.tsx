@@ -229,9 +229,14 @@ const Index = () => {
         "@context": "https://schema.org",
         "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
         "name": "Noemi Tomassetti Virtual Assistant",
+        "description": "Servizi di Assistenza Virtuale e Segreteria Virtuale per liberi professionisti, consulenti e piccole aziende. Organizzazione aziendale e gestione appuntamenti.",
         "url": "https://www.noemitomassetti.it",
         "logo": "https://vibe.filesafe.space/meta/1776423224485175331/favicon.png",
         "image": "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
+        "founder": {
+          "@type": "Person",
+          "name": "Noemi Tomassetti"
+        },
         "sameAs": [
           "https://www.linkedin.com/in/noemitomassetti",
           "https://www.facebook.com/profile.php?id=61588891083364",
@@ -258,8 +263,21 @@ const Index = () => {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Noemi Tomassetti",
-        "jobTitle": "Assistente Virtuale",
+        "jobTitle": "Assistente Virtuale per Professionisti",
+        "description": "Assistente Virtuale e Segreteria Virtuale con oltre 25 anni di esperienza. Laureata in Mediazione Linguistica con 110 e lode e Master in Traduzione Specialistica.",
+        "knowsLanguage": ["it", "en", "fr", "es"],
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Università (Laurea in Mediazione Linguistica)"
+          }
+        ],
         "url": "https://www.noemitomassetti.it",
+        "sameAs": [
+          "https://www.linkedin.com/in/noemitomassetti",
+          "https://www.facebook.com/profile.php?id=61588891083364",
+          "https://www.instagram.com/noemitomassetti_va"
+        ],
         "worksFor": {
           "@type": "Organization",
           "name": "Noemi Tomassetti Virtual Assistant"
@@ -285,7 +303,12 @@ const Index = () => {
         "provider": {
           "@type": "Organization",
           "name": "Noemi Tomassetti Virtual Assistant"
-        }
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        "serviceType": "Virtual Assistant Services"
       }))
     ]
   });

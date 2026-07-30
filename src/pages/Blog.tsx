@@ -8,26 +8,40 @@ import { useSEO } from "@/hooks/useSEO";
 const Blog = () => {
   useSEO({
     title: "Blog Assistente Virtuale | Noemi Tomassetti",
-    description: "Scopri guide pratiche, strumenti e consigli di un'Assistente Virtuale per gestire la tua attività, risparmiare tempo e ridurre lo stress.",
+    description: "Consigli pratici e strategie di un'Assistente Virtuale con oltre 25 anni di esperienza. Scopri come organizzare il lavoro, delegare attività e migliorare la produttività.",
     canonical: "https://www.noemitomassetti.it/blog",
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.noemitomassetti.it/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.noemitomassetti.it/blog"
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.noemitomassetti.it/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.noemitomassetti.it/blog"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Blog Assistente Virtuale | Noemi Tomassetti",
+        "description": "Consigli pratici e strategie di un'Assistente Virtuale con oltre 25 anni di esperienza.",
+        "url": "https://www.noemitomassetti.it/blog",
+        "author": {
+          "@type": "Person",
+          "name": "Noemi Tomassetti",
+          "url": "https://www.noemitomassetti.it"
         }
-      ]
-    }
+      }
+    ]
   });
 
   return (
