@@ -1,10 +1,9 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Instagram, Linkedin, Facebook, Mail, Phone, Menu, X, Globe } from "lucide-react";
+import { Instagram, Linkedin, Facebook, Mail, Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BookingButton } from "@/components/BookingButton";
 import { useState, useEffect } from "react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 const mainLinks = [
   { href: "#home", label: "Home" },

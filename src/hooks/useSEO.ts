@@ -1,5 +1,10 @@
 import { useEffect } from "react";
 
+export interface AlternateLink {
+  hrefLang: string;
+  href: string;
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -8,6 +13,7 @@ interface SEOProps {
   ogType?: "website" | "article";
   ogLocale?: string;
   noindex?: boolean;
+  alternates?: AlternateLink[];
   schema?: Record<string, any> | Record<string, any>[];
 }
 
@@ -19,6 +25,7 @@ export const useSEO = ({
   ogType = "website",
   ogLocale = "it_IT",
   noindex = false,
+  alternates,
   schema,
 }: SEOProps) => {
   useEffect(() => {
@@ -66,6 +73,28 @@ export const useSEO = ({
       updateMetaTag("og:url", canonical, true);
     }
 
+    // Manage hreflang alternate links
+    const defaultAlternates: AlternateLink[] = canonical
+      ? [
+          { hrefLang: "it", href: canonical },
+          { hrefLang: "x-default", href: canonical },
+        ]
+      : [];
+
+    const effectiveAlternates = alternates && alternates.length > 0 ? alternates : defaultAlternates;
+
+    // Remove existing hreflang tags to prevent duplicates
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+
+    // Inject effective hreflang links
+    effectiveAlternates.forEach((alt) => {
+      const altLink = document.createElement("link");
+      altLink.setAttribute("rel", "alternate");
+      altLink.setAttribute("hreflang", alt.hrefLang);
+      altLink.setAttribute("href", alt.href);
+      document.head.appendChild(altLink);
+    });
+
     // Update structured data (schema)
     let script = document.querySelector('script[type="application/ld+json"]');
     if (schema) {
@@ -78,5 +107,5 @@ export const useSEO = ({
     } else if (script) {
       script.remove();
     }
-  }, [title, description, canonical, ogImage, ogType, noindex, schema]);
+  }, [title, description, canonical, ogImage, ogType, ogLocale, noindex, alternates, schema]);
 };

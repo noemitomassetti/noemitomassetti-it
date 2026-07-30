@@ -9,10 +9,9 @@ import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import {
-  Calendar, Mail, User, ClipboardList, Folder, Database, Briefcase,
-  Apple, Dumbbell, Target, GraduationCap,
-  Leaf, CalendarDays, Star, Send, MapPin, Phone,
-  Clock, Euro, Award, Heart, Globe, MessageSquare, RefreshCw, LayoutList, CheckCircle2, Bell, RotateCcw, AlertCircle, CheckCheck, FileText
+  Calendar, Mail, User, Database, Briefcase,
+  GraduationCap, CalendarDays, Star, Send, MapPin, Phone,
+  Globe, LayoutList, CheckCircle2, CheckCheck
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
