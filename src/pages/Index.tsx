@@ -179,20 +179,20 @@ const ContattiForm = () => {
         </div>
         <div className="space-y-3">
           <div className="bg-secondary/20 border border-border/50 rounded-lg p-4">
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input type="checkbox" checked={gdprChecked} onChange={(e) => setGdprChecked(e.target.checked)} className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0" />
-              <span className="text-sm md:text-xs text-foreground/70 leading-relaxed">
+            <div className="flex items-start gap-3">
+              <input type="checkbox" id="gdprConsent" checked={gdprChecked} onChange={(e) => setGdprChecked(e.target.checked)} className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0" />
+              <label htmlFor="gdprConsent" className="text-sm md:text-xs text-foreground/70 leading-relaxed cursor-pointer">
                 Ho letto e accetto l'<Link to="/privacy-policy" className="text-primary hover:underline font-medium">Informativa Privacy</Link> e acconsento al trattamento dei miei dati personali ai fini della richiesta di contatto, ai sensi del <strong className="text-foreground/80">Regolamento UE 2016/679 (GDPR)</strong>. *
-              </span>
-            </label>
+              </label>
+            </div>
           </div>
           <div className="bg-secondary/20 border border-border/50 rounded-lg p-4">
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input type="checkbox" checked={newsletterChecked} onChange={(e) => setNewsletterChecked(e.target.checked)} className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0" />
-              <span className="text-sm md:text-xs text-foreground/70 leading-relaxed">
+            <div className="flex items-start gap-3">
+              <input type="checkbox" id="newsletterConsent" checked={newsletterChecked} onChange={(e) => setNewsletterChecked(e.target.checked)} className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0" />
+              <label htmlFor="newsletterConsent" className="text-sm md:text-xs text-foreground/70 leading-relaxed cursor-pointer">
                 Desidero ricevere aggiornamenti, consigli pratici e risorse utili via email. Acconsento al trattamento dei dati per finalità informative e di marketing ai sensi del <strong className="text-foreground/80">Regolamento UE 2016/679 (GDPR)</strong>. <em className="italic opacity-80">Nessuno spam. Solo contenuti utili e aggiornamenti occasionali.</em>
-              </span>
-            </label>
+              </label>
+            </div>
           </div>
         </div>
 <Button type="submit" className="w-full hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 py-6 text-base font-semibold uppercase tracking-wide" disabled={isSubmitting || !gdprChecked}>

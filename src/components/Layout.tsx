@@ -102,13 +102,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           {/* Social icons + CTA + hamburger */}
           <div className="flex items-center gap-1 shrink-0">
             <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-9 w-9 hidden sm:flex">
-              <a href="https://www.instagram.com/noemitomassetti_va" target="_blank" rel="noreferrer" aria-label="Profilo Instagram"><Instagram className="h-4 w-4" /></a>
+              <a href="https://www.instagram.com/noemitomassetti_va" target="_blank" rel="noopener noreferrer" aria-label="Profilo Instagram"><Instagram className="h-4 w-4" /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-9 w-9 hidden sm:flex">
-              <a href="https://www.facebook.com/profile.php?id=61588891083364" target="_blank" rel="noreferrer" aria-label="Pagina Facebook"><Facebook className="h-4 w-4" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61588891083364" target="_blank" rel="noopener noreferrer" aria-label="Pagina Facebook"><Facebook className="h-4 w-4" /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-9 w-9 hidden sm:flex">
-              <a href="https://www.linkedin.com/in/noemi-tomassetti/" target="_blank" rel="noreferrer" aria-label="Profilo LinkedIn"><Linkedin className="h-4 w-4" /></a>
+              <a href="https://www.linkedin.com/in/noemi-tomassetti/" target="_blank" rel="noopener noreferrer" aria-label="Profilo LinkedIn"><Linkedin className="h-4 w-4" /></a>
             </Button>
             {/* CTA — desktop only */}
             <BookingButton
@@ -166,13 +166,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Social in mobile menu */}
             <div className="flex gap-2 pt-3">
               <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-9 w-9">
-                <a href="https://www.instagram.com/noemitomassetti_va" target="_blank" rel="noreferrer" aria-label="Profilo Instagram"><Instagram className="h-4 w-4" /></a>
+                <a href="https://www.instagram.com/noemitomassetti_va" target="_blank" rel="noopener noreferrer" aria-label="Profilo Instagram"><Instagram className="h-4 w-4" /></a>
               </Button>
               <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-9 w-9">
-                <a href="https://www.facebook.com/profile.php?id=61588891083364" target="_blank" rel="noreferrer" aria-label="Pagina Facebook"><Facebook className="h-4 w-4" /></a>
+                <a href="https://www.facebook.com/profile.php?id=61588891083364" target="_blank" rel="noopener noreferrer" aria-label="Pagina Facebook"><Facebook className="h-4 w-4" /></a>
               </Button>
               <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-9 w-9">
-                <a href="https://www.linkedin.com/in/noemi-tomassetti/" target="_blank" rel="noreferrer" aria-label="Profilo LinkedIn"><Linkedin className="h-4 w-4" /></a>
+                <a href="https://www.linkedin.com/in/noemi-tomassetti/" target="_blank" rel="noopener noreferrer" aria-label="Profilo LinkedIn"><Linkedin className="h-4 w-4" /></a>
               </Button>
             </div>
           </nav>
@@ -207,13 +207,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <p className="text-sm md:text-xs text-muted-foreground/70">P. IVA 03050740426</p>
             <div className="flex items-center gap-2 mt-1">
               <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-8 w-8">
-                <a href="https://www.instagram.com/noemitomassetti_va" target="_blank" rel="noreferrer" aria-label="Profilo Instagram"><Instagram className="h-4 w-4" /></a>
+                <a href="https://www.instagram.com/noemitomassetti_va" target="_blank" rel="noopener noreferrer" aria-label="Profilo Instagram"><Instagram className="h-4 w-4" /></a>
               </Button>
               <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-8 w-8">
-                <a href="https://www.facebook.com/profile.php?id=61588891083364" target="_blank" rel="noreferrer" aria-label="Pagina Facebook"><Facebook className="h-4 w-4" /></a>
+                <a href="https://www.facebook.com/profile.php?id=61588891083364" target="_blank" rel="noopener noreferrer" aria-label="Pagina Facebook"><Facebook className="h-4 w-4" /></a>
               </Button>
               <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary h-8 w-8">
-                <a href="https://www.linkedin.com/in/noemi-tomassetti/" target="_blank" rel="noreferrer" aria-label="Profilo LinkedIn"><Linkedin className="h-4 w-4" /></a>
+                <a href="https://www.linkedin.com/in/noemi-tomassetti/" target="_blank" rel="noopener noreferrer" aria-label="Profilo LinkedIn"><Linkedin className="h-4 w-4" /></a>
               </Button>
             </div>
           </address>

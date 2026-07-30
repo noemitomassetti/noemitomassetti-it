@@ -151,25 +151,25 @@ export function BookingButton({ children, className, variant, size, asChild, onC
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <label className="text-sm font-medium">Nome *</label>
-                <Input required value={form.firstName} onChange={e => setForm({...form, firstName: e.target.value})} />
+                <label htmlFor="booking-firstName" className="text-sm font-medium">Nome *</label>
+                <Input id="booking-firstName" required value={form.firstName} onChange={e => setForm({...form, firstName: e.target.value})} />
               </div>
               <div className="space-y-1.5">
-                <label className="text-sm font-medium">Cognome *</label>
-                <Input required value={form.lastName} onChange={e => setForm({...form, lastName: e.target.value})} />
+                <label htmlFor="booking-lastName" className="text-sm font-medium">Cognome *</label>
+                <Input id="booking-lastName" required value={form.lastName} onChange={e => setForm({...form, lastName: e.target.value})} />
               </div>
             </div>
             <div className="space-y-1.5">
-              <label className="text-sm font-medium">Email *</label>
-              <Input type="email" required value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
+              <label htmlFor="booking-email" className="text-sm font-medium">Email *</label>
+              <Input id="booking-email" type="email" required value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
             </div>
             <div className="space-y-1.5">
-              <label className="text-sm font-medium">Telefono</label>
-              <Input type="tel" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} />
+              <label htmlFor="booking-phone" className="text-sm font-medium">Telefono</label>
+              <Input id="booking-phone" type="tel" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} />
             </div>
             <div className="space-y-1.5">
-              <label className="text-sm font-medium">Note</label>
-              <Textarea value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} />
+              <label htmlFor="booking-notes" className="text-sm font-medium">Note</label>
+              <Textarea id="booking-notes" value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} />
             </div>
             <Button type="submit" className="w-full" disabled={booking}>
               {booking ? "Conferma in corso..." : "Conferma Prenotazione"}
