@@ -227,36 +227,31 @@ const Index = () => {
       },
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
         "name": "Noemi Tomassetti Virtual Assistant",
         "url": "https://www.noemitomassetti.it",
         "logo": "https://vibe.filesafe.space/meta/1776423224485175331/favicon.png",
+        "image": "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
         "sameAs": [
           "https://www.linkedin.com/in/noemitomassetti",
-          "https://www.facebook.com/",
-          "https://www.instagram.com/"
+          "https://www.facebook.com/profile.php?id=61588891083364",
+          "https://www.instagram.com/noemitomassetti_va"
         ],
+        "telephone": "+39-388-471-8600",
+        "email": "info@noemitomassetti.it",
+        "areaServed": "IT",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Castelfidardo",
+          "addressRegion": "AN",
+          "addressCountry": "IT"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+39-388-471-8600",
           "contactType": "customer support",
           "email": "info@noemitomassetti.it",
           "availableLanguage": ["Italian", "English", "French", "Spanish"]
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Noemi Tomassetti Virtual Assistant",
-        "image": "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
-        "url": "https://www.noemitomassetti.it",
-        "telephone": "+393884718600",
-        "email": "info@noemitomassetti.it",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Castelfidardo",
-          "addressRegion": "AN",
-          "addressCountry": "IT"
         }
       },
       {
@@ -705,23 +700,24 @@ const Index = () => {
                 </li>
               ))}
             </ul>
-            <div className="space-y-3 mb-6">
+            <address className="space-y-3 mb-6 not-italic" itemScope itemType="https://schema.org/LocalBusiness">
+              <meta itemProp="name" content="Noemi Tomassetti Virtual Assistant" />
               <div className="flex items-center gap-3 text-foreground/90 text-base">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@noemitomassetti.it" className="text-primary hover:underline">info@noemitomassetti.it</a>
+                <a href="mailto:info@noemitomassetti.it" itemProp="email" className="text-primary hover:underline">info@noemitomassetti.it</a>
               </div>
               <div className="flex items-center gap-3 text-foreground/90 text-base">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+393884718600" className="hover:text-primary">+39 388 471 8600</a>
+                <a href="tel:+393884718600" itemProp="telephone" className="hover:text-primary">+39 388 471 8600</a>
               </div>
-              <div className="flex items-start gap-3 text-foreground/90 text-base">
+              <div className="flex items-start gap-3 text-foreground/90 text-base" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <span>Castelfidardo (AN) - ITALIA</span>
+                  <span><span itemProp="addressLocality">Castelfidardo</span> (<span itemProp="addressRegion">AN</span>) - <span itemProp="addressCountry">ITALIA</span></span>
                   <span>Supporto da remoto in tutta Italia</span>
                 </div>
               </div>
-            </div>
+            </address>
             <div className="bg-secondary/30 border border-border rounded-xl p-5">
               <p className="text-foreground/80 text-base leading-relaxed">
                 <BookingButton asChild><button className="text-primary font-bold hover:underline uppercase">PRENOTA UNA CALL CONOSCITIVA GRATUITA</button></BookingButton> (30 minuti). Capiremo insieme come posso supportarti nella gestione operativa della tua attività, in modo concreto, semplice e sostenibile.

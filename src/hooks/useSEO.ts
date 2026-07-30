@@ -6,6 +6,7 @@ interface SEOProps {
   canonical?: string;
   ogImage?: string;
   ogType?: "website" | "article";
+  ogLocale?: string;
   noindex?: boolean;
   schema?: Record<string, any> | Record<string, any>[];
 }
@@ -16,6 +17,7 @@ export const useSEO = ({
   canonical,
   ogImage = "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
   ogType = "website",
+  ogLocale = "it_IT",
   noindex = false,
   schema,
 }: SEOProps) => {
@@ -39,6 +41,7 @@ export const useSEO = ({
     updateMetaTag("og:title", title, true);
     updateMetaTag("og:description", description, true);
     updateMetaTag("og:type", ogType, true);
+    updateMetaTag("og:locale", ogLocale, true);
     updateMetaTag("og:image", ogImage, true);
     updateMetaTag("twitter:title", title);
     updateMetaTag("twitter:description", description);

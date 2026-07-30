@@ -189,17 +189,18 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
 
           {/* Contatti & social */}
-          <div className="flex flex-col items-center md:items-end gap-3">
-            <a href="mailto:info@noemitomassetti.it" className="flex items-center gap-2 text-base md:text-sm text-muted-foreground hover:text-primary transition-colors">
+          <address className="flex flex-col items-center md:items-end gap-3 not-italic" itemScope itemType="https://schema.org/LocalBusiness">
+            <meta itemProp="name" content="Noemi Tomassetti Virtual Assistant" />
+            <a href="mailto:info@noemitomassetti.it" itemProp="email" className="flex items-center gap-2 text-base md:text-sm text-muted-foreground hover:text-primary transition-colors">
               <Mail className="h-4 w-4" />
               info@noemitomassetti.it
             </a>
-            <a href="tel:+393884718600" className="flex items-center gap-2 text-base md:text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:+393884718600" itemProp="telephone" className="flex items-center gap-2 text-base md:text-sm text-muted-foreground hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
               +39 388 471 8600
             </a>
-            <div className="flex flex-col items-center md:items-end text-sm md:text-xs text-muted-foreground/70 leading-relaxed">
-              <span>📍 Castelfidardo (AN)</span>
+            <div className="flex flex-col items-center md:items-end text-sm md:text-xs text-muted-foreground/70 leading-relaxed" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+              <span>📍 <span itemProp="addressLocality">Castelfidardo</span> (<span itemProp="addressRegion">AN</span>)</span>
               <span>Supporto da remoto in tutta Italia</span>
             </div>
             <p className="text-sm md:text-xs text-muted-foreground/70">P. IVA 03050740426</p>
@@ -214,7 +215,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <a href="https://www.linkedin.com/in/noemi-tomassetti/" target="_blank" rel="noreferrer" aria-label="Profilo LinkedIn"><Linkedin className="h-4 w-4" /></a>
               </Button>
             </div>
-          </div>
+          </address>
         </div>
 
         {/* Copyright + legal */}
