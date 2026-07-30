@@ -336,7 +336,8 @@ const Index = () => {
           <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <h1 className="sr-only">Noemi Tomassetti - Assistente Virtuale per liberi professionisti, consulenti e piccole aziende. Servizi di segreteria virtuale, gestione agenda e back office.</h1>
             <div className="mb-6 md:mb-8 w-full max-w-[280px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[600px]">
-              <svg viewBox="0 0 400 68" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Noemi Tomassetti Virtual Assistant">
+              <svg viewBox="0 0 400 68" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Noemi Tomassetti Virtual Assistant" role="img">
+                <title>Noemi Tomassetti - Virtual Assistant</title>
                 <text x="0" y="42" fontFamily="'Inter', 'Helvetica Neue', Arial, sans-serif" fontWeight="500" fontSize="40" fill="#e5c0a1" textLength="400" lengthAdjust="spacing" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Noemi Tomassetti</text>
                 <text x="0" y="62" fontFamily="'Inter', 'Helvetica Neue', Arial, sans-serif" fontWeight="300" fontSize="14" fill="rgba(229, 192, 161, 0.9)" letterSpacing="5" textLength="400" lengthAdjust="spacing" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>VIRTUAL ASSISTANT</text>
               </svg>
@@ -541,7 +542,7 @@ const Index = () => {
                 RICHIEDI UN PREVENTIVO
               </BookingButton>
             </div>
-            <p className="text-base md:text-lg font-medium text-foreground text-center">Durante la <BookingButton asChild><button className="text-primary font-bold hover:underline hover:text-primary/80 transition-colors">call conoscitiva gratuita</button></BookingButton> analizziamo la tua situazione e costruiamo insieme la soluzione più adatta alla tua attività.</p>
+            <p className="text-base md:text-lg font-medium text-foreground text-center">Durante la <BookingButton variant="link" className="text-primary font-bold hover:underline hover:text-primary/80 transition-colors p-0 h-auto inline">call conoscitiva gratuita</BookingButton> analizziamo la tua situazione e costruiamo insieme la soluzione più adatta alla tua attività.</p>
           </div>
         </div>
       </section>
@@ -664,10 +665,10 @@ const Index = () => {
               .filter(post => post.published !== false)
               .sort((a, b) => b.dateISO.localeCompare(a.dateISO))
               .slice(0, 3)
-              .map((post) => (
+              .map((post, index) => (
               <Card key={post.id} className="flex flex-col h-full bg-background border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 overflow-hidden group">
                 <div className="h-40 w-full bg-muted overflow-hidden">
-                  <img src={post.image} alt={`Immagine per l'articolo: ${post.title}`} loading="lazy" width="400" height="200" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
+                  <img src={post.image} alt={`Immagine per l'articolo: ${post.title}`} loading={index === 0 ? "eager" : "lazy"} width="400" height="200" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
                 </div>
                 <CardHeader className="pt-4">
                   <div className="flex items-center justify-between mb-2">
@@ -717,7 +718,7 @@ const Index = () => {
       <section id="contatti" className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Riprendi il controllo del tuo tempo con un'assistente virtuale dedicata.</h2>
         <p className="text-foreground/80 text-base md:text-lg mb-10 max-w-2xl">
-          Scrivimi o <BookingButton asChild><button className="text-primary font-bold hover:underline">prenota una call conoscitiva gratuita</button></BookingButton>: valuteremo insieme come delegare la gestione agenda, le email e il back office per farti risparmiare tempo prezioso e aumentare la tua produttività. Ti rispondo entro 24 ore lavorative.
+          Scrivimi o <BookingButton variant="link" className="text-primary font-bold hover:underline p-0 h-auto inline">prenota una call conoscitiva gratuita</BookingButton>: valuteremo insieme come delegare la gestione agenda, le email e il back office per farti risparmiare tempo prezioso e aumentare la tua produttività. Ti rispondo entro 24 ore lavorative.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
@@ -756,7 +757,7 @@ const Index = () => {
             </address>
             <div className="bg-secondary/30 border border-border rounded-xl p-5">
               <p className="text-foreground/80 text-base leading-relaxed">
-                <BookingButton asChild><button className="text-primary font-bold hover:underline uppercase">PRENOTA UNA CALL CONOSCITIVA GRATUITA</button></BookingButton> (30 minuti). Capiremo insieme come posso supportarti nella gestione operativa della tua attività, in modo concreto, semplice e sostenibile.
+                <BookingButton variant="link" className="text-primary font-bold hover:underline uppercase p-0 h-auto inline">PRENOTA UNA CALL CONOSCITIVA GRATUITA</BookingButton> (30 minuti). Capiremo insieme come posso supportarti nella gestione operativa della tua attività, in modo concreto, semplice e sostenibile.
               </p>
             </div>
           </div>

@@ -18,7 +18,8 @@ const mainLinks = [
 ];
 
 const NavLogo = () => (
-  <svg viewBox="0 0 240 46" className="w-[180px] sm:w-[240px] h-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Noemi Tomassetti">
+  <svg viewBox="0 0 240 46" className="w-[180px] sm:w-[240px] h-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Noemi Tomassetti" role="img">
+    <title>Noemi Tomassetti</title>
     <text x="0" y="28" fontFamily="'Inter', 'Helvetica Neue', Arial, sans-serif" fontWeight="600" fontSize="26" fill="hsl(27 58% 78%)" textLength="240" lengthAdjust="spacing">Noemi Tomassetti</text>
     <text x="0" y="44" fontFamily="'Inter', 'Helvetica Neue', Arial, sans-serif" fontWeight="300" fontSize="9.5" fill="hsl(27 58% 78% / 0.75)" letterSpacing="4" textLength="240" lengthAdjust="spacing">VIRTUAL ASSISTANT</text>
   </svg>

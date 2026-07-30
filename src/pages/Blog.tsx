@@ -60,10 +60,10 @@ const Blog = () => {
           {getBlogPosts()
             .filter(post => post.published !== false)
             .sort((a, b) => b.dateISO.localeCompare(a.dateISO))
-            .map((post) => (
+            .map((post, index) => (
             <Card key={post.id} className="flex flex-col h-full bg-card border-border/50 hover:border-primary/50 transition-colors overflow-hidden">
                 <div className="h-48 w-full bg-muted overflow-hidden">
-                  <img src={post.image} alt={`Immagine per l'articolo: ${post.title}`} loading="lazy" width="600" height="300" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
+                  <img src={post.image} alt={`Immagine per l'articolo: ${post.title}`} loading={index < 2 ? "eager" : "lazy"} fetchPriority={index < 2 ? "high" : "auto"} width="600" height="300" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
                 </div>
               <CardHeader className="pt-4">
                 <div className="flex items-center justify-between mb-2">
