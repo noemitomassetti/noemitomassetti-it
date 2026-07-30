@@ -27,7 +27,8 @@ export function BookingButton({ children, className, variant, size, asChild, onC
     lastName: "",
     email: "",
     phone: "",
-    notes: ""
+    notes: "",
+    website: ""
   });
 
   const fetchSlots = async (month: Date) => {
@@ -60,6 +61,13 @@ export function BookingButton({ children, className, variant, size, asChild, onC
   const handleBook = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedSlot) return;
+    
+    // Spam protection check
+    if (form.website) {
+      setOpen(false);
+      return;
+    }
+
     setBooking(true);
     try {
       const res = await fetch(`${VIBE_API_URL}/booking/submit`, {
@@ -81,7 +89,7 @@ export function BookingButton({ children, className, variant, size, asChild, onC
       if (!res.ok) throw new Error("Booking failed");
       toast({ title: "Prenotazione confermata!", description: "Riceverai un'email con i dettagli." });
       setOpen(false);
-      setForm({ firstName: "", lastName: "", email: "", phone: "", notes: "" });
+      setForm({ firstName: "", lastName: "", email: "", phone: "", notes: "", website: "" });
       setDate(undefined);
       setSelectedSlot(null);
     } catch (e) {
@@ -148,6 +156,10 @@ export function BookingButton({ children, className, variant, size, asChild, onC
                 {format(new Date(selectedSlot), "dd MMMM yyyy 'alle' HH:mm", { locale: it })}
               </span>
               <Button type="button" variant="ghost" size="sm" onClick={() => setSelectedSlot(null)}>Modifica</Button>
+            </div>
+            <div className="hidden" aria-hidden="true">
+              <label htmlFor="booking-website">Website</label>
+              <input type="text" id="booking-website" value={form.website || ""} onChange={e => setForm({...form, website: e.target.value})} tabIndex={-1} autoComplete="off" />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">

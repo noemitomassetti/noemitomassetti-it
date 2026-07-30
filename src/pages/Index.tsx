@@ -108,6 +108,14 @@ const ContattiForm = () => {
     }
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
+    
+    // Spam protection check
+    if (data.get("website")) {
+      // Silently fail for bots
+      setIsSubmitting(false);
+      return;
+    }
+
     const firstName = data.get("first_name") as string;
     const lastName = data.get("last_name") as string;
     const email = data.get("email") as string;
@@ -149,6 +157,11 @@ const ContattiForm = () => {
     <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-lg">
       <h3 className="text-xl font-semibold text-primary mb-6">Scrivimi un messaggio</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Honeypot field for spam protection */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="website">Website</label>
+          <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <label htmlFor="firstName" className="text-sm font-medium text-foreground/80">Nome *</label>
