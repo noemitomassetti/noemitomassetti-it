@@ -113,7 +113,10 @@ export function BookingButton({ children, className, variant, size, asChild, onC
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="uppercase">PRENOTA UNA VIDEOCALL GRATUITA</DialogTitle>
+          <DialogTitle className="uppercase text-primary text-xl">PRENOTA UNA VIDEOCALL GRATUITA (30 MIN)</DialogTitle>
+          <p className="text-xs text-muted-foreground mt-1">
+            Una chiacchierata senza impegno per analizzare la tua attività e capire quali compiti puoi delegare da subito per recuperare tempo.
+          </p>
         </DialogHeader>
         {!selectedSlot ? (
           <div className="flex flex-col gap-4 py-4">

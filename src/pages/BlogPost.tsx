@@ -110,7 +110,20 @@ const BlogPost = () => {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        <address rel="author" className="not-italic mt-16 p-6 md:p-8 bg-card border border-border/50 rounded-2xl flex flex-col sm:flex-row gap-6 items-center sm:items-start" itemScope itemType="https://schema.org/Person">
+        {/* Lead Capture Callout Box */}
+        <div className="my-12 p-6 md:p-8 bg-card border border-primary/30 rounded-2xl shadow-md text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="space-y-2">
+            <h3 className="text-xl font-bold text-primary">Hai bisogno di supporto per organizzare la tua attività?</h3>
+            <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+              Analizziamo insieme la tua gestione operativa. Prenota una videochiamata conoscitiva di 30 minuti, gratuita e senza impegno.
+            </p>
+          </div>
+          <Button asChild size="lg" className="shrink-0 bg-primary text-primary-foreground font-bold uppercase tracking-wider text-xs px-6 py-6 hover:scale-105 transition-all">
+            <Link to="/#contatti">PRENOTA CALL GRATUITA</Link>
+          </Button>
+        </div>
+
+        <address rel="author" className="not-italic mt-12 p-6 md:p-8 bg-card border border-border/50 rounded-2xl flex flex-col sm:flex-row gap-6 items-center sm:items-start" itemScope itemType="https://schema.org/Person">
           <img src="https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg" alt="Foto di Noemi Tomassetti - Assistente Virtuale" width="100" height="100" loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
           <div className="text-center sm:text-left">
             <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>

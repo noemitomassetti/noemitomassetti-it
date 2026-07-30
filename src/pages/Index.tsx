@@ -368,9 +368,15 @@ const Index = () => {
                 </p>
               </div>
             </div>
-<BookingButton size="lg" aria-label="Prenota una call conoscitiva gratuita" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
-              PRENOTA LA TUA CALL GRATUITA
-            </BookingButton>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <BookingButton size="lg" aria-label="Prenota una call conoscitiva gratuita" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
+                PRENOTA LA TUA CALL GRATUITA (30 MIN)
+              </BookingButton>
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-white/90 bg-black/30 backdrop-blur px-4 py-3 rounded-md border border-white/10">
+                <span className="text-[#e5c0a1]">✓</span>
+                <span>100% Gratuita &bull; Nessun Impegno &bull; Risposta in 24h</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -400,10 +406,19 @@ const Index = () => {
               <p>Non devi assumere un dipendente a tempo pieno per riprendere il controllo della tua vita lavorativa.</p>
               <p>Delegando le attività operative a un'Assistente Virtuale, trasformi un costo in un investimento altamente redditizio: paghi solo le ore effettive, risparmi tempo ed eviti i costi fissi di un dipendente.</p>
             </div>
-            <ul className="space-y-3 text-foreground/90 font-medium text-base md:text-lg">
+            <ul className="space-y-3 text-foreground/90 font-medium text-base md:text-lg mb-8">
                <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" /><strong>Tu ti concentri</strong> sull'acquisizione clienti e sull'erogazione del tuo servizio</li>
                <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" /><strong>Io mi occupo</strong> di far funzionare la tua attività in modo fluido e impeccabile</li>
             </ul>
+            <div className="bg-card border border-primary/20 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+              <div>
+                <p className="font-bold text-foreground text-base sm:text-lg">Vuoi capire esattamente cosa puoi delegare nella tua attività?</p>
+                <p className="text-sm text-muted-foreground">Valutiamo insieme la tua gestione operativa in 30 minuti di consulenza gratuita.</p>
+              </div>
+              <BookingButton size="default" className="shrink-0 uppercase font-bold text-xs tracking-wider px-6 py-5">
+                ANALIZZA LA TUA ATTIVITÀ
+              </BookingButton>
+            </div>
           </div>
         </div>
       </section>
@@ -486,10 +501,11 @@ const Index = () => {
             <p>Con il mio supporto costante, la tua attività diventa immediatamente più snella, professionale e facilmente scalabile.</p>
 <p>Inoltre, a differenza di un dipendente tradizionale, non hai costi fissi o oneri di gestione del personale. Paghi solo per il tempo o il progetto di cui hai realmente bisogno, mantenendo la massima flessibilità.</p>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <BookingButton size="lg" className="text-sm md:text-base px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
-              PARLIAMONE INSIEME
+              PARLIAMONE INSIEME (CALL GRATUITA)
             </BookingButton>
+            <span className="text-sm text-muted-foreground italic">Senza alcun vincolo contrattuale &bull; Risposta rapida</span>
           </div>
         </div>
       </section>
@@ -655,9 +671,10 @@ const Index = () => {
                   {[...Array(5)].map((_, idx) => <Star key={idx} className="w-4 h-4 fill-primary" />)}
                 </div>
                 <p className="text-foreground/80 leading-relaxed italic mb-6 flex-grow">"{t.text}"</p>
-                <div>
+                <div className="border-t border-border/30 pt-4">
                   <p className="font-bold text-foreground">{t.name}</p>
                   <p className="text-sm text-primary">{t.role}</p>
+                  <p className="text-xs text-muted-foreground mt-1">Cliente verificato &bull; Collaborazione continuativa</p>
                 </div>
               </div>
             ))}
