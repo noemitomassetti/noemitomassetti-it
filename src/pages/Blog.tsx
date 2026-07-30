@@ -9,7 +9,25 @@ const Blog = () => {
   useSEO({
     title: "Blog Assistente Virtuale | Noemi Tomassetti",
     description: "Scopri guide pratiche, strumenti e consigli di un'Assistente Virtuale per gestire la tua attività, risparmiare tempo e ridurre lo stress.",
-    canonical: "https://www.noemitomassetti.it/blog"
+    canonical: "https://www.noemitomassetti.it/blog",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.noemitomassetti.it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.noemitomassetti.it/blog"
+        }
+      ]
+    }
   });
 
   return (

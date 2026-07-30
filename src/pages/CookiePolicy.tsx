@@ -6,7 +6,25 @@ const CookiePolicy = () => {
     title: "Cookie Policy | Noemi Tomassetti Assistente Virtuale",
     description: "Informativa sull'utilizzo dei cookie su noemitomassetti.it. Scopri quali cookie utilizziamo e come gestirli o disabilitarli.",
     canonical: "https://www.noemitomassetti.it/cookie-policy",
-    noindex: true
+    noindex: true,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.noemitomassetti.it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cookie Policy",
+          "item": "https://www.noemitomassetti.it/cookie-policy"
+        }
+      ]
+    }
   });
 
   return (

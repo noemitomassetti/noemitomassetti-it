@@ -212,7 +212,87 @@ const Index = () => {
   useSEO({
     title: "Noemi Tomassetti | Assistente Virtuale per Professionisti",
     description: "Assistente Virtuale per liberi professionisti e piccole aziende. Delega la gestione operativa, email e appuntamenti per riprendere il controllo del tuo tempo.",
-    canonical: "https://www.noemitomassetti.it/"
+    canonical: "https://www.noemitomassetti.it/",
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Noemi Tomassetti Virtual Assistant",
+        "url": "https://www.noemitomassetti.it",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.noemitomassetti.it/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Noemi Tomassetti Virtual Assistant",
+        "url": "https://www.noemitomassetti.it",
+        "logo": "https://vibe.filesafe.space/meta/1776423224485175331/favicon.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/noemitomassetti",
+          "https://www.facebook.com/",
+          "https://www.instagram.com/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+39-388-471-8600",
+          "contactType": "customer support",
+          "email": "info@noemitomassetti.it",
+          "availableLanguage": ["Italian", "English", "French", "Spanish"]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Noemi Tomassetti Virtual Assistant",
+        "image": "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
+        "url": "https://www.noemitomassetti.it",
+        "telephone": "+393884718600",
+        "email": "info@noemitomassetti.it",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Castelfidardo",
+          "addressRegion": "AN",
+          "addressCountry": "IT"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Noemi Tomassetti",
+        "jobTitle": "Assistente Virtuale",
+        "url": "https://www.noemitomassetti.it",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Noemi Tomassetti Virtual Assistant"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      },
+      ...services.map(service => ({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+        "provider": {
+          "@type": "Organization",
+          "name": "Noemi Tomassetti Virtual Assistant"
+        }
+      }))
+    ]
   });
 
   return (

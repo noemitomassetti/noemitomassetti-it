@@ -6,7 +6,25 @@ const PrivacyPolicy = () => {
     title: "Privacy Policy | Noemi Tomassetti Assistente Virtuale",
     description: "Informativa sulla privacy di Noemi Tomassetti, Assistente Virtuale. Scopri come vengono raccolti e trattati i tuoi dati personali in conformità al GDPR.",
     canonical: "https://www.noemitomassetti.it/privacy-policy",
-    noindex: true
+    noindex: true,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.noemitomassetti.it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "https://www.noemitomassetti.it/privacy-policy"
+        }
+      ]
+    }
   });
 
   return (

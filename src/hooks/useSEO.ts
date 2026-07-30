@@ -7,6 +7,7 @@ interface SEOProps {
   ogImage?: string;
   ogType?: "website" | "article";
   noindex?: boolean;
+  schema?: Record<string, any> | Record<string, any>[];
 }
 
 export const useSEO = ({
@@ -16,6 +17,7 @@ export const useSEO = ({
   ogImage = "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
   ogType = "website",
   noindex = false,
+  schema,
 }: SEOProps) => {
   useEffect(() => {
     // Update title
@@ -60,5 +62,18 @@ export const useSEO = ({
       link.setAttribute("href", canonical);
       updateMetaTag("og:url", canonical, true);
     }
-  }, [title, description, canonical, ogImage, ogType, noindex]);
+
+    // Update structured data (schema)
+    let script = document.querySelector('script[type="application/ld+json"]');
+    if (schema) {
+      if (!script) {
+        script = document.createElement("script");
+        script.setAttribute("type", "application/ld+json");
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(schema);
+    } else if (script) {
+      script.remove();
+    }
+  }, [title, description, canonical, ogImage, ogType, noindex, schema]);
 };

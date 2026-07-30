@@ -20,7 +20,54 @@ const BlogPost = () => {
     description: post.excerpt,
     canonical: `https://www.noemitomassetti.it/blog/${post.slug || post.id}`,
     ogImage: post.image,
-    ogType: "article"
+    ogType: "article",
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.noemitomassetti.it/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.noemitomassetti.it/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://www.noemitomassetti.it/blog/${post.slug || post.id}`
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "image": post.image,
+        "datePublished": post.dateISO,
+        "author": {
+          "@type": "Person",
+          "name": "Noemi Tomassetti",
+          "url": "https://www.noemitomassetti.it"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Noemi Tomassetti Virtual Assistant",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.noemitomassetti.it/favicon.png"
+          }
+        },
+        "description": post.excerpt
+      }
+    ]
   });
 
   return (
