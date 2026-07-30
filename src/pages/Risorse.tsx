@@ -84,7 +84,7 @@ const Risorse = () => {
             Ottimizza i tuoi processi con questi strumenti gratuiti e consigli pratici. Inizia subito a recuperare tempo prezioso e a gestire i tuoi clienti in modo impeccabile.
           </p>
           <div className="w-full max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-border/50">
-            <img src="https://vibe.filesafe.space/1776423224485175331/assets/27f86f76-a9ad-4081-b16e-fab619117889.png" alt="Risorse e strumenti professionali" className="w-full h-auto object-cover" />
+            <img src="https://vibe.filesafe.space/1776423224485175331/assets/27f86f76-a9ad-4081-b16e-fab619117889.png" alt="Risorse e strumenti professionali per organizzare il lavoro" width="800" height="400" loading="eager" fetchPriority="high" className="w-full h-auto object-cover" />
           </div>
         </div>
 
@@ -199,7 +199,7 @@ const Risorse = () => {
                 <span>👉</span>
                 <span>Puoi richiederle durante la call conoscitiva.</span>
               </p>
-              <BookingButton size="sm" className="shrink-0 font-bold uppercase tracking-wider">
+              <BookingButton size="sm" aria-label="Prenota Call Conoscitiva Gratuita" className="shrink-0 font-bold uppercase tracking-wider">
                 PRENOTA CALL GRATUITA
               </BookingButton>
             </div>

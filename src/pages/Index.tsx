@@ -303,7 +303,11 @@ const Index = () => {
         <div className="relative md:absolute md:inset-0 w-full md:h-full z-0 flex justify-center md:justify-end animate-in fade-in duration-1000">
           <img
             src="https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg"
-            alt="Noemi Tomassetti Assistente Virtuale"
+            alt="Noemi Tomassetti Assistente Virtuale in ufficio"
+            width="800"
+            height="1200"
+            loading="eager"
+            fetchPriority="high"
             className="w-full md:w-[60%] lg:w-[50%] xl:w-[45%] h-auto md:h-full object-cover object-top md:object-[85%_top] [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)]"
           />
           {/* Desktop Gradient overlay */}
@@ -333,7 +337,7 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <BookingButton size="lg" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
+            <BookingButton size="lg" aria-label="Prenota una call conoscitiva gratuita" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
               PRENOTA UNA CALL CONOSCITIVA GRATUITA
             </BookingButton>
           </div>
@@ -632,7 +636,7 @@ const Index = () => {
               .map((post) => (
               <Card key={post.id} className="flex flex-col h-full bg-background border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 overflow-hidden group">
                 <div className="h-40 w-full bg-muted overflow-hidden">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
+                  <img src={post.image} alt={`Immagine per l'articolo: ${post.title}`} loading="lazy" width="400" height="200" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
                 </div>
                 <CardHeader className="pt-4">
                   <div className="flex items-center justify-between mb-2">

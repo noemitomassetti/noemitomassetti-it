@@ -92,7 +92,7 @@ const BlogPost = () => {
             {post.excerpt}
           </p>
           <div className="w-full rounded-2xl overflow-hidden mb-10 shadow-lg border border-border/50 bg-muted/10 flex justify-center">
-             <img src={post.image} alt={post.title} className="w-full max-h-[500px] h-auto object-contain" />
+             <img src={post.image} alt={`Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" fetchPriority="high" className="w-full max-h-[500px] h-auto object-contain" />
           </div>
         </div>
 
@@ -107,6 +107,27 @@ const BlogPost = () => {
             prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+
+        <div className="mt-16 pt-10 border-t border-border/50">
+          <h2 className="text-2xl font-bold text-primary mb-6">Potrebbe interessarti anche...</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {getBlogPosts()
+              .filter(p => p.id !== post.id && p.published !== false)
+              .sort(() => 0.5 - Math.random())
+              .slice(0, 2)
+              .map(related => (
+                <Link key={related.id} to={`/blog/${related.slug || related.id}`} className="group flex flex-col bg-card border border-border/50 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-md" aria-label={`Leggi l'articolo correlato: ${related.title}`}>
+                  <div className="h-32 w-full bg-muted overflow-hidden">
+                    <img src={related.image} alt={`Immagine per l'articolo correlato: ${related.title}`} loading="lazy" width="400" height="200" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="p-4">
+                    <span className="text-xs font-medium text-primary mb-2 block">{related.category}</span>
+                    <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">{related.title}</h3>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
       </article>
     </Layout>
   );

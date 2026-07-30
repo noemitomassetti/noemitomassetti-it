@@ -50,7 +50,7 @@ export const itPosts = [
       <h2>In conclusione: la tua agenda deve lavorare per te</h2>
       <p>Gestire l'agenda in modo strategico è il primo passo per trasformare il tuo lavoro da una fonte di stress a un'attività sostenibile, ordinata e gratificante. Un'agenda ben organizzata protegge il tuo tempo, le tue energie e la tua professionalità.</p>
       <p>Ma se, nonostante questi consigli, senti di non avere il tempo materiale per riorganizzare il tuo sistema, o se continui a perderti tra mille incastri, appuntamenti spostati e messaggi disordinati, la soluzione più intelligente è delegare la gestione operativa.</p>
-      <p>Come <strong>Assistente Virtuale</strong>, prendo in mano la tua agenda, ottimizzo i tuoi appuntamenti, gestisco le richieste dei clienti e creo per te un sistema di lavoro fluido e senza intoppi. Vuoi smettere di rincorrere il tempo e iniziare a investirlo dove conta davvero?</p>
+      <p>Come <strong>Assistente Virtuale</strong>, prendo in mano la tua agenda, ottimizzo i tuoi appuntamenti, gestisco le richieste dei clienti e creo per te un sistema di lavoro fluido e senza intoppi. Scopri di più sui miei <a href="/#servizi" class="text-primary font-bold hover:underline">servizi di supporto operativo</a>.</p>
       <p><a href="/#contatti" class="text-primary font-bold hover:underline">Scrivimi o prenota una call conoscitiva gratuita</a>: trasformeremo il tuo calendario in uno strumento di pura efficienza.</p>
     `
   },
@@ -84,10 +84,10 @@ export const itPosts = [
       <h2>Cosa puoi delegare concretamente da domani?</h2>
       <p>Liberare la tua scrivania (e la tua mente) è più semplice di quanto sembri. Ecco alcune delle attività operative che puoi affidarmi fin da subito:</p>
       <ul>
-        <li><strong>Gestione agenda e appuntamenti:</strong> un calendario sempre aggiornato, invio di promemoria, gestione delle disdette e ottimizzazione degli incastri (il famoso "time blocking");</li>
+        <li><strong>Gestione agenda e appuntamenti:</strong> un calendario sempre aggiornato, invio di promemoria, gestione delle disdette e ottimizzazione degli incastri (scopri di più su <a href="/blog/come-organizzare-la-tua-agenda-in-5-step" class="text-primary hover:underline">come organizzare la tua agenda</a>);</li>
         <li><strong>Gestione email e comunicazioni:</strong> una casella di posta finalmente ordinata, risposte tempestive alle richieste di base e smistamento delle priorità;</li>
         <li><strong>Customer care:</strong> un'assistenza clienti empatica e professionale, fondamentale per fidelizzare chi si affida a te;</li>
-        <li><strong>Supporto per corsi e percorsi:</strong> gestione delle iscrizioni, invio dei materiali didattici e assistenza tecnica agli studenti.</li>
+        <li><strong>Supporto per corsi e percorsi:</strong> gestione delle iscrizioni, invio dei materiali didattici e assistenza tecnica agli studenti. Scopri i miei <a href="/#servizi" class="text-primary hover:underline">servizi dedicati</a>.</li>
       </ul>
 
       <h2>Il ritorno (non solo) economico della delega</h2>
@@ -153,8 +153,8 @@ export const itPosts = [
       </ul>
 
       <h3>In conclusione</h3>
-      <p>Questi strumenti sono stati progettati per essere semplici e alla portata di tutti. Una volta impostati, diventano dei veri alleati silenziosi che lavorano per te, permettendoti di essere più preciso/a, veloce e organizzato/a.</p>
-      <p>Se non sai da dove iniziare per configurarli o se preferisci delegare completamente la loro gestione per concentrarti solo sulla tua professionalità, sono a disposizione per aiutarti con i miei servizi di supporto operativo e digitale. <a href="/#contatti" class="text-primary font-bold hover:underline">Scrivimi o prenota una call conoscitiva gratuita</a>: semplificheremo insieme il tuo flusso di lavoro.</p>
+      <p>Questi strumenti sono stati progettati per essere semplici e alla portata di tutti. Una volta impostati, diventano dei veri alleati silenziosi che lavorano per te, permettendoti di essere più preciso/a, veloce e organizzato/a. Se cerchi ulteriori risorse, dai un'occhiata alla mia <a href="/risorse" class="text-primary hover:underline">pagina Risorse</a>.</p>
+      <p>Se non sai da dove iniziare per configurarli o se preferisci delegare completamente la loro gestione per concentrarti solo sulla tua professionalità, sono a disposizione per aiutarti con i miei <a href="/#servizi" class="text-primary hover:underline">servizi di supporto operativo e digitale</a>. <a href="/#contatti" class="text-primary font-bold hover:underline">Scrivimi o prenota una call conoscitiva gratuita</a>: semplificheremo insieme il tuo flusso di lavoro.</p>
     `
   },
   { 
@@ -307,7 +307,7 @@ export const itPosts = [
       <h3>La tua attività è pronta a comunicare anche oltre i confini italiani?</h3>
       <p>La lingua non deve diventare un limite per la tua attività.</p>
       <p>Con un supporto operativo flessibile, puoi gestire con maggiore serenità le richieste internazionali e offrire ai tuoi clienti una comunicazione chiara, curata e professionale.</p>
-      <p>Vuoi capire quali comunicazioni potresti delegare e come organizzare un supporto multilingue adatto alla tua attività?</p>
+      <p>Vuoi capire quali comunicazioni potresti delegare e come organizzare un supporto multilingue adatto alla tua attività? Scopri i miei <a href="/#servizi" class="text-primary hover:underline">servizi di traduzione e comunicazione</a>.</p>
       <p><a href="/#contatti" class="text-primary font-bold hover:underline">Prenota una call conoscitiva gratuita</a>: valuteremo insieme le tue esigenze e le modalità di collaborazione più utili per te.</p>
     `
   },
@@ -351,7 +351,7 @@ export const itPosts = [
       <p>Tu sei l'esperto o l'esperta dei contenuti. Il tuo compito è insegnare, ispirare e guidare i tuoi allievi verso il loro risultato. Se passi le giornate a risolvere problemi tecnici, inviare link manualmente o rispondere a email amministrative, sottrai energia preziosa alla qualità del tuo insegnamento e alla tua creatività.</p>
 
       <h3>In conclusione</h3>
-      <p>Un corso online di successo è il risultato di ottimi contenuti uniti a un'organizzazione impeccabile. Delegando la parte operativa e di back-office a un'assistente virtuale, potrai vivere il lancio del tuo corso con serenità e mantenere il focus al 100% sui tuoi studenti.</p>
+      <p>Un corso online di successo è il risultato di ottimi contenuti uniti a un'organizzazione impeccabile. Delegando la parte operativa e di back-office a un'assistente virtuale, potrai vivere il lancio del tuo corso con serenità e mantenere il focus al 100% sui tuoi studenti. Scopri il mio <a href="/#servizi" class="text-primary hover:underline">servizio di Supporto per Corsi</a>.</p>
       <p>Sei pronto a lanciare il tuo percorso ma la parte tecnica e organizzativa ti frena? <a href="/#contatti" class="text-primary font-bold hover:underline">Scrivimi o prenota una call conoscitiva gratuita</a>: struttureremo insieme il supporto operativo ideale per il tuo prossimo successo.</p>
     `
   },
@@ -434,10 +434,10 @@ export const itPosts = [
 
       <h3>Il vantaggio più grande si vede al rientro</h3>
       <p>Organizzare bene il lavoro prima delle ferie non serve solo a vivere meglio i giorni di riposo.</p>
-      <p>Ti permette anche di tornare senza ritrovarti davanti a una casella email piena, richieste dimenticate, appuntamenti da recuperare e clienti in attesa.</p>
+      <p>Ti permette anche di tornare senza ritrovarti davanti a una casella email piena, richieste dimenticate, appuntamenti da recuperare e clienti in attesa. Leggi anche <a href="/blog/gestione-email-come-organizzare-la-posta-in-arrivo-e-riprendere-il-controllo-del-tuo-tempo" class="text-primary hover:underline">come organizzare la posta in arrivo</a> per prepararti al meglio.</p>
       <p>Al rientro potrai ripartire con più ordine, più lucidità e più energia.</p>
 
-      <p>Se vuoi preparare la tua attività per le ferie estive e capire quali attività potresti delegare, puoi <a href="/#contatti" class="text-primary font-bold hover:underline">prenotare una call conoscitiva gratuita</a>. Insieme possiamo valutare una gestione operativa semplice e adatta alle tue esigenze, così potrai chiudere il computer e goderti davvero le vacanze.</p>
+      <p>Se vuoi preparare la tua attività per le ferie estive e capire quali attività potresti delegare, puoi <a href="/#contatti" class="text-primary font-bold hover:underline">prenotare una call conoscitiva gratuita</a>. Insieme possiamo valutare una gestione operativa semplice e adatta alle tue esigenze (scopri i miei <a href="/#servizi" class="text-primary hover:underline">servizi di supporto operativo</a>), così potrai chiudere il computer e goderti davvero le vacanze.</p>
     `
   },
   { 
