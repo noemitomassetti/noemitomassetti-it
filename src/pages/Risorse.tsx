@@ -40,11 +40,19 @@ const getFutureResources = () => {
   ];
 };
 
+import { useSEO } from "@/hooks/useSEO";
+
 const Risorse = () => {
   const tools = getTools();
   const tips = getTips();
   const articles = getArticles();
   const futureResources = getFutureResources();
+
+  useSEO({
+    title: "Strumenti e Risorse per l'Organizzazione | Noemi Tomassetti",
+    description: "Scopri gli strumenti, i consigli pratici e le risorse gratuite per ottimizzare i processi della tua attività e recuperare tempo prezioso.",
+    canonical: "https://www.noemitomassetti.it/risorse"
+  });
 
   return (
     <Layout>

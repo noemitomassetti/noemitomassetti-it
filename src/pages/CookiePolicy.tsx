@@ -1,6 +1,14 @@
 import { Layout } from "@/components/Layout";
+import { useSEO } from "@/hooks/useSEO";
 
 const CookiePolicy = () => {
+  useSEO({
+    title: "Cookie Policy | Noemi Tomassetti Assistente Virtuale",
+    description: "Informativa sull'utilizzo dei cookie su noemitomassetti.it. Scopri quali cookie utilizziamo e come gestirli o disabilitarli.",
+    canonical: "https://www.noemitomassetti.it/cookie-policy",
+    noindex: true
+  });
+
   return (
     <Layout>
       <div className="container py-16 md:py-24 max-w-4xl">

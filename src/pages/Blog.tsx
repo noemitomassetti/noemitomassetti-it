@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { getBlogPosts } from "./BlogPost";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useSEO } from "@/hooks/useSEO";
+
 const Blog = () => {
+  useSEO({
+    title: "Blog Assistente Virtuale | Noemi Tomassetti",
+    description: "Scopri guide pratiche, strumenti e consigli di un'Assistente Virtuale per gestire la tua attività, risparmiare tempo e ridurre lo stress.",
+    canonical: "https://www.noemitomassetti.it/blog"
+  });
+
   return (
     <Layout>
       <div className="container px-4 md:px-6 py-10 md:py-16">
@@ -30,7 +38,7 @@ const Blog = () => {
                   <span className="text-sm font-medium text-primary">{post.category}</span>
                   <span className="text-sm text-muted-foreground">{post.date}</span>
                 </div>
-                <CardTitle className="text-lg text-primary leading-tight">{post.title}</CardTitle>
+                <h2 className="text-lg font-semibold tracking-tight text-primary leading-tight">{post.title}</h2>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-between">
                 <CardDescription className="text-sm text-card-foreground/80 mb-5">

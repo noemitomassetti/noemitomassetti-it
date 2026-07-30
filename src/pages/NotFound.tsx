@@ -1,8 +1,15 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 const NotFound = () => {
   const location = useLocation();
+
+  useSEO({
+    title: "Pagina Non Trovata | Noemi Tomassetti",
+    description: "La pagina che stai cercando non esiste o è stata spostada.",
+    noindex: true
+  });
 
   useEffect(() => {
     console.error(

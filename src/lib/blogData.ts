@@ -15,11 +15,11 @@ export const itPosts = [
       <p>Spesso il problema non è <em>quanto</em> lavori, ma <em>come</em> distribuisci il carico di lavoro. Lavorare in proprio significa dover gestire non solo i clienti, ma anche la contabilità, il marketing, le email e la formazione. Lavorare 10 ore al giorno avendo la sensazione di non aver concluso nulla di importante è il sintomo principale di una cattiva <strong>gestione del tempo</strong>. Se non hai un sistema solido per <strong>organizzare l'agenda di lavoro</strong>, quest'ultima finirà per governare le tue giornate, invece di essere tu a guidarla.</p>
       <p>Come fare per ottimizzare le tue ore lavorative? Ecco un metodo pratico, concreto e collaudato in 5 step per riprendere il controllo del tuo tempo, aumentare la produttività e ritrovare spazio per respirare.</p>
 
-      <h3>1. Fai pulizia e centralizza tutto (il potere del calendario unico)</h3>
+      <h2>1. Fai pulizia e centralizza tutto (il potere del calendario unico)</h2>
       <p>Il primo grande nemico dell'organizzazione è la frammentazione. Se hai appuntamenti segnati su un'agenda cartacea, scadenze su un'app, note vocali su WhatsApp e post-it attaccati al monitor, stai disperdendo energie preziose e aumentando il rischio di dimenticanze.</p>
       <p><strong>L'azione pratica:</strong> Scegli un unico strumento digitale (come <strong>Google Calendar</strong>) e inserisci <em>tutto</em> lì. Il digitale non si perde, ti invia notifiche in tempo reale e si sincronizza tra smartphone e computer. Avere un'unica "fonte di verità" riduce drasticamente l'ansia. <em>Consiglio extra:</em> usa i colori! Assegna un colore ai clienti, uno all'amministrazione e uno al tempo personale. Con un solo colpo d'occhio capirai l'andamento della tua settimana.</p>
 
-      <h3>2. Il "Time Blocking" (Blocchi di tempo tematici)</h3>
+      <h2>2. Il "Time Blocking" (Blocchi di tempo tematici)</h2>
       <p>L'errore più comune nella <strong>gestione dell'agenda</strong>? Inserire solo gli appuntamenti con i clienti e lasciare il resto "a quando avrò tempo". Il problema è che, senza una pianificazione, quel tempo non arriva mai.</p>
       <p><strong>L'azione pratica:</strong> Assegna uno slot temporale specifico a ogni singola attività. Blocca in agenda anche il "lavoro invisibile":</p>
       <ul>
@@ -29,11 +29,11 @@ export const itPosts = [
       </ul>
       <p>Ricorda la regola d'oro: se non è in agenda, semplicemente non esiste.</p>
 
-      <h3>3. I "Buffer" (Cuscinetti di sicurezza per gli imprevisti)</h3>
+      <h2>3. I "Buffer" (Cuscinetti di sicurezza per gli imprevisti)</h2>
       <p>Un'agenda programmata al minuto, senza respiro, è una bomba a orologeria. Basta una consulenza che dura 10 minuti in più, una telefonata inaspettata o un problema tecnico per farti accumulare ritardo su tutta la giornata, facendoti arrivare a sera esausto/a.</p>
       <p><strong>L'azione pratica:</strong> Inserisci sempre un "buffer" (cuscinetto) di <strong>15-30 minuti tra un impegno e l'altro</strong>. Questo spazio ti permette di assorbire i ritardi fisiologici, riordinare gli appunti dopo una call, bere un bicchiere d'acqua o semplicemente staccare gli occhi dallo schermo. La tua mente ha bisogno di transizioni tra un compito e l'altro.</p>
 
-      <h3>4. Il "Task Batching" (Raggruppa le attività per ottimizzare)</h3>
+      <h2>4. Il "Task Batching" (Raggruppa le attività per ottimizzare)</h2>
       <p>Il nostro cervello consuma tantissima energia quando passa da un'attività creativa (come scrivere un post) a una analitica (come fare una fattura) per poi passare a una relazionale (una call con un cliente). Questo continuo cambio di contesto rallenta drasticamente la tua produttività.</p>
       <p><strong>L'azione pratica:</strong> Raggruppa le attività simili nello stesso giorno o nella stessa mezza giornata. Ad esempio:</p>
       <ul>
@@ -43,11 +43,11 @@ export const itPosts = [
       </ul>
       <p>Riducendo i cambi di contesto, lavorerai molto più velocemente e con una qualità superiore.</p>
 
-      <h3>5. La "Weekly Review" (La pianificazione strategica settimanale)</h3>
+      <h2>5. La "Weekly Review" (La pianificazione strategica settimanale)</h2>
       <p>Non puoi iniziare la settimana lavorativa il lunedì mattina chiedendoti: "E adesso cosa devo fare?". La produttività si costruisce in anticipo, quando la mente è lucida.</p>
       <p><strong>L'azione pratica:</strong> Dedica gli ultimi 20 minuti del tuo venerdì lavorativo a pianificare la settimana successiva. Rivedi gli appuntamenti, sposta ciò che non sei riuscito/a a finire e imposta le tue <strong>3 priorità assolute</strong> per i giorni a venire. In questo modo chiuderai il computer con la mente leggera, godendoti il weekend, e inizierai il lunedì con una mappa chiara da seguire.</p>
 
-      <h3>In conclusione: la tua agenda deve lavorare per te</h3>
+      <h2>In conclusione: la tua agenda deve lavorare per te</h2>
       <p>Gestire l'agenda in modo strategico è il primo passo per trasformare il tuo lavoro da una fonte di stress a un'attività sostenibile, ordinata e gratificante. Un'agenda ben organizzata protegge il tuo tempo, le tue energie e la tua professionalità.</p>
       <p>Ma se, nonostante questi consigli, senti di non avere il tempo materiale per riorganizzare il tuo sistema, o se continui a perderti tra mille incastri, appuntamenti spostati e messaggi disordinati, la soluzione più intelligente è delegare la gestione operativa.</p>
       <p>Come <strong>Assistente Virtuale</strong>, prendo in mano la tua agenda, ottimizzo i tuoi appuntamenti, gestisco le richieste dei clienti e creo per te un sistema di lavoro fluido e senza intoppi. Vuoi smettere di rincorrere il tempo e iniziare a investirlo dove conta davvero?</p>
@@ -68,7 +68,7 @@ export const itPosts = [
       <p>Molti liberi professionisti si ritrovano intrappolati in un paradosso: lavorano ore extra per gestire l'amministrazione e le urgenze, togliendo tempo prezioso al cuore della loro professione e alla propria vita privata.</p>
       <p>Delegare la gestione operativa non è un lusso, ma una strategia fondamentale per chi lavora in autonomia e vuole scalare il proprio business lavorando con più lucidità, qualità e serenità.</p>
 
-      <h3>I veri costi del "faccio tutto io"</h3>
+      <h2>I veri costi del "faccio tutto io"</h2>
       <p>Forse pensi che fare tutto da solo ti faccia risparmiare. In realtà, il costo nascosto della mancata delega è altissimo. Ecco i segnali che la gestione operativa ti sta frenando:</p>
       <ul>
         <li><strong>Perdita di nuove opportunità:</strong> devi rifiutare nuovi clienti perché non hai il tempo materiale per seguirli;</li>
@@ -77,11 +77,11 @@ export const itPosts = [
         <li><strong>Mancanza di visione:</strong> passi le giornate a "spegnere incendi" invece di planificare la crescita della tua attività.</li>
       </ul>
 
-      <h3>L'Assistente Virtuale: il supporto su misura (senza i vincoli di un dipendente)</h3>
+      <h2>L'Assistente Virtuale: il supporto su misura (senza i vincoli di un dipendente)</h2>
       <p>Il mio supporto è pensato esattamente per i professionisti che lavorano da soli. Spesso, assumere un dipendente non è un'opzione sostenibile o desiderata: comporta costi fissi elevati, contributi, spazio fisico e rigidità burocratica.</p>
       <p>Collaborare con un'<strong>Assistente Virtuale</strong> ti offre un vantaggio enorme: la totale flessibilità. Paghi solo per le ore o i servizi di cui hai realmente bisogno. Sei tu a decidere esattamente quali attività delegare, mantenendo il pieno controllo del tuo budget e azzerando i costi fissi. Un vero e proprio risparmio di tempo, fatica e denaro, con la garanzia di affidarti a una professionista qualificata.</p>
 
-      <h3>Cosa puoi delegare concretamente da domani?</h3>
+      <h2>Cosa puoi delegare concretamente da domani?</h2>
       <p>Liberare la tua scrivania (e la tua mente) è più semplice di quanto sembri. Ecco alcune delle attività operative che puoi affidarmi fin da subito:</p>
       <ul>
         <li><strong>Gestione agenda e appuntamenti:</strong> un calendario sempre aggiornato, invio di promemoria, gestione delle disdette e ottimizzazione degli incastri (il famoso "time blocking");</li>
@@ -90,11 +90,11 @@ export const itPosts = [
         <li><strong>Supporto per corsi e percorsi:</strong> gestione delle iscrizioni, invio dei materiali didattici e assistenza tecnica agli studenti.</li>
       </ul>
 
-      <h3>Il ritorno (non solo) economico della delega</h3>
+      <h2>Il ritorno (non solo) economico della delega</h2>
       <p>Affidare le mansioni operative e di back-office a chi le svolge per professione significa che verranno completate in molto meno tempo e con zero errori. Ma il vero ritorno si misura nella qualità della tua vita.</p>
       <p>Sapere di avere al proprio fianco un supporto affidabile ti regala una sensazione di leggerezza mentale impagabile. Chiudi il computer la sera sapendo che tutto è sotto controllo. Meno stress significa più creatività, energie rinnovate per i tuoi clienti e più tempo di qualità per te stesso e per le persone che ami.</p>
 
-      <h3>In conclusione</h3>
+      <h2>In conclusione</h2>
       <p>Delegare significa scegliere di guidare la propria attività con intelligenza, smettendo di esserne schiavi. Tu resti la mente e il cuore del tuo progetto; io divento il motore operativo che fa funzionare tutto il resto con precisione e fluidità.</p>
       <p>Se senti che è arrivato il momento di smettere di rincorrere le urgenze e vuoi finalmente ritrovare ordine, tempo e serenità, <a href="/#contatti" class="text-primary font-bold hover:underline">scrivimi o prenota una call conoscitiva gratuita</a>: inizieremo subito a semplificare la tua gestione quotidiana.</p>
     `

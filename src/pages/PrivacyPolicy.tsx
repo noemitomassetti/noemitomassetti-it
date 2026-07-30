@@ -1,6 +1,14 @@
 import { Layout } from "@/components/Layout";
+import { useSEO } from "@/hooks/useSEO";
 
 const PrivacyPolicy = () => {
+  useSEO({
+    title: "Privacy Policy | Noemi Tomassetti Assistente Virtuale",
+    description: "Informativa sulla privacy di Noemi Tomassetti, Assistente Virtuale. Scopri come vengono raccolti e trattati i tuoi dati personali in conformità al GDPR.",
+    canonical: "https://www.noemitomassetti.it/privacy-policy",
+    noindex: true
+  });
+
   return (
     <Layout>
       <div className="container py-16 md:py-24 max-w-4xl">

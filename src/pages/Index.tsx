@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 import {
   Calendar, Mail, User, ClipboardList, Folder, Database, Briefcase,
   Apple, Dumbbell, Target, GraduationCap,
@@ -208,6 +209,12 @@ const ContattiForm = () => {
 const Index = () => {
   const { services, targets, packages, steps, faqs } = getTranslations();
 
+  useSEO({
+    title: "Noemi Tomassetti | Assistente Virtuale per Professionisti",
+    description: "Assistente Virtuale per liberi professionisti e piccole aziende. Delega la gestione operativa, email e appuntamenti per riprendere il controllo del tuo tempo.",
+    canonical: "https://www.noemitomassetti.it/"
+  });
+
   return (
     <Layout>
       {/* ── HERO ── */}
@@ -273,7 +280,7 @@ const Index = () => {
           </p>
 
           <div className="mt-10 pt-8 border-t border-border/40">
-            <p className="text-xl md:text-2xl font-bold text-primary mb-4">La Soluzione? Delegare in Modo Strategico</p>
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-4">La Soluzione? Delegare in Modo Strategico</h3>
             <div className="text-base md:text-lg text-foreground/80 mb-5 leading-relaxed space-y-3">
               <p>Non devi assumere un dipendente a tempo pieno per riprendere il controllo della tua vita lavorativa.</p>
               <p>Delegando le attività operative a un'Assistente Virtuale, trasformi un costo in un investimento altamente redditizio: paghi solo le ore effettive, risparmi tempo ed eviti i costi fissi di un dipendente.</p>

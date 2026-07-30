@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { getBlogPosts } from "@/lib/blogData";
+import { useSEO } from "@/hooks/useSEO";
 
 export { getBlogPosts };
 
@@ -13,6 +14,14 @@ const BlogPost = () => {
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
+
+  useSEO({
+    title: `${post.title} | Blog | Noemi Tomassetti`,
+    description: post.excerpt,
+    canonical: `https://www.noemitomassetti.it/blog/${post.slug || post.id}`,
+    ogImage: post.image,
+    ogType: "article"
+  });
 
   return (
     <Layout>
