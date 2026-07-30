@@ -225,7 +225,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <span className="opacity-30">|</span>
             <Link to="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
           </div>
-          <p>© {new Date().getFullYear()} Noemi Tomassetti — Virtual Assistant.<br />Tutti i diritti riservati.</p>
+          <p>© {new Date().getFullYear()} Noemi Tomassetti — Virtual Assistant. Oltre 25 anni di esperienza amministrativa.<br />Tutti i diritti riservati.</p>
         </div>
       </footer>
     </div>

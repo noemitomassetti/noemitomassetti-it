@@ -22,20 +22,20 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const getTranslations = () => {
   return {
     services: [
-      { title: "Gestione Agenda e Appuntamenti", description: "Organizzo il tuo calendario, gestisco prenotazioni, modifiche e promemoria. Avrai tutto sotto controllo, ottimizzando l'organizzazione appuntamenti ed evitando sovrapposizioni.", icon: Calendar },
-      { title: "Supporto per la Presenza Online", description: "Ti aiuto a strutturare e mantenere aggiornata la tua presenza digitale, organizzando i contenuti del sito o della landing page in modo professionale.", icon: LayoutList },
-      { title: "Traduzione Contenuti e Comunicazioni", description: "Traduco e adatto i tuoi contenuti (siti web, landing page, corsi) e le comunicazioni nelle mie lingue di lavoro: italiano, inglese, francese e spagnolo.", icon: Globe },
-      { title: "Gestione Email e Segreteria Virtuale", description: "Svuoto e organizzo la tua casella di posta, rispondo tempestivamente alle richieste dei clienti e gestisco il flusso di comunicazioni come vera e propria segreteria virtuale.", icon: Mail },
-      { title: "Supporto per Corsi", description: "Ti affianco nell'organizzazione operativa di corsi online o in presenza: iscrizioni, invio materiali, assistenza partecipanti e follow-up.", icon: GraduationCap },
-      { title: "Gestione Clienti e Preventivi", description: "Mi occupo dell'invio di preventivi e del supporto amministrativo di base, assicurando un'esperienza cliente impeccabile.", icon: User },
-      { title: "Organizzazione Aziendale Digitale", description: "Riordino i tuoi archivi, imposto strumenti di lavoro condivisi (CRM, Drive) e ottimizzo l'organizzazione del lavoro per processi più rapidi ed efficienti.", icon: Database },
-      { title: "Supporto Operativo e Back Office", description: "Prendo in carico le attività ripetitive che rallentano le tue giornate. Delegare le attività amministrative ti permette di concentrarti esclusivamente sul tuo core business.", icon: Briefcase },
+      { title: "Gestione Agenda e Appuntamenti", description: "Organizzo il tuo calendario, gestisco prenotazioni, modifiche e promemoria. Avrai tutto sotto controllo, ottimizzando l'organizzazione appuntamenti ed evitando sovrapposizioni o perdite di tempo.", icon: Calendar },
+      { title: "Supporto per la Presenza Online", description: "Ti aiuto a strutturare e mantenere aggiornata la tua presenza digitale, organizzando i contenuti del sito o della landing page in modo professionale e costante.", icon: LayoutList },
+      { title: "Traduzione Contenuti e Comunicazioni", description: "Traduco e adatto i tuoi contenuti (siti web, landing page, corsi) e le comunicazioni internazionali nelle mie lingue di lavoro: italiano, inglese, francese e spagnolo.", icon: Globe },
+      { title: "Gestione Email e Segreteria Virtuale", description: "Svuoto e organizzo la tua casella di posta, rispondo tempestivamente alle richieste dei clienti e gestisco il flusso di comunicazioni come una vera e propria segreteria virtuale e customer care.", icon: Mail },
+      { title: "Supporto per Corsi", description: "Ti affianco nell'organizzazione operativa di corsi online o in presenza: iscrizioni, invio materiali, assistenza partecipanti e follow-up strategico.", icon: GraduationCap },
+      { title: "Gestione Clienti e Preventivi", description: "Mi occupo dell'invio di preventivi e del supporto amministrativo di base (back office commerciale), assicurando un'esperienza cliente impeccabile fin dal primo contatto.", icon: User },
+      { title: "Organizzazione Aziendale Digitale", description: "Riordino i tuoi archivi, imposto strumenti di lavoro condivisi (CRM, Drive) e ottimizzo l'organizzazione del lavoro per processi più rapidi, produttivi ed efficienti.", icon: Database },
+      { title: "Supporto Operativo e Back Office", description: "Prendo in carico le attività ripetitive che rallentano le tue giornate. Delegare le attività amministrative ti permette di concentrarti esclusivamente sul tuo core business e sulla tua produttività.", icon: Briefcase },
     ],
     targets: [
-      { title: "Professionisti su appuntamento", icon: CalendarDays, description1: "La gestione dell'agenda, le disdette e le conferme ti sottraggono ore preziose.", description2: "Riordino il tuo calendario e gestisco i contatti, garantendo un'esperienza impeccabile ai tuoi clienti." },
-      { title: "Formatori e creatori di corsi", icon: GraduationCap, description1: "Lanciare e gestire corsi (online o in presenza) richiede un enorme sforzo logistico e di customer care.", description2: "Mi occupo di iscrizioni, invio materiali, assistenza ai partecipanti e follow-up, così puoi dedicarti solo alla formazione." },
-      { title: "Piccole aziende e studi", icon: Briefcase, description1: "Il back-office disorganizzato, le email accumulate e la burocrazia rallentano la crescita della tua attività.", description2: "Ottimizzo la gestione di preventivi e documenti, creando processi fluidi ed efficienti per farti risparmiare tempo." },
-      { title: "Chi lavora con l'estero", icon: Globe, description1: "Hai bisogno di comunicare con clienti internazionali o di tradurre i tuoi materiali in modo professionale.", description2: "Gestisco comunicazioni, traduzioni e contenuti in inglese, francese e spagnolo, supportandoti nell'espansione." },
+      { title: "Professionisti su appuntamento", icon: CalendarDays, description1: "La gestione dell'agenda, le <a href='/blog/disdette-ultimo-minuto' class='text-primary hover:underline'>disdette</a> e le conferme ti sottraggono ore preziose alla tua produttività.", description2: "Riordino il tuo calendario e gestisco i contatti, garantendo un'esperienza impeccabile ai tuoi clienti come assistente virtuale dedicata." },
+      { title: "Formatori e creatori di corsi", icon: GraduationCap, description1: "Lanciare e gestire corsi (online o in presenza) richiede un enorme sforzo logistico, organizzativo e di <a href='/blog/customer-care-esperienza-clienti' class='text-primary hover:underline'>customer care</a>.", description2: "Mi occupo di iscrizioni, invio materiali, assistenza ai partecipanti e follow-up, così puoi dedicarti solo alla formazione." },
+      { title: "Piccole aziende e studi", icon: Briefcase, description1: "Il back-office disorganizzato, le email accumulate e la burocrazia rallentano la crescita della tua organizzazione aziendale.", description2: "Ottimizzo la gestione di preventivi e documenti, creando processi fluidi ed efficienti per delegare le attività amministrative." },
+      { title: "Chi lavora con l'estero", icon: Globe, description1: "Hai bisogno di comunicare con clienti internazionali o di tradurre i tuoi materiali aziendali in modo professionale.", description2: "Gestisco comunicazioni, traduzioni e contenuti in inglese, francese e spagnolo, supportandoti nell'espansione del tuo business." },
     ],
     packages: [
       { title: "Supporto Base", description: "Ideale per iniziare a delegare le attività più urgenti e alleggerire da subito il carico operativo quotidiano." },
@@ -334,7 +334,7 @@ const Index = () => {
 
         <div className="container relative z-10 px-4 md:px-6 pb-12 pt-4 md:pt-0 flex flex-col justify-center -mt-16 md:mt-0">
           <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <h1 className="sr-only">Noemi Tomassetti - Assistente Virtuale per liberi professionisti e piccole attività</h1>
+            <h1 className="sr-only">Noemi Tomassetti - Assistente Virtuale per liberi professionisti, consulenti e piccole aziende. Servizi di segreteria virtuale, gestione agenda e back office.</h1>
             <div className="mb-6 md:mb-8 w-full max-w-[280px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[600px]">
               <svg viewBox="0 0 400 68" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Noemi Tomassetti Virtual Assistant">
                 <text x="0" y="42" fontFamily="'Inter', 'Helvetica Neue', Arial, sans-serif" fontWeight="500" fontSize="40" fill="#e5c0a1" textLength="400" lengthAdjust="spacing" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Noemi Tomassetti</text>
@@ -344,7 +344,7 @@ const Index = () => {
             
             <div className="text-base md:text-lg leading-relaxed text-white mb-8 md:mb-10 max-w-xl space-y-4 md:space-y-6">
               <h2 className="font-normal text-[#e5c0a1] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight drop-shadow-md">
-                Assistente virtuale per liberi professionisti e piccole aziende: riprendi il controllo del tuo tempo.
+                Assistente virtuale per liberi professionisti, consulenti e piccole aziende: riprendi il controllo del tuo tempo con una segreteria virtuale su misura.
               </h2>
               <div className="space-y-2">
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
@@ -398,7 +398,7 @@ const Index = () => {
       {/* ── CHI SONO ── */}
       <section id="chi-sono" className="container px-4 md:px-6 py-12 md:py-20 max-w-4xl mx-auto scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
         <div className="space-y-5 text-base md:text-lg text-foreground/85 leading-relaxed">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Assistente Virtuale: chi sono e il valore che porto alla tua attività</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Assistente Virtuale: chi sono e il valore della segreteria virtuale per la tua attività</h2>
           
 <p>Ho iniziato a lavorare alla fine degli anni &apos;90, quando l&apos;agenda era ancora cartacea e il fax rappresentava uno degli strumenti principali di comunicazione. Da allora ho maturato <strong>oltre venticinque anni di esperienza professionale</strong> in contesti diversi, dalla segreteria organizzativa al customer care, dal back office commerciale alla traduzione.</p>
           <p>Nonostante i profondi cambiamenti tecnologici e organizzativi, una cosa è rimasta costante nel mio percorso: la mia capacità di <strong>organizzare, semplificare e gestire attività e comunicazioni</strong> con precisione e attenzione alle persone.</p>
@@ -495,8 +495,8 @@ const Index = () => {
               </div>
               <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-primary/90 transition-colors">{t.title}</h3>
               <div className="space-y-2 text-foreground/80 leading-relaxed text-base">
-                <p>{t.description1}</p>
-                <p>{t.description2}</p>
+                <p dangerouslySetInnerHTML={{ __html: t.description1 }}></p>
+                <p dangerouslySetInnerHTML={{ __html: t.description2 }}></p>
               </div>
             </div>
           ))}

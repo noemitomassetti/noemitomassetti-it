@@ -30,7 +30,7 @@ export const itPosts = [
       <p>Ricorda la regola d'oro: se non è in agenda, semplicemente non esiste.</p>
 
       <h2>3. I "Buffer" (Cuscinetti di sicurezza per gli imprevisti)</h2>
-      <p>Un'agenda programmata al minuto, senza respiro, è una bomba a orologeria. Basta una consulenza che dura 10 minuti in più, una telefonata inaspettata o un problema tecnico per farti accumulare ritardo su tutta la giornata, facendoti arrivare a sera esausto/a.</p>
+      <p>Un'agenda programmata al minuto, senza respiro, è una bomba a orologeria. Basta una consulenza che dura 10 minuti in più, una telefonata inaspettata, o le classiche <a href="/blog/disdette-ultimo-minuto-come-gestirle-senza-stress" class="text-primary hover:underline">disdette dell'ultimo minuto</a> per farti accumulare ritardo su tutta la giornata, facendoti arrivare a sera esausto/a.</p>
       <p><strong>L'azione pratica:</strong> Inserisci sempre un "buffer" (cuscinetto) di <strong>15-30 minuti tra un impegno e l'altro</strong>. Questo spazio ti permette di assorbire i ritardi fisiologici, riordinare gli appunti dopo una call, bere un bicchiere d'acqua o semplicemente staccare gli occhi dallo schermo. La tua mente ha bisogno di transizioni tra un compito e l'altro.</p>
 
       <h2>4. Il "Task Batching" (Raggruppa le attività per ottimizzare)</h2>
@@ -86,7 +86,7 @@ export const itPosts = [
       <ul>
         <li><strong>Gestione agenda e appuntamenti:</strong> un calendario sempre aggiornato, invio di promemoria, gestione delle disdette e ottimizzazione degli incastri (scopri di più su <a href="/blog/come-organizzare-la-tua-agenda-in-5-step" class="text-primary hover:underline">come organizzare la tua agenda</a>);</li>
         <li><strong>Gestione email e comunicazioni:</strong> una casella di posta finalmente ordinata, risposte tempestive alle richieste di base e smistamento delle priorità;</li>
-        <li><strong>Customer care:</strong> un'assistenza clienti empatica e professionale, fondamentale per fidelizzare chi si affida a te;</li>
+        <li><strong>Customer care:</strong> un'assistenza clienti empatica e professionale, fondamentale per fidelizzare chi si affida a te (leggi di più su <a href="/blog/customer-care-come-migliorare-esperienza-dei-tuoi-clienti-fin-dal-primo-contatto" class="text-primary hover:underline">come migliorare l'esperienza dei tuoi clienti</a>);</li>
         <li><strong>Supporto per corsi e percorsi:</strong> gestione delle iscrizioni, invio dei materiali didattici e assistenza tecnica agli studenti. Scopri i miei <a href="/#servizi" class="text-primary hover:underline">servizi dedicati</a>.</li>
       </ul>
 

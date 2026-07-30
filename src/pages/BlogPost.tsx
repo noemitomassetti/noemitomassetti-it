@@ -116,7 +116,7 @@ const BlogPost = () => {
             <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>
             <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Assistente Virtuale per Professionisti</p>
             <p className="text-base text-foreground/80 leading-relaxed" itemProp="description">
-              Con oltre 25 anni di esperienza, supporto liberi professionisti e piccole aziende nella gestione operativa e amministrativa. Laureata in Mediazione Linguistica (110 e lode) e specializzata in Traduzione, offro supporto multilingue (IT, EN, FR, ES) per ottimizzare il tuo tempo e migliorare l'organizzazione della tua attività.
+              Con oltre 25 anni di esperienza, supporto liberi professionisti e piccole aziende nella gestione operativa, segreteria virtuale e back office. Laureata in Mediazione Linguistica (110 e lode) e specializzata in Traduzione, offro supporto multilingue (IT, EN, FR, ES) per ottimizzare il tuo tempo e l'organizzazione aziendale.
             </p>
           </div>
         </address>
