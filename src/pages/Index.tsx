@@ -195,8 +195,8 @@ const ContattiForm = () => {
             </label>
           </div>
         </div>
-        <Button type="submit" className="w-full hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300" disabled={isSubmitting || !gdprChecked}>
-          {isSubmitting ? "Invio in corso..." : <><Send className="w-4 h-4 mr-2" /> Invia Messaggio</>}
+<Button type="submit" className="w-full hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 py-6 text-base font-semibold uppercase tracking-wide" disabled={isSubmitting || !gdprChecked}>
+          {isSubmitting ? "INVIO IN CORSO..." : <><Send className="w-5 h-5 mr-2" /> INVIA MESSAGGIO</>}
         </Button>
         <p className="text-xs text-foreground/50 text-center">* campi obbligatori</p>
       </form>
@@ -355,8 +355,8 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <BookingButton size="lg" aria-label="Prenota una call conoscitiva gratuita" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
-              PRENOTA UNA CALL CONOSCITIVA GRATUITA
+<BookingButton size="lg" aria-label="Prenota una call conoscitiva gratuita" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
+              PRENOTA LA TUA CALL GRATUITA
             </BookingButton>
           </div>
         </div>
@@ -400,11 +400,11 @@ const Index = () => {
         <div className="space-y-5 text-base md:text-lg text-foreground/85 leading-relaxed">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Assistente Virtuale: chi sono e il valore che porto alla tua attività</h2>
           
-          <p>Ho iniziato a lavorare alla fine degli anni &apos;90, quando l&apos;agenda era ancora cartacea e il fax rappresentava uno degli strumenti principali di comunicazione. Da allora ho maturato oltre venticinque anni di esperienza professionale in contesti diversi, dalla segreteria organizzativa al customer care, dal back office commerciale alla traduzione.</p>
-          <p>Nonostante i profondi cambiamenti tecnologici e organizzativi, una cosa è rimasta costante nel mio percorso: la mia capacità di organizzare, semplificare e gestire attività e comunicazioni con precisione e attenzione alle persone.</p>
-          <p>Nel corso degli anni ho conseguito una Laurea in Mediazione Linguistica con 110 e lode e un Master in Traduzione Specialistica in lingua inglese, approfondendo parallelamente lo studio del francese e dello spagnolo. Ho collaborato a progetti di traduzione di materiali educativi, documentazione specialistica e pubblicazioni editoriali, oltre ad aver svolto attività di tutoraggio per studenti con bisogni educativi speciali.</p>
+<p>Ho iniziato a lavorare alla fine degli anni &apos;90, quando l&apos;agenda era ancora cartacea e il fax rappresentava uno degli strumenti principali di comunicazione. Da allora ho maturato <strong>oltre venticinque anni di esperienza professionale</strong> in contesti diversi, dalla segreteria organizzativa al customer care, dal back office commerciale alla traduzione.</p>
+          <p>Nonostante i profondi cambiamenti tecnologici e organizzativi, una cosa è rimasta costante nel mio percorso: la mia capacità di <strong>organizzare, semplificare e gestire attività e comunicazioni</strong> con precisione e attenzione alle persone.</p>
+          <p>Nel corso degli anni ho conseguito una <strong>Laurea in Mediazione Linguistica con 110 e lode</strong> e un <strong>Master in Traduzione Specialistica</strong> in lingua inglese, approfondendo parallelamente lo studio del francese e dello spagnolo. Ho collaborato a progetti di traduzione di materiali educativi, documentazione specialistica e pubblicazioni editoriali, oltre ad aver svolto attività di tutoraggio per studenti con bisogni educativi speciali.</p>
           <p>Tutte queste esperienze mi hanno insegnato ad ascoltare attivamente, a comprendere esigenze molto diverse tra loro e a trovare sempre soluzioni pratiche ed efficaci.</p>
-          <p>Oggi metto queste solide competenze al servizio di liberi professionisti che lavorano su appuntamento, consulenti, creatori di corsi e piccole aziende che desiderano delegare le attività amministrative per alleggerire il carico operativo quotidiano. Il mio obiettivo è aiutarti a ritrovare il tempo da dedicare all'erogazione dei tuoi servizi, alla crescita strategica del business e alla tua vita personale.</p>
+          <p>Oggi metto queste solide competenze al servizio di <strong>liberi professionisti che lavorano su appuntamento, consulenti, creatori di corsi e piccole aziende</strong> che desiderano delegare le attività amministrative per alleggerire il carico operativo quotidiano. Il mio obiettivo è aiutarti a ritrovare il tempo da dedicare all'erogazione dei tuoi servizi, alla crescita strategica del business e alla tua vita personale.</p>
           
           <div className="my-8 p-6 bg-primary/10 border-l-4 border-primary rounded-r-xl">
             <p className="text-xl md:text-2xl font-medium text-foreground italic">&quot;Ogni attività di supporto amministrativo che mi affidi è tempo prezioso che recuperi per concentrarti sul tuo vero lavoro, sviluppare nuovi progetti o semplicemente respirare con meno stress.&quot;</p>
@@ -471,7 +471,12 @@ const Index = () => {
             <p>Non stai semplicemente delegando dei compiti noiosi. Stai acquistando tempo prezioso per la tua vita e la tua attività.</p>
             <p>Delegando anche solo alcune attività operative a settimana, recuperi in media dalle 4 alle 6 ore di lavoro. Ore che puoi reinvestire per acquisire nuovi clienti o lavorare con meno stress.</p>
             <p>Con il mio supporto costante, la tua attività diventa immediatamente più snella, professionale e facilmente scalabile.</p>
-            <p>Inoltre, a differenza di un dipendente tradizionale, non hai costi fissi o oneri di gestione del personale. Paghi solo per il tempo o il progetto di cui hai realmente bisogno, mantenendo la massima flessibilità.</p>
+<p>Inoltre, a differenza di un dipendente tradizionale, non hai costi fissi o oneri di gestione del personale. Paghi solo per il tempo o il progetto di cui hai realmente bisogno, mantenendo la massima flessibilità.</p>
+          </div>
+          <div className="mt-8">
+            <BookingButton size="lg" className="text-sm md:text-base px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+              PARLIAMONE INSIEME
+            </BookingButton>
           </div>
         </div>
       </section>
@@ -522,13 +527,21 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <div className="mt-8 border-t border-border/40 pt-8">
-            <div className="bg-secondary/20 border border-border/50 rounded-xl p-6 mb-6">
-              <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
-                <strong className="text-primary">Il costo viene definito in base alle attività e al tempo necessario.</strong> Non ci sono costi fissi o vincoli contrattuali: paghi solo ciò di cui hai realmente bisogno.
-              </p>
+<div className="mt-8 border-t border-border/40 pt-8">
+            <div className="bg-secondary/20 border border-border/50 rounded-xl p-6 mb-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="space-y-1 text-center sm:text-left">
+                <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+                  <strong className="text-primary">Il costo viene definito in base alle attività e al tempo necessario.</strong> 
+                </p>
+                <p className="text-base text-foreground/80">
+                  Non ci sono costi fissi o vincoli contrattuali: paghi solo ciò di cui hai realmente bisogno.
+                </p>
+              </div>
+              <BookingButton size="lg" className="whitespace-nowrap px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+                RICHIEDI UN PREVENTIVO
+              </BookingButton>
             </div>
-            <p className="text-base md:text-lg font-medium text-foreground">Durante la <BookingButton asChild><button className="text-primary font-bold hover:underline hover:text-primary/80 transition-colors">call conoscitiva</button></BookingButton> analizziamo la tua situazione e costruiamo insieme la soluzione più adatta alla tua attività.</p>
+            <p className="text-base md:text-lg font-medium text-foreground text-center">Durante la <BookingButton asChild><button className="text-primary font-bold hover:underline hover:text-primary/80 transition-colors">call conoscitiva gratuita</button></BookingButton> analizziamo la tua situazione e costruiamo insieme la soluzione più adatta alla tua attività.</p>
           </div>
         </div>
       </section>
@@ -615,8 +628,8 @@ const Index = () => {
         <p className="text-foreground/75 text-base max-w-3xl mt-12">Un processo semplice, chiaro e senza complicazioni.</p>
       </section>
 
-      {/* ── TESTIMONIANZE ── */}
-      <section className="hidden bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
+{/* ── TESTIMONIANZE ── */}
+      <section className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
         <div className="container px-4 md:px-6 py-12 md:py-20">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Cosa dicono i miei clienti</h2>
