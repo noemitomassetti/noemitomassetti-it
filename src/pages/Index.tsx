@@ -681,7 +681,7 @@ const Index = () => {
               .map((post, index) => (
               <Card key={post.id} className="flex flex-col h-full bg-background border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 overflow-hidden group">
                 <div className="h-40 w-full bg-muted overflow-hidden">
-                  <img src={post.image} alt={`Immagine per l'articolo: ${post.title}`} loading={index === 0 ? "eager" : "lazy"} width="400" height="200" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
+                  <img src={post.image} alt={`Copertina articolo: ${post.title}`} loading={index === 0 ? "eager" : "lazy"} decoding="async" width="400" height="200" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
                 </div>
                 <CardHeader className="pt-4">
                   <div className="flex items-center justify-between mb-2">

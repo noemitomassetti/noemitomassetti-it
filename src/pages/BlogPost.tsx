@@ -94,7 +94,7 @@ const BlogPost = () => {
             {post.excerpt}
           </p>
           <div className="w-full rounded-2xl overflow-hidden mb-10 shadow-lg border border-border/50 bg-muted/10 flex justify-center">
-             <img src={post.image} alt={`Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" fetchPriority="high" className="w-full max-h-[500px] h-auto object-contain" />
+             <img src={post.image} alt={`Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" fetchPriority="high" decoding="async" className="w-full max-h-[500px] h-auto object-contain" />
           </div>
         </div>
 
@@ -111,7 +111,7 @@ const BlogPost = () => {
         />
 
         <address rel="author" className="not-italic mt-16 p-6 md:p-8 bg-card border border-border/50 rounded-2xl flex flex-col sm:flex-row gap-6 items-center sm:items-start" itemScope itemType="https://schema.org/Person">
-          <img src="https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg" alt="Noemi Tomassetti" width="100" height="100" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
+          <img src="https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg" alt="Foto di Noemi Tomassetti - Assistente Virtuale" width="100" height="100" loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
           <div className="text-center sm:text-left">
             <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>
             <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Assistente Virtuale per Professionisti</p>
@@ -131,7 +131,7 @@ const BlogPost = () => {
               .map(related => (
                 <Link key={related.id} to={`/blog/${related.slug || related.id}`} className="group flex flex-col bg-card border border-border/50 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-md" aria-label={`Leggi l'articolo correlato: ${related.title}`}>
                   <div className="h-32 w-full bg-muted overflow-hidden">
-                    <img src={related.image} alt={`Immagine per l'articolo correlato: ${related.title}`} loading="lazy" width="400" height="200" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <img src={related.image} alt={`Copertina articolo correlato: ${related.title}`} loading="lazy" decoding="async" width="400" height="200" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-4">
                     <span className="text-xs font-medium text-primary mb-2 block">{related.category}</span>
