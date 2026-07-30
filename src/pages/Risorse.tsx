@@ -81,7 +81,7 @@ const Risorse = () => {
             Strumenti e Risorse per Lavorare Meno e Meglio
           </h1>
           <p className="text-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-            Ottimizza i tuoi processi con questi strumenti gratuiti e consigli pratici. Inizia subito a recuperare tempo prezioso e a gestire i tuoi clienti in modo impeccabile.
+            Ottimizza i tuoi processi con questi strumenti gratuiti e consigli pratici di un'assistente virtuale. Inizia subito a recuperare tempo prezioso, migliorare la tua produttività e gestire i tuoi clienti in modo impeccabile.
           </p>
           <div className="w-full max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-border/50">
             <img src="https://vibe.filesafe.space/1776423224485175331/assets/27f86f76-a9ad-4081-b16e-fab619117889.png" alt="Risorse e strumenti professionali per organizzare il lavoro" width="800" height="400" loading="eager" fetchPriority="high" className="w-full h-auto object-cover" />

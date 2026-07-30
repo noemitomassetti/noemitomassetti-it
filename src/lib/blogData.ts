@@ -13,7 +13,7 @@ export const itPosts = [
     content: `
       <p>Avere un’agenda piena di appuntamenti è il traguardo di ogni <strong>libero professionista</strong>, freelance e piccola attività. Ma attenzione: quando il calendario si riempie in modo disordinato, il successo si trasforma rapidamente in una corsa a ostacoli fatta di ritardi, stress e la sensazione costante di non avere mai tempo per te.</p>
       <p>Spesso il problema non è <em>quanto</em> lavori, ma <em>come</em> distribuisci il carico di lavoro. Lavorare in proprio significa dover gestire non solo i clienti, ma anche la contabilità, il marketing, le email e la formazione. Lavorare 10 ore al giorno avendo la sensazione di non aver concluso nulla di importante è il sintomo principale di una cattiva <strong>gestione del tempo</strong>. Se non hai un sistema solido per <strong>organizzare l'agenda di lavoro</strong>, quest'ultima finirà per governare le tue giornate, invece di essere tu a guidarla.</p>
-      <p>Come fare per ottimizzare le tue ore lavorative? Ecco un metodo pratico, concreto e collaudato in 5 step per riprendere il controllo del tuo tempo, aumentare la produttività e ritrovare spazio per respirare.</p>
+      <p>Come fare per ottimizzare l'organizzazione aziendale e le tue ore lavorative? Ecco un metodo pratico, concreto e collaudato in 5 step per riprendere il controllo del tuo tempo, aumentare la produttività e ritrovare spazio per respirare.</p>
 
       <h2>1. Fai pulizia e centralizza tutto (il potere del calendario unico)</h2>
       <p>Il primo grande nemico dell'organizzazione è la frammentazione. Se hai appuntamenti segnati su un'agenda cartacea, scadenze su un'app, note vocali su WhatsApp e post-it attaccati al monitor, stai disperdendo energie preziose e aumentando il rischio di dimenticanze.</p>
@@ -50,8 +50,8 @@ export const itPosts = [
       <h2>In conclusione: la tua agenda deve lavorare per te</h2>
       <p>Gestire l'agenda in modo strategico è il primo passo per trasformare il tuo lavoro da una fonte di stress a un'attività sostenibile, ordinata e gratificante. Un'agenda ben organizzata protegge il tuo tempo, le tue energie e la tua professionalità.</p>
       <p>Ma se, nonostante questi consigli, senti di non avere il tempo materiale per riorganizzare il tuo sistema, o se continui a perderti tra mille incastri, appuntamenti spostati e messaggi disordinati, la soluzione più intelligente è delegare la gestione operativa.</p>
-      <p>Come <strong>Assistente Virtuale</strong>, prendo in mano la tua agenda, ottimizzo i tuoi appuntamenti, gestisco le richieste dei clienti e creo per te un sistema di lavoro fluido e senza intoppi. Scopri di più sui miei <a href="/#servizi" class="text-primary font-bold hover:underline">servizi di supporto operativo</a>.</p>
-      <p><a href="/#contatti" class="text-primary font-bold hover:underline">Scrivimi o prenota una call conoscitiva gratuita</a>: trasformeremo il tuo calendario in uno strumento di pura efficienza.</p>
+      <p>Come <strong>assistente virtuale per professionisti</strong>, prendo in mano la tua agenda, ottimizzo l'organizzazione degli appuntamenti, gestisco le richieste dei clienti e creo per te un sistema di lavoro fluido e senza intoppi. Scopri di più sui miei <a href="/#servizi" class="text-primary font-bold hover:underline">servizi di supporto operativo</a>.</p>
+      <p><a href="/#contatti" class="text-primary font-bold hover:underline">Scrivimi o prenota una call conoscitiva gratuita</a>: trasformeremo il tuo calendario in uno strumento di pura efficienza e produttività.</p>
     `
   },
   { 
@@ -79,7 +79,7 @@ export const itPosts = [
 
       <h2>L'Assistente Virtuale: il supporto su misura (senza i vincoli di un dipendente)</h2>
       <p>Il mio supporto è pensato esattamente per i professionisti che lavorano da soli. Spesso, assumere un dipendente non è un'opzione sostenibile o desiderata: comporta costi fissi elevati, contributi, spazio fisico e rigidità burocratica.</p>
-      <p>Collaborare con un'<strong>Assistente Virtuale</strong> ti offre un vantaggio enorme: la totale flessibilità. Paghi solo per le ore o i servizi di cui hai realmente bisogno. Sei tu a decidere esattamente quali attività delegare, mantenendo il pieno controllo del tuo budget e azzerando i costi fissi. Un vero e proprio risparmio di tempo, fatica e denaro, con la garanzia di affidarti a una professionista qualificata.</p>
+      <p>Collaborare con un'<strong>assistente virtuale per liberi professionisti</strong> ti offre un vantaggio enorme: la totale flessibilità. Paghi solo per le ore o i servizi di cui hai realmente bisogno. Sei tu a decidere esattamente quali attività delegare, mantenendo il pieno controllo del tuo budget e azzerando i costi fissi. Un vero e proprio risparmio di tempo, fatica e denaro, con la garanzia di affidarti a un valido supporto amministrativo.</p>
 
       <h2>Cosa puoi delegare concretamente da domani?</h2>
       <p>Liberare la tua scrivania (e la tua mente) è più semplice di quanto sembri. Ecco alcune delle attività operative che puoi affidarmi fin da subito:</p>
@@ -241,7 +241,7 @@ export const itPosts = [
       <p>E spesso bastano piccoli sistemi pratici per fare una grande differenza nella quotidianità.</p>
 
       <h3>Hai bisogno di supporto nella gestione delle email?</h3>
-      <p>Come Assistente Virtuale supporto professionisti, freelance e piccole attività nell’organizzazione operativa del lavoro quotidiano, inclusa la gestione della posta elettronica.</p>
+      <p>Come assistente virtuale per professionisti, freelance e piccole attività, offro supporto amministrativo nell’organizzazione operativa del lavoro quotidiano, inclusa la gestione della posta elettronica come segreteria virtuale.</p>
       <p>Posso aiutarti a:</p>
       <ul>
         <li>organizzare la tua inbox,</li>
@@ -286,7 +286,7 @@ export const itPosts = [
 
       <h3>Come può aiutarti un supporto multilingue</h3>
       <p>Non hai bisogno di assumere personale dedicato o di rinunciare a gestire richieste in lingua straniera.</p>
-      <p>Puoi delegare alcune attività comunicative a un’Assistente Virtuale con competenze linguistiche, mantenendo sempre il controllo sui contenuti più importanti e sulle decisioni commerciali.</p>
+      <p>Puoi delegare alcune attività comunicative a una segreteria virtuale o a un'assistente virtuale con competenze linguistiche, mantenendo sempre il controllo sui contenuti più importanti e sulle decisioni commerciali.</p>
       <p>Grazie alla mia formazione in mediazione linguistica e traduzione, posso affiancarti nella gestione delle comunicazioni in inglese, francese e spagnolo.</p>
       <p>Posso supportarti, ad esempio, in queste attività:</p>
       <ul>
@@ -406,7 +406,7 @@ export const itPosts = [
       <p>In questo modo chi ti scrive riceve subito una risposta chiara e sa cosa aspettarsi.</p>
 
       <h3>5. Valuta di delegare la gestione operativa</h3>
-      <p>Se vuoi staccare davvero senza interrompere completamente la tua attività, puoi affidare alcune attività a un’Assistente Virtuale.</p>
+      <p>Se vuoi staccare davvero senza interrompere completamente la tua attività, puoi affidare alcune mansioni a un'assistente virtuale per professionisti. Delegare le attività amministrative ti garantisce tranquillità.</p>
       <p>In base alle procedure concordate, può occuparsi ad esempio di:</p>
       <ul>
         <li>filtrare e organizzare la posta in arrivo;</li>

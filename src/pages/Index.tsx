@@ -22,14 +22,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const getTranslations = () => {
   return {
     services: [
-      { title: "Gestione Agenda e Appuntamenti", description: "Organizzo il tuo calendario, gestisco prenotazioni, modifiche e promemoria. Avrai tutto sotto controllo, evitando sovrapposizioni e liberando la mente.", icon: Calendar },
+      { title: "Gestione Agenda e Appuntamenti", description: "Organizzo il tuo calendario, gestisco prenotazioni, modifiche e promemoria. Avrai tutto sotto controllo, ottimizzando l'organizzazione appuntamenti ed evitando sovrapposizioni.", icon: Calendar },
       { title: "Supporto per la Presenza Online", description: "Ti aiuto a strutturare e mantenere aggiornata la tua presenza digitale, organizzando i contenuti del sito o della landing page in modo professionale.", icon: LayoutList },
       { title: "Traduzione Contenuti e Comunicazioni", description: "Traduco e adatto i tuoi contenuti (siti web, landing page, corsi) e le comunicazioni nelle mie lingue di lavoro: italiano, inglese, francese e spagnolo.", icon: Globe },
-      { title: "Gestione Email e Customer Care", description: "Svuoto e organizzo la tua casella di posta, rispondo tempestivamente alle richieste dei clienti e gestisco il flusso di comunicazioni quotidiane.", icon: Mail },
+      { title: "Gestione Email e Segreteria Virtuale", description: "Svuoto e organizzo la tua casella di posta, rispondo tempestivamente alle richieste dei clienti e gestisco il flusso di comunicazioni come vera e propria segreteria virtuale.", icon: Mail },
       { title: "Supporto per Corsi", description: "Ti affianco nell'organizzazione operativa di corsi online o in presenza: iscrizioni, invio materiali, assistenza partecipanti e follow-up.", icon: GraduationCap },
-      { title: "Gestione Clienti e Preventivi", description: "Mi occupo dell'invio di preventivi e della gestione amministrativa di base, assicurando un'esperienza cliente impeccabile.", icon: User },
-      { title: "Organizzazione Digitale", description: "Riordino i tuoi archivi, imposto strumenti di lavoro condivisi (CRM, Drive) e ottimizzo i flussi per un lavoro più rapido ed efficiente.", icon: Database },
-      { title: "Supporto Operativo e Back Office", description: "Prendo in carico le attività ripetitive che rallentano le tue giornate, permettendoti di concentrarti esclusivamente sul tuo core business.", icon: Briefcase },
+      { title: "Gestione Clienti e Preventivi", description: "Mi occupo dell'invio di preventivi e del supporto amministrativo di base, assicurando un'esperienza cliente impeccabile.", icon: User },
+      { title: "Organizzazione Aziendale Digitale", description: "Riordino i tuoi archivi, imposto strumenti di lavoro condivisi (CRM, Drive) e ottimizzo l'organizzazione del lavoro per processi più rapidi ed efficienti.", icon: Database },
+      { title: "Supporto Operativo e Back Office", description: "Prendo in carico le attività ripetitive che rallentano le tue giornate. Delegare le attività amministrative ti permette di concentrarti esclusivamente sul tuo core business.", icon: Briefcase },
     ],
     targets: [
       { title: "Professionisti su appuntamento", icon: CalendarDays, description1: "La gestione dell'agenda, le disdette e le conferme ti sottraggono ore preziose.", description2: "Riordino il tuo calendario e gestisco i contatti, garantendo un'esperienza impeccabile ai tuoi clienti." },
@@ -321,14 +321,14 @@ const Index = () => {
             
             <div className="text-base md:text-lg leading-relaxed text-white mb-8 md:mb-10 max-w-xl space-y-4 md:space-y-6">
               <h2 className="font-normal text-[#e5c0a1] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight drop-shadow-md">
-                Assistente Virtuale per professionisti e piccole aziende: riprendi il controllo del tuo tempo.
+                Assistente virtuale per liberi professionisti e piccole aziende: riprendi il controllo del tuo tempo.
               </h2>
               <div className="space-y-2">
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
-                  Aiuto professionisti che lavorano su appuntamento, formatori e piccole realtà a gestire l'operatività quotidiana. Delega la gestione di email e appuntamenti, l'organizzazione pratica dei tuoi corsi e le attività amministrative per liberare tempo prezioso da dedicare ai tuoi clienti.
+                  Aiuto professionisti che lavorano su appuntamento, consulenti e piccole realtà a migliorare la propria organizzazione aziendale. Delega la gestione di email, l'organizzazione degli appuntamenti, i tuoi corsi e le attività di back office per liberare tempo prezioso da dedicare ai tuoi clienti.
                 </p>
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
-                  Nessun costo fisso da dipendente. Solo un supporto flessibile, preciso e multilingue (italiano - inglese - francese - spagnolo) per far crescere la tua attività senza stress.
+                  Nessun costo fisso da dipendente. Solo un supporto amministrativo flessibile, preciso e multilingue (italiano - inglese - francese - spagnolo) per aumentare la tua produttività senza stress.
                 </p>
               </div>
             </div>
@@ -342,10 +342,10 @@ const Index = () => {
       {/* ── TI RICONOSCI? ── */}
       <section className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-4xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">La gestione operativa sta frenando la tua crescita?</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Le attività amministrative stanno frenando la tua crescita?</h2>
           <div className="text-base md:text-lg text-foreground/80 mb-6 leading-relaxed space-y-3">
-            <p>Se lavori su appuntamento, offri percorsi formativi o gestisci una piccola azienda, il tuo tempo dovrebbe essere dedicato all'erogazione del servizio.</p>
-            <p>Eppure, ogni giorno ti ritrovi sommerso da email, disdette dell'ultimo minuto, richieste di informazioni e attività di back-office che prosciugano le tue energie.</p>
+            <p>Se sei un libero professionista, offri percorsi formativi o gestisci una piccola azienda, il tuo tempo dovrebbe essere dedicato all'erogazione del servizio e ai tuoi clienti.</p>
+            <p>Eppure, ogni giorno ti ritrovi sommerso da email, disdette dell'ultimo minuto, richieste di informazioni e attività di segreteria virtuale che prosciugano le tue energie e la tua produttività.</p>
           </div>
           
           <ul className="space-y-3 mb-8 text-foreground/90 font-medium text-base md:text-lg">
@@ -381,13 +381,13 @@ const Index = () => {
           <p>Nonostante i profondi cambiamenti tecnologici e organizzativi, una cosa è rimasta costante nel mio percorso: la mia capacità di organizzare, semplificare e gestire attività e comunicazioni con precisione e attenzione alle persone.</p>
           <p>Nel corso degli anni ho conseguito una Laurea in Mediazione Linguistica con 110 e lode e un Master in Traduzione Specialistica in lingua inglese, approfondendo parallelamente lo studio del francese e dello spagnolo. Ho collaborato a progetti di traduzione di materiali educativi, documentazione specialistica e pubblicazioni editoriali, oltre ad aver svolto attività di tutoraggio per studenti con bisogni educativi speciali.</p>
           <p>Tutte queste esperienze mi hanno insegnato ad ascoltare attivamente, a comprendere esigenze molto diverse tra loro e a trovare sempre soluzioni pratiche ed efficaci.</p>
-          <p>Oggi metto queste solide competenze al servizio di liberi professionisti che lavorano su appuntamento, creatori di corsi (online e in presenza) e piccole aziende che desiderano alleggerire il carico operativo quotidiano. Il mio obiettivo è aiutarti a ritrovare il tempo da dedicare all'erogazione dei tuoi servizi, alla crescita strategica del business e alla tua vita personale.</p>
+          <p>Oggi metto queste solide competenze al servizio di liberi professionisti che lavorano su appuntamento, consulenti, creatori di corsi e piccole aziende che desiderano delegare le attività amministrative per alleggerire il carico operativo quotidiano. Il mio obiettivo è aiutarti a ritrovare il tempo da dedicare all'erogazione dei tuoi servizi, alla crescita strategica del business e alla tua vita personale.</p>
           
           <div className="my-8 p-6 bg-primary/10 border-l-4 border-primary rounded-r-xl">
-            <p className="text-xl md:text-2xl font-medium text-foreground italic">&quot;Ogni attività che mi affidi è tempo prezioso che recuperi per concentrarti sul tuo vero lavoro, sviluppare nuovi progetti o semplicemente respirare con meno stress.&quot;</p>
+            <p className="text-xl md:text-2xl font-medium text-foreground italic">&quot;Ogni attività di supporto amministrativo che mi affidi è tempo prezioso che recuperi per concentrarti sul tuo vero lavoro, sviluppare nuovi progetti o semplicemente respirare con meno stress.&quot;</p>
           </div>
           
-          <p>Il mio approccio come Assistente Virtuale è estremamente pratico, organizzato e orientato ai risultati. Ti affianco concretamente nella gestione di email, appuntamenti, clienti, documenti e attività amministrative, creando processi di lavoro più ordinati, fluidi ed efficienti.</p>
+          <p>Il mio approccio come assistente virtuale per professionisti è estremamente pratico, organizzato e orientato ai risultati. Ti affianco concretamente nella gestione email, nell'organizzazione appuntamenti e nelle attività di back office, creando processi di lavoro più ordinati, fluidi ed efficienti.</p>
           
           <div className="flex items-start gap-4 mt-6 mb-6 p-4 bg-secondary/20 rounded-xl border border-border/50">
             <div className="bg-primary/20 p-2.5 rounded-full flex-shrink-0">
@@ -679,9 +679,9 @@ const Index = () => {
 
       {/* ── CONTATTI ── */}
       <section id="contatti" className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Riprendi il controllo del tuo tempo.</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Riprendi il controllo del tuo tempo con un'assistente virtuale dedicata.</h2>
         <p className="text-foreground/80 text-base md:text-lg mb-10 max-w-2xl">
-          Scrivimi o <BookingButton asChild><button className="text-primary font-bold hover:underline">prenota una call conoscitiva gratuita</button></BookingButton>: valuteremo insieme come delegare la gestione operativa di appuntamenti, corsi e back-office per farti risparmiare tempo prezioso. Ti rispondo entro 24 ore lavorative.
+          Scrivimi o <BookingButton asChild><button className="text-primary font-bold hover:underline">prenota una call conoscitiva gratuita</button></BookingButton>: valuteremo insieme come delegare la gestione agenda, le email e il back office per farti risparmiare tempo prezioso e aumentare la tua produttività. Ti rispondo entro 24 ore lavorative.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
