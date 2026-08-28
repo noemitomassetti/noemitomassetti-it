@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { getBlogPosts } from "./BlogPost";
+import { getBlogPosts } from "@/lib/blogData";
 import { Button } from "@/components/ui/button";
 import { BookingButton } from "@/components/BookingButton";
 import { Input } from "@/components/ui/input";
@@ -21,53 +21,188 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const getTranslations = () => {
   return {
     services: [
-      { title: "Gestione Agenda e Appuntamenti", description: "Organizzo il tuo calendario, gestisco prenotazioni, modifiche e promemoria. Avrai tutto sotto controllo, ottimizzando l'organizzazione appuntamenti ed evitando sovrapposizioni o perdite di tempo.", icon: Calendar },
-      { title: "Supporto per la Presenza Online", description: "Ti aiuto a strutturare e mantenere aggiornata la tua presenza digitale, organizzando i contenuti del sito o della landing page in modo professionale e costante.", icon: LayoutList },
-      { title: "Traduzione Contenuti e Comunicazioni", description: "Traduco e adatto i tuoi contenuti (siti web, landing page, corsi) e le comunicazioni internazionali nelle mie lingue di lavoro: italiano, inglese, francese e spagnolo.", icon: Globe },
-      { title: "Gestione Email e Segreteria Virtuale", description: "Svuoto e organizzo la tua casella di posta, rispondo tempestivamente alle richieste dei clienti e gestisco il flusso di comunicazioni come una vera e propria segreteria virtuale e customer care.", icon: Mail },
-      { title: "Supporto per Corsi", description: "Ti affianco nell'organizzazione operativa di corsi online o in presenza: iscrizioni, invio materiali, assistenza partecipanti e follow-up strategico.", icon: GraduationCap },
-      { title: "Gestione Clienti e Preventivi", description: "Mi occupo dell'invio di preventivi e del supporto amministrativo di base (back office commerciale), assicurando un'esperienza cliente impeccabile fin dal primo contatto.", icon: User },
-      { title: "Organizzazione Aziendale Digitale", description: "Riordino i tuoi archivi, imposto strumenti di lavoro condivisi (CRM, Drive) e ottimizzo l'organizzazione del lavoro per processi più rapidi, produttivi ed efficienti.", icon: Database },
-      { title: "Supporto Operativo e Back Office", description: "Prendo in carico le attività ripetitive che rallentano le tue giornate. Delegare le attività amministrative ti permette di concentrarti esclusivamente sul tuo core business e sulla tua produttività.", icon: Briefcase },
+      {
+        title: "SEGRETERIA & ORGANIZZAZIONE",
+        subtitle: "Un supporto concreto per le attività che richiedono tempo, attenzione e continuità.",
+        description: "Posso occuparmi di:\n\n• gestione e organizzazione delle email\n• agenda e appuntamenti\n• conferme, modifiche e comunicazioni\n• gestione delle richieste dei clienti\n• organizzazione di documenti e informazioni\n• attività di back office\n• supporto organizzativo quotidiano",
+        icon: Mail,
+        cta: "SCOPRI IL SERVIZIO"
+      },
+      {
+        title: "TRADUZIONE & COMUNICAZIONE MULTILINGUE",
+        subtitle: "Italiano · Inglese · Francese · Spagnolo",
+        description: "Posso supportarti nella traduzione e nell'adattamento di contenuti e comunicazioni, con attenzione al contesto e al destinatario.\n\nAd esempio:\n• siti web\n• landing page\n• email\n• documenti\n• materiali formativi\n• comunicazioni con clienti e interlocutori internazionali",
+        icon: Globe,
+        cta: "SCOPRI IL SERVIZIO"
+      },
+      {
+        title: "SITI WEB & LANDING PAGE",
+        subtitle: "Una presenza online chiara e professionale è spesso il primo punto di contatto con un potenziale cliente.",
+        description: "Creo siti web e landing page per professionisti, consulenti e piccole attività, con attenzione alla struttura dei contenuti, alla chiarezza e alla fruibilità anche da smartphone.\n\nPosso realizzare:\n• landing page\n• siti vetrina\n• pagine professionali\n• restyling di siti esistenti\n• organizzazione dei contenuti\n• pagine responsive",
+        icon: LayoutList,
+        cta: "VEDI IL PORTFOLIO"
+      }
+    ],
+    delegationBenefits: [
+      {
+        title: "Lavorare con più ordine",
+        description: "Avere una gestione più organizzata delle attività quotidiane.",
+        icon: CheckCircle2
+      },
+      {
+        title: "Recuperare tempo",
+        description: "Ridurre il tempo dedicato alle attività operative e organizzative.",
+        icon: CheckCircle2
+      },
+      {
+        title: "Essere più presente per i tuoi clienti",
+        description: "Senza dover interrompere continuamente il tuo lavoro.",
+        icon: CheckCircle2
+      },
+      {
+        title: "Avere un punto di riferimento",
+        description: "Una persona con cui coordinarti e a cui affidare attività definite.",
+        icon: CheckCircle2
+      }
+    ],
+    experienceItems: [
+      {
+        title: "Oltre 20 anni di esperienza",
+        description: "Un percorso professionale maturato attraverso attività organizzative, linguistiche e di supporto.",
+        icon: Briefcase
+      },
+      {
+        title: "Una formazione specialistica",
+        description: "Laurea in Mediazione Linguistica – 110 e lode\nMaster in Traduzione Specialistica",
+        icon: GraduationCap
+      },
+      {
+        title: "Quattro lingue di lavoro",
+        description: "Italiano, inglese, francese e spagnolo.",
+        icon: Globe
+      },
+      {
+        title: "Un approccio concreto",
+        description: "Organizzazione, precisione, attenzione alle comunicazioni e alle esigenze delle persone con cui lavoro.",
+        icon: CheckCheck
+      }
     ],
     targets: [
-      { title: "Professionisti su appuntamento", icon: CalendarDays, description1: "La gestione dell'agenda, le <a href='/blog/disdette-ultimo-minuto' class='text-primary hover:underline'>disdette</a> e le conferme ti sottraggono ore preziose alla tua produttività.", description2: "Riordino il tuo calendario e gestisco i contatti, garantendo un'esperienza impeccabile ai tuoi clienti come assistente virtuale dedicata." },
-      { title: "Formatori e creatori di corsi", icon: GraduationCap, description1: "Lanciare e gestire corsi (online o in presenza) richiede un enorme sforzo logistico, organizzativo e di <a href='/blog/customer-care-esperienza-clienti' class='text-primary hover:underline'>customer care</a>.", description2: "Mi occupo di iscrizioni, invio materiali, assistenza ai partecipanti e follow-up, così puoi dedicarti solo alla formazione." },
-      { title: "Piccole aziende e studi", icon: Briefcase, description1: "Il back-office disorganizzato, le email accumulate e la burocrazia rallentano la crescita della tua organizzazione aziendale.", description2: "Ottimizzo la gestione di preventivi e documenti, creando processi fluidi ed efficienti per delegare le attività amministrative." },
-      { title: "Chi lavora con l'estero", icon: Globe, description1: "Hai bisogno di comunicare con clienti internazionali o di tradurre i tuoi materiali aziendali in modo professionale.", description2: "Gestisco comunicazioni, traduzioni e contenuti in inglese, francese e spagnolo, supportandoti nell'espansione del tuo business." },
+      {
+        title: "Professionisti e consulenti",
+        icon: CalendarDays,
+        description: "Se lavori su appuntamento o gestisci direttamente i tuoi clienti, posso supportarti nella gestione di agenda, email, richieste e comunicazioni."
+      },
+      {
+        title: "Formatori e creatori di corsi",
+        icon: GraduationCap,
+        description: "Posso aiutarti nell'organizzazione di corsi ed eventi, nelle iscrizioni, nelle comunicazioni e nel rapporto con i partecipanti."
+      },
+      {
+        title: "Piccole aziende e studi professionali",
+        icon: Briefcase,
+        description: "Un supporto operativo per le attività di segreteria, organizzazione e back office che richiedono tempo e continuità."
+      },
+      {
+        title: "Professionisti che lavorano con l'estero",
+        icon: Globe,
+        description: "Le mie competenze linguistiche possono essere utili per comunicazioni, traduzioni e contenuti destinati a interlocutori internazionali."
+      }
     ],
-    packages: [
-      { title: "Supporto Base", description: "Ideale per iniziare a delegare le attività più urgenti e alleggerire da subito il carico operativo quotidiano." },
-      { title: "Supporto Continuativo", description: "Una collaborazione costante per la gestione di agenda, email e clienti. Un vero e proprio braccio destro per la tua attività." },
-      { title: "Progetti su Misura", description: "Un pacchetto personalizzato per esigenze specifiche: supporto per un corso, riordino digitale o un progetto di traduzione." },
+    pricingCards: [
+      {
+        title: "Supporto operativo",
+        price: "A partire da €XX/ora",
+        description: "Email, agenda, appuntamenti, organizzazione e attività di back office."
+      },
+      {
+        title: "Traduzione e comunicazione",
+        price: "A partire da €XX",
+        description: "Italiano, inglese, francese e spagnolo."
+      },
+      {
+        title: "Landing Page",
+        price: "A partire da €XXX",
+        description: "Una pagina professionale per presentare un servizio, un prodotto, un corso o un'attività."
+      },
+      {
+        title: "Sito Web",
+        price: "A partire da €XXX",
+        description: "Un sito professionale e responsive, strutturato in base alle esigenze della tua attività."
+      }
+    ],
+    portfolioCategories: [
+      {
+        title: "Siti Web",
+        description: "Esempi di siti pensati per professionisti, consulenti e piccole attività.",
+        cta: "VEDI I PROGETTI"
+      },
+      {
+        title: "Landing Page",
+        description: "Esempi di pagine progettate per presentare un servizio, un prodotto, un corso o un'attività.",
+        cta: "VEDI GLI ESEMPI"
+      },
+      {
+        title: "Comunicazione multilingue",
+        description: "Esempi di contenuti e comunicazioni in italiano, inglese, francese e spagnolo.",
+        cta: "VEDI GLI ESEMPI"
+      },
+      {
+        title: "Organizzazione & Segreteria",
+        description: "Esempi delle attività che posso gestire e organizzare per professionisti e piccole attività.",
+        cta: "SCOPRI DI PIÙ"
+      }
     ],
     steps: [
-      { title: "Call Conoscitiva", subtitle: "(30 minuti – gratuita)", description: "Ci incontriamo in videochiamata per parlare della tua attività e capire quali compiti ti portano via più tempo." },
-      { title: "Analisi e Priorità", description: "Studio il tuo flusso di lavoro e definiamo insieme le priorità di delega per ottenere risultati immediati." },
-      { title: "Impostazione del Lavoro", description: "Condividiamo gli strumenti di lavoro e stabiliamo procedure chiare per collaborare in modo semplice e veloce." },
-      { title: "Proposta Personalizzata", description: "Ti invio un preventivo dettagliato basato esclusivamente sulle ore effettive o sui progetti richiesti." },
-      { title: "Inizio Collaborazione", description: "Iniziamo la collaborazione. Recuperi subito tempo prezioso da dedicare alla crescita del tuo business." },
+      {
+        number: "01",
+        title: "Ci conosciamo",
+        description: "Una call gratuita di 30 minuti per parlare della tua attività e capire cosa ti occupa più tempo."
+      },
+      {
+        number: "02",
+        title: "Individuiamo cosa delegare",
+        description: "Partiamo dalle attività per cui potrei offrirti un supporto concreto."
+      },
+      {
+        number: "03",
+        title: "Definiamo la collaborazione",
+        description: "Stabiliamo attività, modalità e tempi di lavoro in base alle tue esigenze."
+      },
+      {
+        number: "04",
+        title: "Iniziamo",
+        description: "Tu continui a concentrarti sulle tue priorità. Io mi occupo delle attività che abbiamo deciso di delegare."
+      }
     ],
     faqs: [
       {
-        q: "Perché scegliere un'Assistente Virtuale e non un dipendente?",
-        a: "Assumere un dipendente comporta costi fissi e oneri di gestione del personale. Con un'Assistente Virtuale paghi solo per il tempo effettivo dedicato al tuo progetto. È una soluzione flessibile che ti permette di aumentare o ridurre le ore in base alle reali esigenze della tua attività, ottimizzando il budget."
+        q: "Posso affidarti solo alcune attività?",
+        a: "Sì. Possiamo iniziare anche da una singola esigenza e valutare successivamente se ampliare la collaborazione."
       },
       {
-        q: "Come comunichiamo e ci aggiorniamo sul lavoro?",
-        a: "Utilizziamo gli strumenti che preferisci: email, WhatsApp, Asana o altro. Definiamo insieme un ritmo di aggiornamento (ad esempio un report settimanale o una breve call periodica) per garantirti sempre il pieno controllo sulle attività delegate."
+        q: "Devo impegnarmi per un numero fisso di ore?",
+        a: "La modalità di collaborazione viene definita in base alle attività e alle tue esigenze."
       },
       {
-        q: "Come garantisci la riservatezza dei miei dati?",
-        a: "La privacy è fondamentale. Prima di iniziare qualsiasi collaborazione, firmiamo un Accordo di Riservatezza (NDA). I tuoi dati, i tuoi accessi e le informazioni dei tuoi clienti sono trattati con la massima sicurezza e nel pieno rispetto del GDPR."
+        q: "Lavori anche con clienti internazionali?",
+        a: "Sì. Lavoro in italiano, inglese, francese e spagnolo."
       },
       {
-        q: "Posso delegare solo per un breve periodo o per poche ore?",
-        a: "Certamente. Non richiedo contratti vincolanti a lungo termine. Puoi delegare anche solo poche ore al mese o richiedere supporto per un singolo progetto specifico (come il lancio di un corso o la traduzione di un sito web)."
+        q: "Puoi aiutarmi con il mio sito?",
+        a: "Sì. Creo siti web e landing page e posso occuparmi anche di aggiornamenti o interventi su un sito esistente."
       },
       {
-        q: "In quali lingue offri i tuoi servizi?",
-        a: "Sono madrelingua italiana e, grazie alla mia Laurea in Mediazione Linguistica e al Master in Traduzione, offro supporto operativo e gestione delle comunicazioni anche in inglese, francese e spagnolo."
+        q: "Ti occupi di contabilità e fatturazione?",
+        a: "No. Il mio supporto non comprende contabilità, fatturazione o adempimenti fiscali."
+      },
+      {
+        q: "Posso iniziare con una sola attività?",
+        a: "Certamente. Possiamo partire da ciò che oggi ti occupa più tempo o ti crea maggiore difficoltà."
+      },
+      {
+        q: "Come funziona la prima call?",
+        a: "È una conversazione gratuita di circa 30 minuti. Mi racconti la tua attività e le tue esigenze e valutiamo insieme se posso offrirti un supporto concreto."
       }
     ]
   };
@@ -219,7 +354,16 @@ const ContattiForm = () => {
 /* ─── MAIN PAGE ─────────────────────────────────────── */
 
 const Index = () => {
-  const { services, targets, packages, steps, faqs } = getTranslations();
+  const {
+    services,
+    delegationBenefits,
+    experienceItems,
+    targets,
+    // pricingCards, (Preserved for when pricing is defined)
+    // portfolioCategories,
+    steps,
+    faqs
+  } = getTranslations();
 
   useSEO({
     title: "Noemi Tomassetti | Assistente Virtuale per Professionisti",
@@ -244,7 +388,7 @@ const Index = () => {
         "description": "Servizi di Assistenza Virtuale e Segreteria Virtuale per liberi professionisti, consulenti e piccole aziende. Organizzazione aziendale e gestione appuntamenti.",
         "url": "https://www.noemitomassetti.it",
         "logo": "https://vibe.filesafe.space/meta/1776423224485175331/favicon.png",
-        "image": "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
+        "image": "/noemi-tomassetti.png",
         "founder": {
           "@type": "Person",
           "name": "Noemi Tomassetti"
@@ -332,13 +476,13 @@ const Index = () => {
         {/* Background Image Container */}
         <div className="relative md:absolute md:inset-0 w-full md:h-full z-0 flex justify-center md:justify-end animate-in fade-in duration-1000">
           <img
-            src="https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg"
-            alt="Noemi Tomassetti Assistente Virtuale in ufficio"
+            src="/noemi-tomassetti.png"
+            alt="Noemi Tomassetti Assistente Virtuale"
             width="800"
             height="1200"
             loading="eager"
-            fetchPriority="high"
-            className="w-full md:w-[60%] lg:w-[50%] xl:w-[45%] h-auto md:h-full object-cover object-top md:object-[85%_top] [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)]"
+            fetchpriority="high"
+            className="w-full md:w-[60%] lg:w-[50%] xl:w-[45%] h-auto md:h-full object-cover object-[center_12%] md:object-[center_18%] scale-105 md:scale-110 origin-top [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)]"
           />
           {/* Desktop Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent z-10 md:w-[60%] hidden md:block pointer-events-none"></div>
@@ -346,7 +490,7 @@ const Index = () => {
 
         <div className="container relative z-10 px-4 md:px-6 pb-12 pt-4 md:pt-0 flex flex-col justify-center -mt-16 md:mt-0">
           <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <h1 className="sr-only">Noemi Tomassetti - Assistente Virtuale per liberi professionisti, consulenti e piccole aziende. Servizi di segreteria virtuale, gestione agenda e back office.</h1>
+            <h1 className="sr-only">Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e siti web.</h1>
             <div className="mb-6 md:mb-8 w-full max-w-[280px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[600px]">
               <svg viewBox="0 0 400 68" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Noemi Tomassetti Virtual Assistant" role="img">
                 <title>Noemi Tomassetti - Virtual Assistant</title>
@@ -357,67 +501,57 @@ const Index = () => {
             
             <div className="text-base md:text-lg leading-relaxed text-white mb-8 md:mb-10 max-w-xl space-y-4 md:space-y-6">
               <h2 className="font-normal text-[#e5c0a1] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight drop-shadow-md">
-                Assistente virtuale per liberi professionisti, consulenti e piccole aziende: riprendi il controllo del tuo tempo con una segreteria virtuale su misura.
+                Il supporto che ti aiuta a lavorare meglio, con più ordine.
               </h2>
-              <div className="space-y-2">
+              <p className="font-medium text-white text-base sm:text-lg drop-shadow-sm">
+                Segreteria, organizzazione, comunicazione multilingue, traduzione e siti web per professionisti, consulenti e piccole attività.
+              </p>
+              <div className="space-y-3">
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
-                  Aiuto professionisti che lavorano su appuntamento, consulenti e piccole realtà a migliorare la propria organizzazione aziendale. Delega la gestione di email, l'organizzazione degli appuntamenti, i tuoi corsi e le attività di back office per liberare tempo prezioso da dedicare ai tuoi clienti.
+                  Metto a disposizione oltre 20 anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano.
                 </p>
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
-                  Nessun costo fisso da dipendente. Solo un supporto amministrativo flessibile, preciso e multilingue (italiano - inglese - francese - spagnolo) per aumentare la tua produttività senza stress.
+                  Dalla gestione di email e appuntamenti alla comunicazione con i clienti, dalla traduzione alla creazione di siti web e landing page: un supporto professionale e flessibile, costruito sulle tue esigenze.
                 </p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <BookingButton size="lg" aria-label="Prenota una call conoscitiva gratuita" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
-                PRENOTA LA TUA CALL GRATUITA (30 MIN)
+              <BookingButton size="lg" aria-label="Prenota una call gratuita" className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300">
+                PRENOTA UNA CALL GRATUITA
               </BookingButton>
               <div className="flex items-center gap-2 text-xs sm:text-sm text-white/90 bg-black/30 backdrop-blur px-4 py-3 rounded-md border border-white/10">
                 <span className="text-[#e5c0a1]">✓</span>
-                <span>100% Gratuita &bull; Nessun Impegno &bull; Risposta in 24h</span>
+                <span>30 minuti &bull; Nessun impegno &bull; Parliamo delle tue esigenze</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── TI RICONOSCI? ── */}
+      {/* ── QUANDO LE ATTIVITÀ DA GESTIRE DIVENTANO TROPPE ── */}
       <section className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-4xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Le attività amministrative stanno frenando la tua crescita?</h2>
-          <div className="text-base md:text-lg text-foreground/80 mb-6 leading-relaxed space-y-3">
-            <p>Se sei un libero professionista, offri percorsi formativi o gestisci una piccola azienda, il tuo tempo dovrebbe essere dedicato all'erogazione del servizio e ai tuoi clienti.</p>
-            <p>Eppure, ogni giorno ti ritrovi sommerso da email, disdette dell'ultimo minuto, richieste di informazioni e attività di segreteria virtuale che prosciugano le tue energie e la tua produttività.</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Non tutto quello che devi fare deve necessariamente essere fatto da te.</h2>
+          <div className="text-base md:text-lg text-foreground/80 mb-6 leading-relaxed space-y-4">
+            <p>Gestire un'attività significa occuparsi del proprio lavoro, ma anche di tutto ciò che gli gira intorno.</p>
+            <p>Email, appuntamenti, richieste dei clienti, documenti, comunicazioni, organizzazione e tante piccole attività che, una dopo l'altra, finiscono per occupare tempo e attenzione.</p>
+            <p className="font-semibold text-foreground">Sono importanti, ma non sempre richiedono la tua presenza.</p>
           </div>
-          
-          <ul className="space-y-3 mb-8 text-foreground/90 font-medium text-base md:text-lg">
-             <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" /><strong>L'agenda è un caos</strong> tra incastri impossibili, conferme, disdette e riprogrammazioni degli appuntamenti</li>
-             <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" /><strong>I lanci sono stressanti</strong> gestire le iscrizioni ai corsi, inviare i materiali e fare customer care ti toglie il sonno</li>
-             <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" /><strong>Lavori fino a tardi</strong> per smaltire le email, preparare i preventivi e sistemare l'amministrazione di base</li>
-          </ul>
-
-          <p className="text-lg md:text-xl font-semibold text-foreground">
-            Il risultato? Lavori di più, guadagni di meno e sacrifichi il tuo tempo libero e la tua serenità.
-          </p>
 
           <div className="mt-10 pt-8 border-t border-border/40">
-            <h3 className="text-xl md:text-2xl font-bold text-primary mb-4">La Soluzione? Delegare in Modo Strategico</h3>
-            <div className="text-base md:text-lg text-foreground/80 mb-5 leading-relaxed space-y-3">
-              <p>Non devi assumere un dipendente a tempo pieno per riprendere il controllo della tua vita lavorativa.</p>
-              <p>Delegando le attività operative a un'Assistente Virtuale, trasformi un costo in un investimento altamente redditizio: paghi solo le ore effettive, risparmi tempo ed eviti i costi fissi di un dipendente.</p>
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-4">È qui che posso offrirti il mio supporto.</h3>
+            <div className="text-base md:text-lg text-foreground/80 mb-6 leading-relaxed space-y-3">
+              <p>Posso occuparmi di alcune delle attività di segreteria, organizzazione, comunicazione e supporto operativo che fanno parte della gestione quotidiana della tua attività.</p>
+              <p>L'obiettivo è semplice: aiutarti a lavorare con più ordine e avere più tempo e attenzione per le tue priorità.</p>
             </div>
-            <ul className="space-y-3 text-foreground/90 font-medium text-base md:text-lg mb-8">
-               <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" /><strong>Tu ti concentri</strong> sull'acquisizione clienti e sull'erogazione del tuo servizio</li>
-               <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" /><strong>Io mi occupo</strong> di far funzionare la tua attività in modo fluido e impeccabile</li>
-            </ul>
             <div className="bg-card border border-primary/20 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
               <div>
-                <p className="font-bold text-foreground text-base sm:text-lg">Vuoi capire esattamente cosa puoi delegare nella tua attività?</p>
-                <p className="text-sm text-muted-foreground">Valutiamo insieme la tua gestione operativa in 30 minuti di consulenza gratuita.</p>
+                <p className="font-bold text-foreground text-base sm:text-lg">Vuoi scoprire cosa possiamo delegare e come posso aiutarti?</p>
+                <p className="text-sm text-muted-foreground">Scopri tutte le aree di supporto e i servizi dedicati.</p>
               </div>
-              <BookingButton size="default" className="shrink-0 uppercase font-bold text-xs tracking-wider px-6 py-5">
-                ANALIZZA LA TUA ATTIVITÀ
-              </BookingButton>
+              <Button asChild className="shrink-0 uppercase font-bold text-xs tracking-wider px-6 py-5">
+                <a href="#servizi">SCOPRI I SERVIZI</a>
+              </Button>
             </div>
           </div>
         </div>
@@ -426,158 +560,167 @@ const Index = () => {
       {/* ── CHI SONO ── */}
       <section id="chi-sono" className="container px-4 md:px-6 py-12 md:py-20 max-w-4xl mx-auto scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
         <div className="space-y-5 text-base md:text-lg text-foreground/85 leading-relaxed">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Assistente Virtuale: chi sono e il valore della segreteria virtuale per la tua attività</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Piacere, sono Noemi.</h2>
           
-<p>Ho iniziato a lavorare alla fine degli anni &apos;90, quando l&apos;agenda era ancora cartacea e il fax rappresentava uno degli strumenti principali di comunicazione. Da allora ho maturato <strong>oltre venticinque anni di esperienza professionale</strong> in contesti diversi, dalla segreteria organizzativa al customer care, dal back office commerciale alla traduzione.</p>
-          <p>Nonostante i profondi cambiamenti tecnologici e organizzativi, una cosa è rimasta costante nel mio percorso: la mia capacità di <strong>organizzare, semplificare e gestire attività e comunicazioni</strong> con precisione e attenzione alle persone.</p>
-          <p>Nel corso degli anni ho conseguito una <strong>Laurea in Mediazione Linguistica con 110 e lode</strong> e un <strong>Master in Traduzione Specialistica</strong> in lingua inglese, approfondendo parallelamente lo studio del francese e dello spagnolo. Ho collaborato a progetti di traduzione di materiali educativi, documentazione specialistica e pubblicazioni editoriali, oltre ad aver svolto attività di tutoraggio per studenti con bisogni educativi speciali.</p>
-          <p>Tutte queste esperienze mi hanno insegnato ad ascoltare attivamente, a comprendere esigenze molto diverse tra loro e a trovare sempre soluzioni pratiche ed efficaci.</p>
-          <p>Oggi metto queste solide competenze al servizio di <strong>liberi professionisti che lavorano su appuntamento, consulenti, creatori di corsi e piccole aziende</strong> che desiderano delegare le attività amministrative per alleggerire il carico operativo quotidiano. Il mio obiettivo è aiutarti a ritrovare il tempo da dedicare all'erogazione dei tuoi servizi, alla crescita strategica del business e alla tua vita personale.</p>
+          <p>Sono un'Assistente Virtuale e metto a disposizione <strong>oltre 20 anni di esperienza professionale</strong> in ambito organizzativo, linguistico e di supporto.</p>
+          <p>Nel corso del mio percorso ho lavorato in contesti diversi, occupandomi di segreteria, organizzazione, customer care, back office e traduzione.</p>
+          <p>Ho conseguito una <strong>Laurea in Mediazione Linguistica con 110 e lode</strong> e un <strong>Master in Traduzione Specialistica</strong>.</p>
+          <p>Lavoro in <strong>italiano, inglese, francese e spagnolo</strong>.</p>
+          <p>Oggi metto queste competenze a disposizione di <strong>professionisti, consulenti, formatori e piccole attività</strong> che hanno bisogno di un supporto affidabile per gestire meglio il lavoro quotidiano e, quando necessario, comunicare anche con interlocutori internazionali.</p>
           
-          <div className="my-8 p-6 bg-primary/10 border-l-4 border-primary rounded-r-xl">
-            <p className="text-xl md:text-2xl font-medium text-foreground italic">&quot;Ogni attività di supporto amministrativo che mi affidi è tempo prezioso che recuperi per concentrarti sul tuo vero lavoro, sviluppare nuovi progetti o semplicemente respirare con meno stress.&quot;</p>
+          <div className="my-8 p-6 bg-primary/10 border-l-4 border-primary rounded-r-xl space-y-3">
+            <h3 className="text-xl md:text-2xl font-bold text-primary">Il mio modo di lavorare</h3>
+            <p className="text-foreground/90 leading-relaxed">Ogni collaborazione parte dall'ascolto.</p>
+            <p className="text-foreground/90 leading-relaxed">Mi racconti la tua attività, le tue esigenze e le attività che ti occupano più tempo. Insieme individuiamo ciò che ha senso delegare e definiamo una modalità di lavoro semplice e sostenibile.</p>
+            <p className="text-foreground font-semibold">Nessuna formula standard. Partiamo da ciò che ti serve davvero.</p>
           </div>
           
-          <p>Il mio approccio come assistente virtuale per professionisti è estremamente pratico, organizzato e orientato ai risultati. Ti affianco concretamente nella gestione email, nell'organizzazione appuntamenti e nelle attività di back office, creando processi di lavoro più ordinati, fluidi ed efficienti.</p>
-          
-          <div className="flex items-start gap-4 mt-6 mb-6 p-4 bg-secondary/20 rounded-xl border border-border/50">
-            <div className="bg-primary/20 p-2.5 rounded-full flex-shrink-0">
-              <Globe className="w-5 h-5 text-primary" />
-            </div>
-            <p className="text-foreground/90 font-medium leading-relaxed mt-0.5 text-base">
-              Inoltre, grazie alla mia solida esperienza linguistica, posso gestire con facilità comunicazioni, traduzioni e contenuti in italiano, inglese, francese e spagnolo, offrendo un supporto indispensabile a chi lavora (o desidera lavorare) con clienti internazionali.
-            </p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
+            <BookingButton size="lg" className="text-sm md:text-base px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+              CONOSCIAMOCI MEGLIO
+            </BookingButton>
+            <span className="text-sm text-muted-foreground italic">Call gratuita di 30 minuti &bull; Nessun impegno</span>
           </div>
-          
-          <p>Se senti di dedicare troppo tempo alle attività operative e troppo poco a ciò che fa crescere davvero la tua attività, sarò felice di aiutarti a trovare la soluzione organizzativa perfetta per te.</p>
         </div>
       </section>
 
-      {/* ── PERCHÉ LAVORARE CON ME ── */}
+      {/* ── IL VALORE DELLA DELEGA & ESPERIENZA ── */}
       <section className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '400ms' }}>
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-5xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Il mio supporto per te</h2>
-          <div className="text-base md:text-lg text-foreground/80 mb-8 leading-relaxed space-y-4">
-            <p>Ti supporto nella gestione operativa della tua attività con un approccio organizzato, pratico e orientato alla massima efficienza.</p>
-            <p>L’obiettivo non è solo alleggerire temporaneamente il tuo carico di lavoro, ma aiutarti a creare un sistema stabile, fluido e sostenibile a lungo termine.</p>
-          </div>
-          
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-foreground/90 font-medium text-base md:text-lg">
-             <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />Analisi approfondita delle tue esigenze e priorità</li>
-             <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />Soluzioni organizzative personalizzate e flessibili</li>
-             <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />Gestione operativa precisa, rapida e organizzata</li>
-             <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />Comunicazione sempre chiara e costante</li>
-             <li className="flex items-start gap-3 md:col-span-2"><CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />Riservatezza assoluta e massima attenzione ai dettagli</li>
-          </ul>
-
-          <p className="text-lg md:text-xl font-semibold text-foreground">
-            Delegare le attività operative non significa perdere il controllo, ma lavorare finalmente con più ordine, continuità e serenità.
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Delegare non significa perdere il controllo.</h2>
+          <p className="text-base md:text-lg text-foreground/80 mb-8 leading-relaxed">
+            Significa scegliere con attenzione quali attività continuare a gestire personalmente e quali affidare a qualcuno che possa occuparsene con precisione e continuità.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {delegationBenefits.map((b, i) => (
+              <div key={i} className="flex items-start gap-4 p-5 bg-background border border-border/60 rounded-xl">
+                <b.icon className="w-6 h-6 text-primary mt-0.5 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold text-primary mb-1">{b.title}</h3>
+                  <p className="text-foreground/80 text-base">{b.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-lg md:text-xl font-semibold text-foreground mb-12">
+            Il mio obiettivo non è sostituirti. È aiutarti a gestire meglio il lavoro.
+          </p>
+
+          {/* Competenze costruite nel tempo */}
+          <div className="border-t border-border/40 pt-10">
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-6">Competenze costruite nel tempo</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {experienceItems.map((item, i) => (
+                <div key={i} className="p-5 bg-card border border-border rounded-xl">
+                  <div className="flex items-center gap-3 mb-2">
+                    <item.icon className="w-5 h-5 text-primary flex-shrink-0" />
+                    <h4 className="font-semibold text-primary text-base md:text-lg">{item.title}</h4>
+                  </div>
+                  <p className="text-foreground/80 text-base whitespace-pre-line leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── SERVIZI ── */}
       <section id="servizi" className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
         <div className="max-w-4xl mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">I miei servizi: Supporto Operativo per Professionisti</h2>
-          <p className="text-base md:text-lg text-foreground/90 leading-relaxed">Tutto quello che serve per far funzionare in modo fluido il tuo studio, la tua azienda o i tuoi corsi: gestione agenda, assistenza clienti, back-office ed email. Supporto disponibile anche in inglese, francese e spagnolo.</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Come posso aiutarti</h2>
+          <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+            Il mio supporto si concentra su alcune aree precise. Puoi affidarmi una singola attività oppure costruire nel tempo una collaborazione più ampia.
+          </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, i) => (
-            <div key={i} className="flex flex-col group p-6 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-card/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 cursor-default">
-              <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+            <div key={i} className="flex flex-col bg-card p-6 md:p-8 rounded-2xl border border-border hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
+              <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
                 <service.icon className="w-7 h-7 text-primary stroke-[1.5]" />
               </div>
-              <h3 className="text-lg font-semibold text-primary mb-3 group-hover:text-primary/90 transition-colors">{service.title}</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
+              {service.subtitle && <p className="text-sm font-medium text-foreground/90 italic mb-4">{service.subtitle}</p>}
               <p className="text-foreground/80 leading-relaxed text-base whitespace-pre-line">{service.description}</p>
             </div>
           ))}
         </div>
-        <div className="mt-12 border-t border-border/40 pt-10">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-6">Un investimento che si ripaga da solo</h3>
-          <div className="text-base md:text-lg text-foreground/90 leading-relaxed space-y-3">
-            <p>Non stai semplicemente delegando dei compiti noiosi. Stai acquistando tempo prezioso per la tua vita e la tua attività.</p>
-            <p>Delegando anche solo alcune attività operative a settimana, recuperi in media dalle 4 alle 6 ore di lavoro. Ore che puoi reinvestire per acquisire nuovi clienti o lavorare con meno stress.</p>
-            <p>Con il mio supporto costante, la tua attività diventa immediatamente più snella, professionale e facilmente scalabile.</p>
-<p>Inoltre, a differenza di un dipendente tradizionale, non hai costi fissi o oneri di gestione del personale. Paghi solo per il tempo o il progetto di cui hai realmente bisogno, mantenendo la massima flessibilità.</p>
-          </div>
-          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <BookingButton size="lg" className="text-sm md:text-base px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
-              PARLIAMONE INSIEME (CALL GRATUITA)
-            </BookingButton>
-            <span className="text-sm text-muted-foreground italic">Senza alcun vincolo contrattuale &bull; Risposta rapida</span>
-          </div>
+      </section>
+
+      {/* ── SUPPORTO / A CHI POSSO ESSERE UTILE ── */}
+      <section id="supporto" className="bg-muted/50 border-y border-border/30 container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
+        <div className="max-w-4xl mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Un supporto pensato per attività diverse</h2>
+          <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+            Ogni professione ha le sue specificità, ma molte esigenze organizzative e di gestione sono comuni:
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {targets.map((t, i) => (
+            <div key={i} className="flex flex-col bg-background p-6 rounded-2xl border border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                <t.icon className="w-6 h-6 text-primary stroke-[1.5]" />
+              </div>
+              <h3 className="text-lg font-bold text-primary mb-2">{t.title}</h3>
+              <p className="text-foreground/80 leading-relaxed text-base">{t.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 border-t border-border/40 pt-6 space-y-2">
+          <h3 className="text-lg md:text-xl font-bold text-primary">La tua attività è diversa?</h3>
+          <p className="text-base md:text-lg text-foreground/85">Raccontami di cosa ti occupi. Possiamo valutare insieme se e come posso esserti utile.</p>
         </div>
       </section>
 
-      {/* ── SUPPORTO ── */}
-      <section id="supporto" className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
+      {/* ── COLLABORAZIONE / TARIFFE (Temporaneamente nascosta in attesa della definizione dei prezzi) ── */}
+      {/* 
+      <section id="collaborazione" className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
         <div className="max-w-4xl mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Come posso supportare concretamente la tua attività</h2>
-          <p className="text-base md:text-lg text-foreground/90 leading-relaxed">Se lavori con clienti, gestisci appuntamenti, organizzi corsi o vuoi migliorare la tua presenza online, posso aiutarti. Ad esempio:</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Quanto costa il mio supporto?</h2>
+          <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+            Cerco di mantenere una struttura semplice e trasparente.
+          </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {targets.map((t, i) => (
-            <div key={i} className="flex flex-col group p-6 rounded-2xl border border-transparent hover:border-primary/20 hover:bg-card/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 cursor-default">
-              <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                <t.icon className="w-7 h-7 text-primary stroke-[1.5]" />
-              </div>
-              <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-primary/90 transition-colors">{t.title}</h3>
-              <div className="space-y-2 text-foreground/80 leading-relaxed text-base">
-                <p dangerouslySetInnerHTML={{ __html: t.description1 }}></p>
-                <p dangerouslySetInnerHTML={{ __html: t.description2 }}></p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {pricingCards.map((card, i) => (
+            <div key={i} className="flex flex-col justify-between bg-card border border-border rounded-2xl p-6 group hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div>
+                <h3 className="text-lg font-bold text-primary mb-2">{card.title}</h3>
+                <p className="text-xl font-extrabold text-foreground mb-3">{card.price}</p>
+                <p className="text-base text-foreground/80 leading-relaxed">{card.description}</p>
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-10 border-t border-border/40 pt-6">
-          <p className="text-lg md:text-xl font-semibold text-primary">Anche se la tua attività è diversa, possiamo valutare insieme la soluzione più adatta alle tue esigenze.</p>
-        </div>
-      </section>
+        <p className="text-sm text-muted-foreground italic mb-8">
+          * Il prezzo finale viene definito in base alle attività, alla complessità e al tempo necessario.
+        </p>
 
-      {/* ── COLLABORAZIONE (prezzi) ── */}
-      <section id="collaborazione" className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
-        <div className="container px-4 md:px-6 py-12 md:py-20">
-          <div className="max-w-4xl mb-10">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">Modalità di collaborazione</h2>
-            <div className="text-base md:text-lg text-foreground/90 leading-relaxed space-y-3">
-              <p>Ogni attività è diversa, per questo il supporto viene definito in base alle tue esigenze operative e al tuo modo di lavorare.</p>
-              <p>Possiamo iniziare in modo graduale oppure costruire una collaborazione continuativa nel tempo.</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {packages.map((pkg, i) => (
-              <div key={i} className="flex flex-col bg-background border border-border rounded-2xl p-6 group hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 cursor-default">
-                <div className="flex items-center gap-3 mb-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-lg font-bold text-primary">{pkg.title}</h3>
-                </div>
-                <p className="text-base text-foreground/80 leading-relaxed">{pkg.description}</p>
-              </div>
-            ))}
-          </div>
-<div className="mt-8 border-t border-border/40 pt-8">
-            <div className="bg-secondary/20 border border-border/50 rounded-xl p-6 mb-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div className="space-y-1 text-center sm:text-left">
-                <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
-                  <strong className="text-primary">Il costo viene definito in base alle attività e al tempo necessario.</strong> 
-                </p>
-                <p className="text-base text-foreground/80">
-                  Non ci sono costi fissi o vincoli contrattuali: paghi solo ciò di cui hai realmente bisogno.
-                </p>
-              </div>
-              <BookingButton size="lg" className="whitespace-nowrap px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
-                RICHIEDI UN PREVENTIVO
-              </BookingButton>
-            </div>
-            <p className="text-base md:text-lg font-medium text-foreground text-center">Durante la <BookingButton variant="link" className="text-primary font-bold hover:underline hover:text-primary/80 transition-colors p-0 h-auto inline">call conoscitiva gratuita</BookingButton> analizziamo la tua situazione e costruiamo insieme la soluzione più adatta alla tua attività.</p>
+        <div className="bg-secondary/20 border border-border/60 rounded-2xl p-6 md:p-8 mb-8">
+          <h3 className="text-xl font-bold text-primary mb-4">Preferisco essere chiara fin dall'inizio.</h3>
+          <div className="text-base md:text-lg text-foreground/85 space-y-3 leading-relaxed">
+            <p>Il mio lavoro riguarda <strong>segreteria, organizzazione, comunicazione, traduzione, back office e presenza online</strong>.</p>
+            <p className="font-semibold text-foreground">Non mi occupo di contabilità, fatturazione o adempimenti fiscali.</p>
+            <p>Preferisco offrire servizi nelle aree in cui posso mettere a disposizione esperienza e competenze concrete.</p>
           </div>
         </div>
+
+        <div className="bg-card border border-primary/20 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="space-y-1">
+            <p className="text-base md:text-lg font-bold text-foreground">Non sai quale soluzione fa per te?</p>
+            <p className="text-base text-foreground/80">Nessun problema. Ne parliamo durante la call gratuita.</p>
+          </div>
+          <BookingButton size="lg" className="whitespace-nowrap px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+            PRENOTA UNA CALL
+          </BookingButton>
+        </div>
       </section>
+      */}
 
       {/* ── COME COLLABORARE (steps) ── */}
-      <section id="come-collaborare" className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-12 text-left">Come iniziamo a lavorare insieme</h2>
+      <section id="come-collaborare" className="bg-muted/50 border-y border-border/30 container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-12 text-left">Iniziare è semplice.</h2>
 
         {/* Desktop Zigzag flow diagram */}
         <div className="hidden lg:flex w-full max-w-6xl mx-auto relative pt-4 pb-4">
@@ -594,8 +737,8 @@ const Index = () => {
                 `} style={{ minHeight: '220px' }}>
                   {isTop && (
                     <>
+                      <span className="text-xs font-bold text-primary mb-1">{step.number}</span>
                       <h3 className="text-lg xl:text-xl font-semibold text-primary text-center mb-2">{step.title}</h3>
-                      {step.subtitle && <p className="text-sm text-primary/80 text-center italic mb-3">{step.subtitle}</p>}
                       <p className="text-foreground/80 text-sm xl:text-base text-center leading-relaxed">{step.description}</p>
                     </>
                   )}
@@ -621,8 +764,8 @@ const Index = () => {
                 `} style={{ minHeight: '220px' }}>
                   {!isTop && (
                     <>
+                      <span className="text-xs font-bold text-primary mb-1">{step.number}</span>
                       <h3 className="text-lg xl:text-xl font-semibold text-primary text-center mb-2">{step.title}</h3>
-                      {step.subtitle && <p className="text-sm text-primary/80 text-center italic mb-3">{step.subtitle}</p>}
                       <p className="text-foreground/80 text-sm xl:text-base text-center leading-relaxed">{step.description}</p>
                     </>
                   )}
@@ -643,42 +786,43 @@ const Index = () => {
           {steps.map((step, i) => (
             <div key={i} className="relative flex items-start gap-6">
               <div className="w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center flex-shrink-0 z-10">
-                <span className="text-primary font-bold">{i + 1}</span>
+                <span className="text-primary font-bold">{step.number}</span>
               </div>
               <div className="pt-1 pb-2">
                 <h3 className="text-lg font-semibold text-primary mb-1">{step.title}</h3>
-                {step.subtitle && <p className="text-sm text-primary/80 italic mb-2">{step.subtitle}</p>}
                 <p className="text-foreground/80 text-base leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="text-foreground/75 text-base max-w-3xl mt-12">Un processo semplice, chiaro e senza complicazioni.</p>
+        <div className="mt-12 flex justify-start">
+          <BookingButton size="lg" className="px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide">
+            PRENOTA UNA CALL GRATUITA
+          </BookingButton>
+        </div>
       </section>
 
-{/* ── TESTIMONIANZE ── */}
-      <section className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
-        <div className="container px-4 md:px-6 py-12 md:py-20">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Cosa dicono i miei clienti</h2>
-            <p className="text-base md:text-lg text-foreground/80">L'esperienza di chi ha già scelto di delegare per ritrovare tempo e serenità.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="flex flex-col bg-background border border-border rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
-                <div className="flex text-primary mb-4">
-                  {[...Array(5)].map((_, idx) => <Star key={idx} className="w-4 h-4 fill-primary" />)}
-                </div>
-                <p className="text-foreground/80 leading-relaxed italic mb-6 flex-grow">"{t.text}"</p>
-                <div className="border-t border-border/30 pt-4">
-                  <p className="font-bold text-foreground">{t.name}</p>
-                  <p className="text-sm text-primary">{t.role}</p>
-                  <p className="text-xs text-muted-foreground mt-1">Cliente verificato &bull; Collaborazione continuativa</p>
-                </div>
+      {/* ── TESTIMONIANZE ── */}
+      <section className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Le esperienze di chi ha scelto di delegare</h2>
+          <p className="text-base md:text-lg text-foreground/80">L'esperienza di chi ha già scelto di delegare per ritrovare tempo e serenità.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <div key={i} className="flex flex-col bg-background border border-border rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
+              <div className="flex text-primary mb-4">
+                {[...Array(5)].map((_, idx) => <Star key={idx} className="w-4 h-4 fill-primary" />)}
               </div>
-            ))}
-          </div>
+              <p className="text-foreground/80 leading-relaxed italic mb-6 flex-grow">"{t.text}"</p>
+              <div className="border-t border-border/30 pt-4">
+                <p className="font-bold text-foreground">{t.name}</p>
+                <p className="text-sm text-primary">{t.role}</p>
+                <p className="text-xs text-muted-foreground mt-1">Cliente verificato &bull; Collaborazione continuativa</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -686,8 +830,8 @@ const Index = () => {
       <section id="blog" className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
         <div className="container px-4 md:px-6 py-10 md:py-16">
           <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Blog Assistente Virtuale</h2>
-            <p className="text-base md:text-lg text-foreground/80">Consigli pratici, strumenti e strategie di un'Assistente Virtuale per organizzare meglio la tua attività, gestire i clienti in modo efficace e liberare tempo ogni giorno.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Blog &amp; Risorse</h2>
+            <p className="text-base md:text-lg text-foreground/80">Approfondimenti, consigli pratici e strumenti per organizzare il tuo lavoro, comunicare meglio e gestire la tua attività.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {getBlogPosts()
@@ -724,11 +868,11 @@ const Index = () => {
       </section>
 
       {/* ── FAQ ── */}
-      <section id="faq" className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
+      <section id="faq" className="scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '300ms' }}>
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-4xl">
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Domande frequenti</h2>
-            <p className="text-base md:text-lg text-foreground/80">Tutto quello che devi sapere prima di iniziare a collaborare.</p>
+            <p className="text-base md:text-lg text-foreground/80">Tutto quello che è utile sapere prima di iniziare a collaborare.</p>
           </div>
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, i) => (
@@ -744,53 +888,57 @@ const Index = () => {
       </section>
 
       {/* ── CONTATTI ── */}
-      <section id="contatti" className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Riprendi il controllo del tuo tempo con un'assistente virtuale dedicata.</h2>
-        <p className="text-foreground/80 text-base md:text-lg mb-10 max-w-2xl">
-          Scrivimi o <BookingButton variant="link" className="text-primary font-bold hover:underline p-0 h-auto inline">prenota una call conoscitiva gratuita</BookingButton>: valuteremo insieme come delegare la gestione agenda, le email e il back office per farti risparmiare tempo prezioso e aumentare la tua produttività. Ti rispondo entro 24 ore lavorative.
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-xl font-semibold text-primary mb-5">Il mio supporto per te</h3>
-            <ul className="space-y-4 text-foreground/90 text-base mb-8">
-              {[
-                "Analisi delle tue esigenze e priorità",
-                "Soluzioni personalizzate e flessibili",
-                "Gestione operativa precisa e organizzata",
-                "Comunicazione chiara e costante",
-                "Riservatezza e attenzione ai dettagli"
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCheck className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <address className="space-y-3 mb-6 not-italic" itemScope itemType="https://schema.org/LocalBusiness">
-              <meta itemProp="name" content="Noemi Tomassetti Virtual Assistant" />
-              <div className="flex items-center gap-3 text-foreground/90 text-base">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@noemitomassetti.it" itemProp="email" className="text-primary hover:underline">info@noemitomassetti.it</a>
-              </div>
-              <div className="flex items-center gap-3 text-foreground/90 text-base">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+393884718600" itemProp="telephone" className="hover:text-primary">+39 388 471 8600</a>
-              </div>
-              <div className="flex items-start gap-3 text-foreground/90 text-base" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span><span itemProp="addressLocality">Castelfidardo</span> (<span itemProp="addressRegion">AN</span>) - <span itemProp="addressCountry">ITALIA</span></span>
-                  <span>Supporto da remoto in tutta Italia</span>
-                </div>
-              </div>
-            </address>
-            <div className="bg-secondary/30 border border-border rounded-xl p-5">
-              <p className="text-foreground/80 text-base leading-relaxed">
-                <BookingButton variant="link" className="text-primary font-bold hover:underline uppercase p-0 h-auto inline">PRENOTA UNA CALL CONOSCITIVA GRATUITA</BookingButton> (30 minuti). Capiremo insieme come posso supportarti nella gestione operativa della tua attività, in modo concreto, semplice e sostenibile.
-              </p>
-            </div>
+      <section id="contatti" className="bg-muted/50 border-t border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both" style={{ animationDelay: '200ms' }}>
+        <div className="container px-4 md:px-6 py-12 md:py-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">C'è qualcosa che vorresti smettere di gestire da solo?</h2>
+          <div className="text-foreground/85 text-base md:text-lg mb-10 max-w-2xl space-y-3 leading-relaxed">
+            <p className="font-semibold text-primary">Parliamone.</p>
+            <p>Raccontami di cosa ti occupi, quali attività ti portano via più tempo e cosa vorresti riuscire a delegare.</p>
+            <p>Partiamo da lì.</p>
           </div>
-          <ContattiForm />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-xl font-semibold text-primary mb-5">Il mio supporto per te</h3>
+              <ul className="space-y-4 text-foreground/90 text-base mb-8">
+                {[
+                  "Analisi delle tue esigenze e priorità",
+                  "Soluzioni personalizzate e flessibili",
+                  "Gestione operativa precisa e organizzata",
+                  "Comunicazione chiara e costante",
+                  "Riservatezza e attenzione ai dettagli"
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCheck className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <address className="space-y-3 mb-6 not-italic" itemScope itemType="https://schema.org/LocalBusiness">
+                <meta itemProp="name" content="Noemi Tomassetti Virtual Assistant" />
+                <div className="flex items-center gap-3 text-foreground/90 text-base">
+                  <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                  <a href="mailto:info@noemitomassetti.it" itemProp="email" className="text-primary hover:underline">info@noemitomassetti.it</a>
+                </div>
+                <div className="flex items-center gap-3 text-foreground/90 text-base">
+                  <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                  <a href="tel:+393884718600" itemProp="telephone" className="hover:text-primary">+39 388 471 8600</a>
+                </div>
+                <div className="flex items-start gap-3 text-foreground/90 text-base" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <div className="flex flex-col">
+                    <span><span itemProp="addressLocality">Castelfidardo</span> (<span itemProp="addressRegion">AN</span>) - <span itemProp="addressCountry">ITALIA</span></span>
+                    <span>Supporto da remoto in tutta Italia</span>
+                  </div>
+                </div>
+              </address>
+              <div className="bg-secondary/30 border border-border rounded-xl p-5">
+                <p className="text-foreground/80 text-base leading-relaxed">
+                  <BookingButton variant="link" className="text-primary font-bold hover:underline uppercase p-0 h-auto inline">PRENOTA LA TUA CALL GRATUITA</BookingButton> (30 minuti · Nessun impegno). Capiremo insieme come posso supportarti nella gestione operativa della tua attività, in modo concreto, semplice e sostenibile.
+                </p>
+              </div>
+            </div>
+            <ContattiForm />
+          </div>
         </div>
       </section>
     </Layout>

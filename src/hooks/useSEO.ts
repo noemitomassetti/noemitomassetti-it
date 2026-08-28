@@ -14,14 +14,14 @@ interface SEOProps {
   ogLocale?: string;
   noindex?: boolean;
   alternates?: AlternateLink[];
-  schema?: Record<string, any> | Record<string, any>[];
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 export const useSEO = ({
   title,
   description,
   canonical,
-  ogImage = "https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg",
+  ogImage = "/noemi-tomassetti.png",
   ogType = "website",
   ogLocale = "it_IT",
   noindex = false,

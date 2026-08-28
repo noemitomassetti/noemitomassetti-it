@@ -12,7 +12,17 @@ const VIBE_API_URL = "https://backend.leadconnectorhq.com/vibe-ai";
 const LOCATION_ID = "QIS5mDvq2kDJjK2pDMuf";
 const CALENDAR_ID = "DnZk8niUvdwRiUXJEMaf";
 
-export function BookingButton({ children, className, variant, size, asChild, onClick, ...props }: any) {
+interface BookingButtonProps {
+  children?: React.ReactNode;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  asChild?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  [key: string]: unknown;
+}
+
+export function BookingButton({ children, className, variant, size, asChild, onClick, ...props }: BookingButtonProps) {
   const [open, setOpen] = useState(false);
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [availableSlots, setAvailableSlots] = useState<Record<string, { slots: string[] }>>({});

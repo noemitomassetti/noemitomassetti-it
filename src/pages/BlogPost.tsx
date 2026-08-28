@@ -5,23 +5,17 @@ import { ArrowLeft } from "lucide-react";
 import { getBlogPosts } from "@/lib/blogData";
 import { useSEO } from "@/hooks/useSEO";
 
-export { getBlogPosts };
-
 const BlogPost = () => {
   const { slug } = useParams();
   const post = getBlogPosts().find((p) => p.slug === slug || p.id === Number(slug));
 
-  if (!post) {
-    return <Navigate to="/blog" replace />;
-  }
-
   useSEO({
-    title: `${post.title} | Blog | Noemi Tomassetti`,
-    description: post.excerpt,
-    canonical: `https://www.noemitomassetti.it/blog/${post.slug || post.id}`,
-    ogImage: post.image,
+    title: post ? `${post.title} | Blog | Noemi Tomassetti` : "Blog | Noemi Tomassetti",
+    description: post?.excerpt || "",
+    canonical: post ? `https://www.noemitomassetti.it/blog/${post.slug || post.id}` : "https://www.noemitomassetti.it/blog",
+    ogImage: post?.image,
     ogType: "article",
-    schema: [
+    schema: post ? [
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -69,8 +63,12 @@ const BlogPost = () => {
         },
         "description": post.excerpt
       }
-    ]
+    ] : undefined
   });
+
+  if (!post) {
+    return <Navigate to="/blog" replace />;
+  }
 
   return (
     <Layout>
@@ -94,7 +92,7 @@ const BlogPost = () => {
             {post.excerpt}
           </p>
           <div className="w-full rounded-2xl overflow-hidden mb-10 shadow-lg border border-border/50 bg-muted/10 flex justify-center">
-             <img src={post.image} alt={`Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" fetchPriority="high" decoding="async" className="w-full max-h-[500px] h-auto object-contain" />
+             <img src={post.image} alt={`Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" fetchpriority="high" decoding="async" className="w-full max-h-[500px] h-auto object-contain" />
           </div>
         </div>
 
@@ -124,7 +122,7 @@ const BlogPost = () => {
         </div>
 
         <address rel="author" className="not-italic mt-12 p-6 md:p-8 bg-card border border-border/50 rounded-2xl flex flex-col sm:flex-row gap-6 items-center sm:items-start" itemScope itemType="https://schema.org/Person">
-          <img src="https://vibe.filesafe.space/1776423224485175331/attachments/bbb7dfc5-9986-426b-b55f-1df8c6232a6b.jpg" alt="Foto di Noemi Tomassetti - Assistente Virtuale" width="100" height="100" loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
+          <img src="/noemi-tomassetti.png" alt="Foto di Noemi Tomassetti - Assistente Virtuale" width="100" height="100" loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
           <div className="text-center sm:text-left">
             <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>
             <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Assistente Virtuale per Professionisti</p>

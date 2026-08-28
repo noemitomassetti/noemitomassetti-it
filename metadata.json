@@ -1,0 +1,8 @@
+{
+  "name": "Noemi Tomassetti - Assistente Virtuale",
+  "description": "Assistente Virtuale per liberi professionisti e piccole aziende. Delega la gestione operativa, email e appuntamenti per riprendere il controllo del tuo tempo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
