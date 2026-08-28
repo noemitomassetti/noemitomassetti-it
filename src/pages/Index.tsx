@@ -481,7 +481,6 @@ const Index = () => {
             width="800"
             height="1200"
             loading="eager"
-            fetchpriority="high"
             className="w-full md:w-[60%] lg:w-[50%] xl:w-[45%] h-auto md:h-full object-cover object-[center_12%] md:object-[center_18%] scale-105 md:scale-110 origin-top [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)]"
           />
           {/* Desktop Gradient overlay */}
@@ -504,11 +503,11 @@ const Index = () => {
                 Il supporto che ti aiuta a lavorare meglio, con più ordine.
               </h2>
               <p className="font-medium text-white text-base sm:text-lg drop-shadow-sm">
-                Segreteria, organizzazione, comunicazione multilingue, traduzione e siti web per professionisti, consulenti e piccole attività.
+                Supporto organizzativo, amministrativo e linguistico da remoto per professionisti, consulenti e piccole attività.
               </p>
               <div className="space-y-3">
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
-                  Metto a disposizione oltre 20 anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano.
+                  Metto a disposizione oltre vent'anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano.
                 </p>
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
                   Dalla gestione di email e appuntamenti alla comunicazione con i clienti, dalla traduzione alla creazione di siti web e landing page: un supporto professionale e flessibile, costruito sulle tue esigenze.
@@ -841,7 +840,7 @@ const Index = () => {
               .map((post, index) => (
               <Card key={post.id} className="flex flex-col h-full bg-background border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 overflow-hidden group">
                 <div className="h-40 w-full bg-muted overflow-hidden">
-                  <img src={post.image} alt={`Copertina articolo: ${post.title}`} loading={index === 0 ? "eager" : "lazy"} decoding="async" width="400" height="200" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
+                  <img src={post.image} alt={post.alt || `Copertina articolo: ${post.title}`} loading={index === 0 ? "eager" : "lazy"} decoding="async" width="400" height="200" className="w-full h-full object-contain bg-background opacity-90 transition-transform duration-500 hover:scale-105" />
                 </div>
                 <CardHeader className="pt-4">
                   <div className="flex items-center justify-between mb-2">

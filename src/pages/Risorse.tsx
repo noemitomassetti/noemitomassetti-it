@@ -98,7 +98,7 @@ const Risorse = () => {
             Ottimizza i tuoi processi con questi strumenti gratuiti e consigli pratici di un'assistente virtuale. Inizia subito a recuperare tempo prezioso, migliorare la tua produttività e gestire i tuoi clienti in modo impeccabile.
           </p>
           <div className="w-full max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-border/50">
-            <img src="https://vibe.filesafe.space/1776423224485175331/assets/27f86f76-a9ad-4081-b16e-fab619117889.png" alt="Risorse e strumenti professionali per organizzare il lavoro di un'Assistente Virtuale" width="800" height="400" loading="eager" fetchpriority="high" decoding="async" className="w-full h-auto object-cover" />
+            <img src="https://vibe.filesafe.space/1776423224485175331/assets/27f86f76-a9ad-4081-b16e-fab619117889.png" alt="Risorse e strumenti professionali per organizzare il lavoro di un'Assistente Virtuale" width="800" height="400" loading="eager" decoding="async" className="w-full h-auto object-cover" />
           </div>
         </div>
 

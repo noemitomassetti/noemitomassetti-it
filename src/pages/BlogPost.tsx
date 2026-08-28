@@ -50,8 +50,8 @@ const BlogPost = () => {
           "@type": "Person",
           "name": "Noemi Tomassetti",
           "url": "https://www.noemitomassetti.it",
-          "jobTitle": "Assistente Virtuale per Professionisti",
-          "description": "Assistente Virtuale e Segreteria Virtuale con oltre 25 anni di esperienza. Laureata in Mediazione Linguistica con 110 e lode e Master in Traduzione Specialistica."
+          "jobTitle": "Virtual Assistant",
+          "description": "Oggi, come Assistente Virtuale, metto a disposizione oltre 20 anni di esperienza professionale, insieme alla mia formazione in Mediazione Linguistica e Traduzione Specialistica, per supportare liberi professionisti e piccole aziende nella gestione operativa e organizzativa."
         },
         "publisher": {
           "@type": "Organization",
@@ -92,7 +92,7 @@ const BlogPost = () => {
             {post.excerpt}
           </p>
           <div className="w-full rounded-2xl overflow-hidden mb-10 shadow-lg border border-border/50 bg-muted/10 flex justify-center">
-             <img src={post.image} alt={`Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" fetchpriority="high" decoding="async" className="w-full max-h-[500px] h-auto object-contain" />
+             <img src={post.image} alt={post.alt || `Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" decoding="async" className="w-full max-h-[500px] h-auto object-contain" />
           </div>
         </div>
 
@@ -125,9 +125,9 @@ const BlogPost = () => {
           <img src="/noemi-tomassetti.png" alt="Foto di Noemi Tomassetti - Assistente Virtuale" width="100" height="100" loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
           <div className="text-center sm:text-left">
             <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>
-            <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Assistente Virtuale per Professionisti</p>
+            <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Virtual Assistant</p>
             <p className="text-base text-foreground/80 leading-relaxed" itemProp="description">
-              Con oltre 25 anni di esperienza, supporto liberi professionisti e piccole aziende nella gestione operativa, segreteria virtuale e back office. Laureata in Mediazione Linguistica (110 e lode) e specializzata in Traduzione, offro supporto multilingue (IT, EN, FR, ES) per ottimizzare il tuo tempo e l'organizzazione aziendale.
+              Oggi, come Assistente Virtuale, metto a disposizione oltre 20 anni di esperienza professionale, insieme alla mia formazione in Mediazione Linguistica e Traduzione Specialistica, per supportare liberi professionisti e piccole aziende nella gestione operativa e organizzativa.
             </p>
           </div>
         </address>

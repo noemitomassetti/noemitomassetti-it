@@ -1,6 +1,114 @@
 
 
 export const itPosts = [
+  {
+    id: 11,
+    slug: "sito-web-o-landing-page",
+    title: "Sito web o landing page? Come capire di cosa ha davvero bisogno la tua attività",
+    excerpt: "Sito web o landing page? Scopri quale soluzione può essere più adatta alla tua attività, ai tuoi obiettivi e alla tua presenza online.",
+    date: "31 agosto 2026",
+    dateISO: "2026-08-31",
+    category: "Comunicazione e Presenza Online",
+    image: "/sito-web-o-landing-page.png",
+    alt: "Sito web o landing page: quale scegliere per la tua attività",
+    content: `
+      <p>Quando si decide di costruire o rinnovare la propria presenza online, una delle prime domande che ci si pone è:</p>
+      <p><em>“Mi serve un sito web oppure è sufficiente una landing page?”</em></p>
+      <p>La risposta, in realtà, non è uguale per tutti.</p>
+      <p>Dipende da cosa fai, da cosa vuoi comunicare, dalle persone a cui ti rivolgi e, soprattutto, da quello che vuoi ottenere dalla tua presenza online.</p>
+      <p>Perché avere un sito non dovrebbe essere un obiettivo in sé.</p>
+      <p>L’obiettivo dovrebbe essere avere uno strumento che sia realmente utile alla tua attività.</p>
+
+      <h2>Landing page o sito web: qual è la differenza?</h2>
+      <p>Una landing page è una singola pagina web pensata per presentare in modo chiaro e diretto un’attività, un servizio o una specifica proposta.</p>
+      <p>Può essere una buona soluzione, per esempio, quando:</p>
+      <ul>
+        <li>hai appena avviato un’attività;</li>
+        <li>vuoi presentare un singolo servizio;</li>
+        <li>stai lanciando una nuova proposta;</li>
+        <li>vuoi raccogliere richieste di contatto;</li>
+        <li>hai bisogno di una pagina semplice da condividere;</li>
+        <li>vuoi accompagnare una campagna pubblicitaria o una specifica iniziativa.</li>
+      </ul>
+      <p>Il suo punto di forza è proprio la semplicità.</p>
+      <p>Tutte le informazioni essenziali sono concentrate in un unico spazio e il visitatore viene accompagnato verso un’azione precisa: contattarti, richiedere informazioni, prenotare un appuntamento, acquistare un servizio o semplicemente approfondire la tua proposta.</p>
+      <p>Se hai appena avviato un’attività o vuoi promuovere uno specifico servizio, una landing page può quindi essere un ottimo punto di partenza.</p>
+
+      <h2>Quando è meglio un sito web?</h2>
+      <p>Un sito web completo diventa più utile quando hai più cose da raccontare.</p>
+      <p>Ad esempio, se vuoi presentare:</p>
+      <ul>
+        <li>chi sei e di cosa ti occupi;</li>
+        <li>diversi servizi;</li>
+        <li>il tuo percorso professionale;</li>
+        <li>portfolio e lavori realizzati;</li>
+        <li>recensioni o testimonianze;</li>
+        <li>informazioni e contatti;</li>
+        <li>articoli e approfondimenti.</li>
+      </ul>
+      <p>In questo caso, avere più pagine permette di organizzare i contenuti in modo più chiaro e di offrire ai visitatori un quadro completo della tua attività.</p>
+      <p>Non significa necessariamente avere decine di pagine.</p>
+      <p>Anche un sito semplice, con poche sezioni ben organizzate, può essere perfettamente efficace.</p>
+
+      <h2>Non serve necessariamente un sito complicato</h2>
+      <p>Uno degli errori più comuni è pensare che un sito efficace debba essere necessariamente grande, elaborato o pieno di funzionalità.</p>
+      <p>Non è così.</p>
+      <p>Un buon sito dovrebbe prima di tutto essere chiaro, facile da navigare e costruito intorno alle esigenze di chi lo visita.</p>
+      <p>Chi arriva sulla tua pagina dovrebbe capire rapidamente:</p>
+      <p><strong>chi sei, cosa fai, a chi ti rivolgi e come può contattarti.</strong></p>
+      <p>Tutto il resto viene dopo.</p>
+      <p>Un sito molto elaborato, ma confuso, può essere meno efficace di una presenza online essenziale ma costruita con attenzione.</p>
+
+      <h2>Prima della tecnologia vengono le domande giuste</h2>
+      <p>Prima di scegliere quale strumento utilizzare, può essere utile fermarsi un momento e rispondere ad alcune domande.</p>
+      <p><strong>Cosa voglio comunicare?</strong><br />Qual è il messaggio principale che voglio trasmettere?</p>
+      <p><strong>A chi mi rivolgo?</strong><br />Chi sono le persone che voglio raggiungere e quali informazioni stanno cercando?</p>
+      <p><strong>Cosa voglio che faccia chi visita il mio sito?</strong><br />Voglio che mi contatti? Che richieda un preventivo? Che prenoti un appuntamento? Che conosca i miei servizi?</p>
+      <p><strong>Quante informazioni devo realmente fornire?</strong><br />Ho bisogno di raccontare diversi aspetti della mia attività oppure devo semplicemente presentare una proposta specifica?</p>
+      <p>Queste risposte possono aiutarti a capire se hai bisogno di una landing page, di un sito web completo o magari di una soluzione intermedia.</p>
+
+      <h2>E se hai già un sito?</h2>
+      <p>Anche in questo caso non significa necessariamente che tu debba ricominciare da zero.</p>
+      <p>Potresti avere un sito che funziona ancora bene, ma che non rappresenta più quello che fai oggi.</p>
+      <p>Oppure potrebbe essere difficile da consultare da smartphone, avere contenuti ormai superati o non comunicare chiaramente i tuoi servizi.</p>
+      <p>Prima di pensare a rifarlo completamente, vale la pena chiedersi:</p>
+      <p><em>“Il mio sito sta ancora raccontando correttamente la mia attività?”</em></p>
+      <p>Se la risposta è no, forse non serve semplicemente “un sito nuovo”.</p>
+      <p>Serve capire cosa non funziona e cosa deve cambiare.</p>
+
+      <h2>Anche le parole fanno parte del tuo sito</h2>
+      <p>Quando pensiamo a un sito web, spesso pensiamo prima alla grafica.</p>
+      <p>Colori, immagini, font, fotografie, struttura.</p>
+      <p>Sono tutti elementi importanti, ma c’è qualcosa che rischia di passare in secondo piano: le parole.</p>
+      <p>Il modo in cui presenti un servizio, racconti la tua attività o accompagni una persona verso il contatto può fare una grande differenza.</p>
+      <p>E questo diventa ancora più importante quando vuoi raggiungere persone che parlano lingue diverse.</p>
+      <p>In quel caso non basta necessariamente tradurre parola per parola.</p>
+      <p>Un contenuto destinato a un pubblico internazionale deve essere chiaro, naturale e adatto al contesto in cui verrà letto.</p>
+      <p>Per questo progettazione del sito, contenuti e comunicazione multilingue possono diventare parti di uno stesso progetto.</p>
+
+      <h2>Una presenza online può crescere insieme alla tua attività</h2>
+      <p>Non devi necessariamente avere tutto subito.</p>
+      <p>Puoi iniziare con una landing page e, quando le tue esigenze aumentano, trasformarla in un sito più completo.</p>
+      <p>Puoi partire con un sito essenziale e aggiungere successivamente nuove sezioni.</p>
+      <p>Puoi introdurre un blog, un portfolio, nuovi servizi o contenuti in altre lingue.</p>
+      <p>L’importante è progettare la tua presenza online pensando anche a dove vuoi arrivare, non soltanto a ciò che ti serve oggi.</p>
+      <p>E questo vale soprattutto per chi sta costruendo o facendo crescere una piccola attività.</p>
+
+      <h2>Quindi: sito web o landing page?</h2>
+      <p>La risposta più corretta è:</p>
+      <p><strong>“Dipende.”</strong></p>
+      <p>Una landing page può essere la soluzione ideale se hai un messaggio preciso, un servizio specifico o un obiettivo ben definito.</p>
+      <p>Un sito web può essere più adatto se vuoi raccontare la tua attività in modo più completo e costruire una presenza online che possa crescere nel tempo.</p>
+      <p>Non esiste una formula valida per tutti.</p>
+      <p>Esiste la soluzione più adatta alle tue esigenze, al tuo pubblico e ai tuoi obiettivi.</p>
+      <p>La cosa importante è partire dalle proprie esigenze, non dalla tecnologia.</p>
+      <p>E, soprattutto, progettare uno strumento che possa crescere insieme all’attività.</p>
+      <p>Non partire quindi dalla domanda:</p>
+      <p><em>“Che sito devo fare?”</em></p>
+      <p>Ma da una domanda ancora più semplice:</p>
+      <p><em>“Di cosa ha davvero bisogno la mia attività?”</em></p>
+    `
+  },
   { 
     id: 1, 
     slug: "come-organizzare-la-tua-agenda-in-5-step",
