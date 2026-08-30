@@ -2,10 +2,8 @@ import { Layout } from "@/components/Layout";
 import { getBlogPosts } from "@/lib/blogData";
 import { Button } from "@/components/ui/button";
 import { BookingButton } from "@/components/BookingButton";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useState, useEffect } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { ContactForm } from "@/components/ContactForm";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import {
@@ -225,145 +223,6 @@ const testimonials = [
     text: "Avevo bisogno di una mano per gestire le richieste di prime visite e riordinare il database contatti, attività che continuavo a rimandare. L'intervento di Noemi è stato rapido ed efficace. Molto professionale e attenta alle mie esigenze organizzative.",
   }
 ];
-
-/* ─── CONTACT FORM ─────────────────────────────────── */
-
-const ContattiForm = () => {
-  const { toast } = useToast();
-  const [gdprChecked, setGdprChecked] = useState(false);
-  const [newsletterChecked, setNewsletterChecked] = useState(false);
-  const [emailValue, setEmailValue] = useState("");
-  const [subjectValue, setSubjectValue] = useState("");
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get("contact") === "success") {
-        toast({
-          title: "Messaggio inviato!",
-          description: "Messaggio inviato correttamente. Ti risponderò il prima possibile.",
-        });
-        const cleanUrl = window.location.pathname + window.location.hash;
-        window.history.replaceState({}, document.title, cleanUrl);
-      }
-    }
-  }, [toast]);
-
-  return (
-    <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-lg">
-      <h3 className="text-xl font-semibold text-primary mb-6">Scrivimi un messaggio</h3>
-      <form
-        action="https://formsubmit.co/info@noemitomassetti.it"
-        method="POST"
-        className="space-y-4"
-      >
-        {/* FormSubmit Hidden Configurations */}
-        <input
-          type="hidden"
-          name="_subject"
-          value={subjectValue.trim() ? `Nuovo messaggio: ${subjectValue.trim()}` : "Nuovo messaggio dal sito Noemi Tomassetti"}
-        />
-        <input type="hidden" name="_replyto" value={emailValue} />
-        <input type="hidden" name="_url" value="https://www.noemitomassetti.it/" />
-        <input type="hidden" name="_next" value="https://www.noemitomassetti.it/?contact=success" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="space-y-1.5">
-            <label htmlFor="firstName" className="text-sm font-medium text-foreground/80">Nome *</label>
-            <Input id="firstName" name="nome" required placeholder="Il tuo nome" />
-          </div>
-          <div className="space-y-1.5">
-            <label htmlFor="lastName" className="text-sm font-medium text-foreground/80">Cognome *</label>
-            <Input id="lastName" name="cognome" required placeholder="Il tuo cognome" />
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="space-y-1.5">
-            <label htmlFor="email" className="text-sm font-medium text-foreground/80">Email *</label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              required
-              placeholder="La tua email"
-              value={emailValue}
-              onChange={(e) => setEmailValue(e.target.value)}
-            />
-          </div>
-          <div className="space-y-1.5">
-            <label htmlFor="phone" className="text-sm font-medium text-foreground/80">Telefono</label>
-            <Input id="phone" name="telefono" type="tel" placeholder="Numero (opzionale)" />
-          </div>
-        </div>
-        <div className="space-y-1.5">
-          <label htmlFor="subject" className="text-sm font-medium text-foreground/80">Oggetto</label>
-          <Input
-            id="subject"
-            name="oggetto"
-            placeholder="Come posso aiutarti?"
-            value={subjectValue}
-            onChange={(e) => setSubjectValue(e.target.value)}
-          />
-        </div>
-        <div className="space-y-1.5">
-          <label htmlFor="message" className="text-sm font-medium text-foreground/80">Messaggio *</label>
-          <Textarea
-            id="message"
-            name="messaggio"
-            required
-            placeholder="Raccontami brevemente la tua attività e quali aspetti vorresti delegare o organizzare meglio."
-            className="min-h-[120px] resize-none"
-          />
-        </div>
-        <div className="space-y-3">
-          <div className="bg-secondary/20 border border-border/50 rounded-lg p-4">
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="gdprConsent"
-                name="consenso_gdpr"
-                value="Accettato"
-                required
-                checked={gdprChecked}
-                onChange={(e) => setGdprChecked(e.target.checked)}
-                className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0"
-              />
-              <label htmlFor="gdprConsent" className="text-sm md:text-xs text-foreground/70 leading-relaxed cursor-pointer">
-                Ho letto e accetto l'<Link to="/privacy-policy" className="text-primary hover:underline font-medium">Informativa Privacy</Link> e acconsento al trattamento dei miei dati personali ai fini della richiesta di contatto, ai sensi del <strong className="text-foreground/80">Regolamento UE 2016/679 (GDPR)</strong>. *
-              </label>
-            </div>
-          </div>
-          <div className="bg-secondary/20 border border-border/50 rounded-lg p-4">
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="newsletterConsent"
-                name="newsletter"
-                value="Sì"
-                checked={newsletterChecked}
-                onChange={(e) => setNewsletterChecked(e.target.checked)}
-                className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0"
-              />
-              <label htmlFor="newsletterConsent" className="text-sm md:text-xs text-foreground/70 leading-relaxed cursor-pointer">
-                Desidero ricevere aggiornamenti, consigli pratici e risorse utili via email. Acconsento al trattamento dei dati per finalità informative e di marketing ai sensi del <strong className="text-foreground/80">Regolamento UE 2016/679 (GDPR)</strong>. <em className="italic opacity-80">Nessuno spam. Solo contenuti utili e aggiornamenti occasionali.</em>
-              </label>
-            </div>
-          </div>
-        </div>
-        <Button
-          type="submit"
-          className="w-full hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 py-6 text-base font-semibold uppercase tracking-wide"
-          disabled={!gdprChecked}
-        >
-          <Send className="w-5 h-5 mr-2" /> INVIA MESSAGGIO
-        </Button>
-        <p className="text-xs text-foreground/50 text-center">* campi obbligatori</p>
-      </form>
-    </div>
-  );
-};
 
 /* ─── MAIN PAGE ─────────────────────────────────────── */
 
@@ -950,7 +809,7 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <ContattiForm />
+            <ContactForm />
           </div>
         </div>
       </section>
