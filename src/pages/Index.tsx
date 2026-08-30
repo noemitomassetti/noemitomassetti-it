@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { BookingButton } from "@/components/BookingButton";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
@@ -230,137 +230,105 @@ const testimonials = [
 
 const ContattiForm = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [gdprChecked, setGdprChecked] = useState(false);
   const [newsletterChecked, setNewsletterChecked] = useState(false);
+  const [emailValue, setEmailValue] = useState("");
+  const [subjectValue, setSubjectValue] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!gdprChecked) {
-      toast({ title: "Consenso richiesto", description: "Accetta il trattamento dei dati personali per inviare il messaggio.", variant: "destructive" });
-      return;
-    }
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    
-    // Spam protection check (honeypot)
-    const website = (data.get("website") as string) || "";
-    if (website.trim().length > 0) {
-      setIsSubmitting(false);
-      return;
-    }
-
-    const firstName = ((data.get("first_name") as string) || "").trim();
-    const lastName = ((data.get("last_name") as string) || "").trim();
-    const email = ((data.get("email") as string) || "").trim();
-    const phone = ((data.get("phone") as string) || "").trim();
-    const subject = ((data.get("subject") as string) || "").trim();
-    const message = ((data.get("message") as string) || "").trim();
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/info@noemitomassetti.it", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        },
-        body: JSON.stringify({
-          "Nome": firstName,
-          "Cognome": lastName,
-          "Email": email,
-          "_replyto": email,
-          "Telefono": phone || "Non specificato",
-          "Oggetto": subject || "Richiesta dal sito",
-          "Messaggio": message,
-          "Consenso GDPR": gdprChecked ? "Accettato" : "No",
-          "Iscrizione Newsletter": newsletterChecked ? "Sì" : "No",
-          "_subject": subject ? `Nuovo messaggio: ${subject}` : "Nuovo messaggio dal sito Noemi Tomassetti",
-          "_template": "table",
-          "_captcha": "false",
-        }),
-      });
-
-      const result = await response.json().catch(() => null);
-      const isSuccess = response.ok && (result?.success === "true" || result?.success === true);
-
-      if (isSuccess) {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("contact") === "success") {
         toast({
           title: "Messaggio inviato!",
-          description: "Ti risponderò il prima possibile.",
+          description: "Messaggio inviato correttamente. Ti risponderò il prima possibile.",
         });
-        form.reset();
-        setGdprChecked(false);
-        setNewsletterChecked(false);
-      } else {
-        let errorDesc = "Non è stato possibile inviare il messaggio. Riprova tra qualche minuto.";
-        if (result?.message) {
-          if (result.message.toLowerCase().includes("activation") || result.message.toLowerCase().includes("activate")) {
-            errorDesc = "È richiesta l'attivazione iniziale del form. Controlla la posta in arrivo e la cartella Spam di info@noemitomassetti.it per cliccare sul link di conferma.";
-          } else {
-            errorDesc = result.message;
-          }
-        }
-        toast({
-          title: "Invio non completato",
-          description: errorDesc,
-          variant: "destructive",
-        });
+        const cleanUrl = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, document.title, cleanUrl);
       }
-    } catch (err) {
-      console.error("Errore di rete invio form:", err);
-      toast({
-        title: "Errore di invio",
-        description: "Non è stato possibile inviare il messaggio. Riprova tra qualche minuto.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  }, [toast]);
 
   return (
     <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-lg">
       <h3 className="text-xl font-semibold text-primary mb-6">Scrivimi un messaggio</h3>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Honeypot field for spam protection */}
-        <div className="hidden" aria-hidden="true">
-          <label htmlFor="website">Website</label>
-          <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
-        </div>
+      <form
+        action="https://formsubmit.co/info@noemitomassetti.it"
+        method="POST"
+        className="space-y-4"
+      >
+        {/* FormSubmit Hidden Configurations */}
+        <input
+          type="hidden"
+          name="_subject"
+          value={subjectValue.trim() ? `Nuovo messaggio: ${subjectValue.trim()}` : "Nuovo messaggio dal sito Noemi Tomassetti"}
+        />
+        <input type="hidden" name="_replyto" value={emailValue} />
+        <input type="hidden" name="_url" value="https://www.noemitomassetti.it/" />
+        <input type="hidden" name="_next" value="https://www.noemitomassetti.it/?contact=success" />
+        <input type="hidden" name="_template" value="table" />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <label htmlFor="firstName" className="text-sm font-medium text-foreground/80">Nome *</label>
-            <Input id="firstName" name="first_name" required placeholder="Il tuo nome" />
+            <Input id="firstName" name="nome" required placeholder="Il tuo nome" />
           </div>
           <div className="space-y-1.5">
             <label htmlFor="lastName" className="text-sm font-medium text-foreground/80">Cognome *</label>
-            <Input id="lastName" name="last_name" required placeholder="Il tuo cognome" />
+            <Input id="lastName" name="cognome" required placeholder="Il tuo cognome" />
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <label htmlFor="email" className="text-sm font-medium text-foreground/80">Email *</label>
-            <Input id="email" name="email" type="email" required placeholder="La tua email" />
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="La tua email"
+              value={emailValue}
+              onChange={(e) => setEmailValue(e.target.value)}
+            />
           </div>
           <div className="space-y-1.5">
             <label htmlFor="phone" className="text-sm font-medium text-foreground/80">Telefono</label>
-            <Input id="phone" name="phone" type="tel" placeholder="Numero (opzionale)" />
+            <Input id="phone" name="telefono" type="tel" placeholder="Numero (opzionale)" />
           </div>
         </div>
         <div className="space-y-1.5">
           <label htmlFor="subject" className="text-sm font-medium text-foreground/80">Oggetto</label>
-          <Input id="subject" name="subject" placeholder="Come posso aiutarti?" />
+          <Input
+            id="subject"
+            name="oggetto"
+            placeholder="Come posso aiutarti?"
+            value={subjectValue}
+            onChange={(e) => setSubjectValue(e.target.value)}
+          />
         </div>
         <div className="space-y-1.5">
           <label htmlFor="message" className="text-sm font-medium text-foreground/80">Messaggio *</label>
-          <Textarea id="message" name="message" required placeholder="Raccontami brevemente la tua attività e quali aspetti vorresti delegare o organizzare meglio." className="min-h-[120px] resize-none" />
+          <Textarea
+            id="message"
+            name="messaggio"
+            required
+            placeholder="Raccontami brevemente la tua attività e quali aspetti vorresti delegare o organizzare meglio."
+            className="min-h-[120px] resize-none"
+          />
         </div>
         <div className="space-y-3">
           <div className="bg-secondary/20 border border-border/50 rounded-lg p-4">
             <div className="flex items-start gap-3">
-              <input type="checkbox" id="gdprConsent" checked={gdprChecked} onChange={(e) => setGdprChecked(e.target.checked)} className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0" />
+              <input
+                type="checkbox"
+                id="gdprConsent"
+                name="consenso_gdpr"
+                value="Accettato"
+                required
+                checked={gdprChecked}
+                onChange={(e) => setGdprChecked(e.target.checked)}
+                className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0"
+              />
               <label htmlFor="gdprConsent" className="text-sm md:text-xs text-foreground/70 leading-relaxed cursor-pointer">
                 Ho letto e accetto l'<Link to="/privacy-policy" className="text-primary hover:underline font-medium">Informativa Privacy</Link> e acconsento al trattamento dei miei dati personali ai fini della richiesta di contatto, ai sensi del <strong className="text-foreground/80">Regolamento UE 2016/679 (GDPR)</strong>. *
               </label>
@@ -368,15 +336,27 @@ const ContattiForm = () => {
           </div>
           <div className="bg-secondary/20 border border-border/50 rounded-lg p-4">
             <div className="flex items-start gap-3">
-              <input type="checkbox" id="newsletterConsent" checked={newsletterChecked} onChange={(e) => setNewsletterChecked(e.target.checked)} className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0" />
+              <input
+                type="checkbox"
+                id="newsletterConsent"
+                name="newsletter"
+                value="Sì"
+                checked={newsletterChecked}
+                onChange={(e) => setNewsletterChecked(e.target.checked)}
+                className="mt-0.5 w-4 h-4 accent-primary cursor-pointer flex-shrink-0"
+              />
               <label htmlFor="newsletterConsent" className="text-sm md:text-xs text-foreground/70 leading-relaxed cursor-pointer">
                 Desidero ricevere aggiornamenti, consigli pratici e risorse utili via email. Acconsento al trattamento dei dati per finalità informative e di marketing ai sensi del <strong className="text-foreground/80">Regolamento UE 2016/679 (GDPR)</strong>. <em className="italic opacity-80">Nessuno spam. Solo contenuti utili e aggiornamenti occasionali.</em>
               </label>
             </div>
           </div>
         </div>
-<Button type="submit" className="w-full hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 py-6 text-base font-semibold uppercase tracking-wide" disabled={isSubmitting || !gdprChecked}>
-          {isSubmitting ? "INVIO IN CORSO..." : <><Send className="w-5 h-5 mr-2" /> INVIA MESSAGGIO</>}
+        <Button
+          type="submit"
+          className="w-full hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 py-6 text-base font-semibold uppercase tracking-wide"
+          disabled={!gdprChecked}
+        >
+          <Send className="w-5 h-5 mr-2" /> INVIA MESSAGGIO
         </Button>
         <p className="text-xs text-foreground/50 text-center">* campi obbligatori</p>
       </form>
