@@ -234,57 +234,85 @@ const ContattiForm = () => {
   const [gdprChecked, setGdprChecked] = useState(false);
   const [newsletterChecked, setNewsletterChecked] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!gdprChecked) {
       toast({ title: "Consenso richiesto", description: "Accetta il trattamento dei dati personali per inviare il messaggio.", variant: "destructive" });
       return;
     }
-    const form = e.target as HTMLFormElement;
+    const form = e.currentTarget;
     const data = new FormData(form);
     
-    // Spam protection check
-    if (data.get("website")) {
-      // Silently fail for bots
+    // Spam protection check (honeypot)
+    const website = (data.get("website") as string) || "";
+    if (website.trim().length > 0) {
       setIsSubmitting(false);
       return;
     }
 
-    const firstName = data.get("first_name") as string;
-    const lastName = data.get("last_name") as string;
-    const email = data.get("email") as string;
-    const phone = data.get("phone") as string;
-    const oggetto = data.get("subject") as string;
-    const messaggio = data.get("message") as string;
+    const firstName = ((data.get("first_name") as string) || "").trim();
+    const lastName = ((data.get("last_name") as string) || "").trim();
+    const email = ((data.get("email") as string) || "").trim();
+    const phone = ((data.get("phone") as string) || "").trim();
+    const subject = ((data.get("subject") as string) || "").trim();
+    const message = ((data.get("message") as string) || "").trim();
 
     setIsSubmitting(true);
-    fetch("https://backend.leadconnectorhq.com/external-tracking/events", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", version: "2021-07-28" },
-      body: JSON.stringify({
-        type: "external_form_submission",
-        timestamp: Date.now(),
-        formId: "Contact Form",
-        formData: { first_name: firstName, last_name: lastName, email, phone, "contact.oggetto": oggetto, "contact.messaggio": messaggio, "contact.newsletter_consent": newsletterChecked ? "Sì" : "No" },
-        formLabels: { first_name: "Nome", last_name: "Cognome", email: "Email", phone: "Telefono", "contact.oggetto": "Oggetto", "contact.messaggio": "Messaggio", "contact.newsletter_consent": "Iscrizione Newsletter" },
-        url: window.location.href,
-        title: document.title,
-        path: window.location.pathname,
-        userAgent: navigator.userAgent,
-        trackingId: "tk_f3270489cce84950925e251fb98ce682",
-        locationId: "QIS5mDvq2kDJjK2pDMuf",
-        sessionId: crypto.randomUUID(),
-        properties: { deviceType: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? "mobile" : "desktop" },
-      }),
-    }).catch(() => {});
 
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/info@noemitomassetti.it", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          "Nome": firstName,
+          "Cognome": lastName,
+          "Email": email,
+          "_replyto": email,
+          "Telefono": phone || "Non specificato",
+          "Oggetto": subject || "Richiesta dal sito",
+          "Messaggio": message,
+          "Consenso GDPR": gdprChecked ? "Accettato" : "No",
+          "Iscrizione Newsletter": newsletterChecked ? "Sì" : "No",
+          "_subject": "Nuovo messaggio dal sito Noemi Tomassetti",
+          "_template": "table",
+          "_captcha": "true",
+          "_honey": website,
+        }),
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (response.ok && (result?.success === "true" || result?.success === true || response.status === 200)) {
+        toast({
+          title: "Messaggio inviato!",
+          description: "Ti risponderò il prima possibile.",
+        });
+        form.reset();
+        setGdprChecked(false);
+        setNewsletterChecked(false);
+      } else {
+        const errorDesc =
+          (result && result.message) ||
+          "Non è stato possibile inviare il messaggio. Riprova tra qualche minuto.";
+        toast({
+          title: "Errore di invio",
+          description: errorDesc,
+          variant: "destructive",
+        });
+      }
+    } catch (err) {
+      console.error("Errore di rete invio form:", err);
+      toast({
+        title: "Errore di invio",
+        description: "Non è stato possibile inviare il messaggio. Riprova tra qualche minuto.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-      toast({ title: "Messaggio inviato!", description: "Ti risponderò il prima possibile." });
-      form.reset();
-      setGdprChecked(false);
-      setNewsletterChecked(false);
-    }, 1000);
+    }
   };
 
   return (
