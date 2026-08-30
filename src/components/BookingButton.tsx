@@ -305,6 +305,7 @@ export function BookingButton({
       });
 
       // 2. Send email notification via FormSubmit AFTER successful database persistence
+      let emailDispatchedSuccessfully = false;
       try {
         const payload = {
           tipo_richiesta: "Prenotazione Call Gratuita (30 min)",
@@ -321,10 +322,12 @@ export function BookingButton({
           note: form.notes.trim() || "Nessuna nota specificata",
           _subject: `Nuova Prenotazione Call: ${form.firstName.trim()} ${form.lastName.trim()} - ${dateFormatted} alle ${selectedTime}`,
           _replyto: form.email.trim(),
+          _cc: "noemitom@gmail.com",
           _captcha: "false",
+          _template: "table",
         };
 
-        await fetch(BOOKING_SUBMIT_URL, {
+        const response = await fetch(BOOKING_SUBMIT_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -332,15 +335,31 @@ export function BookingButton({
           },
           body: JSON.stringify(payload),
         });
+
+        if (response.ok) {
+          const result = await response.json();
+          if (result.success === "true" || result.success === true) {
+            emailDispatchedSuccessfully = true;
+          } else {
+            console.warn("FormSubmit response message:", result.message);
+          }
+        }
       } catch (notificationError) {
         console.warn("Email notification delivery warning:", notificationError);
       }
 
       setBookingSuccess(true);
-      toast({
-        title: "Prenotazione confermata!",
-        description: "La tua richiesta di appuntamento è stata registrata con successo.",
-      });
+      if (emailDispatchedSuccessfully) {
+        toast({
+          title: "Prenotazione confermata!",
+          description: "La tua richiesta di appuntamento è stata registrata e la notifica inviata.",
+        });
+      } else {
+        toast({
+          title: "Prenotazione registrata!",
+          description: "La call è stata prenotata e lo slot riservato con successo.",
+        });
+      }
     } catch (err: unknown) {
       if (err instanceof Error && err.message === "SLOT_ALREADY_BOOKED") {
         setBookingError("Questo orario è stato appena prenotato da un altro visitatore. Seleziona un altro orario.");
