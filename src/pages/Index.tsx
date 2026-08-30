@@ -276,7 +276,7 @@ const ContattiForm = () => {
           "Messaggio": message,
           "Consenso GDPR": gdprChecked ? "Accettato" : "No",
           "Iscrizione Newsletter": newsletterChecked ? "Sì" : "No",
-          "_subject": "Nuovo messaggio dal sito Noemi Tomassetti",
+          "_subject": subject ? `Nuovo messaggio: ${subject}` : "Nuovo messaggio dal sito Noemi Tomassetti",
           "_template": "table",
           "_captcha": "false",
         }),
