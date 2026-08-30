@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 1. Occupied slots: Contains only slotId, date, time, timezone, createdAt (NO personal data)
+    // Used by the calendar to filter out already booked slots
+    match /occupied_slots/{slotId} {
+      allow read: if true;
+      allow create: if !exists(/databases/$(database)/documents/occupied_slots/$(slotId))
+                    && request.resource.data.slotId == slotId
+                    && request.resource.data.date is string
+                    && request.resource.data.time is string
+                    && request.resource.data.timezone is string;
+      allow update, delete: if false;
+    }
+
+    // 2. Booking details: Contains customer private information (name, surname, email, phone, notes)
+    // STRICT PRIVACY: Read, update, and delete are strictly forbidden from client apps
+    match /booking_details/{bookingId} {
+      allow read, update, delete: if false;
+      allow create: if request.resource.data.slotId is string
+                    && request.resource.data.firstName is string
+                    && request.resource.data.lastName is string
+                    && request.resource.data.email is string
+                    && request.resource.data.date is string
+                    && request.resource.data.time is string;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "entities": {
+    "OccupiedSlot": {
+      "collection": "occupied_slots",
+      "fields": {
+        "slotId": { "type": "string", "description": "Deterministic ID (e.g. 2026-09-01_10-00_Europe-Rome)" },
+        "date": { "type": "string", "description": "Date formatted YYYY-MM-DD" },
+        "time": { "type": "string", "description": "Time formatted HH:mm" },
+        "timezone": { "type": "string", "description": "Timezone e.g. Europe/Rome" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of creation" }
+      }
+    },
+    "BookingDetail": {
+      "collection": "booking_details",
+      "fields": {
+        "slotId": { "type": "string", "description": "Referenced slotId" },
+        "firstName": { "type": "string", "description": "Customer first name" },
+        "lastName": { "type": "string", "description": "Customer last name" },
+        "email": { "type": "string", "description": "Customer email" },
+        "phone": { "type": "string", "description": "Customer phone number (optional)" },
+        "notes": { "type": "string", "description": "Customer notes (optional)" },
+        "date": { "type": "string", "description": "Formatted date" },
+        "time": { "type": "string", "description": "Formatted time" },
+        "timezone": { "type": "string", "description": "Europe/Rome" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of creation" }
+      }
+    }
+  }
+}

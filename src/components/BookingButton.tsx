@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -21,8 +21,14 @@ import {
   AlertCircle,
   Loader2,
   ChevronLeft,
-  Info,
 } from "lucide-react";
+import { db } from "@/lib/firebase";
+import {
+  collection,
+  doc,
+  onSnapshot,
+  runTransaction,
+} from "firebase/firestore";
 
 export interface BookingButtonProps {
   children?: React.ReactNode;
@@ -88,6 +94,13 @@ function getRomeIsoString(date: Date, timeStr: string): string {
 }
 
 /**
+ * Generates the deterministic slot ID for Firestore
+ */
+function getDeterministicSlotId(dateKey: string, timeStr: string): string {
+  return `${dateKey}_${timeStr.replace(":", "-")}_Europe-Rome`;
+}
+
+/**
  * Checks if a specific slot satisfies the 24-hour minimum notice constraint
  */
 function isSlotValidWithNotice(date: Date, timeStr: string): boolean {
@@ -114,11 +127,37 @@ export function BookingButton({
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [bookingError, setBookingError] = useState<string | null>(null);
   const [form, setForm] = useState<BookingFormState>(INITIAL_FORM);
+  const [occupiedSlots, setOccupiedSlots] = useState<Set<string>>(new Set());
+  const [loadingOccupied, setLoadingOccupied] = useState(true);
   const { toast } = useToast();
 
-  // Generate 30-day rolling window slots dictionary
+  // Real-time synchronization of occupied slots from Firestore
+  useEffect(() => {
+    if (!open) return;
+    setLoadingOccupied(true);
+
+    const unsubscribe = onSnapshot(
+      collection(db, "occupied_slots"),
+      (snapshot) => {
+        const occupiedSet = new Set<string>();
+        snapshot.forEach((docSnapshot) => {
+          occupiedSet.add(docSnapshot.id);
+        });
+        setOccupiedSlots(occupiedSet);
+        setLoadingOccupied(false);
+      },
+      (error) => {
+        console.warn("Firestore occupied slots sync warning:", error);
+        setLoadingOccupied(false);
+      }
+    );
+
+    return () => unsubscribe();
+  }, [open]);
+
+  // Generate 30-day rolling window slots dictionary, excluding already occupied slots
   const availableSlotsMap = useMemo(() => {
-    const slotsMap: Record<string, { time: string; iso: string }[]> = {};
+    const slotsMap: Record<string, { time: string; iso: string; slotId: string }[]> = {};
     const now = new Date();
     const startDay = startOfDay(now);
     const maxDay = addDays(startDay, 30);
@@ -127,13 +166,17 @@ export function BookingButton({
     while (!isAfter(current, maxDay)) {
       if (!isWeekend(current)) {
         const dateKey = format(current, "yyyy-MM-dd");
-        const validSlots: { time: string; iso: string }[] = [];
+        const validSlots: { time: string; iso: string; slotId: string }[] = [];
 
         for (const timeStr of DAILY_SLOT_TIMES) {
-          if (isSlotValidWithNotice(current, timeStr)) {
+          const slotId = getDeterministicSlotId(dateKey, timeStr);
+
+          // Check if slot is not occupied and satisfies the 24-hour notice
+          if (!occupiedSlots.has(slotId) && isSlotValidWithNotice(current, timeStr)) {
             validSlots.push({
               time: timeStr,
               iso: getRomeIsoString(current, timeStr),
+              slotId,
             });
           }
         }
@@ -146,7 +189,7 @@ export function BookingButton({
     }
 
     return slotsMap;
-  }, []);
+  }, [occupiedSlots]);
 
   const handleOpenChange = (isOpen: boolean) => {
     setOpen(isOpen);
@@ -167,6 +210,14 @@ export function BookingButton({
     // Strict 24-hour verification on slot click
     if (!isSlotValidWithNotice(date, time)) {
       setBookingError("Questo orario richiede almeno 24 ore di preavviso. Seleziona un'altra data o orario.");
+      return;
+    }
+
+    const dateKey = format(date, "yyyy-MM-dd");
+    const slotId = getDeterministicSlotId(dateKey, time);
+
+    if (occupiedSlots.has(slotId)) {
+      setBookingError("Questo orario è stato appena prenotato da un altro visitatore. Seleziona un altro orario.");
       return;
     }
 
@@ -212,58 +263,98 @@ export function BookingButton({
 
     setBooking(true);
 
+    const dateKey = format(date, "yyyy-MM-dd");
+    const slotId = getDeterministicSlotId(dateKey, selectedTime);
+    const dateFormatted = format(date, "EEEE d MMMM yyyy", { locale: it });
+
     try {
-      const dateFormatted = format(date, "EEEE d MMMM yyyy", { locale: it });
+      // 1. ATOMIC TRANSACTION in Firestore: verify slot availability and reserve atomically
+      const slotRef = doc(db, "occupied_slots", slotId);
+      const bookingRef = doc(collection(db, "booking_details"));
 
-      const payload = {
-        tipo_richiesta: "Prenotazione Call Gratuita (30 min)",
-        nome: form.firstName.trim(),
-        cognome: form.lastName.trim(),
-        email: form.email.trim(),
-        telefono: form.phone.trim() || "Non specificato",
-        data_appuntamento: dateFormatted,
-        ora_appuntamento: selectedTime,
-        fuso_orario: OFFICIAL_TIMEZONE,
-        durata: "30 minuti",
-        slot_iso: selectedSlotIso,
-        note: form.notes.trim() || "Nessuna nota specificata",
-        _subject: `Nuova Prenotazione Call: ${form.firstName.trim()} ${form.lastName.trim()} - ${dateFormatted} alle ${selectedTime}`,
-        _replyto: form.email.trim(),
-        _captcha: "false",
-      };
+      await runTransaction(db, async (transaction) => {
+        const slotSnapshot = await transaction.get(slotRef);
+        if (slotSnapshot.exists()) {
+          throw new Error("SLOT_ALREADY_BOOKED");
+        }
 
-      const response = await fetch(BOOKING_SUBMIT_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Errore durante l'invio della richiesta (HTTP ${response.status})`);
-      }
-
-      const result = await response.json();
-
-      if (result.success === "true" || result.success === true) {
-        setBookingSuccess(true);
-        toast({
-          title: "Prenotazione confermata!",
-          description: "La tua richiesta di appuntamento è stata registrata con successo.",
+        // Reserve slot in public collection (NO personal data)
+        transaction.set(slotRef, {
+          slotId,
+          date: dateKey,
+          time: selectedTime,
+          timezone: OFFICIAL_TIMEZONE,
+          createdAt: new Date().toISOString(),
         });
-      } else {
-        throw new Error("Risposta inattesa dal servizio di prenotazione.");
-      }
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Impossibile completare la prenotazione. Riprova più tardi.";
-      setBookingError(msg);
-      toast({
-        title: "Errore prenotazione",
-        description: msg,
-        variant: "destructive",
+
+        // Save customer details in private collection (STRICT PRIVACY: not readable from clients)
+        transaction.set(bookingRef, {
+          bookingId: bookingRef.id,
+          slotId,
+          firstName: form.firstName.trim(),
+          lastName: form.lastName.trim(),
+          email: form.email.trim(),
+          phone: form.phone.trim() || "Non specificato",
+          notes: form.notes.trim() || "Nessuna nota",
+          date: dateFormatted,
+          time: selectedTime,
+          timezone: OFFICIAL_TIMEZONE,
+          slotIso: selectedSlotIso,
+          createdAt: new Date().toISOString(),
+        });
       });
+
+      // 2. Send email notification via FormSubmit AFTER successful database persistence
+      try {
+        const payload = {
+          tipo_richiesta: "Prenotazione Call Gratuita (30 min)",
+          nome: form.firstName.trim(),
+          cognome: form.lastName.trim(),
+          email: form.email.trim(),
+          telefono: form.phone.trim() || "Non specificato",
+          data_appuntamento: dateFormatted,
+          ora_appuntamento: selectedTime,
+          fuso_orario: OFFICIAL_TIMEZONE,
+          durata: "30 minuti",
+          slot_id: slotId,
+          slot_iso: selectedSlotIso,
+          note: form.notes.trim() || "Nessuna nota specificata",
+          _subject: `Nuova Prenotazione Call: ${form.firstName.trim()} ${form.lastName.trim()} - ${dateFormatted} alle ${selectedTime}`,
+          _replyto: form.email.trim(),
+          _captcha: "false",
+        };
+
+        await fetch(BOOKING_SUBMIT_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+      } catch (notificationError) {
+        console.warn("Email notification delivery warning:", notificationError);
+      }
+
+      setBookingSuccess(true);
+      toast({
+        title: "Prenotazione confermata!",
+        description: "La tua richiesta di appuntamento è stata registrata con successo.",
+      });
+    } catch (err: unknown) {
+      if (err instanceof Error && err.message === "SLOT_ALREADY_BOOKED") {
+        setBookingError("Questo orario è stato appena prenotato da un altro visitatore. Seleziona un altro orario.");
+        setSelectedTime(null);
+        setSelectedSlotIso(null);
+      } else {
+        const msg = err instanceof Error ? err.message : "Impossibile completare la prenotazione. Riprova più tardi.";
+        setBookingError(msg);
+        toast({
+          title: "Errore prenotazione",
+          description: msg,
+          variant: "destructive",
+        });
+      }
     } finally {
       setBooking(false);
     }
@@ -342,12 +433,12 @@ export function BookingButton({
         ) : !selectedTime ? (
           /* Date & Time Slot Selection View */
           <div className="space-y-4 py-2">
-            <div className="bg-secondary/20 border border-border/50 rounded-lg p-3 text-xs text-foreground/70 flex items-start gap-2">
-              <Info className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-              <span>
-                Disponibilità dal <strong>lunedì al venerdì</strong> (orari: <strong>10:00, 11:00, 14:00, 15:00</strong>) · Preavviso minimo: <strong>24 ore</strong>. Seleziona una data per visualizzare gli orari disponibili.
-              </span>
-            </div>
+            {loadingOccupied && (
+              <div className="flex items-center justify-center gap-2 py-1 text-xs text-muted-foreground">
+                <Loader2 className="w-3.5 h-3.5 animate-spin text-primary" />
+                <span>Sincronizzazione disponibilità in tempo reale...</span>
+              </div>
+            )}
 
             <div className="flex justify-center bg-card border rounded-xl p-2 shadow-sm">
               <Calendar
@@ -396,7 +487,7 @@ export function BookingButton({
                     <p className="text-xs">
                       {isWeekend(date)
                         ? "I giorni di sabato e domenica non sono disponibili per le call."
-                        : "Gli orari per questo giorno non rispettano il preavviso minimo di 24 ore. Seleziona una data successiva."}
+                        : "Gli orari per questo giorno non sono disponibili o non rispettano il preavviso minimo di 24 ore."}
                     </p>
                   </div>
                 )}
