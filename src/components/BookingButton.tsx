@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -22,15 +22,7 @@ import {
   Loader2,
   ChevronLeft,
   Info,
-  RefreshCw,
 } from "lucide-react";
-
-const LOCATION_ID = "QIS5mDvq2kDJjK2pDMuf";
-const CALENDAR_ID = "DnZk8niUvdwRiUXJEMaf";
-const SLOTS_API_URL = `https://backend.leadconnectorhq.com/calendars/${CALENDAR_ID}/free-slots`;
-const BOOKING_API_URL = "https://backend.leadconnectorhq.com/vibe-ai/booking/submit";
-const OFFICIAL_TIMEZONE = "Europe/Rome";
-const MINIMUM_NOTICE_HOURS = 24;
 
 export interface BookingButtonProps {
   children?: React.ReactNode;
@@ -60,18 +52,49 @@ const INITIAL_FORM: BookingFormState = {
   website: "",
 };
 
+const OFFICIAL_TIMEZONE = "Europe/Rome";
+const MINIMUM_NOTICE_HOURS = 24;
+const DAILY_SLOT_TIMES = ["10:00", "11:00", "14:00", "15:00"] as const;
+const BOOKING_SUBMIT_URL = "https://formsubmit.co/ajax/info@noemitomassetti.it";
+
 /**
- * Verifies if a given slot ISO string satisfies the minimum notice requirement (>= 24 hours)
+ * Calculates the exact Europe/Rome ISO string for a given date and time string
  */
-function isSlotValidWithNotice(slotIsoString: string): boolean {
-  try {
-    const slotTime = new Date(slotIsoString).getTime();
-    if (isNaN(slotTime)) return false;
-    const minTimeAllowed = Date.now() + MINIMUM_NOTICE_HOURS * 60 * 60 * 1000;
-    return slotTime >= minTimeAllowed;
-  } catch {
-    return false;
+function getRomeIsoString(date: Date, timeStr: string): string {
+  const [hours, minutes] = timeStr.split(":").map(Number);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  const dateStr = `${year}-${month}-${day}`;
+
+  const testDate = new Date(Date.UTC(year, date.getMonth(), date.getDate(), hours, minutes));
+  const dtf = new Intl.DateTimeFormat("en-US", {
+    timeZone: OFFICIAL_TIMEZONE,
+    timeZoneName: "shortOffset",
+  });
+  const parts = dtf.formatToParts(testDate);
+  const tzPart = parts.find((p) => p.type === "timeZoneName");
+  let offset = "+02:00";
+  if (tzPart && tzPart.value) {
+    const match = tzPart.value.match(/GMT([+-]\d+)/);
+    if (match) {
+      const hoursOffset = parseInt(match[1], 10);
+      const sign = hoursOffset >= 0 ? "+" : "-";
+      offset = `${sign}${String(Math.abs(hoursOffset)).padStart(2, "0")}:00`;
+    }
   }
+
+  return `${dateStr}T${timeStr}:00${offset}`;
+}
+
+/**
+ * Checks if a specific slot satisfies the 24-hour minimum notice constraint
+ */
+function isSlotValidWithNotice(date: Date, timeStr: string): boolean {
+  const [hours, minutes] = timeStr.split(":").map(Number);
+  const slotTimestamp = new Date(date).setHours(hours, minutes, 0, 0);
+  const minTimeAllowed = Date.now() + MINIMUM_NOTICE_HOURS * 60 * 60 * 1000;
+  return slotTimestamp >= minTimeAllowed;
 }
 
 export function BookingButton({
@@ -85,133 +108,45 @@ export function BookingButton({
 }: BookingButtonProps) {
   const [open, setOpen] = useState(false);
   const [date, setDate] = useState<Date | undefined>(undefined);
-  const [availableSlots, setAvailableSlots] = useState<Record<string, string[]>>({});
-  const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
-  const [loadingSlots, setLoadingSlots] = useState(false);
-  const [slotsError, setSlotsError] = useState<string | null>(null);
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  const [selectedSlotIso, setSelectedSlotIso] = useState<string | null>(null);
   const [booking, setBooking] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [bookingError, setBookingError] = useState<string | null>(null);
   const [form, setForm] = useState<BookingFormState>(INITIAL_FORM);
   const { toast } = useToast();
 
-  const abortControllerRef = useRef<AbortController | null>(null);
-  const isTimeoutRef = useRef<boolean>(false);
+  // Generate 30-day rolling window slots dictionary
+  const availableSlotsMap = useMemo(() => {
+    const slotsMap: Record<string, { time: string; iso: string }[]> = {};
+    const now = new Date();
+    const startDay = startOfDay(now);
+    const maxDay = addDays(startDay, 30);
 
-  // Stable function to fetch free slots for the next 30 days rolling window
-  const fetchSlots = useCallback(async () => {
-    // Abort previous pending request if any
-    if (abortControllerRef.current) {
-      abortControllerRef.current.abort();
-    }
-    const controller = new AbortController();
-    abortControllerRef.current = controller;
-    isTimeoutRef.current = false;
+    let current = startDay;
+    while (!isAfter(current, maxDay)) {
+      if (!isWeekend(current)) {
+        const dateKey = format(current, "yyyy-MM-dd");
+        const validSlots: { time: string; iso: string }[] = [];
 
-    setLoadingSlots(true);
-    setSlotsError(null);
-
-    // Timeout of 15 seconds
-    const timeoutId = setTimeout(() => {
-      isTimeoutRef.current = true;
-      controller.abort();
-    }, 15000);
-
-    try {
-      const now = new Date();
-      const start = startOfDay(now).getTime();
-      const end = addDays(startOfDay(now), 30).getTime();
-
-      const url = `${SLOTS_API_URL}?startDate=${start}&endDate=${end}&timezone=${encodeURIComponent(OFFICIAL_TIMEZONE)}`;
-      const res = await fetch(url, {
-        signal: controller.signal,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (!res.ok) {
-        throw new Error(`Errore di comunicazione con il servizio calendario (${res.status})`);
-      }
-
-      const rawData = await res.json();
-      clearTimeout(timeoutId);
-
-      // Parse and filter the response:
-      // Format: { "2026-09-02": { "slots": [ "2026-09-02T10:00:00+02:00", ... ] }, "traceId": "..." }
-      const parsedSlotsMap: Record<string, string[]> = {};
-
-      if (rawData && typeof rawData === "object") {
-        for (const [key, value] of Object.entries(rawData)) {
-          // Check if key is a valid YYYY-MM-DD date string
-          if (/^\d{4}-\d{2}-\d{2}$/.test(key) && value && typeof value === "object") {
-            const rawSlots = (value as { slots?: unknown[] }).slots;
-            if (Array.isArray(rawSlots)) {
-              // Filter slots according to business rules:
-              // 1. Must be a valid ISO date
-              // 2. Must not fall on a weekend (Saturday / Sunday)
-              // 3. Must satisfy the 24-hour minimum notice
-              const validSlots = rawSlots.filter((slot): slot is string => {
-                if (typeof slot !== "string") return false;
-                const slotDate = new Date(slot);
-                if (isNaN(slotDate.getTime())) return false;
-
-                // Weekend filter (0 = Sunday, 6 = Saturday)
-                const dayOfWeek = slotDate.getDay();
-                if (dayOfWeek === 0 || dayOfWeek === 6) return false;
-
-                // 24h minimum notice filter
-                return isSlotValidWithNotice(slot);
-              });
-
-              if (validSlots.length > 0) {
-                // Sort ascending
-                validSlots.sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
-                parsedSlotsMap[key] = validSlots;
-              }
-            }
+        for (const timeStr of DAILY_SLOT_TIMES) {
+          if (isSlotValidWithNotice(current, timeStr)) {
+            validSlots.push({
+              time: timeStr,
+              iso: getRomeIsoString(current, timeStr),
+            });
           }
         }
-      }
 
-      setAvailableSlots(parsedSlotsMap);
-    } catch (err: unknown) {
-      if (err instanceof Error && err.name === "AbortError") {
-        if (isTimeoutRef.current) {
-          console.warn("Richiesta slot scaduta per timeout.");
-          setSlotsError("Tempo di caricamento scaduto. Clicca su 'Ricarica' per riprovare.");
+        if (validSlots.length > 0) {
+          slotsMap[dateKey] = validSlots;
         }
-        // If aborted by unmount or superseded request without timeout, do not set error
-        return;
       }
-
-      console.error("Errore nel recupero degli slot:", err);
-      setSlotsError("Impossibile caricare le disponibilità in questo momento. Riprova più tardi.");
-    } finally {
-      clearTimeout(timeoutId);
-      setLoadingSlots(false);
+      current = addDays(current, 1);
     }
+
+    return slotsMap;
   }, []);
-
-  // Fetch slots on modal open
-  useEffect(() => {
-    if (open) {
-      fetchSlots();
-    } else {
-      if (abortControllerRef.current) {
-        abortControllerRef.current.abort();
-      }
-      if (!bookingSuccess) {
-        setSelectedSlot(null);
-        setBookingError(null);
-      }
-    }
-    return () => {
-      if (abortControllerRef.current) {
-        abortControllerRef.current.abort();
-      }
-    };
-  }, [open, fetchSlots, bookingSuccess]);
 
   const handleOpenChange = (isOpen: boolean) => {
     setOpen(isOpen);
@@ -219,19 +154,25 @@ export function BookingButton({
       if (bookingSuccess) {
         setBookingSuccess(false);
         setDate(undefined);
-        setSelectedSlot(null);
+        setSelectedTime(null);
+        setSelectedSlotIso(null);
         setForm(INITIAL_FORM);
       }
     }
   };
 
-  const handleSelectSlot = (slot: string) => {
-    // 24-hour verification on slot click
-    if (!isSlotValidWithNotice(slot)) {
-      setSlotsError("Questo orario non è più prenotabile (preavviso minimo di 24 ore richiesto). Seleziona un altro orario.");
+  const handleSelectSlot = (time: string) => {
+    if (!date) return;
+
+    // Strict 24-hour verification on slot click
+    if (!isSlotValidWithNotice(date, time)) {
+      setBookingError("Questo orario richiede almeno 24 ore di preavviso. Seleziona un'altra data o orario.");
       return;
     }
-    setSelectedSlot(slot);
+
+    const iso = getRomeIsoString(date, time);
+    setSelectedTime(time);
+    setSelectedSlotIso(iso);
     setBookingError(null);
   };
 
@@ -239,15 +180,16 @@ export function BookingButton({
     e.preventDefault();
     setBookingError(null);
 
-    if (!selectedSlot) {
+    if (!date || !selectedTime || !selectedSlotIso) {
       setBookingError("Seleziona prima una data e un orario.");
       return;
     }
 
-    // Double check 24-hour notice rule immediately before booking
-    if (!isSlotValidWithNotice(selectedSlot)) {
-      setBookingError("Questo orario non è più prenotabile (preavviso minimo di 24 ore richiesto). Seleziona un altro orario.");
-      setSelectedSlot(null);
+    // Double check 24-hour notice immediately before submit
+    if (!isSlotValidWithNotice(date, selectedTime)) {
+      setBookingError("Questo orario richiede almeno 24 ore di preavviso. Seleziona un altro orario.");
+      setSelectedTime(null);
+      setSelectedSlotIso(null);
       return;
     }
 
@@ -258,7 +200,7 @@ export function BookingButton({
     }
 
     if (!form.firstName.trim() || !form.lastName.trim() || !form.email.trim()) {
-      setBookingError("Inserisci nome, cognome e un'email valida.");
+      setBookingError("Compila tutti i campi obbligatori contrassegnati con l'asterisco (*).");
       return;
     }
 
@@ -269,26 +211,28 @@ export function BookingButton({
     }
 
     setBooking(true);
+
     try {
-      const sessionId =
-        typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
-          ? crypto.randomUUID()
-          : `session-${Date.now()}-${Math.random().toString(36).substring(2, 11)}`;
+      const dateFormatted = format(date, "EEEE d MMMM yyyy", { locale: it });
 
       const payload = {
-        locationId: LOCATION_ID,
-        calendarId: CALENDAR_ID,
-        firstName: form.firstName.trim(),
-        lastName: form.lastName.trim(),
+        tipo_richiesta: "Prenotazione Call Gratuita (30 min)",
+        nome: form.firstName.trim(),
+        cognome: form.lastName.trim(),
         email: form.email.trim(),
-        phone: form.phone.trim() || "Non specificato",
-        notes: form.notes.trim() || "Prenotazione call conoscitiva (30 min) dal sito",
-        selectedSlot: selectedSlot,
-        selectedTimezone: OFFICIAL_TIMEZONE,
-        sessionId,
+        telefono: form.phone.trim() || "Non specificato",
+        data_appuntamento: dateFormatted,
+        ora_appuntamento: selectedTime,
+        fuso_orario: OFFICIAL_TIMEZONE,
+        durata: "30 minuti",
+        slot_iso: selectedSlotIso,
+        note: form.notes.trim() || "Nessuna nota specificata",
+        _subject: `Nuova Prenotazione Call: ${form.firstName.trim()} ${form.lastName.trim()} - ${dateFormatted} alle ${selectedTime}`,
+        _replyto: form.email.trim(),
+        _captcha: "false",
       };
 
-      const res = await fetch(BOOKING_API_URL, {
+      const response = await fetch(BOOKING_SUBMIT_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -297,17 +241,17 @@ export function BookingButton({
         body: JSON.stringify(payload),
       });
 
-      if (!res.ok) {
-        throw new Error(`Errore durante la conferma della prenotazione (HTTP ${res.status})`);
+      if (!response.ok) {
+        throw new Error(`Errore durante l'invio della richiesta (HTTP ${response.status})`);
       }
 
-      const resData = await res.json();
+      const result = await response.json();
 
-      if (resData.appointmentId || resData.id || resData.success || resData.contactId || resData.ok) {
+      if (result.success === "true" || result.success === true) {
         setBookingSuccess(true);
         toast({
           title: "Prenotazione confermata!",
-          description: "Riceverai a breve un'email di riepilogo con i dettagli dell'appuntamento.",
+          description: "La tua richiesta di appuntamento è stata registrata con successo.",
         });
       } else {
         throw new Error("Risposta inattesa dal servizio di prenotazione.");
@@ -327,9 +271,9 @@ export function BookingButton({
 
   // Get slots for currently selected date
   const dateKey = date ? format(date, "yyyy-MM-dd") : null;
-  const slotsForDate = dateKey ? availableSlots[dateKey] || [] : [];
+  const slotsForDate = dateKey ? availableSlotsMap[dateKey] || [] : [];
 
-  // Filter calendar days: disabled if past, >30 days, or weekend (Sat/Sun)
+  // Filter calendar days: disabled if past, >30 days, weekend, or no valid slots available
   const isDateDisabled = (d: Date) => {
     const today = startOfDay(new Date());
     const maxDate = addDays(today, 30);
@@ -337,7 +281,8 @@ export function BookingButton({
     if (isBefore(dayStart, today)) return true;
     if (isAfter(dayStart, maxDate)) return true;
     if (isWeekend(d)) return true;
-    return false;
+    const key = format(d, "yyyy-MM-dd");
+    return !availableSlotsMap[key] || availableSlotsMap[key].length === 0;
   };
 
   return (
@@ -359,7 +304,7 @@ export function BookingButton({
             PRENOTA UNA CALL GRATUITA
           </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground mt-1">
-            Durata: <strong>30 minuti</strong> · Videocall individuale · Fuso orario: <strong>{OFFICIAL_TIMEZONE}</strong>
+            Durata: <strong>30 minuti</strong> · Videocall conoscitiva · Fuso orario: <strong>{OFFICIAL_TIMEZONE}</strong>
           </DialogDescription>
         </DialogHeader>
 
@@ -370,16 +315,16 @@ export function BookingButton({
               <CheckCircle2 className="w-14 h-14 text-primary animate-bounce" />
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-bold text-foreground">Prenotazione Confermata!</h3>
+              <h3 className="text-xl font-bold text-foreground">Prenotazione Inviata con Successo!</h3>
               <p className="text-sm text-foreground/80 max-w-md mx-auto leading-relaxed">
-                Il tuo appuntamento per la call gratuita di <strong>30 minuti</strong> è stato registrato con successo. Ti ho inviato un'email di conferma con il link per la videocall all'indirizzo{" "}
+                Il tuo appuntamento per la call gratuita di <strong>30 minuti</strong> è stato registrato. Riceverai un'email di conferma con i dettagli della videocall all'indirizzo{" "}
                 <strong className="text-foreground">{form.email}</strong>.
               </p>
-              {selectedSlot && (
+              {date && selectedTime && (
                 <div className="inline-flex items-center gap-2 bg-secondary/40 border border-border px-4 py-2.5 rounded-lg text-sm font-semibold text-primary mt-2">
                   <Clock className="w-4 h-4" />
                   <span>
-                    {format(new Date(selectedSlot), "EEEE d MMMM yyyy 'alle' HH:mm", { locale: it })} ({OFFICIAL_TIMEZONE})
+                    {format(date, "EEEE d MMMM yyyy", { locale: it })} alle ore {selectedTime} ({OFFICIAL_TIMEZONE})
                   </span>
                 </div>
               )}
@@ -387,39 +332,20 @@ export function BookingButton({
             <div className="pt-4">
               <Button
                 type="button"
-                className="w-full sm:w-auto px-8"
+                className="w-full sm:w-auto px-8 font-semibold"
                 onClick={() => handleOpenChange(false)}
               >
                 Chiudi
               </Button>
             </div>
           </div>
-        ) : !selectedSlot ? (
+        ) : !selectedTime ? (
           /* Date & Time Slot Selection View */
           <div className="space-y-4 py-2">
-            {slotsError && (
-              <div className="bg-destructive/10 border border-destructive/30 text-destructive text-sm p-3 rounded-lg flex items-center justify-between gap-2">
-                <div className="flex items-center gap-2">
-                  <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                  <span>{slotsError}</span>
-                </div>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={fetchSlots}
-                  className="text-xs h-7 px-2 gap-1"
-                >
-                  <RefreshCw className="w-3 h-3" />
-                  Ricarica
-                </Button>
-              </div>
-            )}
-
             <div className="bg-secondary/20 border border-border/50 rounded-lg p-3 text-xs text-foreground/70 flex items-start gap-2">
               <Info className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
               <span>
-                Disponibilità dal <strong>lunedì al venerdì</strong> (preavviso minimo: 24 ore). Seleziona una data sul calendario per visualizzare gli orari disponibili.
+                Disponibilità dal <strong>lunedì al venerdì</strong> (orari: <strong>10:00, 11:00, 14:00, 15:00</strong>) · Preavviso minimo: <strong>24 ore</strong>. Seleziona una data per visualizzare gli orari disponibili.
               </span>
             </div>
 
@@ -429,7 +355,7 @@ export function BookingButton({
                 selected={date}
                 onSelect={(newDate) => {
                   setDate(newDate);
-                  setSlotsError(null);
+                  setBookingError(null);
                 }}
                 locale={it}
                 disabled={isDateDisabled}
@@ -443,34 +369,26 @@ export function BookingButton({
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4 text-primary" />
                     <span>
-                      Orari per {format(date, "EEEE d MMMM", { locale: it })}:
+                      Orari disponibili per {format(date, "EEEE d MMMM", { locale: it })}:
                     </span>
                   </div>
                   <span className="text-xs font-normal text-muted-foreground">30 min · Europe/Rome</span>
                 </div>
 
-                {loadingSlots ? (
-                  <div className="flex items-center justify-center gap-2 py-6 text-sm text-muted-foreground">
-                    <Loader2 className="w-4 h-4 animate-spin text-primary" />
-                    <span>Caricamento orari disponibili...</span>
-                  </div>
-                ) : slotsForDate.length > 0 ? (
-                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-                    {slotsForDate.map((slot) => {
-                      const timeString = format(new Date(slot), "HH:mm");
-                      return (
-                        <Button
-                          key={slot}
-                          type="button"
-                          variant="outline"
-                          size="sm"
-                          onClick={() => handleSelectSlot(slot)}
-                          className="hover:bg-primary hover:text-primary-foreground font-semibold py-2.5 transition-all"
-                        >
-                          {timeString}
-                        </Button>
-                      );
-                    })}
+                {slotsForDate.length > 0 ? (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {slotsForDate.map(({ time }) => (
+                      <Button
+                        key={time}
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        onClick={() => handleSelectSlot(time)}
+                        className="hover:bg-primary hover:text-primary-foreground font-semibold py-2.5 transition-all text-sm"
+                      >
+                        {time}
+                      </Button>
+                    ))}
                   </div>
                 ) : (
                   <div className="text-center py-5 px-3 bg-secondary/20 rounded-lg text-sm text-muted-foreground space-y-1">
@@ -478,7 +396,7 @@ export function BookingButton({
                     <p className="text-xs">
                       {isWeekend(date)
                         ? "I giorni di sabato e domenica non sono disponibili per le call."
-                        : "Gli orari potrebbero essere esauriti o non rispettare il preavviso di 24 ore. Seleziona un'altra data."}
+                        : "Gli orari per questo giorno non rispettano il preavviso minimo di 24 ore. Seleziona una data successiva."}
                     </p>
                   </div>
                 )}
@@ -486,7 +404,7 @@ export function BookingButton({
             )}
           </div>
         ) : (
-          /* Customer Details View */
+          /* Customer Details Form View */
           <form onSubmit={handleBook} className="space-y-4 py-2" noValidate>
             {bookingError && (
               <div className="bg-destructive/10 border border-destructive/30 text-destructive text-sm p-3 rounded-lg flex items-center gap-2">
@@ -503,7 +421,10 @@ export function BookingButton({
                   type="button"
                   variant="ghost"
                   size="sm"
-                  onClick={() => setSelectedSlot(null)}
+                  onClick={() => {
+                    setSelectedTime(null);
+                    setSelectedSlotIso(null);
+                  }}
                   className="text-xs text-primary hover:text-primary hover:bg-primary/10 gap-1 h-7 px-2"
                 >
                   <ChevronLeft className="w-3 h-3" /> Modifica data/ora
@@ -512,7 +433,7 @@ export function BookingButton({
               <div className="text-sm font-medium text-foreground flex items-center gap-2">
                 <CalendarIcon className="w-4 h-4 text-primary shrink-0" />
                 <span>
-                  {format(new Date(selectedSlot), "EEEE d MMMM yyyy 'alle' HH:mm", { locale: it })}
+                  {date && format(date, "EEEE d MMMM yyyy", { locale: it })} alle <strong>{selectedTime}</strong>
                 </span>
               </div>
               <div className="text-xs text-foreground/70 flex items-center gap-4">
@@ -621,7 +542,7 @@ export function BookingButton({
             </Button>
 
             <p className="text-xs text-foreground/50 text-center">
-              Riceverai un'email di conferma con il link della videocall all'indirizzo indicato.
+              Riceverai una notifica di conferma con i dettagli dell'appuntamento all'indirizzo indicato.
             </p>
           </form>
         )}
