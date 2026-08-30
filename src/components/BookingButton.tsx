@@ -5,7 +5,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { format, addDays, startOfDay, isBefore, isAfter, startOfMonth, endOfMonth } from "date-fns";
+import { format, addDays, startOfDay, isBefore, isAfter } from "date-fns";
 import { it } from "date-fns/locale";
 
 const VIBE_API_URL = "https://backend.leadconnectorhq.com/vibe-ai";
@@ -29,7 +29,6 @@ export function BookingButton({ children, className, variant, size, asChild, onC
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
   const [loadingSlots, setLoadingSlots] = useState(false);
   const [booking, setBooking] = useState(false);
-  const [currentMonth, setCurrentMonth] = useState<Date>(startOfMonth(new Date()));
   const { toast } = useToast();
 
   const [form, setForm] = useState({
@@ -41,32 +40,30 @@ export function BookingButton({ children, className, variant, size, asChild, onC
     website: ""
   });
 
-  const fetchSlots = async (month: Date) => {
+  const fetchSlots = async () => {
     setLoadingSlots(true);
     try {
-      const start = Math.max(startOfMonth(month).getTime(), startOfDay(new Date()).getTime());
-      const end = Math.min(endOfMonth(month).getTime(), addDays(new Date(), 30).getTime());
-      
-      if (start > end) {
-        setLoadingSlots(false);
-        return;
-      }
+      const today = startOfDay(new Date());
+      const start = today.getTime();
+      const end = addDays(today, 30).getTime();
 
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/Rome";
       const res = await fetch(`https://backend.leadconnectorhq.com/calendars/${CALENDAR_ID}/free-slots?startDate=${start}&endDate=${end}&timezone=${tz}`);
+      if (!res.ok) throw new Error("Errore nel recupero degli slot");
       const data = await res.json();
-      setAvailableSlots(prev => ({ ...prev, ...data }));
+      setAvailableSlots(data);
     } catch (e) {
       console.error("Failed to fetch slots", e);
+    } finally {
+      setLoadingSlots(false);
     }
-    setLoadingSlots(false);
   };
 
   useEffect(() => {
     if (open) {
-      fetchSlots(currentMonth);
+      fetchSlots();
     }
-  }, [open, currentMonth]);
+  }, [open]);
 
   const handleBook = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -137,7 +134,6 @@ export function BookingButton({ children, className, variant, size, asChild, onC
                 onSelect={setDate}
                 locale={it}
                 disabled={(d) => isBefore(startOfDay(d), today) || isAfter(startOfDay(d), maxDate)}
-                onMonthChange={setCurrentMonth}
                 className="rounded-md border"
               />
             </div>
