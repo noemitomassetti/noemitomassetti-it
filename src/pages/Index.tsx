@@ -278,14 +278,14 @@ const ContattiForm = () => {
           "Iscrizione Newsletter": newsletterChecked ? "Sì" : "No",
           "_subject": "Nuovo messaggio dal sito Noemi Tomassetti",
           "_template": "table",
-          "_captcha": "true",
-          "_honey": website,
+          "_captcha": "false",
         }),
       });
 
       const result = await response.json().catch(() => null);
+      const isSuccess = response.ok && (result?.success === "true" || result?.success === true);
 
-      if (response.ok && (result?.success === "true" || result?.success === true || response.status === 200)) {
+      if (isSuccess) {
         toast({
           title: "Messaggio inviato!",
           description: "Ti risponderò il prima possibile.",
@@ -294,11 +294,16 @@ const ContattiForm = () => {
         setGdprChecked(false);
         setNewsletterChecked(false);
       } else {
-        const errorDesc =
-          (result && result.message) ||
-          "Non è stato possibile inviare il messaggio. Riprova tra qualche minuto.";
+        let errorDesc = "Non è stato possibile inviare il messaggio. Riprova tra qualche minuto.";
+        if (result?.message) {
+          if (result.message.toLowerCase().includes("activation") || result.message.toLowerCase().includes("activate")) {
+            errorDesc = "È richiesta l'attivazione iniziale del form. Controlla la posta in arrivo e la cartella Spam di info@noemitomassetti.it per cliccare sul link di conferma.";
+          } else {
+            errorDesc = result.message;
+          }
+        }
         toast({
-          title: "Errore di invio",
+          title: "Invio non completato",
           description: errorDesc,
           variant: "destructive",
         });
