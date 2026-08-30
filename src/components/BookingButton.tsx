@@ -22,6 +22,7 @@ import {
   Loader2,
   ChevronLeft,
   Info,
+  RefreshCw,
 } from "lucide-react";
 
 const LOCATION_ID = "QIS5mDvq2kDJjK2pDMuf";
@@ -60,7 +61,7 @@ const INITIAL_FORM: BookingFormState = {
 };
 
 /**
- * Utility to verify if a given slot timestamp satisfies the >= 24 hours minimum notice rule
+ * Verifies if a given slot ISO string satisfies the minimum notice requirement (>= 24 hours)
  */
 function isSlotValidWithNotice(slotIsoString: string): boolean {
   try {
@@ -95,11 +96,9 @@ export function BookingButton({
   const { toast } = useToast();
 
   const abortControllerRef = useRef<AbortController | null>(null);
+  const isTimeoutRef = useRef<boolean>(false);
 
-  const today = startOfDay(new Date());
-  const maxDate = addDays(today, 30);
-
-  // Fetch free slots for the next 30 days rolling window
+  // Stable function to fetch free slots for the next 30 days rolling window
   const fetchSlots = useCallback(async () => {
     // Abort previous pending request if any
     if (abortControllerRef.current) {
@@ -107,17 +106,21 @@ export function BookingButton({
     }
     const controller = new AbortController();
     abortControllerRef.current = controller;
+    isTimeoutRef.current = false;
 
     setLoadingSlots(true);
     setSlotsError(null);
 
+    // Timeout of 15 seconds
     const timeoutId = setTimeout(() => {
+      isTimeoutRef.current = true;
       controller.abort();
-    }, 12000); // 12 seconds timeout
+    }, 15000);
 
     try {
-      const start = today.getTime();
-      const end = maxDate.getTime();
+      const now = new Date();
+      const start = startOfDay(now).getTime();
+      const end = addDays(startOfDay(now), 30).getTime();
 
       const url = `${SLOTS_API_URL}?startDate=${start}&endDate=${end}&timezone=${encodeURIComponent(OFFICIAL_TIMEZONE)}`;
       const res = await fetch(url, {
@@ -128,32 +131,32 @@ export function BookingButton({
       });
 
       if (!res.ok) {
-        throw new Error(`Errore di comunicazione (${res.status})`);
+        throw new Error(`Errore di comunicazione con il servizio calendario (${res.status})`);
       }
 
       const rawData = await res.json();
       clearTimeout(timeoutId);
 
       // Parse and filter the response:
-      // Response format: { "2026-09-02": { "slots": [ "2026-09-02T10:00:00+02:00", ... ] }, "traceId": "..." }
+      // Format: { "2026-09-02": { "slots": [ "2026-09-02T10:00:00+02:00", ... ] }, "traceId": "..." }
       const parsedSlotsMap: Record<string, string[]> = {};
 
       if (rawData && typeof rawData === "object") {
         for (const [key, value] of Object.entries(rawData)) {
-          // Check if key is a valid YYYY-MM-DD date
+          // Check if key is a valid YYYY-MM-DD date string
           if (/^\d{4}-\d{2}-\d{2}$/.test(key) && value && typeof value === "object") {
             const rawSlots = (value as { slots?: unknown[] }).slots;
             if (Array.isArray(rawSlots)) {
-              // Filter slots:
-              // 1. Must be valid ISO date string
-              // 2. Must satisfy the 24h minimum notice
-              // 3. Must not fall on a weekend
+              // Filter slots according to business rules:
+              // 1. Must be a valid ISO date
+              // 2. Must not fall on a weekend (Saturday / Sunday)
+              // 3. Must satisfy the 24-hour minimum notice
               const validSlots = rawSlots.filter((slot): slot is string => {
                 if (typeof slot !== "string") return false;
                 const slotDate = new Date(slot);
                 if (isNaN(slotDate.getTime())) return false;
 
-                // Weekend filter (0=Sunday, 6=Saturday)
+                // Weekend filter (0 = Sunday, 6 = Saturday)
                 const dayOfWeek = slotDate.getDay();
                 if (dayOfWeek === 0 || dayOfWeek === 6) return false;
 
@@ -174,18 +177,23 @@ export function BookingButton({
       setAvailableSlots(parsedSlotsMap);
     } catch (err: unknown) {
       if (err instanceof Error && err.name === "AbortError") {
-        console.warn("Richiesta slot interrotta o scaduta per timeout.");
-        setSlotsError("Tempo di caricamento scaduto. Riprova a ricaricare il calendario.");
-      } else {
-        console.error("Errore nel recupero degli slot:", err);
-        setSlotsError("Impossibile caricare le disponibilità in questo momento. Riprova più tardi.");
+        if (isTimeoutRef.current) {
+          console.warn("Richiesta slot scaduta per timeout.");
+          setSlotsError("Tempo di caricamento scaduto. Clicca su 'Ricarica' per riprovare.");
+        }
+        // If aborted by unmount or superseded request without timeout, do not set error
+        return;
       }
+
+      console.error("Errore nel recupero degli slot:", err);
+      setSlotsError("Impossibile caricare le disponibilità in questo momento. Riprova più tardi.");
     } finally {
       clearTimeout(timeoutId);
       setLoadingSlots(false);
     }
-  }, [today, maxDate]);
+  }, []);
 
+  // Fetch slots on modal open
   useEffect(() => {
     if (open) {
       fetchSlots();
@@ -193,7 +201,6 @@ export function BookingButton({
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
       }
-      // Reset temporary states on close if not completed
       if (!bookingSuccess) {
         setSelectedSlot(null);
         setBookingError(null);
@@ -209,7 +216,6 @@ export function BookingButton({
   const handleOpenChange = (isOpen: boolean) => {
     setOpen(isOpen);
     if (!isOpen) {
-      // If closing after success, reset everything
       if (bookingSuccess) {
         setBookingSuccess(false);
         setDate(undefined);
@@ -325,6 +331,8 @@ export function BookingButton({
 
   // Filter calendar days: disabled if past, >30 days, or weekend (Sat/Sun)
   const isDateDisabled = (d: Date) => {
+    const today = startOfDay(new Date());
+    const maxDate = addDays(today, 30);
     const dayStart = startOfDay(d);
     if (isBefore(dayStart, today)) return true;
     if (isAfter(dayStart, maxDate)) return true;
@@ -351,7 +359,7 @@ export function BookingButton({
             PRENOTA UNA CALL GRATUITA
           </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground mt-1">
-            Durata: <strong>30 minuti</strong> · Videocall individuale · Fuso orario: <strong>Europe/Rome</strong>
+            Durata: <strong>30 minuti</strong> · Videocall individuale · Fuso orario: <strong>{OFFICIAL_TIMEZONE}</strong>
           </DialogDescription>
         </DialogHeader>
 
@@ -400,8 +408,9 @@ export function BookingButton({
                   variant="outline"
                   size="sm"
                   onClick={fetchSlots}
-                  className="text-xs h-7 px-2"
+                  className="text-xs h-7 px-2 gap-1"
                 >
+                  <RefreshCw className="w-3 h-3" />
                   Ricarica
                 </Button>
               </div>
