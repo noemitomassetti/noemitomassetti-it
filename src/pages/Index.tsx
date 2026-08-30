@@ -267,6 +267,7 @@ const ContattiForm = () => {
         <input type="hidden" name="_url" value="https://www.noemitomassetti.it/" />
         <input type="hidden" name="_next" value="https://www.noemitomassetti.it/?contact=success" />
         <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1.5">
