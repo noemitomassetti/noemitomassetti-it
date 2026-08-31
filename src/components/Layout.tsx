@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Instagram, Linkedin, Facebook, Mail, Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BookingButton } from "@/components/BookingButton";
+import { openCookiePreferences } from "@/lib/consent";
 import { useState, useEffect } from "react";
 
 const mainLinks = [
@@ -220,10 +221,18 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
         {/* Copyright + legal */}
         <div className="border-t border-border/30 py-4 text-center text-sm md:text-xs text-muted-foreground space-y-2">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-4">
             <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <span className="opacity-30">|</span>
             <Link to="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
+            <span className="opacity-30">|</span>
+            <button
+              type="button"
+              onClick={openCookiePreferences}
+              className="hover:text-primary transition-colors cursor-pointer bg-transparent border-0 p-0 text-muted-foreground underline-offset-4 hover:underline"
+            >
+              Preferenze Cookie
+            </button>
           </div>
           <p>© {new Date().getFullYear()} Noemi Tomassetti — Virtual Assistant.<br />Tutti i diritti riservati.</p>
         </div>

@@ -1,5 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
+import { Button } from "@/components/ui/button";
+import { openCookiePreferences } from "@/lib/consent";
 
 const CookiePolicy = () => {
   useSEO({
@@ -91,21 +93,57 @@ const CookiePolicy = () => {
               </div>
 
               <div className="bg-card border border-border rounded-xl p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="bg-secondary text-secondary-foreground text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider">
-                    Analitici
-                  </span>
-                  <h3 className="font-semibold text-foreground">Cookie Analitici (con consenso)</h3>
+                <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                  <div className="flex items-center gap-3">
+                    <span className="bg-secondary text-secondary-foreground text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+                      Analitici
+                    </span>
+                    <h3 className="font-semibold text-foreground">Cookie Analitici (con consenso)</h3>
+                  </div>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={openCookiePreferences}
+                    className="text-xs h-8"
+                  >
+                    Modifica Preferenze Cookie
+                  </Button>
                 </div>
-                <p className="text-sm text-foreground/75">
-                  Questi cookie raccolgono informazioni aggregate e anonimizzate su come gli utenti
-                  utilizzano il sito (pagine visitate, tempo di permanenza, ecc.). I dati vengono
-                  utilizzati esclusivamente per migliorare le prestazioni del sito. Richiedono il
-                  consenso dell'utente. Attualmente questo sito{" "}
-                  <strong className="text-foreground/90">non utilizza cookie analitici di terze parti</strong>.
-                  In caso di futura integrazione (es. Google Analytics in modalità anonimizzata), la
-                  presente policy verrà aggiornata.
+                <p className="text-sm text-foreground/75 mb-3">
+                  Questi cookie raccolgono informazioni statistiche in forma aggregata e anonimizzata su come gli utenti
+                  interagiscono con il sito (es. visualizzazioni delle pagine, tempi di permanenza, frequenza di rimbalzo),
+                  senza trattare o memorizzare dati identificativi personali diretti (quali nomi, indirizzi email o numeri di telefono).
+                  Il sito adotta <strong className="text-foreground/90">Google Analytics 4</strong> (Measurement ID: <code className="font-mono text-xs bg-secondary/50 px-1 py-0.5 rounded">G-LQZF73ZS1S</code>) con
+                  anonimizzazione dell'indirizzo IP e supporto a <strong className="text-foreground/90">Google Consent Mode v2</strong>. Tali cookie vengono attivati
+                  esclusivamente previo consenso esplicito dell'utente, modificabile o revocabile in qualsiasi momento.
                 </p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs border-collapse">
+                    <thead>
+                      <tr className="bg-secondary/40">
+                        <th className="text-left p-2 border border-border/40 text-foreground/80">Nome</th>
+                        <th className="text-left p-2 border border-border/40 text-foreground/80">Fornitore</th>
+                        <th className="text-left p-2 border border-border/40 text-foreground/80">Finalità</th>
+                        <th className="text-left p-2 border border-border/40 text-foreground/80">Durata</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="p-2 border border-border/30 font-mono">_ga</td>
+                        <td className="p-2 border border-border/30">Google LLC (GA4)</td>
+                        <td className="p-2 border border-border/30">Distinzione anonima degli utenti</td>
+                        <td className="p-2 border border-border/30">2 anni</td>
+                      </tr>
+                      <tr className="bg-secondary/10">
+                        <td className="p-2 border border-border/30 font-mono">_ga_LQZF73ZS1S</td>
+                        <td className="p-2 border border-border/30">Google LLC (GA4)</td>
+                        <td className="p-2 border border-border/30">Mantenimento dello stato di sessione anonima</td>
+                        <td className="p-2 border border-border/30">2 anni</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <div className="bg-card border border-border rounded-xl p-6">

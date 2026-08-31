@@ -27,6 +27,35 @@
     <link rel="alternate" hrefLang="it" href="https://www.noemitomassetti.it/" />
     <link rel="alternate" hrefLang="x-default" href="https://www.noemitomassetti.it/" />
     <link rel="icon" type="image/png" href="https://vibe.filesafe.space/meta/1776423224485175331/favicon.png">
+
+    <!-- Google Consent Mode v2 & Google tag (gtag.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Verifica eventuale consenso memorizzato dall'utente nel browser
+      var savedConsent = null;
+      try {
+        savedConsent = localStorage.getItem('cookie_consent_v1');
+      } catch (e) {}
+
+      var initialAnalyticsConsent = savedConsent === 'granted' ? 'granted' : 'denied';
+
+      // Default: rifiuto preventivo di tutti i cookie non essenziali (GDPR / ePrivacy)
+      gtag('consent', 'default', {
+        'analytics_storage': initialAnalyticsConsent,
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-LQZF73ZS1S', {
+        anonymize_ip: true
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQZF73ZS1S"></script>
   </head>
 
 
