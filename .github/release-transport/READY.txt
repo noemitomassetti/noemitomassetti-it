@@ -1,0 +1,3 @@
+Release snapshot prepared from previously uploaded Google AI Studio export and audited local improvements.
+9 parts; sha256 xz: 5cf49cd543d58a44caa6df4e54d419b7e0eeec4f38ff1595c1b68da7a7128f31
+Public site must remain unchanged. Do NOT merge into main automatically.
