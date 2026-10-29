@@ -1,1 +1,3 @@
 Browser verification of 29 October release candidate. Do not deploy or merge.
+
+Rerun after responsive header fix (laptop/mobile breakpoints).
