@@ -1,0 +1,75 @@
+name: Browser smoke on isolated release branch
+on:
+  push:
+    branches:
+      - 'chatgpt/site-release-audit-2026-10-29'
+    paths:
+      - '.github/QA_BROWSER_TRIGGER.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies and browser driver
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+      - name: Build production bundle
+        run: npm run build
+      - name: Start production preview
+        shell: bash
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/site-preview.log 2>&1 &
+          echo $! > /tmp/site-preview.pid
+          for i in $(seq 1 35); do
+            if curl -fsS http://127.0.0.1:4173/ > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fIs http://127.0.0.1:4173/ | head
+      - name: Test actual browser and take screenshots
+        shell: bash
+        run: |
+          mkdir -p /tmp/noemi-smoke
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({channel: 'chrome', headless: true, args: ['--no-sandbox']});
+            try {
+              const page = await browser.newPage({viewport:{width:1365,height:920}});
+              const errors = [];
+              page.on('pageerror',e=>errors.push(e.message));
+              const routes = ['/', '/it', '/fr', '/es', '/it/contatti', '/it/esempi-di-lavoro', '/en-not-a-page'];
+              for (const path of routes) {
+                const resp = await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle',timeout:20000});
+                if(!resp || resp.status()!==200) throw new Error('Route '+path+' HTTP '+resp?.status());
+                const text = await page.locator('body').innerText();
+                if (text.length < 150) throw new Error('Too little rendered text for '+path+': '+text.length);
+                const safe = path.replace(/[^a-z0-9]/gi,'_')||'home';
+                await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
+                console.log('PASS route '+path+' content chars='+text.length+' title='+await page.title());
+              }
+              for (const path of ['/portfolio-documenti/doc-01-localizzazione-interior-design.html','/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html']) {
+                const response = await page.request.get('http://127.0.0.1:4173'+path);
+                const text = await response.text();
+                if(!response.ok() || text.length<1000 || !text.includes('<html')) throw new Error('Document not reachable: '+path);
+                console.log('PASS HTML portfolio document '+path);
+              }
+              if(errors.length) throw new Error('Browser JS exceptions: '+errors.slice(0,5).join(' | '));
+            } finally { await browser.close(); }
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: noemi-site-browser-smoke
+          path: /tmp/noemi-smoke/*.png
+          if-no-files-found: ignore
