@@ -1,201 +1,388 @@
+import { useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
+import {
+  Language,
+  getLanguageFromPath,
+  getLocalizedPath,
+  getHreflangAlternates,
+} from "@/lib/i18n";
 
-const PrivacyPolicy = () => {
-  useSEO({
-    title: "Privacy Policy | Noemi Tomassetti Assistente Virtuale",
-    description: "Informativa sulla privacy di Noemi Tomassetti, Assistente Virtuale. Scopri come vengono raccolti e trattati i tuoi dati personali in conformità al GDPR.",
-    canonical: "https://www.noemitomassetti.it/privacy-policy",
-    noindex: true,
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+const LEGAL_CONTENT = {
+  it: {
+    title: "Informativa sulla Privacy",
+    seoTitle: "Privacy Policy | Noemi Tomassetti Assistente Virtuale",
+    seoDesc: "Informativa sulla privacy ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR). Scopri come vengono trattati i tuoi dati personali.",
+    subtitle: "Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) — Ultimo aggiornamento: Settembre 2026",
+    sections: {
+      ownerTitle: "1. Titolare del Trattamento",
+      ownerRole: "Virtual Assistant / Translator — Libera professionista",
+      vatLabel: "P. IVA 03050740426",
+      headquarters: "Castelfidardo (AN), Marche, Italia",
+      dataTypesTitle: "2. Tipologie di Dati Raccolti",
+      dataTypesIntro: "Attraverso il modulo di contatto possono essere raccolti i seguenti dati personali:",
+      dataTypes: [
+        "Nome e cognome",
+        "Indirizzo email professionale o personale",
+        "Attività o denominazione dello studio/azienda",
+        "Dettagli operativi e testo del messaggio inviato spontaneamente",
+        "Eventuale scadenza desiderata indicata nella richiesta",
+        "Dati tecnici di navigazione (indirizzo IP, browser, orario), che possono costituire dati personali",
+      ],
+      purposesTitle: "3. Finalità e Base Giuridica del Trattamento",
+      purposes: [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.noemitomassetti.it/"
+          title: "Risposta alle richieste di contatto",
+          desc: "Gestire e riscontrare le comunicazioni inviate tramite i moduli. Base giuridica: misure precontrattuali o legittimo interesse (art. 6, par. 1, lett. b/f GDPR).",
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Privacy Policy",
-          "item": "https://www.noemitomassetti.it/privacy-policy"
-        }
-      ]
-    }
+          title: "Preparazione di preventivi scritti",
+          desc: "Preparare stime e preventivi su richiesta. Base giuridica: misure precontrattuali richieste dall’interessato.",
+        },
+        {
+          title: "Adempimenti amministrativi e contabili",
+          desc: "Emissione di preventivi, fatture e tenuta registri contabili. Base giuridica: obbligo legale (art. 6, par. 1, lett. c GDPR).",
+        },
+      ],
+      retentionTitle: "4. Conservazione dei Dati",
+      retentionText: "I dati ricevuti tramite richieste di informazioni sono conservati per il tempo strettamente necessario a fornire riscontro (massimo 24 mesi). In caso di instaurazione di un rapporto contrattuale continuativo o a pacchetto, i dati contabili e le comunicazioni operative correlate sono conservati per 10 anni in conformità agli obblighi fiscali e civilistici italiani.",
+      disclosureTitle: "5. Riservatezza e Comunicazione dei Dati",
+      disclosureText: "I dati personali non vengono ceduti, venduti o diffusi a terzi per scopi di marketing. Per gestire le richieste possono intervenire fornitori di hosting, il servizio di inoltro moduli FormSubmit (se attivo), fornitori email e, ove necessario, il commercialista, secondo ruoli e accordi applicabili. Le configurazioni e i trasferimenti di dati devono essere verificati prima della pubblicazione.",
+      rightsTitle: "6. Diritti dell'Interessato",
+      rightsIntro: "In ogni momento, l'interessato può esercitare i diritti garantiti dagli artt. 15-22 del GDPR:",
+      rightsList: [
+        { right: "Accesso", desc: "Verificare se sia in corso un trattamento di propri dati e riceverne copia." },
+        { right: "Rettifica", desc: "Aggiornare o correggere dati inesatti o incompleti." },
+        { right: "Cancellazione", desc: "Richiedere la cancellazione dei dati ('diritto all'oblio') quando applicabile." },
+        { right: "Limitazione", desc: "Limitare temporaneamente il trattamento in presenza di contestazioni." },
+        { right: "Portabilità", desc: "Ricevere i dati forniti in formato strutturato e interoperabile." },
+        { right: "Reclamo", desc: "Proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali (www.garanteprivacy.it)." },
+      ],
+      contactEmailPrefix: "Per qualsiasi richiesta o per esercitare i tuoi diritti, puoi scrivere direttamente a:",
+      securityTitle: "7. Sicurezza dei Dati e Segretezza Professionale",
+      securityText: "Sono adottate misure di sicurezza proporzionate ai servizi effettivamente utilizzati. Le modalità di cifratura, accesso e conservazione dipendono dai singoli fornitori e vanno documentate e verificate.",
+      cookieLinkText: "Per informazioni sull'utilizzo dei cookie tecnici e analitici, consulta la",
+    },
+  },
+  en: {
+    title: "Privacy Policy",
+    seoTitle: "Privacy Policy | Noemi Tomassetti Virtual Assistant",
+    seoDesc: "Privacy policy pursuant to Art. 13 of EU Regulation 2016/679 (GDPR). Discover how your personal data is collected and protected.",
+    subtitle: "Pursuant to Art. 13 of EU Regulation 2016/679 (GDPR) — Last updated: September 2026",
+    sections: {
+      ownerTitle: "1. Data Controller",
+      ownerRole: "Virtual Assistant & Specialist Translator — Sole Proprietor",
+      vatLabel: "Italian VAT No. 03050740426",
+      headquarters: "Castelfidardo (AN), Marche, Italy",
+      dataTypesTitle: "2. Categories of Data Collected",
+      dataTypesIntro: "Through the contact form on this website, the following personal data may be collected:",
+      dataTypes: [
+        "First and last name",
+        "Professional or personal email address",
+        "Business / organisation name",
+        "Project description and details voluntarily shared in the message",
+        "Optional desired project deadline",
+        "Standard technical navigation metadata (IP address, browser type, timestamp)",
+      ],
+      purposesTitle: "3. Purposes and Legal Bases for Processing",
+      purposes: [
+        {
+          title: "Handling inquiries and messages",
+          desc: "Responding to requests submitted via contact forms. Legal basis: pre-contractual measures or legitimate interest (Art. 6(1)(b)/(f) GDPR).",
+        },
+        {
+          title: "Preparing written quotes",
+          desc: "Preparing project estimates or quotes at your request. Legal basis: pre-contractual steps requested by you.",
+        },
+        {
+          title: "Statutory, accounting, and tax compliance",
+          desc: "Invoicing and tax documentation. Legal basis: statutory legal obligation (Art. 6(1)(c) GDPR).",
+        },
+      ],
+      retentionTitle: "4. Data Retention",
+      retentionText: "Contact inquiry data is retained strictly for the duration necessary to answer and follow up (maximum 24 months). Where a contractual service agreement is established, accounting records and operational correspondence are retained for 10 years in compliance with statutory Italian tax and civil law obligations.",
+      disclosureTitle: "5. Confidentiality & Data Sharing",
+      disclosureText: "Personal data is never sold, leased, or distributed to third parties for advertising or commercial purposes. Data may be processed by website hosting, the FormSubmit inquiry forwarding service (if enabled), email providers and our accountant where applicable, subject to the relevant roles and agreements. Providers and data transfers must be verified before publication.",
+      rightsTitle: "6. Rights of the Data Subject",
+      rightsIntro: "Under Articles 15–22 of the GDPR, you have the right to:",
+      rightsList: [
+        { right: "Access", desc: "Obtain confirmation and a copy of your personal data being processed." },
+        { right: "Rectification", desc: "Request correction of inaccurate or incomplete information." },
+        { right: "Erasure", desc: "Request deletion of your data ('right to be forgotten') where legally applicable." },
+        { right: "Restriction", desc: "Request temporary limitation of processing in certain circumstances." },
+        { right: "Portability", desc: "Receive your personal data in a structured, machine-readable format." },
+        { right: "Lodge a Complaint", desc: "File a complaint with the competent supervisory authority (Garante Privacy in Italy or your local EU authority)." },
+      ],
+      contactEmailPrefix: "To exercise your rights or ask questions, please contact:",
+      securityTitle: "7. Data Security & Professional Discretion",
+      securityText: "Technical and organisational safeguards depend on the systems and providers in use. Encryption, authentication and storage arrangements must be documented and verified for each relevant service.",
+      cookieLinkText: "For details regarding cookies and tracking preferences, please view the",
+    },
+  },
+  fr: {
+    title: "Politique de Confidentialité",
+    seoTitle: "Politique de Confidentialité | Noemi Tomassetti Assistante Virtuelle",
+    seoDesc: "Politique de confidentialité conformément à l'art. 13 du Règlement UE 2016/679 (RGPD). Découvrez la protection de vos données.",
+    subtitle: "Conformément à l'art. 13 du Règlement UE 2016/679 (RGPD) — Dernière mise à jour : Septembre 2026",
+    sections: {
+      ownerTitle: "1. Responsable du Traitement",
+      ownerRole: "Assistante Virtuelle & Traductrice Spécialisée — Professionnelle Indépendante",
+      vatLabel: "N° de TVA italienne 03050740426",
+      headquarters: "Castelfidardo (AN), Marches, Italie",
+      dataTypesTitle: "2. Données Personnelles Collectées",
+      dataTypesIntro: "Par le biais des formulaires de contact et de réservation présents sur ce site, les données suivantes peuvent être traitées :",
+      dataTypes: [
+        "Nom et prénom",
+        "Adresse électronique professionnelle ou personnelle",
+        "Activité ou dénomination de votre entreprise / cabinet",
+        "Détails opérationnels et message transmis spontanément",
+        "Date et heure convenues pour l'entretien découverte",
+        "Données techniques de connexion anonymisées (adresse IP, navigateur, horodatage)",
+      ],
+      purposesTitle: "3. Finalités et Bases Légales du Traitement",
+      purposes: [
+        {
+          title: "Gestion des demandes et messages",
+          desc: "Répondre aux questions formulées via les formulaires. Base légale : mesures précontractuelles (art. 6, par. 1, point b RGPD).",
+        },
+        {
+          title: "Préparation de devis écrits",
+          desc: "Préparer les devis demandés. Base légale : mesures précontractuelles à votre demande.",
+        },
+        {
+          title: "Obligations comptables et fiscales",
+          desc: "Établissement des factures et déclarations légales. Base légale : obligation légale (art. 6, par. 1, point c RGPD).",
+        },
+      ],
+      retentionTitle: "4. Durée de Conservation des Données",
+      retentionText: "Les données de contact sont conservées pendant la durée strictement nécessaire au suivi (maximum 24 mois). En cas de collaboration contractuelle, les pièces comptables et justificatives sont conservées pendant 10 ans conformément au droit fiscal et commercial italien.",
+      disclosureTitle: "5. Confidentialité et Transmission des Données",
+      disclosureText: "Vos données ne sont ni vendues, ni louées, ni cédées à des tiers à des fins commerciales. Elles peuvent être traitées par l’hébergeur, le service de transfert de formulaires FormSubmit (si activé), les prestataires de messagerie et le comptable, selon leurs rôles et accords. Les fournisseurs et transferts doivent être vérifiés avant publication.",
+      rightsTitle: "6. Vos Droits (RGPD)",
+      rightsIntro: "Conformément aux articles 15 à 22 du RGPD, vous disposez des droits suivants :",
+      rightsList: [
+        { right: "Accès", desc: "Obtenir confirmation et copie de vos données personnelles détenues." },
+        { right: "Rectification", desc: "Corriger ou compléter des données inexactes." },
+        { right: "Effacement", desc: "Demander la suppression de vos données ('droit à l'oubli')." },
+        { right: "Limitation", desc: "Geler temporairement le traitement de vos données." },
+        { right: "Portabilité", desc: "Recevoir vos données dans un format structuré et lisible par machine." },
+        { right: "Réclamation", desc: "Introduire une réclamation auprès de la CNIL ou de l'autorité italienne (Garante Privacy)." },
+      ],
+      contactEmailPrefix: "Pour exercer vos droits ou pour toute question, écrivez à :",
+      securityTitle: "7. Sécurité et Discrétion Professionnelle",
+      securityText: "Des mesures adaptées sont mises en œuvre selon les outils et prestataires utilisés. Le chiffrement, les accès et la conservation doivent être vérifiés et documentés.",
+      cookieLinkText: "Pour connaître notre gestion des traceurs, veuillez consulter notre",
+    },
+  },
+  es: {
+    title: "Política de Privacidad",
+    seoTitle: "Política de Privacidad | Noemi Tomassetti Asistente Virtual",
+    seoDesc: "Información sobre protección de datos conforme al art. 13 del Reglamento UE 2016/679 (RGPD). Conoce cómo cuidamos tus datos.",
+    subtitle: "Conforme al art. 13 del Reglamento UE 2016/679 (RGPD) — Última actualización: Septiembre de 2026",
+    sections: {
+      ownerTitle: "1. Responsable del Tratamiento",
+      ownerRole: "Asistente Virtual & Traductora Especializada — Profesional Autónoma",
+      vatLabel: "NIF-IVA italiano 03050740426",
+      headquarters: "Castelfidardo (AN), Marcas, Italia",
+      dataTypesTitle: "2. Datos Personales Recogidos",
+      dataTypesIntro: "A través del formulario de contacto y del sistema de reservas de este sitio web, se pueden recopilar los siguientes datos:",
+      dataTypes: [
+        "Nombre y apellidos",
+        "Correo electrónico profesional o personal",
+        "Actividad, estudio o empresa",
+        "Descripción del proyecto o necesidades expresadas en el mensaje",
+        "Fecha y hora seleccionadas para la llamada de descubrimiento",
+        "Datos técnicos de navegación anónimos (dirección IP, navegador, registro de acceso)",
+      ],
+      purposesTitle: "3. Finalidades y Base Jurídica del Tratamiento",
+      purposes: [
+        {
+          title: "Atención de consultas y mensajes",
+          desc: "Responder a las peticiones recibidas por los formularios. Base jurídica: medidas precontractuales o interés legítimo (art. 6, ap. 1, letras b/f RGPD).",
+        },
+        {
+          title: "Preparación de presupuestos por escrito",
+          desc: "Preparar presupuestos a petición del interesado. Base jurídica: medidas precontractuales solicitadas.",
+        },
+        {
+          title: "Obligaciones contables y fiscales",
+          desc: "Emisión de presupuestos, facturas y libros de cuentas. Base jurídica: obligación legal (art. 6, ap. 1, letra c RGPD).",
+        },
+      ],
+      retentionTitle: "4. Conservación de los Datos",
+      retentionText: "Los datos de contacto se conservan durante el tiempo estrictamente necesario para su tramitación (máximo 24 meses). En caso de contratación de servicios, la documentación contable y fiscal se conserva durante 10 años en cumplimiento de la normativa italiana aplicable.",
+      disclosureTitle: "5. Confidencialidad y Comunicación de Datos",
+      disclosureText: "Los datos personales no se ceden, venden ni comparten con terceros para fines comerciales. Podrán intervenir el proveedor de alojamiento web, el servicio FormSubmit (si está activo), los proveedores de correo y la asesoría fiscal, según sus funciones y contratos. Es necesario verificar proveedores y transferencias antes de publicar.",
+      rightsTitle: "6. Derechos del Interesado",
+      rightsIntro: "Conforme a los artículos 15 a 22 del RGPD, puedes ejercer en todo momento los siguientes derechos:",
+      rightsList: [
+        { right: "Acceso", desc: "Obtener confirmación y copia de tus datos personales tratados." },
+        { right: "Rectificación", desc: "Solicitar la corrección de datos inexactos o incompletos." },
+        { right: "Supresión", desc: "Pedir la eliminación de tus datos ('derecho al olvido') cuando proceda." },
+        { right: "Limitación", desc: "Solicitar la suspensión cautelar del tratamiento en determinados supuestos." },
+        { right: "Portabilidad", desc: "Recibir tus datos en un formato estructurado y legible por ordenador." },
+        { right: "Reclamación", desc: "Presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) o la autoridad italiana (Garante Privacy)." },
+      ],
+      contactEmailPrefix: "Para cualquier consulta o para ejercer tus derechos, puedes dirigirte a:",
+      securityTitle: "7. Seguridad de los Datos y Sigilo Profesional",
+      securityText: "Se aplican medidas adecuadas a las herramientas y proveedores utilizados. El cifrado, el control de acceso y la conservación deben verificarse y documentarse.",
+      cookieLinkText: "Para más información sobre el uso de cookies y preferencias, consulta nuestra",
+    },
+  },
+};
+
+export default function PrivacyPolicy() {
+  const location = useLocation();
+  const lang: Language = getLanguageFromPath(location.pathname);
+  const t = LEGAL_CONTENT[lang] || LEGAL_CONTENT.en;
+  const canonicalUrl = `https://www.noemitomassetti.it${getLocalizedPath("privacy", lang)}`;
+  const cookiePath = getLocalizedPath("cookie", lang);
+
+  useSEO({
+    title: t.seoTitle,
+    description: t.seoDesc,
+    canonical: canonicalUrl,
+    alternates: getHreflangAlternates("privacy"),
+    ogType: "website",
   });
 
   return (
-    <Layout>
-      <div className="container py-16 md:py-24 max-w-4xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">Informativa sulla Privacy</h1>
+    <Layout lang={lang}>
+      <div className="container py-16 md:py-24 max-w-4xl px-4 sm:px-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight">
+          {t.title}
+        </h1>
         <p className="text-foreground/60 text-sm mb-12">
-          Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) — Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT", { year: "numeric", month: "long" })}
+          {t.subtitle}
         </p>
 
         <div className="space-y-12 text-foreground/85 leading-relaxed">
-
+          {/* Section 1: Controller */}
           <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">1. Titolare del Trattamento</h2>
-            <div className="bg-card border border-border rounded-xl p-6 space-y-1 text-sm">
-              <p><strong className="text-primary">Titolare:</strong> Noemi Tomassetti</p>
-              <p><strong className="text-primary">Attività:</strong> Virtual Assistant / Translator — Professionista autonoma</p>
-              <p><strong className="text-primary">Email:</strong>{" "}
-                <a href="mailto:info@noemitomassetti.it" className="text-primary hover:underline">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              {t.sections.ownerTitle}
+            </h2>
+            <div className="bg-card border border-border rounded-xl p-6 space-y-1.5 text-sm shadow-sm">
+              <p>
+                <strong className="text-primary">Titolare / Controller:</strong> Noemi Tomassetti
+              </p>
+              <p>
+                <strong className="text-primary">Attività / Role:</strong> {t.sections.ownerRole}
+              </p>
+              <p>
+                <strong className="text-primary">Identità Fiscale:</strong> {t.sections.vatLabel}
+              </p>
+              <p>
+                <strong className="text-primary">Email:</strong>{" "}
+                <a href="mailto:info@noemitomassetti.it" className="text-primary hover:underline font-medium">
                   info@noemitomassetti.it
                 </a>
               </p>
-              <p><strong className="text-primary">Sede operativa:</strong> Italia (lavoro da remoto)</p>
+              <p>
+                <strong className="text-primary">Sede / Location:</strong> {t.sections.headquarters}
+              </p>
             </div>
           </section>
 
+          {/* Section 2: Data Types */}
           <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">2. Tipologie di Dati Raccolti</h2>
-            <p className="mb-4">Attraverso il modulo di contatto presente su questo sito, vengono raccolti i seguenti dati personali:</p>
-            <ul className="space-y-2 pl-4">
-              {[
-                "Nome e cognome",
-                "Indirizzo email",
-                "Numero di telefono (facoltativo)",
-                "Contenuto del messaggio inviato",
-                "Dati di navigazione tecnici (indirizzo IP, browser, sistema operativo) raccolti automaticamente dal server di hosting",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              {t.sections.dataTypesTitle}
+            </h2>
+            <p className="mb-4 text-sm text-foreground/80">
+              {t.sections.dataTypesIntro}
+            </p>
+            <ul className="space-y-2 pl-2">
+              {t.sections.dataTypes.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-2.5 text-sm">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </section>
 
+          {/* Section 3: Purposes */}
           <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">3. Finalità e Base Giuridica del Trattamento</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              {t.sections.purposesTitle}
+            </h2>
             <div className="space-y-4">
-              {[
-                {
-                  title: "Risposta alle richieste di contatto",
-                  desc: "Gestire le richieste inviate tramite il modulo di contatto. Base giuridica: consenso esplicito dell'interessato (art. 6, par. 1, lett. a GDPR).",
-                },
-                {
-                  title: "Valutazione di collaborazione professionale",
-                  desc: "Organizzare e gestire le call conoscitive e le eventuali collaborazioni. Base giuridica: esecuzione di misure precontrattuali (art. 6, par. 1, lett. b GDPR).",
-                },
-                {
-                  title: "Adempimenti di legge",
-                  desc: "Conservazione di dati necessari per obblighi fiscali e amministrativi. Base giuridica: obbligo legale (art. 6, par. 1, lett. c GDPR).",
-                },
-              ].map((item) => (
-                <div key={item.title} className="bg-secondary/20 border border-border/50 rounded-lg p-4">
-                  <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-sm text-foreground/75">{item.desc}</p>
+              {t.sections.purposes.map((p, idx) => (
+                <div key={idx} className="bg-secondary/20 border border-border/50 rounded-xl p-5">
+                  <h3 className="font-bold text-foreground mb-1 text-base">{p.title}</h3>
+                  <p className="text-sm text-foreground/75 leading-relaxed">{p.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
+          {/* Section 4: Retention */}
           <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">4. Conservazione dei Dati</h2>
-            <p>
-              I dati raccolti tramite il modulo di contatto saranno conservati per un periodo non superiore a{" "}
-              <strong className="text-primary">24 mesi</strong> dalla data di ricezione, salvo diversi obblighi di
-              legge o necessità legate a rapporti contrattuali in corso. I dati relativi a collaborazioni attive
-              saranno conservati per il tempo necessario all'esecuzione del contratto e per i successivi{" "}
-              <strong className="text-primary">10 anni</strong> per obblighi fiscali e contabili.
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              {t.sections.retentionTitle}
+            </h2>
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              {t.sections.retentionText}
             </p>
           </section>
 
+          {/* Section 5: Disclosure */}
           <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">5. Comunicazione e Diffusione dei Dati</h2>
-            <p className="mb-4">
-              I dati personali non saranno ceduti a terzi a fini commerciali. Potranno essere comunicati
-              esclusivamente a:
-            </p>
-            <ul className="space-y-2 pl-4">
-              {[
-                "Fornitori di servizi tecnici (es. hosting, strumenti di comunicazione) nominati responsabili del trattamento ai sensi dell'art. 28 GDPR",
-                "Professionisti (commercialisti, consulenti legali) per adempimenti di legge",
-                "Autorità pubbliche, su richiesta e nei casi previsti dalla legge",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">6. Trasferimento di Dati Extra-UE</h2>
-            <p>
-              Qualora vengano utilizzati strumenti di terze parti (es. servizi email, cloud) che comportino
-              un trasferimento di dati al di fuori dello Spazio Economico Europeo, tale trasferimento avviene
-              nel rispetto delle garanzie previste dagli artt. 44-49 del GDPR (es. Decisioni di adeguatezza,
-              Clausole Contrattuali Standard).
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              {t.sections.disclosureTitle}
+            </h2>
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              {t.sections.disclosureText}
             </p>
           </section>
 
+          {/* Section 6: Rights */}
           <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">7. Diritti dell'Interessato</h2>
-            <p className="mb-4">
-              Ai sensi degli artt. 15-22 del GDPR, l'interessato ha il diritto di:
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              {t.sections.rightsTitle}
+            </h2>
+            <p className="mb-4 text-sm text-foreground/80">
+              {t.sections.rightsIntro}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {[
-                { right: "Accesso", desc: "Ottenere conferma dell'esistenza dei propri dati e riceverne copia" },
-                { right: "Rettifica", desc: "Richiedere la correzione di dati inesatti o incompleti" },
-                { right: "Cancellazione", desc: "Chiedere la cancellazione dei propri dati (diritto all'oblio)" },
-                { right: "Limitazione", desc: "Richiedere la limitazione del trattamento in determinate circostanze" },
-                { right: "Portabilità", desc: "Ricevere i propri dati in formato strutturato e leggibile da macchina" },
-                { right: "Opposizione", desc: "Opporsi al trattamento in qualsiasi momento, anche per marketing" },
-                { right: "Revoca del consenso", desc: "Revocare il consenso senza che ciò pregiudichi la liceità del trattamento pregresso" },
-                { right: "Reclamo", desc: "Presentare reclamo al Garante per la Protezione dei Dati Personali (www.garanteprivacy.it)" },
-              ].map((item) => (
-                <div key={item.right} className="bg-card border border-border rounded-lg p-3">
-                  <p className="font-semibold text-primary text-sm">{item.right}</p>
-                  <p className="text-xs text-foreground/70 mt-0.5">{item.desc}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {t.sections.rightsList.map((item, idx) => (
+                <div key={idx} className="bg-card border border-border rounded-xl p-4 shadow-sm">
+                  <p className="font-bold text-primary text-sm">{item.right}</p>
+                  <p className="text-xs text-foreground/75 mt-1 leading-normal">{item.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-sm">
-              Per esercitare i tuoi diritti, scrivi a:{" "}
-              <a href="mailto:info@noemitomassetti.it" className="text-primary hover:underline font-medium">
+            <p className="mt-5 text-sm">
+              {t.sections.contactEmailPrefix}{" "}
+              <a href="mailto:info@noemitomassetti.it" className="text-primary hover:underline font-bold">
                 info@noemitomassetti.it
               </a>
             </p>
           </section>
 
+          {/* Section 7: Security */}
           <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">8. Sicurezza dei Dati</h2>
-            <p>
-              Il Titolare adotta misure tecniche e organizzative adeguate per proteggere i dati personali da
-              accessi non autorizzati, perdita, distruzione o divulgazione, in conformità all'art. 32 del GDPR.
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              {t.sections.securityTitle}
+            </h2>
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              {t.sections.securityText}
             </p>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-semibold text-foreground mb-4">9. Cookie</h2>
-            <p>
-              Per informazioni sull'utilizzo dei cookie su questo sito, consulta la nostra{" "}
-              <a href="/cookie-policy" className="text-primary hover:underline font-medium">
+          {/* Cookie Notice */}
+          <section className="bg-muted/30 border border-border rounded-xl p-6">
+            <p className="text-sm text-foreground/80">
+              {t.sections.cookieLinkText}{" "}
+              <a href={cookiePath} className="text-primary font-bold hover:underline">
                 Cookie Policy
-              </a>.
-            </p>
-          </section>
-
-          <section className="bg-secondary/20 border border-border rounded-xl p-6">
-            <h2 className="text-xl font-semibold text-foreground mb-2">Modifiche alla presente informativa</h2>
-            <p className="text-sm text-foreground/75">
-              Il Titolare si riserva il diritto di aggiornare la presente Informativa in qualsiasi momento.
-              Le modifiche saranno pubblicate su questa pagina con indicazione della data di aggiornamento.
-              Si invita a consultare periodicamente questa pagina.
+              </a>
+              .
             </p>
           </section>
         </div>
       </div>
     </Layout>
   );
-};
-
-export default PrivacyPolicy;
+}

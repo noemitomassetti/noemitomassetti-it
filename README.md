@@ -30,7 +30,7 @@ Built with React 18, TypeScript, Vite, Tailwind CSS, Radix UI (shadcn/ui), and o
 
 This website serves as a high-converting lead generation platform for Noemi Tomassetti, offering Virtual Assistant, Executive Support, Multilingual Back-Office (Italian, English, French, Spanish), Course Support, and Content Translation services to Italian solopreneurs, consultants, course creators, and small businesses.
 
-Primary Conversion Goal: Drive qualified leads to schedule a free 30-minute introductory videocall or submit a project inquiry through GDPR-compliant forms.
+Primary Conversion Goal: Receive written, non-binding enquiries for professional services; any price estimate is subject to individual review and approval.
 
 ---
 

@@ -1,61 +1,62 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" as="image" href="/noemi-tomassetti.png" />
-    <title>Noemi Tomassetti | Assistente Virtuale per Professionisti</title>
-    <meta name="description" content="Assistente Virtuale per liberi professionisti e piccole aziende. Delega la gestione operativa, email e appuntamenti per riprendere il controllo del tuo tempo.">
+    <title>Noemi Tomassetti | Digital, Multilingual & Operational Support</title>
+    <meta name="description" content="Digital, Multilingual & Operational Support for professionals and businesses. Discover Done-For-You operational services and NoeTom, the AI operations assistant.">
     <meta name="robots" content="index, follow" />
+    <script>
+      (function() {
+        var host = window.location.hostname;
+        var isProd = host === 'www.noemitomassetti.it' || host === 'noemitomassetti.it';
+        if (!isProd) {
+          var metaRobots = document.querySelector('meta[name="robots"]');
+          if (metaRobots) {
+            metaRobots.setAttribute('content', 'noindex, nofollow');
+          }
+        }
+      })();
+    </script>
     <meta name="keywords" content="assistente virtuale, virtual assistant, gestione appuntamenti, organizzazione corsi, traduzioni, servizi multilingue, presenza online, professionisti, solopreneur, gestione email, delegare lavoro" />
     <meta name="author" content="Noemi Tomassetti" />
 
     <meta property="og:locale" content="it_IT" />
     <meta name="geo.region" content="IT-AN" />
     <meta name="geo.placename" content="Castelfidardo" />
-    <meta property="og:title" content="Noemi Tomassetti | Assistente Virtuale per Professionisti">
-    <meta property="og:description" content="Assistente Virtuale per liberi professionisti e piccole aziende. Delega la gestione operativa, email e appuntamenti per riprendere il controllo del tuo tempo.">
+    <meta property="og:title" content="Noemi Tomassetti | Digital, Multilingual & Operational Support">
+    <meta property="og:description" content="Digital, Multilingual & Operational Support for professionals and businesses. Discover Done-For-You operational services and NoeTom, the AI operations assistant.">
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.noemitomassetti.it/noemi-tomassetti.png">
     <meta property="og:url" content="https://www.noemitomassetti.it/" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Noemi Tomassetti | Assistente Virtuale per Professionisti">
-    <meta name="twitter:description" content="Assistente Virtuale per liberi professionisti e piccole aziende. Delega la gestione operativa, email e appuntamenti per riprendere il controllo del tuo tempo.">
+    <meta name="twitter:title" content="Noemi Tomassetti | Digital, Multilingual & Operational Support">
+    <meta name="twitter:description" content="Digital, Multilingual & Operational Support for professionals and businesses. Discover Done-For-You operational services and NoeTom, the AI operations assistant.">
     <meta name="twitter:image" content="https://www.noemitomassetti.it/noemi-tomassetti.png">
     <link rel="canonical" href="https://www.noemitomassetti.it/" />
-    <link rel="alternate" hrefLang="it" href="https://www.noemitomassetti.it/" />
+    <link rel="alternate" hrefLang="it" href="https://www.noemitomassetti.it/it" />
+    <link rel="alternate" hrefLang="en" href="https://www.noemitomassetti.it/" />
+    <link rel="alternate" hrefLang="fr" href="https://www.noemitomassetti.it/fr" />
+    <link rel="alternate" hrefLang="es" href="https://www.noemitomassetti.it/es" />
     <link rel="alternate" hrefLang="x-default" href="https://www.noemitomassetti.it/" />
-    <link rel="icon" type="image/png" href="https://vibe.filesafe.space/meta/1776423224485175331/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.svg">
 
-    <!-- Google Consent Mode v2 & Google tag (gtag.js) -->
+    <!-- Google Consent Mode v2 stub (nessun cookie né script esterno caricato prima del consenso esplicito) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
 
-      // Verifica eventuale consenso memorizzato dall'utente nel browser
-      var savedConsent = null;
-      try {
-        savedConsent = localStorage.getItem('cookie_consent_v1');
-      } catch (e) {}
-
-      var initialAnalyticsConsent = savedConsent === 'granted' ? 'granted' : 'denied';
-
-      // Default: rifiuto preventivo di tutti i cookie non essenziali (GDPR / ePrivacy)
+      // Default: blocco preventivo di tutti i cookie non essenziali (GDPR / ePrivacy)
       gtag('consent', 'default', {
-        'analytics_storage': initialAnalyticsConsent,
+        'analytics_storage': 'denied',
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
         'wait_for_update': 500
       });
-
-      gtag('js', new Date());
-      gtag('config', 'G-LQZF73ZS1S', {
-        anonymize_ip: true
-      });
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQZF73ZS1S"></script>
   </head>
 
 

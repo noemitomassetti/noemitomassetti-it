@@ -211,9 +211,9 @@ const Risorse = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-secondary/30 p-4 rounded-lg border border-border/50">
               <p className="text-base font-medium flex items-start sm:items-center gap-2">
                 <span>👉</span>
-                <span>Puoi richiederle durante la call conoscitiva.</span>
+                <span>Puoi richiederle nel messaggio di contatto.</span>
               </p>
-              <BookingButton size="sm" aria-label="Prenota Call Conoscitiva Gratuita" className="shrink-0 font-bold uppercase tracking-wider">
+              <BookingButton size="sm" aria-label="Richiedi un preventivo scritto" className="shrink-0 font-bold uppercase tracking-wider">
                 PRENOTA CALL GRATUITA
               </BookingButton>
             </div>
