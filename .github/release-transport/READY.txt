@@ -3,3 +3,5 @@ Release snapshot prepared from previously uploaded Google AI Studio export and a
 Public site must remain unchanged. Do NOT merge into main automatically.
 
 Retry after correcting six TypeScript errors identified by GitHub Actions.
+
+Retry after resolving unit test failures and assistant FAQ collisions.
