@@ -1,7 +1,0 @@
-Browser verification of 29 October release candidate. Do not deploy or merge.
-
-Rerun after responsive header fix (laptop/mobile breakpoints).
-
-Check 390/768/1365/1536 breakpoints and visible header links.
-
-Fix responsive tablet overflow: language and quote buttons hidden below 1280px.
