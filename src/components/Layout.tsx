@@ -186,7 +186,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-sm">
+          <nav className="hidden 2xl:flex items-center gap-4 text-sm">
             {navLinks.map((item) => {
               if (item.isPage) {
                 return (
@@ -220,7 +220,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
           {/* Header Right Actions */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Social Icons (Desktop) */}
-            <div className="hidden xl:flex items-center gap-1">
+            <div className="hidden 2xl:flex items-center gap-1">
               <Button
                 variant="ghost"
                 size="icon"
@@ -269,7 +269,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
             </div>
 
             {/* Compact Language Selector: EN | IT | FR | ES */}
-            <div className="flex items-center text-xs font-semibold tracking-wider text-muted-foreground px-1">
+            <div className="hidden sm:flex items-center text-xs font-semibold tracking-wider text-muted-foreground px-1">
               {SUPPORTED_LANGUAGES.map((langCode, index) => (
                 <span key={langCode} className="flex items-center">
                   {index > 0 && <span className="text-border/60 mx-1">|</span>}
@@ -290,27 +290,19 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
               ))}
             </div>
 
-            {/* Call Booking CTA */}
+            {/* Written Quote Request CTA */}
             <BookingButton
               size="sm"
               lang={currentLang}
               aria-label={dict.nav.bookCall}
               className="hidden sm:inline-flex ml-1 text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 bg-primary text-primary-foreground"
-            >
-              {currentLang === "it"
-                ? "PRENOTA CALL"
-                : currentLang === "fr"
-                ? "RÉSERVER CALL"
-                : currentLang === "es"
-                ? "RESERVAR CALL"
-                : "BOOK CALL"}
-            </BookingButton>
+            />
 
             {/* Mobile Hamburger Menu */}
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden text-foreground hover:text-primary h-9 w-9"
+              className="2xl:hidden text-foreground hover:text-primary h-9 w-9"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle navigation menu"
             >
@@ -321,7 +313,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
 
         {/* Mobile Dropdown Menu */}
         {mobileOpen && (
-          <div className="lg:hidden border-t border-border/50 bg-background/98 backdrop-blur-md px-6 py-6 space-y-5 animate-in slide-in-from-top-3 duration-200">
+          <div className="2xl:hidden border-t border-border/50 bg-background/98 backdrop-blur-md px-6 py-6 space-y-5 animate-in slide-in-from-top-3 duration-200">
             {/* Mobile Language Switcher */}
             <div className="flex items-center justify-between pb-3 border-b border-border/40">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
