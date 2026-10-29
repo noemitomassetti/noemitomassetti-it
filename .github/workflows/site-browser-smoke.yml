@@ -62,6 +62,26 @@ jobs:
                 if(!response.ok() || text.length<1000 || !text.includes('<html')) throw new Error('Document not reachable: '+path);
                 console.log('PASS HTML portfolio document '+path);
               }
+              // Specifically guard against clipped header links on narrow mobile/laptop/wide screens.
+              for (const width of [390, 768, 1365, 1536]) {
+                await page.setViewportSize({width,height:900});
+                await page.goto('http://127.0.0.1:4173/it',{waitUntil:'networkidle'});
+                const clipped = await page.locator('header a, header button').evaluateAll(elements =>
+                  elements.filter(el => {
+                    const r=el.getBoundingClientRect();
+                    const style=getComputedStyle(el);
+                    return style.display!=='none' && r.width>0 && (r.left < -2 || r.right > innerWidth+2);
+                  }).map(el=>el.textContent?.trim() || el.getAttribute('aria-label') || 'unknown')
+                );
+                if (clipped.length) throw new Error('Header clipped at '+width+'px: '+clipped.join(', '));
+                await page.screenshot({path:'/tmp/noemi-smoke/responsive_'+width+'.png',fullPage:false});
+                console.log('PASS responsive header '+width+'px');
+                if (width===390) {
+                  await page.getByRole('button',{name:'Toggle navigation menu'}).click();
+                  if(!await page.getByRole('navigation').count()) throw new Error('Mobile nav missing');
+                  console.log('PASS mobile menu');
+                }
+              }
               if(errors.length) throw new Error('Browser JS exceptions: '+errors.slice(0,5).join(' | '));
             } finally { await browser.close(); }
           })().catch(e=>{console.error(e);process.exit(1)});
