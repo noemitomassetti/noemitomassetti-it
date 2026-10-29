@@ -1,10 +1,9 @@
-name: Browser smoke on isolated release branch
+name: Browser smoke for site release review
 on:
-  push:
+  pull_request:
     branches:
-      - 'chatgpt/site-release-audit-2026-10-29'
-    paths:
-      - '.github/QA_BROWSER_TRIGGER.txt'
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
