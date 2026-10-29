@@ -38,7 +38,10 @@ jobs:
           test -f src/components/DigitalConcierge.tsx
           test -f src/lib/api/clientAdapter.ts
           test -f public/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html
-          rm -rf .github/release-transport
+          cp .github/release-fixes/src/pages/BlogPost.tsx src/pages/BlogPost.tsx
+          cp .github/release-fixes/src/pages/Questionnaire.tsx src/pages/Questionnaire.tsx
+          cp .github/release-fixes/src/hooks/useSEO.ts src/hooks/useSEO.ts
+          rm -rf .github/release-transport .github/release-fixes
       - name: Install Node
         uses: actions/setup-node@v4
         with:
