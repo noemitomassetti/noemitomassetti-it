@@ -41,6 +41,9 @@ jobs:
           cp .github/release-fixes/src/pages/BlogPost.tsx src/pages/BlogPost.tsx
           cp .github/release-fixes/src/pages/Questionnaire.tsx src/pages/Questionnaire.tsx
           cp .github/release-fixes/src/hooks/useSEO.ts src/hooks/useSEO.ts
+          cp .github/release-fixes/src/lib/api/clientAdapter.ts src/lib/api/clientAdapter.ts
+          cp .github/release-fixes/src/lib/concierge/intentRecognizer.ts src/lib/concierge/intentRecognizer.ts
+          cp .github/release-fixes/src/test/concierge.test.ts src/test/concierge.test.ts
           rm -rf .github/release-transport .github/release-fixes
       - name: Install Node
         uses: actions/setup-node@v4
