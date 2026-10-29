@@ -269,7 +269,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
             </div>
 
             {/* Compact Language Selector: EN | IT | FR | ES */}
-            <div className="hidden sm:flex items-center text-xs font-semibold tracking-wider text-muted-foreground px-1">
+            <div className="hidden xl:flex items-center text-xs font-semibold tracking-wider text-muted-foreground px-1">
               {SUPPORTED_LANGUAGES.map((langCode, index) => (
                 <span key={langCode} className="flex items-center">
                   {index > 0 && <span className="text-border/60 mx-1">|</span>}
@@ -295,7 +295,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
               size="sm"
               lang={currentLang}
               aria-label={dict.nav.bookCall}
-              className="hidden sm:inline-flex ml-1 text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 bg-primary text-primary-foreground"
+              className="hidden xl:inline-flex ml-1 text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wider hover:scale-105 hover:shadow-[0_0_15px_rgba(229,192,161,0.3)] transition-all duration-300 bg-primary text-primary-foreground"
             />
 
             {/* Mobile Hamburger Menu */}
