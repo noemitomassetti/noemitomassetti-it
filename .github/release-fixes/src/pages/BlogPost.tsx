@@ -1,0 +1,217 @@
+import { Layout } from "@/components/Layout";
+import { useParams, Link, Navigate, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { getBlogPostBySlug, getBlogPosts } from "@/lib/blogData";
+import { useSEO } from "@/hooks/useSEO";
+import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
+
+const BlogPost = () => {
+  const { slug } = useParams();
+  const location = useLocation();
+  const currentLang = getLanguageFromPath(location.pathname);
+  const post = slug ? getBlogPostBySlug(slug) : undefined;
+
+  useSEO({
+    title: post ? `${post.title} | Blog | Noemi Tomassetti` : "Blog | Noemi Tomassetti",
+    description: post?.excerpt || "",
+    canonical: post ? `https://www.noemitomassetti.it/blog/${post.slug || post.id}` : "https://www.noemitomassetti.it/blog",
+    ogImage: post?.image,
+    ogType: "article",
+    schema: post ? [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.noemitomassetti.it/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.noemitomassetti.it/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://www.noemitomassetti.it/blog/${post.slug || post.id}`
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "image": post.image,
+        "datePublished": post.dateISO,
+        "author": {
+          "@type": "Person",
+          "name": "Noemi Tomassetti",
+          "url": "https://www.noemitomassetti.it",
+          "jobTitle": "Virtual Assistant",
+          "description": "Oggi, come Assistente Virtuale, metto a disposizione oltre 20 anni di esperienza professionale, insieme alla mia formazione in Mediazione Linguistica e Traduzione Specialistica, per supportare liberi professionisti e piccole aziende nella gestione operativa e organizzativa."
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Noemi Tomassetti Virtual Assistant",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.noemitomassetti.it/favicon.svg"
+          }
+        },
+        "description": post.excerpt
+      }
+    ] : undefined
+  });
+
+  if (!post) {
+    return <Navigate to={getLocalizedPath("resources", currentLang)} replace />;
+  }
+
+  const backLabel =
+    currentLang === "fr"
+      ? "Retour aux ressources"
+      : currentLang === "es"
+      ? "Volver a recursos"
+      : currentLang === "en"
+      ? "Back to resources"
+      : "Torna alle risorse";
+
+  const ctaTitle =
+    currentLang === "fr"
+      ? "Besoin d'un accompagnement pour structurer votre activité ?"
+      : currentLang === "es"
+      ? "¿Necesitas apoyo para organizar y optimizar tu negocio?"
+      : currentLang === "en"
+      ? "Need dedicated support to streamline your business operations?"
+      : "Hai bisogno di supporto per organizzare la tua attività?";
+
+  const ctaDesc =
+    currentLang === "fr"
+      ? "Décrivez vos besoins par écrit pour recevoir une proposition adaptée, sans appel préalable obligatoire."
+      : currentLang === "es"
+      ? "Explícame tus necesidades por escrito para recibir una propuesta adaptada, sin llamada previa obligatoria."
+      : currentLang === "en"
+      ? "Describe your needs in writing to receive a tailored proposal, without a mandatory introductory call."
+      : "Raccontami per iscritto cosa vorresti delegare: riceverai una proposta personalizzata, senza chiamata conoscitiva obbligatoria.";
+
+  const ctaBtn =
+    currentLang === "fr"
+      ? "DEMANDER UN DEVIS ÉCRIT"
+      : currentLang === "es"
+      ? "SOLICITAR PRESUPUESTO"
+      : currentLang === "en"
+      ? "REQUEST A WRITTEN QUOTE"
+      : "RICHIEDI PREVENTIVO SCRITTO";
+
+  const authorBio =
+    currentLang === "fr"
+      ? "Assistante virtuelle forte de plus de 20 ans d'expérience opérationnelle, diplômée en Médiation Linguistique et Traduction Spécialisée, j'accompagne indépendants et TPE dans leur organisation quotidienne."
+      : currentLang === "es"
+      ? "Como asistente virtual aporto más de 20 años de experiencia profesional, con formación en Mediación Lingüística y Traducción Especializada, para apoyar a profesionales y pymes en su gestión diaria."
+      : currentLang === "en"
+      ? "As a Virtual Assistant, I bring 20+ years of corporate back-office expertise, alongside a formal degree in Linguistic Mediation and Specialized Translation, to support independent professionals and European businesses."
+      : "Oggi, come Assistente Virtuale, metto a disposizione oltre 20 anni di esperienza professionale, insieme alla mia formazione in Mediazione Linguistica e Traduzione Specialistica, per supportare liberi professionisti e piccole aziende nella gestione operativa e organizzativa.";
+
+  const relatedTitle =
+    currentLang === "fr"
+      ? "Vous pourriez aussi aimer..."
+      : currentLang === "es"
+      ? "También te puede interesar..."
+      : currentLang === "en"
+      ? "You might also be interested in..."
+      : "Potrebbe interessarti anche...";
+
+  return (
+    <Layout lang={currentLang}>
+      <article className="container px-4 md:px-6 py-10 md:py-16 max-w-3xl mx-auto">
+        <Button variant="ghost" asChild className="mb-8 -ml-4 text-foreground/70 hover:text-primary">
+          <Link to={getLocalizedPath("resources", currentLang)}>
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            {backLabel}
+          </Link>
+        </Button>
+        
+        <div className="mb-10">
+          <div className="flex items-center gap-4 mb-4">
+            <span className="text-sm font-medium text-primary">{post.category}</span>
+            <span className="text-sm text-muted-foreground">{post.date}</span>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold text-primary leading-tight mb-6">
+            {post.title}
+          </h1>
+          <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-8">
+            {post.excerpt}
+          </p>
+          <div className="w-full rounded-2xl overflow-hidden mb-10 shadow-lg border border-border/50 bg-muted/10 flex justify-center">
+             <img src={post.image} alt={post.alt || `Copertina articolo: ${post.title}`} width="800" height="500" loading="eager" decoding="async" className="w-full max-h-[500px] h-auto object-contain" />
+          </div>
+        </div>
+
+        <div 
+          className="prose prose-invert prose-lg max-w-none text-foreground/90 
+            prose-headings:text-primary prose-headings:font-bold 
+            prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-6 
+            prose-p:leading-relaxed prose-p:mb-8 
+            prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-8 
+            prose-li:mb-3 prose-li:marker:text-primary prose-li:marker:font-bold prose-li:font-bold
+            prose-strong:text-primary prose-strong:font-bold
+            prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+
+        {/* Lead Capture Callout Box */}
+        <div className="my-12 p-6 md:p-8 bg-card border border-primary/30 rounded-2xl shadow-md text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="space-y-2">
+            <h3 className="text-xl font-bold text-primary">{ctaTitle}</h3>
+            <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+              {ctaDesc}
+            </p>
+          </div>
+          <Button asChild size="lg" className="shrink-0 bg-primary text-primary-foreground font-bold uppercase tracking-wider text-xs px-6 py-6 hover:scale-105 transition-all">
+            <Link to={getLocalizedPath('contact', currentLang) + '#contact-section'}>{ctaBtn}</Link>
+          </Button>
+        </div>
+
+        <address rel="author" className="not-italic mt-12 p-6 md:p-8 bg-card border border-border/50 rounded-2xl flex flex-col sm:flex-row gap-6 items-center sm:items-start" itemScope itemType="https://schema.org/Person">
+          <img src="/noemi-tomassetti.png" alt="Foto di Noemi Tomassetti - Assistente Virtuale" width="100" height="100" loading="lazy" decoding="async" className="w-24 h-24 rounded-full object-cover border-2 border-primary/20 flex-shrink-0" itemProp="image" />
+          <div className="text-center sm:text-left">
+            <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>
+            <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Virtual Assistant</p>
+            <p className="text-base text-foreground/80 leading-relaxed" itemProp="description">
+              {authorBio}
+            </p>
+          </div>
+        </address>
+
+        <div className="mt-16 pt-10 border-t border-border/50">
+          <h2 className="text-2xl font-bold text-primary mb-6">{relatedTitle}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {getBlogPosts()
+              .filter(p => p.id !== post.id && p.published !== false)
+              .sort(() => 0.5 - Math.random())
+              .slice(0, 2)
+              .map(related => (
+                <Link key={related.id} to={`/blog/${related.slug || related.id}`} className="group flex flex-col bg-card border border-border/50 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-md" aria-label={`Leggi l'articolo correlato: ${related.title}`}>
+                  <div className="h-32 w-full bg-muted overflow-hidden">
+                    <img src={related.image} alt={`Copertina articolo correlato: ${related.title}`} loading="lazy" decoding="async" width="400" height="200" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="p-4">
+                    <span className="text-xs font-medium text-primary mb-2 block">{related.category}</span>
+                    <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">{related.title}</h3>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </article>
+    </Layout>
+  );
+};
+
+export default BlogPost;
