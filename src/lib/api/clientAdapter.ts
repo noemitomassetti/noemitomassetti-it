@@ -172,15 +172,22 @@ export async function submitQuoteRequest(payload: CreatePublicRequestPayload): P
       identificativo_richiesta: payload.idempotencyKey,
       _subject: `Richiesta di preventivo - ${payload.serviceId}`,
       _replyto: payload.email.trim(),
+      // The AJAX endpoint cannot complete FormSubmit's usual interactive captcha page.
+      // Use the existing honeypot; consider a server-validated captcha when switching providers.
+      _captcha: 'false',
       _honey: payload.honeypot || '',
     }),
-  }).catch(() => { throw new Error('Impossibile verificare l’esito dell’invio email. Contatta Noemi direttamente per evitare duplicazioni.'); });
+  }).catch(() => { throw new Error('FORM_PROVIDER_NETWORK_OR_CORS'); });
 
   if (!fallbackResponse.ok) {
+    if (fallbackResponse.status === 403) throw new Error('FORM_PROVIDER_BLOCKED');
+    if (fallbackResponse.status === 429) throw new Error('FORM_PROVIDER_RATE_LIMIT');
     throw new Error(`Il servizio email non ha accettato la richiesta (HTTP ${fallbackResponse.status}).`);
   }
   const fallbackData = await parseJsonSafely(fallbackResponse);
   if (fallbackData?.success !== true && fallbackData?.success !== 'true') {
+    const providerMessage = typeof fallbackData?.message === 'string' ? fallbackData.message : '';
+    if (/activat|confirm.*form/i.test(providerMessage)) throw new Error('FORM_PROVIDER_ACTIVATION_REQUIRED');
     throw new Error('Il servizio email non ha confermato la ricezione della richiesta.');
   }
   return {
