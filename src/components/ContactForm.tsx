@@ -8,6 +8,7 @@ import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { Language, getDictionary, getLanguageFromPath, getLocalizedPath } from "@/lib/i18n";
 import { getQuoteDraft, clearQuoteDraft } from "@/lib/concierge/quoteDraftStore";
 import { submitQuoteRequest, generateIdempotencyKey } from "@/lib/api/clientAdapter";
+import { getManualContactMailto, getManualContactPlainText } from "@/lib/api/mailFallback";
 import { localizeContactError, CONTACT_ERROR_TITLES, INVALID_EMAIL } from "@/lib/api/submitErrorI18n";
 
 interface FormDataState {
@@ -67,6 +68,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
   } | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [honeypot, setHoneypot] = useState("");
+  const [manualCopyVisible, setManualCopyVisible] = useState(false);
 
   // Synchronize formData.oggetto whenever selectedService prop changes
   useEffect(() => {
@@ -95,10 +97,38 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
     if (errorMessage) setErrorMessage(null);
   };
 
+  // These draft details remain in memory after an ambiguous provider outcome.
+  // Never silently send a second request: the visitor must choose manual email.
+  const manualDraft = {
+    fullName: `${formData.nome.trim()} ${formData.cognome.trim()}`.trim(),
+    email: formData.email.trim(),
+    phone: formData.telefono.trim(),
+    service: formData.oggetto.trim(),
+    message: formData.messaggio.trim(),
+    reference: idempotencyKey,
+  };
+  const manualRequestText = getManualContactPlainText(manualDraft);
+  const manualEmailLink = getManualContactMailto(manualDraft);
+
+  const copyRequest = async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(manualRequestText);
+      toast({
+        title: lang === 'it' ? 'Richiesta copiata' : lang === 'fr' ? 'Demande copiée' : lang === 'es' ? 'Solicitud copiada' : 'Request copied',
+        description: lang === 'it' ? 'Incolla il messaggio in un’email e premi Invia.' : lang === 'fr' ? 'Collez le message dans un e-mail et envoyez-le.' : lang === 'es' ? 'Pega el mensaje en un correo y envíalo.' : 'Paste the message into an email and send it.',
+      });
+    } catch {
+      // Explicitly show selectable text if clipboard access is denied.
+      setManualCopyVisible(true);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isSubmitting) return; // Prevent double-submission
     setErrorMessage(null);
+    setManualCopyVisible(false);
 
     // Basic validations
     if (!formData.nome.trim() || !formData.cognome.trim() || !formData.email.trim() || !formData.messaggio.trim()) {
@@ -269,9 +299,49 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
           </div>
 
           {errorMessage && (
-            <div className="bg-destructive/10 border border-destructive/30 text-destructive text-sm p-3 rounded-lg flex items-center gap-2">
-              <AlertCircle className="w-4 h-4 flex-shrink-0" />
-              <span>{errorMessage}{' '}<a href="mailto:info@noemitomassetti.it" className="underline font-semibold">{lang === 'it' ? 'Scrivimi direttamente' : lang === 'fr' ? 'Écrivez-moi directement' : lang === 'es' ? 'Escríbeme directamente' : 'Email me directly'}</a></span>
+            <div role="alert" aria-live="assertive" className="bg-destructive/10 border border-destructive/30 text-destructive text-sm p-4 rounded-lg space-y-3">
+              <div className="flex items-start gap-2">
+                <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                <p>{errorMessage}</p>
+              </div>
+              <p className="text-foreground/90 text-xs leading-relaxed">
+                {lang === 'it'
+                  ? 'I dati compilati sono stati conservati. Per non rischiare richieste duplicate, non ritentare subito: puoi inviare personalmente la stessa richiesta dal tuo programma email.'
+                  : lang === 'fr'
+                  ? 'Vos données restent dans le formulaire. Évitez les doublons et envoyez vous-même le message depuis votre messagerie.'
+                  : lang === 'es'
+                  ? 'Tus datos permanecen en el formulario. Evita duplicados y envía personalmente el correo desde tu aplicación.'
+                  : 'Your details are preserved. To avoid duplicate requests, use your email app to send this message yourself.'}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <a
+                  href={manualEmailLink}
+                  className="inline-flex items-center justify-center rounded-md border border-primary/60 bg-primary text-primary-foreground px-3 py-2 font-semibold text-xs hover:opacity-90"
+                >
+                  {lang === 'it' ? 'Apri email già compilata' : lang === 'fr' ? 'Ouvrir l’e-mail préparé' : lang === 'es' ? 'Abrir correo preparado' : 'Open prepared email'}
+                </a>
+                <Button type="button" variant="outline" size="sm" onClick={copyRequest} className="font-semibold text-xs">
+                  {lang === 'it' ? 'Copia richiesta' : lang === 'fr' ? 'Copier la demande' : lang === 'es' ? 'Copiar solicitud' : 'Copy request'}
+                </Button>
+              </div>
+              <p className="text-xs text-foreground/75">
+                {lang === 'it'
+                  ? 'L’email NON viene inviata automaticamente: dopo l’apertura devi premere Invia nel tuo programma email.'
+                  : lang === 'fr'
+                  ? 'L’e-mail n’est PAS envoyée automatiquement : cliquez sur Envoyer dans votre messagerie.'
+                  : lang === 'es'
+                  ? 'El correo NO se envía automáticamente: pulsa Enviar en tu aplicación.'
+                  : 'The email is NOT sent automatically: press Send in your email app.'}
+              </p>
+              {manualCopyVisible && (
+                <textarea
+                  readOnly
+                  aria-label={lang === 'it' ? 'Richiesta da copiare manualmente' : 'Request text to copy'}
+                  className="w-full h-40 rounded-md border border-border bg-background p-2 text-foreground text-xs"
+                  value={manualRequestText}
+                  onFocus={e => e.currentTarget.select()}
+                />
+              )}
             </div>
           )}
 
