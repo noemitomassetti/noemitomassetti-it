@@ -152,6 +152,48 @@ export async function submitQuoteRequest(payload: CreatePublicRequestPayload): P
     throw submitError(response, data);
   }
 
+  // Optional alternative provider, deliberately disabled unless an access key is configured.
+  // Only one provider is called per request. Never retry with another provider on ambiguous errors.
+  // Web3Forms access keys are public identifiers; do NOT add any secret to VITE_* variables.
+  const web3Key = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim();
+  if (web3Key) {
+    if (!/^[a-f0-9-]{20,100}$/i.test(web3Key)) {
+      throw new Error('WEB3FORMS_CONFIG_INVALID');
+    }
+    const web3Response = await fetchWithTimeout('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', Accept: 'application/json'},
+      body: JSON.stringify({
+        access_key: web3Key,
+        name: payload.fullName.trim(),
+        email: payload.email.trim(),
+        phone: payload.phone?.trim() || 'Non indicato',
+        subject: 'Richiesta di preventivo - ' + payload.serviceId,
+        message: payload.brief.trim(),
+        servizio: payload.serviceId,
+        lingua: payload.locale.toUpperCase(),
+        tipo_incarico: payload.engagementType,
+        riferimento: payload.idempotencyKey,
+        privacy_letta: 'Sì',
+        botcheck: false,
+      }),
+    }).catch(() => { throw new Error('WEB3FORMS_NETWORK_OR_CORS'); });
+    const web3Result = await parseJsonSafely(web3Response);
+    if (web3Response.status === 429) throw new Error('FORM_PROVIDER_RATE_LIMIT');
+    if (!web3Response.ok || web3Result?.success !== true) {
+      throw new Error('WEB3FORMS_PROVIDER_REJECTED');
+    }
+    return {
+      success: true,
+      requestId: payload.idempotencyKey,
+      status: 'received',
+      deliveryStatus: 'email_received_by_provider',
+      message: 'Richiesta accettata dal servizio di inoltro email; la consegna alla casella non è ancora verificata.',
+      createdAt: new Date().toISOString(),
+      mode: 'production',
+    };
+  }
+
   // Standalone static site: email provider only. This means "accepted by provider", NOT delivered.
   const fallbackResponse = await fetchWithTimeout(getFormSubmitUrl(), {
     method: 'POST',
