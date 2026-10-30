@@ -133,4 +133,26 @@ describe('Site to NoeTom intake safety checks', () => {
     expect(sent._captcha).toBe('false');
     expect(sent._honey).toBe('');
   });
+  it('uses Web3Forms only when a key is explicitly configured; it never also sends to FormSubmit', async () => {
+    vi.stubEnv('VITE_WEB3FORMS_ACCESS_KEY', '12345678-1234-1234-1234-123456789012');
+    const fn = vi.fn().mockResolvedValue(answer(200, {success: true}));
+    vi.stubGlobal('fetch', fn);
+    const result = await submitQuoteRequest(payload);
+    expect(fn).toHaveBeenCalledTimes(1);
+    expect(fn.mock.calls[0][0]).toBe('https://api.web3forms.com/submit');
+    const sent = JSON.parse(fn.mock.calls[0][1].body);
+    expect(sent.access_key).toBe('12345678-1234-1234-1234-123456789012');
+    expect(sent.email).toBe(payload.email);
+    expect(sent.message).toBe(payload.brief);
+    expect(result.deliveryStatus).toBe('email_received_by_provider');
+  });
+
+  it('does not retry using FormSubmit if an explicitly chosen provider fails', async () => {
+    vi.stubEnv('VITE_WEB3FORMS_ACCESS_KEY', '12345678-1234-1234-1234-123456789012');
+    const fn = vi.fn().mockResolvedValue(answer(403, {success: false}));
+    vi.stubGlobal('fetch', fn);
+    await expect(submitQuoteRequest(payload)).rejects.toThrow('WEB3FORMS_PROVIDER_REJECTED');
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
+
 });
