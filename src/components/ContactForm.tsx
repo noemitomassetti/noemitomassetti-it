@@ -487,12 +487,12 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
           <div className="pt-1 text-[11px] text-muted-foreground/80 text-center leading-relaxed">
             <span className="inline-block mr-1">🔒</span>
             {lang === 'it'
-              ? "La richiesta viene inviata tramite FormSubmit oppure, se configurato, tramite il sistema NoeTom. Consulta la privacy policy per i fornitori coinvolti e il trattamento dei dati."
+              ? "La richiesta viene gestita tramite il servizio email attivato (FormSubmit o Web3Forms) oppure, se configurato, tramite NoeTom. Consulta la privacy policy per i fornitori e il trattamento dei dati."
               : lang === 'fr'
-              ? "La demande est envoyée via FormSubmit ou, si configuré, via NoeTom. Consultez notre politique de confidentialité pour en savoir plus sur les fournisseurs et les données traitées."
+              ? "La demande passe par le service e-mail activé (FormSubmit ou Web3Forms) ou, si configuré, par NoeTom. Consultez notre politique de confidentialité pour les prestataires et les données traitées."
               : lang === 'es'
-              ? "La solicitud se envía mediante FormSubmit o, si está configurado, mediante NoeTom. Consulta nuestra política de privacidad para conocer a los proveedores y el tratamiento de los datos."
-              : "Your inquiry is sent via FormSubmit or, if configured, NoeTom. Please read the privacy policy for information about service providers and data processing."}
+              ? "La solicitud se envía mediante el servicio de correo activado (FormSubmit o Web3Forms), o mediante NoeTom si está configurado. Consulta la política de privacidad."
+              : "Your enquiry is sent through the enabled email relay (FormSubmit or Web3Forms), or NoeTom if configured. Please read the privacy policy for service providers and data processing."}
           </div>
 
           <p className="text-xs text-foreground/50 text-center">* {lang === 'it' ? "campi obbligatori" : "required fields"}</p>
