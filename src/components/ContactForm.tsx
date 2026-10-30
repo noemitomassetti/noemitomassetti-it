@@ -131,7 +131,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
     setManualCopyVisible(false);
 
     // Basic validations
-    if (!formData.nome.trim() || !formData.cognome.trim() || !formData.email.trim() || !formData.messaggio.trim()) {
+    if (!formData.nome.trim() || !formData.cognome.trim() || !formData.email.trim() || !formData.oggetto.trim() || !formData.messaggio.trim()) {
       setErrorMessage(t.errorMsg);
       return;
     }
@@ -410,12 +410,14 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
             </label>
             <select
               id="form-service"
+              required
+              aria-required="true"
               className="w-full h-10 px-3 py-2 rounded-md border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               value={formData.oggetto}
               onChange={(e) => handleChange("oggetto", e.target.value)}
               disabled={isSubmitting}
             >
-              <option value="">{lang === 'it' ? "-- Seleziona un'area di interesse --" : "-- Select area of interest --"}</option>
+              <option value="">{lang === 'it' ? "-- Seleziona un'area di interesse --" : lang === 'fr' ? "-- Choisissez un domaine de service --" : lang === 'es' ? "-- Selecciona un área de interés --" : "-- Select area of interest --"}</option>
               {t.serviceOptions.map((opt, i) => (
                 <option key={i} value={opt}>
                   {opt}
