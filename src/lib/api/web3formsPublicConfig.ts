@@ -8,4 +8,4 @@
  *
  * NEVER store Web3Forms secret API keys, login tokens, or credentials here.
  */
-export const WEB3FORMS_PUBLIC_ACCESS_KEY = '';
+export const WEB3FORMS_PUBLIC_ACCESS_KEY = '9e1b181f-fe7c-40d4-870e-6d1de9796288';
