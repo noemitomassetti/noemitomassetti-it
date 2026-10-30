@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const ts=require('/opt/nvm/versions/node/v22.16.0/lib/node_modules/typescript/lib/typescript.js');
+const ts=require('typescript');
 const source=fs.readFileSync(require('node:path').join(__dirname,'../src/lib/concierge/intentRecognizer.ts'),'utf8');
 const clean=source.replace(/^import\s+[^;]+;\s*$/gm,'');
 const js=ts.transpileModule(clean,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;

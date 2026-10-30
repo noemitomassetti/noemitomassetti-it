@@ -1,11 +1,10 @@
 /**
  * The public professional contact is info@noemitomassetti.it.
- * The provider recipient is deliberately configurable and MAY BE DIFFERENT:
- * the existing Gmail destination is preserved until the professional mailbox
- * has been activated and its actual delivery has been tested.
+ * The professional mailbox is also the default for an explicitly enabled
+ * legacy provider. Web3Forms recipients are configured in its dashboard.
  * An environment value is NOT a secret; never place API keys in VITE_* variables.
  */
-const LEGACY_PROVIDER_RECIPIENT = 'noemitom@gmail.com';
+const LEGACY_PROVIDER_RECIPIENT = 'info@noemitomassetti.it';
 
 export function getFormSubmitRecipient(): string {
   const supplied = (import.meta.env?.VITE_FORM_RECIPIENT_EMAIL || '').trim();

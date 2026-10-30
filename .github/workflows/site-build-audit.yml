@@ -30,3 +30,11 @@ jobs:
         run: npm run build
       - name: Unit tests
         run: npm test -- --passWithNoTests
+
+      - name: Release and editorial checks
+        run: |
+          npm run test:release
+          npm run preflight:offline
+          node scripts/assistant-faq-tests.cjs
+          node scripts/assistant-portfolio-regression.cjs
+          node scripts/editorial-pricing-check.cjs

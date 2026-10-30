@@ -7,12 +7,12 @@ const source=fs.readFileSync(require('node:path').join(__dirname,'..','src/lib/a
 const out=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}}).outputText;
 let calls=[];let response;
 const sandboxModule={exports:{}};
-const env={VITE_API_BASE_URL:'',VITE_FORM_RECIPIENT_EMAIL:''};
+const env={VITE_API_BASE_URL:'',VITE_FORM_RECIPIENT_EMAIL:'',VITE_WEB3FORMS_ACCESS_KEY:'',VITE_LEGACY_FORMSUBMIT_ENABLED:'true'};
 const deliveryModule={exports:{}};
 const deliverySource=fs.readFileSync(require('node:path').join(__dirname,'..','src/lib/api/contactDelivery.ts'),'utf8').replaceAll('import.meta','__testMeta');
 const deliveryOut=ts.transpileModule(deliverySource,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}}).outputText;
 vm.runInNewContext(deliveryOut,{module:deliveryModule,exports:deliveryModule.exports,__testMeta:{env}}, {filename:'contactDelivery.transpiled.js'});
-const context={module:sandboxModule,exports:sandboxModule.exports,crypto:webcrypto, URL, Date, Uint8Array, Array, console, AbortController, setTimeout, clearTimeout, require:(id)=>{if(id==='./contactDelivery')return deliveryModule.exports;throw new Error('Unexpected import: '+id)}, __testMeta:{env},fetch:async (url,options)=>{calls.push([url,options]);if(response instanceof Error) throw response; return response;}};
+const context={module:sandboxModule,exports:sandboxModule.exports,crypto:webcrypto, URL, Date, Uint8Array, Array, console, AbortController, setTimeout, clearTimeout, require:(id)=>{if(id==='./contactDelivery')return deliveryModule.exports;if(id==='./web3formsPublicConfig')return {WEB3FORMS_PUBLIC_ACCESS_KEY:''};throw new Error('Unexpected import: '+id)}, __testMeta:{env},fetch:async (url,options)=>{calls.push([url,options]);if(response instanceof Error) throw response; return response;}};
 vm.runInNewContext(out,context,{filename:'clientAdapter.transpiled.js'});
 const adapter=sandboxModule.exports;
 const payload={fullName:'Mario Rossi',email:'mario@example.org',brief:'Richiesta per traduzione di una brochure italiana.',serviceId:'translation',locale:'it',engagementType:'hourly_ad_hoc',privacyGdprConsent:true,idempotencyKey:'req_1234567890123456'};

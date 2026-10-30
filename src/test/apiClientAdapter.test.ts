@@ -56,6 +56,7 @@ describe('Site to NoeTom intake safety checks', () => {
     const result = await submitQuoteRequest(payload);
     expect(fn).toHaveBeenCalledTimes(1);
     expect(fn.mock.calls[0][0]).toContain('formsubmit.co');
+    expect(fn.mock.calls[0][0]).toBe('https://formsubmit.co/ajax/info%40noemitomassetti.it');
     expect(result.deliveryStatus).toBe('email_received_by_provider');
     expect(result.message).toContain('non è ancora verificata');
   });
@@ -164,6 +165,19 @@ describe('Site to NoeTom intake safety checks', () => {
     const fn = vi.fn().mockResolvedValue(answer(403, {success: false}));
     vi.stubGlobal('fetch', fn);
     await expect(submitQuoteRequest(payload)).rejects.toThrow('WEB3FORMS_PROVIDER_REJECTED');
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
+
+  it('preserves translation scope and estimates in the Web3Forms email', async () => {
+    vi.stubEnv('VITE_WEB3FORMS_ACCESS_KEY', '12345678-1234-1234-1234-123456789012');
+    const fn = vi.fn().mockResolvedValue(answer(200, {success: true}));
+    vi.stubGlobal('fetch', fn);
+    await submitQuoteRequest({...payload, sourceLocale: 'fr', targetLocale: 'it',
+      deadlineDesired: '2026-11-10', wordCountEstimate: 1200, hoursEstimate: 0, glossaryAvailable: false});
+    const sent = JSON.parse(fn.mock.calls[0][1].body);
+    expect(sent).toMatchObject({lingua_origine: 'fr', lingua_destinazione: 'it',
+      scadenza_desiderata: '2026-11-10', parole_stimate: 1200, ore_stimate: 0,
+      glossario_disponibile: 'No', riferimento: payload.idempotencyKey});
     expect(fn).toHaveBeenCalledTimes(1);
   });
 
