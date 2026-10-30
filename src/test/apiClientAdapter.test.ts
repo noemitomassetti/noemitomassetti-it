@@ -110,4 +110,27 @@ describe('Site to NoeTom intake safety checks', () => {
     await expect(submitQuoteRequest(payload)).rejects.toThrow('richiesto HTTPS');
     expect(fn).not.toHaveBeenCalled();
   });
+
+  it('shows activation explicitly and never claims delivery', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(answer(200, {
+      success: 'false', message: 'This form needs Activation. An activation email was sent.',
+    })));
+    await expect(submitQuoteRequest(payload)).rejects.toThrow('FORM_PROVIDER_ACTIVATION_REQUIRED');
+  });
+
+  it('treats Cloudflare or provider 403 as a blocked submission', async () => {
+    const fn = vi.fn().mockResolvedValue(answer(403, '<html>Just a moment</html>', 'text/html'));
+    vi.stubGlobal('fetch', fn);
+    await expect(submitQuoteRequest(payload)).rejects.toThrow('FORM_PROVIDER_BLOCKED');
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
+
+  it('includes the non-interactive AJAX captcha override and the honeypot', async () => {
+    const fn = vi.fn().mockResolvedValue(answer(200, {success: 'true'}));
+    vi.stubGlobal('fetch', fn);
+    await submitQuoteRequest(payload);
+    const sent = JSON.parse(fn.mock.calls[0][1].body);
+    expect(sent._captcha).toBe('false');
+    expect(sent._honey).toBe('');
+  });
 });
