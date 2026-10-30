@@ -194,6 +194,12 @@ export async function submitQuoteRequest(payload: CreatePublicRequestPayload): P
     };
   }
 
+  // The former provider repeatedly failed in live checks. Never call it implicitly.
+  // It is retained only as an explicitly opted-in rollback path for the owner.
+  if (import.meta.env.VITE_LEGACY_FORMSUBMIT_ENABLED !== 'true') {
+    throw new Error('FORM_PROVIDER_NOT_CONFIGURED');
+  }
+
   // Standalone static site: email provider only. This means "accepted by provider", NOT delivered.
   const fallbackResponse = await fetchWithTimeout(getFormSubmitUrl(), {
     method: 'POST',
