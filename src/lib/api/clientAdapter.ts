@@ -5,6 +5,7 @@
 import type { CreatePublicRequestPayload, CreatePublicRequestResult } from './contract';
 
 import { getFormSubmitUrl } from './contactDelivery';
+import { WEB3FORMS_PUBLIC_ACCESS_KEY } from './web3formsPublicConfig';
 
 /** Only a deliberately configured URL enables NoeTom; never infer from window.location. */
 export function getNoeTomApiBaseUrl(): string | null {
@@ -155,7 +156,7 @@ export async function submitQuoteRequest(payload: CreatePublicRequestPayload): P
   // Optional alternative provider, deliberately disabled unless an access key is configured.
   // Only one provider is called per request. Never retry with another provider on ambiguous errors.
   // Web3Forms access keys are public identifiers; do NOT add any secret to VITE_* variables.
-  const web3Key = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim();
+  const web3Key = (import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ?? WEB3FORMS_PUBLIC_ACCESS_KEY).trim();
   if (web3Key) {
     if (!/^[a-f0-9-]{20,100}$/i.test(web3Key)) {
       throw new Error('WEB3FORMS_CONFIG_INVALID');
