@@ -47,7 +47,7 @@ const LEGAL_CONTENT = {
       retentionTitle: "4. Conservazione dei Dati",
       retentionText: "I dati ricevuti tramite richieste di informazioni sono conservati per il tempo strettamente necessario a fornire riscontro (massimo 24 mesi). In caso di instaurazione di un rapporto contrattuale continuativo o a pacchetto, i dati contabili e le comunicazioni operative correlate sono conservati per 10 anni in conformità agli obblighi fiscali e civilistici italiani.",
       disclosureTitle: "5. Riservatezza e Comunicazione dei Dati",
-      disclosureText: "I dati personali non vengono ceduti, venduti o diffusi a terzi per scopi di marketing. Per gestire le richieste possono intervenire fornitori di hosting, il servizio di inoltro moduli FormSubmit (se attivo), fornitori email e, ove necessario, il commercialista, secondo ruoli e accordi applicabili. Le configurazioni e i trasferimenti di dati devono essere verificati prima della pubblicazione.",
+      disclosureText: "I dati personali non vengono ceduti, venduti o diffusi a terzi per scopi di marketing. Per gestire le richieste possono intervenire fornitori di hosting, il servizio di inoltro moduli FormSubmit o Web3Forms (solo se attivato e verificato), fornitori email e, ove necessario, il commercialista, secondo ruoli e accordi applicabili. Le configurazioni e i trasferimenti di dati devono essere verificati prima della pubblicazione.",
       rightsTitle: "6. Diritti dell'Interessato",
       rightsIntro: "In ogni momento, l'interessato può esercitare i diritti garantiti dagli artt. 15-22 del GDPR:",
       rightsList: [
@@ -102,7 +102,7 @@ const LEGAL_CONTENT = {
       retentionTitle: "4. Data Retention",
       retentionText: "Contact inquiry data is retained strictly for the duration necessary to answer and follow up (maximum 24 months). Where a contractual service agreement is established, accounting records and operational correspondence are retained for 10 years in compliance with statutory Italian tax and civil law obligations.",
       disclosureTitle: "5. Confidentiality & Data Sharing",
-      disclosureText: "Personal data is never sold, leased, or distributed to third parties for advertising or commercial purposes. Data may be processed by website hosting, the FormSubmit inquiry forwarding service (if enabled), email providers and our accountant where applicable, subject to the relevant roles and agreements. Providers and data transfers must be verified before publication.",
+      disclosureText: "Personal data is never sold, leased, or distributed to third parties for advertising or commercial purposes. Data may be processed by website hosting, the FormSubmit or Web3Forms enquiry forwarding service (only if activated and verified), email providers and our accountant where applicable, subject to the relevant roles and agreements. Providers and data transfers must be verified before publication.",
       rightsTitle: "6. Rights of the Data Subject",
       rightsIntro: "Under Articles 15–22 of the GDPR, you have the right to:",
       rightsList: [
@@ -157,7 +157,7 @@ const LEGAL_CONTENT = {
       retentionTitle: "4. Durée de Conservation des Données",
       retentionText: "Les données de contact sont conservées pendant la durée strictement nécessaire au suivi (maximum 24 mois). En cas de collaboration contractuelle, les pièces comptables et justificatives sont conservées pendant 10 ans conformément au droit fiscal et commercial italien.",
       disclosureTitle: "5. Confidentialité et Transmission des Données",
-      disclosureText: "Vos données ne sont ni vendues, ni louées, ni cédées à des tiers à des fins commerciales. Elles peuvent être traitées par l’hébergeur, le service de transfert de formulaires FormSubmit (si activé), les prestataires de messagerie et le comptable, selon leurs rôles et accords. Les fournisseurs et transferts doivent être vérifiés avant publication.",
+      disclosureText: "Vos données ne sont ni vendues, ni louées, ni cédées à des tiers à des fins commerciales. Elles peuvent être traitées par l’hébergeur, le service de transfert FormSubmit ou Web3Forms (uniquement si activé et vérifié), les prestataires de messagerie et le comptable, selon leurs rôles et accords. Les fournisseurs et transferts doivent être vérifiés avant publication.",
       rightsTitle: "6. Vos Droits (RGPD)",
       rightsIntro: "Conformément aux articles 15 à 22 du RGPD, vous disposez des droits suivants :",
       rightsList: [
@@ -212,7 +212,7 @@ const LEGAL_CONTENT = {
       retentionTitle: "4. Conservación de los Datos",
       retentionText: "Los datos de contacto se conservan durante el tiempo estrictamente necesario para su tramitación (máximo 24 meses). En caso de contratación de servicios, la documentación contable y fiscal se conserva durante 10 años en cumplimiento de la normativa italiana aplicable.",
       disclosureTitle: "5. Confidencialidad y Comunicación de Datos",
-      disclosureText: "Los datos personales no se ceden, venden ni comparten con terceros para fines comerciales. Podrán intervenir el proveedor de alojamiento web, el servicio FormSubmit (si está activo), los proveedores de correo y la asesoría fiscal, según sus funciones y contratos. Es necesario verificar proveedores y transferencias antes de publicar.",
+      disclosureText: "Los datos personales no se ceden, venden ni comparten con terceros para fines comerciales. Podrán intervenir el proveedor de alojamiento web, el servicio FormSubmit o Web3Forms (solo si se activa y verifica), los proveedores de correo y la asesoría fiscal, según sus funciones y contratos. Es necesario verificar proveedores y transferencias antes de publicar.",
       rightsTitle: "6. Derechos del Interesado",
       rightsIntro: "Conforme a los artículos 15 a 22 del RGPD, puedes ejercer en todo momento los siguientes derechos:",
       rightsList: [
