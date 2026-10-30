@@ -17,10 +17,22 @@ const answer = (status: number, body: unknown, type = 'application/json') => ({
 
 const persisted = {success: true, requestId: 'r_server_1', status: 'received', deliveryStatus: 'persisted_in_noetom'};
 
-beforeEach(() => vi.stubEnv('VITE_API_BASE_URL', ''));
+beforeEach(() => {
+  vi.stubEnv('VITE_API_BASE_URL', '');
+  vi.stubEnv('VITE_WEB3FORMS_ACCESS_KEY', '');
+  vi.stubEnv('VITE_LEGACY_FORMSUBMIT_ENABLED', 'true'); // Legacy-specific tests only.
+});
 afterEach(() => {vi.unstubAllEnvs(); vi.unstubAllGlobals(); vi.restoreAllMocks();});
 
 describe('Site to NoeTom intake safety checks', () => {
+  it('does not send to the failed legacy provider without explicit opt-in', async () => {
+    vi.stubEnv('VITE_LEGACY_FORMSUBMIT_ENABLED', '');
+    const fn = vi.fn();
+    vi.stubGlobal('fetch', fn);
+    await expect(submitQuoteRequest(payload)).rejects.toThrow('FORM_PROVIDER_NOT_CONFIGURED');
+    expect(fn).not.toHaveBeenCalled();
+  });
+
   it('uses random opaque IDs without embedding customer email', () => {
     const a = generateIdempotencyKey('mario@example.org', 'translation');
     const b = generateIdempotencyKey('mario@example.org', 'translation');
