@@ -20,6 +20,30 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
     .replace(/[\u0300-\u036f]/g, '')
     .trim();
 
+  // Acquisition and participant recruitment are outside the offered service scope.
+  const acquisitionKeywords = [
+    'lead generation', 'lead gen', 'cold outreach', 'cold calling',
+    'acquisizione clienti', 'ricerca di contatti commerciali', 'ricerca contatti per',
+    'prospecting', 'customer acquisition', 'sales prospect', 'contact research for',
+    'prospection', 'generation de leads', 'acquisition de clients',
+    'generacion de leads', 'captacion de clientes', 'prospeccion',
+    'reclutamento di partecipanti', 'recruit interview participants',
+    'interview participant recruitment', 'recrutement de participants',
+    'reclutamiento de participantes', 'pay-per-appointment', 'pay-per-interview',
+    'compenso per appuntamento', 'compenso per intervista',
+  ];
+  if (acquisitionKeywords.some((keyword) => normalized.includes(keyword))) {
+    return {
+      isScopeExcluded: true,
+      explanation: {
+        it: 'Noemi non offre acquisizione clienti, lead generation, cold outreach, reclutamento di partecipanti a interviste o attività a compenso per appuntamento o intervista. Le ricerche disponibili riguardano informazioni, fornitori e concorrenti a supporto delle decisioni.',
+        en: 'Noemi does not offer customer acquisition, lead generation, cold outreach, interview participant recruitment or pay-per-appointment or pay-per-interview work. Research covers information, suppliers and competitors to support decisions.',
+        fr: 'Noemi ne propose pas de prospection commerciale, de génération de leads, de recrutement de participants à des entretiens ni de missions rémunérées au rendez-vous ou à l’entretien. Les recherches portent sur les informations, les fournisseurs et les concurrents pour éclairer les décisions.',
+        es: 'Noemi no ofrece captación de clientes, generación de leads, contacto comercial en frío, reclutamiento de participantes ni trabajos remunerados por cita o entrevista. La investigación abarca información, proveedores y competidores para apoyar decisiones.',
+      },
+    };
+  }
+
   // 1. Boundary check: Accounting / Fiscal adempimenti (Always strictly out of scope)
   const accountingKeywords = [
     'contabil',

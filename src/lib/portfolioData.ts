@@ -578,7 +578,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     subtitle: {
       it: "Scouting, raccolta dati pubblici e sintesi decisionale per una piccola attività manifatturiera",
       en: "Market scouting, public data gathering, and decision matrix for a boutique producer",
-      fr: "Prospection, collecte de données publiques et synthèse pour une marque artisanale",
+      fr: "Recherche de fournisseurs, collecte de données publiques et synthèse pour une marque artisanale",
       es: "Búsqueda, recopilación de datos y matriz comparativa para pequeña empresa",
     },
     brief: {

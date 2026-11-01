@@ -137,7 +137,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Online & Desk Research',
         subtitle: 'Structured intelligence to inform your strategic decisions.',
         description:
-          'Save dozens of hours of unfocused web searches. I conduct targeted desk research across European markets to analyze competitors, identify reputable suppliers, benchmark pricing, synthesize industry reports, and provide executive-ready summaries.',
+          'Save dozens of hours of unfocused web searches. I conduct targeted desk research across European markets to analyze competitors, identify reputable suppliers, benchmark pricing, synthesize industry reports, and provide executive-ready summaries. This excludes contact research for customer acquisition, lead generation, cold outreach, interview participant recruitment and pay-per-appointment or pay-per-interview work.',
         iconName: 'Search',
         items: [
           'Competitor landscape & pricing benchmarking',

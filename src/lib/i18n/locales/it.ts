@@ -136,7 +136,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Ricerche Online & Desk Research',
         subtitle: 'Informazioni chiare e strutturate per orientare le tue decisioni.',
         description:
-          'Ricerche di mercato, analisi dei concorrenti, individuazione di fornitori e raccolta di dati affidabili sintetizzati in report pratici e immediatamente utilizzabili.',
+          'Ricerche di mercato, analisi dei concorrenti, individuazione di fornitori e raccolta di dati affidabili sintetizzati in report pratici e immediatamente utilizzabili. Sono escluse la ricerca di contatti per acquisizione clienti, la lead generation, il cold outreach, il reclutamento di partecipanti a interviste e le attività a compenso per appuntamento o intervista.',
         iconName: 'Search',
         items: [
           'Analisi dei concorrenti e benchmark delle tariffe',

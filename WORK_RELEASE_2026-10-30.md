@@ -40,3 +40,11 @@ Repository: `noemitomassetti/noemitomassetti-it`. Ramo: `chatgpt/site-release-au
 Verdetto: **NO-GO produzione** finché destinatario e recapito reale, hosting e collaudo finale non sono chiusi. Dopo tali verifiche presentare commit e anteprima esatti per approvazione. Solo dopo approvazione eseguire le operazioni su main/produzione concordate.
 
 Conservare il deployment pubblico attuale e la configurazione del dominio prima del rilascio. Per annullare le sole modifiche di questo audit sul ramo, usare un nuovo commit di revert, senza riscrivere la cronologia; un eventuale ripristino di produzione richiede il deployment precedente identificato e autorizzato.
+
+## Aggiornamento 1 novembre 2026
+
+- Esclusioni commerciali esplicitate nelle quattro lingue: acquisizione clienti, lead generation, cold outreach, reclutamento partecipanti e compensi per appuntamento/intervista. Ricerca informativa, fornitori e analisi concorrenti restano disponibili. Assistente allineato, con 10 regressioni aggiuntive.
+- Test locali: 54 test unitari superati, TypeScript e build produzione superati.
+- Sul commit precedente 7009300: workflow build e browser entrambi verdi (run 41100507092 e 41100507192); i test dei moduli restano simulati.
+- Accesso Web3Forms ancora non disponibile: ultima richiesta protetta annullata. Nessun destinatario modificato e nessun invio reale effettuato.
+- App privata NoeTom non completata: occorre riprendere il repository separato dopo la chiusura dei bloccanti del sito.

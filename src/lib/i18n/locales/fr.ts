@@ -136,7 +136,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Recherches en Ligne & Veille Documentaire',
         subtitle: 'Des informations structurées pour éclairer vos choix stratégiques.',
         description:
-          'Gagnez un temps précieux : je réalise vos recherches documentaires ciblées, benchmarks concurrentiels, sélection de prestataires et synthèses analytiques prêtes à l’emploi.',
+          'Gagnez un temps précieux : je réalise vos recherches documentaires ciblées, benchmarks concurrentiels, sélection de prestataires et synthèses analytiques prêtes à l’emploi. Sont exclus la recherche de contacts pour acquérir des clients, la génération de leads, la prospection à froid, le recrutement de participants à des entretiens et les missions rémunérées au rendez-vous ou à l’entretien.',
         iconName: 'Search',
         items: [
           'Veille concurrentielle et analyse tarifaire',

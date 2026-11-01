@@ -219,3 +219,28 @@ describe('NoeTom AI Concierge 2.0 Test Suite', () => {
     });
   });
 });
+
+
+describe('Research service boundaries', () => {
+  it.each([
+    'Mi serve lead generation e acquisizione clienti',
+    'Can you recruit interview participants?',
+    'Je cherche un service de prospection commerciale',
+    'Necesito captación de clientes',
+    'Do you offer pay-per-appointment work?',
+  ])('excludes acquisition or recruitment: %s', (query) => {
+    const result = recognizeIntent(query);
+    expect(result.isScopeExcluded).toBe(true);
+    expect(result.serviceKey).toBeUndefined();
+    expect(Object.values(result.explanation)).toHaveLength(4);
+  });
+  it.each([
+    'Ricerca fornitori e analisi concorrenti',
+    'Supplier research and competitor analysis',
+    'Recherche de fournisseurs',
+    'Investigación de proveedores',
+    'Gestione email e assistenza clienti esistenti',
+  ])('keeps information research and customer support in scope: %s', (query) => {
+    expect(recognizeIntent(query).isScopeExcluded).toBe(false);
+  });
+});

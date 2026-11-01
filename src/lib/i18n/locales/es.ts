@@ -136,7 +136,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Investigación Online & Desk Research',
         subtitle: 'Información contrastada para respaldar tus decisiones de negocio.',
         description:
-          'Ahorra horas de búsqueda dispersa: realizo estudios de mercado, análisis de competidores, búsqueda de proveedores y síntesis ejecutivas estructuradas.',
+          'Ahorra horas de búsqueda dispersa: realizo estudios de mercado, análisis de competidores, búsqueda de proveedores y síntesis ejecutivas estructuradas. Se excluyen la búsqueda de contactos para captar clientes, la generación de leads, el contacto comercial en frío, el reclutamiento de participantes para entrevistas y los trabajos remunerados por cita o entrevista.',
         iconName: 'Search',
         items: [
           'Análisis comparativo de competidores y precios',
