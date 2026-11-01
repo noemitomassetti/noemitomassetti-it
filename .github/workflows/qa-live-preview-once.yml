@@ -1,0 +1,25 @@
+name: One-time Cloudflare live preview HTTP smoke
+on:
+  push:
+    branches:
+      - chatgpt/site-release-audit-2026-10-29
+    paths:
+      - .github/qa-live-preview-trigger.txt
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify hosted pages and documents (no form submission)
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://chatgpt-site-release-audit-2.noemitomassetti-it.pages.dev"
+          for path in / /it /fr /es /it/contatti /it/esempi-di-lavoro /portfolio-documenti/doc-20-richiesta-preventivo-workflow.html; do
+            code=$(curl -L -sS -o /tmp/noemi-live-smoke.html -w '%{http_code}' --max-time 25 "$base$path")
+            echo "HTTP $code $path"
+            test "$code" = "200"
+            grep -qi -E "Noemi|html" /tmp/noemi-live-smoke.html
+          done
+          echo "Cloudflare branch preview: hosted routes and portfolio document passed."
