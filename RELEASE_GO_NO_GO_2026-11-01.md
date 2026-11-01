@@ -26,6 +26,13 @@ Data verifica: 1 novembre 2026
 - Documentazione ufficiale: https://docs.web3forms.com/getting-started/troubleshooting
 - Per il piano gratuito il test deve essere eseguito da un browser ordinario. Alcuni domini preview `pages.dev` possono essere bloccati da Web3Forms; preferire dominio proprietario verificato/approvato e contattare supporto prima di attribuire fallimenti al codice.
 
+## Verifica live su hosting: superata
+- 1 novembre 2026: GitHub Actions ha verificato tramite HTTPS l'anteprima **realmente ospitata** su Cloudflare Pages per `/`, `/it`, `/fr`, `/es`, `/it/contatti`, `/it/esempi-di-lavoro` e il documento 20 del portfolio.
+- Tutte le rotte hanno risposto **HTTP 200**, con contenuto HTML.
+- Esecuzione verificabile: https://github.com/noemitomassetti/noemitomassetti-it/actions/runs/41321907199
+- Il test non ha inviato moduli né certifica la consegna email.
+- Il workflow temporaneo è stato rimosso dal ramo dopo il suo unico utilizzo.
+
 ## Ultimi passi verificabili
 1. Nel dashboard Web3Forms aprire il modulo **Noemi Tomassetti - Richieste di preventivo > Settings**.
 2. Impostare **Recipient Email = info@noemitomassetti.it** (indirizzo già verificato), salvare. Nessun indirizzo Gmail come destinatario del modulo.
