@@ -48,3 +48,11 @@ Conservare il deployment pubblico attuale e la configurazione del dominio prima 
 - Sul commit precedente 7009300: workflow build e browser entrambi verdi (run 41100507092 e 41100507192); i test dei moduli restano simulati.
 - Accesso Web3Forms ancora non disponibile: ultima richiesta protetta annullata. Nessun destinatario modificato e nessun invio reale effettuato.
 - App privata NoeTom non completata: occorre riprendere il repository separato dopo la chiusura dei bloccanti del sito.
+
+## Collaudo e fornitori — 1 novembre, seconda verifica
+
+- Commit ceda9bc: CI browser run 41314303738 e build run 41314303752 entrambi conclusi con successo. Deployment esatto Cloudflare: https://4d36fc99.noemitomassetti-it.pages.dev/ . Homepage aperta in browser Work: esclusioni commerciali visibili, prezzi e moduli presenti.
+- Web3Forms: la nuova sessione mostra ancora il login. Non dichiarare salvato il destinatario né ricevuto un test.
+- Informativa nelle quattro lingue: distinta la durata delle copie gestite dalla titolare da quella dichiarata da Web3Forms (massimo tre anni, salvo cancellazione anticipata o termine più breve del piano). Fonti consultate: https://web3forms.com/privacy , https://web3forms.com/terms , https://web3forms.com/dpa . Non è una certificazione legale; resta necessaria la verifica della configurazione effettiva di cancellazione del fornitore.
+- Vercel Hobby è limitato all’uso personale non commerciale: https://vercel.com/docs/limits/fair-use-guidelines e https://vercel.com/pricing . Non attivato alcun piano a pagamento. Cloudflare Pages è già operativo come anteprima ed è il candidato per il rilascio a costo minimo; https://www.cloudflare.com/products/pages/ e https://developers.cloudflare.com/pages/platform/limits/ . Piano effettivo, dominio e DNS restano da verificare prima di pubblicare.
+- Recuperato da Virtual Camp NOETOM_ITERAZIONE_29_10_2026_B.zip: sorgenti privati separati dal repository pubblico. 16 test offline di sicurezza/preventivi superati. Il progetto contiene PRODUCTION_STORAGE_NOT_READY e accessi a JSON locali: non è pronto per dati operativi né per un collegamento pubblico. Il recupero sostituisce la precedente indicazione di sorgenti non presenti, non il verdetto di produzione.
