@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { BASE_DOMAIN, getHreflangAlternates, getLocalizedPath } from "@/lib/i18n/routes";
+import type { Language, PageKey } from "@/lib/i18n/types";
 
 export interface AlternateLink {
   hrefLang: string;
@@ -6,6 +8,9 @@ export interface AlternateLink {
 }
 
 interface SEOProps {
+  /** Used to produce the matching canonical/hreflang links on localized pages. */
+  pageKey?: PageKey;
+  currentLang?: Language;
   title: string;
   description: string;
   canonical?: string;
@@ -18,6 +23,8 @@ interface SEOProps {
 }
 
 export const useSEO = ({
+  pageKey,
+  currentLang,
   title,
   description,
   canonical,
@@ -49,35 +56,40 @@ export const useSEO = ({
     updateMetaTag("og:description", description, true);
     updateMetaTag("og:type", ogType, true);
     updateMetaTag("og:locale", ogLocale, true);
-    updateMetaTag("og:image", ogImage, true);
+    const absoluteOgImage = new URL(ogImage, "https://www.noemitomassetti.it").href;
+    updateMetaTag("og:image", absoluteOgImage, true);
     updateMetaTag("twitter:title", title);
     updateMetaTag("twitter:description", description);
-    updateMetaTag("twitter:image", ogImage);
+    updateMetaTag("twitter:image", absoluteOgImage);
     updateMetaTag("twitter:card", "summary_large_image");
 
-    if (noindex) {
-      updateMetaTag("robots", "noindex, nofollow");
-    } else {
-      updateMetaTag("robots", "index, follow");
-    }
+    // Never override staging noindex with the page's default index setting.
+    const hostname = window.location.hostname.toLowerCase();
+    const isPublicHost = hostname === "www.noemitomassetti.it" || hostname === "noemitomassetti.it";
+    updateMetaTag("robots", noindex || !isPublicHost ? "noindex, nofollow" : "index, follow");
 
-    // Update canonical link
-    if (canonical) {
+    // Update canonical link. Older callers can supply canonical explicitly.
+    const resolvedCanonical = canonical || (pageKey && currentLang
+      ? `${BASE_DOMAIN}${getLocalizedPath(pageKey, currentLang)}`
+      : undefined);
+    if (resolvedCanonical) {
       let link = document.querySelector(`link[rel="canonical"]`);
       if (!link) {
         link = document.createElement("link");
         link.setAttribute("rel", "canonical");
         document.head.appendChild(link);
       }
-      link.setAttribute("href", canonical);
-      updateMetaTag("og:url", canonical, true);
+      link.setAttribute("href", resolvedCanonical);
+      updateMetaTag("og:url", resolvedCanonical, true);
     }
 
     // Manage hreflang alternate links
-    const defaultAlternates: AlternateLink[] = canonical
+    const defaultAlternates: AlternateLink[] = pageKey
+      ? getHreflangAlternates(pageKey)
+      : resolvedCanonical
       ? [
-          { hrefLang: "it", href: canonical },
-          { hrefLang: "x-default", href: canonical },
+          { hrefLang: "it", href: resolvedCanonical },
+          { hrefLang: "x-default", href: resolvedCanonical },
         ]
       : [];
 
@@ -107,5 +119,5 @@ export const useSEO = ({
     } else if (script) {
       script.remove();
     }
-  }, [title, description, canonical, ogImage, ogType, ogLocale, noindex, alternates, schema]);
+  }, [title, description, canonical, pageKey, currentLang, ogImage, ogType, ogLocale, noindex, alternates, schema]);
 };

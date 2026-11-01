@@ -2,77 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.noemitomassetti.it/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.noemitomassetti.it/it</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/risorse</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.noemitomassetti.it/fr</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/services</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/it/servizi</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/fr/services</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/servicios</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/noetom</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/it/noetom</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/fr/noetom</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/noetom</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/about</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/it/chi-sono</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/fr/a-propos</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/sobre-mi</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/resources</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/it/risorse</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/fr/ressources</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/recursos</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/it/contatti</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/fr/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/contacto</loc>
   </url>
   <url>
     <loc>https://www.noemitomassetti.it/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/it/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/fr/politique-de-confidentialite</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/politica-de-privacidad</loc>
   </url>
   <url>
     <loc>https://www.noemitomassetti.it/cookie-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/come-organizzare-la-tua-agenda-in-5-step</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/it/cookie-policy</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/perche-delegare-e-la-scelta-piu-efficace-per-far-crescere-la-tua-attivita</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/fr/politique-de-cookies</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/5-strumenti-gratuiti-utili-per-organizzare-meglio-il-lavoro-con-clienti-e-appuntamenti</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/es/politica-de-cookies</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/gestione-email-come-organizzare-la-posta-in-arrivo-e-riprendere-il-controllo-del-tuo-tempo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/work-examples</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/supporto-multilingue-come-gestire-richieste-e-comunicazioni-in-inglese-francese-e-spagnolo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/it/esempi-di-lavoro</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/come-preparare-la-tua-attivita-per-le-ferie-estive-senza-stress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/fr/exemples-de-projets</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/customer-care-come-migliorare-esperienza-dei-tuoi-clienti-fin-dal-primo-contatto</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/es/ejemplos-de-trabajo</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/disdette-ultimo-minuto-come-gestirle-senza-stress</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/professional-research</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/come-organizzare-agenda-libero-professionista</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/it/ricerca-professionisti</loc>
   </url>
   <url>
-    <loc>https://www.noemitomassetti.it/blog/sito-web-o-landing-page</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.noemitomassetti.it/fr/recherche-professionnels</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/investigacion-profesionales</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/italian-localisation</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/it/localizzazione-italiano</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/fr/localisation-italien</loc>
+  </url>
+  <url>
+    <loc>https://www.noemitomassetti.it/es/localizacion-italiano</loc>
   </url>
 </urlset>

@@ -1,13 +1,16 @@
 import { Layout } from "@/components/Layout";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { getBlogPosts } from "@/lib/blogData";
+import { getBlogPostBySlug, getBlogPosts } from "@/lib/blogData";
 import { useSEO } from "@/hooks/useSEO";
+import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const post = getBlogPosts().find((p) => p.slug === slug || p.id === Number(slug));
+  const location = useLocation();
+  const currentLang = getLanguageFromPath(location.pathname);
+  const post = slug ? getBlogPostBySlug(slug) : undefined;
 
   useSEO({
     title: post ? `${post.title} | Blog | Noemi Tomassetti` : "Blog | Noemi Tomassetti",
@@ -58,7 +61,7 @@ const BlogPost = () => {
           "name": "Noemi Tomassetti Virtual Assistant",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.noemitomassetti.it/favicon.png"
+            "url": "https://www.noemitomassetti.it/favicon.svg"
           }
         },
         "description": post.excerpt
@@ -67,16 +70,70 @@ const BlogPost = () => {
   });
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to={getLocalizedPath("resources", currentLang)} replace />;
   }
 
+  const backLabel =
+    currentLang === "fr"
+      ? "Retour aux ressources"
+      : currentLang === "es"
+      ? "Volver a recursos"
+      : currentLang === "en"
+      ? "Back to resources"
+      : "Torna alle risorse";
+
+  const ctaTitle =
+    currentLang === "fr"
+      ? "Besoin d'un accompagnement pour structurer votre activité ?"
+      : currentLang === "es"
+      ? "¿Necesitas apoyo para organizar y optimizar tu negocio?"
+      : currentLang === "en"
+      ? "Need dedicated support to streamline your business operations?"
+      : "Hai bisogno di supporto per organizzare la tua attività?";
+
+  const ctaDesc =
+    currentLang === "fr"
+      ? "Décrivez vos besoins par écrit pour recevoir une proposition adaptée, sans appel préalable obligatoire."
+      : currentLang === "es"
+      ? "Explícame tus necesidades por escrito para recibir una propuesta adaptada, sin llamada previa obligatoria."
+      : currentLang === "en"
+      ? "Describe your needs in writing to receive a tailored proposal, without a mandatory introductory call."
+      : "Raccontami per iscritto cosa vorresti delegare: riceverai una proposta personalizzata, senza chiamata conoscitiva obbligatoria.";
+
+  const ctaBtn =
+    currentLang === "fr"
+      ? "DEMANDER UN DEVIS ÉCRIT"
+      : currentLang === "es"
+      ? "SOLICITAR PRESUPUESTO"
+      : currentLang === "en"
+      ? "REQUEST A WRITTEN QUOTE"
+      : "RICHIEDI PREVENTIVO SCRITTO";
+
+  const authorBio =
+    currentLang === "fr"
+      ? "Assistante virtuelle forte de plus de 20 ans d'expérience opérationnelle, diplômée en Médiation Linguistique et Traduction Spécialisée, j'accompagne indépendants et TPE dans leur organisation quotidienne."
+      : currentLang === "es"
+      ? "Como asistente virtual aporto más de 20 años de experiencia profesional, con formación en Mediación Lingüística y Traducción Especializada, para apoyar a profesionales y pymes en su gestión diaria."
+      : currentLang === "en"
+      ? "As a Virtual Assistant, I bring 20+ years of corporate back-office expertise, alongside a formal degree in Linguistic Mediation and Specialized Translation, to support independent professionals and European businesses."
+      : "Oggi, come Assistente Virtuale, metto a disposizione oltre 20 anni di esperienza professionale, insieme alla mia formazione in Mediazione Linguistica e Traduzione Specialistica, per supportare liberi professionisti e piccole aziende nella gestione operativa e organizzativa.";
+
+  const relatedTitle =
+    currentLang === "fr"
+      ? "Vous pourriez aussi aimer..."
+      : currentLang === "es"
+      ? "También te puede interesar..."
+      : currentLang === "en"
+      ? "You might also be interested in..."
+      : "Potrebbe interessarti anche...";
+
   return (
-    <Layout>
+    <Layout lang={currentLang}>
       <article className="container px-4 md:px-6 py-10 md:py-16 max-w-3xl mx-auto">
         <Button variant="ghost" asChild className="mb-8 -ml-4 text-foreground/70 hover:text-primary">
-          <Link to="/blog">
+          <Link to={getLocalizedPath("resources", currentLang)}>
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Torna al blog
+            {backLabel}
           </Link>
         </Button>
         
@@ -111,13 +168,13 @@ const BlogPost = () => {
         {/* Lead Capture Callout Box */}
         <div className="my-12 p-6 md:p-8 bg-card border border-primary/30 rounded-2xl shadow-md text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
-            <h3 className="text-xl font-bold text-primary">Hai bisogno di supporto per organizzare la tua attività?</h3>
+            <h3 className="text-xl font-bold text-primary">{ctaTitle}</h3>
             <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
-              Analizziamo insieme la tua gestione operativa. Prenota una videochiamata conoscitiva di 30 minuti, gratuita e senza impegno.
+              {ctaDesc}
             </p>
           </div>
           <Button asChild size="lg" className="shrink-0 bg-primary text-primary-foreground font-bold uppercase tracking-wider text-xs px-6 py-6 hover:scale-105 transition-all">
-            <Link to="/#contatti">PRENOTA CALL GRATUITA</Link>
+            <Link to={getLocalizedPath('contact', currentLang) + '#contact-section'}>{ctaBtn}</Link>
           </Button>
         </div>
 
@@ -127,13 +184,13 @@ const BlogPost = () => {
             <h2 className="text-xl font-bold text-primary mb-2" itemProp="name">Noemi Tomassetti</h2>
             <p className="text-sm text-primary/80 font-medium mb-3" itemProp="jobTitle">Virtual Assistant</p>
             <p className="text-base text-foreground/80 leading-relaxed" itemProp="description">
-              Oggi, come Assistente Virtuale, metto a disposizione oltre 20 anni di esperienza professionale, insieme alla mia formazione in Mediazione Linguistica e Traduzione Specialistica, per supportare liberi professionisti e piccole aziende nella gestione operativa e organizzativa.
+              {authorBio}
             </p>
           </div>
         </address>
 
         <div className="mt-16 pt-10 border-t border-border/50">
-          <h2 className="text-2xl font-bold text-primary mb-6">Potrebbe interessarti anche...</h2>
+          <h2 className="text-2xl font-bold text-primary mb-6">{relatedTitle}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {getBlogPosts()
               .filter(p => p.id !== post.id && p.published !== false)

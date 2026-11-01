@@ -1,0 +1,177 @@
+name: Browser smoke for site release review
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies and browser driver
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+      - name: Build simulated unconfigured-form preview
+        run: VITE_WEB3FORMS_ACCESS_KEY='' npm run build
+      - name: Start production preview
+        shell: bash
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/site-preview.log 2>&1 &
+          echo $! > /tmp/site-preview.pid
+          for i in $(seq 1 35); do
+            if curl -fsS http://127.0.0.1:4173/ > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fIs http://127.0.0.1:4173/ | head
+      - name: Test actual browser and take screenshots
+        shell: bash
+        run: |
+          mkdir -p /tmp/noemi-smoke
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({channel: 'chrome', headless: true, args: ['--no-sandbox']});
+            try {
+              const page = await browser.newPage({viewport:{width:1365,height:920}});
+              const errors = [];
+              page.on('pageerror',e=>errors.push(e.message));
+              const routes = ['/', '/it', '/fr', '/es', '/it/contatti', '/it/esempi-di-lavoro', '/en-not-a-page'];
+              for (const path of routes) {
+                const resp = await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle',timeout:20000});
+                if(!resp || resp.status()!==200) throw new Error('Route '+path+' HTTP '+resp?.status());
+                const text = await page.locator('body').innerText();
+                if (text.length < 150) throw new Error('Too little rendered text for '+path+': '+text.length);
+                const safe = path.replace(/[^a-z0-9]/gi,'_')||'home';
+                await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
+                console.log('PASS route '+path+' content chars='+text.length+' title='+await page.title());
+              }
+              for (const path of ['/portfolio-documenti/doc-01-localizzazione-interior-design.html','/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html']) {
+                const response = await page.request.get('http://127.0.0.1:4173'+path);
+                const text = await response.text();
+                if(!response.ok() || text.length<1000 || !text.includes('<html')) throw new Error('Document not reachable: '+path);
+                console.log('PASS HTML portfolio document '+path);
+              }
+              // Specifically guard against clipped header links on narrow mobile/laptop/wide screens.
+              for (const width of [390, 768, 1365, 1536]) {
+                await page.setViewportSize({width,height:900});
+                await page.goto('http://127.0.0.1:4173/it',{waitUntil:'networkidle'});
+                const clipped = await page.locator('header a, header button').evaluateAll(elements =>
+                  elements.filter(el => {
+                    const r=el.getBoundingClientRect();
+                    const style=getComputedStyle(el);
+                    return style.display!=='none' && r.width>0 && (r.left < -2 || r.right > innerWidth+2);
+                  }).map(el=>el.textContent?.trim() || el.getAttribute('aria-label') || 'unknown')
+                );
+                if (clipped.length) throw new Error('Header clipped at '+width+'px: '+clipped.join(', '));
+                await page.screenshot({path:'/tmp/noemi-smoke/responsive_'+width+'.png',fullPage:false});
+                console.log('PASS responsive header '+width+'px');
+                if (width===390) {
+                  await page.getByRole('button',{name:'Toggle navigation menu'}).click();
+                  if(!await page.getByRole('navigation').count()) throw new Error('Mobile nav missing');
+                  console.log('PASS mobile menu');
+                }
+              }
+              // Until the new provider has been verified, NEVER transmit personal data
+              // to the previously failing provider. The visitor gets a usable manual draft.
+              await page.setViewportSize({width:1365,height:900});
+              let attemptedPosts = 0;
+              await page.route(/https:\/\/(formsubmit\.co|api\.web3forms\.com)\//, async route => {
+                attemptedPosts++;
+                await route.fulfill({status:403, contentType:'text/html', body:'<html>Just a moment...</html>'});
+              });
+              await page.goto('http://127.0.0.1:4173/it/contatti',{waitUntil:'networkidle'});
+              await page.locator('#form-firstName').fill('Cliente');
+              await page.locator('#form-lastName').fill('Test');
+              await page.locator('#form-email').fill('test@example.org');
+              await page.locator('#form-service').selectOption({index:1});
+              await page.locator('#form-message').fill('TEST MODULO SITO: nessun incarico reale e nessuna email da inviare.');
+              await page.locator('#form-gdprConsent').check();
+              await page.locator('button[type="submit"]').click();
+              await page.getByRole('alert').waitFor({timeout:10000});
+              const alertText=await page.getByRole('alert').innerText();
+              if(!alertText.includes('non è ancora attivo')) throw new Error('Missing unconfigured-provider notice: '+alertText.slice(0,300));
+              const emailLink=page.getByRole('link',{name:'Apri email già compilata'});
+              const href=await emailLink.getAttribute('href');
+              if(!href?.startsWith('mailto:info@noemitomassetti.it?') || !decodeURIComponent(href).includes('nessun incarico reale'))
+                throw new Error('Manual email fallback failed to preserve the enquiry');
+              if(await page.locator('#form-message').inputValue() !== 'TEST MODULO SITO: nessun incarico reale e nessuna email da inviare.')
+                throw new Error('Failed request was not preserved');
+              if(attemptedPosts!==0) throw new Error('Unexpected provider request without configured provider: '+attemptedPosts);
+              await page.screenshot({path:'/tmp/noemi-smoke/provider_unconfigured_manual_fallback.png',fullPage:true});
+              console.log('PASS unconfigured provider - zero attempted POSTs, preserved text and manual email fallback');
+              if(errors.length) throw new Error('Browser JS exceptions: '+errors.slice(0,5).join(' | '));
+            } finally { await browser.close(); }
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Test Web3Forms browser success and failure with simulated provider
+        shell: bash
+        run: |
+          # A temporary public example key is injected ONLY into this CI build.
+          # All network requests to Web3Forms are mocked by the test browser.
+          VITE_WEB3FORMS_ACCESS_KEY=12345678-1234-1234-1234-123456789012 npm run build
+          npm run preview -- --host 127.0.0.1 --port 4174 > /tmp/site-web3forms-preview.log 2>&1 &
+          for i in $(seq 1 35); do
+            if curl -fsS http://127.0.0.1:4174/ > /dev/null; then break; fi
+            sleep 1
+          done
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({channel:'chrome',headless:true,args:['--no-sandbox']});
+            try {
+              const page=await browser.newPage({viewport:{width:1280,height:850}});
+              let requests=0;
+              let responseType='success';
+              await page.route('https://api.web3forms.com/submit', async route => {
+                requests++;
+                const body=route.request().postDataJSON();
+                if(body.access_key!=='12345678-1234-1234-1234-123456789012') throw Error('Wrong Web3Forms key');
+                if(body.email!=='contact-test@example.org' || !body.message.includes('TEST DI COLLAUDO')) throw Error('Form data incomplete');
+                if(responseType==='success') {
+                  await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({success:true,message:'Mock accepted'})});
+                } else {
+                  await route.fulfill({status:403,contentType:'application/json',body:JSON.stringify({success:false,message:'Mock provider blocked'})});
+                }
+              });
+              async function fillForm(){
+                await page.goto('http://127.0.0.1:4174/it/contatti',{waitUntil:'networkidle'});
+                await page.locator('#form-firstName').fill('Cliente');
+                await page.locator('#form-lastName').fill('Collaudo');
+                await page.locator('#form-email').fill('contact-test@example.org');
+                await page.locator('#form-service').selectOption({index:1});
+                await page.locator('#form-message').fill('TEST DI COLLAUDO: verifica invio simulato, nessun dato reale.');
+                await page.locator('#form-gdprConsent').check();
+              }
+              await fillForm();
+              await page.locator('button[type=submit]').click();
+              await page.getByText(/servizio di inoltro email ha accettato la richiesta/i).waitFor({timeout:10000});
+              if(requests!==1) throw Error('Expected one provider request after mocked success; got '+requests);
+              console.log('PASS Web3Forms mocked success with one POST and truthful provider acknowledgement');
+              responseType='failure';
+              await fillForm();
+              await page.locator('button[type=submit]').click();
+              await page.getByRole('alert').waitFor({timeout:10000});
+              const fallback=page.getByRole('link',{name:'Apri email già compilata'});
+              if(!await fallback.isVisible()) throw Error('No manual fallback after Web3Forms error');
+              if(requests!==2) throw Error('Expected one POST per form; got '+requests);
+              console.log('PASS Web3Forms mocked 403 with preserved request and manual fallback');
+            } finally {await browser.close();}
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Upload browser screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: noemi-site-browser-smoke
+          path: /tmp/noemi-smoke/*.png
+          if-no-files-found: ignore

@@ -1,0 +1,25 @@
+FILE MODIFICATI rispetto allo ZIP del 29/10/2026:
+index.html
+server.ts
+.env.example
+public/sitemap.xml
+src/App.tsx
+server/unifiedStore.ts
+src/pages/Contact.tsx
+src/pages/NoeTom.tsx
+src/hooks/useSEO.ts
+src/components/ContactForm.tsx
+src/components/BookingButton.tsx
+src/components/NoeTomEarlyAccessForm.tsx
+src/context/DataContext.tsx
+src/test/apiClientAdapter.test.ts
+src/lib/api/clientAdapter.ts
+src/lib/i18n/locales/fr.ts
+src/lib/i18n/locales/it.ts
+src/lib/i18n/locales/en.ts
+src/lib/i18n/locales/es.ts
+
+FILE AGGIUNTI:
+.gitignore
+
+ESCLUSI per privacy: data/users/owner_noemi.json, data/public_requests.json
