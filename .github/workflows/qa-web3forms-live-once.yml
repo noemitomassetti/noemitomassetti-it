@@ -1,0 +1,40 @@
+name: One-time Web3Forms provider acceptance test
+on:
+  push:
+    branches:
+      - chatgpt/site-release-audit-2026-10-29
+    paths:
+      - .github/qa-web3forms-acceptance-trigger.txt
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit one synthetic test to Web3Forms
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, urllib.error
+          body = {
+            "access_key": "9e1b181f-fe7c-40d4-870e-6d1de9796288",
+            "name": "TEST TECNICO NOEMI - NON CLIENTE",
+            "email": "noemitom@gmail.com",
+            "subject": "[COLLAUDO NOEMI] Test consegna 1 novembre 2026",
+            "message": "Richiesta tecnica sintetica di prova. Nessun incarico. ID: NOEMI-SITO-WEB3-20261101-01",
+            "botcheck": False
+          }
+          request = urllib.request.Request("https://api.web3forms.com/submit", data=json.dumps(body).encode(), headers={"Content-Type":"application/json","Accept":"application/json"}, method="POST")
+          try:
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  payload = response.read(1600).decode(errors="replace")
+                  print("Provider HTTP:", response.status)
+                  print("Provider response:", payload)
+                  result=json.loads(payload)
+                  assert response.status == 200 and result.get("success") is True
+          except urllib.error.HTTPError as error:
+              print("Provider HTTP error:", error.code)
+              print(error.read(1200).decode(errors="replace"))
+              raise
+          print("ACCEPTED BY PROVIDER ONLY. FINAL INBOX DELIVERY NOT PROVED.")
+          PY
