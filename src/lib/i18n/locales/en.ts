@@ -41,7 +41,7 @@ export const enLocale: TranslationDictionary = {
     desc1: 'Offering over twenty years of organizational and linguistic expertise to help you manage day-to-day operations seamlessly.',
     desc2: 'From email and schedule management to client communications, translations, and editing website content: flexible, professional support tailored to your needs.',
     ctaButton: 'REQUEST A QUOTE',
-    callReassurance: 'Written replies • No introductory call required',
+    callReassurance: 'No-obligation enquiry',
     description:
       'I bring structured order to your daily workflows, coordinate communications in four languages, and manage essential back-office operations with precision, discretion, and care.',
     ctaServices: 'Explore Services',
