@@ -31,9 +31,9 @@ export default function ItalianLocalisationPage() {
   const content = {
     it: {
       metaTitle: "Localizzazione in Italiano per Aziende Estere | Noemi Tomassetti",
-      metaDesc: "Servizio specialistico di localizzazione EN→IT e FR→IT, post-editing e adattamento culturale per aziende e professionisti esteri.",
+      metaDesc: "Servizio specialistico di localizzazione EN→IT, FR→IT e ES→IT, post-editing e adattamento culturale per aziende e professionisti esteri.",
       tag: "FLAGSHIP PER IL MERCATO ESTERO",
-      title: "Italian Translation & Cultural Localisation",
+      title: "Traduzione e localizzazione verso l’italiano",
       subtitle:
         "Fai parlare il tuo marchio in italiano autentico. Non semplici traduzioni letterali, ma adattamento linguistico, culturale e commerciale curato da una professionista madrelingua con master in traduzione specialistica.",
       primaryCta: "Richiedi un preventivo",
@@ -44,7 +44,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Traduzione Specialistica",
-          desc: "Trasferimento accurato del significato da inglese o francese a italiano per testi economici, tecnici, contrattuali e materiali aziendali.",
+          desc: "Traduzione accurata dall’inglese, dal francese o dallo spagnolo verso l’italiano per testi economici, tecnici, contrattuali e materiali aziendali.",
           deliverable: "Testi fedeli al testo originale, terminologia rigorosa, glossari dedicati.",
         },
         {
@@ -88,18 +88,18 @@ export default function ItalianLocalisationPage() {
         "Schede prodotto per e-commerce e cataloghi commerciali",
         "Campagne email, newsletter e sequenze di onboarding clienti",
         "Documentazione di supporto, FAQ e microcopy per applicazioni digitali",
-        "Glossari bilingue EN-IT / FR-IT e linee guida di stile per il mercato italiano",
+        "Glossari bilingue EN-IT / FR-IT / ES-IT e linee guida di stile per il mercato italiano",
         "Post-editing di traduzioni AI e revisione critica di bozze esistenti",
       ],
       scopeNote:
-        "Tutte le traduzioni verso l'italiano sono svolte e verificate direttamente da Noemi Tomassetti in quanto madrelingua. Per combinazioni inverse (IT→EN/FR/ES), il servizio è offerto come supporto operativo con perimetro concordato; la revisione di un revisore madrelingua esterno viene inclusa solo se espressamente concordata e contrattualizzata.",
+        "Tutte le traduzioni verso l'italiano sono svolte e verificate direttamente da Noemi Tomassetti in quanto madrelingua. Non offro traduzioni professionali dall’italiano verso inglese, francese o spagnolo, né servizi di acquisizione clienti, contabilità o fatturazione.",
       pricingTitle: "Tariffario di Riferimento",
       pricingDesc:
-        "Traduzione generale da 0,09 €/parola; specialistica EN ↔ IT da 0,12 €/parola; localizzazione web da 0,11 €/parola; revisione e post-editing da 0,03 €/parola. I prezzi sono indicativi e soggetti a valutazione del testo e delle tempistiche.",
+        "Traduzione generale da 0,09 €/parola; specialistica verso l’italiano da 0,12 €/parola; localizzazione web da 0,11 €/parola; revisione e post-editing da 0,03 €/parola. I prezzi sono indicativi e soggetti a valutazione del testo e delle tempistiche.",
     },
     en: {
       metaTitle: "Italian Translation & Localisation Services | Noemi Tomassetti",
-      metaDesc: "Specialist EN→IT and FR→IT localization, AI translation post-editing, and cultural adaptation for international businesses expanding into Italy.",
+      metaDesc: "Specialist EN→IT, FR→IT and ES→IT localisation, AI translation post-editing, and cultural adaptation for international businesses expanding into Italy.",
       tag: "FLAGSHIP INTERNATIONAL SERVICE",
       title: "Italian Translation & Cultural Localisation",
       subtitle:
@@ -112,7 +112,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Specialist Translation",
-          desc: "Faithful and accurate semantic transfer from English or French into Italian for business, commercial, contractual, and technical copy.",
+          desc: "Faithful and accurate semantic transfer from English, French or Spanish into Italian for business, commercial, contractual, and technical copy.",
           deliverable: "Uncompromising precision, correct industry register, and bespoke bilingual termbases.",
         },
         {
@@ -156,18 +156,18 @@ export default function ItalianLocalisationPage() {
         "E-commerce product sheets, category descriptions, and brand stories",
         "Marketing email sequences, newsletters, and client onboarding guides",
         "Customer support templates, help centers, and transactional user interface microcopy",
-        "Bilingual EN-IT / FR-IT glossaries and market-specific style guides",
+        "Bilingual EN-IT / FR-IT / ES-IT glossaries and market-specific style guides",
         "AI translation post-editing and quality assurance of existing Italian assets",
       ],
       scopeNote:
-        "All Italian translations are translated and revised directly by Noemi Tomassetti as a native Italian professional. For inverse combinations (IT→EN/FR/ES), support is provided within defined operational scopes; external native review is included only when explicitly agreed upon and contracted.",
+        "All Italian translations are translated and revised directly by Noemi Tomassetti as a native Italian professional. I do not offer professional translation from Italian into English, French or Spanish, telemarketing, customer acquisition, bookkeeping or invoicing.",
       pricingTitle: "Baseline Indicative Pricing",
       pricingDesc:
-        "General translation from €0.09/word; specialist EN ↔ IT from €0.12/word; website localization from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
+        "General translation from €0.09/word; specialist translation into Italian from €0.12/word; website localization from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
     },
     fr: {
       metaTitle: "Localisation en Italien pour Entreprises | Noemi Tomassetti",
-      metaDesc: "Services spécialisés de traduction et localisation FR→IT et EN→IT, post-édition IA et adaptation culturelle pour entreprises internationales.",
+      metaDesc: "Services spécialisés de traduction et localisation FR→IT, EN→IT et ES→IT, post-édition IA et adaptation culturelle pour entreprises internationales.",
       tag: "OFFRE PHARES POUR CLIENTS INTERNATIONAUX",
       title: "Localisation en Italien & Traduction Spécialisée",
       subtitle:
@@ -180,7 +180,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Traduction Spécialisée",
-          desc: "Restitution fidèle et rigoureuse depuis le français ou l'anglais vers l'italien pour vos documents commerciaux, techniques et contractuels.",
+          desc: "Restitution fidèle et rigoureuse du français, de l’anglais ou de l’espagnol vers l’italien pour vos documents commerciaux, techniques et contractuels.",
           deliverable: "Vocabulaire précis, respect du registre professionnel et lexique bilingue dédié.",
         },
         {
@@ -224,14 +224,14 @@ export default function ItalianLocalisationPage() {
         "Fiches descriptives pour boutiques en ligne et catalogues",
         "Séquences d'e-mails commerciaux et lettres d'information",
         "Guides utilisateurs, foires aux questions (FAQ) et micro-textes d'application",
-        "Glossaires bilingues FR-IT / EN-IT et guides de style pour le marché italien",
+        "Glossaires bilingues FR-IT / EN-IT / ES-IT et guides de style pour le marché italien",
         "Post-édition de contenus générés par IA et relecture professionnelle",
       ],
       scopeNote:
-        "Toutes les traductions vers l'italien sont assurées directement par Noemi Tomassetti, locutrice native. Pour les combinaisons inverses (IT→FR/EN/ES), le service constitue un soutien opérationnel ; la relecture par un tiers natif n'est intégrée que si expressément convenue au contrat.",
+        "Toutes les traductions vers l'italien sont assurées directement par Noemi Tomassetti, locutrice native. Je ne propose pas de traduction professionnelle de l’italien vers le français, l’anglais ou l’espagnol, ni de prospection commerciale, de comptabilité ou de facturation.",
       pricingTitle: "Grille Tarifaire Indicative",
       pricingDesc:
-        "Traduction générale dès 0,09 €/mot ; spécialisée EN ↔ IT dès 0,12 €/mot ; localisation web dès 0,11 €/mot ; révision et post-édition dès 0,03 €/mot. Tarifs indicatifs selon complexité et délais.",
+        "Traduction générale dès 0,09 €/mot ; spécialisée vers l’italien dès 0,12 €/mot ; localisation web dès 0,11 €/mot ; révision et post-édition dès 0,03 €/mot. Tarifs indicatifs selon complexité et délais.",
     },
     es: {
       metaTitle: "Traducción y Localización al Italiano | Noemi Tomassetti",
@@ -248,7 +248,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Traducción Especializada",
-          desc: "Traslado riguroso desde el inglés o francés hacia el italiano de documentos comerciales, contractuales y corporativos.",
+          desc: "Traslado riguroso desde el español, el inglés o el francés al italiano de documentos comerciales, contractuales y corporativos.",
           deliverable: "Exactitud terminológica, tono profesional y glosarios bilingües específicos.",
         },
         {
@@ -296,10 +296,10 @@ export default function ItalianLocalisationPage() {
         "Posedición de traducciones generadas por IA y control de calidad",
       ],
       scopeNote:
-        "Todas las traducciones hacia el italiano son realizadas y revisadas directamente por Noemi Tomassetti como profesional nativa. En combinaciones inversas (IT→ES/EN/FR), se ofrece soporte operativo acotado; la revisión externa nativa solo se incluye si se pacta expresamente en el contrato.",
+        "Todas las traducciones hacia el italiano son realizadas y revisadas directamente por Noemi Tomassetti como profesional nativa. No ofrezco traducción profesional del italiano al español, inglés o francés, ni captación de clientes, contabilidad o facturación.",
       pricingTitle: "Tarifas de Referencia",
       pricingDesc:
-        "Traducción general desde 0,09 €/palabra; especializada EN ↔ IT desde 0,12 €/palabra; localización web desde 0,11 €/palabra; revisión y posedición desde 0,03 €/palabra. Tarifas orientativas según complejidad y plazo.",
+        "Traducción general desde 0,09 €/palabra; especializada al italiano desde 0,12 €/palabra; localización web desde 0,11 €/palabra; revisión y posedición desde 0,03 €/palabra. Tarifas orientativas según complejidad y plazo.",
     },
   }[lang];
 
