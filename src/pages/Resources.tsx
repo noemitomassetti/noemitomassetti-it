@@ -30,7 +30,7 @@ const getTools = (lang: Language) => {
         { name: "Gmail / Workspace", desc: "per una gestione ordinata delle comunicazioni e dei filtri" },
         { name: "Notion / Asana / Trello", desc: "per organizzare attività, scadenze e processi aziendali" },
         { name: "Canva", desc: "per contenuti semplici, presentazioni e materiali visivi" },
-        { name: "CRM & Automazioni", desc: "per tracciare contatti, lead e relazioni con i clienti" },
+        { name: "Organizzazione e assistenza clienti", desc: "per seguire richieste e assistenza dei clienti già acquisiti" },
       ];
     case "fr":
       return [
@@ -38,7 +38,7 @@ const getTools = (lang: Language) => {
         { name: "Gmail / Workspace", desc: "pour une gestion claire et filtrée de vos correspondances" },
         { name: "Notion / Asana / Trello", desc: "pour structurer vos tâches, échéances et processus" },
         { name: "Canva", desc: "pour concevoir vos supports visuels et présentations" },
-        { name: "CRM & Automatisations", desc: "pour suivre vos prospects, relances et relations clients" },
+        { name: "Organisation du service client", desc: "pour suivre les demandes et les échanges avec les clients existants" },
       ];
     case "es":
       return [
@@ -46,7 +46,7 @@ const getTools = (lang: Language) => {
         { name: "Gmail / Workspace", desc: "para una gestión ordenada y filtrada de tus correos" },
         { name: "Notion / Asana / Trello", desc: "para estructurar tareas, plazos y procesos operativos" },
         { name: "Canva", desc: "para crear contenidos visuales y presentaciones atractivas" },
-        { name: "CRM y Automatizaciones", desc: "para hacer seguimiento a contactos, leads y clientes" },
+        { name: "Organización de atención al cliente", desc: "para gestionar solicitudes y asistencia a clientes existentes" },
       ];
     default:
       return [
@@ -54,7 +54,7 @@ const getTools = (lang: Language) => {
         { name: "Gmail / Workspace", desc: "for structured inbox triage, folders, and clean filters" },
         { name: "Notion / Asana / Trello", desc: "to manage tasks, client projects, and operations" },
         { name: "Canva", desc: "for quick graphics, visual assets, and presentation slide decks" },
-        { name: "CRM & Automations", desc: "to track contacts, follow-ups, and customer relationships" },
+        { name: "Customer service tools", desc: "to organise support requests and follow-ups for existing customers" },
       ];
   }
 };
