@@ -368,7 +368,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
               {manualCopyVisible && (
                 <textarea
                   readOnly
-                  aria-label={lang === 'it' ? 'Richiesta da copiare manualmente' : 'Request text to copy'}
+                  aria-label={lang === "it" ? "Richiesta da copiare manualmente" : lang === "fr" ? "Texte de la demande à copier manuellement" : lang === "es" ? "Texto de la solicitud para copiar manualmente" : "Request text to copy"}
                   className="w-full h-40 rounded-md border border-border bg-background p-2 text-foreground text-xs"
                   value={manualRequestText}
                   onFocus={e => e.currentTarget.select()}
@@ -428,7 +428,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
               <Input
                 id="form-phone"
                 type="tel"
-                placeholder={lang === 'it' ? "Numero (opzionale)" : "(Optional)"}
+                placeholder={lang === "it" ? "Numero (opzionale)" : lang === "fr" ? "Numéro (facultatif)" : lang === "es" ? "Número (opcional)" : "(Optional)"}
                 value={formData.telefono}
                 onChange={(e) => handleChange("telefono", e.target.value)}
                 disabled={isSubmitting}
@@ -465,7 +465,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
             <Textarea
               id="form-message"
               required
-              placeholder={lang === 'it' ? "Raccontami brevemente la tua attività e quali aspetti vorresti delegare o organizzare meglio." : "Tell me about your business and which operational areas you would like to streamline."}
+              placeholder={lang === "it" ? "Raccontami brevemente la tua attività e quali aspetti vorresti delegare o organizzare meglio." : lang === "fr" ? "Présentez votre projet et précisez les contenus italiens ou les tâches opérationnelles pour lesquels vous avez besoin d’aide." : lang === "es" ? "Describe tu proyecto y los contenidos en italiano o las tareas operativas para las que necesitas apoyo." : "Tell me about your business and which operational areas you would like to streamline."}
               className="min-h-[120px] resize-none"
               value={formData.messaggio}
               onChange={(e) => handleChange("messaggio", e.target.value)}
@@ -529,7 +529,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
               : "Your enquiry is sent through the enabled email relay (FormSubmit or Web3Forms), or NoeTom if configured. Please read the privacy policy for service providers and data processing."}
           </div>
 
-          <p className="text-xs text-foreground/50 text-center">* {lang === 'it' ? "campi obbligatori" : "required fields"}</p>
+          <p className="text-xs text-foreground/50 text-center">* {lang === "it" ? "campi obbligatori" : lang === "fr" ? "champs obligatoires" : lang === "es" ? "campos obligatorios" : "required fields"}</p>
         </form>
       )}
     </div>
