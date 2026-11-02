@@ -25,14 +25,14 @@ const acquisition = [
   /appointment setting/, /fissare appuntamenti commerciali/,
   /prise de rendez-vous commerciaux/, /concertar citas comerciales/,
   /reclutament[oi] (?:di )?(?:intervistat|partecipant)/,
-  /recrutement de participants/, /recruit(?:ing)? (?:interview )?participants/,
+  /recrutement de participants/, /recruit(?:ing)? (?:interview )?participants/, /interview participants? recruitment/, /interview participant recruitment/, /recruitment of interview participants/, 
   /reclutamiento de participantes/, /pay.per.(?:appointment|interview)/,
   /compenso (?:a risultato )?per (?:appuntament|intervist)/,
   /remuneration par rendez-vous/, /pago por (?:cita|entrevista)/,
 ];
 const accounting = [
   /contabilit/, /registrazion[ei] contabil/, /tenuta (?:della )?contabil/,
-  /fatturazion/, /emissione fattur/, /gestione fattur/,
+  /fatturazion/, /emissione fattur/, /gestione (?:di |delle? )?fattur/, /emissione di fattur/, /gestione fiscale/, /preparazione fattur/, 
   /emett(?:ere|i) fattur/, /predisposizione fattur/,
   /bookkeep/, /accounting services/, /manage (?:my |our )?invoic/,
   /issu(?:e|ing) invoic/, /invoic(?:ing|e generation)/,
@@ -65,10 +65,10 @@ export function detectExcludedService(raw: string): ExcludedService | null {
 
 export const SCOPE_EXCLUDED_REPLY: Record<ExcludedService, Record<Language, string>> = {
   acquisition: {
-    it: 'Non offro telemarketing, acquisizione clienti, lead generation, prospecting, ricerca contatti commerciali, appuntamenti di vendita o reclutamento di intervistati. Posso svolgere soltanto ricerche informative a supporto delle attivita gia concordate.',
+    it: 'Non offro telemarketing, acquisizione clienti, lead generation, prospecting, ricerca contatti commerciali, appuntamenti di vendita o reclutamento di intervistati. Posso svolgere soltanto ricerche informative a supporto delle attività già concordate.',
     en: 'I do not offer telemarketing, customer acquisition, lead generation, prospecting, sales contact lists, appointment setting or interview recruitment. Informational research is available only in support of an existing agreed assignment.',
-    fr: 'Je ne propose ni telemarketing, ni prospection, ni acquisition de clients, ni recherche de contacts commerciaux, ni prise de rendez-vous de vente, ni recrutement de participants. Les recherches documentaires servent uniquement a soutenir un travail deja convenu.',
-    es: 'No ofrezco telemarketing, captacion de clientes, generacion de leads, prospeccion, busqueda de contactos comerciales, citas de venta ni reclutamiento de participantes. La investigacion informativa solo apoya trabajos previamente acordados.',
+    fr: 'Je ne propose ni télémarketing, ni prospection, ni acquisition de clients, ni recherche de contacts commerciaux, ni prise de rendez-vous de vente, ni recrutement de participants. Les recherches documentaires servent uniquement à soutenir un travail déjà convenu.',
+    es: 'No ofrezco telemarketing, captación de clientes, generación de leads, prospeccion, búsqueda de contactos comerciales, citas de venta ni reclutamiento de participantes. La investigación informativa solo apoya trabajos previamente acordados.',
   },
   accounting: {
     it: 'Non offro contabilità, registrazioni contabili, fatturazione, emissione di fatture, gestione fiscale o dichiarazioni. Posso invece preparare e inviare preventivi operativi secondo le istruzioni del cliente, senza attività contabili.',
