@@ -164,7 +164,7 @@ describe('Site to NoeTom intake safety checks', () => {
     vi.stubEnv('VITE_WEB3FORMS_ACCESS_KEY', '12345678-1234-1234-1234-123456789012');
     const fn = vi.fn().mockResolvedValue(answer(403, {success: false}));
     vi.stubGlobal('fetch', fn);
-    await expect(submitQuoteRequest(payload)).rejects.toThrow('WEB3FORMS_PROVIDER_REJECTED');
+    await expect(submitQuoteRequest(payload)).rejects.toThrow('WEB3FORMS_BLOCKED_ORIGIN_OR_REQUEST');
     expect(fn).toHaveBeenCalledTimes(1);
   });
 
