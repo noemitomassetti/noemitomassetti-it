@@ -329,7 +329,7 @@ export default function ResourcesPage() {
                     to={`/blog/${article.slug}`}
                     className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline"
                   >
-                    <span>{lang === "it" ? "Leggi l'articolo" : "Read guide"}</span>
+                    <span>{lang === "it" ? "Leggi l'articolo" : lang === "fr" ? "Lire en italien" : lang === "es" ? "Leer en italiano" : "Read in Italian"}</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
