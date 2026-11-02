@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { getBlogPostBySlug, getBlogPosts } from "@/lib/blogData";
 import { useSEO } from "@/hooks/useSEO";
-import { getLocalizedPath } from "@/lib/i18n/routes";
+import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
 
 const BlogPost = () => {
   const { slug } = useParams();
   // Blog articles are authored only in Italian; keep navigation and metadata in Italian.
-  const currentLang = 'it' as const;
+  const currentLang = getLanguageFromPath('/it');
   const post = slug ? getBlogPostBySlug(slug) : undefined;
 
   useSEO({
