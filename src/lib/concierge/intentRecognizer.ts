@@ -1,5 +1,6 @@
 import { Language } from '../i18n/types';
 import { ServiceKey } from './types';
+import { detectExcludedService, SCOPE_EXCLUDED_REPLY } from '../serviceScope';
 
 export interface RecognizedIntent {
   serviceKey?: ServiceKey;
@@ -20,6 +21,11 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
     .replace(/[\u0300-\u036f]/g, '')
     .trim();
 
+  const excludedService = detectExcludedService(rawQuery);
+  if (excludedService) {
+    return { serviceKey: undefined, isScopeExcluded: true, explanation: SCOPE_EXCLUDED_REPLY[excludedService] };
+  }
+
   // Acquisition and participant recruitment are outside the offered service scope.
   const acquisitionKeywords = [
     'lead generation', 'lead gen', 'cold outreach', 'cold calling',
@@ -35,12 +41,7 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
   if (acquisitionKeywords.some((keyword) => normalized.includes(keyword))) {
     return {
       isScopeExcluded: true,
-      explanation: {
-        it: 'Noemi non offre acquisizione clienti, lead generation, cold outreach, reclutamento di partecipanti a interviste o attività a compenso per appuntamento o intervista. Le ricerche disponibili riguardano informazioni, fornitori e concorrenti a supporto delle decisioni.',
-        en: 'Noemi does not offer customer acquisition, lead generation, cold outreach, interview participant recruitment or pay-per-appointment or pay-per-interview work. Research covers information, suppliers and competitors to support decisions.',
-        fr: 'Noemi ne propose pas de prospection commerciale, de génération de leads, de recrutement de participants à des entretiens ni de missions rémunérées au rendez-vous ou à l’entretien. Les recherches portent sur les informations, les fournisseurs et les concurrents pour éclairer les décisions.',
-        es: 'Noemi no ofrece captación de clientes, generación de leads, contacto comercial en frío, reclutamiento de participantes ni trabajos remunerados por cita o entrevista. La investigación abarca información, proveedores y competidores para apoyar decisiones.',
-      },
+      explanation: SCOPE_EXCLUDED_REPLY.acquisition,
     };
   }
 
@@ -69,12 +70,7 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
     return {
       serviceKey: undefined,
       isScopeExcluded: true,
-      explanation: {
-        it: 'Noemi non fornisce consulenza contabile, dichiarazioni fiscali o tenuta della contabilità. Può invece collaborare con il tuo commercialista o studio professionale per raccogliere, organizzare e trasmettere con puntualità la documentazione necessaria.',
-        en: 'Noemi does not provide bookkeeping, tax filing, or accounting advice. However, she gladly coordinates with your certified accountant to organize, sort, and forward all necessary documents punctually.',
-        fr: 'Noemi n’assure pas de services comptables ou de déclarations fiscales. En revanche, elle peut collaborer avec votre expert-comptable pour collecter, classer et lui transmettre vos pièces avec rigueur.',
-        es: 'Noemi no realiza tareas de contabilidad ni declaraciones fiscales. No obstante, puede coordinarse con tu gestoría para recopilar, ordenar y enviar a tiempo toda la documentación requerida.',
-      },
+      explanation: SCOPE_EXCLUDED_REPLY.accounting,
     };
   }
 
@@ -99,7 +95,7 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
       es: 'Noemi es hablante nativa de italiano, con nivel avanzado de inglés y francés y nivel B2 de español. Se centra en EN→IT y FR→IT; ES→IT se valora según el texto. Los trabajos del italiano a otras lenguas se estudian caso por caso.'
     }},
     { keys: ['portfolio','esempi di lavoro','esempi pratici','sample work','work samples','case studies','exemples de travaux','exemples de realisations','ejemplos de trabajo','muestras de trabajo'], answer: {
-      it: 'Nel portfolio puoi consultare casi studio e documenti dimostrativi concreti: gestione email, customer care, back office, cataloghi, traduzioni e localizzazioni. Sono esempi originali con dati fittizi, non incarichi commissionati da clienti.',
+      it: 'Nel portfolio trovi esempi dimostrativi di segreteria, assistenza ai clienti esistenti, ordini, listini, preventivi operativi, comunicazioni, traduzioni e localizzazioni. I dati sono fittizi: non sono incarichi commissionati da clienti, né servizi amministrativi o contabili.',
       en: 'The portfolio includes practical demonstrations of email management, written customer care, back office, catalogues, translation and localisation. They use fictional data and are clearly marked as independent samples, not commissioned client projects.',
       fr: 'Le portfolio présente des démonstrations concrètes : gestion des e-mails, relation client écrite, back-office, catalogues, traduction et localisation. Ces exemples utilisent des données fictives et ne correspondent pas à des missions réelles.',
       es: 'El portafolio incluye ejemplos prácticos de gestión de correos, atención escrita al cliente, back office, catálogos, traducción y localización. Son muestras independientes con datos ficticios, no encargos reales.'
