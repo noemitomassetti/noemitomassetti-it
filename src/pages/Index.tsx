@@ -792,19 +792,19 @@ export default function IndexPage() {
           <p>
             {lang === "it" ? (
               <>
-                L'italiano è la mia lingua madre e garantisco supporto professionale in quattro lingue: <strong>italiano, inglese, francese e spagnolo</strong> per la gestione operativa, la corrispondenza e la traduzione di contenuti.
+                L'italiano è la mia lingua madre. Utilizzo anche <strong>inglese, francese e spagnolo</strong> per le comunicazioni professionali e traduco contenuti da queste lingue verso l'italiano.
               </>
             ) : lang === "fr" ? (
               <>
-                L'italien est ma langue maternelle et j'assure un accompagnement professionnel en quatre langues : <strong>italien, anglais, français et espagnol</strong> pour la gestion opérationnelle, vos correspondances et vos projets.
+                L’italien est ma langue maternelle. Je travaille également avec <strong>le français, l’anglais et l’espagnol</strong> pour traduire vos contenus vers l’italien et faciliter vos échanges avec vos interlocuteurs italiens.
               </>
             ) : lang === "es" ? (
               <>
-                El italiano es mi lengua materna y ofrezco soporte profesional en cuatro idiomas: <strong>italiano, inglés, francés y español</strong> para la operativa diaria, la correspondencia y la adaptación de contenidos.
+                Mi lengua materna es el italiano. También trabajo con <strong>español, inglés y francés</strong> para traducir contenidos al italiano y facilitar la comunicación con clientes e interlocutores italianos.
               </>
             ) : (
               <>
-                Italian is my native language, and I provide dependable professional support across four working languages: <strong>Italian, English, French, and Spanish</strong> for operational workflows, international correspondences, and localization.
+                Italian is my native language. I also work with <strong>English, French and Spanish</strong> to translate content into Italian and support professional communication with Italian customers and partners.
               </>
             )}
           </p>
