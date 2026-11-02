@@ -73,6 +73,10 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
   const currentLang = explicitLang || getLanguageFromPath(location.pathname);
   const dict = getDictionary(currentLang);
 
+  useEffect(() => {
+    document.documentElement.lang = currentLang;
+  }, [currentLang]);
+
   const homePath = getLocalizedPath("home", currentLang);
   const italianLocalisationPath = getLocalizedPath("italianLocalisation", currentLang);
   const portfolioPath = getLocalizedPath("portfolio", currentLang);
@@ -534,7 +538,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
         <div className="border-t border-border/30 py-4 text-center text-xs text-muted-foreground space-y-2 px-4">
           <div className="flex flex-wrap justify-center items-center gap-4">
             <Link to={italianLocalisationPath} className="hover:text-primary transition-colors font-medium">
-              {currentLang === "it" ? "Localizzazione Italiano" : currentLang === "fr" ? "Localisation Italien" : currentLang === "es" ? "Localización Italiano" : "Italian Localisation"}
+              {currentLang === "it" ? "Localizzazione in italiano" : currentLang === "fr" ? "Localisation en italien" : currentLang === "es" ? "Localización al italiano" : "Italian Localisation"}
             </Link>
             <span className="opacity-30">|</span>
             <Link to={portfolioPath} className="hover:text-primary transition-colors">
@@ -546,11 +550,11 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
             </Link>
             <span className="opacity-30">|</span>
             <Link to={privacyPath} className="hover:text-primary transition-colors">
-              Privacy Policy
+              {currentLang === "it" ? "Informativa sulla privacy" : currentLang === "fr" ? "Politique de confidentialité" : currentLang === "es" ? "Política de privacidad" : "Privacy Policy"}
             </Link>
             <span className="opacity-30">|</span>
             <Link to={cookiePath} className="hover:text-primary transition-colors">
-              Cookie Policy
+              {currentLang === "it" ? "Informativa sui cookie" : currentLang === "fr" ? "Politique relative aux cookies" : currentLang === "es" ? "Política de cookies" : "Cookie Policy"}
             </Link>
             <span className="opacity-30">|</span>
             <button
