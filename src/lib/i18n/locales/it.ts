@@ -40,7 +40,7 @@ export const itLocale: TranslationDictionary = {
     headline: 'Il supporto che ti aiuta a lavorare meglio, con più ordine.',
     desc1: "Metto a disposizione oltre vent'anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano.",
     desc2: 'Dalla gestione di email e appuntamenti alla comunicazione con i clienti, dalla traduzione alla revisione dei contenuti per siti web e landing page: un supporto professionale e flessibile, costruito sulle tue esigenze.',
-    ctaButton: 'RICHIEDI PREVENTIVO SCRITTO',
+    ctaButton: 'RICHIEDI UN PREVENTIVO',
     callReassurance: 'Risposta scritta • Nessuna chiamata obbligatoria',
     description:
       'Metto ordine nella gestione quotidiana del tuo lavoro, coordino le comunicazioni in quattro lingue e ti supporto nei processi operativi, per restituirti tempo ed efficacia.',
@@ -477,7 +477,7 @@ export const itLocale: TranslationDictionary = {
     directBooking: {
       title: 'Richiesta di preventivo scritto',
       desc: 'Descrivimi le attività da delegare e le tue esigenze attraverso il modulo: ti risponderò per iscritto con le informazioni necessarie.',
-      btnLabel: 'Richiedi un preventivo scritto',
+      btnLabel: 'Richiedi un preventivo',
       specs: [
         'Comunicazione senza chiamata obbligatoria',
         'Descrivi il lavoro, il volume e la scadenza',
