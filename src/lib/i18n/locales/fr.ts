@@ -88,7 +88,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Assistance Virtuelle & Back-Office',
         subtitle: 'Continuité, rigueur et réactivité pour votre organisation quotidienne.',
         description:
-          "Secrétariat organisationnel et back-office opérationnel : e-mails, agenda, échéances, saisie de données, commandes, mise à jour de tarifs, devis préparés selon les consignes du client et suivi des clients existants. Sont exclus la gestion opérationnelle d'entreprise, la comptabilité, la facturation et la prospection.",
+          "Secrétariat organisationnel et back-office opérationnel : e-mails, agenda, échéances, saisie de données, commandes, mise à jour de tarifs, devis préparés selon les consignes du client et suivi des clients existants. Sont exclus la gestion administrative d'entreprise, la comptabilité, la facturation et la prospection.",
         iconName: 'Mail',
         items: [
           'Gestion et tri structuré de la boîte mail',
@@ -195,7 +195,7 @@ export const frLocale: TranslationDictionary = {
        deliverables: ['Analyse des tâches à déléguer', 'Organisation des e-mails, fichiers et procédures convenues', 'Synthèse du travail et des priorités'], turnaround: 'À convenir'},
       {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes des clients déjà acquis, informations sur les commandes et suivis de service selon des procédures convenues.",
        deliverables: ['Modèles de réponses et FAQ', 'Gestion convenue des demandes écrites', 'Suivi des relances et activités'], turnaround: 'À convenir'},
-      {id: 'p3', title: 'Localisation en italien', badge: 'EN/FR → IT', description: 'Traduction et adaptation culturelle vers l’italien de sites, fiches produits, e-mails et contenus commerciaux.',
+      {id: 'p3', title: 'Traduction et adaptation multilingue', badge: 'IT · EN · FR · ES', description: 'Traduction et adaptation depuis et vers l’italien dans les quatre langues de travail, selon les contenus et les compétences linguistiques.',
        deliverables: ['Analyse des textes, publics et termes', 'Traduction ou localisation des contenus définis', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
       {id: 'p4', title: 'Révision de contenus existants', badge: 'Clarté et cohérence', description: 'Relecture et amélioration de documents professionnels et multilingues existants.',
        deliverables: ['Évaluation du texte et des objectifs', 'Amélioration de la structure, du ton et de la lisibilité', 'Document final avec modifications identifiables'], turnaround: 'Selon périmètre'},
@@ -540,7 +540,7 @@ export const frLocale: TranslationDictionary = {
     legalTitle: 'Informations Légales',
     rights: 'Tous droits réservés.',
     disclaimer:
-      "Secrétariat organisationnel, back-office opérationnel, suivi des clients existants, correspondance multilingue, traduction et contenus numériques. Pas de gestion opérationnelle d'entreprise, comptabilité, facturation, fiscalité, prospection ou acquisition de clients.",
+      "Secrétariat organisationnel, back-office opérationnel, suivi des clients existants, correspondance multilingue, traduction et contenus numériques. Pas de gestion administrative d'entreprise, comptabilité, facturation, fiscalité, prospection ou acquisition de clients.",
     cookiePrefs: 'Préférences Cookies',
   },
 };
