@@ -36,8 +36,8 @@ export default function ItalianLocalisationPage() {
       title: "Italian Translation & Cultural Localisation",
       subtitle:
         "Fai parlare il tuo marchio in italiano autentico. Non semplici traduzioni letterali, ma adattamento linguistico, culturale e commerciale curato da una professionista madrelingua con master in traduzione specialistica.",
-      primaryCta: "Richiedi un preventivo scritto",
-      bookCallCta: "Richiedi un preventivo scritto",
+      primaryCta: "Richiedi un preventivo",
+      bookCallCta: "Richiedi un preventivo",
       pillarsTitle: "I 3 Livelli di Intervento Linguistico",
       pillarsSubtitle: "Dalla precisione terminologica all'ottimizzazione culturale del tuo messaggio.",
       pillars: [
@@ -104,8 +104,8 @@ export default function ItalianLocalisationPage() {
       title: "Italian Translation & Cultural Localisation",
       subtitle:
         "Speak to Italian clients with authentic cultural resonance. Not generic machine translation, but meticulous linguistic, cultural, and commercial adaptation crafted by a native Italian language specialist with a Master's degree in Specialist Translation.",
-      primaryCta: "Request a written quote",
-      bookCallCta: "Request a written quote",
+      primaryCta: "Request a quote",
+      bookCallCta: "Request a quote",
       pillarsTitle: "3 Levels of Linguistic Execution",
       pillarsSubtitle: "From terminological precision to cultural nuance and tone-of-voice alignment.",
       pillars: [
@@ -172,8 +172,8 @@ export default function ItalianLocalisationPage() {
       title: "Localisation en Italien & Traduction Spécialisée",
       subtitle:
         "Adressez-vous à vos clients italiens avec authenticité et précision culturelle. Une adaptation linguistique rigoureuse et humaine, réalisée par une professionnelle italienne diplômée avec mention en médiation linguistique et titulaire d'un master en traduction spécialisée.",
-      primaryCta: "Demander un devis écrit",
-      bookCallCta: "Demander un devis écrit",
+      primaryCta: "Demander un devis",
+      bookCallCta: "Demander un devis",
       pillarsTitle: "3 Niveaux d'Excellence Linguistique",
       pillarsSubtitle: "De la rigueur terminologique à la résonance commerciale en Italie.",
       pillars: [
@@ -240,8 +240,8 @@ export default function ItalianLocalisationPage() {
       title: "Traducción y Localización Cultural al Italiano",
       subtitle:
         "Comunica con tus clientes en Italia con naturalidad y rigor cultural. No una traducción automática impersonal, sino una cuidada adaptación lingüística y comercial realizada por una especialista nativa italiana con máster en traducción especializada.",
-      primaryCta: "Solicitar un presupuesto por escrito",
-      bookCallCta: "Solicitar presupuesto por escrito",
+      primaryCta: "Solicitar un presupuesto",
+      bookCallCta: "Solicitar un presupuesto",
       pillarsTitle: "3 Niveles de Adaptación Lingüística",
       pillarsSubtitle: "De la precisión conceptual a la adecuación cultural para el mercado italiano.",
       pillars: [
