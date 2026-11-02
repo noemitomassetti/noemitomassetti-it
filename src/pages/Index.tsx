@@ -109,10 +109,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Ridurre il tempo dedicato alle attività operative e organizzative."
           : lang === "fr"
-          ? "Réduire considérablement le temps absorbé par la gestion administrative."
+          ? "Réduire le temps consacré aux tâches opérationnelles et organisationnelles."
           : lang === "es"
-          ? "Reducir las horas dedicadas a tareas administrativas rutinarias."
-          : "Dramatically cut the time spent on repetitive administrative overhead.",
+          ? "Reducir el tiempo dedicado a tareas operativas y de organización."
+          : "Spend less time on repetitive operational and organisational tasks.",
     },
     {
       title:
@@ -475,12 +475,12 @@ export default function IndexPage() {
           : "Do you handle accounting and fiscal filings?",
       a:
         lang === "it"
-          ? "No. Il mio supporto non comprende contabilità, fatturazione o adempimenti fiscali. Posso tuttavia collaborare con il tuo commercialista per la raccolta, la verifica e l'archiviazione ordinata dei documenti."
+          ? "No. Non offro servizi amministrativi, contabili, di fatturazione o fiscali. Posso invece organizzare documenti e informazioni relativi alle attività operative concordate."
           : lang === "fr"
-          ? "Non. Mes prestations n'incluent ni la comptabilité, ni la facturation, ni les déclarations fiscales. Je peux en revanche assister votre expert-comptable pour la collecte et le classement ordonné des pièces."
+          ? "Non. Je ne propose ni gestion administrative, ni comptabilité, ni facturation, ni services fiscaux. Je peux toutefois organiser les documents et informations liés aux tâches opérationnelles convenues."
           : lang === "es"
-          ? "No. Mi soporte no incluye contabilidad, facturación ni trámites fiscales. No obstante, puedo colaborar con tu gestor para la recopilación, verificación y archivo organizado de los documentos."
-          : "No. My support does not include fiscal accounting, invoicing, or tax filings. However, I can collaborate with your certified accountant to organize, verify, and deliver documents on schedule.",
+          ? "No. No ofrezco servicios administrativos, contables, de facturación ni fiscales. Sí puedo organizar documentos e información vinculados a las tareas operativas acordadas."
+          : "No. I do not provide business administration, bookkeeping, invoicing or tax services. I can organise documents and information related to agreed operational tasks.",
     },
     {
       q:
