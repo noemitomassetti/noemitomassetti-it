@@ -36,7 +36,7 @@ export const esLocale: TranslationDictionary = {
     badge: 'ASISTENTE VIRTUAL',
     titleLine1: 'Soporte operativo, organizativo y multilingüe',
     titleHighlight: 'para tu actividad',
-    subtitle: 'Soporte organizativo, administrativo y lingüístico en remoto para profesionales, consultores y pequeñas empresas.',
+    subtitle: "Asistencia virtual multilingüe: secretaría organizativa, back office operativo, atención a clientes existentes, correspondencia y contenidos profesionales.",
     headline: 'El apoyo que te ayuda a trabajar mejor, con más orden.',
     desc1: 'Más de veinte años de experiencia organizativa y lingüística para ayudarte a gestionar mejor tu día a día.',
     desc2: 'De la gestión de emails y agenda a la atención a clientes, de la traducción a la creación de páginas web: un apoyo profesional y flexible a tu medida.',
@@ -88,12 +88,12 @@ export const esLocale: TranslationDictionary = {
         title: 'Asistencia Virtual & Back Office',
         subtitle: 'Continuidad, orden y capacidad de respuesta para tu gestión diaria.',
         description:
-          'Delegar tareas administrativas libera espacio mental al instante: gestión de correos, coordinación de agendas y citas, atención a clientes y archivo documental.',
+          "Secretaría organizativa y back office operativo: correo, agenda, plazos, entrada de datos, pedidos, actualización de tarifas, presupuestos preparados siguiendo las instrucciones del cliente y atención a clientes existentes. Se excluyen la organización empresarial, la contabilidad, la facturación y la captación comercial.",
         iconName: 'Mail',
         items: [
           'Gestión y filtrado ordenado del correo electrónico',
           'Coordinación de agenda y planificación de citas',
-          'Atención a clientes y comunicación administrativa',
+          'Atención a clientes existentes y comunicación profesional',
           'Organización documental y estructura en la nube',
           'Seguimiento a clientes y recordatorios de gestión',
           'Labores de secretaría y soporte de back office',
@@ -104,7 +104,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Traducción & Comunicación Multilingüe',
         subtitle: 'Español · Inglés · Italiano · Francés con precisión contextual.',
         description:
-          'Graduada en Mediación Lingüística y con Máster en Traducción Especializada, adapto sitios web, páginas de aterrizaje, propuestas comerciales y correos para transmitir confianza ante clientes internacionales.',
+          "Redacción, revisión, traducción y adaptación de correspondencia, sitios web, landing pages, catálogos y fichas de producto en italiano, inglés, francés y español, desde y hacia el italiano según el encargo y las competencias lingüísticas.",
         iconName: 'Globe',
         items: [
           'Localización de sitios web y páginas de venta',
@@ -133,16 +133,16 @@ export const esLocale: TranslationDictionary = {
       },
       {
         id: 'online-research',
-        title: 'Investigación Online & Desk Research',
+        title: 'Investigación Informativa de Apoyo',
         subtitle: 'Información contrastada para respaldar tus decisiones de negocio.',
         description:
-          'Ahorra horas de búsqueda dispersa: realizo estudios de mercado, análisis de competidores, búsqueda de proveedores y síntesis ejecutivas estructuradas. Se excluyen la búsqueda de contactos para captar clientes, la generación de leads, el contacto comercial en frío, el reclutamiento de participantes para entrevistas y los trabajos remunerados por cita o entrevista.',
+          "Recopilación, comprobación y comparación de información, fuentes, proveedores y herramientas digitales exclusivamente para apoyar las actividades existentes del cliente. Sin búsqueda de contactos, captación de clientes ni prospección.",
         iconName: 'Search',
         items: [
           'Análisis comparativo de competidores y precios',
           'Búsqueda y evaluación de proveedores y software',
           'Recopilación de datos y verificación de fuentes',
-          'Estudios preliminares para apertura en mercados europeos',
+          'Investigaciones informativas para proyectos existentes',
           'Informes ejecutivos con conclusiones claras',
           'Estructuración de bases de datos y hojas de cálculo',
         ],
@@ -152,7 +152,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Soporte Digital',
         subtitle: 'Optimización de tus herramientas y procedimientos de trabajo.',
         description:
-          'Reorganización de tus carpetas compartidas, configuración de herramientas online y definición de procedimientos prácticos para agilizar tus tareas administrativas diarias.',
+          'Reorganización de tus carpetas compartidas, configuración de herramientas online y definición de procedimientos prácticos para agilizar tus tareas operativas diarias.',
         iconName: 'Cpu',
         items: [
           'Reorganización de Google Workspace y discos en la nube',
@@ -191,9 +191,9 @@ export const esLocale: TranslationDictionary = {
     tag: 'FORMAS DE COLABORAR', title: 'Servicios concretos y entregables claros',
     subtitle: 'Ejemplos de encargos con un alcance definido. Los resultados y plazos se acuerdan por escrito.',
     packages: [
-      {id: 'p1', title: 'Back office organizado', badge: 'Asistencia administrativa', description: 'Apoyo práctico para organizar tareas habituales, correos y documentos.',
+      {id: 'p1', title: 'Back office organizado', badge: 'Secretaría operativa', description: 'Apoyo práctico para organizar tareas habituales, correos y documentos.',
        deliverables: ['Análisis de tareas delegables', 'Organización acordada de correos, archivos y procesos', 'Resumen de actividades y prioridades'], turnaround: 'Por acordar'},
-      {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: 'Apoyo estructurado en consultas escritas y seguimientos, adaptado al tono de tu marca.',
+      {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: "Atención escrita a los clientes existentes, actualizaciones de pedidos y seguimientos de asistencia conforme a los procedimientos acordados.",
        deliverables: ['Plantillas de respuesta y preguntas frecuentes', 'Gestión acordada de consultas escritas', 'Registro de seguimientos y actividades'], turnaround: 'Por acordar'},
       {id: 'p3', title: 'Localización al italiano', badge: 'EN/FR → IT', description: 'Traducción y adaptación cultural al italiano de webs, fichas de producto, emails y contenidos comerciales.',
        deliverables: ['Análisis de textos, público y terminología', 'Traducción o localización del contenido acordado', 'Revisión final y notas lingüísticas'], turnaround: 'Según volumen'},
@@ -300,14 +300,6 @@ export const esLocale: TranslationDictionary = {
           tagline: 'Recordatorios amables y profesionales',
           description:
             'Prepara borradores de seguimiento en español, inglés, francés o italiano cuando un contacto tarda en responder.',
-          status: 'in_development',
-        },
-        {
-          id: 'money-radar',
-          name: 'Money Radar',
-          tagline: 'Vigilancia de tesorería',
-          description:
-            'Supervisa facturas pendientes de cobro, renovaciones de contratos y trabajos listos para facturar.',
           status: 'in_development',
         },
         {
@@ -463,7 +455,7 @@ export const esLocale: TranslationDictionary = {
         'Asistencia Virtual & Back Office',
         'Traducción & Comunicación Multilingüe (ES · EN · IT · FR)',
         'Redacción & Revisión de Textos',
-        'Investigación Online & Desk Research',
+        'Investigación Informativa de Apoyo',
         'Soporte Digital & Flujos con IA',
         'Contenidos para webs y landing pages',
         'Información sobre el proyecto interno NoeTom',
@@ -532,7 +524,7 @@ export const esLocale: TranslationDictionary = {
         id: 'r4',
         slug: 'guia-de-delegacion-para-solopreneurs',
         title: 'Guía práctica de delegación para profesionales autónomos: qué tareas ceder primero',
-        excerpt: 'Un método sencillo para identificar las labores repetitivas de secretaría y administración que consumen tus horas de trabajo.',
+        excerpt: 'Un método sencillo para identificar las labores repetitivas de secretaría y organización que consumen tus horas de trabajo.',
         date: 'Septiembre de 2026',
         category: 'Organización y Delegación',
         readTime: '8 min de lectura',
@@ -548,7 +540,7 @@ export const esLocale: TranslationDictionary = {
     legalTitle: 'Aviso Legal',
     rights: 'Todos los derechos reservados.',
     disclaimer:
-      'Servicios de apoyo operativo, administrativo, lingüístico y digital. No se prestan asesorías legales, fiscales ni contables reservadas por ley.',
+      "Secretaría organizativa, back office operativo, atención a clientes existentes, comunicación multilingüe, traducción y contenidos digitales. No se ofrecen organización de empresas, contabilidad, facturación, servicios fiscales, generación de leads ni captación comercial.",
     cookiePrefs: 'Preferencias de Cookies',
   },
 };
