@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzione & Comunicazione Multilingue',
         subtitle: 'Italiano · Inglese · Francese · Spagnolo con accuratezza contestuale.',
         description:
-          "Redazione, revisione, traduzione e adattamento di corrispondenza, siti web, landing page, cataloghi e schede prodotto in italiano, inglese, francese e spagnolo, da e verso l’italiano secondo la tipologia di incarico e le competenze linguistiche.",
+          "Traduzione dall’inglese, dal francese e dallo spagnolo verso l’italiano, revisione di contenuti italiani e supporto alla corrispondenza multilingue nei limiti delle competenze linguistiche. Le traduzioni professionali verso lingue straniere non sono offerte come servizi madrelingua.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti web e landing page',
@@ -457,7 +457,7 @@ export const itLocale: TranslationDictionary = {
       serviceNeeded: 'Area di supporto di tuo interesse *',
       serviceOptions: [
         'Segreteria Organizzativa & Back Office Operativo',
-        'Traduzione & Comunicazione Multilingue (IT · EN · FR · ES)',
+        'Traduzione verso l’italiano (EN/FR/ES → IT) e comunicazione multilingue',
         'Scrittura & Revisione Testi',
         'Ricerche Informative a Supporto',
         'Supporto Digitale & Flussi AI',
