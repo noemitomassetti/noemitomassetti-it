@@ -212,18 +212,15 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {s.categories.map((cat) => {
               const IconComponent = getServiceIcon(cat.id);
-              const macroTag =
-                cat.id === "virtual-assistance"
-                  ? (lang === "it" ? "Macroarea 1 · Back Office" : "Macroarea 1 · Back Office")
-                  : cat.id === "digital-support"
-                  ? (lang === "it" ? "Macroarea 2 · Customer Care Scritto" : "Macroarea 2 · Written Care")
-                  : cat.id === "translation-localization"
-                  ? (lang === "it" ? "Macroarea 3 · Traduzione & Localizzazione" : "Macroarea 3 · Translation & Localisation")
-                  : cat.id === "content-writing"
-                  ? (lang === "it" ? "Macroarea 3 · Scrittura & Revisione" : "Macroarea 3 · Copy & Revision")
-                  : cat.id === "online-research"
-                  ? (lang === "it" ? "Capacità Trasversale · Desk Research" : "Core Skill · Desk Research")
-                  : (lang === "it" ? "Supporto Tecnico · Valutazione su richiesta" : "Technical · Evaluated on request");
+              const macroTags: Record<string, Record<Language, string>> = {
+                "virtual-assistance": { it: "Back office operativo", en: "Italian customer operations", fr: "Relation client et opérations en italien", es: "Atención al cliente y operaciones en italiano" },
+                "digital-support": { it: "Organizzazione digitale", en: "Digital organisation", fr: "Organisation numérique", es: "Organización digital" },
+                "translation-localization": { it: "Traduzione verso l’italiano", en: "Translation into Italian", fr: "Traduction vers l’italien", es: "Traducción al italiano" },
+                "content-writing": { it: "Scrittura e revisione testi", en: "Italian content editing", fr: "Révision des contenus italiens", es: "Revisión de contenidos en italiano" },
+                "online-research": { it: "Ricerche informative", en: "Informational research", fr: "Recherche documentaire", es: "Investigación informativa" },
+                "web-landing": { it: "Contenuti per il web", en: "Italian web content", fr: "Contenus web en italien", es: "Contenidos web en italiano" },
+              };
+              const macroTag = macroTags[cat.id]?.[lang] ?? cat.title;
 
               return (
                 <div
