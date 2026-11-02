@@ -36,7 +36,7 @@ export const enLocale: TranslationDictionary = {
     badge: 'VIRTUAL ASSISTANT',
     titleLine1: 'Operational, organizational & multilingual support',
     titleHighlight: 'for your business',
-    subtitle: 'Remote organizational, administrative, and multilingual support for professionals, consultants, and small businesses.',
+    subtitle: "Multilingual virtual assistance for organisational secretarial work, operational back office, support for existing customers, professional correspondence and digital content.",
     headline: 'The support that helps you work better, with more clarity.',
     desc1: 'Offering over twenty years of organizational and linguistic expertise to help you manage day-to-day operations seamlessly.',
     desc2: 'From email and schedule management to client communications, translations, and editing website content: flexible, professional support tailored to your needs.',
@@ -87,16 +87,16 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'virtual-assistance',
         title: 'Virtual Assistance & Back Office',
-        subtitle: 'Order, continuity, and responsiveness for your daily administration.',
+        subtitle: 'Order, continuity, and responsiveness for your daily operations.',
         description:
-          'Delegating daily administration frees up mental bandwidth immediately. I manage critical correspondence, coordinate complex scheduling, organize shared drives, handle client inquiries, and maintain reliable follow-through on ongoing tasks.',
+          "Organisational secretarial work and operational back office: email, calendars, deadlines, data entry, orders, price-list updates, quotes prepared on the client's instructions and assistance for existing customers. Business operations, bookkeeping, invoicing and customer acquisition are excluded.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
           'Calendar coordination & appointment scheduling',
-          'Client care & administrative communication',
+          'Existing-customer care & professional communication',
           'Document archiving & cloud file architecture',
-          'Customer follow-ups & operational reminders',
+          'Support follow-ups for existing customers',
           'Data entry & back-office coordination',
         ],
       },
@@ -105,7 +105,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Translation & Localization',
         subtitle: 'Natural, culturally resonant communication in IT, EN, FR, ES.',
         description:
-          'Bridging markets requires more than machine translation. With a degree in Linguistic Mediation and a Master in Specialized Translation, I adapt websites, landing pages, contracts, commercial decks, and client emails to speak with authentic professional authority.',
+          "Writing, revising, translating and adapting professional correspondence, websites, landing pages, catalogues and product listings in Italian, English, French and Spanish, to and from Italian according to the assignment and linguistic expertise.",
         iconName: 'Globe',
         items: [
           'Website & landing page localization',
@@ -134,10 +134,10 @@ export const enLocale: TranslationDictionary = {
       },
       {
         id: 'online-research',
-        title: 'Online & Desk Research',
+        title: 'Informational Research Support',
         subtitle: 'Structured intelligence to inform your strategic decisions.',
         description:
-          'Save dozens of hours of unfocused web searches. I conduct targeted desk research across European markets to analyze competitors, identify reputable suppliers, benchmark pricing, synthesize industry reports, and provide executive-ready summaries. This excludes contact research for customer acquisition, lead generation, cold outreach, interview participant recruitment and pay-per-appointment or pay-per-interview work.',
+          "Gathering, checking and comparing information, sources, suppliers and digital tools solely in support of a client's existing operations. No contact sourcing, customer acquisition or prospecting.",
         iconName: 'Search',
         items: [
           'Competitor landscape & pricing benchmarking',
@@ -192,9 +192,9 @@ export const enLocale: TranslationDictionary = {
     tag: 'WAYS TO WORK TOGETHER', title: 'Focused services, tangible deliverables',
     subtitle: 'Examples of clearly scoped assignments. Deliverables and timelines are agreed in the written quote.',
     packages: [
-      {id: 'p1', title: 'Organised back office', badge: 'Administrative support', description: 'Practical help to organise recurring tasks, email correspondence and documents.',
+      {id: 'p1', title: 'Organised back office', badge: 'Operational secretarial support', description: 'Practical help to organise recurring tasks, email correspondence and documents.',
        deliverables: ['Review of activities to delegate', 'Agreed email, document and workflow organisation', 'Summary of work completed and next priorities'], turnaround: 'By agreement'},
-      {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: 'Structured support for written enquiries and operational follow-ups, tailored to your tone of voice.',
+      {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: "Written enquiries from existing customers, order-status updates and support follow-ups, within agreed procedures and tone of voice.",
        deliverables: ['Response templates and FAQs', 'Agreed handling of written enquiries', 'Follow-up and activity log'], turnaround: 'By agreement'},
       {id: 'p3', title: 'Italian localisation', badge: 'EN/FR → IT', description: 'Translation and cultural adaptation into Italian for websites, product pages, emails and marketing materials.',
        deliverables: ['Source, audience and terminology review', 'Translation or localisation of agreed content', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
@@ -229,7 +229,7 @@ export const enLocale: TranslationDictionary = {
       valueProp:
         'Built by Noemi to bring structure to commitments, deadlines, follow-ups, and operational communications, NoeTom is currently in active private testing.',
       emotionalQuote:
-        '“Created from real hands-on administrative practice to reduce operational noise and keep focus on high-impact work.”',
+        '“Created from real hands-on operational practice to reduce operational noise and keep focus on high-impact work.”',
       author: 'Noemi Tomassetti — Virtual Assistant',
       ctaJoin: 'Stay Updated on Development',
     },
@@ -304,14 +304,6 @@ export const enLocale: TranslationDictionary = {
           status: 'in_development',
         },
         {
-          id: 'money-radar',
-          name: 'Money Radar',
-          tagline: 'Cash flow vigilance',
-          description:
-            'Tracks unbilled work, sent invoices awaiting payment, retainer renewals, and upcoming financial milestones.',
-          status: 'in_development',
-        },
-        {
           id: 'tell-noetom',
           name: 'Tell NoeTom (“Di’ a NoeTom”)',
           tagline: 'Zero-friction data entry',
@@ -363,12 +355,12 @@ export const enLocale: TranslationDictionary = {
     title: 'Hello, I am Noemi Tomassetti.',
     lead: 'Virtual Assistant, translator, and operational support partner for professionals and small businesses.',
     bioParagraphs: [
-      'I bring over twenty years of professional experience gained across customer care, back office, administration, and operational support, alongside a solid linguistic foundation.',
+      'I bring over twenty years of professional experience gained across customer care, back office, operations, and operational support, alongside a solid linguistic foundation.',
       'I hold a Bachelor’s degree in Linguistic Mediation from the University of Macerata (2009, graduated with 110/110 cum laude), followed by a First-level University Master’s in Specialized Translation – English language (A.Y. 2010–2011, 1,500 hours, 60 CFU) with successful completion of the final examination. Areas covered during the Master’s include literary, legal, economic, technological, and scientific fields.',
       'Italian is my native language, and I provide professional multilingual support in four languages: Italian, English, French, and Spanish, ensuring precision, punctuality, and confidentiality.',
     ],
     credentials: [
-      { title: '20+ Years Professional Experience', detail: 'Customer care, back office, administration, and operational support' },
+      { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
       { title: 'Academic Excellence', detail: 'Degree in Linguistic Mediation (110/110 cum laude) & University Master’s in Specialized Translation' },
       { title: '4 Working Languages', detail: 'Italian native, professional support in English, French, and Spanish' },
       { title: 'Digital Tools & Innovation', detail: 'Digital support and creator of the NoeTom AI operational assistant' },
@@ -381,7 +373,7 @@ export const enLocale: TranslationDictionary = {
     storyTitle: 'A Career Built on Precision, Communication, and Care',
     storyParagraphs: [
       'My professional path has always developed around three constants: organizational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
-      'Over more than two decades, I have built direct, hands-on experience in customer care, administrative coordination, multilingual correspondence, translation, and operational back office. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
+      'Over more than two decades, I have built direct, hands-on experience in customer care, operational coordination, multilingual correspondence, translation, and operational back office. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
       'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 cum laude) and a First-level University Master’s in Specialized Translation – English language (A.Y. 2010–2011, 1,500 hours, 60 CFU). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
       'Alongside ongoing virtual assistance, I created NoeTom, an intelligent operational assistant designed to support solopreneurs and independent professionals with their day-to-day management.',
     ],
@@ -549,7 +541,7 @@ export const enLocale: TranslationDictionary = {
     legalTitle: 'Legal & Privacy',
     rights: 'All rights reserved.',
     disclaimer:
-      'Professional administrative, linguistic, and digital support services. Does not provide regulated legal, tax, or financial advisory services.',
+      "Organisational secretarial work, operational back office, existing-customer support, multilingual correspondence, translation and digital content. Business operations, accounting, invoicing, tax services, lead generation and sales prospecting are not offered.",
     cookiePrefs: 'Cookie Preferences',
   },
 };
