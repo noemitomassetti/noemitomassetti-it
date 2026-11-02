@@ -33,13 +33,13 @@ export const frLocale: TranslationDictionary = {
     language: 'Langue',
   },
   hero: {
-    badge: 'ASSISTANTE VIRTUELLE',
+    badge: 'SERVICES LINGUISTIQUES POUR L’ITALIE',
     titleLine1: 'Traduction, localisation et soutien opérationnel',
     titleHighlight: 'pour vos activités avec l’Italie',
     subtitle: "Traduction et localisation vers l’italien, échanges écrits avec vos clients italiens existants et soutien opérationnel lié à vos activités avec l’Italie.",
-    headline: 'Le soutien qui vous aide à mieux travailler, avec plus de sérénité.',
-    desc1: "Plus de vingt ans d'expérience organisationnelle et linguistique pour optimiser votre gestion quotidienne.",
-    desc2: 'De la gestion des e-mails à la relation client écrite et à la traduction de contenus web : un accompagnement ciblé, défini par écrit.',
+    headline: 'Communiquez naturellement avec votre public italien.',
+    desc1: "De langue maternelle italienne, je suis formée à la traduction spécialisée et possède plus de vingt ans d’expérience professionnelle.",
+    desc2: 'Sites web, pages de destination, contenus professionnels et échanges écrits avec vos clients italiens : un accompagnement adapté à vos activités avec l’Italie.',
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Demande sans engagement',
     description:
@@ -533,14 +533,14 @@ export const frLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Support digital, multilingue et opérationnel pour indépendants, consultants et entreprises européennes. Créatrice de NoeTom, l’assistante opérationnelle IA.',
+      'Traduction vers l’italien, localisation et soutien opérationnel pour les professionnels et petites entreprises travaillant avec l’Italie. Créatrice de NoeTom, un projet interne en développement.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom IA',
     companyTitle: 'À Propos & Ressources',
     legalTitle: 'Informations Légales',
     rights: 'Tous droits réservés.',
     disclaimer:
-      "Secrétariat organisationnel, back-office opérationnel, suivi des clients existants, correspondance multilingue, traduction et contenus numériques. Pas de gestion administrative d'entreprise, comptabilité, facturation, fiscalité, prospection ou acquisition de clients.",
+      "Secrétariat organisationnel, back-office opérationnel, suivi des clients existants, correspondance multilingue, traduction et contenus numériques. Je ne propose ni télémarketing, ni démarchage à froid, ni prospection ou acquisition de clients, ni comptabilité, facturation, gestion administrative ou services fiscaux.",
     cookiePrefs: 'Préférences Cookies',
   },
 };
