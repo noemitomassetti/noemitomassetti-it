@@ -36,14 +36,14 @@ export const esLocale: TranslationDictionary = {
     badge: 'ASISTENTE VIRTUAL',
     titleLine1: 'Traducción, localización y apoyo operativo',
     titleHighlight: 'para trabajar con Italia',
-    subtitle: "Asistencia virtual multilingüe: secretaría organizativa, back office operativo, atención a clientes existentes, correspondencia y contenidos profesionales.",
+    subtitle: "Traducción y localización al italiano, comunicación escrita con clientes italianos existentes y apoyo operativo para las actividades relacionadas con Italia.",
     headline: 'El apoyo que te ayuda a trabajar mejor, con más orden.',
     desc1: 'Más de veinte años de experiencia organizativa y lingüística para ayudarte a gestionar mejor tu día a día.',
     desc2: 'De la gestión de emails y agenda a la atención a clientes, de la traducción a la revisión y localización de contenidos web: un apoyo profesional y flexible a tu medida.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
-      'Pongo orden en tu gestión diaria, coordino tus comunicaciones en cuatro idiomas y atiendo tus procesos operativos con precisión, autonomía y compromiso.',
+      'Traduzco del español, el inglés y el francés al italiano, reviso contenidos en italiano y presto apoyo en las tareas operativas acordadas que requieren el uso de esta lengua.',
     ctaServices: 'Explorar Servicios',
     ctaNoeTom: 'Descubrir NoeTom IA',
     quickStats: {
