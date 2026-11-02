@@ -1472,12 +1472,10 @@ export default function IndexPage() {
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
-              {lang === "it" ? "Domande frequenti" : "Frequently Asked Questions"}
+              {lang === "it" ? "Domande frequenti" : lang === "fr" ? "Questions fréquentes" : lang === "es" ? "Preguntas frecuentes" : "Frequently asked questions"}
             </h2>
             <p className="text-base md:text-lg text-foreground/80">
-              {lang === "it"
-                ? "Tutto quello che è utile sapere prima di iniziare a collaborare."
-                : "Essential information about starting our collaboration and working together."}
+              {lang === "it" ? "Tutto quello che è utile sapere prima di iniziare a collaborare." : lang === "fr" ? "Les réponses aux questions essentielles avant de collaborer." : lang === "es" ? "Respuestas a las preguntas más habituales antes de colaborar." : "Essential information before we start working together."}
             </p>
           </div>
 
@@ -1507,21 +1505,17 @@ export default function IndexPage() {
       >
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
-            {lang === "it"
-              ? "C'è qualcosa che vorresti smettere di gestire da solo?"
-              : "Ready to stop carrying every operational task alone?"}
+            {lang === "it" ? "C'è qualcosa che vorresti smettere di gestire da solo?" : lang === "fr" ? "Besoin d’aide pour vos communications avec l’Italie ?" : lang === "es" ? "¿Necesitas apoyo para comunicarte con Italia?" : "Need support with your Italian-language communications?"}
           </h2>
           <div className="text-foreground/85 text-base md:text-lg mb-10 max-w-2xl space-y-3 leading-relaxed">
             <p className="font-semibold text-primary">
-              {lang === "it" ? "Parliamone." : "Let's talk."}
+              {lang === "it" ? "Parliamone." : lang === "fr" ? "Parlons de votre projet." : lang === "es" ? "Hablemos de tu proyecto." : "Tell me about your project."}
             </p>
             <p>
-              {lang === "it"
-                ? "Raccontami di cosa ti occupi, quali attività ti portano via più tempo e cosa vorresti riuscire a delegare."
-                : "Tell me about your business, the tasks that consume your day, and what you would love to delegate."}
+              {lang === "it" ? "Raccontami di cosa ti occupi, quali attività ti portano via più tempo e cosa vorresti riuscire a delegare." : lang === "fr" ? "Décrivez vos contenus à traduire en italien ou les échanges avec vos clients italiens pour lesquels vous souhaitez un soutien." : lang === "es" ? "Cuéntame qué contenidos necesitas traducir al italiano o qué tareas de comunicación con clientes italianos deseas delegar." : "Tell me which content you need translated into Italian or which existing Italian customer communications you would like support with."}
             </p>
             <p className="font-medium text-foreground">
-              {lang === "it" ? "Partiamo da lì." : "We'll take it from there."}
+              {lang === "it" ? "Partiamo da lì." : lang === "fr" ? "Nous partirons de vos besoins concrets." : lang === "es" ? "Partiremos de tus necesidades concretas." : "We will start with your specific needs."}
             </p>
           </div>
 
@@ -1529,15 +1523,15 @@ export default function IndexPage() {
             {/* Left direct contact details */}
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-primary mb-5">
-                {lang === "it" ? "Il mio supporto per te" : "What You Can Expect"}
+                {lang === "it" ? "Il mio supporto per te" : lang === "fr" ? "Ce que je peux vous apporter" : lang === "es" ? "Cómo puedo ayudarte" : "How I can support you"}
               </h3>
               <ul className="space-y-4 text-foreground/90 text-base mb-8">
                 {[
-                  lang === "it" ? "Analisi delle tue esigenze e priorità" : "Detailed analysis of your unique priorities",
-                  lang === "it" ? "Soluzioni personalizzate e flessibili" : "Customized, flexible working terms",
-                  lang === "it" ? "Gestione operativa precisa e organizzata" : "Dependable, accurate operational handling",
-                  lang === "it" ? "Comunicazione chiara e costante" : "Transparent, continuous communication",
-                  lang === "it" ? "Riservatezza e attenzione ai dettagli" : "Absolute discretion and GDPR confidentiality",
+                  lang === "it" ? "Analisi delle tue esigenze e priorità" : lang === "fr" ? "Évaluation de vos besoins et priorités" : lang === "es" ? "Análisis de tus necesidades y prioridades" : "Review of your priorities and requirements",
+                  lang === "it" ? "Soluzioni personalizzate e flessibili" : lang === "fr" ? "Prestations adaptées à votre projet" : lang === "es" ? "Servicios adaptados a tu proyecto" : "Flexible, project-specific support",
+                  lang === "it" ? "Gestione operativa precisa e organizzata" : lang === "fr" ? "Soutien linguistique et opérationnel rigoureux" : lang === "es" ? "Apoyo lingüístico y operativo riguroso" : "Careful linguistic and operational support",
+                  lang === "it" ? "Comunicazione chiara e costante" : lang === "fr" ? "Communication claire et suivie" : lang === "es" ? "Comunicación clara y constante" : "Clear, consistent communication",
+                  lang === "it" ? "Riservatezza e attenzione ai dettagli" : lang === "fr" ? "Confidentialité et attention aux détails" : lang === "es" ? "Confidencialidad y atención al detalle" : "Discretion and attention to detail",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -1586,9 +1580,7 @@ export default function IndexPage() {
                       <span itemProp="addressCountry">ITALIA</span>
                     </span>
                     <span className="text-muted-foreground text-xs sm:text-sm">
-                      {lang === "it"
-                        ? "Supporto da remoto in tutta Italia"
-                        : "Remote support worldwide"}
+                      {lang === "it" ? "Supporto da remoto in tutta Italia" : lang === "fr" ? "Prestations à distance pour votre activité avec l’Italie" : lang === "es" ? "Servicios a distancia para trabajar con Italia" : "Remote support for businesses working with Italy"}
                     </span>
                   </div>
                 </div>
@@ -1600,13 +1592,9 @@ export default function IndexPage() {
                     variant="link"
                     className="text-primary font-bold hover:underline p-0 h-auto inline text-sm md:text-base"
                   >
-                    {lang === "it"
-                      ? "Richiedi un preventivo"
-                      : "Request a quote"}
+                    {lang === "it" ? "Richiedi un preventivo" : lang === "fr" ? "Demander un devis" : lang === "es" ? "Solicitar un presupuesto" : "Request a quote"}
                   </BookingButton>{" "}
-                  {lang === "it"
-                    ? "oppure compila il modulo qui accanto."
-                    : "or use the form alongside."}
+                  {lang === "it" ? "oppure compila il modulo qui accanto." : lang === "fr" ? "ou utilisez le formulaire ci-contre." : lang === "es" ? "o completa el formulario de al lado." : "or complete the form alongside."}
                 </p>
               </div>
             </div>
