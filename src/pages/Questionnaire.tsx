@@ -574,11 +574,11 @@ export default function Questionnaire() {
           <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground pt-2">
             <span className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-primary" />
-              {lang === "it" ? "Tempo stimato: 3-5 min" : "Estimated time: 3-5 min"}
+              {lang === "it" ? "Tempo stimato: 3-5 min" : lang === "fr" ? "Temps estimé : 3 à 5 min" : lang === "es" ? "Tiempo estimado: 3-5 min" : "Estimated time: 3-5 min"}
             </span>
             <span className="flex items-center gap-1.5">
               <Save className="w-4 h-4 text-primary" />
-              {lang === "it" ? "Salvataggio automatico bozza" : "Auto-saved locally"}
+              {lang === "it" ? "Salvataggio automatico bozza" : lang === "fr" ? "Brouillon enregistré localement" : lang === "es" ? "Borrador guardado en este dispositivo" : "Auto-saved locally"}
             </span>
           </div>
         </div>
@@ -595,7 +595,7 @@ export default function Questionnaire() {
                     {sectionTitles[currentSection as keyof typeof sectionTitles][lang]}
                   </span>
                   <span>
-                    {lang === "it" ? `Sezione ${currentSection} di 5` : `Section ${currentSection} of 5`}
+                    {lang === "it" ? `Sezione ${currentSection} di 5` : lang === "fr" ? `Section ${currentSection} sur 5` : lang === "es" ? `Sección ${currentSection} de 5` : `Section ${currentSection} of 5`}
                   </span>
                 </div>
                 <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
@@ -658,7 +658,7 @@ export default function Questionnaire() {
                     {q.type === "multi" && q.options && (
                       <div className="space-y-2 pt-1">
                         <span className="text-[11px] text-muted-foreground block mb-1">
-                          {lang === "it" ? "(Puoi selezionare più risposte)" : "(Select all that apply)"}
+                          {lang === "it" ? "(Puoi selezionare più risposte)" : lang === "fr" ? "(Plusieurs réponses possibles)" : lang === "es" ? "(Puedes elegir varias respuestas)" : "(Select all that apply)"}
                         </span>
                         {q.options[lang].map((opt, idx) => {
                           const isSelected = (answers[q.id] || []).includes(opt);
@@ -717,7 +717,7 @@ export default function Questionnaire() {
                   className="text-xs uppercase tracking-wider font-semibold"
                 >
                   <ArrowLeft className="w-4 h-4 mr-1.5" />
-                  {lang === "it" ? "Indietro" : "Back"}
+                  {lang === "it" ? "Indietro" : lang === "fr" ? "Retour" : lang === "es" ? "Atrás" : "Back"}
                 </Button>
 
                 <Button
@@ -741,12 +741,10 @@ export default function Questionnaire() {
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <h2 className="text-2xl font-bold text-foreground">
-                  {lang === "it" ? "Questionario completato!" : "Assessment Completed!"}
+                  {lang === "it" ? "Questionario completato!" : lang === "fr" ? "Questionnaire terminé !" : lang === "es" ? "¡Cuestionario completado!" : "Assessment Completed!"}
                 </h2>
                 <p className="text-sm text-foreground/80 max-w-xl mx-auto leading-relaxed">
-                  {lang === "it"
-                    ? "Dalle tue risposte emerge un potenziale risparmio operativo compreso tra 5 e 10 ore a settimana. Delegare la gestione dell'agenda, delle email e la revisione o localizzazione dei testi può liberare tempo immediato per le tue attività a più alto valore."
-                    : "Based on your inputs, delegating email triage, calendar coordination, and translation could free up 5 to 10 hours weekly for your high-value client work."}
+                  {lang === "it" ? "Le tue risposte aiutano a individuare attività che potresti organizzare o delegare, senza promettere un risparmio di tempo quantificabile." : lang === "fr" ? "Vos réponses permettent d’identifier des pistes d’organisation et de délégation adaptées à votre activité, sans promesse de gain de temps chiffré." : lang === "es" ? "Tus respuestas ayudan a identificar tareas que podrías organizar o delegar, sin prometer un ahorro de tiempo concreto." : "Your answers can help identify tasks you could organise or delegate, without promising a specific amount of time saved."}
                 </p>
               </div>
 
@@ -754,14 +752,10 @@ export default function Questionnaire() {
               <div className="p-6 md:p-8 rounded-2xl border border-border/60 bg-secondary/30 space-y-6">
                 <div>
                   <h3 className="text-lg font-bold text-foreground">
-                    {lang === "it"
-                      ? "Invia le tue risposte a Noemi per un riscontro personalizzato"
-                      : "Send your responses to Noemi for tailored feedback"}
+                    {lang === "it" ? "Invia le tue risposte a Noemi per un riscontro personalizzato" : lang === "fr" ? "Envoyer vos réponses à Noemi pour un retour personnalisé" : lang === "es" ? "Enviar tus respuestas a Noemi para una valoración personalizada" : "Send your responses to Noemi for tailored feedback"}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {lang === "it"
-                      ? "Riceverai una panoramica sintetica su come impostare la delega per la tua attività specifica, senza alcun impegno."
-                      : "You will receive a tailored overview of delegation priorities for your business, with zero obligation."}
+                    {lang === "it" ? "Riceverai una panoramica sintetica su come impostare la delega per la tua attività specifica, senza alcun impegno." : lang === "fr" ? "Je pourrai examiner vos besoins et vous proposer un premier retour sur les tâches qui correspondent à mes services, sans engagement." : lang === "es" ? "Podré revisar tus necesidades y orientarte sobre las tareas que encajan con mis servicios, sin compromiso." : "You will receive a tailored overview of delegation priorities for your business, with zero obligation."}
                   </p>
                 </div>
 
@@ -776,7 +770,7 @@ export default function Questionnaire() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
                       <label className="text-xs font-semibold text-foreground">
-                        {lang === "it" ? "Il tuo nome" : "Your name"}
+                        {lang === "it" ? "Il tuo nome" : lang === "fr" ? "Votre nom" : lang === "es" ? "Tu nombre" : "Your name"}
                       </label>
                       <Input
                         type="text"
@@ -789,7 +783,7 @@ export default function Questionnaire() {
                     </div>
                     <div className="space-y-1">
                       <label className="text-xs font-semibold text-foreground">
-                        {lang === "it" ? "Il tuo indirizzo email" : "Your email address"}
+                        {lang === "it" ? "Il tuo indirizzo email" : lang === "fr" ? "Votre adresse e-mail" : lang === "es" ? "Tu correo electrónico" : "Your email address"}
                       </label>
                       <Input
                         type="email"
@@ -810,9 +804,7 @@ export default function Questionnaire() {
                       className="mt-0.5 rounded border-border text-primary focus:ring-primary"
                     />
                     <span>
-                      {lang === "it"
-                        ? "Ho letto e compreso l'informativa privacy. I dati forniti saranno utilizzati esclusivamente per dare riscontro alle risposte del questionario."
-                        : "I have read and agree to the privacy policy. Provided details will be used solely to respond to this assessment."}
+                      {lang === "it" ? "Ho letto e compreso l'informativa privacy. I dati forniti saranno utilizzati esclusivamente per dare riscontro alle risposte del questionario." : lang === "fr" ? "J’ai lu et compris la politique de confidentialité. Les informations fournies serviront uniquement à répondre à ce questionnaire." : lang === "es" ? "He leído y comprendido la política de privacidad. Los datos facilitados se utilizarán únicamente para responder a este cuestionario." : "I have read and agree to the privacy policy. Provided details will be used solely to respond to this assessment."}
                     </span>
                   </label>
 
@@ -823,14 +815,14 @@ export default function Questionnaire() {
                       className="w-full sm:w-auto font-bold text-xs uppercase tracking-wider bg-primary text-primary-foreground shadow-md hover:scale-102 transition-all px-8 py-5"
                     >
                       <Send className="w-4 h-4 mr-2" />
-                      {lang === "it" ? "Invia le risposte a Noemi" : "Send responses to Noemi"}
+                      {lang === "it" ? "Invia le risposte a Noemi" : lang === "fr" ? "Envoyer les réponses à Noemi" : lang === "es" ? "Enviar respuestas a Noemi" : "Send responses to Noemi"}
                     </Button>
 
                     <BookingButton
                       variant="outline"
                       className="w-full sm:w-auto text-xs uppercase tracking-wider font-bold py-5 border-border hover:border-primary/50"
                     >
-                      {lang === "it" ? "Oppure richiedi un preventivo scritto" : "Or request a written quote"}
+                      {lang === "it" ? "Oppure richiedi un preventivo" : lang === "fr" ? "Ou demander un devis" : lang === "es" ? "O solicitar un presupuesto" : "Or request a quote"}
                     </BookingButton>
                   </div>
                 </form>
