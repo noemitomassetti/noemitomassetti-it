@@ -187,6 +187,7 @@ export async function submitQuoteRequest(payload: CreatePublicRequestPayload): P
     }).catch(() => { throw new Error('WEB3FORMS_NETWORK_OR_CORS'); });
     const web3Result = await parseJsonSafely(web3Response);
     if (web3Response.status === 429) throw new Error('FORM_PROVIDER_RATE_LIMIT');
+    if (web3Response.status === 403) throw new Error('WEB3FORMS_BLOCKED_ORIGIN_OR_REQUEST');
     if (!web3Response.ok || web3Result?.success !== true) {
       throw new Error('WEB3FORMS_PROVIDER_REJECTED');
     }
