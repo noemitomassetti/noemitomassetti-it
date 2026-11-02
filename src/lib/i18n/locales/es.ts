@@ -33,13 +33,13 @@ export const esLocale: TranslationDictionary = {
     language: 'Idioma',
   },
   hero: {
-    badge: 'ASISTENTE VIRTUAL',
+    badge: 'SERVICIOS LINGÜÍSTICOS PARA ITALIA',
     titleLine1: 'Traducción, localización y apoyo operativo',
     titleHighlight: 'para trabajar con Italia',
     subtitle: "Traducción y localización al italiano, comunicación escrita con clientes italianos existentes y apoyo operativo para las actividades relacionadas con Italia.",
-    headline: 'El apoyo que te ayuda a trabajar mejor, con más orden.',
-    desc1: 'Más de veinte años de experiencia organizativa y lingüística para ayudarte a gestionar mejor tu día a día.',
-    desc2: 'De la gestión de emails y agenda a la atención a clientes, de la traducción a la revisión y localización de contenidos web: un apoyo profesional y flexible a tu medida.',
+    headline: 'Comunícate de forma natural con tu público italiano.',
+    desc1: 'Soy hablante nativa de italiano, tengo formación especializada en traducción y más de veinte años de experiencia profesional.',
+    desc2: 'Desde páginas web y landing pages hasta comunicaciones con clientes italianos existentes: traducción, localización y apoyo operativo adaptados a tu actividad en Italia.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
@@ -533,14 +533,14 @@ export const esLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Soporte digital, multilingüe y operativo para profesionales independientes, consultores y empresas en Europa. Creadora de NoeTom, la asistente operativa de IA.',
+      'Traducción al italiano, localización y apoyo operativo para profesionales y pequeñas empresas que trabajan con Italia. Creadora de NoeTom, un proyecto interno en desarrollo.',
     servicesTitle: 'Servicios',
     noetomTitle: 'NoeTom IA',
     companyTitle: 'Sobre Mí & Recursos',
     legalTitle: 'Aviso Legal',
     rights: 'Todos los derechos reservados.',
     disclaimer:
-      "Secretaría organizativa, back office operativo, atención a clientes existentes, comunicación multilingüe, traducción y contenidos digitales. No se ofrecen administración de empresas, contabilidad, facturación, servicios fiscales, generación de leads ni captación comercial.",
+      "Secretaría organizativa, back office operativo, atención a clientes existentes, comunicación multilingüe, traducción y contenidos digitales. No ofrezco telemarketing, llamadas comerciales en frío, prospección o captación de clientes, búsqueda de contactos comerciales, contabilidad, facturación, gestión administrativa ni servicios fiscales.",
     cookiePrefs: 'Preferencias de Cookies',
   },
 };
