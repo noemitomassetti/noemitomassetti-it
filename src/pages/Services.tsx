@@ -180,19 +180,25 @@ export default function ServicesPage() {
                 <Globe className="w-3.5 h-3.5" />
                 <span>
                   {lang === "it"
-                    ? "Mercato Estero & Internazionale"
+                    ? "Traduzioni e localizzazione verso l’italiano"
+                    : lang === "fr" ? "Traduction et localisation vers l’italien"
+                    : lang === "es" ? "Traducción y localización al italiano"
                     : "Italian localisation for international clients"}
                 </span>
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-foreground">
                 {lang === "it"
-                  ? "Sei un'azienda estera che deve comunicare o vendere in Italia?"
+                  ? "Hai un’attività che si rivolge al mercato italiano?"
+                  : lang === "fr" ? "Vous vous adressez à une clientèle italienne ?"
+                  : lang === "es" ? "¿Tu empresa se dirige al público italiano?"
                   : "Reaching Italian customers? EN/FR/ES → IT localisation"}
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
                 {lang === "it"
-                  ? "Scopri il nostro servizio di punta dedicato alla localizzazione culturale, traduzione specialistica e post-editing AI (MTPE) verso l'italiano."
-                  : "Discover our dedicated flagship service: Specialist Translation, Cultural Localization, and AI MTPE for international businesses."}
+                  ? "Traduzione, revisione e localizzazione di siti web, landing page e comunicazioni professionali verso l’italiano."
+                  : lang === "fr" ? "Traduction, révision et localisation en italien de sites web, pages de destination et communications professionnelles."
+                  : lang === "es" ? "Traducción, revisión y localización al italiano de sitios web, landing pages y comunicaciones profesionales."
+                  : "Translation, editing and localisation into Italian for websites, landing pages and professional communications."}
               </p>
             </div>
             <Button asChild className="rounded-full shrink-0 font-semibold text-xs uppercase tracking-wider">
