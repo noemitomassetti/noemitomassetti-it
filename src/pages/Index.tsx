@@ -11,7 +11,7 @@ import {
   getHreflangAlternates,
   getLocalizedPath,
 } from "@/lib/i18n";
-import { getBlogPosts } from "@/lib/blogData";
+import { getBlogPosts, getBlogPostPath, getBlogIndexPath } from "@/lib/blogData";
 import {
   Mail,
   Globe,
@@ -389,7 +389,7 @@ export default function IndexPage() {
     },
   ];
 
-  const blogPosts = getBlogPosts(lang).slice(0, 3);
+  const blogPosts = getBlogPosts(lang).filter(post => post.published !== false).sort((a,b) => b.dateISO.localeCompare(a.dateISO)).slice(0, 3);
 
   const faqs = [
     {
@@ -1437,8 +1437,8 @@ export default function IndexPage() {
                       className="w-full text-xs font-semibold uppercase tracking-wider border-border/60 hover:border-primary text-foreground hover:text-primary"
                       asChild
                     >
-                      <Link to={`/blog/${post.slug || post.id}`}>
-                        {lang === "it" ? "Leggi l’articolo" : lang === "fr" ? "Lire en italien" : lang === "es" ? "Leer en italiano" : "Read in Italian"}
+                      <Link to={getBlogPostPath(post.slug,lang)}>
+                        {lang === "it" ? "Leggi l’articolo" : lang === "fr" ? "Lire l’article" : lang === "es" ? "Leer el artículo" : "Read article"}
                       </Link>
                     </Button>
                   </div>
@@ -1453,8 +1453,8 @@ export default function IndexPage() {
               variant="outline"
               className="border-primary/50 text-primary hover:bg-primary/10 rounded-md px-6 py-4 text-xs font-bold uppercase tracking-wider"
             >
-              <Link to={lang === "it" ? "/blog" : getLocalizedPath("resources", lang)}>
-                {lang === "it" ? "Vedi tutti gli articoli" : lang === "fr" ? "Consulter les ressources" : lang === "es" ? "Ver los recursos" : "Browse resources"}
+              <Link to={getBlogIndexPath(lang)}>
+                {lang === "it" ? "Vedi tutti gli articoli" : lang === "fr" ? "Tous les articles" : lang === "es" ? "Todos los artículos" : "All articles"}
               </Link>
             </Button>
           </div>
