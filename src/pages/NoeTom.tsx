@@ -97,7 +97,7 @@ export default function NoeTomPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
             <Button asChild size="lg" className="w-full sm:w-auto px-8 py-6 rounded-full font-bold text-base uppercase tracking-wider shadow-lg shadow-primary/20">
               <Link to={getLocalizedPath('contact', lang)}>
-                {lang === 'it' ? 'Richiedi un preventivo scritto' : lang === 'fr' ? 'Demander un devis écrit' : lang === 'es' ? 'Solicitar presupuesto por escrito' : 'Request a written quote'}
+                {lang === 'it' ? 'Richiedi un preventivo' : lang === 'fr' ? 'Demander un devis' : lang === 'es' ? 'Solicitar un presupuesto' : 'Request a quote'}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
