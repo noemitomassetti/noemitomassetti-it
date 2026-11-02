@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import { unifiedStore, PublicRequestRecord } from './server/unifiedStore';
+import { detectExcludedService } from './src/lib/serviceScope';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -216,6 +217,13 @@ app.post('/api/v1/public/requests', (req, res) => {
       code: 'VALIDATION_ERROR',
       field: 'brief',
     });
+  }
+
+  // Enforce the same professional perimeter in the owner-side intake API.
+  // The public production API remains disabled until durable storage is configured.
+  const excludedService = detectExcludedService(resolvedBrief);
+  if (excludedService) {
+    return res.status(422).json({success: false, code: 'SERVICE_OUT_OF_SCOPE', category: excludedService});
   }
 
   if (!hasConsent) {
