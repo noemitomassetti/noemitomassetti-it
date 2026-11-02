@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getBlogPosts, getBlogPostPath } from "@/lib/blogData";
 import { useLocation, Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
@@ -116,10 +117,14 @@ export default function ResourcesPage() {
   const tools = getTools(lang);
   const tips = getTips(lang);
 
-  const filteredArticles =
-    activeCat === "All" || activeCat === "Tutte" || activeCat === "Tous" || activeCat === "Todos" || activeCat === "Tutti"
-      ? r.articles
-      : r.articles.filter((a) => a.category === activeCat);
+  const articles = getBlogPosts(lang)
+    .filter(article => article.published !== false)
+    .sort((a, b) => b.dateISO.localeCompare(a.dateISO));
+  const allLabel = { it: "Tutti", en: "All", fr: "Tous", es: "Todos" }[lang];
+  const categories = [allLabel, ...Array.from(new Set(articles.map(article => article.category)))];
+  const filteredArticles = activeCat === "All" || activeCat === allLabel
+    ? articles
+    : articles.filter(article => article.category === activeCat);
 
   return (
     <Layout lang={lang}>
@@ -271,7 +276,7 @@ export default function ResourcesPage() {
 
           {/* Categories */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            {r.categories.map((cat, idx) => {
+            {categories.map((cat, idx) => {
               const isSelected =
                 activeCat === cat ||
                 ((cat === "All" || cat === "Tutte" || cat === "Tous" || cat === "Todos" || cat === "Tutti") &&
@@ -308,12 +313,12 @@ export default function ResourcesPage() {
                     </span>
                     <div className="flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5" />
-                      <span>{article.readTime}</span>
+                      <span>{Math.max(2, Math.round(article.content.replace(/<[^>]*>/g, " ").trim().split(/\s+/).length / 200))} {lang === "it" ? "min" : lang === "fr" ? "min" : lang === "es" ? "min" : "min"}</span>
                     </div>
                   </div>
 
                   <h2 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-snug">
-                    <Link to={`/blog/${article.slug}`}>
+                    <Link to={getBlogPostPath(article.slug, lang)}>
                       {article.title}
                     </Link>
                   </h2>
@@ -326,10 +331,10 @@ export default function ResourcesPage() {
                 <div className="pt-6 mt-4 border-t border-border/40 flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">{article.date}</span>
                   <Link
-                    to={`/blog/${article.slug}`}
+                    to={getBlogPostPath(article.slug, lang)}
                     className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-primary hover:underline"
                   >
-                    <span>{lang === "it" ? "Leggi l'articolo" : lang === "fr" ? "Lire en italien" : lang === "es" ? "Leer en italiano" : "Read in Italian"}</span>
+                    <span>{lang === "it" ? "Leggi l'articolo" : lang === "fr" ? "Lire l’article" : lang === "es" ? "Leer el artículo" : "Read article"}</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
