@@ -45,7 +45,7 @@ jobs:
               const page = await browser.newPage({viewport:{width:1365,height:920}});
               const errors = [];
               page.on('pageerror',e=>errors.push(e.message));
-              const routes = ['/', '/it', '/fr', '/es', '/it/contatti', '/it/esempi-di-lavoro', '/en-not-a-page'];
+              const routes = ['/', '/it', '/fr', '/es', '/it/contatti', '/it/esempi-di-lavoro', '/blog', '/en/blog', '/fr/blog', '/es/blog', '/en/blog/communicating-with-italian-customers', '/fr/blog/communiquer-avec-ses-clients-italiens', '/es/blog/comunicacion-con-clientes-italianos-localizacion', '/en-not-a-page'];
               for (const path of routes) {
                 const resp = await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle',timeout:20000});
                 if(!resp || resp.status()!==200) throw new Error('Route '+path+' HTTP '+resp?.status());
@@ -61,6 +61,29 @@ jobs:
                 if(!response.ok() || text.length<1000 || !text.includes('<html')) throw new Error('Document not reachable: '+path);
                 console.log('PASS HTML portfolio document '+path);
               }
+              // Validate real translated article text, canonical URLs and reciprocal hreflang tags.
+              const internationalBlogCases = [
+                {lang:'en',path:'/en/blog/communicating-with-italian-customers',title:'Communicating with Italian customers'},
+                {lang:'fr',path:'/fr/blog/communiquer-avec-ses-clients-italiens',title:'Communiquer avec ses clients italiens'},
+                {lang:'es',path:'/es/blog/comunicacion-con-clientes-italianos-localizacion',title:'Comunicación con clientes italianos'}
+              ];
+              for (const check of internationalBlogCases) {
+                await page.goto('http://127.0.0.1:4173'+check.path,{waitUntil:'networkidle'});
+                const heading=await page.locator('article h1').innerText();
+                if(!heading.includes(check.title)) throw new Error('Translated article heading missing: '+check.path+' '+heading);
+                const htmlLang=await page.locator('html').getAttribute('lang');
+                if(htmlLang!==check.lang) throw new Error('HTML language incorrect at '+check.path+': '+htmlLang);
+                const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
+                if(canonical!=='https://www.noemitomassetti.it'+check.path) throw new Error('Incorrect canonical at '+check.path+': '+canonical);
+                const alts=await page.locator('link[rel="alternate"][hreflang]').count();
+                if(alts!==5) throw new Error('Expected five hreflang references at '+check.path+', got '+alts);
+                console.log('PASS translated article + language + canonical + hreflang '+check.path);
+              }
+              const itBlogArticle='http://127.0.0.1:4173/blog/supporto-multilingue-come-gestire-richieste-e-comunicazioni-in-inglese-francese-e-spagnolo';
+              await page.goto(itBlogArticle,{waitUntil:'networkidle'});
+              if(await page.locator('html').getAttribute('lang')!=='it') throw new Error('Original blog article must remain Italian');
+              console.log('PASS original Italian blog slug preserved');
+
               // Specifically guard against clipped header links on narrow mobile/laptop/wide screens.
               for (const width of [390, 768, 1365, 1536]) {
                 await page.setViewportSize({width,height:900});
