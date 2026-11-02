@@ -219,10 +219,10 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
           {
             id: 'en_to_it',
             label: {
-              it: 'Inglese → Italiano',
-              en: 'English → Italian',
-              fr: 'Anglais → Italien',
-              es: 'Inglés → Italiano',
+              it: 'Inglese ➔ Italiano',
+              en: 'English ➔ Italian',
+              fr: 'Anglais ➔ Italien',
+              es: 'Inglés ➔ Italiano',
             },
           },
           {
