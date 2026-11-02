@@ -703,12 +703,12 @@ export default function IndexPage() {
                 <p className="font-bold text-foreground text-base sm:text-lg">
                   {lang === "it"
                     ? "Vuoi scoprire cosa possiamo delegare e come posso aiutarti?"
-                    : "Curious about what you can delegate and how we can work together?"}
+                    : lang === "fr" ? "Vous souhaitez savoir quelles tâches me confier ?" : lang === "es" ? "¿Quieres saber qué tareas puedes delegarme?" : "Curious about what you can delegate and how we can work together?"}
                 </p>
                 <p className="text-sm text-muted-foreground">
                   {lang === "it"
                     ? "Scopri tutte le aree di supporto e i servizi dedicati."
-                    : "Explore all dedicated areas of support and services."}
+                    : lang === "fr" ? "Découvrez les services et les domaines dans lesquels je peux vous accompagner." : lang === "es" ? "Descubre los servicios y las áreas en las que puedo ayudarte." : "Explore all dedicated areas of support and services."}
                 </p>
               </div>
               <Button
@@ -716,7 +716,7 @@ export default function IndexPage() {
                 className="shrink-0 uppercase font-bold text-xs tracking-wider px-6 py-5 bg-primary text-primary-foreground hover:scale-105 transition-all"
               >
                 <a href="#servizi">
-                  {lang === "it" ? "SCOPRI I SERVIZI" : "EXPLORE SERVICES"}
+                  {lang === "it" ? "SCOPRI I SERVIZI" : lang === "fr" ? "DÉCOUVRIR LES SERVICES" : lang === "es" ? "DESCUBRIR LOS SERVICIOS" : "EXPLORE SERVICES"}
                 </a>
               </Button>
             </div>
@@ -834,22 +834,22 @@ export default function IndexPage() {
 
           <div className="my-8 p-6 bg-primary/10 border-l-4 border-primary rounded-r-xl space-y-3">
             <h3 className="text-xl md:text-2xl font-bold text-primary">
-              {lang === "it" ? "Il mio modo di lavorare" : "My Way of Working"}
+              {lang === "it" ? "Il mio modo di lavorare" : lang === "fr" ? "Ma manière de travailler" : lang === "es" ? "Mi forma de trabajar" : "My Way of Working"}
             </h3>
             <p className="text-foreground/90 leading-relaxed">
               {lang === "it"
                 ? "Ogni collaborazione parte dall'ascolto."
-                : "Every collaboration begins with attentive listening."}
+                : lang === "fr" ? "Chaque collaboration commence par l’écoute." : lang === "es" ? "Cada colaboración empieza por escuchar." : "Every collaboration begins with attentive listening."}
             </p>
             <p className="text-foreground/90 leading-relaxed">
               {lang === "it"
                 ? "Mi racconti la tua attività, le tue esigenze e le attività che ti occupano più tempo. Insieme individuiamo ciò che ha senso delegare e definiamo una modalità di lavoro semplice e sostenibile."
-                : "You share your business rhythm, daily friction points, and key priorities. Together, we identify what makes practical sense to delegate and design a sustainable workflow."}
+                : lang === "fr" ? "Vous me présentez votre activité, vos besoins et vos priorités. Nous définissons ensemble les tâches à déléguer et une méthode de travail claire et adaptée." : lang === "es" ? "Me explicas cómo funciona tu actividad y cuáles son tus prioridades. Juntos definimos qué tareas delegar y una forma de trabajar clara y sostenible." : "You share your business rhythm, daily friction points, and key priorities. Together, we identify what makes practical sense to delegate and design a sustainable workflow."}
             </p>
             <p className="text-foreground font-semibold">
               {lang === "it"
                 ? "Nessuna formula standard. Partiamo da ciò che ti serve davvero."
-                : "No rigid templates. We start from what you genuinely need."}
+                : lang === "fr" ? "Pas de formule imposée : nous partons de vos besoins concrets." : lang === "es" ? "Sin fórmulas rígidas: partimos de lo que realmente necesitas." : "No rigid templates. We start from what you genuinely need."}
             </p>
           </div>
 
@@ -858,7 +858,7 @@ export default function IndexPage() {
               size="lg"
               className="text-sm md:text-base px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide"
             >
-              {lang === "it" ? "RICHIEDI PREVENTIVO" : "REQUEST A QUOTE"}
+              {lang === "it" ? "RICHIEDI PREVENTIVO" : lang === "fr" ? "DEMANDER UN DEVIS" : lang === "es" ? "SOLICITAR UN PRESUPUESTO" : "REQUEST A QUOTE"}
             </BookingButton>
           </div>
         </div>
@@ -870,12 +870,12 @@ export default function IndexPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
             {lang === "it"
               ? "Delegare non significa perdere il controllo."
-              : "Delegating does not mean losing control."}
+              : lang === "fr" ? "Déléguer, ce n’est pas perdre le contrôle." : lang === "es" ? "Delegar no significa perder el control." : "Delegating does not mean losing control."}
           </h2>
           <p className="text-base md:text-lg text-foreground/80 mb-8 leading-relaxed">
             {lang === "it"
               ? "Significa scegliere con attenzione quali attività continuare a gestire personalmente e quali affidare a qualcuno che possa occuparsene con precisione e continuità."
-              : "It means deliberately choosing which high-value areas to keep close, and entrusting operational execution to a dependable professional."}
+              : lang === "fr" ? "C’est choisir les tâches que vous souhaitez conserver et confier les autres à une professionnelle attentive et fiable." : lang === "es" ? "Significa elegir qué tareas quieres seguir gestionando personalmente y cuáles puedes confiar a una profesional que se ocupe de ellas con rigor." : "It means deliberately choosing which high-value areas to keep close, and entrusting operational execution to a dependable professional."}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -896,12 +896,12 @@ export default function IndexPage() {
           <p className="text-lg md:text-xl font-semibold text-foreground mb-12">
             {lang === "it"
               ? "Il mio obiettivo non è sostituirti. È aiutarti a gestire meglio il lavoro."
-              : "My goal is not to replace you. It is to help you operate with greater ease and focus."}
+              : lang === "fr" ? "Mon rôle n’est pas de vous remplacer, mais de vous aider à mieux organiser votre travail." : lang === "es" ? "Mi objetivo no es sustituirte, sino ayudarte a organizar mejor tu trabajo." : "My goal is not to replace you. It is to help you operate with greater ease and focus."}
           </p>
 
           <div className="border-t border-border/40 pt-10">
             <h3 className="text-xl md:text-2xl font-bold text-primary mb-6">
-              {lang === "it" ? "Competenze costruite nel tempo" : "Skills Built Over Time"}
+              {lang === "it" ? "Competenze costruite nel tempo" : lang === "fr" ? "Des compétences acquises au fil des années" : lang === "es" ? "Competencias desarrolladas con la experiencia" : "Skills Built Over Time"}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {experienceItems.map((item, i) => {
@@ -932,12 +932,12 @@ export default function IndexPage() {
       >
         <div className="max-w-4xl mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
-            {lang === "it" ? "Come posso aiutarti" : "How I Can Support You"}
+            {lang === "it" ? "Come posso aiutarti" : lang === "fr" ? "Comment puis-je vous aider ?" : lang === "es" ? "¿Cómo puedo ayudarte?" : "How I Can Support You"}
           </h2>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
             {lang === "it"
               ? "Il mio supporto si concentra su alcune aree precise. Puoi affidarmi una singola attività oppure costruire nel tempo una collaborazione più ampia."
-              : "My assistance focuses on well-defined domains. You can start with a single assignment or establish an ongoing operational partnership."}
+              : lang === "fr" ? "Mon accompagnement porte sur des tâches bien définies. Vous pouvez commencer par une mission ponctuelle ou mettre en place une collaboration suivie." : lang === "es" ? "Mi apoyo se centra en tareas concretas. Puedes empezar por un encargo puntual o establecer una colaboración continuada." : "My assistance focuses on well-defined domains. You can start with a single assignment or establish an ongoing operational partnership."}
           </p>
         </div>
 
@@ -1018,12 +1018,11 @@ export default function IndexPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
             {lang === "it"
               ? "Un supporto pensato per attività diverse"
-              : "Support Tailored to Diverse Needs"}
+              : lang === "fr" ? "Un accompagnement adapté à différentes activités" : lang === "es" ? "Apoyo adaptado a distintos profesionales" : "Support Tailored to Diverse Needs"}
           </h2>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
             {lang === "it"
-              ? "Ogni professione ha le sue specificità, ma molte esigenze organizzative e di gestione sono comuni:"
-              : "Every business has unique characteristics, yet core organizational bottlenecks are often remarkably shared:"}
+              ? "Ogni professione ha le sue specificità, ma molte esigenze organizzative e di gestione sono comuni: lang === "fr" ? "Chaque activité a ses particularités, mais de nombreuses tâches d’organisation se ressemblent." : lang === "es" ? "Cada actividad tiene sus particularidades, pero muchas necesidades de organización son similares." : "}
           </p>
         </div>
 
@@ -1049,12 +1048,12 @@ export default function IndexPage() {
 
         <div className="mt-10 border-t border-border/40 pt-6 space-y-2">
           <h3 className="text-lg md:text-xl font-bold text-primary">
-            {lang === "it" ? "La tua attività è diversa?" : "Is your business different?"}
+            {lang === "it" ? "La tua attività è diversa?" : lang === "fr" ? "Votre activité est différente ?" : lang === "es" ? "¿Tu actividad es diferente?" : "Is your business different?"}
           </h3>
           <p className="text-base md:text-lg text-foreground/85">
             {lang === "it"
               ? "Raccontami di cosa ti occupi. Possiamo valutare insieme se e come posso esserti utile."
-              : "Tell me about your distinct activities. Together we can determine how my support can be most effective."}
+              : lang === "fr" ? "Décrivez-moi votre activité : nous verrons ensemble si mes services répondent à vos besoins." : lang === "es" ? "Cuéntame a qué te dedicas y valoraremos si mis servicios encajan con tus necesidades." : "Tell me about your distinct activities. Together we can determine how my support can be most effective."}
           </p>
         </div>
       </section>
@@ -1065,7 +1064,7 @@ export default function IndexPage() {
         className="container px-4 md:px-6 py-12 md:py-20 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both"
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-12 text-left">
-          {lang === "it" ? "Iniziare è semplice." : "Getting Started is Simple."}
+          {lang === "it" ? "Iniziare è semplice." : lang === "fr" ? "Commencer est simple." : lang === "es" ? "Empezar es sencillo." : "Getting Started is Simple."}
         </h2>
 
         {/* Desktop Curved Process Ribbon */}
@@ -1284,16 +1283,15 @@ export default function IndexPage() {
                 <GraduationCap className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-foreground text-base">
-                {lang === "it" ? "Formazione Specialistica" : "Specialist Academic Rigor"}
+                {lang === "it" ? "Formazione Specialistica" : lang === "fr" ? "Une formation universitaire spécialisée" : lang === "es" ? "Formación universitaria especializada" : "Specialist Academic Rigor"}
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
-                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU) nei 5 ambiti: Letterario, Giuridico, Economico, Tecnologico, Scientifico."
-                  : "Bachelor's Degree in Language Mediation (110/110 summa cum laude) and 1,500-hour Postgraduate Master in Specialist Translation across 5 domains."}
+                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU) nei 5 ambiti: lang === "fr" ? "Diplôme en médiation linguistique avec mention et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Grado en Mediación Lingüística con matrícula de honor y máster universitario en Traducción Especializada (1.500 horas, 60 créditos), en cinco áreas de especialización." : "Bachelor's Degree in Language Mediation (110/110 summa cum laude) and 1,500-hour Postgraduate Master in Specialist Translation across 5 domains."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
-              {lang === "it" ? "IT · EN · FR · ES" : "IT · EN · FR · ES"}
+              {lang === "it" ? "IT · EN · FR · ES" : lang === "fr" ? "IT · EN · FR · ES" : lang === "es" ? "IT · EN · FR · ES" : "IT · EN · FR · ES"}
             </div>
           </div>
 
@@ -1304,16 +1302,16 @@ export default function IndexPage() {
                 <Clock className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-foreground text-base">
-                {lang === "it" ? "20+ Anni di Esperienza" : "20+ Years in Operations"}
+                {lang === "it" ? "20+ Anni di Esperienza" : lang === "fr" ? "Plus de 20 ans d’expérience" : lang === "es" ? "Más de 20 años de experiencia" : "20+ Years in Operations"}
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
                   ? "Oltre due decenni di lavoro continuativo tra assistenza clienti, organizzazione operativa, gestione back office e coordinamento da remoto."
-                  : "Over two decades in customer care, operational coordination, remote back office support, and client communication."}
+                  : lang === "fr" ? "Plus de vingt ans d’expérience dans la relation client, l’organisation, le back-office et la communication professionnelle." : lang === "es" ? "Más de veinte años de experiencia en atención al cliente, organización, back office y comunicación profesional." : "Over two decades in customer care, operational coordination, remote back office support, and client communication."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
-              {lang === "it" ? "Precisione & Continuità" : "Precision & Continuity"}
+              {lang === "it" ? "Precisione & Continuità" : lang === "fr" ? "Précision et continuité" : lang === "es" ? "Precisión y continuidad" : "Precision & Continuity"}
             </div>
           </div>
 
@@ -1324,16 +1322,16 @@ export default function IndexPage() {
                 <CheckCircle2 className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-foreground text-base">
-                {lang === "it" ? "Tariffe & Metodo Chiari" : "Clear Pricing & Method"}
+                {lang === "it" ? "Tariffe & Metodo Chiari" : lang === "fr" ? "Tarifs et méthode transparents" : lang === "es" ? "Tarifas y método transparentes" : "Clear Pricing & Method"}
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
                   ? "Preventivo confermato per iscritto prima dell'avvio, tracciamento trasparente dei task, nessun costo nascosto a fine mese."
-                  : "Written quotes agreed before work begins, clear per-hour and per-word rates, zero unexpected surcharges."}
+                  : lang === "fr" ? "Chaque mission fait l’objet d’un devis préalable précisant les prestations, les délais et les tarifs, sans frais imprévus." : lang === "es" ? "Cada encargo se define mediante un presupuesto previo que detalla servicios, plazos y tarifas, sin costes imprevistos." : "Written quotes agreed before work begins, clear per-hour and per-word rates, zero unexpected surcharges."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
-              {lang === "it" ? "Da € 25/h · Da € 0,09/parola" : "From €25/hr · From €0.09/word"}
+              {lang === "it" ? "Da € 25/h · Da € 0,09/parola" : lang === "fr" ? "Dès 25 €/heure · Dès 0,09 €/mot" : lang === "es" ? "Desde 25 €/hora · Desde 0,09 €/palabra" : "From €25/hr · From €0.09/word"}
             </div>
           </div>
 
@@ -1344,12 +1342,12 @@ export default function IndexPage() {
                 <Globe className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-foreground text-base">
-                {lang === "it" ? "Identità & Contatto Diretto" : "Direct 1:1 Contact"}
+                {lang === "it" ? "Identità & Contatto Diretto" : lang === "fr" ? "Contact direct avec Noemi" : lang === "es" ? "Contacto directo con Noemi" : 1 Contact"}
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
                   ? "Sede a Castelfidardo (AN), supporto operativo da remoto in tutta Italia ed estero. Parli direttamente con Noemi, senza agenzie o intermediari."
-                  : "Based in Castelfidardo (AN), Italy. Remote operational support across Europe. Direct contact with Noemi, no agency middlemen."}
+                  : lang === "fr" ? "Installée à Castelfidardo (Italie), je travaille à distance avec des clients internationaux pour leurs besoins liés à l’italien. Vous échangez directement avec moi." : lang === "es" ? "Trabajo desde Castelfidardo (Italia) y presto servicios a distancia para actividades relacionadas con el mercado italiano. Tratarás directamente conmigo." : "Based in Castelfidardo (AN), Italy. Remote operational support across Europe. Direct contact with Noemi, no agency middlemen."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
@@ -1363,13 +1361,12 @@ export default function IndexPage() {
           <div className="space-y-2 text-center md:text-left">
             <h3 className="text-xl font-bold text-foreground">
               {lang === "it"
-                ? "Guarda concretamente come lavoro: 11 casi studio + 1 saggio letterario"
-                : "Explore how I work: 11 practical case studies + 1 literary sample"}
+                ? "Guarda concretamente come lavoro: lang === "fr" ? "Découvrez mes méthodes à travers des exemples de projets et des traductions commentées." : lang === "es" ? "Descubre mi forma de trabajar a través de ejemplos de proyectos y traducciones comentadas." : 11 practical case studies + 1 literary sample"}
             </h3>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xl">
               {lang === "it"
                 ? "Consulta le metodologie, i confronti bilingue prima/dopo e i deliverable reali su traduzioni, ricerche desk, back office e siti web."
-                : "Review real-world methodologies, dual-language source/target comparisons, and operational deliverables."}
+                : lang === "fr" ? "Consultez des exemples de traduction, de révision et de soutien opérationnel. Ce sont des démonstrations, et non des missions commandées par des clients." : lang === "es" ? "Consulta ejemplos de traducción, revisión y apoyo operativo. Son muestras demostrativas, no encargos de clientes reales." : "Review real-world methodologies, dual-language source/target comparisons, and operational deliverables."}
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
@@ -1377,7 +1374,7 @@ export default function IndexPage() {
               to={getLocalizedPath("portfolio", lang)}
               className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-primary text-primary-foreground hover:scale-105 transition-all shadow-md gap-2"
             >
-              <span>{lang === "it" ? "Esplora gli Esempi di Lavoro" : "View Work Examples"}</span>
+              <span>{lang === "it" ? "Esplora gli Esempi di Lavoro" : lang === "fr" ? "DÉCOUVRIR LES EXEMPLES DE TRAVAUX" : lang === "es" ? "VER EJEMPLOS DE TRABAJO" : "View Work Examples"}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
