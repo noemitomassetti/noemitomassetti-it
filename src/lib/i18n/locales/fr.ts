@@ -79,16 +79,16 @@ export const frLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'MON EXPERTISE',
-    title: 'Services Opérationnels sur Mesure',
-    subtitle: 'Pour une mission ponctuelle ciblée ou une collaboration suivie dans la durée.',
+    title: 'Traduction et accompagnement pour l’Italie',
+    subtitle: 'Traduction vers l’italien, adaptation de contenus et soutien opérationnel pour vos activités avec l’Italie.',
     viewAllCta: 'Consulter le détail des services',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Assistance Virtuelle & Back-Office',
-        subtitle: 'Continuité, rigueur et réactivité pour votre organisation quotidienne.',
+        title: 'Relation client italienne et back-office opérationnel',
+        subtitle: 'Des échanges écrits fiables avec vos clients italiens existants.',
         description:
-          "Secrétariat organisationnel et back-office opérationnel : e-mails, agenda, échéances, saisie de données, commandes, mise à jour de tarifs, devis préparés selon les consignes du client et suivi des clients existants. Sont exclus la gestion administrative d'entreprise, la comptabilité, la facturation et la prospection.",
+          "Accompagnement écrit en italien auprès des clients existants : courriels, suivi de commandes, échanges professionnels, documents et tâches opérationnelles convenues. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
         iconName: 'Mail',
         items: [
           'Gestion et tri structuré de la boîte mail',
@@ -102,9 +102,9 @@ export const frLocale: TranslationDictionary = {
       {
         id: 'translation-localization',
         title: 'Traduction & Communication Multilingue',
-        subtitle: 'Français · Anglais · Italien · Espagnol avec justesse culturelle.',
+        subtitle: 'Traduction vers l’italien depuis le français, l’anglais et l’espagnol.',
         description:
-          "Rédaction, révision, traduction et adaptation de correspondances, sites web, pages de présentation, catalogues et fiches produits en italien, anglais, français et espagnol, depuis et vers l'italien selon le mandat et les compétences linguistiques.",
+          "Traduction du français, de l’anglais et de l’espagnol vers l’italien, révision et adaptation culturelle de sites web, pages de destination, catalogues et communications destinés au marché italien. Je ne propose pas de traduction professionnelle vers le français, l’anglais ou l’espagnol.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et landing pages',
@@ -120,7 +120,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Rédaction & Révision de Contenus',
         subtitle: 'Des textes limpides, percutants et alignés sur vos objectifs.',
         description:
-          'Rédaction de textes pour votre site internet, réécriture de contenus existants et humanisation de brouillons générés par IA afin d’assurer un ton authentique et convaincant.',
+          'Révision, réécriture et adaptation de contenus rédigés en italien : sites web, messages clients et brouillons générés par IA, avec une attention particulière à la fluidité et à la terminologie.',
         iconName: 'PenTool',
         items: [
           'Copywriting pour sites web et pages de vente',
@@ -163,7 +163,7 @@ export const frLocale: TranslationDictionary = {
           'Assistance numérique courante et paramétrages',
         ],
       },
-      { id: 'web-landing', title: 'Contenus web et pages de destination', subtitle: 'Des contenus en ligne plus clairs et structurés.', description: 'Révision, adaptation linguistique et organisation du contenu de sites existants. Le développement technique est évalué séparément et ne fait pas partie de la prestation standard.', iconName: 'Layout', items: ['Révision des textes des pages principales', 'Localisation en italien des contenus web', 'Titres, FAQ et appels à l’action', 'Cohérence terminologique', 'Remise de textes prêts pour le CMS', 'Révision de contenus multilingues'] },
+      { id: 'web-landing', title: 'Contenus web et pages de destination en italien', subtitle: 'Des contenus en ligne plus clairs et structurés.', description: 'Révision, adaptation linguistique et organisation du contenu de sites existants. Le développement technique est évalué séparément et ne fait pas partie de la prestation standard.', iconName: 'Layout', items: ['Révision des textes des pages principales', 'Localisation en italien des contenus web', 'Titres, FAQ et appels à l’action', 'Cohérence terminologique', 'Remise de textes prêts pour le CMS', 'Révision de contenus multilingues'] },
     ],
   },
   multilingualAdvantage: {
@@ -452,9 +452,9 @@ export const frLocale: TranslationDictionary = {
       company: 'Activité / Entreprise',
       serviceNeeded: 'Domaine d’accompagnement souhaité *',
       serviceOptions: [
-        'Assistance Virtuelle & Back-Office',
-        'Traduction & Communication Multilingue (FR · EN · IT · ES)',
-        'Rédaction & Révision de Textes',
+        'Relation client italienne et soutien opérationnel',
+        'Traduction et localisation vers l’italien (FR/EN/ES → IT)',
+        'Révision et adaptation de contenus italiens',
         'Recherches Documentaires de Soutien',
         'Support Digital & Processus IA',
         'Contenus web et pages de destination',
