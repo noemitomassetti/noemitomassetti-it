@@ -8,7 +8,7 @@ import { useSEO } from "@/hooks/useSEO";
 const Blog = () => {
   useSEO({
     title: "Blog Assistente Virtuale | Noemi Tomassetti",
-    description: "Consigli pratici e strategie di un'Assistente Virtuale con oltre 25 anni di esperienza. Scopri come organizzare il lavoro, delegare attività e migliorare la produttività.",
+    description: "Consigli pratici e approfondimenti di un'Assistente Virtuale con oltre 20 anni di esperienza. Scopri come organizzare il lavoro, delegare attività e migliorare la produttività.",
     canonical: "https://www.noemitomassetti.it/blog",
     schema: [
       {
@@ -33,7 +33,7 @@ const Blog = () => {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Blog Assistente Virtuale | Noemi Tomassetti",
-        "description": "Consigli pratici e strategie di un'Assistente Virtuale con oltre 25 anni di esperienza.",
+        "description": "Consigli pratici e approfondimenti di un'Assistente Virtuale con oltre 20 anni di esperienza.",
         "url": "https://www.noemitomassetti.it/blog",
         "author": {
           "@type": "Person",
