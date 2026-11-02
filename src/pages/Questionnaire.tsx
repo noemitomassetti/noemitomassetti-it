@@ -159,15 +159,15 @@ const QUESTIONS: Question[] = [
     question: {
       it: "Quale attività operativa ti sottrae più energie mentali?",
       en: "Which operational task drains the most mental energy?",
-      fr: "Quelle tâche administrative vous prend le plus d'énergie ?",
+      fr: "Quelle tâche opérationnelle vous demande le plus d’énergie ?",
       es: "¿Qué tarea operativa te resta más energía mental?",
     },
     type: "single",
     options: {
-      it: ["Gestione appuntamenti e continui scambi per fissare date", "Emissione fatture, solleciti e controllo pagamenti", "Preparazione di preventivi e materiali introduttivi", "Ricerche e comparazione di fornitori/strumenti"],
-      en: ["Calendar ping-pong to schedule appointments", "Invoicing, reminders, and payment tracking", "Drafting proposals and introductory decks", "Vendor and market research"],
-      fr: ["Prise de rendez-vous et allers-retours d'agenda", "Facturation, relances et suivi des règlements", "Préparation des devis et documents de présentation", "Recherche de prestataires et d'outils"],
-      es: ["Cruces de correos para coordinar reuniones", "Facturación, seguimiento y control de cobros", "Elaboración de presupuestos y propuestas", "Investigación de proveedores y herramientas"],
+      it: ["Gestione appuntamenti e continui scambi per fissare date", "Organizzazione di file, documenti e informazioni", "Preparazione di preventivi e materiali introduttivi", "Ricerche e comparazione di fornitori/strumenti"],
+      en: ["Calendar ping-pong to schedule appointments", "Organising files, documents and information", "Drafting proposals and introductory decks", "Vendor and market research"],
+      fr: ["Prise de rendez-vous et allers-retours d'agenda", "Classement de fichiers, documents et informations", "Préparation des devis et documents de présentation", "Recherche de prestataires et d'outils"],
+      es: ["Cruces de correos para coordinar reuniones", "Organización de archivos, documentos e información", "Elaboración de presupuestos y propuestas", "Investigación de proveedores y herramientas"],
     },
   },
 
