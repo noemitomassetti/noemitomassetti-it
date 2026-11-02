@@ -39,7 +39,7 @@ export const esLocale: TranslationDictionary = {
     subtitle: "Asistencia virtual multilingüe: secretaría organizativa, back office operativo, atención a clientes existentes, correspondencia y contenidos profesionales.",
     headline: 'El apoyo que te ayuda a trabajar mejor, con más orden.',
     desc1: 'Más de veinte años de experiencia organizativa y lingüística para ayudarte a gestionar mejor tu día a día.',
-    desc2: 'De la gestión de emails y agenda a la atención a clientes, de la traducción a la creación de páginas web: un apoyo profesional y flexible a tu medida.',
+    desc2: 'De la gestión de emails y agenda a la atención a clientes, de la traducción a la revisión y localización de contenidos web: un apoyo profesional y flexible a tu medida.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Respuesta por escrito • Sin llamada obligatoria',
     description:
@@ -69,7 +69,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Tecnología e IA aplicada',
-        desc: 'Combino minuciosidad artesanal con herramientas de inteligencia artificial de vanguardia, incluido mi producto propio NoeTom, para lograr agilidad y orden.',
+        desc: 'Combino minuciosidad artesanal con herramientas de inteligencia artificial de vanguardia, incluido NoeTom, mi sistema interno todavía en desarrollo, para lograr agilidad y orden.',
       },
       {
         title: 'Máxima confidencialidad',
