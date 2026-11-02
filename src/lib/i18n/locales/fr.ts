@@ -43,7 +43,7 @@ export const frLocale: TranslationDictionary = {
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Réponse écrite • Aucun appel obligatoire',
     description:
-      'J’apporte de l’ordre dans votre quotidien, coordonne vos correspondances en quatre langues et prends en charge vos opérations opérationnelles avec rigueur et disponibilité.',
+      'J’apporte de l’ordre dans votre quotidien, coordonne vos correspondances en quatre langues et vous accompagne dans vos tâches quotidiennes avec rigueur et disponibilité.',
     ctaServices: 'Explorer les Services',
     ctaNoeTom: 'Découvrir NoeTom IA',
     quickStats: {
