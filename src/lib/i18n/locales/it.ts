@@ -392,7 +392,7 @@ export const itLocale: TranslationDictionary = {
         detail: 'Università di Macerata, votazione 110/110 e lode.',
       },
       {
-        period: '2010 – 2011',
+        period: '2010 – 2012',
         role: 'Master Universitario di I livello in Traduzione Specialistica – lingua inglese',
         detail: '1.500 ore, 60 CFU, prova finale superata. Ambiti affrontati: letterario, giuridico, economico, tecnologico, scientifico.',
       },
