@@ -10,6 +10,7 @@ import { getQuoteDraft, clearQuoteDraft } from "@/lib/concierge/quoteDraftStore"
 import { submitQuoteRequest, generateIdempotencyKey } from "@/lib/api/clientAdapter";
 import { getManualContactMailto, getManualContactPlainText } from "@/lib/api/mailFallback";
 import { localizeContactError, CONTACT_ERROR_TITLES, INVALID_EMAIL } from "@/lib/api/submitErrorI18n";
+import { detectExcludedService, SCOPE_EXCLUDED_REPLY, SCOPE_FORM_NOTICE } from "@/lib/serviceScope";
 
 interface FormDataState {
   nome: string;
@@ -147,6 +148,12 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
       return;
     }
 
+    const outsideScope = detectExcludedService(formData.messaggio);
+    if (outsideScope) {
+      setErrorMessage(SCOPE_EXCLUDED_REPLY[outsideScope][lang]);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -240,6 +247,8 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
           </p>
         )}
       </div>
+
+      <p className="text-xs text-muted-foreground mt-3 leading-relaxed" data-testid="service-scope-notice">{SCOPE_FORM_NOTICE[lang]}</p>
 
       {isSuccess ? (
         <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 text-center space-y-4 py-8">
