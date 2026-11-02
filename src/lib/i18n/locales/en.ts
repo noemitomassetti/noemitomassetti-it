@@ -4,8 +4,8 @@ export const enLocale: TranslationDictionary = {
   lang: 'en',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Noemi Tomassetti | Multilingual Virtual Assistant & Italian Translator',
-    homeDesc: 'Remote back-office, written customer care and multilingual communication services for independent professionals and small businesses.',
+    homeTitle: 'Italian Translation & Business Support | Noemi Tomassetti',
+    homeDesc: 'Native Italian translation, website localisation and operational support for international professionals and small businesses working with Italy.',
     servicesTitle: 'Professional Services | Noemi Tomassetti',
     servicesDesc: 'Virtual assistance, written customer care, back-office support and Italian translation/localisation for independent professionals.',
     noetomTitle: 'NoeTom | Internal operations project',
@@ -34,12 +34,12 @@ export const enLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'VIRTUAL ASSISTANT',
-    titleLine1: 'Operational, organizational & multilingual support',
-    titleHighlight: 'for your business',
+    titleLine1: 'Italian translation, localisation and operational support',
+    titleHighlight: 'for your work with Italy',
     subtitle: "Multilingual virtual assistance for organisational secretarial work, operational back office, support for existing customers, professional correspondence and digital content.",
     headline: 'The support that helps you work better, with more clarity.',
     desc1: 'Offering over twenty years of organizational and linguistic expertise to help you manage day-to-day operations seamlessly.',
-    desc2: 'From email and schedule management to client communications, translations, and editing website content: flexible, professional support tailored to your needs.',
+    desc2: 'From websites and landing pages to Italian-language customer correspondence and operational coordination, I support your business activities involving Italy.',
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
