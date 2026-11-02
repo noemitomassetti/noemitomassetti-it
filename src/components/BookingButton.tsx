@@ -26,10 +26,10 @@ export function BookingButton({lang, children: _previousCallLabel, asChild: _pre
   const pathname = useLocation().pathname;
   const language = lang || getLanguageFromPath(pathname);
   const labels: Record<Language, string> = {
-    it: 'Richiedi un preventivo scritto',
-    en: 'Request a written quote',
-    fr: 'Demander un devis écrit',
-    es: 'Solicitar presupuesto por escrito',
+    it: 'Richiedi un preventivo',
+    en: 'Request a quote',
+    fr: 'Demander un devis',
+    es: 'Solicitar un presupuesto',
   };
   const label = labels[language];
   return (
