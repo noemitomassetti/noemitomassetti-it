@@ -537,14 +537,14 @@ export const itLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Supporto digitale, multilingue e operativo per liberi professionisti, consulenti e piccole imprese. Ideatrice di NoeTom, l’assistente operativa AI.',
+      'Supporto digitale, multilingue e operativo per liberi professionisti, consulenti e piccole imprese. Ideatrice di NoeTom, progetto di supporto operativo digitale attualmente in sviluppo.',
     servicesTitle: 'Servizi',
     noetomTitle: 'NoeTom AI',
     companyTitle: 'Chi Sono & Risorse',
     legalTitle: 'Note Legali',
     rights: 'Tutti i diritti riservati.',
     disclaimer:
-      "Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazione multilingue, traduzione e contenuti digitali. Non offro amministrazione aziendale, contabilità, fatturazione, consulenza fiscale, lead generation o acquisizione commerciale.",
+      "Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazione multilingue, traduzione e contenuti digitali. Non offro telemarketing, chiamate a freddo, ricerca di contatti commerciali, acquisizione clienti, contabilità, fatturazione, gestione amministrativa o consulenza fiscale.",
     cookiePrefs: 'Preferenze Cookie',
   },
 };
