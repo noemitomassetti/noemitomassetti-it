@@ -40,7 +40,7 @@ export const esLocale: TranslationDictionary = {
     headline: 'El apoyo que te ayuda a trabajar mejor, con más orden.',
     desc1: 'Más de veinte años de experiencia organizativa y lingüística para ayudarte a gestionar mejor tu día a día.',
     desc2: 'De la gestión de emails y agenda a la atención a clientes, de la traducción a la creación de páginas web: un apoyo profesional y flexible a tu medida.',
-    ctaButton: 'SOLICITAR PRESUPUESTO ESCRITO',
+    ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Respuesta por escrito • Sin llamada obligatoria',
     description:
       'Pongo orden en tu gestión diaria, coordino tus comunicaciones en cuatro idiomas y atiendo tus procesos operativos con precisión, autonomía y compromiso.',
@@ -473,7 +473,7 @@ export const esLocale: TranslationDictionary = {
     directBooking: {
       title: 'Solicitud de presupuesto por escrito',
       desc: 'Describe las tareas que necesitas delegar en el formulario. Te responderé por escrito con los siguientes pasos.',
-      btnLabel: 'Solicitar presupuesto por escrito',
+      btnLabel: 'Solicitar un presupuesto',
       specs: [
         'Sin llamada introductoria obligatoria',
         'Describe el trabajo, el volumen y el plazo',
