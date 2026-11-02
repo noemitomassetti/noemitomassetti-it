@@ -1394,7 +1394,7 @@ export default function IndexPage() {
             <p className="text-base md:text-lg text-foreground/80">
               {lang === "it"
                 ? "Approfondimenti, consigli pratici e strumenti per organizzare il tuo lavoro, comunicare meglio e gestire la tua attività."
-                : lang === "fr" ? "Retrouvez des articles pratiques actuellement publiés en italien sur l’organisation, la communication et les outils numériques." : lang === "es" ? "Descubre artículos prácticos, actualmente publicados en italiano, sobre organización, comunicación y herramientas digitales." : "Explore practical articles currently published in Italian on organisation, communication and digital tools."}
+                : lang === "fr" ? "Découvrez des articles adaptés en français sur la communication avec l’Italie, la traduction et l’organisation professionnelle." : lang === "es" ? "Descubre artículos adaptados al español sobre comunicación con Italia, traducción y organización del trabajo." : "Explore articles adapted into English on Italian-market communication, translation and practical organisation."}
             </p>
           </div>
 
