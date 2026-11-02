@@ -45,7 +45,7 @@ export function localizeContactError(err: unknown, locale: ContactLocale): strin
     ? 'unconfigured'
     : /FORM_PROVIDER_ACTIVATION_REQUIRED/.test(message)
     ? 'activation'
-    : /FORM_PROVIDER_BLOCKED/.test(message)
+    : /FORM_PROVIDER_BLOCKED|WEB3FORMS_BLOCKED_ORIGIN_OR_REQUEST/.test(message)
     ? 'blocked'
     : /FORM_PROVIDER_RATE_LIMIT|429|troppe richieste|troppi tentativi|too many/i.test(message)
     ? 'rateLimit'
