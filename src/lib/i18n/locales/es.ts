@@ -79,16 +79,16 @@ export const esLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'QUÉ HAGO',
-    title: 'Áreas de Apoyo Operativo',
-    subtitle: 'Desde un proyecto puntual con alcance definido hasta una colaboración continua y cercana.',
+    title: 'Traducción al italiano y apoyo operativo',
+    subtitle: 'Traducción, localización y apoyo práctico para tus actividades relacionadas con Italia.',
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Asistencia Virtual & Back Office',
-        subtitle: 'Continuidad, orden y capacidad de respuesta para tu gestión diaria.',
+        title: 'Atención escrita a clientes italianos y back office',
+        subtitle: 'Comunicación clara con tus clientes italianos existentes.',
         description:
-          "Secretaría organizativa y back office operativo: correo, agenda, plazos, entrada de datos, pedidos, actualización de tarifas, presupuestos preparados siguiendo las instrucciones del cliente y atención a clientes existentes. Se excluyen la administración empresarial, la contabilidad, la facturación y la captación comercial.",
+          "Apoyo escrito en italiano para clientes existentes: correos, seguimiento de pedidos, comunicaciones profesionales, organización de documentos y tareas operativas acordadas. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
         iconName: 'Mail',
         items: [
           'Gestión y filtrado ordenado del correo electrónico',
@@ -102,9 +102,9 @@ export const esLocale: TranslationDictionary = {
       {
         id: 'translation-localization',
         title: 'Traducción & Comunicación Multilingüe',
-        subtitle: 'Español · Inglés · Italiano · Francés con precisión contextual.',
+        subtitle: 'Traducciones al italiano desde el español, el inglés y el francés.',
         description:
-          "Redacción, revisión, traducción y adaptación de correspondencia, sitios web, landing pages, catálogos y fichas de producto en italiano, inglés, francés y español, desde y hacia el italiano según el encargo y las competencias lingüísticas.",
+          "Traducción del español, inglés y francés al italiano, revisión y localización cultural de webs, landing pages, catálogos, fichas de producto y comunicaciones para clientes italianos. No ofrezco traducción profesional al español, inglés o francés.",
         iconName: 'Globe',
         items: [
           'Localización de sitios web y páginas de venta',
@@ -117,10 +117,10 @@ export const esLocale: TranslationDictionary = {
       },
       {
         id: 'content-writing',
-        title: 'Redacción & Revisión de Textos',
+        title: 'Revisión y adaptación de contenidos en italiano',
         subtitle: 'Mensajes claros, persuasivos y alineados con tu público.',
         description:
-          'Redacción de textos para tu web, reformulación de borradores y humanización de contenidos generados por IA para garantizar un estilo natural, profesional y creíble.',
+          'Reviso y adapto contenidos en italiano para webs, comunicaciones con clientes, boletines y borradores generados por IA, cuidando la naturalidad, el tono y la precisión terminológica.',
         iconName: 'PenTool',
         items: [
           'Copywriting para páginas web y landing pages',
@@ -163,7 +163,7 @@ export const esLocale: TranslationDictionary = {
           'Soporte operativo y configuraciones básicas',
         ],
       },
-      { id: 'web-landing', title: 'Contenidos para webs y landing pages', subtitle: 'Mensajes web más claros y bien organizados.', description: 'Revisión, adaptación lingüística y organización de contenidos para webs existentes. El desarrollo técnico se evalúa aparte y no forma parte del servicio estándar.', iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización al italiano de contenido web', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
+      { id: 'web-landing', title: 'Contenidos para webs y landing pages en italiano', subtitle: 'Mensajes web más claros y bien organizados.', description: 'Revisión, adaptación lingüística y organización de contenidos para webs existentes. El desarrollo técnico se evalúa aparte y no forma parte del servicio estándar.', iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización al italiano de contenido web', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
     ],
   },
   multilingualAdvantage: {
@@ -452,8 +452,8 @@ export const esLocale: TranslationDictionary = {
       company: 'Empresa / Actividad',
       serviceNeeded: 'Área de soporte de tu interés *',
       serviceOptions: [
-        'Asistencia Virtual & Back Office',
-        'Traducción & Comunicación Multilingüe (ES · EN · IT · FR)',
+        'Atención escrita a clientes italianos y apoyo operativo',
+        'Traducción y localización al italiano (ES/EN/FR → IT)',
         'Redacción & Revisión de Textos',
         'Investigación Informativa de Apoyo',
         'Soporte Digital & Flujos con IA',
