@@ -36,7 +36,7 @@ export const itLocale: TranslationDictionary = {
     badge: 'ASSISTENTE VIRTUALE',
     titleLine1: 'Supporto operativo, organizzativo e multilingue',
     titleHighlight: 'per la tua attività',
-    subtitle: 'Supporto organizzativo, amministrativo e linguistico da remoto per professionisti, consulenti e piccole attività.',
+    subtitle: "Assistenza virtuale multilingue per segreteria organizzativa, back office operativo, assistenza ai clienti già acquisiti, comunicazioni e contenuti professionali.",
     headline: 'Il supporto che ti aiuta a lavorare meglio, con più ordine.',
     desc1: "Metto a disposizione oltre vent'anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano.",
     desc2: 'Dalla gestione di email e appuntamenti alla comunicazione con i clienti, dalla traduzione alla revisione dei contenuti per siti web e landing page: un supporto professionale e flessibile, costruito sulle tue esigenze.',
@@ -85,18 +85,18 @@ export const itLocale: TranslationDictionary = {
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Segreteria, Assistenza Virtuale & Back Office',
+        title: 'Segreteria Organizzativa & Back Office Operativo',
         subtitle: 'Ordine, continuità e reattività per la tua gestione quotidiana.',
         description:
-          'Un supporto concreto per le attività amministrative e organizzative: gestione email, agenda e appuntamenti, rapporti con i clienti, archiviazione documenti e back office.',
+          "Segreteria organizzativa e back office operativo: email, agenda, scadenze, inserimento dati, ordini, aggiornamento listini, preventivi basati sulle indicazioni del cliente e assistenza ai clienti esistenti. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
         iconName: 'Mail',
         items: [
           'Gestione e organizzazione della casella email',
           'Gestione agenda e coordinamento appuntamenti',
-          'Customer care e comunicazioni con i clienti',
+          'Assistenza e comunicazioni con i clienti già acquisiti',
           'Organizzazione documenti e archivi cloud',
-          'Follow-up clienti e solleciti operativi',
-          'Attività di segreteria e back office',
+          'Follow-up di assistenza ai clienti esistenti',
+          'Inserimento dati, gestione ordini, listini e preventivi operativi',
         ],
       },
       {
@@ -104,11 +104,11 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzione & Comunicazione Multilingue',
         subtitle: 'Italiano · Inglese · Francese · Spagnolo con accuratezza contestuale.',
         description:
-          'Traduzione e adattamento culturale di siti web, landing page, email commerciali, materiali formativi e documenti per comunicare con sicurezza con interlocutori internazionali.',
+          "Redazione, revisione, traduzione e adattamento di corrispondenza, siti web, landing page, cataloghi e schede prodotto in italiano, inglese, francese e spagnolo, da e verso l’italiano secondo la tipologia di incarico e le competenze linguistiche.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti web e landing page',
-          'Corrispondenza commerciale internazionale',
+          'Corrispondenza professionale multilingue',
           'Proposte commerciali e presentazioni',
           'Materiali formativi e contenuti per corsi',
           'Traduzione di newsletter e comunicazioni',
@@ -133,16 +133,16 @@ export const itLocale: TranslationDictionary = {
       },
       {
         id: 'online-research',
-        title: 'Ricerche Online & Desk Research',
+        title: 'Ricerche Informative a Supporto',
         subtitle: 'Informazioni chiare e strutturate per orientare le tue decisioni.',
         description:
-          'Ricerche di mercato, analisi dei concorrenti, individuazione di fornitori e raccolta di dati affidabili sintetizzati in report pratici e immediatamente utilizzabili. Sono escluse la ricerca di contatti per acquisizione clienti, la lead generation, il cold outreach, il reclutamento di partecipanti a interviste e le attività a compenso per appuntamento o intervista.',
+          "Raccolta, verifica e confronto di informazioni, fonti, fornitori e strumenti digitali esclusivamente a supporto delle attività concordate con il cliente. Non comprende ricerca contatti, acquisizione clienti o prospecting.",
         iconName: 'Search',
         items: [
           'Analisi dei concorrenti e benchmark delle tariffe',
           'Ricerca fornitori, software e soluzioni digitali',
           'Raccolta informazioni e verifica fonti',
-          'Ricerche per espansione su mercati esteri',
+          'Ricerche informative a supporto di progetti e attività esistenti',
           'Report esecutivi e sintesi strutturate',
           'Creazione fogli di calcolo e database informativi',
         ],
@@ -159,7 +159,7 @@ export const itLocale: TranslationDictionary = {
           'Configurazione tool online (calendari, form, aree clienti)',
           'Supporto pratico con strumenti digitali di lavoro',
           'Definizione procedure operative interne (SOP)',
-          'Ottimizzazione onboarding dei nuovi clienti',
+          'Organizzazione dei materiali per clienti già acquisiti',
           'Supporto operativo e impostazioni di base',
         ],
       },
@@ -195,7 +195,7 @@ export const itLocale: TranslationDictionary = {
        description: 'Un intervento mirato per riordinare attività, corrispondenza e documenti ricorrenti.',
        deliverables: ['Analisi delle attività da delegare', 'Organizzazione email, file e procedure concordate', 'Riepilogo delle attività e delle priorità'], turnaround: 'Da concordare'},
       {id: 'p2', title: 'Customer care scritto', badge: 'Comunicazioni professionali',
-       description: 'Supporto alle richieste clienti e alle comunicazioni operative, con tono e modalità definiti insieme.',
+       description: "Supporto alle richieste dei clienti già acquisiti, aggiornamenti su ordini e follow-up di assistenza, con tono e procedure concordati.",
        deliverables: ['Modelli di risposta e FAQ', 'Gestione concordata delle richieste scritte', 'Registro dei follow-up e delle attività'], turnaround: 'Da concordare'},
       {id: 'p3', title: 'Localizzazione verso l’italiano', badge: 'EN/FR → IT',
        description: 'Traduzione e adattamento in italiano di testi per siti, schede prodotto, email e materiali commerciali.',
@@ -304,14 +304,6 @@ export const itLocale: TranslationDictionary = {
           tagline: 'Solleciti professionali e garbati',
           description:
             'Prepara bozze di sollecito in italiano, inglese, francese o spagnolo quando un contatto non risponde da giorni.',
-          status: 'in_development',
-        },
-        {
-          id: 'money-radar',
-          name: 'Money Radar',
-          tagline: 'Controllo entrate e incassi',
-          description:
-            'Tiene traccia di fatture inviate in attesa di saldo, rinnovi contrattuali e prestazioni ancora da fatturare.',
           status: 'in_development',
         },
         {
@@ -464,10 +456,10 @@ export const itLocale: TranslationDictionary = {
       company: 'Attività / Studio / Azienda',
       serviceNeeded: 'Area di supporto di tuo interesse *',
       serviceOptions: [
-        'Segreteria, Assistenza Virtuale & Back Office',
+        'Segreteria Organizzativa & Back Office Operativo',
         'Traduzione & Comunicazione Multilingue (IT · EN · FR · ES)',
         'Scrittura & Revisione Testi',
-        'Ricerche Online & Desk Research',
+        'Ricerche Informative a Supporto',
         'Supporto Digitale & Flussi AI',
         'Contenuti per siti web e landing page',
         'Informazioni sul progetto interno NoeTom',
@@ -552,7 +544,7 @@ export const itLocale: TranslationDictionary = {
     legalTitle: 'Note Legali',
     rights: 'Tutti i diritti riservati.',
     disclaimer:
-      'Servizi di supporto organizzativo, amministrativo, linguistico e digitale. Non si effettuano consulenze legali, contabili o fiscali riservate per legge.',
+      "Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazione multilingue, traduzione e contenuti digitali. Non offro amministrazione aziendale, contabilità, fatturazione, consulenza fiscale, lead generation o acquisizione commerciale.",
     cookiePrefs: 'Preferenze Cookie',
   },
 };
