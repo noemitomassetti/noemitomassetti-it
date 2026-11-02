@@ -4,8 +4,8 @@ export const frLocale: TranslationDictionary = {
   lang: 'fr',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Noemi Tomassetti | Assistante Virtuelle Multilingue et Traductrice',
-    homeDesc: 'Assistance virtuelle, back-office, relation client par écrit et traduction vers l’italien pour les indépendants, professionnels et petites entreprises.',
+    homeTitle: 'Traduction vers l’italien et accompagnement | Noemi Tomassetti',
+    homeDesc: 'Traduction et localisation vers l’italien, relation client écrite et soutien opérationnel pour les professionnels travaillant avec l’Italie.',
     servicesTitle: 'Services Professionnels | Noemi Tomassetti',
     servicesDesc: 'Assistance virtuelle, relation client par écrit, back-office, traduction et localisation en italien pour les professionnels et petites entreprises.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
@@ -34,8 +34,8 @@ export const frLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'ASSISTANTE VIRTUELLE',
-    titleLine1: 'Support opérationnel, organisationnel et multilingue',
-    titleHighlight: 'pour votre activité',
+    titleLine1: 'Traduction, localisation et soutien opérationnel',
+    titleHighlight: 'pour vos activités avec l’Italie',
     subtitle: "Assistance virtuelle multilingue : secrétariat organisationnel, back-office opérationnel, service aux clients existants, correspondance et contenus professionnels.",
     headline: 'Le soutien qui vous aide à mieux travailler, avec plus de sérénité.',
     desc1: "Plus de vingt ans d'expérience organisationnelle et linguistique pour optimiser votre gestion quotidienne.",
