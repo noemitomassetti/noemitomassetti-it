@@ -39,13 +39,13 @@ export const PRICING_DATA: PricingData = {
     es: "Honorarios orientativos, no una oferta vinculante. El presupuesto escrito define alcance, volumen, plazos, pago e información fiscal aplicable. Las colaboraciones continuadas se presupuestan individualmente. Los paquetes se activan tras la aceptación y el pago anticipado, salvo acuerdo escrito diferente.",
   },
   bookCall: {
-    it: "Richiedi un preventivo scritto", en: "Request a written quote",
-    fr: "Demander un devis écrit", es: "Solicitar presupuesto por escrito",
+    it: "Richiedi un preventivo", en: "Request a quote",
+    fr: "Demander un devis", es: "Solicitar un presupuesto",
   },
   categories: [
     {
       id: "va",
-      title: {it: "Segreteria e back office", en: "Virtual assistance & back office", fr: "Assistance virtuelle et back-office", es: "Asistencia virtual y back office"},
+      title: {it: "Segreteria e back office", en: "Italian-market operational support", fr: "Soutien opérationnel pour l’Italie", es: "Apoyo operativo para Italia"},
       rate: {it: "25 € / ora", en: "€25 / hour", fr: "25 € / heure", es: "25 € / hora"},
       rateDetail: {it: "Incarichi singoli e pacchetti di ore", en: "Ad hoc tasks and hour packages", fr: "Missions ponctuelles et forfaits horaires", es: "Encargos puntuales y paquetes de horas"},
       items: {
@@ -60,7 +60,7 @@ export const PRICING_DATA: PricingData = {
       id: "support",
       title: {it: "Customer care e comunicazioni", en: "Customer care & communications", fr: "Relation client et communications", es: "Atención al cliente y comunicaciones"},
       rate: {it: "25 € / ora", en: "€25 / hour", fr: "25 € / heure", es: "25 € / hora"},
-      rateDetail: {it: "Supporto scritto, in italiano e multilingue", en: "Written support in Italian and other working languages", fr: "Assistance écrite en italien et autres langues de travail", es: "Atención escrita en italiano y otros idiomas de trabajo"},
+      rateDetail: {it: "Supporto scritto, in italiano e multilingue", en: "Written support for existing Italian customers", fr: "Échanges écrits avec les clients italiens existants", es: "Atención escrita a clientes italianos existentes"},
       items: {
         it: ["Gestione e organizzazione della posta", "Risposte ai clienti in bozza o concordate", "Follow-up e informazioni operative", "FAQ, modelli email e procedure", "Perimetro e ore concordati nel preventivo"],
         en: ["Email inbox organization", "Drafted or approved customer responses", "Follow-ups and routine information", "FAQs, email templates and processes", "Scope and hours confirmed in the quote"],
