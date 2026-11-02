@@ -991,17 +991,61 @@ const SLUG_ALIASES: Record<string, string> = {
   "gestione-email-disordine-digitale": "gestione-email-come-organizzare-la-posta-in-arrivo-e-riprendere-il-controllo-del-tuo-tempo"
 };
 
-export const getAllBlogPosts = () => {
-  return itPosts;
+import type { Language } from './i18n/types';
+import { enBlogContent } from './blogLocalizedEn';
+import { frBlogContent } from './blogLocalizedFr';
+import { esBlogContent } from './blogLocalizedEs';
+import type { LocalizedBlogCopy } from './blogLocalizationTypes';
+
+const LOCALIZED_COPY: Record<'en' | 'fr' | 'es', Record<number, LocalizedBlogCopy>> = {
+  en: enBlogContent,
+  fr: frBlogContent,
+  es: esBlogContent,
 };
 
-export const getBlogPostBySlug = (slugOrId: string | number) => {
-  const str = String(slugOrId);
-  const resolvedSlug = SLUG_ALIASES[str] || str;
-  return itPosts.find((p) => p.slug === resolvedSlug || p.slug === str || String(p.id) === str);
-};
+export function getBlogIndexPath(lang: Language): string {
+  return lang === 'it' ? '/blog' : `/${lang}/blog`;
+}
 
-export const getBlogPosts = (language: string = "it") => {
-  return itPosts;
-};
+export function getBlogPostPath(slug: string, lang: Language): string {
+  return `${getBlogIndexPath(lang)}/${slug}`;
+}
 
+export const getAllBlogPosts = () => itPosts;
+
+export function getBlogPosts(language: string = 'it') {
+  if (language !== 'en' && language !== 'fr' && language !== 'es') return itPosts;
+  const dictionary = LOCALIZED_COPY[language];
+  return itPosts.map((base) => {
+    const local = dictionary[base.id];
+    // Never silently advertise Italian copy as translated content.
+    if (!local) throw new Error(`Missing ${language} editorial adaptation for article ${base.id}`);
+    return { ...base, ...local, alt: local.title };
+  });
+}
+
+export function getBlogPostBySlug(slugOrId: string | number, language: Language = 'it') {
+  const requested = String(slugOrId);
+  const alias = SLUG_ALIASES[requested] || requested;
+  const localized = getBlogPosts(language);
+  const match = localized.find((p) => p.slug === alias || p.slug === requested || String(p.id) === requested);
+  if (match) return match;
+  const source = itPosts.find((p) => p.slug === alias || p.slug === requested);
+  return source ? localized.find(p => p.id === source.id) : undefined;
+}
+
+export function getBlogPostAlternates(articleId: number) {
+  const languages: Language[] = ['it', 'en', 'fr', 'es'];
+  const links = languages.map(language => {
+    const post = getBlogPosts(language).find(p => p.id === articleId);
+    if (!post) throw new Error(`Blog translation missing for article ${articleId} (${language})`);
+    return { hrefLang: language, href: `https://www.noemitomassetti.it${getBlogPostPath(post.slug, language)}` };
+  });
+  return [...links, {hrefLang: 'x-default', href: links.find(l => l.hrefLang === 'en')!.href}];
+}
+
+export function getBlogIndexAlternates() {
+  const languages: Language[] = ['it', 'en', 'fr', 'es'];
+  const links = languages.map(language => ({ hrefLang: language, href: `https://www.noemitomassetti.it${getBlogIndexPath(language)}` }));
+  return [...links, { hrefLang: 'x-default', href: 'https://www.noemitomassetti.it/en/blog' }];
+}
