@@ -61,7 +61,7 @@ export default function ItalianLocalisationPage() {
         },
       ],
       comparisonTitle: "Confronto Pratico: Perché la Traduzione Letterale Non Basta",
-      comparisonSubtitle: "Esempi reali tratti da contesti commerciali dimostrativi.",
+      comparisonSubtitle: "Esempi dimostrativi ispirati a situazioni di comunicazione professionale.",
       enExample: {
         title: "Esempio EN ➔ IT (Copywriting B2B & Software)",
         sourceLabel: "Testo sorgente inglese:",
@@ -129,7 +129,7 @@ export default function ItalianLocalisationPage() {
         },
       ],
       comparisonTitle: "Side-by-Side: Why Raw Translation Fails in the Italian Market",
-      comparisonSubtitle: "Real-world demonstrative cases illustrating how nuance shapes credibility.",
+      comparisonSubtitle: "Illustrative examples showing how linguistic choices affect clarity and credibility.",
       enExample: {
         title: "EN ➔ IT Example (B2B SaaS Onboarding Copy)",
         sourceLabel: "English source text:",
@@ -197,7 +197,7 @@ export default function ItalianLocalisationPage() {
         },
       ],
       comparisonTitle: "Comparatif : Pourquoi la Traduction Brute Ne Suffit Pas",
-      comparisonSubtitle: "Exemples concrets démontrant l'impact de la sensibilité culturelle.",
+      comparisonSubtitle: "Exemples illustratifs montrant l’importance des choix linguistiques et culturels.",
       enExample: {
         title: "Exemple EN ➔ IT (Interface & Onboarding SaaS)",
         sourceLabel: "Texte source anglais :",
@@ -358,15 +358,15 @@ export default function ItalianLocalisationPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-primary" />
-              Native Italian Specialist
+              {lang === 'it' ? 'Madrelingua italiana' : lang === 'fr' ? 'Professionnelle italienne de langue maternelle' : lang === 'es' ? 'Profesional nativa de italiano' : 'Native Italian speaker'}
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-primary" />
-              BA in Linguistic Mediation (110 cum laude)
+              {lang === 'it' ? 'Laurea in Mediazione Linguistica (110 e lode)' : lang === 'fr' ? 'Diplôme en médiation linguistique avec mention' : lang === 'es' ? 'Grado en Mediación Lingüística con matrícula de honor' : 'Degree in Language Mediation (with honours)'}
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-primary" />
-              Master in Specialist Translation
+              {lang === 'it' ? 'Master in Traduzione Specialistica' : lang === 'fr' ? 'Master en traduction spécialisée' : lang === 'es' ? 'Máster en Traducción Especializada' : 'Master’s in Specialist Translation'}
             </span>
           </div>
         </div>
@@ -401,7 +401,7 @@ export default function ItalianLocalisationPage() {
                   </div>
                   <div className="mt-6 pt-4 border-t border-border/40 text-xs font-medium text-primary">
                     <span className="font-semibold block text-muted-foreground mb-1">
-                      Deliverables:
+                      {lang === 'it' ? 'Cosa ricevi:' : lang === 'fr' ? 'Livrables :' : lang === 'es' ? 'Entregables:' : 'Deliverables:'}
                     </span>
                     {pillar.deliverable}
                   </div>
@@ -418,7 +418,7 @@ export default function ItalianLocalisationPage() {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-primary uppercase tracking-wider mb-2">
               <Layers className="w-4 h-4" />
-              <span>Casi Dimostrativi Commentati</span>
+              <span>{lang === 'it' ? 'Esempi dimostrativi commentati' : lang === 'fr' ? 'Exemples commentés' : lang === 'es' ? 'Ejemplos comentados' : 'Annotated examples'}</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
               {content.comparisonTitle}
@@ -463,7 +463,7 @@ export default function ItalianLocalisationPage() {
                 </div>
 
                 <div className="p-3 bg-background rounded-lg border border-border/50 text-xs text-muted-foreground">
-                  <span className="font-bold text-foreground">Nota professionale:</span>{" "}
+                  <span className="font-bold text-foreground">{lang === "it" ? "Nota professionale:" : lang === "fr" ? "Note professionnelle :" : lang === "es" ? "Nota profesional:" : "Professional note:"}</span>{" "}
                   {content.enExample.notes}
                 </div>
               </div>
@@ -519,7 +519,7 @@ export default function ItalianLocalisationPage() {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4" />
-                <span>Perimetro Professionale</span>
+                <span>{lang === 'it' ? 'Ambito dei servizi' : lang === 'fr' ? 'Périmètre des prestations' : lang === 'es' ? 'Alcance de los servicios' : 'Service scope'}</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                 {content.scopeTitle}
@@ -537,7 +537,7 @@ export default function ItalianLocalisationPage() {
             <div className="bg-secondary/20 border border-border/60 rounded-2xl p-6 sm:p-8 space-y-4">
               <h3 className="text-base font-bold text-foreground flex items-center gap-2">
                 <HelpCircle className="w-4 h-4 text-primary" />
-                <span>Trasparenza & Deontologia</span>
+                <span>{lang === 'it' ? 'Chiarezza delle prestazioni' : lang === 'fr' ? 'Transparence des prestations' : lang === 'es' ? 'Transparencia sobre los servicios' : 'Clear service boundaries'}</span>
               </h3>
               <p className="text-xs sm:text-sm text-foreground/80 leading-relaxed">
                 {content.scopeNote}
@@ -560,7 +560,7 @@ export default function ItalianLocalisationPage() {
         <div className="container max-w-4xl px-4 sm:px-6">
           <ContactForm
             lang={lang}
-            selectedService="Traduzione, Localizzazione & Comunicazione Multilingue"
+            selectedService={lang === "it" ? "Traduzione & Comunicazione Multilingue" : lang === "fr" ? "Traduction et localisation vers l’italien (FR/EN/ES → IT)" : lang === "es" ? "Traducción y localización al italiano (ES/EN/FR → IT)" : "Translation & Localisation into Italian (EN/FR/ES → IT)"}
           />
         </div>
       </section>
