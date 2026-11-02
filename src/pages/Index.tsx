@@ -615,15 +615,11 @@ export default function IndexPage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <BookingButton
                 size="lg"
-                aria-label={dict.hero.ctaButton || "RICHIEDI PREVENTIVO SCRITTO"}
+                aria-label={dict.hero.ctaButton || "RICHIEDI UN PREVENTIVO"}
                 className="text-sm md:text-base px-6 py-6 sm:px-8 rounded-md font-semibold shadow-[0_0_15px_rgba(229,192,161,0.2)] w-full sm:w-auto bg-[#e5c0a1] text-[#0a2d26] hover:bg-[#e5c0a1] hover:scale-105 hover:shadow-[0_0_25px_rgba(229,192,161,0.4)] uppercase tracking-wide transition-all duration-300"
               >
-                {dict.hero.ctaButton || "RICHIEDI PREVENTIVO SCRITTO"}
+                {dict.hero.ctaButton || "RICHIEDI UN PREVENTIVO"}
               </BookingButton>
-              <div className="flex items-center gap-2 text-xs sm:text-sm text-white/90 bg-black/30 backdrop-blur px-4 py-3 rounded-md border border-white/10">
-                <span className="text-[#e5c0a1]">✓</span>
-                <span>{dict.hero.callReassurance || "Richiesta scritta • Nessun impegno"}</span>
-              </div>
             </div>
           </div>
         </div>
@@ -864,11 +860,6 @@ export default function IndexPage() {
             >
               {lang === "it" ? "RICHIEDI PREVENTIVO" : "REQUEST A QUOTE"}
             </BookingButton>
-            <span className="text-sm text-muted-foreground italic">
-              {lang === "it"
-                ? "Richiesta scritta • Nessuna chiamata obbligatoria"
-                : "Written enquiry • No mandatory call"}
-            </span>
           </div>
         </div>
       </section>
@@ -1189,7 +1180,7 @@ export default function IndexPage() {
             size="lg"
             className="px-8 py-6 rounded-md font-semibold bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 uppercase tracking-wide"
           >
-            {dict.hero.ctaButton || "RICHIEDI PREVENTIVO SCRITTO"}
+            {dict.hero.ctaButton || "RICHIEDI UN PREVENTIVO"}
           </BookingButton>
         </div>
       </section>
@@ -1610,12 +1601,12 @@ export default function IndexPage() {
                     className="text-primary font-bold hover:underline p-0 h-auto inline text-sm md:text-base"
                   >
                     {lang === "it"
-                      ? "Richiedi un preventivo scritto"
-                      : "Request a written quote"}
+                      ? "Richiedi un preventivo"
+                      : "Request a quote"}
                   </BookingButton>{" "}
                   {lang === "it"
-                    ? "o compila il modulo qui accanto: nessuna chiamata obbligatoria."
-                    : "or use the adjacent form: no introductory call is required."}
+                    ? "oppure compila il modulo qui accanto."
+                    : "or use the form alongside."}
                 </p>
               </div>
             </div>
