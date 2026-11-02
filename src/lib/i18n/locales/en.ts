@@ -40,7 +40,7 @@ export const enLocale: TranslationDictionary = {
     headline: 'The support that helps you work better, with more clarity.',
     desc1: 'Offering over twenty years of organizational and linguistic expertise to help you manage day-to-day operations seamlessly.',
     desc2: 'From email and schedule management to client communications, translations, and editing website content: flexible, professional support tailored to your needs.',
-    ctaButton: 'REQUEST A WRITTEN QUOTE',
+    ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'Written replies • No introductory call required',
     description:
       'I bring structured order to your daily workflows, coordinate communications in four languages, and manage essential back-office operations with precision, discretion, and care.',
@@ -474,7 +474,7 @@ export const enLocale: TranslationDictionary = {
     directBooking: {
       title: 'Written quote request',
       desc: 'Tell me what you need to delegate using the contact form. I will follow up in writing with the next steps.',
-      btnLabel: 'Request a written quote',
+      btnLabel: 'Request a quote',
       specs: [
         'No mandatory introductory call',
         'Describe the scope, volume and deadline',
