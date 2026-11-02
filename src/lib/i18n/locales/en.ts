@@ -79,17 +79,17 @@ export const enLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'WHAT I DO',
-    title: 'Tailored Operational Services',
+    title: 'Italian Language & Operational Services',
     subtitle:
-      'Engage on a single targeted project or establish a flexible, recurring operational collaboration.',
+      'Translation and localisation into Italian, existing-customer correspondence and practical support for your work with Italy.',
     viewAllCta: 'View Full Service Details',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Virtual Assistance & Back Office',
-        subtitle: 'Order, continuity, and responsiveness for your daily operations.',
+        title: 'Italian Customer Communication & Back Office',
+        subtitle: 'Organised Italian-language support for your existing customer relationships.',
         description:
-          "Organisational secretarial work and operational back office: email, calendars, deadlines, data entry, orders, price-list updates, quotes prepared on the client's instructions and assistance for existing customers. Business operations, bookkeeping, invoicing and customer acquisition are excluded.",
+          "Written Italian-language support for existing customers, order updates, correspondence, document organisation and operational follow-ups connected with Italy. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
@@ -103,9 +103,9 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'translation-localization',
         title: 'Translation & Localization',
-        subtitle: 'Natural, culturally resonant communication in IT, EN, FR, ES.',
+        subtitle: 'Native Italian translation from English, French and Spanish.',
         description:
-          "Writing, revising, translating and adapting professional correspondence, websites, landing pages, catalogues and product listings in Italian, English, French and Spanish, to and from Italian according to the assignment and linguistic expertise.",
+          "Translation from English, French and Spanish into Italian, plus editing and cultural localisation of Italian websites, landing pages, catalogues, product pages and professional communications. I do not offer native-level translation into English, French or Spanish.",
         iconName: 'Globe',
         items: [
           'Website & landing page localization',
@@ -121,7 +121,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Content Writing & Revision',
         subtitle: 'Clear, compelling messaging that builds credibility.',
         description:
-          'Whether refreshing your website copy, composing insightful newsletters, or refining technical drafts, I craft clear, persuasive text tailored to your audience, integrating AI assistance where appropriate to accelerate turnaround while safeguarding human nuance.',
+          'I review, edit and adapt Italian-language website copy, customer emails, newsletters and AI-assisted drafts to make them clear, natural and consistent for readers in Italy.',
         iconName: 'PenTool',
         items: [
           'Website & landing page copywriting',
@@ -164,7 +164,7 @@ export const enLocale: TranslationDictionary = {
           'Basic digital assistance & setup support',
         ],
       },
-      { id: 'web-landing', title: 'Website and landing page content', subtitle: 'Clearer online messaging and content structure.', description: 'Editing, language adaptation and organisation of content for existing websites. Technical website development is assessed separately and is not part of the standard service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
+      { id: 'web-landing', title: 'Italian Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'Editing, language adaptation and organisation of content for existing websites. Technical website development is assessed separately and is not part of the standard service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
     ],
   },
   multilingualAdvantage: {
@@ -444,7 +444,7 @@ export const enLocale: TranslationDictionary = {
   },
   contactSection: {
     tag: 'GET IN TOUCH',
-    title: 'Let’s Discuss Your Operational Needs',
+    title: 'Let’s Discuss Your Project for the Italian Market',
     subtitle: 'Describe your project through the form. I will reply in writing; no introductory call is required.',
     form: {
       name: 'First Name *',
@@ -453,9 +453,9 @@ export const enLocale: TranslationDictionary = {
       company: 'Company / Project Name',
       serviceNeeded: 'Primary Area of Interest *',
       serviceOptions: [
-        'Virtual Assistance & Back Office',
-        'Translation & Localization (IT · EN · FR · ES)',
-        'Content Writing & Copy Revision',
+        'Italian Customer Communication & Operational Support',
+        'Translation & Localisation into Italian (EN/FR/ES → IT)',
+        'Italian Content Editing & Revision',
         'Online Research & Desk Research',
         'Digital Support & AI Workflows',
         'Website and landing page content',
