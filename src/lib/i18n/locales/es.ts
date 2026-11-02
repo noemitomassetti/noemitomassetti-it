@@ -88,7 +88,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Asistencia Virtual & Back Office',
         subtitle: 'Continuidad, orden y capacidad de respuesta para tu gestión diaria.',
         description:
-          "Secretaría organizativa y back office operativo: correo, agenda, plazos, entrada de datos, pedidos, actualización de tarifas, presupuestos preparados siguiendo las instrucciones del cliente y atención a clientes existentes. Se excluyen la organización empresarial, la contabilidad, la facturación y la captación comercial.",
+          "Secretaría organizativa y back office operativo: correo, agenda, plazos, entrada de datos, pedidos, actualización de tarifas, presupuestos preparados siguiendo las instrucciones del cliente y atención a clientes existentes. Se excluyen la administración empresarial, la contabilidad, la facturación y la captación comercial.",
         iconName: 'Mail',
         items: [
           'Gestión y filtrado ordenado del correo electrónico',
@@ -195,7 +195,7 @@ export const esLocale: TranslationDictionary = {
        deliverables: ['Análisis de tareas delegables', 'Organización acordada de correos, archivos y procesos', 'Resumen de actividades y prioridades'], turnaround: 'Por acordar'},
       {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: "Atención escrita a los clientes existentes, actualizaciones de pedidos y seguimientos de asistencia conforme a los procedimientos acordados.",
        deliverables: ['Plantillas de respuesta y preguntas frecuentes', 'Gestión acordada de consultas escritas', 'Registro de seguimientos y actividades'], turnaround: 'Por acordar'},
-      {id: 'p3', title: 'Localización al italiano', badge: 'EN/FR → IT', description: 'Traducción y adaptación cultural al italiano de webs, fichas de producto, emails y contenidos comerciales.',
+      {id: 'p3', title: 'Traducción y adaptación multilingüe', badge: 'IT · EN · FR · ES', description: 'Traducción y adaptación desde y hacia el italiano en los cuatro idiomas de trabajo, según el contenido y las competencias lingüísticas.',
        deliverables: ['Análisis de textos, público y terminología', 'Traducción o localización del contenido acordado', 'Revisión final y notas lingüísticas'], turnaround: 'Según volumen'},
       {id: 'p4', title: 'Revisión de contenido existente', badge: 'Claridad y coherencia', description: 'Revisión cuidadosa de materiales profesionales y multilingües existentes.',
        deliverables: ['Evaluación del texto y los objetivos', 'Revisión de estructura, tono y legibilidad', 'Documento final con cambios identificables'], turnaround: 'Según alcance'},
@@ -540,7 +540,7 @@ export const esLocale: TranslationDictionary = {
     legalTitle: 'Aviso Legal',
     rights: 'Todos los derechos reservados.',
     disclaimer:
-      "Secretaría organizativa, back office operativo, atención a clientes existentes, comunicación multilingüe, traducción y contenidos digitales. No se ofrecen organización de empresas, contabilidad, facturación, servicios fiscales, generación de leads ni captación comercial.",
+      "Secretaría organizativa, back office operativo, atención a clientes existentes, comunicación multilingüe, traducción y contenidos digitales. No se ofrecen administración de empresas, contabilidad, facturación, servicios fiscales, generación de leads ni captación comercial.",
     cookiePrefs: 'Preferencias de Cookies',
   },
 };
