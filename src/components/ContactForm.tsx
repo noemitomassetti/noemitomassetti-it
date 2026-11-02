@@ -184,9 +184,14 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
         });
         setIsSuccess(true);
         clearQuoteDraft();
-        setFormData(INITIAL_FORM);
+        // An email provider accepting a form does not prove inbox delivery.
+        // Preserve its contents/reference so a visitor can send the same
+        // request manually if the provider notification is not delivered.
+        if (result.deliveryStatus === 'persisted_in_noetom') {
+          setFormData(INITIAL_FORM);
+          setIdempotencyKey(generateIdempotencyKey());
+        }
         setHoneypot("");
-        setIdempotencyKey(generateIdempotencyKey()); // Refresh key for next message
         toast({
           title: t.successTitle,
           description: result.deliveryStatus === 'email_received_by_provider'
@@ -275,12 +280,30 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
                     : `The email forwarding service accepted your request (ref. ${submissionDetails?.requestId}). Delivery to Noemi’s inbox has not been verified.`)}
             </p>
           </div>
+          {submissionDetails?.deliveryStatus === 'email_received_by_provider' && (
+            <div className="border border-border/60 rounded-xl p-4 text-left space-y-3">
+              <p className="text-sm text-foreground/80">
+                {lang === 'it'
+                  ? 'Il recapito finale non è ancora verificato. Se necessario, puoi inviare la stessa richiesta per email, mantenendo il riferimento, così Noemi potrà riconoscere eventuali duplicati.'
+                  : lang === 'fr'
+                  ? 'La réception finale reste à confirmer. Si nécessaire, envoyez la même demande par e-mail avec sa référence pour identifier les éventuels doublons.'
+                  : lang === 'es'
+                  ? 'La entrega final sigue sin confirmarse. Si es necesario, envía la misma solicitud por correo con su referencia para identificar posibles duplicados.'
+                  : 'Final email delivery has not been verified. If needed, send the same request by email with its reference so potential duplicates can be identified.'}
+              </p>
+              <a className="text-primary underline underline-offset-4 font-semibold text-sm" href={manualEmailLink}>
+                {lang === 'it' ? 'Apri la richiesta nell’email' : lang === 'fr' ? 'Ouvrir la demande par e-mail' : lang === 'es' ? 'Abrir solicitud por correo' : 'Open request in email'}
+              </a>
+            </div>
+          )}
           <Button
             type="button"
             variant="outline"
             onClick={() => {
               setIsSuccess(false);
               setSubmissionDetails(null);
+              setFormData(INITIAL_FORM);
+              setIdempotencyKey(generateIdempotencyKey());
             }}
             className="mt-4"
           >
