@@ -39,10 +39,10 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
           {
             id: 'customer_care',
             label: {
-              it: 'Assistenza clienti e comunicazioni',
-              en: 'Customer support & communications',
-              fr: 'Support client et communication',
-              es: 'Atención al cliente y comunicaciones',
+              it: 'Assistenza ai clienti già acquisiti e comunicazioni',
+              en: 'Existing-customer support & communications',
+              fr: 'Support aux clients existants et communication',
+              es: 'Atención a clientes existentes y comunicaciones',
             },
           },
           {
@@ -57,10 +57,10 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
           {
             id: 'mixed_support',
             label: {
-              it: 'Supporto operativo misto / su misura',
-              en: 'Mixed / tailored operational support',
-              fr: 'Soutien opérationnel mixte sur mesure',
-              es: 'Soporte operativo mixto / a medida',
+              it: 'Ordini, listini, preventivi e supporto operativo',
+              en: 'Orders, price lists, quotations & operational support',
+              fr: 'Commandes, tarifs, devis et soutien opérationnel',
+              es: 'Pedidos, tarifas, presupuestos y soporte operativo',
             },
           },
         ],
@@ -570,15 +570,15 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
     serviceKey: 'research',
     serviceId: CONCIERGE_TO_OFFICIAL_SERVICE_ID.research,
     title: {
-      it: 'Ricerche Online & Desk Research',
-      en: 'Online Research & Desk Research',
-      fr: 'Recherches en Ligne & Veille',
-      es: 'Investigación Online & Desk Research',
+      it: 'Ricerche Informative di Supporto',
+      en: 'Informational Research Support',
+      fr: 'Recherches Documentaires de Soutien',
+      es: 'Investigación Informativa de Apoyo',
     },
     shortDescription: {
-      it: 'Benchmark concorrenti, ricerca fornitori e sintesi strutturate',
-      en: 'Competitor benchmarks, supplier research, and structured reports',
-      fr: 'Benchmark concurrentiel, recherche de prestataires et synthèses',
+      it: 'Raccolta e confronto informazioni per attività già concordate; nessuna ricerca contatti commerciali',
+      en: 'Information gathering and comparisons for an existing agreed assignment; no sales contact sourcing',
+      fr: 'Collecte et comparaison d’informations pour des activités déjà convenues, sans prospection',
       es: 'Análisis de competencia, búsqueda de proveedores e informes',
     },
     questions: [
@@ -705,16 +705,16 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
     serviceKey: 'web',
     serviceId: CONCIERGE_TO_OFFICIAL_SERVICE_ID.web,
     title: {
-      it: 'Siti Web & Landing Page',
-      en: 'Websites & Landing Pages',
-      fr: 'Sites Web & Landing Pages',
-      es: 'Sitios Web & Landing Pages',
+      it: 'Contenuti per Siti Web e Landing Page',
+      en: 'Website & Landing-Page Content',
+      fr: 'Contenus Web et Landing Pages',
+      es: 'Contenidos para Webs y Landing Pages',
     },
     shortDescription: {
-      it: 'Pagine essenziali, siti vetrina chiari e architettura multilingue',
-      en: 'Clear showcase websites, landing pages, and multilingual architecture',
-      fr: 'Landing pages claires, sites vitrines et architecture multilingue',
-      es: 'Páginas web claras, landing pages y arquitectura multilingüe',
+      it: 'Scrittura, revisione, aggiornamento e adattamento linguistico di contenuti web',
+      en: 'Writing, revising, updating and adapting website and landing-page content',
+      fr: 'Rédaction, révision, mise à jour et adaptation linguistique des contenus web',
+      es: 'Redacción, revisión, actualización y adaptación lingüística de contenidos web',
     },
     questions: [
       {
@@ -729,28 +729,28 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
           {
             id: 'landing_page',
             label: {
-              it: 'Landing page a pagina singola per servizio o offerta (da €290)',
-              en: 'Single landing page for service or launch (from €290)',
-              fr: 'Landing page monopage pour offre ou lancement (dès 290 €)',
-              es: 'Landing page monospágina para oferta o servicio (desde 290 €)',
+              it: 'Testi per landing page: stesura, revisione o aggiornamento (su preventivo)',
+              en: 'Landing-page copy: writing, revision or updates (written quote)',
+              fr: 'Textes de landing page : rédaction, révision ou mise à jour (sur devis)',
+              es: 'Textos para landing page: redacción, revisión o actualización (presupuesto escrito)',
             },
           },
           {
             id: 'showcase_site',
             label: {
-              it: 'Sito vetrina essenziale completo fino a 4-6 pagine (da €590)',
-              en: 'Showcase website up to 4-6 pages (from €590)',
-              fr: 'Site vitrine complet jusqu’à 4-6 pages (dès 590 €)',
-              es: 'Sitio web profesional completo de 4-6 páginas (desde 590 €)',
+              it: 'Contenuti per più pagine di un sito: stesura o revisione (su preventivo)',
+              en: 'Copy for multiple website pages: writing or revision (written quote)',
+              fr: 'Contenus de plusieurs pages web : rédaction ou révision (sur devis)',
+              es: 'Textos de varias páginas web: redacción o revisión (presupuesto escrito)',
             },
           },
           {
             id: 'redesign_review',
             label: {
-              it: 'Restyling o riorganizzazione di un sito esistente',
-              en: 'Restyling or restructuring an existing website',
-              fr: 'Refonte ou restructuration d’un site existant',
-              es: 'Rediseño o reorganización de sitio existente',
+              it: 'Revisione e aggiornamento dei testi di un sito esistente',
+              en: 'Editing and updating copy on an existing website',
+              fr: 'Révision et actualisation des textes d’un site existant',
+              es: 'Revisión y actualización de los textos de un sitio existente',
             },
           },
         ],
