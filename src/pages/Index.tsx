@@ -1022,7 +1022,7 @@ export default function IndexPage() {
           </h2>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
             {lang === "it"
-              ? "Ogni professione ha le sue specificità, ma molte esigenze organizzative e di gestione sono comuni: lang === "fr" ? "Chaque activité a ses particularités, mais de nombreuses tâches d’organisation se ressemblent." : lang === "es" ? "Cada actividad tiene sus particularidades, pero muchas necesidades de organización son similares." : "}
+              ? "Ogni professione ha le sue specificità, ma molte esigenze organizzative e di gestione sono comuni:" : lang === "fr" ? "Chaque activité a ses particularités, mais de nombreuses tâches d’organisation se ressemblent." : lang === "es" ? "Cada actividad tiene sus particularidades, pero muchas necesidades de organización son similares." : "Every business has unique characteristics, yet core organisational needs are often similar."}
           </p>
         </div>
 
@@ -1287,7 +1287,7 @@ export default function IndexPage() {
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
-                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU) nei 5 ambiti: lang === "fr" ? "Diplôme en médiation linguistique avec mention et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Grado en Mediación Lingüística con matrícula de honor y máster universitario en Traducción Especializada (1.500 horas, 60 créditos), en cinco áreas de especialización." : "Bachelor's Degree in Language Mediation (110/110 summa cum laude) and 1,500-hour Postgraduate Master in Specialist Translation across 5 domains."}
+                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU) nei 5 ambiti: letterario, giuridico, economico, tecnologico e scientifico." : lang === "fr" ? "Diplôme en médiation linguistique avec mention et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Grado en Mediación Lingüística con matrícula de honor y máster universitario en Traducción Especializada (1.500 horas, 60 créditos), en cinco áreas de especialización." : "Degree in Language Mediation (with honours) and a postgraduate master’s in Specialist Translation covering five fields."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
@@ -1342,7 +1342,7 @@ export default function IndexPage() {
                 <Globe className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-foreground text-base">
-                {lang === "it" ? "Identità & Contatto Diretto" : lang === "fr" ? "Contact direct avec Noemi" : lang === "es" ? "Contacto directo con Noemi" : 1 Contact"}
+                {lang === "it" ? "Identità e contatto diretto" : lang === "fr" ? "Contact direct avec Noemi" : lang === "es" ? "Contacto directo con Noemi" : "Direct contact with Noemi"}
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
@@ -1361,7 +1361,7 @@ export default function IndexPage() {
           <div className="space-y-2 text-center md:text-left">
             <h3 className="text-xl font-bold text-foreground">
               {lang === "it"
-                ? "Guarda concretamente come lavoro: lang === "fr" ? "Découvrez mes méthodes à travers des exemples de projets et des traductions commentées." : lang === "es" ? "Descubre mi forma de trabajar a través de ejemplos de proyectos y traducciones comentadas." : 11 practical case studies + 1 literary sample"}
+                ? "Guarda concretamente come lavoro attraverso esempi dimostrativi e traduzioni commentate." : lang === "fr" ? "Découvrez mes méthodes à travers des exemples de projets et des traductions commentées." : lang === "es" ? "Descubre mi forma de trabajar a través de ejemplos de proyectos y traducciones comentadas." : "Explore my approach through illustrative projects and annotated translation samples."}
             </h3>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xl">
               {lang === "it"
