@@ -8,7 +8,7 @@ const root=path.resolve(__dirname,'..');
 function loadTS(file){
  const src=fs.readFileSync(path.join(root,file),'utf8');
  const compiled=ts.transpileModule(src,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
- const module={exports:{}};vm.runInNewContext(compiled,{module,exports:module.exports,require(){throw new Error('unexpected import')}},{filename:file});return module.exports;
+ const module={exports:{}};vm.runInNewContext(compiled,{module,exports:module.exports,require(request){if(request==='../serviceScope')return loadTS('src/lib/serviceScope.ts');throw new Error('unexpected import: '+request)}},{filename:file});return module.exports;
 }
 const {recognizeIntent}=loadTS('src/lib/concierge/intentRecognizer.ts');
 const cases=[
