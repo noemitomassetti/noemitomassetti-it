@@ -236,7 +236,7 @@ export const enLocale: TranslationDictionary = {
     whatItIsNot: {
       title: 'What NoeTom Is — And What It Is NOT',
       subtitle:
-        'We designed NoeTom to solve a real human pain point, deliberately avoiding the bloated complexity of generic software.',
+        'I designed NoeTom to make everyday operational work easier, without the unnecessary complexity of conventional software.',
       items: [
         {
           bad: 'NOT a generic AI chatbot answering trivia',
