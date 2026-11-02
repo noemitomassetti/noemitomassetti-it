@@ -41,7 +41,7 @@ export const esLocale: TranslationDictionary = {
     desc1: 'Más de veinte años de experiencia organizativa y lingüística para ayudarte a gestionar mejor tu día a día.',
     desc2: 'De la gestión de emails y agenda a la atención a clientes, de la traducción a la revisión y localización de contenidos web: un apoyo profesional y flexible a tu medida.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
-    callReassurance: 'Respuesta por escrito • Sin llamada obligatoria',
+    callReassurance: 'Solicitud sin compromiso',
     description:
       'Pongo orden en tu gestión diaria, coordino tus comunicaciones en cuatro idiomas y atiendo tus procesos operativos con precisión, autonomía y compromiso.',
     ctaServices: 'Explorar Servicios',
