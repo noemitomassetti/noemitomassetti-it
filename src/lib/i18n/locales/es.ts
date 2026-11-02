@@ -454,9 +454,9 @@ export const esLocale: TranslationDictionary = {
       serviceOptions: [
         'Atención escrita a clientes italianos y apoyo operativo',
         'Traducción y localización al italiano (ES/EN/FR → IT)',
-        'Redacción & Revisión de Textos',
+        'Revisión y adaptación de textos en italiano',
         'Investigación Informativa de Apoyo',
-        'Soporte Digital & Flujos con IA',
+        'Apoyo digital para actividades relacionadas con Italia',
         'Contenidos para webs y landing pages',
         'Información sobre el proyecto interno NoeTom',
         'Otra consulta general',
