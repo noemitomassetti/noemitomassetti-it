@@ -33,12 +33,12 @@ export const enLocale: TranslationDictionary = {
     language: 'Language',
   },
   hero: {
-    badge: 'VIRTUAL ASSISTANT',
+    badge: 'NATIVE ITALIAN LANGUAGE SUPPORT',
     titleLine1: 'Italian translation, localisation and operational support',
     titleHighlight: 'for your work with Italy',
     subtitle: "Native Italian-language support: translation and localisation into Italian, written support for existing Italian customers and operational tasks connected with Italy.",
-    headline: 'The support that helps you work better, with more clarity.',
-    desc1: 'Offering over twenty years of organizational and linguistic expertise to help you manage day-to-day operations seamlessly.',
+    headline: 'Communicate naturally with your Italian audience.',
+    desc1: 'I am a native Italian speaker with specialist translation training and over twenty years of professional experience.',
     desc2: 'From websites and landing pages to Italian-language customer correspondence and operational coordination, I support your business activities involving Italy.',
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
@@ -534,14 +534,14 @@ export const enLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Digital, Multilingual & Operational Support for independent professionals, consultants, and European businesses. Creator of NoeTom, the AI operations assistant.',
+      'Italian translation, localisation and operational support for international professionals and small businesses working with Italy. Creator of NoeTom, an internal project in development.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom AI',
     companyTitle: 'About & Insights',
     legalTitle: 'Legal & Privacy',
     rights: 'All rights reserved.',
     disclaimer:
-      "Organisational secretarial work, operational back office, existing-customer support, multilingual correspondence, translation and digital content. Business administration, accounting, invoicing, tax services, lead generation and sales prospecting are not offered.",
+      "Organisational secretarial work, operational back office, existing-customer support, multilingual correspondence, translation and digital content. I do not provide telemarketing, cold outreach, lead generation, prospecting, bookkeeping, invoicing, administrative or tax services.",
     cookiePrefs: 'Cookie Preferences',
   },
 };
