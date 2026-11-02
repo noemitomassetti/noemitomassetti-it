@@ -196,7 +196,7 @@ export const enLocale: TranslationDictionary = {
        deliverables: ['Review of activities to delegate', 'Agreed email, document and workflow organisation', 'Summary of work completed and next priorities'], turnaround: 'By agreement'},
       {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: "Written enquiries from existing customers, order-status updates and support follow-ups, within agreed procedures and tone of voice.",
        deliverables: ['Response templates and FAQs', 'Agreed handling of written enquiries', 'Follow-up and activity log'], turnaround: 'By agreement'},
-      {id: 'p3', title: 'Italian localisation', badge: 'EN/FR → IT', description: 'Translation and cultural adaptation into Italian for websites, product pages, emails and marketing materials.',
+      {id: 'p3', title: 'Multilingual translation and adaptation', badge: 'IT · EN · FR · ES', description: 'Translation and adaptation to and from Italian across four working languages, assessed case by case according to the material and expertise.',
        deliverables: ['Source, audience and terminology review', 'Translation or localisation of agreed content', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
       {id: 'p4', title: 'Existing-content review', badge: 'Clarity and consistency', description: 'Careful editing of your existing professional and multilingual materials.',
        deliverables: ['Text and objectives assessment', 'Structure, tone and readability revision', 'Final editable document with traceable changes'], turnaround: 'Based on scope'},
@@ -308,7 +308,7 @@ export const enLocale: TranslationDictionary = {
           name: 'Tell NoeTom (“Di’ a NoeTom”)',
           tagline: 'Zero-friction data entry',
           description:
-            'Simply dump raw voice notes or quick thoughts: "Spoke with Marco, he approved the deck, need to invoice 1,200€ and follow up Tuesday with the contract." NoeTom parses and files everything.',
+            'Simply dump raw voice notes or quick thoughts: "Spoke with Marco: the client approved the wording; update the agreed quotation and send the draft on Tuesday." NoeTom parses and files everything.',
           status: 'in_development',
         },
         {
@@ -541,7 +541,7 @@ export const enLocale: TranslationDictionary = {
     legalTitle: 'Legal & Privacy',
     rights: 'All rights reserved.',
     disclaimer:
-      "Organisational secretarial work, operational back office, existing-customer support, multilingual correspondence, translation and digital content. Business operations, accounting, invoicing, tax services, lead generation and sales prospecting are not offered.",
+      "Organisational secretarial work, operational back office, existing-customer support, multilingual correspondence, translation and digital content. Business administration, accounting, invoicing, tax services, lead generation and sales prospecting are not offered.",
     cookiePrefs: 'Cookie Preferences',
   },
 };
