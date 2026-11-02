@@ -349,7 +349,7 @@ export const itPosts = [
       <p>E spesso bastano piccoli sistemi pratici per fare una grande differenza nella quotidianità.</p>
 
       <h3>Hai bisogno di supporto nella gestione delle email?</h3>
-      <p>Come assistente virtuale per professionisti, freelance e piccole attività, offro supporto amministrativo nell’organizzazione operativa del lavoro quotidiano, inclusa la gestione della posta elettronica come segreteria virtuale.</p>
+      <p>Come assistente virtuale per professionisti, freelance e piccole attività, offro segreteria organizzativa e back office operativo, senza attività amministrative, contabili o di fatturazione, inclusa la gestione della posta elettronica come segreteria virtuale.</p>
       <p>Posso aiutarti a:</p>
       <ul>
         <li>organizzare la tua inbox,</li>
@@ -514,7 +514,7 @@ export const itPosts = [
       <p>In questo modo chi ti scrive riceve subito una risposta chiara e sa cosa aspettarsi.</p>
 
       <h3>5. Valuta di delegare la gestione operativa</h3>
-      <p>Se vuoi staccare davvero senza interrompere completamente la tua attività, puoi affidare alcune mansioni a un'assistente virtuale per professionisti. Delegare le attività amministrative ti garantisce tranquillità.</p>
+      <p>Se vuoi staccare davvero senza interrompere completamente la tua attività, puoi affidare alcune mansioni a un'assistente virtuale per professionisti. Delegare le comunicazioni, la segreteria organizzativa e il back office operativo può darti più tranquillità.</p>
       <p>In base alle procedure concordate, può occuparsi ad esempio di:</p>
       <ul>
         <li>filtrare e organizzare la posta in arrivo;</li>
@@ -916,10 +916,10 @@ export const itPosts = [
       <h3>La struttura ideale di una procedura semplice ed efficace</h3>
       <p>Una buona procedura per il back office deve essere consultabile in 60 secondi e contenere 4 elementi fondamentali:</p>
       <ul>
-        <li><strong>Scopo e risultato atteso:</strong> qual è l'obiettivo finale dell'attività? (Es. 'Emettere e inviare la fattura pro-forma entro 24 ore dalla chiusura del progetto').</li>
+        <li><strong>Scopo e risultato atteso:</strong> qual è l'obiettivo finale dell'attività? (Es. 'Aggiornare il listino sulla base delle indicazioni del cliente e inviare la versione approvata entro giovedì').</li>
         <li><strong>Strumenti necessari e accessi:</strong> software da utilizzare, cartelle Drive di riferimento, modelli preimpostati.</li>
-        <li><strong>Istruzioni sequenziali numerate:</strong> passi chiari, espressi con verbi all'infinito o all'imperativo (1. Aprire il gestionale; 2. Selezionare il cliente; 3. Verificare i dati fiscali; 4. Scaricare il PDF).</li>
-        <li><strong>Checklist di verifica finale:</strong> i controlli di qualità prima di considerare il compito concluso (Es. 'Verificato codice univoco SDI? Inviata copia di cortesia via email?').</li>
+        <li><strong>Istruzioni sequenziali numerate:</strong> passi chiari, espressi con verbi all'infinito o all'imperativo (1. Aprire il documento; 2. Verificare la versione; 3. Aggiornare i dati operativi; 4. Salvare e inviare dopo approvazione).</li>
+        <li><strong>Checklist di verifica finale:</strong> i controlli di qualità prima di considerare il compito concluso (Es. 'Verificate le informazioni del listino? Inviato il documento approvato al destinatario corretto?').</li>
       </ul>
 
       <h3>Registrare anziché scrivere: il metodo veloce con video brevi</h3>
