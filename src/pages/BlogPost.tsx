@@ -1,15 +1,15 @@
 import { Layout } from "@/components/Layout";
-import { useParams, Link, Navigate, useLocation } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { getBlogPostBySlug, getBlogPosts } from "@/lib/blogData";
 import { useSEO } from "@/hooks/useSEO";
-import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
+import { getLocalizedPath } from "@/lib/i18n/routes";
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const location = useLocation();
-  const currentLang = getLanguageFromPath(location.pathname);
+  // Blog articles are authored only in Italian; keep navigation and metadata in Italian.
+  const currentLang = 'it' as const;
   const post = slug ? getBlogPostBySlug(slug) : undefined;
 
   useSEO({
@@ -18,6 +18,7 @@ const BlogPost = () => {
     canonical: post ? `https://www.noemitomassetti.it/blog/${post.slug || post.id}` : "https://www.noemitomassetti.it/blog",
     ogImage: post?.image,
     ogType: "article",
+    ogLocale: "it_IT",
     schema: post ? [
       {
         "@context": "https://schema.org",
@@ -102,12 +103,12 @@ const BlogPost = () => {
 
   const ctaBtn =
     currentLang === "fr"
-      ? "DEMANDER UN DEVIS ÉCRIT"
+      ? "DEMANDER UN DEVIS"
       : currentLang === "es"
       ? "SOLICITAR PRESUPUESTO"
       : currentLang === "en"
-      ? "REQUEST A WRITTEN QUOTE"
-      : "RICHIEDI PREVENTIVO SCRITTO";
+      ? "REQUEST A QUOTE"
+      : "RICHIEDI UN PREVENTIVO";
 
   const authorBio =
     currentLang === "fr"
