@@ -36,14 +36,14 @@ export const enLocale: TranslationDictionary = {
     badge: 'VIRTUAL ASSISTANT',
     titleLine1: 'Italian translation, localisation and operational support',
     titleHighlight: 'for your work with Italy',
-    subtitle: "Multilingual virtual assistance for organisational secretarial work, operational back office, support for existing customers, professional correspondence and digital content.",
+    subtitle: "Native Italian-language support: translation and localisation into Italian, written support for existing Italian customers and operational tasks connected with Italy.",
     headline: 'The support that helps you work better, with more clarity.',
     desc1: 'Offering over twenty years of organizational and linguistic expertise to help you manage day-to-day operations seamlessly.',
     desc2: 'From websites and landing pages to Italian-language customer correspondence and operational coordination, I support your business activities involving Italy.',
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
-      'I bring structured order to your daily workflows, coordinate communications in four languages, and manage essential back-office operations with precision, discretion, and care.',
+      'I translate from English, French and Spanish into Italian, refine Italian-language content and support agreed operations involving Italian customers and partners.',
     ctaServices: 'Explore Services',
     ctaNoeTom: 'Discover NoeTom AI',
     quickStats: {
