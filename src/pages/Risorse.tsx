@@ -10,7 +10,7 @@ const getTools = () => {
     { name: "Gmail / Workspace", desc: "per una gestione ordinata delle comunicazioni e dei filtri" },
     { name: "Notion / Asana / Trello", desc: "per organizzare attività, scadenze e processi aziendali" },
     { name: "Canva", desc: "per contenuti semplici, presentazioni e materiali visivi" },
-    { name: "CRM & Automazioni", desc: "per tracciare contatti, lead e relazioni con i clienti" },
+    { name: "Organizzazione e assistenza clienti", desc: "per seguire richieste e assistenza dei clienti già acquisiti" },
   ];
 };
 
