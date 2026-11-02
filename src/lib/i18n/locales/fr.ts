@@ -40,7 +40,7 @@ export const frLocale: TranslationDictionary = {
     headline: 'Le soutien qui vous aide à mieux travailler, avec plus de sérénité.',
     desc1: "Plus de vingt ans d'expérience organisationnelle et linguistique pour optimiser votre gestion quotidienne.",
     desc2: 'De la gestion des e-mails à la relation client écrite et à la traduction de contenus web : un accompagnement ciblé, défini par écrit.',
-    ctaButton: 'DEMANDER UN DEVIS ÉCRIT',
+    ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Réponse écrite • Aucun appel obligatoire',
     description:
       'J’apporte de l’ordre dans votre quotidien, coordonne vos correspondances en quatre langues et prends en charge vos opérations opérationnelles avec rigueur et disponibilité.',
@@ -473,7 +473,7 @@ export const frLocale: TranslationDictionary = {
     directBooking: {
       title: 'Demande de devis écrit',
       desc: 'Décrivez vos besoins et les tâches à déléguer dans le formulaire. Je vous répondrai par écrit.',
-      btnLabel: 'Demander un devis écrit',
+      btnLabel: 'Demander un devis',
       specs: [
         'Aucun appel préalable obligatoire',
         'Précisez le travail, le volume et le délai',
