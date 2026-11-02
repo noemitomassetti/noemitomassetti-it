@@ -388,7 +388,7 @@ export const frLocale: TranslationDictionary = {
         detail: 'Université de Macerata, diplômée avec 110/110 et félicitations du jury.',
       },
       {
-        period: '2010 – 2011',
+        period: '2010 – 2012',
         role: 'Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise',
         detail: '1 500 heures, 60 ECTS, épreuve finale validée. Domaines abordés : littéraire, juridique, économique, technologique, scientifique.',
       },
