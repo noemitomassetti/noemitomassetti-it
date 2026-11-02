@@ -5,7 +5,11 @@ const ts=require('typescript');
 const source=fs.readFileSync(require('node:path').join(__dirname,'../src/lib/concierge/intentRecognizer.ts'),'utf8');
 const clean=source.replace(/^import\s+[^;]+;\s*$/gm,'');
 const js=ts.transpileModule(clean,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
-const fakeModule={exports:{}};vm.runInNewContext(js,{module:fakeModule,exports:fakeModule.exports,console});
+const scopeSource=fs.readFileSync(require('node:path').join(__dirname,'../src/lib/serviceScope.ts'),'utf8');
+const scopeClean=scopeSource.replace(/^import\s+[^;]+;\s*$/gm,'');
+const scopeJs=ts.transpileModule(scopeClean,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const scopeModule={exports:{}};vm.runInNewContext(scopeJs,{module:scopeModule,exports:scopeModule.exports,console});
+const fakeModule={exports:{}};vm.runInNewContext(js,{module:fakeModule,exports:fakeModule.exports,console,...scopeModule.exports});
 const recognize=fakeModule.exports.recognizeIntent;
 const cases=[
  ['Quali lingue parli?', 'it', 'B2'],
@@ -18,7 +22,7 @@ const cases=[
  ['Do you have a portfolio?', 'en','fictional data'],
  ['Quali sono le modalità di pagamento?', 'it','pagamento anticipato'],
  ['Quanto costa il servizio?', 'it','stima indicativa'],
- ['Vorrei la dichiarazione dei redditi', 'it','non fornisce'],
+ ['Vorrei la dichiarazione dei redditi', 'it','Non offro contabilità'],
  ['Can you build a website?', 'en','not a standard listed service'],
  ['Vorrei tradurre una brochure dal francese in italiano','it','Traduzione'],
 ];
