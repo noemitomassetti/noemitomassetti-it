@@ -238,7 +238,7 @@ export default function NoeTomPage() {
               <div className="flex items-center gap-4 text-xs text-muted-foreground">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-primary" />
-                  <span>Castelfidardo (AN), Italia · Servizi da remoto</span>
+                  <span>{lang === 'it' ? 'Castelfidardo (AN), Italia · Servizi da remoto' : lang === 'fr' ? 'Castelfidardo (AN), Italie · Services à distance' : lang === 'es' ? 'Castelfidardo (AN), Italia · Servicios a distancia' : 'Castelfidardo (AN), Italy · Remote services'}</span>
                 </div>
               </div>
             </div>
