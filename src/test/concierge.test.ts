@@ -85,7 +85,7 @@ describe('NoeTom AI Concierge 2.0 Test Suite', () => {
       const fiscalQuery1 = recognizeIntent('Fai la dichiarazione dei redditi o modelli F24?');
       expect(fiscalQuery1.isScopeExcluded).toBe(true);
       expect(fiscalQuery1.serviceKey).toBeUndefined();
-      expect(fiscalQuery1.explanation.it).toContain('Noemi non fornisce consulenza contabile');
+      expect(fiscalQuery1.explanation.it).toContain('Non offro contabilità');
 
       const fiscalQuery2 = recognizeIntent('Can you do bookkeeping and tax accounting?');
       expect(fiscalQuery2.isScopeExcluded).toBe(true);
