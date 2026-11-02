@@ -132,10 +132,10 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
       es: "Habla al micrófono, podrás revisar el texto antes de enviarlo",
     },
     quoteButton: {
-      it: "Richiedi un preventivo scritto",
-      en: "Request a written quote",
-      fr: "Demander un devis écrit",
-      es: "Solicitar un presupuesto por escrito",
+      it: "Richiedi un preventivo",
+      en: "Request a quote",
+      fr: "Demander un devis",
+      es: "Solicitar un presupuesto",
     },
     startIntakeBtn: {
       it: "Configura richiesta guidata (consigliato)",
