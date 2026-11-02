@@ -36,18 +36,18 @@ export const frLocale: TranslationDictionary = {
     badge: 'ASSISTANTE VIRTUELLE',
     titleLine1: 'Support opérationnel, organisationnel et multilingue',
     titleHighlight: 'pour votre activité',
-    subtitle: 'Soutien organisationnel, administratif et linguistique à distance pour indépendants, consultants et petites entreprises.',
+    subtitle: "Assistance virtuelle multilingue : secrétariat organisationnel, back-office opérationnel, service aux clients existants, correspondance et contenus professionnels.",
     headline: 'Le soutien qui vous aide à mieux travailler, avec plus de sérénité.',
     desc1: "Plus de vingt ans d'expérience organisationnelle et linguistique pour optimiser votre gestion quotidienne.",
     desc2: 'De la gestion des e-mails à la relation client écrite et à la traduction de contenus web : un accompagnement ciblé, défini par écrit.',
     ctaButton: 'DEMANDER UN DEVIS ÉCRIT',
     callReassurance: 'Réponse écrite • Aucun appel obligatoire',
     description:
-      'J’apporte de l’ordre dans votre quotidien, coordonne vos correspondances en quatre langues et prends en charge vos opérations administratives avec rigueur et disponibilité.',
+      'J’apporte de l’ordre dans votre quotidien, coordonne vos correspondances en quatre langues et prends en charge vos opérations opérationnelles avec rigueur et disponibilité.',
     ctaServices: 'Explorer les Services',
     ctaNoeTom: 'Découvrir NoeTom IA',
     quickStats: {
-      experience: 'Solide expérience professionnelle et administrative',
+      experience: 'Solide expérience professionnelle et opérationnelle',
       languages: '4 langues de travail (FR · EN · IT · ES)',
       focus: 'Accompagnement sur mesure et flexible',
     },
@@ -57,7 +57,7 @@ export const frLocale: TranslationDictionary = {
     tagline: 'SÉRÉNITÉ OPÉRATIONNELLE',
     headline: 'Vous n’avez pas à porter seul l’ensemble de vos tâches quotidiennes.',
     paragraph:
-      'Gérer son activité ne se résume pas à son cœur de métier : c’est aussi jongler avec les emails, le calendrier, les demandes clients, les relances et mille détails administratifs. Je vous apporte un appui opérationnel senior, fiable et confidentiel pour vous permettre de vous consacrer pleinement à vos clients.',
+      'Gérer son activité ne se résume pas à son cœur de métier : c’est aussi jongler avec les emails, le calendrier, les demandes clients, les relances et mille détails opérationnels. Je vous apporte un appui opérationnel senior, fiable et confidentiel pour vous permettre de vous consacrer pleinement à vos clients.',
     pillars: [
       {
         title: 'Autonomie senior',
@@ -86,14 +86,14 @@ export const frLocale: TranslationDictionary = {
       {
         id: 'virtual-assistance',
         title: 'Assistance Virtuelle & Back-Office',
-        subtitle: 'Continuité, rigueur et réactivité pour votre administration quotidienne.',
+        subtitle: 'Continuité, rigueur et réactivité pour votre organisation quotidienne.',
         description:
-          'Déléguez la gestion de vos emails, la planification de vos rendez-vous, le suivi de vos dossiers clients et l’organisation de vos documents pour libérer immédiatement votre charge mentale.',
+          "Secrétariat organisationnel et back-office opérationnel : e-mails, agenda, échéances, saisie de données, commandes, mise à jour de tarifs, devis préparés selon les consignes du client et suivi des clients existants. Sont exclus la gestion opérationnelle d'entreprise, la comptabilité, la facturation et la prospection.",
         iconName: 'Mail',
         items: [
           'Gestion et tri structuré de la boîte mail',
           'Organisation d’agenda et coordination de rendez-vous',
-          'Service client et communication administrative',
+          'Service aux clients existants et communication professionnelle',
           'Classement documentaire et archivage cloud',
           'Relances clients et rappels d’échéances',
           'Support back-office et coordination générale',
@@ -104,7 +104,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Traduction & Communication Multilingue',
         subtitle: 'Français · Anglais · Italien · Espagnol avec justesse culturelle.',
         description:
-          'Titulaire d’un diplôme en Médiation Linguistique et d’un Master en Traduction Spécialisée, j’adapte vos sites web, pages de vente, propositions commerciales et emails pour convaincre vos partenaires internationaux.',
+          "Rédaction, révision, traduction et adaptation de correspondances, sites web, pages de présentation, catalogues et fiches produits en italien, anglais, français et espagnol, depuis et vers l'italien selon le mandat et les compétences linguistiques.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et landing pages',
@@ -133,10 +133,10 @@ export const frLocale: TranslationDictionary = {
       },
       {
         id: 'online-research',
-        title: 'Recherches en Ligne & Veille Documentaire',
+        title: 'Recherches Documentaires de Soutien',
         subtitle: 'Des informations structurées pour éclairer vos choix stratégiques.',
         description:
-          'Gagnez un temps précieux : je réalise vos recherches documentaires ciblées, benchmarks concurrentiels, sélection de prestataires et synthèses analytiques prêtes à l’emploi. Sont exclus la recherche de contacts pour acquérir des clients, la génération de leads, la prospection à froid, le recrutement de participants à des entretiens et les missions rémunérées au rendez-vous ou à l’entretien.',
+          "Recherche, vérification et comparaison d'informations, de sources, de fournisseurs et d'outils numériques uniquement pour soutenir les activités existantes du client. Aucune recherche de prospects ni acquisition commerciale.",
         iconName: 'Search',
         items: [
           'Veille concurrentielle et analyse tarifaire',
@@ -152,7 +152,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Support Numérique',
         subtitle: 'Optimisation de vos outils numériques et flux de travail.',
         description:
-          'Réorganisation de vos dossiers partagés, paramétrage d’outils en ligne et formalisation de procédures simples pour fluidifier vos démarches administratives quotidiennes.',
+          'Réorganisation de vos dossiers partagés, paramétrage d’outils en ligne et formalisation de procédures simples pour fluidifier vos démarches opérationnelles quotidiennes.',
         iconName: 'Cpu',
         items: [
           'Restructuration Google Workspace et espaces cloud',
@@ -191,9 +191,9 @@ export const frLocale: TranslationDictionary = {
     tag: 'FORMULES DE COLLABORATION', title: 'Des missions ciblées, des livrables concrets',
     subtitle: 'Exemples de prestations au périmètre défini. Les livrables et les délais figurent dans le devis écrit.',
     packages: [
-      {id: 'p1', title: 'Back-office organisé', badge: 'Assistance administrative', description: 'Un soutien concret pour structurer les tâches récurrentes, les e-mails et les documents.',
+      {id: 'p1', title: 'Back-office organisé', badge: 'Secrétariat opérationnel', description: 'Un soutien concret pour structurer les tâches récurrentes, les e-mails et les documents.',
        deliverables: ['Analyse des tâches à déléguer', 'Organisation des e-mails, fichiers et procédures convenues', 'Synthèse du travail et des priorités'], turnaround: 'À convenir'},
-      {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: 'Gestion structurée des demandes écrites et des relances, selon votre ton de marque.',
+      {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes des clients déjà acquis, informations sur les commandes et suivis de service selon des procédures convenues.",
        deliverables: ['Modèles de réponses et FAQ', 'Gestion convenue des demandes écrites', 'Suivi des relances et activités'], turnaround: 'À convenir'},
       {id: 'p3', title: 'Localisation en italien', badge: 'EN/FR → IT', description: 'Traduction et adaptation culturelle vers l’italien de sites, fiches produits, e-mails et contenus commerciaux.',
        deliverables: ['Analyse des textes, publics et termes', 'Traduction ou localisation des contenus définis', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
@@ -257,7 +257,7 @@ export const frLocale: TranslationDictionary = {
     },
     capabilities: {
       title: 'Fonctionnalités Opérationnelles Clés',
-      subtitle: 'Forgées par plus de 20 ans d’accompagnement client et de gestion administrative.',
+      subtitle: 'Forgées par plus de 20 ans d’accompagnement client et de gestion opérationnelle.',
       radarTitle: 'Le Radar NoeTom',
       radarDesc:
         'Votre tableau de bord quotidien : une vue instantanée sur vos priorités du jour, les retours clients que vous attendez et les promesses à honorer.',
@@ -300,14 +300,6 @@ export const frLocale: TranslationDictionary = {
           tagline: 'Rappels courtois et professionnels',
           description:
             'Rédige des projets de relance adaptés en français, anglais, italien ou espagnol lorsqu’un interlocuteur tarde à répondre.',
-          status: 'in_development',
-        },
-        {
-          id: 'money-radar',
-          name: 'Money Radar',
-          tagline: 'Vigilance trésorerie',
-          description:
-            'Garde l’œil sur les factures impayées, les échéances de forfaits et les prestations à facturer prochainement.',
           status: 'in_development',
         },
         {
@@ -463,7 +455,7 @@ export const frLocale: TranslationDictionary = {
         'Assistance Virtuelle & Back-Office',
         'Traduction & Communication Multilingue (FR · EN · IT · ES)',
         'Rédaction & Révision de Textes',
-        'Recherches en Ligne & Veille Documentaire',
+        'Recherches Documentaires de Soutien',
         'Support Digital & Processus IA',
         'Contenus web et pages de destination',
         'Informations sur le projet interne NoeTom',
@@ -548,7 +540,7 @@ export const frLocale: TranslationDictionary = {
     legalTitle: 'Informations Légales',
     rights: 'Tous droits réservés.',
     disclaimer:
-      'Prestations de soutien opérationnel, administratif, linguistique et digital. Ne dispense pas de conseils juridiques, comptables ou financiers réglementés.',
+      "Secrétariat organisationnel, back-office opérationnel, suivi des clients existants, correspondance multilingue, traduction et contenus numériques. Pas de gestion opérationnelle d'entreprise, comptabilité, facturation, fiscalité, prospection ou acquisition de clients.",
     cookiePrefs: 'Préférences Cookies',
   },
 };
