@@ -388,7 +388,7 @@ export const esLocale: TranslationDictionary = {
         detail: 'Universidad de Macerata, graduada con 110/110 con matrícula de honor.',
       },
       {
-        period: '2010 – 2011',
+        period: '2010 – 2012',
         role: 'Máster Universitario de I nivel en Traducción Especializada – lengua inglesa',
         detail: '1.500 horas, 60 CFU, examen final aprobado. Áreas formativas: literaria, jurídica, económica, tecnológica, científica.',
       },
