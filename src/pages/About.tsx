@@ -108,9 +108,7 @@ export default function AboutPage() {
                   Castelfidardo (AN), Marche, Italia
                 </p>
                 <p className="leading-relaxed">
-                  {lang === "it"
-                    ? "Collaborazione da remoto su misura per professionisti, formatori e aziende in Italia e in tutta l'Unione Europea."
-                    : "Tailored remote collaboration for professionals, educators, and boutique businesses across Europe."}
+                  {lang === "it" ? "Collaborazione da remoto su misura per professionisti, formatori e aziende in Italia e in tutta l'Unione Europea." : lang === "fr" ? "Accompagnement à distance pour les professionnels et petites entreprises travaillant avec l’Italie." : lang === "es" ? "Colaboración a distancia para profesionales y pequeñas empresas que trabajan con Italia." : "Tailored remote collaboration for professionals, educators, and boutique businesses across Europe."}
                 </p>
               </div>
             </div>
@@ -132,7 +130,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-secondary/15 border-b border-border/40">
         <div className="container max-w-4xl px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-12 text-center">
-            {lang === "it" ? "Il percorso in sintesi" : "Key Milestones"}
+            {lang === "it" ? "Il percorso in sintesi" : lang === "fr" ? "Les étapes de mon parcours" : lang === "es" ? "Mi trayectoria profesional" : "Key Milestones"}
           </h2>
 
           <div className="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-border/60">
