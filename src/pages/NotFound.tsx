@@ -1,33 +1,42 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useSEO } from "@/hooks/useSEO";
+import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n";
+
+const LABELS = {
+  it: { title: "Pagina non trovata", description: "La pagina richiesta non esiste oppure è stata spostata.", home: "Torna alla homepage" },
+  en: { title: "Page not found", description: "The page you requested does not exist or has moved.", home: "Back to homepage" },
+  fr: { title: "Page introuvable", description: "La page demandée n’existe pas ou a été déplacée.", home: "Retour à l’accueil" },
+  es: { title: "Página no encontrada", description: "La página solicitada no existe o se ha trasladado.", home: "Volver al inicio" },
+};
 
 const NotFound = () => {
   const location = useLocation();
+  const lang = getLanguageFromPath(location.pathname);
+  const labels = LABELS[lang];
 
   useSEO({
-    title: "Pagina Non Trovata | Noemi Tomassetti",
-    description: "La pagina che stai cercando non esiste o è stata spostada.",
-    noindex: true
+    title: `${labels.title} | Noemi Tomassetti`,
+    description: labels.description,
+    ogLocale: { it: "it_IT", en: "en_GB", fr: "fr_FR", es: "es_ES" }[lang],
+    noindex: true,
   });
 
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
+    <main className="flex min-h-screen items-center justify-center bg-muted px-5">
+      <div className="text-center max-w-lg">
+        <h1 className="mb-3 text-5xl font-bold">404</h1>
+        <h2 className="mb-3 text-2xl font-semibold">{labels.title}</h2>
+        <p className="mb-6 text-lg text-muted-foreground">{labels.description}</p>
+        <Link to={getLocalizedPath("home", lang)} className="text-primary underline underline-offset-4 hover:text-primary/90">
+          {labels.home}
+        </Link>
       </div>
-    </div>
+    </main>
   );
 };
 
