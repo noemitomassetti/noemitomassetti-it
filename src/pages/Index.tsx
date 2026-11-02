@@ -1392,12 +1392,12 @@ export default function IndexPage() {
         <div className="container px-4 md:px-6 py-10 md:py-16">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-              {lang === "it" ? "Blog & Risorse" : "Blog & Resources"}
+              {lang === "it" ? "Blog e risorse" : lang === "fr" ? "Blog et ressources" : lang === "es" ? "Blog y recursos" : "Blog and resources"}
             </h2>
             <p className="text-base md:text-lg text-foreground/80">
               {lang === "it"
                 ? "Approfondimenti, consigli pratici e strumenti per organizzare il tuo lavoro, comunicare meglio e gestire la tua attività."
-                : "Actionable perspectives on delegation, multilingual communication, and operational clarity."}
+                : lang === "fr" ? "Retrouvez des articles pratiques actuellement publiés en italien sur l’organisation, la communication et les outils numériques." : lang === "es" ? "Descubre artículos prácticos, actualmente publicados en italiano, sobre organización, comunicación y herramientas digitales." : "Explore practical articles currently published in Italian on organisation, communication and digital tools."}
             </p>
           </div>
 
@@ -1441,7 +1441,7 @@ export default function IndexPage() {
                       asChild
                     >
                       <Link to={`/blog/${post.slug || post.id}`}>
-                        {lang === "it" ? "Leggi di più" : "Read Article"}
+                        {lang === "it" ? "Leggi l’articolo" : lang === "fr" ? "Lire en italien" : lang === "es" ? "Leer en italiano" : "Read in Italian"}
                       </Link>
                     </Button>
                   </div>
@@ -1456,8 +1456,8 @@ export default function IndexPage() {
               variant="outline"
               className="border-primary/50 text-primary hover:bg-primary/10 rounded-md px-6 py-4 text-xs font-bold uppercase tracking-wider"
             >
-              <Link to="/blog">
-                {lang === "it" ? "Vedi tutti gli articoli" : "View All Articles"}
+              <Link to={lang === "it" ? "/blog" : getLocalizedPath("resources", lang)}>
+                {lang === "it" ? "Vedi tutti gli articoli" : lang === "fr" ? "Consulter les ressources" : lang === "es" ? "Ver los recursos" : "Browse resources"}
               </Link>
             </Button>
           </div>
