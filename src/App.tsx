@@ -95,6 +95,14 @@ const App = () => (
           {/* ── BLOG & GUIDES ── */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/it/blog" element={<Navigate to="/blog" replace />} />
+          <Route path="/it/blog/:slug" element={<BlogPost />} />
+          <Route path="/en/blog" element={<Blog />} />
+          <Route path="/en/blog/:slug" element={<BlogPost />} />
+          <Route path="/fr/blog" element={<Blog />} />
+          <Route path="/fr/blog/:slug" element={<BlogPost />} />
+          <Route path="/es/blog" element={<Blog />} />
+          <Route path="/es/blog/:slug" element={<BlogPost />} />
           <Route path="/risorse" element={<Resources />} />
 
           {/* ── LEGACY & SHORTCUT REDIRECTS ── */}
