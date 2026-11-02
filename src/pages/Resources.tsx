@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getBlogPosts, getBlogPostPath } from "@/lib/blogData";
 import { useLocation, Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
@@ -105,6 +105,7 @@ export default function ResourcesPage() {
   const canonicalUrl = `https://www.noemitomassetti.it${getLocalizedPath("resources", lang)}`;
 
   const [activeCat, setActiveCat] = useState<string>("All");
+  useEffect(() => { setActiveCat("All"); }, [lang]);
 
   useSEO({
     title: dict.meta.resourcesTitle,
