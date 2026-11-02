@@ -417,9 +417,7 @@ export default function ServicesPage() {
 
               <div className="bg-secondary/20 border border-border/40 rounded-2xl p-6 text-xs text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground">
-                  {lang === "it"
-                    ? "Informativa sull'ambito delle prestazioni:"
-                    : "Scope and compliance disclosure:"}
+                  {lang === "it" ? "Informativa sull'ambito delle prestazioni:" : lang === "fr" ? "Précisions sur le périmètre des prestations :" : lang === "es" ? "Información sobre el alcance de los servicios:" : "Scope and compliance disclosure:"}
                 </p>
                 <p className="leading-relaxed">
                   {dict.footer.disclaimer}
