@@ -41,7 +41,7 @@ export const frLocale: TranslationDictionary = {
     desc1: "Plus de vingt ans d'expérience organisationnelle et linguistique pour optimiser votre gestion quotidienne.",
     desc2: 'De la gestion des e-mails à la relation client écrite et à la traduction de contenus web : un accompagnement ciblé, défini par écrit.',
     ctaButton: 'DEMANDER UN DEVIS',
-    callReassurance: 'Réponse écrite • Aucun appel obligatoire',
+    callReassurance: 'Demande sans engagement',
     description:
       'J’apporte de l’ordre dans votre quotidien, coordonne vos correspondances en quatre langues et vous accompagne dans vos tâches quotidiennes avec rigueur et disponibilité.',
     ctaServices: 'Explorer les Services',
