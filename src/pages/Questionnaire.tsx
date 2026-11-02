@@ -492,14 +492,12 @@ export default function Questionnaire() {
     e.preventDefault();
     if (!privacyAgreed) {
       setErrorMessage(
-        lang === "it"
-          ? "È necessario accettare l'informativa privacy prima di inviare le risposte."
-          : "Please acknowledge the privacy policy to submit your assessment."
+        lang === "it" ? "È necessario accettare l'informativa privacy prima di inviare le risposte." : lang === "fr" ? "Veuillez accepter la politique de confidentialité avant l’envoi." : lang === "es" ? "Debes aceptar la política de privacidad antes de enviar tus respuestas." : "Please acknowledge the privacy policy before submitting your answers."
       );
       return;
     }
     if (!userEmail) {
-      setErrorMessage(lang === "it" ? "Inserisci il tuo indirizzo email." : "Please provide your email address.");
+      setErrorMessage(lang === "it" ? "Inserisci il tuo indirizzo email." : lang === "fr" ? "Veuillez saisir votre adresse e-mail." : lang === "es" ? "Introduce tu dirección de correo electrónico." : "Please provide your email address.");
       return;
     }
 
@@ -727,8 +725,8 @@ export default function Questionnaire() {
                   className="text-xs uppercase tracking-wider font-bold bg-primary text-primary-foreground shadow-md hover:scale-102 transition-all px-6"
                 >
                   {currentSection === 5
-                    ? (lang === "it" ? "Completa e vedi sintesi" : "Complete & View Summary")
-                    : (lang === "it" ? "Continua" : "Next Section")}
+                    ? (lang === "it" ? "Completa e vedi sintesi" : lang === "fr" ? "Terminer et voir le récapitulatif" : lang === "es" ? "Terminar y ver el resumen" : "Complete and view summary")
+                    : (lang === "it" ? "Continua" : lang === "fr" ? "Continuer" : lang === "es" ? "Continuar" : "Continue")}
                   <ArrowRight className="w-4 h-4 ml-1.5" />
                 </Button>
               </div>
