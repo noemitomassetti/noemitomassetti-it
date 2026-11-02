@@ -187,7 +187,7 @@ export default function ServicesPage() {
               <h3 className="text-lg sm:text-xl font-bold text-foreground">
                 {lang === "it"
                   ? "Sei un'azienda estera che deve comunicare o vendere in Italia?"
-                  : "Reaching Italian customers? EN/FR → IT localisation"}
+                  : "Reaching Italian customers? EN/FR/ES → IT localisation"}
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
                 {lang === "it"
@@ -197,7 +197,7 @@ export default function ServicesPage() {
             </div>
             <Button asChild className="rounded-full shrink-0 font-semibold text-xs uppercase tracking-wider">
               <Link to={getLocalizedPath("italianLocalisation", lang)}>
-                <span>{lang === "it" ? "Scopri la Localizzazione IT" : "View Italian Localisation"}</span>
+                <span>{lang === "it" ? "Scopri la localizzazione in italiano" : lang === "fr" ? "Découvrir la localisation en italien" : lang === "es" ? "Descubrir la localización al italiano" : "Explore Italian localisation"}</span>
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
