@@ -1,4 +1,5 @@
 import { Language, PageKey, RouteConfig } from './types';
+import { getBlogIndexPath, getBlogPostBySlug, getBlogPostPath, getBlogPosts } from '../blogData';
 
 export const BASE_DOMAIN = 'https://www.noemitomassetti.it';
 
@@ -171,6 +172,19 @@ export function getHreflangAlternates(pageKey: PageKey): Array<{ hrefLang: strin
  * Switch from current path to the corresponding target language path.
  */
 export function switchLanguageUrl(currentPathname: string, targetLang: Language): string {
+  // Preserve article identity when visitors switch language on a blog page.
+  if (currentPathname === '/blog' || currentPathname === '/it/blog' ||
+      /^\/(en|fr|es)\/blog\/?$/.test(currentPathname)) return getBlogIndexPath(targetLang);
+  const match = currentPathname.match(/^\/(?:it\/)?blog\/([^/]+)\/?$/) ||
+    currentPathname.match(/^\/(en|fr|es)\/blog\/([^/]+)\/?$/);
+  if (match) {
+    const sourceLang: Language = currentPathname.startsWith('/blog/') || currentPathname.startsWith('/it/blog/') ? 'it'
+      : getLanguageFromPath(currentPathname);
+    const originalSlug = decodeURIComponent(match[2] || match[1]);
+    const original = getBlogPostBySlug(originalSlug, sourceLang);
+    const destination = original && getBlogPosts(targetLang).find(post => post.id === original.id);
+    return destination ? getBlogPostPath(destination.slug, targetLang) : getBlogIndexPath(targetLang);
+  }
   const pageKey = getPageKeyFromPath(currentPathname);
   return getLocalizedPath(pageKey, targetLang);
 }
