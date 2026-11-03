@@ -40,7 +40,7 @@ export default function Portfolio() {
   const location = useLocation();
   const lang: Language = getLanguageFromPath(location.pathname);
   const [selectedCategory, setSelectedCategory] = useState<PortfolioCategory>("all");
-  const [expandedCaseId, setExpandedCaseId] = useState<string | null>("01-interior-design-localization");
+  const [expandedCaseId, setExpandedCaseId] = useState<string | null>(lang === "fr" ? "13-french-italian-product-localisation" : lang === "es" ? "14-spanish-italian-existing-customer-email" : "01-interior-design-localization");
   const [activeTab, setActiveTab] = useState<Record<string, "overview" | "comparison" | "decisions">>({});
 
   // SEO configuration

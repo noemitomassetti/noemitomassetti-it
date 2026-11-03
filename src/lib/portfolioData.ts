@@ -167,9 +167,9 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Texto de origen en inglés centrado en embudos de conversión, Customer Lifetime Value y retención de cohortes.",
     },
     objective: {
-      it: "Garantire rigore economico e coerenza terminologica tra gergo anglosassone consolidato e chiara resa esplicativa in italiano.",
+      it: "Mantenere precisione e coerenza terminologica nella resa italiana di un testo economico-commerciale fittizio.",
       en: "Ensure economic precision and terminological consistency between industry standard terms and transparent Italian phrasing.",
-      fr: "Garantir la rigueur terminologique entre termes économiques anglo-saxons et explications limpides en italien.",
+      fr: "Préserver la précision et la cohérence de la terminologie d’un texte économique fictif adapté en italien.",
       es: "Asegurar la precisión conceptual entre la terminología financiera anglosajona y su redacción en italiano.",
     },
     approach: {
@@ -501,7 +501,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       it: "Rendere un percorso di registrazione e primo utilizzo di un servizio digitale chiaro, rassicurante e piacevole per il pubblico italiano.",
       en: "Refining a digital onboarding flow to make it intuitive, reassuring, and completely natural for Italian users.",
       fr: "Adapter un parcours d'onboarding digital pour le rendre fluide, clair et chaleureux pour le public italien.",
-      es: "Adaptar el flujo de bienvenida de una plataforma digital para garantizar claridad y cercanía al usuario.",
+      es: "Adaptar los mensajes de bienvenida de una plataforma digital para mejorar su claridad para un público italiano.",
     },
     startingMaterial: {
       it: "Flow di 4 schermate di onboarding in lingua inglese comprendente consensi opzionali, selezione preferenze e riepilogo account.",
@@ -530,7 +530,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       en: [
         "Localized 'Get started' into encouraging Italian actions ('Inizia ora', 'Configura il tuo spazio').",
         "Reinforced privacy reassurance microcopy to build immediate trust during initial signup.",
-        "Maintained full compliance with accessibility standards regarding descriptive form field labels.",
+        "Selected understandable form labels and helpful error messages; no accessibility audit or compliance certification is claimed.",
       ],
       fr: [
         "Adaptation des boutons d'action vers des formules encourageantes et bienveillantes.",
@@ -896,7 +896,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     disclaimer: DEMO_DISCLAIMER,
   },
 
-  // 11. MULTILINGUAL LANDING PAGE DEVELOPMENT
+  // 11. ITALIAN LANDING PAGE EDITORIAL LOCALISATION
   {
     "id": "11-multilingual-landing-page",
     "order": 11,
