@@ -176,7 +176,7 @@ jobs:
                 for(let doc=1;doc<=22;doc++) {
                   const id=String(doc).padStart(2,'0'), route=prefix+id;
                   await page.goto('http://127.0.0.1:4173'+route,{waitUntil:'domcontentloaded',timeout:20000});
-                  const visible=await page.locator('main').innerText();
+                  const visible=await page.locator('main').last().innerText();
                   const heading=await page.locator('main h1').count();
                   if(heading!==1 || visible.length<700) throw Error('Reader missing content '+route);
                   if(await page.locator('html').getAttribute('lang')!==locale) throw Error('Reader lang incorrect '+route);
