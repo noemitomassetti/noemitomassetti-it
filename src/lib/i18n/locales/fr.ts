@@ -346,7 +346,7 @@ export const frLocale: TranslationDictionary = {
       successTitle: 'Inscription bien enregistrée',
       successMsg:
         'Merci pour votre intérêt. Nous vous tiendrons informé des avancées du projet.',
-      privacyNote: 'Discrétion professionnelle. Aucun spam. Désinscription possible à tout moment.',
+      privacyNote: 'Vos données seront utilisées pour les actualités demandées, selon la politique de confidentialité. Vous pouvez demander l’arrêt des messages.',
     },
   },
   aboutSection: {
@@ -467,11 +467,11 @@ export const frLocale: TranslationDictionary = {
       submit: 'Envoyer le message',
       sending: 'Envoi en cours...',
       successTitle: 'Message envoyé avec succès !',
-      successDesc: 'Merci pour votre message. J’en ai bien pris connaissance et je vous répondrai dans les meilleurs délais par email.',
+      successDesc: 'Le service d’envoi a accepté votre demande ; sa réception définitive dans ma messagerie reste à confirmer.',
       errorMsg: 'Veuillez renseigner tous les champs obligatoires (*) et accepter la politique de confidentialité.',
     },
     directBooking: {
-      title: 'Demande de devis écrit',
+      title: 'Demande de devis',
       desc: 'Décrivez vos besoins et les tâches à déléguer dans le formulaire. Je vous répondrai par écrit.',
       btnLabel: 'Demander un devis',
       specs: [
@@ -484,7 +484,7 @@ export const frLocale: TranslationDictionary = {
     directInfo: {
       email: 'info@noemitomassetti.it',
       phone: '+39 388 471 8600',
-      location: 'Castelfidardo (AN), Italie · Accompagnement à distance en Europe',
+      location: 'Castelfidardo (AN), Italie · Accompagnement à distance à l’international',
     },
   },
   resourcesPage: {
@@ -497,7 +497,7 @@ export const frLocale: TranslationDictionary = {
         id: 'r1',
         slug: 'sito-web-o-landing-page',
         title: 'Site web ou landing page ? Comment choisir la formule adaptée à votre activité',
-        excerpt: 'Découvrez les différences fondamentales entre un site vitrine exhaustif et une page de capture orientée conversion.',
+        excerpt: 'Comparez les usages d’un site complet et d’une page ciblée selon les besoins de vos visiteurs italiens.',
         date: '31 août 2026',
         category: 'Présence Web & Digitale',
         readTime: '6 min de lecture',
@@ -505,7 +505,7 @@ export const frLocale: TranslationDictionary = {
       {
         id: 'r2',
         slug: 'le-cout-de-la-charge-mentale',
-        title: 'Le coût invisible de la charge mentale : pourquoi les freelances perdent 2 heures par jour',
+        title: 'Charge mentale au travail : mieux suivre les tâches et les engagements',
         excerpt: 'Conserver en tête les relances ouvertes, les emails non traités et les accords informels érode votre énergie créative.',
         date: 'Septembre 2026',
         category: 'Intelligence Artificielle & NoeTom',
@@ -514,8 +514,8 @@ export const frLocale: TranslationDictionary = {
       {
         id: 'r3',
         slug: 'erreurs-sites-multilingues',
-        title: '3 erreurs fréquentes lors du passage d’une entreprise au multilingue en Europe',
-        excerpt: 'Pourquoi la traduction mot à mot nuit à la confiance et comment la localisation culturelle séduit vos clients.',
+        title: 'Trois erreurs de communication multilingue à éviter pour le marché italien',
+        excerpt: 'Pourquoi le contexte, le registre et la révision humaine sont essentiels pour communiquer avec un public italien.',
         date: 'Septembre 2026',
         category: 'Communication & Multilingue',
         readTime: '7 min de lecture',
@@ -535,7 +535,7 @@ export const frLocale: TranslationDictionary = {
     brandBio:
       'Traduction vers l’italien, localisation et soutien opérationnel pour les professionnels et petites entreprises travaillant avec l’Italie. Créatrice de NoeTom, un projet interne en développement.',
     servicesTitle: 'Services',
-    noetomTitle: 'NoeTom IA',
+    noetomTitle: 'NoeTom · en développement',
     companyTitle: 'À Propos & Ressources',
     legalTitle: 'Informations Légales',
     rights: 'Tous droits réservés.',

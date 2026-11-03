@@ -153,7 +153,7 @@ export default function Portfolio() {
               : lang === "fr"
               ? "Portfolio Méthodologique · Cas Démonstratifs"
               : lang === "es"
-              ? "Portafolio Metodológico · Casos Demostrativos"
+              ? "Muestras de Trabajo · Casos Prácticos"
               : "Methodological Portfolio · Demonstration Cases"}
           </div>
 

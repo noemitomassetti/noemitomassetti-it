@@ -270,7 +270,7 @@ export default function ResourcesPage() {
                 : lang === "fr"
                 ? "Consultez nos articles thématiques pour optimiser vos méthodes de travail."
                 : lang === "es"
-                ? "Explora nuestras guías para profundizar en delegación, métodos y gestión del tiempo."
+                ? "Explora mis guías sobre organización, comunicación y trabajo con clientes italianos."
                 : "Explore actionable perspectives on delegation, systems, and time protection."}
             </p>
           </div>

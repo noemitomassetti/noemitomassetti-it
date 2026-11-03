@@ -346,7 +346,7 @@ export const esLocale: TranslationDictionary = {
       successTitle: 'Inscripción registrada correctamente',
       successMsg:
         'Muchas gracias por tu interés. Te informaremos de la evolución del proyecto cuando haya novedades disponibles.',
-      privacyNote: 'Total confidencialidad. Sin spam. Puedes darte de baja en cualquier momento.',
+      privacyNote: 'Utilizaré tus datos para las novedades solicitadas, según la política de privacidad. Puedes pedir dejar de recibir mensajes.',
     },
   },
   aboutSection: {
@@ -467,11 +467,11 @@ export const esLocale: TranslationDictionary = {
       submit: 'Enviar mensaje',
       sending: 'Enviando mensaje...',
       successTitle: '¡Mensaje enviado con éxito!',
-      successDesc: 'Muchas gracias por escribir. He recibido tu mensaje y te responderé lo antes posible a la dirección de correo indicada.',
+      successDesc: 'El servicio de envío ha aceptado la solicitud; todavía no se ha confirmado su entrega final a mi buzón.',
       errorMsg: 'Por favor, completa todos los campos obligatorios (*) y acepta la política de privacidad.',
     },
     directBooking: {
-      title: 'Solicitud de presupuesto por escrito',
+      title: 'Solicitud de presupuesto',
       desc: 'Describe las tareas que necesitas delegar en el formulario. Te responderé por escrito con los siguientes pasos.',
       btnLabel: 'Solicitar un presupuesto',
       specs: [
@@ -497,7 +497,7 @@ export const esLocale: TranslationDictionary = {
         id: 'r1',
         slug: 'sito-web-o-landing-page',
         title: '¿Sitio web o landing page? Cómo saber qué necesita realmente tu actividad',
-        excerpt: 'Descubre las diferencias estratégicas entre un sitio web corporativo completo y una página de aterrizaje enfocada en la conversión.',
+        excerpt: 'Compara la utilidad de una web completa y una página específica según las necesidades de tu público italiano.',
         date: '31 de agosto de 2026',
         category: 'Presencia Web y Digital',
         readTime: '6 min de lectura',
@@ -505,7 +505,7 @@ export const esLocale: TranslationDictionary = {
       {
         id: 'r2',
         slug: 'el-coste-de-la-carga-mental',
-        title: 'El coste invisible de la carga mental: por qué los profesionales pierden 2 horas al día',
+        title: 'Carga mental en el trabajo: cómo organizar tareas y compromisos pendientes',
         excerpt: 'Tener en la cabeza correos por responder, seguimientos pendientes y acuerdos informales desgasta tu mejor energía creativa.',
         date: 'Septiembre de 2026',
         category: 'Inteligencia Artificial y NoeTom',
@@ -514,8 +514,8 @@ export const esLocale: TranslationDictionary = {
       {
         id: 'r3',
         slug: 'errores-al-hacer-tu-web-multilingue',
-        title: '3 errores habituales al internacionalizar una página web en Europa',
-        excerpt: 'Por qué la traducción automática perjudica la credibilidad de tu marca y cómo la localización cultural abre puertas en varios países.',
+        title: 'Tres errores de comunicación multilingüe al dirigirte al mercado italiano',
+        excerpt: 'Por qué importan el contexto, la coherencia terminológica y la revisión profesional para comunicarte en italiano.',
         date: 'Septiembre de 2026',
         category: 'Comunicación y Multilingüe',
         readTime: '7 min de lectura',
@@ -535,7 +535,7 @@ export const esLocale: TranslationDictionary = {
     brandBio:
       'Traducción al italiano, localización y apoyo operativo para profesionales y pequeñas empresas que trabajan con Italia. Creadora de NoeTom, un proyecto interno en desarrollo.',
     servicesTitle: 'Servicios',
-    noetomTitle: 'NoeTom IA',
+    noetomTitle: 'NoeTom · en desarrollo',
     companyTitle: 'Sobre Mí & Recursos',
     legalTitle: 'Aviso Legal',
     rights: 'Todos los derechos reservados.',

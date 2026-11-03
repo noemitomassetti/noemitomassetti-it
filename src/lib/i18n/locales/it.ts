@@ -350,7 +350,7 @@ export const itLocale: TranslationDictionary = {
       successTitle: 'Iscrizione registrata con successo',
       successMsg:
         'Grazie per il tuo interesse. Ti invieremo aggiornamenti sull’evoluzione del progetto quando saranno disponibili novità.',
-      privacyNote: 'Massima riservatezza. Nessuno spam. Puoi cancellarti quando vuoi.',
+      privacyNote: 'Utilizzerò i dati per gli aggiornamenti richiesti, secondo l’informativa privacy. Puoi chiedere di non ricevere altre comunicazioni.',
     },
   },
   aboutSection: {
@@ -471,7 +471,7 @@ export const itLocale: TranslationDictionary = {
       submit: 'Invia il messaggio',
       sending: 'Invio in corso...',
       successTitle: 'Messaggio inviato con successo!',
-      successDesc: 'Grazie per avermi scritto. Ho ricevuto la tua richiesta e ti risponderò al più presto all’indirizzo email indicato.',
+      successDesc: 'Grazie per avermi scritto. Il servizio di inoltro ha accettato la richiesta; il recapito finale deve ancora essere verificato.',
       errorMsg: 'Compila tutti i campi obbligatori contrassegnati con l’asterisco e accetta l’informativa privacy.',
     },
     directBooking: {
@@ -509,7 +509,7 @@ export const itLocale: TranslationDictionary = {
       {
         id: 'r2',
         slug: 'il-costo-del-carico-mentale',
-        title: 'Il costo invisibile del carico mentale: perché i professionisti perdono 2 ore al giorno',
+        title: 'Il carico mentale nel lavoro quotidiano: come gestire gli impegni aperti',
         excerpt: 'Tenere a mente email a cui rispondere, follow-up aperti e promesse informali consuma la parte migliore delle tue energie.',
         date: 'Settembre 2026',
         category: 'Intelligenza Artificiale e NoeTom',
@@ -539,7 +539,7 @@ export const itLocale: TranslationDictionary = {
     brandBio:
       'Supporto digitale, multilingue e operativo per liberi professionisti, consulenti e piccole imprese. Ideatrice di NoeTom, progetto di supporto operativo digitale attualmente in sviluppo.',
     servicesTitle: 'Servizi',
-    noetomTitle: 'NoeTom AI',
+    noetomTitle: 'NoeTom · in sviluppo',
     companyTitle: 'Chi Sono & Risorse',
     legalTitle: 'Note Legali',
     rights: 'Tutti i diritti riservati.',

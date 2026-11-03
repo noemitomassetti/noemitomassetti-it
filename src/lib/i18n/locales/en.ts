@@ -468,7 +468,7 @@ export const enLocale: TranslationDictionary = {
       submit: 'Send Message',
       sending: 'Sending inquiry...',
       successTitle: 'Message successfully sent!',
-      successDesc: 'Thank you for reaching out. I have received your message and will respond promptly to your email.',
+      successDesc: 'Thank you for reaching out. The email relay has accepted your request; final inbox delivery has not yet been confirmed.',
       errorMsg: 'Please fill in all required fields and accept the privacy policy.',
     },
     directBooking: {
@@ -506,8 +506,8 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'r2',
         slug: 'the-cost-of-mental-load',
-        title: 'The Invisible Tax of the Mental Load: Why Freelancers Lose 2 Hours a Day',
-        excerpt: 'Tracking open loops, unfinished emails, and unbilled deliverables in your head silently degrades your creative energy.',
+        title: 'Managing Mental Load: Keep Track of Open Tasks and Commitments',
+        excerpt: 'Open follow-ups, unanswered emails and informal commitments can make the working day harder to organise.',
         date: 'September 2026',
         category: 'AI & NoeTom',
         readTime: '5 min read',
@@ -515,8 +515,8 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'r3',
         slug: 'multilingual-website-mistakes',
-        title: '3 Costly Mistakes Small Businesses Make When Going Multilingual in Europe',
-        excerpt: 'Why raw machine translations damage trust, and how proper cultural localization opens doors in Italy, France, and Spain.',
+        title: 'Three Multilingual Communication Mistakes to Avoid When Working with Italy',
+        excerpt: 'Why context, consistent terminology and editorial review matter when communicating with Italian readers.',
         date: 'September 2026',
         category: 'Multilingual & Localization',
         readTime: '7 min read',
@@ -525,7 +525,7 @@ export const enLocale: TranslationDictionary = {
         id: 'r4',
         slug: 'delegation-playbook-for-solopreneurs',
         title: 'The Solopreneur’s Delegation Playbook: What to Hand Over First',
-        excerpt: 'A practical framework to identify the repetitive back-office and admin tasks that drain your week without generating direct revenue.',
+        excerpt: 'A practical framework for identifying routine operational tasks that can be delegated responsibly.',
         date: 'September 2026',
         category: 'Operations & Delegation',
         readTime: '8 min read',
@@ -536,7 +536,7 @@ export const enLocale: TranslationDictionary = {
     brandBio:
       'Italian translation, localisation and operational support for international professionals and small businesses working with Italy. Creator of NoeTom, an internal project in development.',
     servicesTitle: 'Services',
-    noetomTitle: 'NoeTom AI',
+    noetomTitle: 'NoeTom · in development',
     companyTitle: 'About & Insights',
     legalTitle: 'Legal & Privacy',
     rights: 'All rights reserved.',
