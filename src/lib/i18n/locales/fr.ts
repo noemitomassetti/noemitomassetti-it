@@ -45,7 +45,7 @@ export const frLocale: TranslationDictionary = {
     description:
       'Je traduis du français, de l’anglais et de l’espagnol vers l’italien, révise vos contenus italiens et assure les tâches opérationnelles convenues nécessitant la maîtrise de cette langue.',
     ctaServices: 'Explorer les Services',
-    ctaNoeTom: 'Découvrir NoeTom IA',
+    ctaNoeTom: 'Découvrir NoeTom (en développement)',
     quickStats: {
       experience: 'Solide expérience professionnelle et opérationnelle',
       languages: '4 langues de travail (FR · EN · IT · ES)',
@@ -163,7 +163,7 @@ export const frLocale: TranslationDictionary = {
           'Assistance numérique courante et paramétrages',
         ],
       },
-      { id: 'web-landing', title: 'Contenus web et pages de destination en italien', subtitle: 'Des contenus en ligne plus clairs et structurés.', description: 'Révision, adaptation linguistique et organisation du contenu de sites existants. Le développement technique est évalué séparément et ne fait pas partie de la prestation standard.', iconName: 'Layout', items: ['Révision des textes des pages principales', 'Localisation en italien des contenus web', 'Titres, FAQ et appels à l’action', 'Cohérence terminologique', 'Remise de textes prêts pour le CMS', 'Révision de contenus multilingues'] },
+      { id: 'web-landing', title: 'Contenus web et pages de destination en italien', subtitle: 'Des contenus en ligne plus clairs et structurés.', description: 'Révision, adaptation linguistique et organisation du contenu de sites existants. Le développement technique, l’hébergement et la maintenance du site ne font pas partie de cette prestation éditoriale.', iconName: 'Layout', items: ['Révision des textes des pages principales', 'Localisation en italien des contenus web', 'Titres, FAQ et appels à l’action', 'Cohérence terminologique', 'Remise de textes prêts pour le CMS', 'Révision de contenus multilingues'] },
     ],
   },
   multilingualAdvantage: {
@@ -185,7 +185,7 @@ export const frLocale: TranslationDictionary = {
         desc: 'Des contenus destinés à l’Italie aux échanges avec vos clients italiens existants, je veille à la clarté et à la cohérence des messages.',
       },
     ],
-    badgeNote: 'Excellence académique : Diplôme en Médiation Linguistique (110/110 avec les félicitations) & Master en Traduction',
+    badgeNote: 'Formation linguistique : diplôme en médiation linguistique (110/110 e lode) et master universitaire en traduction spécialisée',
   },
   productized: {
     tag: 'FORMULES DE COLLABORATION', title: 'Des missions ciblées, des livrables concrets',

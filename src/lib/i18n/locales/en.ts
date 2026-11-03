@@ -45,9 +45,9 @@ export const enLocale: TranslationDictionary = {
     description:
       'I translate from English, French and Spanish into Italian, refine Italian-language content and support agreed operations involving Italian customers and partners.',
     ctaServices: 'Explore Services',
-    ctaNoeTom: 'Discover NoeTom AI',
+    ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
-      experience: 'Extensive professional & organizational background',
+      experience: 'Experience across different professional roles',
       languages: '4 Working Languages (EN · IT · FR · ES)',
       focus: 'Tailored & flexible operational support',
     },
@@ -61,7 +61,7 @@ export const enLocale: TranslationDictionary = {
     pillars: [
       {
         title: 'Experienced and Independent',
-        desc: 'Extensive back-office and organizational experience. I anticipate bottlenecks, ask the right questions, and run processes without requiring micromanagement.',
+        desc: 'Experience in back office and organisational roles. I anticipate bottlenecks, ask the right questions, and run processes without requiring micromanagement.',
       },
       {
         title: 'Linguistic Accuracy',
@@ -102,7 +102,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Translation & Localization',
+        title: 'Translation & Localisation',
         subtitle: 'Native Italian translation from English, French and Spanish.',
         description:
           "Translation from English, French and Spanish into Italian, plus editing and cultural localisation of Italian websites, landing pages, catalogues, product pages and professional communications. I do not offer professional translation from Italian into English, French or Spanish.",
@@ -153,18 +153,18 @@ export const enLocale: TranslationDictionary = {
         title: 'Digital Support',
         subtitle: 'Streamlining your digital ecosystem and practical tools.',
         description:
-          'From organizing Google Workspace and cloud drives to setting up online tools and standard procedures, I help independent professionals operate with clarity and efficiency.',
+          'From organising Google Workspace and cloud drives to setting up online tools and standard procedures, I help independent professionals operate with clarity and efficiency.',
         iconName: 'Cpu',
         items: [
           'Google Workspace & cloud drive reorganization',
           'SaaS tools setup (calendars, forms, portals)',
           'Practical support with daily business tools',
           'Operational standard operating procedures (SOPs)',
-          'Client onboarding workflow optimization',
+          'Organising approved customer communication workflows',
           'Basic digital assistance & setup support',
         ],
       },
-      { id: 'web-landing', title: 'Italian Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'Editing, language adaptation and organisation of content for existing websites. Technical website development is assessed separately and is not part of the standard service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
+      { id: 'web-landing', title: 'Italian Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'Editing, language adaptation and organisation of content for existing websites. Website development, hosting and technical maintenance are outside this editorial content service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
     ],
   },
   multilingualAdvantage: {
@@ -186,7 +186,7 @@ export const enLocale: TranslationDictionary = {
         desc: 'From Italian-language website content to written support for existing Italian customers, I help maintain consistent communication.',
       },
     ],
-    badgeNote: 'Academic excellence: Degree in Language Mediation (110 cum laude) + Specialized Translation Master',
+    badgeNote: 'Language Mediation degree (110/110 e lode) and Italian university Master's in Specialised Translation',
   },
   productized: {
     tag: 'WAYS TO WORK TOGETHER', title: 'Focused services, tangible deliverables',
@@ -361,7 +361,7 @@ export const enLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
-      { title: 'Academic Excellence', detail: 'Degree in Linguistic Mediation (110/110 cum laude) & University Master’s in Specialized Translation' },
+      { title: 'Academic Excellence', detail: 'Degree in Linguistic Mediation (110/110 cum laude) & University Master’s in Specialised Translation' },
       { title: '4 Working Languages', detail: 'Italian native, professional support in English, French, and Spanish' },
       { title: 'Digital Tools & Innovation', detail: 'Digital support and creator of NoeTom, an internal project in development' },
     ],
@@ -372,7 +372,7 @@ export const enLocale: TranslationDictionary = {
     subtitle: 'Professional experience, rigorous linguistic training, and operational care.',
     storyTitle: 'A Career Built on Precision, Communication, and Care',
     storyParagraphs: [
-      'My professional path has always developed around three constants: organizational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
+      'My professional path has always developed around three constants: organisational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
       'My career spans more than two decades across different roles. I have developed skills in customer care, operational coordination, back office and multilingual communication. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
       'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 cum laude) and an Italian first-level university Master’s qualification in Specialised Translation (English) (2010–2012, 1,500 hours, 60 ECTS credits). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
       'Alongside my professional services, I am developing NoeTom, an internal operational-assistance project currently in private testing.',
@@ -381,7 +381,7 @@ export const enLocale: TranslationDictionary = {
       {
         period: '20+ Years Experience',
         role: 'Customer care, back office, and operational support',
-        detail: 'Hands-on organizational support, client communications, correspondence, and operational assistance for professionals and small businesses.',
+        detail: 'Hands-on organisational support, client communications, correspondence, and operational assistance for professionals and small businesses.',
       },
       {
         period: '2009',
@@ -390,7 +390,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         period: '2010 – 2012',
-        role: 'First-level University Master’s in Specialized Translation – English language',
+        role: 'First-level University Master’s in Specialised Translation – English language',
         detail: '1,500 hours, 60 CFU, final examination passed. Fields covered: literary, legal, economic, technological, scientific.',
       },
       {
@@ -492,7 +492,7 @@ export const enLocale: TranslationDictionary = {
     tag: 'INSIGHTS & GUIDES',
     title: 'Operational Wisdom for Independent Professionals',
     subtitle: 'Practical perspectives on delegation, multilingual expansion, and modern AI productivity.',
-    categories: ['All', 'Operations & Delegation', 'Multilingual & Localization', 'Digital Presence & Web', 'AI & NoeTom'],
+    categories: ['All', 'Operations & Delegation', 'Multilingual & Localisation', 'Digital Presence & Web', 'AI & NoeTom'],
     articles: [
       {
         id: 'r1',
@@ -518,7 +518,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Three Multilingual Communication Mistakes to Avoid When Working with Italy',
         excerpt: 'Why context, consistent terminology and editorial review matter when communicating with Italian readers.',
         date: 'September 2026',
-        category: 'Multilingual & Localization',
+        category: 'Multilingual & Localisation',
         readTime: '7 min read',
       },
       {

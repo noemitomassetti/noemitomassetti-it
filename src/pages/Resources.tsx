@@ -51,7 +51,7 @@ const getTools = (lang: Language) => {
       ];
     default:
       return [
-        { name: "Google Calendar", desc: "to organize appointments, buffers, and availability" },
+        { name: "Google Calendar", desc: "to organise appointments, buffers and availability" },
         { name: "Gmail / Workspace", desc: "for structured inbox triage, folders, and clean filters" },
         { name: "Notion / Asana / Trello", desc: "to manage tasks, client projects, and operations" },
         { name: "Canva", desc: "for quick graphics, visual assets, and presentation slide decks" },

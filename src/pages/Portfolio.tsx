@@ -78,7 +78,7 @@ export default function Portfolio() {
 
   const categories: { id: PortfolioCategory; label: Record<Language, string>; icon: React.ReactNode }[] = [
     { id: "all", label: { it: "Tutti i progetti", en: "All Projects", fr: "Tous les projets", es: "Todos los proyectos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
-    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localization", fr: "Traduction & Localisation", es: "Traducción y Localización" }, icon: <Globe className="w-3.5 h-3.5" /> },
+    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, icon: <Globe className="w-3.5 h-3.5" /> },
     { id: "research", label: { it: "Ricerche & Benchmark", en: "Research & Benchmarks", fr: "Recherches & Veille", es: "Investigación y Benchmarking" }, icon: <Search className="w-3.5 h-3.5" /> },
     { id: "backoffice", label: { it: "Back Office & Organizzazione", en: "Back Office & Operations", fr: "Back-Office & Organisation", es: "Back Office y Organización" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
     { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, icon: <PenTool className="w-3.5 h-3.5" /> },
@@ -589,7 +589,7 @@ export default function Portfolio() {
                                     ? "Localisation Professionnelle"
                                     : lang === "es"
                                     ? "Localización Profesional"
-                                    : "Professional Localization"}{" "}
+                                    : "Professional Localisation"}{" "}
                                   ({caseItem.comparison.targetLang})
                                 </span>
                                 <p className="font-medium text-foreground leading-relaxed">

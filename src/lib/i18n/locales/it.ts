@@ -45,7 +45,7 @@ export const itLocale: TranslationDictionary = {
     description:
       'Metto ordine nella gestione quotidiana del tuo lavoro, coordino le comunicazioni in quattro lingue e ti supporto nei processi operativi, per restituirti tempo ed efficacia.',
     ctaServices: 'Scopri i Servizi',
-    ctaNoeTom: 'Scopri NoeTom AI',
+    ctaNoeTom: 'Scopri NoeTom (in sviluppo)',
     quickStats: {
       experience: 'Esperienza professionale e organizzativa pluriennale',
       languages: '4 lingue di lavoro (IT · EN · FR · ES)',
@@ -163,7 +163,7 @@ export const itLocale: TranslationDictionary = {
           'Supporto operativo e impostazioni di base',
         ],
       },
-      { id: 'web-landing', title: 'Contenuti per siti web e landing page', subtitle: 'Testi e struttura dei contenuti per una presenza online più chiara.', description: 'Revisione, adattamento linguistico e organizzazione dei contenuti di siti esistenti. Eventuali attività di sviluppo tecnico vengono valutate separatamente e non sono comprese nel servizio standard.', iconName: 'Layout', items: ['Revisione dei testi di home e pagine servizi', 'Localizzazione italiana di contenuti web', 'Organizzazione di titoli, FAQ e call to action', 'Controllo terminologico e coerenza', 'Consegna di testi pronti per il CMS', 'Supporto alla revisione di contenuti multilingue'] },
+      { id: 'web-landing', title: 'Contenuti per siti web e landing page', subtitle: 'Testi e struttura dei contenuti per una presenza online più chiara.', description: 'Revisione, adattamento linguistico e organizzazione dei contenuti di siti esistenti. Sviluppo tecnico, hosting e manutenzione del sito non fanno parte di questo servizio di contenuti.', iconName: 'Layout', items: ['Revisione dei testi di home e pagine servizi', 'Localizzazione italiana di contenuti web', 'Organizzazione di titoli, FAQ e call to action', 'Controllo terminologico e coerenza', 'Consegna di testi pronti per il CMS', 'Supporto alla revisione di contenuti multilingue'] },
     ],
   },
   multilingualAdvantage: {

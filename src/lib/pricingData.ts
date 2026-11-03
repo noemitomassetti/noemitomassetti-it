@@ -63,7 +63,7 @@ export const PRICING_DATA: PricingData = {
       rateDetail: {it: "Supporto scritto, in italiano e multilingue", en: "Written support for existing Italian customers", fr: "Échanges écrits avec les clients italiens existants", es: "Atención escrita a clientes italianos existentes"},
       items: {
         it: ["Gestione e organizzazione della posta", "Risposte ai clienti in bozza o concordate", "Follow-up e informazioni operative", "FAQ, modelli email e procedure", "Perimetro e ore concordati nel preventivo"],
-        en: ["Email inbox organization", "Drafted or approved customer responses", "Follow-ups and routine information", "FAQs, email templates and processes", "Scope and hours confirmed in the quote"],
+        en: ["Email inbox organisation", "Drafted or approved customer responses", "Follow-ups and routine information", "FAQs, email templates and processes", "Scope and hours confirmed in the quote"],
         fr: ["Organisation de la messagerie", "Réponses clients rédigées ou validées", "Relances et informations pratiques", "FAQ, modèles d'e-mails et procédures", "Périmètre et heures définis au devis"],
         es: ["Organización del correo", "Respuestas a clientes redactadas o aprobadas", "Seguimientos e información operativa", "Preguntas frecuentes, plantillas y procesos", "Alcance y horas acordados en el presupuesto"],
       },

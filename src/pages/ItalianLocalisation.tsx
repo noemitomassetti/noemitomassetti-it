@@ -136,7 +136,7 @@ export default function ItalianLocalisationPage() {
         sourceText: "Almost there! Tell us how you plan to use the app so we can tailor your workspace.",
         literalLabel: "Deliberately literal demonstration, not machine-generated output:",
         literalText: "Quasi là! Dicci come pianifichi di usare l'app così che possiamo cucire il tuo spazio di lavoro.",
-        localizedLabel: "Professional localization by Noemi:",
+        localizedLabel: "Italian localisation — reviewed demonstration:",
         localizedText: "Ci siamo quasi! Raccontaci come pensi di utilizzare l’applicazione: potremo adattare il tuo spazio di lavoro alle tue esigenze.",
         notes: "Avoided unnatural English calques, preserved the request to describe how the app will be used and adopted a clear Italian register.",
       },
@@ -152,7 +152,7 @@ export default function ItalianLocalisationPage() {
       },
       scopeTitle: "What I Can Localize for Your Business",
       scopeItems: [
-        "Website & landing page copy (purely textual localization, not web engineering)",
+        "Website and landing page copy (editorial localisation only, not website development)",
         "E-commerce product sheets, category descriptions, and brand stories",
         "Marketing email sequences, newsletters, and client onboarding guides",
         "Customer support templates, help centers, and transactional user interface microcopy",
@@ -163,7 +163,7 @@ export default function ItalianLocalisationPage() {
         "All Italian translations are translated and revised directly by Noemi Tomassetti as a native Italian professional. I do not offer professional translation from Italian into English, French or Spanish, telemarketing, customer acquisition, bookkeeping or invoicing.",
       pricingTitle: "Baseline Indicative Pricing",
       pricingDesc:
-        "General translation from €0.09/word; specialist translation into Italian from €0.12/word; website localization from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
+        "General translation from €0.09/source word; specialist translation into Italian from €0.12/word; website localisation from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
     },
     fr: {
       metaTitle: "Localisation en Italien pour Entreprises | Noemi Tomassetti",

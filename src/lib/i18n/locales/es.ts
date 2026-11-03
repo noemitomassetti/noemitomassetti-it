@@ -45,7 +45,7 @@ export const esLocale: TranslationDictionary = {
     description:
       'Traduzco del español, el inglés y el francés al italiano, reviso contenidos en italiano y presto apoyo en las tareas operativas acordadas que requieren el uso de esta lengua.',
     ctaServices: 'Explorar Servicios',
-    ctaNoeTom: 'Descubrir NoeTom IA',
+    ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
       experience: 'Amplia trayectoria profesional y organizativa',
       languages: '4 idiomas de trabajo (ES · EN · IT · FR)',
@@ -163,7 +163,7 @@ export const esLocale: TranslationDictionary = {
           'Soporte operativo y configuraciones básicas',
         ],
       },
-      { id: 'web-landing', title: 'Contenidos para webs y landing pages en italiano', subtitle: 'Mensajes web más claros y bien organizados.', description: 'Revisión, adaptación lingüística y organización de contenidos para webs existentes. El desarrollo técnico se evalúa aparte y no forma parte del servicio estándar.', iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización al italiano de contenido web', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
+      { id: 'web-landing', title: 'Contenidos para webs y landing pages en italiano', subtitle: 'Mensajes web más claros y bien organizados.', description: 'Revisión, adaptación lingüística y organización de contenidos para webs existentes. El desarrollo técnico, el alojamiento y el mantenimiento web quedan fuera de este servicio de contenidos.', iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización al italiano de contenido web', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
     ],
   },
   multilingualAdvantage: {
