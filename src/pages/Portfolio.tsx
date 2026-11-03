@@ -75,6 +75,13 @@ export default function Portfolio() {
   ];
 
 
+  const translationFields: Record<NonNullable<PortfolioCase["masterField"]>,Record<Language,string>> = {
+    letterario:{it:"letterario",en:"literary",fr:"littéraire",es:"literario"},
+    giuridico:{it:"giuridico",en:"legal",fr:"juridique",es:"jurídico"},
+    economico:{it:"economico-commerciale",en:"economic and commercial",fr:"économique et commercial",es:"económico y comercial"},
+    tecnologico:{it:"tecnologico",en:"technology",fr:"technologique",es:"tecnológico"},
+    scientifico:{it:"scientifico",en:"scientific",fr:"scientifique",es:"científico"},
+  };
   const caseSampleFile: Record<string,string> = {
     "01-interior-design-localization":"01", "02-economic-commercial-translation":"02",
     "03-scientific-healthcare-translation":"03", "04-technological-software-localization":"04",
@@ -348,7 +355,7 @@ export default function Portfolio() {
                       </Badge>
                       {caseItem.masterField && (
                         <Badge className="bg-primary/20 text-primary border-primary/30 text-[10px] uppercase font-bold tracking-wider">
-                          {lang === "it" ? "Ambito traduttivo: " : lang === "fr" ? "Domaine de traduction : " : lang === "es" ? "Área de traducción: " : "Translation field: "}{caseItem.masterField}
+                          {lang === "it" ? "Ambito traduttivo: " : lang === "fr" ? "Domaine de traduction : " : lang === "es" ? "Área de traducción: " : "Translation field: "}{translationFields[caseItem.masterField][lang]}
                         </Badge>
                       )}
                     </div>
