@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
@@ -42,6 +42,17 @@ export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState<PortfolioCategory>("all");
   const [expandedCaseId, setExpandedCaseId] = useState<string | null>(lang === "fr" ? "13-french-italian-product-localisation" : lang === "es" ? "14-spanish-italian-existing-customer-email" : "01-interior-design-localization");
   const [activeTab, setActiveTab] = useState<Record<string, "overview" | "comparison" | "decisions">>({});
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null);
+  useEffect(() => {
+    if (pendingScroll && selectedCategory === "translation") {
+      const target = document.getElementById(pendingScroll);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        setPendingScroll(null);
+      }
+    }
+  }, [pendingScroll, selectedCategory, expandedCaseId]);
+
 
   // SEO configuration
   const titles = {
@@ -279,8 +290,7 @@ export default function Portfolio() {
                 onClick={() => {
                   setSelectedCategory("translation");
                   setExpandedCaseId(f.caseRef);
-                  const el = document.getElementById(f.caseRef);
-                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                  setPendingScroll(f.caseRef);
                 }}
                 className="text-left p-4 rounded-xl border border-border/60 bg-card hover:border-primary/50 transition-all duration-200 group hover:-translate-y-0.5 shadow-sm"
               >
@@ -331,7 +341,7 @@ export default function Portfolio() {
               <article
                 key={caseItem.id}
                 id={caseItem.id}
-                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                className={`scroll-mt-32 rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isExpanded
                     ? "border-primary/40 bg-card shadow-md"
                     : "border-border/60 bg-card/60 hover:border-border"
