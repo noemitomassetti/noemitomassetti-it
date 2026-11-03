@@ -134,7 +134,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     }
   ,
     disclaimer: DEMO_DISCLAIMER
-  }
+  },
 
     // 02. ECONOMIC / COMMERCIAL SPECIALIST TRANSLATION
   {
@@ -980,7 +980,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     }
   ,
     disclaimer: DEMO_DISCLAIMER
-  }
+  },
 
     // 12. DEDICATED LITERARY TRANSLATION SAMPLE (MASTER FIELD: LETTERARIO)
   {
