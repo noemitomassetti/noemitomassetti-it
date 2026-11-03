@@ -72,7 +72,7 @@ export const esLocale: TranslationDictionary = {
         desc: 'Combino minuciosidad artesanal con herramientas de inteligencia artificial de vanguardia, incluido NoeTom, mi sistema interno todavía en desarrollo, para lograr agilidad y orden.',
       },
       {
-        title: 'Máxima confidencialidad',
+        title: 'Discreción y atención a la privacidad',
         desc: 'Trato la documentación y las comunicaciones con discreción, teniendo en cuenta los requisitos aplicables de privacidad y protección de datos.',
       },
     ],
@@ -228,7 +228,7 @@ export const esLocale: TranslationDictionary = {
       valueProp:
         'Creado por Noemi para ordenar en el día a día compromisos, plazos, seguimientos y comunicaciones operativas, NoeTom se encuentra actualmente en fase de pruebas privadas.',
       emotionalQuote:
-        '«Nacido de la experiencia real sobre el terreno para eliminar las pérdidas de tiempo operativas y centrar la energía en el trabajo de alto valor.»',
+        '«Un proyecto inspirado en la experiencia profesional para organizar mejor las tareas y los seguimientos.»',
       author: 'Noemi Tomassetti — Asistente Virtual',
       ctaJoin: 'Recibir actualizaciones sobre el desarrollo',
     },
@@ -257,10 +257,10 @@ export const esLocale: TranslationDictionary = {
     },
     capabilities: {
       title: 'Funciones previstas — en desarrollo',
-      subtitle: 'Fruto de más de 20 años de experiencia apoyando a clientes y coordinando tareas.',
+      subtitle: 'Inspiradas en una trayectoria profesional de más de veinte años en distintos ámbitos.',
       radarTitle: 'El Radar NoeTom',
       radarDesc:
-        'Tu panel de control diario: una visión clara de lo prioritario hoy, las respuestas que estás esperando de tus clientes y los compromisos adquiridos.',
+        'Una vista diaria prevista para revisar prioridades, respuestas pendientes y compromisos.',
       features: [
         {
           id: 'radar',
@@ -355,7 +355,7 @@ export const esLocale: TranslationDictionary = {
     lead: 'Asistente Virtual, traductora y soporte operativo para profesionales y empresas.',
     bioParagraphs: [
       'Pongo a tu disposición más de veinte años de experiencia profesional adquirida en atención al cliente, back office, organización y soporte operativo, junto con una sólida formación lingüística.',
-      'Obtuve el Grado (Laurea triennale) en Mediación Lingüística en la Universidad de Macerata (2009, con honores 110/110 e lode), seguido del Máster Universitario de I nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS) con superación del examen final. Las áreas abordadas durante el Máster incluyen los sectores literario, jurídico, económico, tecnológico y científico.',
+      'Obtuve el Grado (Laurea triennale) en Mediación Lingüística en la Universidad de Macerata (2009, con honores 110/110 e lode), seguido del máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS) con superación del examen final. Las áreas abordadas durante el Máster incluyen los sectores literario, jurídico, económico, tecnológico y científico.',
       'El italiano es mi lengua materna; presto apoyo a las comunicaciones profesionales en cuatro idiomas: italiano, inglés, francés y español, con atención al rigor lingüístico, los plazos acordados y la confidencialidad.',
     ],
     credentials: [
@@ -373,7 +373,7 @@ export const esLocale: TranslationDictionary = {
     storyParagraphs: [
       'Mi carrera se ha desarrollado en torno a tres constantes: la vocación por los idiomas, el rigor organizativo y la satisfacción de ser un punto de apoyo fiable para los profesionales con quienes trabajo.',
       'Mi trayectoria profesional supera los veinte años y comprende funciones diversas. He desarrollado competencias en atención al cliente, organización, back office y comunicación multilingüe. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y eliminar los roces operativos cotidianos.',
-      'En mi formación universitaria cuento con el Grado en Mediación Lingüística (Universidad de Macerata, 2009, 110/110 e lode) y el Máster Universitario de I nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS). Los ámbitos abordados durante el Máster comprenden el área literaria, jurídica, económica, tecnológica y científica (los textos de carácter jurídico se evalúan caso por caso; no realizo traducciones juradas ni juramentadas).',
+      'En mi formación universitaria cuento con el título universitario italiano de primer ciclo en Mediación Lingüística (Universidad de Macerata, 2009, 110/110 e lode) y el máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS). Los ámbitos abordados durante el Máster comprenden el área literaria, jurídica, económica, tecnológica y científica (los textos de carácter jurídico se evalúan caso por caso; no realizo traducciones juradas ni juramentadas).',
       'También estoy desarrollando NoeTom, un proyecto interno de asistencia operativa que se encuentra en fase de pruebas privadas.',
     ],
     timeline: [
@@ -389,7 +389,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         period: '2010 – 2012',
-        role: 'Máster Universitario de I nivel en Traducción Especializada – lengua inglesa',
+        role: 'máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa',
         detail: '1.500 horas, 60 CFU, examen final aprobado. Áreas formativas: literaria, jurídica, económica, tecnológica, científica.',
       },
       {

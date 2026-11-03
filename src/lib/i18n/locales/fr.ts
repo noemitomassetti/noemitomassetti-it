@@ -207,13 +207,13 @@ export const frLocale: TranslationDictionary = {
     statusBadge: 'SYSTÈME INTERNE EN TEST PRIVÉ',
     productName: 'NoeTom',
     tagline: 'Le système individuel de productivité opérationnelle développé par Noemi pour son flux de travail.',
-    emotionalPromise: '« Organisation rigoureuse, réduction de la charge mentale et clarté quotidienne. »',
+    emotionalPromise: '« Un projet pour mieux organiser le travail quotidien et retrouver une vue d’ensemble. »',
     description:
       'NoeTom est un système individuel de productivité développé par Noemi pour son propre flux de travail, actuellement en phase de test privé.',
     featuresList: [
-      'Suivi rigoureux des tâches et jalons sans oubli d’échéance',
-      'Mémoire opérationnelle des préférences et accords passés',
-      'Veille sur les relances et réponses en attente',
+      'Suivi des tâches et échéances prévu dans le projet',
+      'Organisation des notes et des accords autorisés : en développement',
+      'Suivi des réponses et relances en attente : en développement',
       'Aide à la préparation de brouillons multilingues : en développement',
       'Bilan quotidien des priorités : fonctionnalité en développement',
     ],
@@ -228,7 +228,7 @@ export const frLocale: TranslationDictionary = {
       valueProp:
         'Conçu par Noemi pour structurer au quotidien les tâches, échéances, relances et communications opérationnelles, NoeTom fait actuellement l’objet de tests privés.',
       emotionalQuote:
-        '« Né de l’expérience concrète de terrain pour supprimer les dispersions opérationnelles et préserver l’énergie pour les missions à haute valeur. »',
+        '« Inspiré par l’expérience professionnelle pour réduire la dispersion des informations au quotidien. »',
       author: 'Noemi Tomassetti — Assistante Virtuelle',
       ctaJoin: 'Rester informé des développements',
     },
@@ -239,28 +239,28 @@ export const frLocale: TranslationDictionary = {
       items: [
         {
           bad: 'PAS un chatbot générique pour conversations futiles',
-          good: 'Une mémoire opérationnelle persistante qui connaît vos clients et suit l’état de vos engagements en cours.',
+          good: 'Un registre opérationnel prévu pour organiser des notes, accords et engagements autorisés.',
         },
         {
           bad: 'PAS un CRM d’entreprise lourd et contraignant',
-          good: 'Un copilote léger qui extrait automatiquement vos prochaines actions à partir de simples notes ou mémos vocaux.',
+          good: 'Un outil pensé pour transformer des notes brèves en tâches à vérifier.',
         },
         {
           bad: 'PAS une liste de tâches statique et anxiogène',
-          good: 'Un radar opérationnel dynamique qui met en lumière ce qui est bloqué, en attente ou prêt à avancer.',
+          good: 'Un aperçu prévu des tâches en attente, bloquées ou arrivant à échéance.',
         },
         {
-          bad: 'PAS un outil complexe nécessitant des semaines de formation',
-          good: 'Prêt à l’emploi via le langage naturel : un simple « Dis à NoeTom » suffit pour consigner une information.',
+          bad: 'PAS conçu pour multiplier les étapes de configuration',
+          good: 'L’objectif est de pouvoir saisir simplement des notes et des engagements en langage naturel.',
         },
       ],
     },
     capabilities: {
       title: 'Fonctionnalités prévues — en développement',
-      subtitle: 'Forgées par plus de 20 ans d’accompagnement client et de gestion opérationnelle.',
+      subtitle: 'Inspirées de mon parcours professionnel de plus de vingt ans, dans différents environnements.',
       radarTitle: 'Le Radar NoeTom',
       radarDesc:
-        'Votre tableau de bord quotidien : une vue instantanée sur vos priorités du jour, les retours clients que vous attendez et les promesses à honorer.',
+        'Un tableau de bord envisagé pour retrouver vos priorités, réponses en attente et engagements à vérifier.',
       features: [
         {
           id: 'radar',
@@ -355,12 +355,12 @@ export const frLocale: TranslationDictionary = {
     lead: 'Assistante Virtuelle, traductrice et soutien opérationnel pour professionnels et entreprises.',
     bioParagraphs: [
       'Je mets à votre disposition plus de vingt ans d’expérience professionnelle acquise dans le service client, le back-office, l’organisation et le soutien opérationnel, alliée à une solide formation linguistique.',
-      'Je suis titulaire d’une licence (Laurea triennale) en Médiation Linguistique de l’Université de Macerata (2009, obtenue avec la mention 110/110 et félicitations du jury), suivie d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 crédits ECTS) avec réussite de l’épreuve finale. Les domaines abordés au cours du Master comprennent les secteurs littéraire, juridique, économique, technologique et scientifique.',
+      'Je suis titulaire d’une licence (Laurea triennale) en Médiation Linguistique de l’Université de Macerata (2009, obtenue avec la mention 110/110 e lode (mention italienne)), suivie d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 crédits ECTS) avec réussite de l’épreuve finale. Les domaines abordés au cours du Master comprennent les secteurs littéraire, juridique, économique, technologique et scientifique.',
       'L’italien est ma langue maternelle et j’assure un accompagnement professionnel en quatre langues : italien, anglais, français et espagnol, avec rigueur, ponctualité et discrétion.',
     ],
     credentials: [
       { title: 'Plus de 20 ans d’expérience', detail: 'Service client, back-office, organisation et gestion opérationnelle' },
-      { title: 'Formation universitaire d’excellence', detail: 'Licence en Médiation Linguistique (110/110 félicitations) & Master en Traduction Spécialisée' },
+      { title: 'Formation universitaire d’excellence', detail: 'Licence en Médiation Linguistique (110/110 e lode) & Master en Traduction Spécialisée' },
       { title: '4 langues de travail', detail: 'Italien langue maternelle, soutien professionnel en Anglais, Français, Espagnol' },
       { title: 'Outils et innovation', detail: 'Support numérique et créatrice du projet interne NoeTom, en développement' },
     ],
@@ -373,7 +373,7 @@ export const frLocale: TranslationDictionary = {
     storyParagraphs: [
       'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
       'Mon parcours professionnel s’étend sur plus de deux décennies et comprend différentes expériences. J’y ai développé des compétences en relation client, organisation, back-office et communication multilingue. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
-      'Sur le plan universitaire, je suis diplômée d’une licence en Médiation Linguistique (Université de Macerata, 2009, 110/110 et félicitations du jury) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
+      'Sur le plan universitaire, je suis diplômée d’une licence en Médiation Linguistique (Université de Macerata, 2009, 110/110 e lode (mention italienne)) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
       'En parallèle, je développe NoeTom, un projet interne d’assistance opérationnelle actuellement en phase de test privé.',
     ],
     timeline: [
@@ -385,7 +385,7 @@ export const frLocale: TranslationDictionary = {
       {
         period: '2009',
         role: 'Licence en Médiation Linguistique',
-        detail: 'Université de Macerata, diplômée avec 110/110 et félicitations du jury.',
+        detail: 'Université de Macerata, diplômée avec 110/110 e lode (mention italienne).',
       },
       {
         period: '2010 – 2012',

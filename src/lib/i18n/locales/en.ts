@@ -258,10 +258,10 @@ export const enLocale: TranslationDictionary = {
     },
     capabilities: {
       title: 'Planned capabilities — in development',
-      subtitle: 'Engineered from 20+ years of back-office and client management reality.',
+      subtitle: 'Inspired by over twenty years of professional experience in different work settings.',
       radarTitle: 'The NoeTom Radar',
       radarDesc:
-        'Your daily cockpit. A high-clarity snapshot showing what demands attention today, what you are waiting for from clients, what you promised to deliver, and which commitments may need checking.',
+        'A proposed daily view of priorities, pending customer replies and commitments requiring review.',
       features: [
         {
           id: 'radar',
@@ -356,7 +356,7 @@ export const enLocale: TranslationDictionary = {
     lead: 'Virtual Assistant, translator, and operational support partner for professionals and small businesses.',
     bioParagraphs: [
       'I bring over twenty years of professional experience gained across customer care, back office, operations, and operational support, alongside a solid linguistic foundation.',
-      'I hold a Bachelor’s degree in Linguistic Mediation from the University of Macerata (2009, graduated with 110/110 cum laude), followed by a First-level University Master’s in Specialized Translation – English language (2010–2012, 1,500 hours, 60 ECTS) with successful completion of the final examination. Areas covered during the Master’s include literary, legal, economic, technological, and scientific fields.',
+      'I hold a Bachelor’s degree in Linguistic Mediation from the University of Macerata (2009, graduated with 110/110 cum laude), followed by an Italian first-level university Master’s qualification in Specialised Translation (English) (2010–2012, 1,500 hours, 60 ECTS) with successful completion of the final examination. Areas covered during the Master’s include literary, legal, economic, technological, and scientific fields.',
       'Italian is my native language, and I provide professional multilingual support in four languages: Italian, English, French, and Spanish, ensuring precision, punctuality, and confidentiality.',
     ],
     credentials: [
@@ -374,8 +374,8 @@ export const enLocale: TranslationDictionary = {
     storyParagraphs: [
       'My professional path has always developed around three constants: organizational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
       'My career spans more than two decades across different roles. I have developed skills in customer care, operational coordination, back office and multilingual communication. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
-      'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 cum laude) and a First-level University Master’s in Specialized Translation – English language (2010–2012, 1,500 hours, 60 ECTS credits). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
-      'Alongside ongoing virtual assistance, I created NoeTom, an intelligent operational assistant designed to support solopreneurs and independent professionals with their day-to-day management.',
+      'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 cum laude) and an Italian first-level university Master’s qualification in Specialised Translation (English) (2010–2012, 1,500 hours, 60 ECTS credits). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
+      'Alongside my professional services, I am developing NoeTom, an internal operational-assistance project currently in private testing.',
     ],
     timeline: [
       {

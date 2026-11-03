@@ -295,10 +295,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Professionisti che lavorano con l'estero"
           : lang === "fr"
-          ? "Activités tournées vers l'international"
+          ? "Professionnels travaillant avec l’Italie"
           : lang === "es"
-          ? "Empresas con clientes internacionales"
-          : "International Operators",
+          ? "Empresas que trabajan con Italia"
+          : "Businesses Working with Italy",
       description:
         lang === "it"
           ? "Le mie competenze linguistiche possono essere utili per comunicazioni, traduzioni e contenuti destinati a interlocutori internazionali."
@@ -547,9 +547,9 @@ export default function IndexPage() {
               {lang === "it"
                 ? "Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e contenuti per siti web."
                 : lang === "fr"
-                ? "Noemi Tomassetti - Assistante Virtuelle pour professionnels et entreprises. Organisation, secrétariat, communication multilingue et sites web."
+                ? "Noemi Tomassetti - Assistante Virtuelle pour professionnels et entreprises. Organisation, secrétariat opérationnel, traduction vers l’italien et contenus web en italien."
                 : lang === "es"
-                ? "Noemi Tomassetti - Asistente Virtual para profesionales y empresas. Organización, secretaría, comunicación multilingüe y páginas web."
+                ? "Noemi Tomassetti - Asistente Virtual para profesionales y empresas. Organización, secretaría operativa, traducción al italiano y contenidos web en italiano."
                 : "Noemi Tomassetti - Virtual Assistant for professionals and small businesses. Operational back office, organisational support, multilingual communication and Italian-language website content."}
             </h1>
 
