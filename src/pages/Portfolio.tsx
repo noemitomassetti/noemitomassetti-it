@@ -73,9 +73,42 @@ export default function Portfolio() {
     { id: "web", label: { it: "Siti Web & Landing Page", en: "Web & Landing Pages", fr: "Sites Web & Pages", es: "Sitios Web y Páginas" }, icon: <Layers className="w-3.5 h-3.5" /> },
   ];
 
-  const filteredCases = selectedCategory === "all"
+
+  const caseSampleFile: Record<string,string> = {
+    "01-interior-design-localization":"01", "02-economic-commercial-translation":"02",
+    "03-scientific-healthcare-translation":"03", "04-technological-software-localization":"04",
+    "05-legal-contractual-translation":"05", "06-ux-web-content-localization":"06",
+    "07-supplier-research-benchmark":"07", "08-competitor-benchmarking":"08",
+    "09-freelance-back-office-system":"09", "10-writing-editorial-revision":"10",
+    "11-multilingual-landing-page":"06", "13-french-italian-product-localisation":"17",
+    "14-spanish-italian-existing-customer-email":"18", "15-italian-written-customer-care":"11",
+    "16-order-data-and-price-list":"13", "17-online-course-operations":"15",
+    "18-product-catalogue-copy-review":"19",
+  };
+  const highlights: Record<Language,string[]> = {
+    it:["11","13","17","18","19","14"],
+    en:["16","17","18","11","13","19"],
+    fr:["17","16","11","18","13","19"],
+    es:["18","16","11","17","13","19"],
+  };
+  const featured = highlights[lang]
+    .map(num => PORTFOLIO_DOCUMENTS.find(doc => doc.num === num))
+    .filter((doc): doc is (typeof PORTFOLIO_DOCUMENTS)[number] => !!doc);
+  const labelForCategory = (category: PortfolioCase["category"]) =>
+    categories.find(item => item.id === category)?.label[lang] ?? category;
+
+  const filteredCases = (selectedCategory === "all"
     ? PORTFOLIO_CASES
-    : PORTFOLIO_CASES.filter((c) => c.category === selectedCategory);
+    : PORTFOLIO_CASES.filter((c) => c.category === selectedCategory)).slice().sort((a,b) => {
+      if (lang === "it") return a.order - b.order;
+      const rank = (c: PortfolioCase) =>
+        lang === "fr" && c.id === "13-french-italian-product-localisation" ? -5 :
+        lang === "es" && c.id === "14-spanish-italian-existing-customer-email" ? -5 :
+        c.id === "01-interior-design-localization" ? -4 :
+        c.id === "15-italian-written-customer-care" ? -3 :
+        c.category === "translation" ? -2 : c.category === "backoffice" ? -1 : 0;
+      return rank(a) - rank(b) || a.order - b.order;
+    });
 
   const toggleCase = (id: string) => {
     setExpandedCaseId((prev) => (prev === id ? null : id));
@@ -140,6 +173,36 @@ export default function Portfolio() {
               </span>
               <span>{DEMO_DISCLAIMER[lang]}</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="tangible-work" className="py-12 border-b border-border/40 bg-card/30">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+          <h2 id="tangible-work" className="text-2xl md:text-3xl font-bold text-primary mb-3">
+            {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Ejemplos concretos para consultar" : "Explore tangible work samples"}
+          </h2>
+          <p className="text-foreground/75 mb-8 max-w-3xl">
+            {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Tutti gli esempi sono dimostrativi e utilizzano dati fittizi."
+              : lang === "fr" ? "Traductions comparées, courriels, tableaux de suivi et procédures. Toutes les données sont fictives ; plusieurs documents sont rédigés en italien."
+              : lang === "es" ? "Traducciones comparadas, correos, registros y procedimientos. Todos los datos son ficticios; varios documentos están escritos en italiano."
+              : "Source/target translations, customer emails, trackers and procedures. All examples use fictional data; some full documents are in Italian."}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featured.map(doc => (
+              <a key={doc.num} href={doc.url} target="_blank" rel="noopener noreferrer"
+                 className="group rounded-xl border border-border/60 bg-card p-5 hover:border-primary/60 hover:shadow-md transition-all">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-xs font-bold text-primary">DOC {doc.num}</span>
+                  <ExternalLink className="w-4 h-4 text-primary" aria-hidden="true" />
+                </div>
+                <h3 className="font-bold text-foreground group-hover:text-primary">{doc.title[lang]}</h3>
+                <p className="text-sm text-foreground/75 mt-2">{doc.subtitle[lang]}</p>
+                <span className="inline-block text-sm font-semibold text-primary mt-4">
+                  {lang === "it" ? "Apri il documento" : lang === "fr" ? "Voir l’exemple" : lang === "es" ? "Abrir la muestra" : "View work sample"}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -277,7 +340,7 @@ export default function Portfolio() {
                         #{String(caseItem.order).padStart(2, "0")}
                       </span>
                       <Badge variant="outline" className="text-[11px] uppercase tracking-wider">
-                        {caseItem.category}
+                        {labelForCategory(caseItem.category)}
                       </Badge>
                       {caseItem.masterField && (
                         <Badge className="bg-primary/20 text-primary border-primary/30 text-[10px] uppercase font-bold tracking-wider">
@@ -618,12 +681,12 @@ export default function Portfolio() {
                         <div className="p-4 rounded-xl bg-secondary/40 border border-border/50">
                           <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
                             {lang === "it"
-                              ? "Deliverable Finale Fornito al Cliente"
+                              ? "Risultato dimostrativo"
                               : lang === "fr"
-                              ? "Livrable Final Fourni au Client"
+                              ? "Livrable de démonstration"
                               : lang === "es"
-                              ? "Entregable Final Proporcionado al Cliente"
-                              : "Final Client Deliverable"}
+                              ? "Entregable de muestra"
+                              : "Sample Deliverable"}
                           </span>
                           <p className="text-foreground/90 leading-relaxed font-medium">
                             {caseItem.deliverable[lang]}
@@ -631,6 +694,20 @@ export default function Portfolio() {
                         </div>
                       </div>
                     )}
+
+                    {caseSampleFile[caseItem.id] && (() => {
+                      const doc = PORTFOLIO_DOCUMENTS.find(item => item.num === caseSampleFile[caseItem.id]);
+                      return doc ? (
+                        <a href={doc.url} target="_blank" rel="noopener noreferrer"
+                           className="flex items-center justify-between gap-3 p-4 rounded-xl border border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-semibold text-sm">
+                          <span className="flex items-center gap-3">
+                            <FileText className="w-5 h-5 shrink-0" aria-hidden="true" />
+                            {lang === "it" ? "Apri il lavoro dimostrativo" : lang === "fr" ? "Consulter le document" : lang === "es" ? "Ver documento de muestra" : "Open the work sample"}: {doc.title[lang]}
+                          </span>
+                          <ExternalLink className="w-4 h-4 shrink-0" aria-hidden="true" />
+                        </a>
+                      ) : null;
+                    })()}
 
                     {/* Disclaimer Footer inside case */}
                     <div className="pt-4 border-t border-border/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-muted-foreground">
@@ -770,7 +847,7 @@ export default function Portfolio() {
             {lang === "it"
               ? "Dalla revisione di testi alla gestione dell'agenda e dei clienti, fino alla localizzazione multilingue: valutiamo insieme come posso supportare la tua attività."
               : lang === "fr"
-              ? "De la révision éditoriale à la gestion administrative et la localisation : échangeons sur vos priorités."
+              ? "De la localisation en italien aux échanges avec vos clients italiens, découvrons des solutions linguistiques et opérationnelles."
               : lang === "es"
               ? "Desde la corrección de textos hasta la gestión de clientes y la localización multilingüe: veamos cómo puedo ayudarte."
               : "From multilingual localization to inbox management and desk research: let's discuss how I can concrete support your workflow."}
