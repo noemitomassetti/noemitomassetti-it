@@ -71,7 +71,7 @@ export default function Portfolio() {
     { id: "research", label: { it: "Ricerche & Benchmark", en: "Research & Benchmarks", fr: "Recherches & Veille", es: "Investigación y Benchmarking" }, icon: <Search className="w-3.5 h-3.5" /> },
     { id: "backoffice", label: { it: "Back Office & Organizzazione", en: "Back Office & Operations", fr: "Back-Office & Organisation", es: "Back Office y Organización" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
     { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, icon: <PenTool className="w-3.5 h-3.5" /> },
-    { id: "web", label: { it: "Siti Web & Landing Page", en: "Web & Landing Pages", fr: "Sites Web & Pages", es: "Sitios Web y Páginas" }, icon: <Layers className="w-3.5 h-3.5" /> },
+    { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus Web & Pages de Destination", es: "Contenidos Web y Landing Pages" }, icon: <Layers className="w-3.5 h-3.5" /> },
   ];
 
 
@@ -331,9 +331,12 @@ export default function Portfolio() {
                 }`}
               >
                 {/* Header Card */}
-                <div
+                <button
+                  type="button"
                   onClick={() => toggleCase(caseItem.id)}
-                  className="p-6 md:p-8 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4 select-none"
+                  aria-expanded={isExpanded}
+                  aria-label={caseItem.title[lang]}
+                  className="w-full text-left p-6 md:p-8 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4 select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
                 >
                   <div className="space-y-2 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
@@ -345,7 +348,7 @@ export default function Portfolio() {
                       </Badge>
                       {caseItem.masterField && (
                         <Badge className="bg-primary/20 text-primary border-primary/30 text-[10px] uppercase font-bold tracking-wider">
-                          Master: {caseItem.masterField}
+                          {lang === "it" ? "Ambito traduttivo: " : lang === "fr" ? "Domaine de traduction : " : lang === "es" ? "Área de traducción: " : "Translation field: "}{caseItem.masterField}
                         </Badge>
                       )}
                     </div>
@@ -368,18 +371,18 @@ export default function Portfolio() {
                           ? "Cerrar detalle"
                           : "Close details"
                         : lang === "it"
-                        ? "Visualizza metodo e deliverable"
+                        ? "Esplora metodo ed esempio"
                         : lang === "fr"
-                        ? "Voir la méthode et le livrable"
+                        ? "Découvrir la méthode et l’exemple"
                         : lang === "es"
-                        ? "Ver método y entregable"
-                        : "View method & deliverable"}
+                        ? "Ver método y muestra"
+                        : "View method and sample"}
                     </span>
                     <div className="p-2 rounded-full bg-secondary/80 text-foreground">
                       {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                     </div>
                   </div>
-                </div>
+                </button>
 
                 {/* Expanded Details Body */}
                 {isExpanded && (
@@ -543,12 +546,12 @@ export default function Portfolio() {
                               <div className="p-4 rounded-xl bg-destructive/5 border border-destructive/20">
                                 <span className="text-[11px] font-bold uppercase tracking-wider text-destructive block mb-2">
                                   {lang === "it"
-                                    ? "Traduzione Letterale / Macchinica (Inaccurata)"
+                                    ? "Resa letterale volutamente non idiomatica (esempio)"
                                     : lang === "fr"
-                                    ? "Traduction Littérale / Automatique (Inappropriée)"
+                                    ? "Version littérale volontairement maladroite (exemple)"
                                     : lang === "es"
-                                    ? "Traducción Literal / Automática (Inadecuada)"
-                                    : "Literal / Machine Translation (Flawed)"}
+                                    ? "Versión literal poco natural (ejemplo)"
+                                    : "Deliberately awkward literal rendering (example)"}
                                 </span>
                                 <p className="text-foreground/75 leading-relaxed">
                                   "{caseItem.comparison.literalText}"
@@ -746,12 +749,12 @@ export default function Portfolio() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
                 <FileText className="w-3.5 h-3.5" />
                 {lang === "it"
-                  ? "Deliverable & Documenti Autonomi"
+                  ? "Documenti di lavoro dimostrativi"
                   : lang === "fr"
-                  ? "Livrables & Documents Autonomes"
+                  ? "Documents de démonstration"
                   : lang === "es"
-                  ? "Entregables y Documentos Independientes"
-                  : "Deliverables & Standalone Documents"}
+                  ? "Muestras de trabajo"
+                  : "Independent Work Samples"}
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
                 {lang === "it"
@@ -790,7 +793,7 @@ export default function Portfolio() {
                       DOC #{doc.num}
                     </span>
                     <Badge variant="outline" className="text-[10px] uppercase tracking-wider">
-                      {doc.category}
+                      {categories.find(c => c.id === doc.category)?.label[lang] ?? doc.category}
                     </Badge>
                   </div>
                   <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors flex items-center gap-2">
@@ -846,12 +849,12 @@ export default function Portfolio() {
           </h2>
           <p className="text-foreground/80 leading-relaxed">
             {lang === "it"
-              ? "Dalla revisione di testi alla gestione dell'agenda e dei clienti, fino alla localizzazione multilingue: valutiamo insieme come posso supportare la tua attività."
+              ? "Dalla revisione dei contenuti alla gestione di email, agenda e back office, fino alla localizzazione verso l’italiano: valutiamo insieme le attività da affidarmi."
               : lang === "fr"
               ? "De la localisation en italien aux échanges avec vos clients italiens, découvrons des solutions linguistiques et opérationnelles."
               : lang === "es"
-              ? "Desde la corrección de textos hasta la gestión de clientes y la localización multilingüe: veamos cómo puedo ayudarte."
-              : "From multilingual localization to inbox management and desk research: let's discuss how I can concrete support your workflow."}
+              ? "Desde la localización al italiano hasta la comunicación escrita con tus clientes italianos actuales, podemos concretar las tareas que necesitas delegar."
+              : "From Italian translation and localisation to written support for existing Italian customers, I can help with agreed operational and language tasks."}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
@@ -872,12 +875,12 @@ export default function Portfolio() {
               className="w-full sm:w-auto text-xs px-6 py-3.5 rounded-full font-bold uppercase tracking-wider border-border hover:border-primary/50"
             >
               {lang === "it"
-                ? "Richiedi un preventivo scritto"
+                ? "Richiedi un preventivo"
                 : lang === "fr"
-                ? "Demander un devis écrit"
+                ? "Demander un devis"
                 : lang === "es"
-                ? "Solicitar presupuesto por escrito"
-                : "Request a written quote"}
+                ? "Solicitar presupuesto"
+                : "Request a quote"}
             </BookingButton>
           </div>
         </div>
