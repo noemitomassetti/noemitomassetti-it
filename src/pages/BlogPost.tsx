@@ -13,7 +13,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
     ctaTitle: "Hai bisogno di supporto per il tuo lavoro?",
     ctaDesc: "Descrivimi la tua attività e le tue esigenze: valuteremo insieme le prestazioni più adatte.",
     ctaBtn: "Richiedi un preventivo",
-    authorBio: "Assistente virtuale e traduttrice, con oltre 20 anni di esperienza professionale, laurea in Mediazione Linguistica e master in Traduzione Specialistica.",
+    authorBio: "Assistente virtuale e traduttrice verso l’italiano, con esperienza professionale ultraventennale in diversi ruoli, laurea in Mediazione Linguistica e master in Traduzione Specialistica.",
     related: "Altri articoli",
     sample: ""
   },
@@ -22,7 +22,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
     ctaTitle: "Need natural Italian-language communication?",
     ctaDesc: "Tell me about your translation, localisation or existing-customer communication needs for Italy.",
     ctaBtn: "Request a quote",
-    authorBio: "Native Italian translator and virtual assistant with over 20 years of professional experience, a degree in Language Mediation and a master's in Specialist Translation.",
+    authorBio: "Native Italian speaker, trained translator and virtual assistant. My professional experience spans more than twenty years across different roles; I hold a degree in Language Mediation and an Italian university Master’s qualification in Specialised Translation.",
     related: "Related reading",
     sample: "This article is an editorial adaptation for English-language readers."
   },
@@ -31,7 +31,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
     ctaTitle: "Besoin de communiquer naturellement avec vos clients italiens ?",
     ctaDesc: "Présentez vos besoins en traduction vers l’italien, localisation ou échanges avec vos clients existants.",
     ctaBtn: "Demander un devis",
-    authorBio: "Traductrice italophone native et assistante virtuelle, forte de plus de 20 ans d’expérience professionnelle, diplômée en médiation linguistique et traduction spécialisée.",
+    authorBio: "Italienne de langue maternelle, traductrice formée à la traduction spécialisée et assistante virtuelle. Mon parcours professionnel dépasse vingt ans, dans des fonctions variées.",
     related: "À lire également",
     sample: "Cet article a été adapté pour les lecteurs francophones."
   },
@@ -40,7 +40,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
     ctaTitle: "¿Necesitas comunicarte de forma natural con clientes italianos?",
     ctaDesc: "Cuéntame qué contenidos necesitas traducir al italiano o qué comunicaciones con clientes actuales deseas organizar.",
     ctaBtn: "Solicitar un presupuesto",
-    authorBio: "Traductora nativa de italiano y asistente virtual con más de 20 años de experiencia, grado en Mediación Lingüística y máster en Traducción Especializada.",
+    authorBio: "Italiana de lengua materna, traductora con formación especializada y asistente virtual. Mi trayectoria profesional supera los veinte años en distintas funciones.",
     related: "Otros artículos",
     sample: "Este artículo se ha adaptado editorialmente para lectores hispanohablantes."
   }

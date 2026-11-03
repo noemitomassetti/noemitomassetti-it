@@ -92,7 +92,7 @@ const getTips = (lang: Language) => {
         "Identify what can be safely delegated before burnout sets in",
         "Protect calendar buffers between consecutive client appointments",
         "Centralize communications so crucial details never slip away",
-        "Build a simple, repeatable onboarding flow for new clients",
+        "Prepare a clear welcome process for customers you already serve",
       ];
   }
 };
