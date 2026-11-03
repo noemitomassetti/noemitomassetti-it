@@ -29,6 +29,13 @@ describe('Four-language blog release integrity', () => {
           expect(post.content).toMatch(/<h2>/);
           expect(post.slug).not.toEqual(italian.find(p=>p.id===post.id)?.slug);
           expect(post.content).not.toEqual(italian.find(p=>p.id===post.id)?.content);
+          // Published foreign-language adaptations must go beyond an abbreviated teaser:
+          // context, practical example and an editorial conclusion.
+          if (post.published !== false) {
+            const textWords = post.content.replace(/<[^>]*>/g, ' ').trim().split(/\s+/).filter(Boolean);
+            expect(textWords.length).toBeGreaterThanOrEqual(245);
+            expect((post.content.match(/<h2>/g) || []).length).toBeGreaterThanOrEqual(3);
+          }
         }
       }
     }
