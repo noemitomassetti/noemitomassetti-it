@@ -652,19 +652,19 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
   return (
     <>
       {/* ── FLOATING TRIGGER BUTTON ── */}
-      <div className="fixed bottom-6 right-6 z-40 flex items-center">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center">
         {!isOpen && (
           <Button
             type="button"
             onClick={() => setIsOpen(true)}
-            className="rounded-full h-13 px-5 bg-primary text-primary-foreground shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2.5 font-bold tracking-wide border border-primary-foreground/20 hover:shadow-primary/30 cursor-pointer"
+            className="rounded-full h-12 w-12 px-0 sm:h-13 sm:w-auto sm:px-5 bg-primary text-primary-foreground shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2.5 font-bold tracking-wide border border-primary-foreground/20 hover:shadow-primary/30 cursor-pointer"
             aria-label={labels.badge[lang]}
           >
             <div className="relative">
               <MessageSquare className="w-5 h-5" />
               
             </div>
-            <span className="text-xs uppercase tracking-wider font-semibold">
+            <span className="hidden sm:inline text-xs uppercase tracking-wider font-semibold">
               {({ it: "Assistente di Noemi", en: "Noemi’s Assistant", fr: "Assistant de Noemi", es: "Asistente de Noemi" } as const)[lang]}
             </span>
           </Button>

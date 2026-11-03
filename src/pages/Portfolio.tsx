@@ -144,7 +144,7 @@ export default function Portfolio() {
   return (
     <Layout lang={lang}>
       {/* ── HEADER BANNER ── */}
-      <section className="border-b border-border/40 bg-secondary/20 py-16 md:py-24">
+      <section className="border-b border-border/40 bg-secondary/20 py-9 sm:py-12 md:py-20">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
             <GraduationCap className="w-3.5 h-3.5" />
@@ -157,7 +157,7 @@ export default function Portfolio() {
               : "Methodological Portfolio · Demonstration Cases"}
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4 md:mb-6">
             {lang === "it"
               ? "Esempi di lavoro"
               : lang === "fr"
@@ -167,7 +167,7 @@ export default function Portfolio() {
               : "Work Examples"}
           </h1>
 
-          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-8 max-w-3xl">
+          <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed mb-5 md:mb-8 max-w-3xl">
             {lang === "it"
               ? "Esempi dimostrativi, realizzati con materiali fittizi o originali, per mostrare metodo, accuratezza linguistica e organizzazione del lavoro. Non sono presentati come incarichi di clienti."
               : lang === "fr"
@@ -178,7 +178,7 @@ export default function Portfolio() {
           </p>
 
           {/* DEMO TRANSPARENCY NOTICE */}
-          <div className="bg-background/80 backdrop-blur border border-primary/20 rounded-xl p-5 text-sm text-foreground/85 flex items-start gap-3.5 shadow-sm">
+          <div className="bg-background/80 backdrop-blur border border-primary/20 rounded-xl p-4 md:p-5 text-sm text-foreground/85 flex items-start gap-3.5 shadow-sm">
             <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
             <div>
               <span className="font-semibold text-foreground">
@@ -190,7 +190,13 @@ export default function Portfolio() {
                   ? "Transparencia y Confidencialidad: "
                   : "Transparency & Client Confidentiality: "}
               </span>
-              <span>{DEMO_DISCLAIMER[lang]}</span>
+              <span>{lang === "it"
+                  ? "Tutti i casi sono esempi indipendenti con dati fittizi, non incarichi commissionati né testimonianze. Le attività disponibili sono quelle indicate nella pagina Servizi."
+                  : lang === "fr"
+                  ? "Tous les cas sont des exemples indépendants utilisant des données fictives, et non des missions clients ou des témoignages. Seules les prestations décrites dans la page Services sont proposées."
+                  : lang === "es"
+                  ? "Todos los casos son ejemplos independientes con datos ficticios, no encargos reales ni testimonios. Los servicios disponibles son los descritos en la página Servicios."
+                  : "All cases are independent demonstrations using fictional data, not commissioned client projects or testimonials. The services available are those stated on the Services page."}</span>
             </div>
           </div>
         </div>
