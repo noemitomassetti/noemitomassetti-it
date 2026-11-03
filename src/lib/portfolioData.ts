@@ -2011,4 +2011,11 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
     category: "backoffice",
     url: "/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html",
   },
+  {
+    num: "21",
+    title: { it: "Landing page: contenuti EN → IT", en: "Landing page copy EN → IT", fr: "Textes de page de destination EN → IT", es: "Contenidos de landing page EN → IT" },
+    subtitle: { it: "Headline, FAQ, vantaggi e CTA con confronto linguistico", en: "Source/target headlines, FAQs, benefits and calls to action", fr: "Accroche, FAQ, avantages et appels à l’action comparés", es: "Titulares, ventajas, preguntas frecuentes y CTA comparadas" },
+    category: "web",
+    url: "/portfolio-documenti/doc-21-landing-page-contenuti-en-it.html",
+  },
 ];

@@ -80,7 +80,7 @@ export default function Portfolio() {
     "05-legal-contractual-translation":"05", "06-ux-web-content-localization":"06",
     "07-supplier-research-benchmark":"07", "08-competitor-benchmarking":"08",
     "09-freelance-back-office-system":"09", "10-writing-editorial-revision":"10",
-    "11-multilingual-landing-page":"06", "13-french-italian-product-localisation":"17",
+    "11-multilingual-landing-page":"21", "13-french-italian-product-localisation":"17",
     "14-spanish-italian-existing-customer-email":"18", "15-italian-written-customer-care":"11",
     "16-order-data-and-price-list":"13", "17-online-course-operations":"15",
     "18-product-catalogue-copy-review":"19",
