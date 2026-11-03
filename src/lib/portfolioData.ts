@@ -52,90 +52,91 @@ export const DEMO_DISCLAIMER: Record<Language, string> = {
 export const PORTFOLIO_CASES: PortfolioCase[] = [
   // 01. RESIDENTIAL INTERIOR DESIGN LOCALIZATION
   {
-    id: "01-interior-design-localization",
-    order: 1,
-    category: "translation",
-    title: {
-      it: "Localizzazione multilingue: Sito di interior design residenziale",
-      en: "Multilingual Website Localization: Residential Interior Design",
-      fr: "Localisation multilingue : Site d'architecture d'intérieur résidentielle",
-      es: "Localización multilingüe: Sitio web de interiorismo residencial",
+    "id": "01-interior-design-localization",
+    "order": 1,
+    "category": "translation",
+    "title": {
+      "it": "Localizzazione EN → IT: sito di interior design",
+      "en": "English-to-Italian website localisation: interior design",
+      "fr": "Localisation EN → IT : site de décoration d’intérieur",
+      "es": "Localización EN → IT: web de interiorismo"
     },
-    subtitle: {
-      it: "Adattamento IT → EN / FR / ES per clientela privata e acquirenti internazionali in Italia",
-      en: "IT → EN / FR / ES adaptation for private homeowners and international buyers in Italy",
-      fr: "Adaptation IT → EN / FR / ES pour clients privés et acquéreurs internationaux en Italie",
-      es: "Adaptación IT → EN / FR / ES para clientes privados y propietarios internacionales en Italia",
+    "subtitle": {
+      "it": "Testi web, call to action e note traduttologiche per un pubblico italiano",
+      "en": "Real source/target examples for Italian-facing website copy",
+      "fr": "Exemples concrets de textes web anglais et de leur adaptation italienne",
+      "es": "Ejemplos concretos de textos web en inglés adaptados al italiano"
     },
-    brief: {
-      it: "Studio di interior design residenziale indipendente in Italia rivolto a proprietari di seconde case e acquirenti internazionali.",
-      en: "Independent residential interior design studio in Italy addressing second-home owners and international buyers.",
-      fr: "Studio d'architecture d'intérieur résidentielle en Italie s'adressant aux propriétaires de résidences secondaires et expatriés.",
-      es: "Estudio independiente de interiorismo residencial en Italia dirigido a compradores internacionales y segundas residencias.",
+    "brief": {
+      "it": "Scenario simulato: uno studio internazionale di interior design desidera presentare servizi di consulenza d’arredo a persone residenti in Italia.",
+      "en": "Fictional brief: an international interior-design studio needs clear Italian-language copy for customers based in Italy.",
+      "fr": "Scénario fictif : un studio international d’aménagement intérieur s’adresse à des clients résidant en Italie.",
+      "es": "Supuesto ficticio: un estudio internacional de interiorismo necesita textos para clientes residentes en Italia."
     },
-    startingMaterial: {
-      it: "Testi originali italiani del sito vetrina (Home, Servizi, Chi Sono, Processo, Contatti) incentrati su armonia, ascolto e qualità dell'abitare.",
-      en: "Original Italian showcase website copy (Home, Services, About, Process, Contact) centered on harmony, listening, and everyday living.",
-      fr: "Textes originaux italiens du site (Accueil, Services, À propos, Méthode, Contact) axés sur l'harmonie, l'écoute et le bien-être.",
-      es: "Textos originales en italiano (Inicio, Servicios, Sobre mí, Proceso, Contacto) centrados en la armonía y la habitabilidad.",
+    "startingMaterial": {
+      "it": "Headline, presentazione del servizio e invito all’azione redatti originariamente in inglese.",
+      "en": "An English headline, service introduction and call to action requiring Italian adaptation.",
+      "fr": "Une accroche, une présentation de service et un appel à l’action rédigés en anglais.",
+      "es": "Un titular, una presentación del servicio y una llamada a la acción escritos en inglés."
     },
-    objective: {
-      it: "Mantenere il tono intimo, elegante e rassicurante senza scivolare nell'anglicismo freddo o nel gergo architettonico impersonale.",
-      en: "Preserve the intimate, elegant, and reassuring voice without falling into cold corporate idioms or impersonal jargon.",
-      fr: "Conserver un ton chaleureux, élégant et rassurant sans basculer dans le jargon d'agence froid et impersonnel.",
-      es: "Mantener el tono cercano, elegante y profesional evitando calcos sintácticos o tecnicismos impersonales.",
+    "objective": {
+      "it": "Rendere la proposta naturale in italiano, evitare calchi e mantenere solo le promesse contenute nel testo originale.",
+      "en": "Produce idiomatic Italian messaging, avoid calques and preserve the original business claims.",
+      "fr": "Produire un texte italien naturel sans calques ni promesses commerciales ajoutées.",
+      "es": "Crear un mensaje natural en italiano, fiel al contenido y sin promesas inventadas."
     },
-    approach: {
-      it: "Traduzione e riscrittura idiomatica dei claim principali, differenziando la resa per il mercato anglofono (en-GB/internazionale), francofono ed ispanofono.",
-      en: "Idiomatic rewriting of main headlines, tailoring tone for British/international English, French, and European Spanish audiences.",
-      fr: "Réécriture idiomatique des accroches en adaptant les nuances d'habitat pour le public francophone européen.",
-      es: "Reescritura idiomática de los lemas y servicios, adaptando el registro para propietarios hispanohablantes.",
+    "approach": {
+      "it": "Analisi del testo sorgente; scelta terminologica nel settore arredo; adattamento di sintassi, tono e call to action; revisione finale.",
+      "en": "Review source meaning, interior-design vocabulary, tone and calls to action; final language quality control.",
+      "fr": "Analyse du sens, des termes de l’aménagement, du ton et de l’appel à l’action ; relecture finale.",
+      "es": "Análisis del significado, la terminología, el tono y la llamada a la acción; revisión final."
     },
-    keyDecisions: {
-      it: [
-        "Resa di 'Una casa pensata intorno al tuo modo di vivere': in EN 'A home designed around the way you live', in FR 'Un intérieur pensé autour de votre art de vivre', in ES 'Un hogar diseñado a la medida de tu vida'.",
-        "Evitato il termine generico 'furnishing' in EN, preferendo 'spatial layout, bespoke furniture, materials and lighting design'.",
-        "Mantenuta la distinzione netta tra interior design e architettura strutturale, evitando promesse su permessi edilizi o direzione lavori.",
+    "keyDecisions": {
+      "it": [
+        "«Home» diventa «casa», non «alloggio», per mantenere il tono personale.",
+        "«Designed around» si rende con «pensata per», eliminando la struttura inglese.",
+        "La call to action è «Richiedi informazioni», non una promessa commerciale non autorizzata."
       ],
-      en: [
-        "Rendered 'Una casa pensata intorno al tuo modo di vivere' naturally as 'A home designed around the way you live'.",
-        "Selected 'spatial layout, furniture, finishes and lighting' rather than literal translations of Italian building idioms.",
-        "Strictly preserved the scope of interior design, avoiding unlicensed architectural or building permit terminology.",
+      "en": [
+        "Use «casa» to preserve a warm, personal register.",
+        "Translate meaning, not the syntax of «designed around».",
+        "Keep the CTA truthful: request information, without inventing commitments."
       ],
-      fr: [
-        "Traduction de l'accroche par 'Un intérieur pensé autour de votre art de vivre' pour une résonance naturelle et haut de gamme.",
-        "Choix de termes précis comme 'agencement d'espaces, finitions, mobilier et mise en lumière'.",
-        "Respect strict du périmètre de l'architecture d'intérieur sans empiéter sur la maîtrise d'œuvre.",
+      "fr": [
+        "Privilégier «casa», naturel pour un texte de décoration intérieure.",
+        "Adapter la structure anglaise, plutôt que reproduire un calque.",
+        "Conserver les conditions de l’offre réelle dans l’appel à l’action."
       ],
-      es: [
-        "Traducción del lema por 'Un hogar diseñado a la medida de tu vida', aunando calidez y precisión profesional.",
-        "Elección de 'distribución de espacios, materiales, mobiliario e iluminación'.",
-        "Delimitación clara del interiorismo residencial sin confusión con reformas integrales o trámites de obra.",
-      ],
+      "es": [
+        "Usar «casa» para mantener un tono cercano.",
+        "Adaptar la estructura inglesa y no calcarla.",
+        "Evitar promesas que no constan en la oferta original."
+      ]
     },
-    deliverable: {
-      it: "Pacchetto completo multilingue per Home, Servizi (Progettazione, Materiali, Arredi, Consulenza), Fasi di Lavoro e Form di Contatto.",
-      en: "Complete localized copy deck for Home, Services (Space Planning, Finishes, Furnishings, Consultation), Process, and Contact.",
-      fr: "Dossier éditorial multilingue complet pour l'Accueil, les Services, les Étapes de travail et la page Contact.",
-      es: "Guía completa localizada para Inicio, Servicios, Fases de trabajo y Formulario de contacto.",
+    "deliverable": {
+      "it": "Mini-dossier EN → IT con headline, descrizione, CTA e note linguistiche. Esempio consultabile nel documento 01.",
+      "en": "English-to-Italian copy deck with headline, introduction, CTA and review notes, illustrated in document 01.",
+      "fr": "Mini-dossier EN → IT : accroche, description, appel à l’action et notes ; document 01.",
+      "es": "Muestra EN → IT: titular, descripción, llamada a la acción y notas; documento 01."
     },
-    comparison: {
-      sourceLang: "IT",
-      targetLang: "EN",
-      sourceText: "Una casa pensata intorno al tuo modo di vivere. Progetto interni residenziali partendo dalle persone che li abitano.",
-      literalText: "A house thought around your way of living. I project residential interiors starting from people who inhabit them.",
-      localizedText: "A home designed around the way you live. I create residential interiors shaped by the people who live in them.",
-      notes: {
-        it: "La versione localizzata sostituisce 'house' con 'home', 'project' con 'design/create' ed elimina la pesantezza della costruzione passiva italiana.",
-        en: "The localized version uses 'home' rather than 'house', selects natural verbs ('create', 'shape'), and avoids Italian prepositional calques.",
-        fr: "La version localisée privilégie la chaleur du mot 'home/intérieur' et la fluidité des verbes d'action.",
-        es: "La adaptación descarta la traducción literal de 'progetto' como 'proyecto' y opta por una redacción fluida y cercana.",
-      },
-    },
-    disclaimer: DEMO_DISCLAIMER,
-  },
+    "comparison": {
+      "sourceLang": "EN",
+      "targetLang": "IT",
+      "sourceText": "A home designed around the way you live. Thoughtful interior design, from furniture choices to the details that make a room feel yours.",
+      "literalText": "Una casa disegnata intorno al modo in cui vivi. Design interno pensieroso, dalle scelte di mobili ai dettagli che fanno sentire una stanza tua.",
+      "localizedText": "Una casa pensata per il tuo modo di vivere. Progetti d’interni curati, dalla scelta degli arredi ai dettagli che rendono ogni ambiente davvero tuo.",
+      "notes": {
+        "it": "«Pensata per» è idiomatico, «arredi» è preciso e «ambiente» è più adatto al contesto di «stanza».",
+        "en": "Idiomatic sentence structure, accurate design terminology and a customer-centred tone.",
+        "fr": "Syntaxe naturelle, vocabulaire précis et registre adapté au public italien.",
+        "es": "Sintaxis natural, terminología precisa y un tono adecuado al público italiano."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  }
 
-  // 02. ECONOMIC / COMMERCIAL SPECIALIST TRANSLATION
+    // 02. ECONOMIC / COMMERCIAL SPECIALIST TRANSLATION
   {
     id: "02-economic-commercial-translation",
     order: 2,
@@ -897,77 +898,91 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
 
   // 11. MULTILINGUAL LANDING PAGE DEVELOPMENT
   {
-    id: "11-multilingual-landing-page",
-    order: 11,
-    category: "web",
-    title: {
-      it: "Realizzazione landing page multilingue per servizio professionale",
-      en: "Multilingual Landing Page Development for Professional Services",
-      fr: "Création de landing page multilingue pour prestation de services",
-      es: "Diseño y desarrollo de landing page multilingüe para servicios profesionales",
+    "id": "11-multilingual-landing-page",
+    "order": 11,
+    "category": "web",
+    "title": {
+      "it": "Revisione dei contenuti di una landing page per il mercato italiano",
+      "en": "Italian landing page: content review and localisation",
+      "fr": "Page de destination italienne : révision et localisation éditoriale",
+      "es": "Landing page en italiano: revisión y localización de contenidos"
     },
-    subtitle: {
-      it: "Architettura semantica, responsive design, integrazione form e localizzazione IT / EN / FR / ES",
-      en: "Semantic architecture, responsive design, form routing, and IT / EN / FR / ES localization",
-      fr: "Architecture sémantique, design responsive, formulaires et localisation IT / EN / FR / ES",
-      es: "Estructura semántica, diseño adaptable, formularios y localización en 4 idiomas",
+    "subtitle": {
+      "it": "Headline, servizi, FAQ e CTA: intervento linguistico e organizzazione dei testi, non sviluppo web",
+      "en": "Clear Italian headlines, FAQs and calls to action; editorial work, not website development",
+      "fr": "Accroches, FAQ et appels à l’action en italien ; prestation éditoriale, sans développement web",
+      "es": "Titulares, preguntas frecuentes y llamadas a la acción en italiano, sin desarrollo técnico"
     },
-    brief: {
-      it: "Progettazione e pubblicazione di una landing page essenziale per lanciare un percorso di consulenza professionale rivolto a un pubblico europeo.",
-      en: "Design and build of a high-clarity landing page to launch a bespoke consulting package across European audiences.",
-      fr: "Conception d'une page d'atterrissage épurée pour lancer une offre de conseil auprès d'un public européen.",
-      es: "Diseño y publicación de una landing page optimizada para presentar un programa de consultoría en Europa.",
+    "brief": {
+      "it": "Scenario simulato: un consulente internazionale ha una pagina in inglese e vuole renderne il messaggio comprensibile a visitatori italiani.",
+      "en": "Fictional scenario: an international consultant has an English landing page and wants to communicate clearly with Italian visitors.",
+      "fr": "Scénario fictif : un consultant international souhaite adapter une page anglophone au public italien.",
+      "es": "Supuesto ficticio: un consultor internacional quiere adaptar una página en inglés a lectores italianos."
     },
-    startingMaterial: {
-      it: "Obiettivo commerciale, descrizione del programma, profilo del consulente e modalità di prenotazione call conoscitiva.",
-      en: "Consulting offer overview, practitioner biography, target client criteria, and 30-minute discovery call booking mechanism.",
-      fr: "Descriptif de la prestation, bio de l'intervenant et lien de réservation d'un premier entretien.",
-      es: "Descripción del servicio, perfil profesional y mecanismo de reserva de una llamada informativa previa.",
+    "startingMaterial": {
+      "it": "Una bozza in inglese contenente titolo, testo introduttivo, servizi, FAQ e invito a chiedere informazioni.",
+      "en": "English copy draft containing a headline, introduction, service list, FAQ and enquiry CTA.",
+      "fr": "Brouillon anglais comprenant titre, présentation, services, FAQ et formulaire de contact.",
+      "es": "Borrador en inglés con título, presentación, servicios, FAQ y llamada a contactar."
     },
-    objective: {
-      it: "Realizzare una pagina leggera, accessibile (WCAG AA), veloce nel caricamento e perfettamente consultabile da smartphone in 4 lingue.",
-      en: "Produce an ultra-fast, accessible (WCAG AA), responsive single-page experience supporting 4 localized language versions.",
-      fr: "Créer une page rapide, accessible (WCAG AA), adaptée aux smartphones et déclinée en 4 langues.",
-      es: "Desarrollar una página ligera, accesible (WCAG AA), de carga rápida y adaptable a móviles en 4 idiomas.",
+    "objective": {
+      "it": "Rendere il contenuto italiano chiaro e coerente, con un percorso di lettura ordinato e terminologia uniforme.",
+      "en": "Make the Italian copy clear, consistent and easy to scan without changing the actual offer.",
+      "fr": "Créer des contenus italiens clairs et cohérents, sans modifier la prestation réelle.",
+      "es": "Crear textos en italiano claros, coherentes y fieles a la oferta real."
     },
-    approach: {
-      it: "Gerarchia visiva chiara senza pop-up invasivi: Hero con headline limpida, 3 punti di forza, dettaglio programma, FAQ e modulo di contatto integrato.",
-      en: "Clean visual hierarchy free from disruptive popups: focused Hero, 3 tangible pillars, scope breakdown, FAQs, and validated contact form.",
-      fr: "Hiérarchie visuelle sans artifice : accroche claire, 3 piliers d'expertise, programme détaillé, FAQ et formulaire sécurisé.",
-      es: "Estructura visual sin ventanas emergentes: propuesta de valor clara, 3 pilares, desglose del servicio, FAQ y formulario integrado.",
+    "approach": {
+      "it": "Inventario dei messaggi, gerarchia dei contenuti, localizzazione EN → IT, revisione di FAQ e CTA, consegna dei testi per il CMS.",
+      "en": "Audit source messages; organise copy hierarchy; localise EN → IT; review FAQs and CTAs; provide CMS-ready text.",
+      "fr": "Recenser les messages, structurer les textes, localiser vers l’italien, réviser FAQ et appels à l’action.",
+      "es": "Revisar los mensajes, estructurar los textos, localizar al italiano y entregar la versión preparada para CMS."
     },
-    keyDecisions: {
-      it: [
-        "Palette colori sobria su toni naturali caldi, contrasto testo/sfondo certificato superiore a 7:1.",
-        "Implementazione di tag hreflang corretti e URL localizzati per ciascuna lingua.",
-        "Validazione dei campi form con avvisi di errore localizzati nella lingua attiva del visitatore.",
+    "keyDecisions": {
+      "it": [
+        "Headline specifica per il bisogno del lettore italiano, non slogan generici.",
+        "FAQ costruite dalle domande presenti nel brief, senza inventare condizioni.",
+        "Consegna di testi modificabili, lasciando sviluppo, hosting e form tecnici al cliente."
       ],
-      en: [
-        "Warm neutral color palette ensuring contrast ratios exceeding 7:1 for effortless legibility.",
-        "Implemented valid bidirectional hreflang tags and localized routing across all 4 locales.",
-        "Real-time form validation providing native, polite error messages matching the visitor's language.",
+      "en": [
+        "Prioritise one clear reader question in the Italian headline.",
+        "Write FAQs only from approved source information.",
+        "Deliver editable content; hosting, code and technical form integration are outside scope."
       ],
-      fr: [
-        "Palette sobre et chaleureuse avec un contraste texte/fond conforme aux normes d'accessibilité.",
-        "Balisage hreflang complet et routes d'URL dédiées par langue.",
-        "Validation de formulaire en temps réel avec messages d'erreur entièrement traduits.",
+      "fr": [
+        "Une accroche italienne utile, sans slogan vide.",
+        "Aucune condition commerciale ajoutée dans les FAQ.",
+        "Livraison de contenus éditables ; l’intégration technique n’est pas incluse."
       ],
-      es: [
-        "Paleta cromática neutra con contraste visual superior a 7:1 en todos los textos.",
-        "Configuración completa de etiquetas hreflang y rutas adaptadas por idioma.",
-        "Validación de formularios con avisos de error contextualizados en la lengua seleccionada.",
-      ],
+      "es": [
+        "Un titular italiano centrado en la necesidad del lector.",
+        "Preguntas frecuentes basadas en datos aprobados.",
+        "Entrega de textos editables; sin programación ni alojamiento web."
+      ]
     },
-    deliverable: {
-      it: "Codice sorgente completo React/Tailwind, test di accessibilità superati e documentazione di manutenzione.",
-      en: "Complete production-ready React/Tailwind codebase, accessibility validation audit, and handover guide.",
-      fr: "Code source complet React/Tailwind, validation d'accessibilité et guide de mise à jour.",
-      es: "Código fuente completo en React y Tailwind, validación de accesibilidad y guía de gestión.",
+    "deliverable": {
+      "it": "Kit di contenuti IT: titolo, sottotitolo, tre benefici, FAQ e CTA, con note per l’inserimento nel CMS.",
+      "en": "Italian copy kit: headline, subheading, three benefits, FAQ and CTA, ready for client-side CMS integration.",
+      "fr": "Kit éditorial italien : titre, sous-titre, bénéfices, FAQ, CTA et indications pour le CMS.",
+      "es": "Kit editorial italiano: titular, subtítulo, beneficios, preguntas frecuentes, CTA y notas para CMS."
     },
-    disclaimer: DEMO_DISCLAIMER,
-  },
+    "comparison": {
+      "sourceLang": "EN",
+      "targetLang": "IT",
+      "sourceText": "Get tailored guidance for your next project. Tell us what you need and we will explain the available options.",
+      "literalText": "Ottieni guida su misura per il tuo prossimo progetto. Dici cosa ti serve e spiegheremo le opzioni disponibili.",
+      "localizedText": "Un supporto su misura per il tuo prossimo progetto. Raccontaci di cosa hai bisogno: ti illustreremo le soluzioni disponibili.",
+      "notes": {
+        "it": "«Raccontaci» invita al contatto senza suonare imperativo; sono mantenute le promesse del testo originale.",
+        "en": "Preserves scope and avoids an awkward literal imperative.",
+        "fr": "Invite au contact dans un registre naturel, sans promesse ajoutée.",
+        "es": "Invita a contactar de forma natural y conserva el sentido original."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  }
 
-  // 12. DEDICATED LITERARY TRANSLATION SAMPLE (MASTER FIELD: LETTERARIO)
+    // 12. DEDICATED LITERARY TRANSLATION SAMPLE (MASTER FIELD: LETTERARIO)
   {
     id: "12-literary-translation-sample",
     order: 12,
@@ -1062,6 +1077,688 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       es: "Texto original en inglés creado expresamente para este proyecto demostrativo.",
     },
   },
+  {
+    "id": "13-french-italian-product-localisation",
+    "order": 13,
+    "category": "translation",
+    "title": {
+      "it": "Localizzazione FR → IT: scheda prodotto per la casa",
+      "en": "French-to-Italian product page localisation",
+      "fr": "Localisation FR → IT : fiche produit pour la maison",
+      "es": "Localización FR → IT: ficha de producto para el hogar"
+    },
+    "subtitle": {
+      "it": "Descrizione, specifiche, microcopy e controllo terminologico",
+      "en": "Description, specifications and Italian customer-facing microcopy",
+      "fr": "Description, caractéristiques et microtextes pour le marché italien",
+      "es": "Descripción, especificaciones y microtextos para el público italiano"
+    },
+    "brief": {
+      "it": "Marchio francese immaginario di articoli per la casa che vuole presentare un prodotto sul proprio sito italiano.",
+      "en": "A fictional French homeware brand needs a consistent Italian product listing.",
+      "fr": "Une marque fictive française d’articles pour la maison prépare une fiche en italien.",
+      "es": "Una marca francesa ficticia prepara una ficha de producto para Italia."
+    },
+    "startingMaterial": {
+      "it": "Titolo, descrizione e specifiche in francese, con informazioni di prodotto non negoziabili.",
+      "en": "French product title, description and technical specifications.",
+      "fr": "Titre français, texte descriptif et caractéristiques techniques.",
+      "es": "Título, descripción y características técnicas originales en francés."
+    },
+    "objective": {
+      "it": "Adattare il linguaggio commerciale senza alterare misure, caratteristiche o dotazione.",
+      "en": "Create natural Italian product copy without changing specifications or product promises.",
+      "fr": "Rédiger une fiche italienne naturelle sans modifier les spécifications.",
+      "es": "Redactar una ficha italiana natural sin alterar los datos técnicos."
+    },
+    "approach": {
+      "it": "Terminologia coerente per arredi; controllo delle unità; riformulazione di descrizioni e pulsanti; confronto con il testo sorgente.",
+      "en": "Create a terminology list; verify units; adapt descriptions and CTAs; compare against source.",
+      "fr": "Glossaire, contrôle des unités, adaptation éditoriale et vérification de fidélité.",
+      "es": "Glosario, revisión de unidades, adaptación de descripciones y verificación."
+    },
+    "keyDecisions": {
+      "it": [
+        "«Bras articulé» diventa «braccio snodabile», non «braccio articolato».",
+        "«Ampoule non fournie» è reso esplicitamente come «lampadina non inclusa».",
+        "Le specifiche restano separate dal testo persuasivo."
+      ],
+      "en": [
+        "Translate «bras articulé» as natural Italian «braccio snodabile».",
+        "State clearly when a bulb is not supplied.",
+        "Keep technical specifications distinct from marketing copy."
+      ],
+      "fr": [
+        "«Bras articulé» devient «braccio snodabile» dans l’usage italien.",
+        "L’absence d’ampoule est indiquée sans ambiguïté.",
+        "Les données techniques restent séparées du texte promotionnel."
+      ],
+      "es": [
+        "«Bras articulé» se adapta a «braccio snodabile».",
+        "Se especifica que la bombilla no está incluida.",
+        "Se diferencian prestaciones reales y lenguaje comercial."
+      ]
+    },
+    "deliverable": {
+      "it": "Scheda FR → IT completa con tabella di confronto, glossario e note; documento 17.",
+      "en": "French/Italian comparison sheet with glossary and editorial notes; document 17.",
+      "fr": "Fiche comparative français/italien avec glossaire et notes ; document 17.",
+      "es": "Ficha comparativa francés/italiano con glosario y notas; documento 17."
+    },
+    "comparison": {
+      "sourceLang": "FR",
+      "targetLang": "IT",
+      "sourceText": "Une lumière douce pour accompagner vos moments de lecture. Son bras articulé permet d’orienter l’éclairage selon vos besoins. Ampoule non fournie.",
+      "literalText": "Una luce morbida per accompagnare i vostri momenti di lettura. Il suo braccio articolato permette di orientare l'illuminazione secondo i vostri bisogni. Bulbo non fornito.",
+      "localizedText": "Una luce delicata per i tuoi momenti di lettura. Il braccio snodabile permette di orientare il fascio luminoso secondo le tue esigenze. Lampadina non inclusa.",
+      "notes": {
+        "it": "Registro diretto coerente, collocazioni naturali e specifica tecnica non ambigua.",
+        "en": "Natural Italian collocations and clear equipment information.",
+        "fr": "Collocations naturelles et précision des informations produit.",
+        "es": "Expresiones naturales y precisión técnica."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "14-spanish-italian-existing-customer-email",
+    "order": 14,
+    "category": "translation",
+    "title": {
+      "it": "Adattamento ES → IT: email a un cliente già acquisito",
+      "en": "Spanish-to-Italian email for an existing customer",
+      "fr": "Adaptation ES → IT : e-mail à un client existant",
+      "es": "Adaptación ES → IT: correo a un cliente existente"
+    },
+    "subtitle": {
+      "it": "Una comunicazione professionale cortese, non un'attività di acquisizione clienti",
+      "en": "Professional customer correspondence, not prospecting",
+      "fr": "Correspondance professionnelle, sans prospection commerciale",
+      "es": "Correspondencia profesional sin captación de clientes"
+    },
+    "brief": {
+      "it": "Un fornitore spagnolo immaginario risponde a un cliente italiano già attivo chiedendo un riscontro su una proposta precedentemente inviata.",
+      "en": "A fictional Spanish supplier follows up with an existing Italian customer about a previously requested proposal.",
+      "fr": "Un fournisseur espagnol fictif écrit à un client italien déjà acquis au sujet d’une proposition demandée.",
+      "es": "Un proveedor español ficticio escribe a un cliente italiano ya existente sobre una propuesta solicitada."
+    },
+    "startingMaterial": {
+      "it": "Messaggio di follow-up in spagnolo, con richiesta di conferma e disponibilità a chiarire le informazioni.",
+      "en": "Spanish-language service follow-up message requiring an Italian version.",
+      "fr": "Message espagnol de suivi, à traduire en italien.",
+      "es": "Correo de seguimiento en español destinado a un cliente italiano."
+    },
+    "objective": {
+      "it": "Mantenere cortesia, chiarezza e neutralità, senza trasformare il follow-up in una sollecitazione commerciale aggressiva.",
+      "en": "Preserve a polite, neutral tone without turning support follow-up into cold outreach.",
+      "fr": "Préserver un ton courtois, sans prospection ni insistance excessive.",
+      "es": "Mantener un tono profesional y cercano sin presión comercial."
+    },
+    "approach": {
+      "it": "Analisi del rapporto già esistente, forma di cortesia italiana, scelta dell’oggetto e verifica dell’azione richiesta.",
+      "en": "Review customer relationship, Italian form of address, subject line and next action.",
+      "fr": "Analyse du lien client, des formules italiennes et de l’action attendue.",
+      "es": "Análisis del contexto, fórmulas italianas y acción solicitada."
+    },
+    "keyDecisions": {
+      "it": [
+        "«Nos ponemos en contacto» è reso con «Le scriviamo», senza preamboli superflui.",
+        "Si mantiene il riferimento alla proposta già inviata.",
+        "Il testo non viene trasformato in una comunicazione di prospecting."
+      ],
+      "en": [
+        "Prefer natural Italian «Le scriviamo» over a literal business calque.",
+        "Preserve the reference to a previously submitted proposal.",
+        "Keep the message within existing-customer service, not prospecting."
+      ],
+      "fr": [
+        "Choisir une formule italienne sobre et professionnelle.",
+        "Respecter la référence à la proposition déjà transmise.",
+        "Ne pas transformer le suivi en prospection."
+      ],
+      "es": [
+        "Evitar un calco de «nos ponemos en contacto».",
+        "Mantener la referencia a una propuesta ya enviada.",
+        "No convertir el seguimiento en una acción de captación."
+      ]
+    },
+    "deliverable": {
+      "it": "Email ES → IT con oggetto, corpo, saluti e nota redazionale; documento 18.",
+      "en": "Spanish-to-Italian email draft with subject, message and editorial notes; document 18.",
+      "fr": "Courriel ES → IT avec objet et notes linguistiques ; document 18.",
+      "es": "Correo ES → IT con asunto y notas lingüísticas; documento 18."
+    },
+    "comparison": {
+      "sourceLang": "ES",
+      "targetLang": "IT",
+      "sourceText": "Buenos días, nos ponemos en contacto para saber si ha tenido ocasión de revisar la propuesta enviada la semana pasada. Estaremos encantados de aclarar cualquier detalle.",
+      "literalText": "Buongiorno, ci mettiamo in contatto per sapere se ha avuto occasione di rivedere la proposta inviata la settimana passata. Saremo incantati di chiarire qualsiasi dettaglio.",
+      "localizedText": "Buongiorno, le scriviamo per sapere se ha avuto modo di esaminare la proposta inviata la scorsa settimana. Restiamo a disposizione per qualsiasi chiarimento.",
+      "notes": {
+        "it": "Sintassi più naturale, tono professionale misurato e riferimento al rapporto già esistente.",
+        "en": "Natural Italian business tone and a restrained customer-service register.",
+        "fr": "Registre professionnel italien fluide et discret.",
+        "es": "Registro italiano profesional, natural y sin presión comercial."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "15-italian-written-customer-care",
+    "order": 15,
+    "category": "backoffice",
+    "title": {
+      "it": "Customer care scritto: tre richieste in italiano",
+      "en": "Italian written customer care: three real-world scenarios",
+      "fr": "Relation client écrite en italien : trois situations",
+      "es": "Atención escrita en italiano: tres situaciones"
+    },
+    "subtitle": {
+      "it": "Classificazione dei ticket, risposte pronte e gestione delle eccezioni",
+      "en": "Ticket triage, approved replies and escalation rules",
+      "fr": "Tri des demandes, réponses et règles de validation",
+      "es": "Clasificación, respuestas y criterios de escalado"
+    },
+    "brief": {
+      "it": "Scenario simulato: un piccolo negozio online deve gestire richieste su disponibilità, ordini e tempi di consegna da clienti esistenti.",
+      "en": "Fictional small online shop needs organised Italian replies to current customers about stock, orders and delivery.",
+      "fr": "Boutique en ligne fictive : demandes de clients italiens sur stock, commandes et livraison.",
+      "es": "Tienda online ficticia: consultas de clientes italianos sobre stock, pedidos y entregas."
+    },
+    "startingMaterial": {
+      "it": "Tre email simulate, catalogo approvato e procedura di rinvio delle domande non risolvibili.",
+      "en": "Three synthetic customer messages, approved product details and escalation instructions.",
+      "fr": "Trois e-mails fictifs, informations approuvées et consignes d’escalade.",
+      "es": "Tres correos ficticios, información aprobada y reglas de consulta."
+    },
+    "objective": {
+      "it": "Preparare risposte attendibili, indicare il prossimo passo e non promettere disponibilità o consegne non verificate.",
+      "en": "Provide accurate Italian responses, next steps and no unsupported commitments.",
+      "fr": "Préparer des réponses italiennes exactes, sans engagement non vérifié.",
+      "es": "Preparar respuestas italianas claras y sin promesas no confirmadas."
+    },
+    "approach": {
+      "it": "Classificazione per urgenza, controllo delle fonti, bozza di risposta, approvazione e aggiornamento del registro ticket.",
+      "en": "Triage, verify approved data, draft a reply, obtain authorisation and update the ticket log.",
+      "fr": "Trier, vérifier, rédiger, demander validation et actualiser le suivi.",
+      "es": "Clasificar, comprobar, redactar, validar y actualizar el registro."
+    },
+    "keyDecisions": {
+      "it": [
+        "Non comunicare una data di consegna senza conferma del referente autorizzato.",
+        "Una domanda su fatture o contabilità viene inoltrata: non viene gestita dall’assistente.",
+        "Il registro conserva solo i dati operativi necessari."
+      ],
+      "en": [
+        "Never invent a delivery date.",
+        "Refer billing/accounting issues to the responsible team; do not handle them.",
+        "Record only necessary operational data."
+      ],
+      "fr": [
+        "Ne jamais inventer une date de livraison.",
+        "Rediriger les questions de facturation au service compétent.",
+        "Ne conserver que les données nécessaires."
+      ],
+      "es": [
+        "No inventar fechas de entrega.",
+        "Derivar cuestiones contables o de facturación al responsable.",
+        "Registrar únicamente datos necesarios."
+      ]
+    },
+    "deliverable": {
+      "it": "Registro ticket, modello email italiano e regole di escalation; documento 11.",
+      "en": "Italian ticket tracker, reply template and escalation matrix; sample document 11.",
+      "fr": "Tableau de tickets, réponse italienne et procédure d’escalade ; document 11.",
+      "es": "Registro de tickets, respuesta en italiano y criterios de escalado; documento 11."
+    },
+    "tableData": {
+      "headers": {
+        "it": [
+          "Ticket",
+          "Richiesta",
+          "Risposta operativa"
+        ],
+        "en": [
+          "Ticket",
+          "Customer question",
+          "Operational response"
+        ],
+        "fr": [
+          "Ticket",
+          "Demande",
+          "Réponse opérationnelle"
+        ],
+        "es": [
+          "Ticket",
+          "Consulta",
+          "Respuesta operativa"
+        ]
+      },
+      "rows": {
+        "it": [
+          [
+            "CC-101",
+            "Disponibilità prodotto",
+            "Controllare il catalogo approvato"
+          ],
+          [
+            "CC-102",
+            "Consegna non confermata",
+            "Richiedere conferma al referente"
+          ],
+          [
+            "CC-103",
+            "Informazioni di fatturazione",
+            "Inoltrare al reparto competente"
+          ]
+        ],
+        "en": [
+          [
+            "CC-101",
+            "Product availability",
+            "Check approved product list"
+          ],
+          [
+            "CC-102",
+            "Unconfirmed delivery",
+            "Request authorised status update"
+          ],
+          [
+            "CC-103",
+            "Invoicing question",
+            "Refer to responsible team"
+          ]
+        ],
+        "fr": [
+          [
+            "CC-101",
+            "Disponibilité du produit",
+            "Vérifier le catalogue validé"
+          ],
+          [
+            "CC-102",
+            "Livraison non confirmée",
+            "Consulter le responsable"
+          ],
+          [
+            "CC-103",
+            "Question de facturation",
+            "Transmettre au service compétent"
+          ]
+        ],
+        "es": [
+          [
+            "CC-101",
+            "Disponibilidad del producto",
+            "Consultar catálogo aprobado"
+          ],
+          [
+            "CC-102",
+            "Entrega sin confirmar",
+            "Solicitar estado autorizado"
+          ],
+          [
+            "CC-103",
+            "Pregunta sobre facturación",
+            "Derivar al equipo responsable"
+          ]
+        ]
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "16-order-data-and-price-list",
+    "order": 16,
+    "category": "backoffice",
+    "title": {
+      "it": "Back office: inserimento ordini e controllo listini",
+      "en": "Operational back office: order entry and price-sheet checks",
+      "fr": "Back-office opérationnel : saisie de commandes et contrôle des tarifs",
+      "es": "Back office operativo: registro de pedidos y control de tarifas"
+    },
+    "subtitle": {
+      "it": "Dati sintetici, verifiche prima/dopo e registro delle anomalie",
+      "en": "Synthetic order data, before/after checks and an exception log",
+      "fr": "Données fictives, contrôles de cohérence et journal d’anomalies",
+      "es": "Datos ficticios, controles de coherencia y registro de incidencias"
+    },
+    "brief": {
+      "it": "Un'attività immaginaria deve trascrivere ordini già acquisiti e mantenere coerenti i prezzi pubblicati con un listino approvato.",
+      "en": "A fictional business needs to log existing orders and check published prices against an approved list.",
+      "fr": "Entreprise fictive : enregistrer des commandes reçues et contrôler les tarifs affichés.",
+      "es": "Empresa ficticia: registrar pedidos recibidos y comprobar precios publicados."
+    },
+    "startingMaterial": {
+      "it": "Ordini ricevuti, foglio di inserimento, catalogo e listino validato dal titolare.",
+      "en": "Received orders, entry sheet, catalogue and business-owner-approved price list.",
+      "fr": "Bons de commande, tableau de suivi, catalogue et tarif validé.",
+      "es": "Pedidos recibidos, hoja de registro, catálogo y lista aprobada."
+    },
+    "objective": {
+      "it": "Diminuire errori di trascrizione e segnalare discrepanze senza modificare autonomamente le condizioni commerciali.",
+      "en": "Flag discrepancies without independently changing approved commercial terms.",
+      "fr": "Repérer les écarts sans modifier les conditions commerciales validées.",
+      "es": "Detectar diferencias sin cambiar condiciones comerciales autorizadas."
+    },
+    "approach": {
+      "it": "Campi obbligatori, controllo SKU e prezzo, evidenza di scostamenti, riepilogo e richiesta di conferma.",
+      "en": "Validate required fields, match SKUs and prices, flag inconsistencies and request approval.",
+      "fr": "Contrôler les références, les tarifs et les champs requis ; signaler les écarts.",
+      "es": "Comprobar códigos y precios, marcar diferencias y pedir validación."
+    },
+    "keyDecisions": {
+      "it": [
+        "Il prezzo di listino non viene modificato senza autorizzazione.",
+        "Le anomalie vengono segnalate prima dell'invio di un preventivo.",
+        "Nessuna emissione di fatture o registrazione contabile."
+      ],
+      "en": [
+        "Never change approved prices without permission.",
+        "Flag discrepancies before a quotation is sent.",
+        "No invoices or accounting entries are produced."
+      ],
+      "fr": [
+        "Aucun changement de prix sans validation.",
+        "Signaler les écarts avant l’envoi d’un devis.",
+        "Aucune facturation ni comptabilité."
+      ],
+      "es": [
+        "No cambiar precios sin autorización.",
+        "Comunicar las diferencias antes de enviar presupuestos.",
+        "Sin emisión de facturas ni contabilidad."
+      ]
+    },
+    "deliverable": {
+      "it": "Registro ordini e verifica prezzi, con esempio prima/dopo; vedi documenti 13 e 19.",
+      "en": "Order log and price verification sheet; see documents 13 and 19.",
+      "fr": "Suivi des commandes et vérification des tarifs ; documents 13 et 19.",
+      "es": "Registro de pedidos y control de precios; documentos 13 y 19."
+    },
+    "tableData": {
+      "headers": {
+        "it": [
+          "SKU",
+          "Listino approvato",
+          "Testo in bozza",
+          "Esito"
+        ],
+        "en": [
+          "SKU",
+          "Approved list",
+          "Draft listing",
+          "Check"
+        ],
+        "fr": [
+          "Réf.",
+          "Tarif validé",
+          "Brouillon",
+          "Contrôle"
+        ],
+        "es": [
+          "SKU",
+          "Precio aprobado",
+          "Borrador",
+          "Resultado"
+        ]
+      },
+      "rows": {
+        "it": [
+          [
+            "OG-10",
+            "€ 14,90",
+            "€ 14,90",
+            "Coerente"
+          ],
+          [
+            "OG-11",
+            "€ 19,90",
+            "€ 19,00",
+            "Verificare"
+          ],
+          [
+            "OG-12",
+            "€ 24,00",
+            "€ 24,00",
+            "Coerente"
+          ]
+        ],
+        "en": [
+          [
+            "OG-10",
+            "€14.90",
+            "€14.90",
+            "Match"
+          ],
+          [
+            "OG-11",
+            "€19.90",
+            "€19.00",
+            "Check"
+          ],
+          [
+            "OG-12",
+            "€24.00",
+            "€24.00",
+            "Match"
+          ]
+        ],
+        "fr": [
+          [
+            "OG-10",
+            "14,90 €",
+            "14,90 €",
+            "Conforme"
+          ],
+          [
+            "OG-11",
+            "19,90 €",
+            "19,00 €",
+            "À vérifier"
+          ],
+          [
+            "OG-12",
+            "24,00 €",
+            "24,00 €",
+            "Conforme"
+          ]
+        ],
+        "es": [
+          [
+            "OG-10",
+            "14,90 €",
+            "14,90 €",
+            "Correcto"
+          ],
+          [
+            "OG-11",
+            "19,90 €",
+            "19,00 €",
+            "Revisar"
+          ],
+          [
+            "OG-12",
+            "24,00 €",
+            "24,00 €",
+            "Correcto"
+          ]
+        ]
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "17-online-course-operations",
+    "order": 17,
+    "category": "backoffice",
+    "title": {
+      "it": "Supporto organizzativo per un corso online",
+      "en": "Online course: learner support and file organisation",
+      "fr": "Cours en ligne : organisation et communication",
+      "es": "Curso online: organización y comunicación"
+    },
+    "subtitle": {
+      "it": "Email di benvenuto, struttura cartelle, FAQ e messaggi operativi",
+      "en": "Welcome email, folder structure, FAQs and participant updates",
+      "fr": "E-mail d’accueil, dossiers, FAQ et messages aux participants",
+      "es": "Correo de bienvenida, carpetas, preguntas frecuentes y avisos"
+    },
+    "brief": {
+      "it": "Un formatore immaginario organizza un corso per partecipanti italiani e deve coordinare messaggi e materiali approvati.",
+      "en": "A fictional educator offers a course to Italian learners and needs organised communications and files.",
+      "fr": "Formateur fictif proposant un cours à des apprenants italiens.",
+      "es": "Formador ficticio que ofrece un curso a participantes italianos."
+    },
+    "startingMaterial": {
+      "it": "Programma, calendario del corso, accessi forniti dal responsabile e file di lezione non organizzati.",
+      "en": "Course schedule, approved access steps and disorganised lesson files.",
+      "fr": "Planning, instructions d’accès approuvées et documents de formation dispersés.",
+      "es": "Calendario, instrucciones de acceso aprobadas y materiales dispersos."
+    },
+    "objective": {
+      "it": "Rendere le istruzioni chiare ai partecipanti, ridurre file duplicati e distinguere assistenza organizzativa e insegnamento.",
+      "en": "Clarify access and communication without taking responsibility for teaching or course design.",
+      "fr": "Clarifier l’accès et la communication, sans dispenser de cours.",
+      "es": "Aclarar el acceso y la comunicación, sin impartir clases."
+    },
+    "approach": {
+      "it": "Struttura moduli, naming file, bozza di benvenuto, FAQ basata sulle istruzioni fornite e flusso di escalation.",
+      "en": "Structure files, draft Italian welcome copy, prepare approved FAQ and escalation rules.",
+      "fr": "Classer les fichiers, rédiger l’accueil italien et préparer une FAQ validée.",
+      "es": "Organizar archivos, redactar bienvenida en italiano y FAQ aprobadas."
+    },
+    "keyDecisions": {
+      "it": [
+        "Non inventare link o scadenze: inserire solo dati verificati.",
+        "Le domande didattiche sono inoltrate al docente.",
+        "I dati dei partecipanti sono trattati solo secondo istruzioni concordate."
+      ],
+      "en": [
+        "Do not invent links or deadlines.",
+        "Refer academic questions to the instructor.",
+        "Handle participant data only as instructed."
+      ],
+      "fr": [
+        "Ne jamais inventer de liens ou d’échéances.",
+        "Transmettre les questions pédagogiques au formateur.",
+        "Limiter le traitement des données."
+      ],
+      "es": [
+        "No inventar enlaces ni plazos.",
+        "Derivar preguntas académicas al docente.",
+        "Respetar los permisos sobre datos."
+      ]
+    },
+    "deliverable": {
+      "it": "Modello di email di benvenuto, check-list di accesso e procedura di supporto; documento 15.",
+      "en": "Welcome-email template, access checklist and support procedure; document 15.",
+      "fr": "Modèle d’e-mail d’accueil et checklist ; document 15.",
+      "es": "Correo de bienvenida y lista de control; documento 15."
+    },
+    "comparison": {
+      "sourceLang": "IT",
+      "targetLang": "IT (revised)",
+      "sourceText": "Corso pronto. Guarda i file nella cartella, trovi tutto lì. Se hai problemi scrivici.",
+      "literalText": "Corso pronto. Guarda i file nella cartella, trovi tutto lì. Se hai problemi scrivici.",
+      "localizedText": "Benvenuta e benvenuto al corso! Prima della lezione, consulta la cartella dei materiali condivisa dal docente. Se non riesci ad accedere, rispondi a questa email indicando il problema: verificheremo le istruzioni e ti aggiorneremo.",
+      "notes": {
+        "it": "Da un avviso vago a istruzioni verificabili, senza inventare link o promettere assistenza tecnica illimitata.",
+        "en": "Clear Italian instructions; no invented links or unsupported commitments.",
+        "fr": "Consignes italiennes claires, sans lien fictif ni promesse disproportionnée.",
+        "es": "Instrucciones claras en italiano, sin enlaces inventados ni promesas excesivas."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "18-product-catalogue-copy-review",
+    "order": 18,
+    "category": "writing",
+    "title": {
+      "it": "Cataloghi e schede prodotto: revisione editoriale",
+      "en": "Italian catalogue and product-copy editing",
+      "fr": "Catalogues et fiches produits : révision en italien",
+      "es": "Catálogos y fichas: revisión editorial en italiano"
+    },
+    "subtitle": {
+      "it": "Prima/dopo, uniformità terminologica, controllo informazioni approvate",
+      "en": "Before/after product copy, terminology and approved information",
+      "fr": "Avant/après, terminologie et informations vérifiées",
+      "es": "Antes/después, terminología e información aprobada"
+    },
+    "brief": {
+      "it": "Un piccolo marchio immaginario deve rendere coerenti i testi di schede prodotto, listino e FAQ.",
+      "en": "A fictional small brand needs consistent Italian product descriptions, price-list labels and FAQs.",
+      "fr": "Marque fictive : harmoniser les fiches produits, les tarifs et la FAQ en italien.",
+      "es": "Marca ficticia: unificar fichas, lista de precios y preguntas frecuentes en italiano."
+    },
+    "startingMaterial": {
+      "it": "Descrizioni italiane vaghe, titoli non uniformi e schede con informazioni ripetute.",
+      "en": "Vague Italian descriptions, inconsistent titles and repeated information.",
+      "fr": "Descriptions italiennes imprécises et titres incohérents.",
+      "es": "Descripciones italianas vagas y títulos inconsistentes."
+    },
+    "objective": {
+      "it": "Aumentare chiarezza e uniformità, senza inventare caratteristiche né modificare prezzi.",
+      "en": "Improve clarity and consistency without inventing specifications or changing prices.",
+      "fr": "Clarifier les textes sans inventer de caractéristiques ni changer les prix.",
+      "es": "Mejorar claridad y coherencia sin inventar prestaciones ni cambiar precios."
+    },
+    "approach": {
+      "it": "Inventario dei campi, schema stilistico, riscrittura del testo, verifica con scheda tecnica e controllo versioni.",
+      "en": "Audit fields, establish a style sheet, rewrite Italian copy and verify against approved product facts.",
+      "fr": "Relever les champs, fixer le style, réécrire et vérifier les données produit.",
+      "es": "Revisar campos, crear guía de estilo, reescribir y contrastar datos."
+    },
+    "keyDecisions": {
+      "it": [
+        "«Molto bello» è sostituito da una descrizione verificabile.",
+        "Dimensioni e materiali non vengono dedotti dal contesto.",
+        "I listini restano quelli approvati dal responsabile."
+      ],
+      "en": [
+        "Replace empty praise with specific, verifiable information.",
+        "Never infer measurements or materials.",
+        "Use only business-owner-approved prices."
+      ],
+      "fr": [
+        "Remplacer les adjectifs vagues par des informations vérifiables.",
+        "Ne jamais deviner les dimensions ou matériaux.",
+        "Conserver les tarifs validés."
+      ],
+      "es": [
+        "Sustituir elogios vacíos por información verificable.",
+        "No inventar medidas ni materiales.",
+        "Respetar los precios aprobados."
+      ]
+    },
+    "deliverable": {
+      "it": "Scheda prodotto revisionata, glossario di stile e report delle incongruenze; documento 19.",
+      "en": "Revised Italian listing, terminology sheet and discrepancy report; document 19.",
+      "fr": "Fiche italienne révisée, glossaire et relevé des incohérences ; document 19.",
+      "es": "Ficha italiana revisada, glosario y control de diferencias; documento 19."
+    },
+    "comparison": {
+      "sourceLang": "IT (draft)",
+      "targetLang": "IT (revised)",
+      "sourceText": "Portaoggetti con molti utilizzi. Molto bello, resistente, perfetto per tutti.",
+      "literalText": "Portaoggetti con molti utilizzi. Molto bello, resistente, perfetto per tutti.",
+      "localizedText": "Organizer da scrivania a tre scomparti, pensato per raccogliere piccoli accessori e tenere ordinato lo spazio di lavoro.",
+      "notes": {
+        "it": "Una descrizione specifica sostituisce giudizi vaghi; i tre scomparti derivano dalla scheda prodotto sintetica approvata.",
+        "en": "A specific, factual description replaces unsupported superlatives.",
+        "fr": "Des informations concrètes remplacent les superlatifs sans fondement.",
+        "es": "Información concreta en lugar de elogios no comprobables."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  }
 ];
 
 export interface PortfolioDocument {
