@@ -104,6 +104,67 @@ jobs:
                   console.log('PASS mobile menu');
                 }
               }
+              // Portfolio quality gate: all four languages, two viewport sizes, keyboard use and real sample routes.
+              const portfolioRoutes = [
+                {lang:'it',path:'/it/esempi-di-lavoro'},
+                {lang:'en',path:'/work-examples'},
+                {lang:'fr',path:'/fr/exemples-de-projets'},
+                {lang:'es',path:'/es/ejemplos-de-trabajo'}
+              ];
+              for(const item of portfolioRoutes) {
+                for(const width of [390,1365]) {
+                  await page.setViewportSize({width,height:900});
+                  await page.goto('http://127.0.0.1:4173'+item.path,{waitUntil:'networkidle'});
+                  const lang=await page.locator('html').getAttribute('lang');
+                  if(lang!==item.lang) throw Error('Portfolio locale mismatch '+item.path+': '+lang);
+                  const buttons=page.locator('article button[aria-expanded]');
+                  const count=await buttons.count();
+                  if(count!==18) throw Error('Expected 18 accessible case studies '+item.path+', got '+count);
+                  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3);
+                  if(overflow) throw Error('Horizontal page overflow for '+item.path+' at '+width+'px');
+                  const first=buttons.first();
+                  const before=await first.getAttribute('aria-expanded');
+                  await first.focus();
+                  await page.keyboard.press('Enter');
+                  const after=await first.getAttribute('aria-expanded');
+                  if(before===after) throw Error('Portfolio case not keyboard-operable: '+item.path);
+                  await page.screenshot({path:'/tmp/noemi-smoke/portfolio_'+item.lang+'_'+width+'.png',fullPage:false});
+                  console.log('PASS portfolio '+item.lang+' '+width+'px, 18 cases, accessible accordion, no horizontal overflow');
+                }
+              }
+              const portfolioSamples=[
+                {lang:'it',path:'/it/esempi-di-lavoro/esempio/12',num:'12'},
+                {lang:'en',path:'/work-examples/sample/22',num:'22'},
+                {lang:'fr',path:'/fr/exemples-de-projets/exemple/17',num:'17'},
+                {lang:'es',path:'/es/ejemplos-de-trabajo/ejemplo/18',num:'18'}
+              ];
+              for(const item of portfolioSamples) {
+                for(const width of [390,1365]) {
+                  await page.setViewportSize({width,height:900});
+                  await page.goto('http://127.0.0.1:4173'+item.path,{waitUntil:'networkidle'});
+                  const language=await page.locator('html').getAttribute('lang');
+                  if(language!==item.lang) throw Error('Wrong sample document language '+item.path+': '+language);
+                  if(await page.locator('main h1').count()!==1) throw Error('Missing document heading '+item.path);
+                  const original=await page.locator('main iframe').getAttribute('src');
+                  if(!original?.startsWith('/portfolio-documenti/doc-'+item.num+'-')) throw Error('Wrong sample iframe '+item.path+': '+original);
+                  const response=await page.request.get('http://127.0.0.1:4173'+original);
+                  if(response.status()!==200) throw Error('Original sample unreachable '+original);
+                  if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3))
+                    throw Error('Sample horizontal overflow '+item.path+' at '+width+'px');
+                  const alternateCount=await page.locator('link[rel="alternate"][hreflang]').count();
+                  if(alternateCount!==5) throw Error('Sample alternate-language SEO links missing '+item.path);
+                  await page.screenshot({path:'/tmp/noemi-smoke/sample_'+item.lang+'_'+item.num+'_'+width+'.png',fullPage:false});
+                  console.log('PASS guided sample '+item.path+' '+width+'px, localized page + reachable original');
+                }
+              }
+              await page.setViewportSize({width:390,height:900});
+              await page.goto('http://127.0.0.1:4173/work-examples/sample/17',{waitUntil:'networkidle'});
+              await page.locator('nav[aria-label="Language / Langue / Idioma"] a[lang="fr"]').click();
+              await page.waitForURL('**/fr/exemples-de-projets/exemple/17');
+              if(await page.locator('html').getAttribute('lang')!=='fr')
+                throw Error('Document language switch failed to keep sample and locale');
+              console.log('PASS EN to FR language switch preserves the same portfolio sample');
+
               // Until the new provider has been verified, NEVER transmit personal data
               // to the previously failing provider. The visitor gets a usable manual draft.
               await page.setViewportSize({width:1365,height:900});
