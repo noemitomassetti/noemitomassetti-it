@@ -145,10 +145,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Una persona con cui coordinarti e a cui affidare attività definite."
           : lang === "fr"
-          ? "Une collaboratrice dédiée à qui confier des missions précises."
+          ? "Une professionnelle à qui confier des tâches précises, selon vos besoins."
           : lang === "es"
           ? "Una persona de confianza con quien coordinar tareas definidas."
-          : "A dedicated professional you can delegate to with full peace of mind.",
+          : "A professional you can delegate clearly defined tasks to.",
     },
   ];
 
@@ -170,7 +170,7 @@ export default function IndexPage() {
           ? "Un parcours riche forgé dans l'organisation, le support opérationnel et les langues."
           : lang === "es"
           ? "Una trayectoria sólida en labores organizativas, lingüísticas y de soporte."
-          : "A seasoned background built through extensive administrative, linguistic, and operational roles.",
+          : "A professional background spanning organisational, customer-facing and language-related roles.",
     },
     {
       icon: GraduationCap,
@@ -284,10 +284,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Un supporto operativo per le attività di segreteria, organizzazione e back office che richiedono tempo e continuità."
           : lang === "fr"
-          ? "Un soutien fiable pour le secrétariat, l'organisation documentaire et les opérations administratives."
+          ? "Un soutien fiable pour le secrétariat organisationnel, le classement documentaire et le back-office opérationnel."
           : lang === "es"
           ? "Un respaldo continuo para secretaría, organización de datos y gestiones de back office."
-          : "Dependable ongoing administrative and back-office support that keeps operations flowing smoothly.",
+          : "Practical organisational and back-office support for agreed day-to-day activities.",
     },
     {
       icon: Globe,
@@ -303,10 +303,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Le mie competenze linguistiche possono essere utili per comunicazioni, traduzioni e contenuti destinati a interlocutori internazionali."
           : lang === "fr"
-          ? "Mes compétences en 4 langues facilitent vos échanges, traductions et négociations internationales."
+          ? "Je traduis vers l’italien et apporte un soutien adapté à vos communications professionnelles avec des interlocuteurs italiens."
           : lang === "es"
-          ? "Mis competencias lingüísticas te ayudan con traducciones y comunicación fluida en 4 idiomas."
-          : "Linguistic expertise across 4 European languages ensures smooth cross-border communications and translations.",
+          ? "Traduzco al italiano y te ayudo a preparar comunicaciones profesionales adecuadas para tus interlocutores italianos."
+          : "I translate into Italian and help make written communications with your existing Italian customers clear and appropriate.",
     },
   ];
 
@@ -545,12 +545,12 @@ export default function IndexPage() {
           <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <h1 className="sr-only">
               {lang === "it"
-                ? "Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e siti web."
+                ? "Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e contenuti per siti web."
                 : lang === "fr"
                 ? "Noemi Tomassetti - Assistante Virtuelle pour professionnels et entreprises. Organisation, secrétariat, communication multilingue et sites web."
                 : lang === "es"
                 ? "Noemi Tomassetti - Asistente Virtual para profesionales y empresas. Organización, secretaría, comunicación multilingüe y páginas web."
-                : "Noemi Tomassetti - Virtual Assistant for professionals and small businesses. Administration, organization, multilingual communication, and websites."}
+                : "Noemi Tomassetti - Virtual Assistant for professionals and small businesses. Operational back office, organisational support, multilingual communication and Italian-language website content."}
             </h1>
 
             {/* SVG Logo: Noemi Tomassetti / VIRTUAL ASSISTANT */}
@@ -654,7 +654,7 @@ export default function IndexPage() {
                 ? "E-mails, plannings, messages de clients, classement et micro-tâches qui, bout à bout, saturent vos journées."
                 : lang === "es"
                 ? "Emails, citas, consultas, documentos y micro-tareas que van acumulando horas y dispersando tu atención."
-                : "Emails, calendar coordination, client queries, documents, and administrative tasks that quietly drain your time."}
+                : "Emails, calendar coordination, existing-customer queries and documents that take up time and attention."}
             </p>
             <p className="font-semibold text-foreground">
               {lang === "it"
@@ -682,10 +682,10 @@ export default function IndexPage() {
                 {lang === "it"
                   ? "Posso occuparmi di alcune delle attività di segreteria, organizzazione, comunicazione e supporto operativo che fanno parte della gestione quotidiana della tua attività."
                   : lang === "fr"
-                  ? "Je prends en charge vos opérations de secrétariat, d'organisation, de traduction et de gestion back-office courante."
+                  ? "Je peux prendre en charge des tâches convenues de secrétariat organisationnel, de correspondance avec les clients existants, de traduction vers l’italien et de back-office opérationnel."
                   : lang === "es"
-                  ? "Puedo hacerme cargo de la secretaría, organización, traducción y soporte operativo que componen el día a día."
-                  : "I take charge of the administrative, organizational, multilingual, and back-office tasks that support your business."}
+                  ? "Puedo encargarme de tareas acordadas de secretaría organizativa, atención escrita a clientes existentes, traducción al italiano y back office operativo."
+                  : "I can help with agreed operational back-office tasks, written support for existing Italian customers and translation into Italian."}
               </p>
               <p>
                 {lang === "it"
@@ -1365,8 +1365,8 @@ export default function IndexPage() {
             </h3>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xl">
               {lang === "it"
-                ? "Consulta le metodologie, i confronti bilingue prima/dopo e i deliverable reali su traduzioni, ricerche desk, back office e siti web."
-                : lang === "fr" ? "Consultez des exemples de traduction, de révision et de soutien opérationnel. Ce sont des démonstrations, et non des missions commandées par des clients." : lang === "es" ? "Consulta ejemplos de traducción, revisión y apoyo operativo. Son muestras demostrativas, no encargos de clientes reales." : "Review real-world methodologies, dual-language source/target comparisons, and operational deliverables."}
+                ? "Consulta i casi studio, i confronti prima/dopo e i documenti dimostrativi su traduzione, ricerche informative, back office e contenuti per siti web."
+                : lang === "fr" ? "Consultez des exemples de traduction, de révision et de soutien opérationnel. Ce sont des démonstrations, et non des missions commandées par des clients." : lang === "es" ? "Consulta ejemplos de traducción, revisión y apoyo operativo. Son muestras demostrativas, no encargos de clientes reales." : "Review illustrative methods, source/target translations and operational work samples created for demonstration."}
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">

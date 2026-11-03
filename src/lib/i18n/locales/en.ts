@@ -212,11 +212,11 @@ export const enLocale: TranslationDictionary = {
     description:
       'NoeTom is an individual productivity system developed by Noemi for her own workflow, currently in private testing.',
     featuresList: [
-      'Active task and milestone tracking without missed deadlines',
-      'Operational memory of client preferences and agreements',
-      'Follow-up monitoring and pending reply reminders',
-      'Multilingual draft assistance across IT, EN, FR, and ES',
-      'Daily operational review and priority reorganization',
+      'Planned task and deadline tracking, currently in development',
+      'Planned operational notes for approved client preferences and agreements',
+      'Follow-up and pending-reply tracking, under development',
+      'Multilingual draft support planned for IT, EN, FR and ES',
+      'A planned daily review of tasks and priorities',
     ],
     ctaDiscover: 'Explore NoeTom',
     ctaWaitlist: 'Informational Waitlist',
@@ -240,35 +240,35 @@ export const enLocale: TranslationDictionary = {
       items: [
         {
           bad: 'NOT a generic AI chatbot answering trivia',
-          good: 'A persistent operational memory that tracks your active client relationships and commitments.',
+          good: 'A proposed operational record of approved notes, commitments and follow-ups.',
         },
         {
           bad: 'NOT a heavy, bureaucratic enterprise CRM',
-          good: 'A lightweight assistant that extracts operational actions from natural notes and voice memos.',
+          good: 'A tool designed to help turn brief notes into actions requiring review.',
         },
         {
           bad: 'NOT an empty to-do list that makes you feel guilty',
-          good: 'An active operational radar that surfaces open loops, dependencies, and blocked deliverables.',
+          good: 'A planned overview of pending tasks, dependencies and blocked items.',
         },
         {
-          bad: 'NOT another complex platform requiring weeks to set up',
-          good: 'Starts immediately with simple natural language: just "Tell NoeTom" what happened.',
+          bad: 'NOT intended to add unnecessary setup and bureaucracy',
+          good: 'The goal is to allow straightforward note-taking in natural language.',
         },
       ],
     },
     capabilities: {
-      title: 'Core Operational Capabilities',
+      title: 'Planned capabilities — in development',
       subtitle: 'Engineered from 20+ years of back-office and client management reality.',
       radarTitle: 'The NoeTom Radar',
       radarDesc:
-        'Your daily cockpit. A high-clarity snapshot showing what demands attention today, what you are waiting for from clients, what you promised to deliver, and where potential revenue leaks exist.',
+        'Your daily cockpit. A high-clarity snapshot showing what demands attention today, what you are waiting for from clients, what you promised to deliver, and which commitments may need checking.',
       features: [
         {
           id: 'radar',
           name: 'NoeTom Radar',
           tagline: 'Continuous operational scanning',
           description:
-            'Surfaces pressing priorities, overdue responses, and critical milestones before they escalate into emergencies.',
+            'Designed to highlight upcoming priorities, pending replies and deadlines for review.',
           status: 'in_development',
         },
         {
@@ -276,7 +276,7 @@ export const enLocale: TranslationDictionary = {
           name: 'Client Memory',
           tagline: 'Contextual relationship intelligence',
           description:
-            'Keeps track of every client’s quirks, communication preferences, project history, fee arrangements, and past discussions.',
+            'Intended to organise approved client preferences, relevant project notes and correspondence history.',
           status: 'in_development',
         },
         {
@@ -284,7 +284,7 @@ export const enLocale: TranslationDictionary = {
           name: 'Open Loops & Blocked',
           tagline: 'Loose ends identified immediately',
           description:
-            'Identifies tasks that are stalled because you are waiting for a client brief, file, or approval, so you stop wasting mental energy checking.',
+            'Designed to flag tasks waiting for a brief, document or approval.',
           status: 'in_development',
         },
         {
@@ -292,7 +292,7 @@ export const enLocale: TranslationDictionary = {
           name: 'I Promised Tracker',
           tagline: 'Integrity by design',
           description:
-            'Captures casual commitments made in emails, calls, or chats ("I’ll send this by Thursday") and holds you accountable with quiet grace.',
+            'A planned register for commitments recorded in notes, subject to review.',
           status: 'in_development',
         },
         {
@@ -300,7 +300,7 @@ export const enLocale: TranslationDictionary = {
           name: 'Smart Follow-up',
           tagline: 'Timely, professional nudges',
           description:
-            'Generates natural follow-up drafts in Italian, English, French, or Spanish when a client hasn’t replied after a reasonable timeframe.',
+            'Planned multilingual follow-up drafts to be reviewed before use.',
           status: 'in_development',
         },
         {
@@ -308,7 +308,7 @@ export const enLocale: TranslationDictionary = {
           name: 'Tell NoeTom (“Di’ a NoeTom”)',
           tagline: 'Zero-friction data entry',
           description:
-            'Simply dump raw voice notes or quick thoughts: "Spoke with Marco: the client approved the wording; update the agreed quotation and send the draft on Tuesday." NoeTom parses and files everything.',
+            'The planned workflow will help turn brief written notes into tasks requiring confirmation.',
           status: 'in_development',
         },
         {
@@ -316,7 +316,7 @@ export const enLocale: TranslationDictionary = {
           name: '“What Am I Missing?”',
           tagline: 'Instant peace of mind',
           description:
-            'A single button click before you close your laptop for the day: NoeTom reviews your active state and tells you whether anything slipped.',
+            'A proposed daily summary to help review open tasks and commitments.',
           status: 'preview',
         },
       ],
@@ -325,11 +325,11 @@ export const enLocale: TranslationDictionary = {
       tag: 'CREATOR STORY',
       title: 'Why I Am Building NoeTom',
       storyP1:
-        'For more than two decades, my work has been centered on supporting professionals, entrepreneurs, and teams with their daily operational realities. I watched talented consultants, coaches, translators, and founders struggle with the exact same issue: they love their craft, but the operational friction of tracking 25 concurrent conversations drains their vitality.',
+        'Across more than two decades of professional experience, I have worked in a variety of organisational and customer-facing roles. I watched talented consultants, coaches, translators, and founders struggle with the exact same issue: they love their craft, but keeping track of ongoing tasks and messages can become difficult.',
       storyP2:
-        'Standard project management software is too rigid; enterprise CRMs are built for sales teams with 50 SDRs, not for an independent practitioner who wears all the hats. Most to-do apps are dumb lists that demand constant manual reorganization.',
+        'Some project-management systems may be more complex than a solo professional needs, while simple lists may not provide enough context.',
       storyP3:
-        'NoeTom is my answer. It embodies the exact mental models, proactive follow-up habits, and meticulous care that I provide in my virtual assistance work, translated into an intuitive operational assistant that lightens your cognitive load.',
+        'NoeTom is an internal project inspired by my working methods. I am exploring ways to organise tasks, follow-ups and notes more clearly through digital tools.',
       signatureRole: 'Creator of NoeTom & Virtual Assistant',
     },
     earlyAccessForm: {
@@ -363,7 +363,7 @@ export const enLocale: TranslationDictionary = {
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
       { title: 'Academic Excellence', detail: 'Degree in Linguistic Mediation (110/110 cum laude) & University Master’s in Specialized Translation' },
       { title: '4 Working Languages', detail: 'Italian native, professional support in English, French, and Spanish' },
-      { title: 'Digital Tools & Innovation', detail: 'Digital support and creator of the NoeTom AI operational assistant' },
+      { title: 'Digital Tools & Innovation', detail: 'Digital support and creator of NoeTom, an internal project in development' },
     ],
     ctaReadMore: 'Read Full Background & Approach',
   },
@@ -373,8 +373,8 @@ export const enLocale: TranslationDictionary = {
     storyTitle: 'A Career Built on Precision, Communication, and Care',
     storyParagraphs: [
       'My professional path has always developed around three constants: organizational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
-      'Over more than two decades, I have built direct, hands-on experience in customer care, operational coordination, multilingual correspondence, translation, and operational back office. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
-      'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 cum laude) and a First-level University Master’s in Specialized Translation – English language (A.Y. 2010–2011, 1,500 hours, 60 CFU). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
+      'My career spans more than two decades across different roles. I have developed skills in customer care, operational coordination, back office and multilingual communication. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
+      'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 cum laude) and a First-level University Master’s in Specialized Translation – English language (2010–2012, 1,500 hours, 60 ECTS credits). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
       'Alongside ongoing virtual assistance, I created NoeTom, an intelligent operational assistant designed to support solopreneurs and independent professionals with their day-to-day management.',
     ],
     timeline: [

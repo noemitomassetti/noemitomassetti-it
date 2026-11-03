@@ -87,17 +87,17 @@ const QUESTIONS: Question[] = [
     id: 4,
     section: 1,
     question: {
-      it: "Qual è il tuo canale principale di acquisizione clienti?",
-      en: "What is your primary customer acquisition channel?",
-      fr: "Quel est votre principal canal d'acquisition client ?",
-      es: "¿Cuál es tu principal canal de captación de clientes?",
+      it: "Quale canale utilizzi più spesso per comunicare con i tuoi clienti?",
+      en: "Which channel do you most often use to communicate with your customers?",
+      fr: "Quel canal utilisez-vous le plus souvent pour communiquer avec vos clients ?",
+      es: "¿Qué canal utilizas con más frecuencia para comunicarte con tus clientes?",
     },
     type: "single",
     options: {
-      it: ["Passaparola e referenze", "Sito web e motori di ricerca (SEO)", "Social network / LinkedIn", "Eventi e fiere di settore"],
-      en: ["Word-of-mouth & referrals", "Website & organic search", "Social media / LinkedIn", "Industry events & networking"],
-      fr: ["Bouche-à-oreille et recommandations", "Site web et moteurs de recherche", "Réseaux sociaux / LinkedIn", "Salons et événements professionnels"],
-      es: ["Boca a boca y recomendaciones", "Sitio web y buscadores (SEO)", "Redes sociales / LinkedIn", "Eventos y ferias profesionales"],
+      it: ["Email", "WhatsApp o messaggistica", "Modulo contatti o portale clienti", "Più canali, secondo il cliente"],
+      en: ["Email", "WhatsApp or other messaging", "Contact form or customer portal", "Different channels for different customers"],
+      fr: ["E-mail", "WhatsApp ou autre messagerie", "Formulaire ou espace client", "Plusieurs canaux selon les clients"],
+      es: ["Correo electrónico", "WhatsApp u otra mensajería", "Formulario o portal de clientes", "Varios canales según el cliente"],
     },
   },
 
@@ -106,10 +106,10 @@ const QUESTIONS: Question[] = [
     id: 5,
     section: 2,
     question: {
-      it: "Quante ore a settimana dedichi a compiti amministrativi e burocratici?",
-      en: "How many hours per week do you spend on administrative chores?",
-      fr: "Combien d'heures par semaine consacrez-vous à l'administratif ?",
-      es: "¿Cuántas horas a la semana dedicas a tareas administrativas y de gestión?",
+      it: "Quante ore a settimana dedichi a email, agenda, documenti e attività organizzative?",
+      en: "How many hours a week do email, scheduling, document organisation and routine operations take?",
+      fr: "Combien d’heures par semaine consacrez-vous aux e-mails, à l’agenda et à l’organisation des documents ?",
+      es: "¿Cuántas horas semanales dedicas al correo, la agenda y la organización de documentos?",
     },
     type: "single",
     options: {
@@ -297,17 +297,17 @@ const QUESTIONS: Question[] = [
     id: 16,
     section: 4,
     question: {
-      it: "I tuoi potenziali clienti possono prenotare una call con te in autonomia senza scambi di email?",
-      en: "Can prospective clients book a discovery call self-serve without email back-and-forth?",
-      fr: "Vos prospects peuvent-ils réserver un appel en autonomie sans échanges de courriels ?",
-      es: "¿Tus clientes potenciales pueden reservar una llamada directamente sin cruce de correos?",
+      it: "Le richieste scritte dei tuoi clienti vengono raccolte e gestite con un percorso chiaro?",
+      en: "Do you have a clear written process for handling enquiries from existing customers?",
+      fr: "Disposez-vous d’un processus clair pour les demandes écrites de vos clients existants ?",
+      es: "¿Tienes un proceso claro para gestionar las consultas escritas de tus clientes actuales?",
     },
     type: "single",
     options: {
-      it: ["Sì, ho un sistema di prenotazione integrato", "No, facciamo sempre tutto via email o telefono", "Vorrei configurarlo ma non so quale strumento scegliere"],
-      en: ["Yes, integrated booking calendar in place", "No, manually coordinated via email or phone", "Would love to implement, but unsure which tool to choose"],
-      fr: ["Oui, calendrier de réservation en ligne en place", "Non, tout est fait manuellement par e-mail ou téléphone", "J'aimerais le mettre en place mais j'hésite sur l'outil"],
-      es: ["Sí, cuento con un sistema de reserva directa", "No, todo se coordina manualmente por correo o teléfono", "Me gustaría configurarlo pero no sé qué herramienta elegir"],
+      it: ["Sì, con modelli e procedure definiti", "Le gestisco caso per caso, senza una procedura", "Vorrei organizzare meglio le richieste ricevute"],
+      en: ["Yes, with approved templates and procedures", "I handle each enquiry without a defined process", "I would like to organise incoming enquiries better"],
+      fr: ["Oui, avec des modèles et des procédures validés", "Je traite les demandes au cas par cas", "Je souhaite mieux organiser les demandes reçues"],
+      es: ["Sí, con plantillas y procedimientos aprobados", "Respondo caso por caso sin un proceso definido", "Quiero organizar mejor las consultas recibidas"],
     },
   },
 
@@ -351,15 +351,15 @@ const QUESTIONS: Question[] = [
     section: 5,
     question: {
       it: "Qual è il beneficio principale che ti aspetti delegando compiti operativi?",
-      en: "What primary benefit do you seek by delegating administrative tasks?",
+      en: "What would you most like to gain by delegating agreed operational tasks?",
       fr: "Quel bénéfice principal attendez-vous en déléguant ?",
       es: "¿Cuál es el principal beneficio que esperas al delegar tareas operativas?",
     },
     type: "single",
     options: {
-      it: ["Più tempo da dedicare ai clienti paganti e alla fatturazione", "Minore carico mentale e serenità a fine giornata", "Migliore immagine professionale e comunicativa", "Espansione verso mercati esteri con fiducia"],
+      it: ["Più tempo per i clienti e le attività principali", "Minore carico mentale e serenità a fine giornata", "Migliore immagine professionale e comunicativa", "Espansione verso mercati esteri con fiducia"],
       en: ["More time for high-value client work and billable hours", "Reduced mental fatigue and peace of mind", "Elevated professional brand image", "Confident expansion into foreign markets"],
-      fr: ["Plus de temps pour le cœur de métier et la facturation", "Moins de charge mentale et plus de sérénité", "Une image professionnelle plus soignée", "Développement international en toute confiance"],
+      fr: ["Plus de temps pour les clients et le cœur de métier", "Moins de charge mentale et plus de sérénité", "Une image professionnelle plus soignée", "Développement international en toute confiance"],
       es: ["Más tiempo para mis clientes y actividades facturables", "Menor desgaste mental y tranquilidad al final del día", "Mejora de mi imagen corporativa y profesional", "Expansión hacia clientes extranjeros con seguridad"],
     },
   },
@@ -422,10 +422,10 @@ export default function Questionnaire() {
   };
 
   const descriptions = {
-    it: "20 domande mirate in 3-5 minuti per analizzare il tuo carico amministrativo, l'organizzazione quotidiana e individuare cosa puoi delegare concretamente.",
-    en: "20 targeted questions taking 3-5 minutes to evaluate your administrative load, daily systems, and concrete delegation priorities.",
-    fr: "20 questions ciblées en 3-5 minutes pour évaluer votre charge administrative et identifier ce que vous pouvez déléguer sereinement.",
-    es: "20 preguntas directas en 3-5 minutos para evaluar tu carga de trabajo y definir prioridades claras de delegación.",
+    it: "20 domande per comprendere il tuo carico operativo, l’organizzazione quotidiana e le attività che potresti delegare nei limiti dei servizi offerti.",
+    en: "20 questions to review your daily operational workload and identify tasks that may fit my services.",
+    fr: "20 questions pour analyser l’organisation quotidienne et identifier les tâches pouvant relever de mes services.",
+    es: "20 preguntas para evaluar tu organización diaria e identificar tareas operativas que podrías delegar.",
   };
 
   useSEO({
@@ -561,12 +561,12 @@ export default function Questionnaire() {
 
           <p className="text-base sm:text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
             {lang === "it"
-              ? "20 domande strutturate per analizzare la tua routine, individuare i colli di bottiglia amministrativi e capire quali attività potresti delegare a Noemi con un beneficio immediato."
+              ? "20 domande per esaminare la tua organizzazione quotidiana e individuare le attività operative che potresti affidarmi, senza includere mansioni amministrative o contabili."
               : lang === "fr"
               ? "20 questions concrètes pour auditer votre routine de travail, identifier les goulets d'étranglement et évaluer les gains d'une délégation ciblée."
               : lang === "es"
               ? "20 preguntas prácticas para analizar tu rutina diaria, localizar pérdidas de tiempo y valorar los beneficios de un apoyo operativo externo."
-              : "20 focused questions to audit your weekly routine, pinpoint administrative bottlenecks, and identify high-leverage tasks to delegate to Noemi."}
+              : "20 practical questions about everyday workflows, written communications and operational tasks that may be suitable for delegation."}
           </p>
 
           <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground pt-2">

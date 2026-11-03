@@ -214,8 +214,8 @@ export const frLocale: TranslationDictionary = {
       'Suivi rigoureux des tâches et jalons sans oubli d’échéance',
       'Mémoire opérationnelle des préférences et accords passés',
       'Veille sur les relances et réponses en attente',
-      'Aide à la préparation d’écrits multilingues (IT, EN, FR, ES)',
-      'Bilan quotidien et réorganisation sereine des priorités',
+      'Aide à la préparation de brouillons multilingues : en développement',
+      'Bilan quotidien des priorités : fonctionnalité en développement',
     ],
     ctaDiscover: 'Découvrir NoeTom',
     ctaWaitlist: 'Liste d’Information',
@@ -256,7 +256,7 @@ export const frLocale: TranslationDictionary = {
       ],
     },
     capabilities: {
-      title: 'Fonctionnalités Opérationnelles Clés',
+      title: 'Fonctionnalités prévues — en développement',
       subtitle: 'Forgées par plus de 20 ans d’accompagnement client et de gestion opérationnelle.',
       radarTitle: 'Le Radar NoeTom',
       radarDesc:
@@ -324,11 +324,11 @@ export const frLocale: TranslationDictionary = {
       tag: 'LE PARCOURS',
       title: 'Pourquoi j’ai créé NoeTom',
       storyP1:
-        'Depuis plus de vingt ans, j’accompagne consultants, formateurs et entrepreneurs dans leur organisation quotidienne. J’ai toujours observé le même paradoxe : d’excellents professionnels, passionnés par leur métier, mais épuisés par l’accumulation des détails opérationnels et des relances à mémoriser.',
+        'Au fil de plus de vingt ans de parcours professionnel, j’ai exercé différentes fonctions en lien avec l’organisation et les relations clients. J’ai toujours observé le même paradoxe : d’excellents professionnels, passionnés par leur métier, mais épuisés par l’accumulation des détails opérationnels et des relances à mémoriser.',
       storyP2:
-        'Les outils de gestion d’équipe sont trop rigides pour un indépendant qui gère tout lui-même ; les CRM traditionnels sont conçus pour de grandes équipes de vente ; les listes de tâches basiques restent muettes et passives.',
+        'Certains outils de gestion sont trop complexes pour un indépendant, tandis que les listes de tâches simples peuvent manquer de contexte.',
       storyP3:
-        'NoeTom est le fruit de cette expérience : elle intègre les réflexes, la vigilance et la bienveillance que j’apporte dans mon métier d’assistante, sous la forme d’un système opérationnel pensé pour soulager durablement votre charge mentale.',
+        'NoeTom est un projet interne né de cette expérience. Son objectif est de soutenir progressivement l’organisation des tâches, des notes et des suivis.',
       signatureRole: 'Créatrice de NoeTom & Assistante Virtuelle',
     },
     earlyAccessForm: {
@@ -362,7 +362,7 @@ export const frLocale: TranslationDictionary = {
       { title: 'Plus de 20 ans d’expérience', detail: 'Service client, back-office, organisation et gestion opérationnelle' },
       { title: 'Formation universitaire d’excellence', detail: 'Licence en Médiation Linguistique (110/110 félicitations) & Master en Traduction Spécialisée' },
       { title: '4 langues de travail', detail: 'Italien langue maternelle, soutien professionnel en Anglais, Français, Espagnol' },
-      { title: 'Outils et innovation', detail: 'Support numérique et créatrice de l’assistante opérationnelle NoeTom IA' },
+      { title: 'Outils et innovation', detail: 'Support numérique et créatrice du projet interne NoeTom, en développement' },
     ],
     ctaReadMore: 'En savoir plus sur mon approche',
   },
@@ -372,9 +372,9 @@ export const frLocale: TranslationDictionary = {
     storyTitle: 'Un engagement fondé sur la rigueur, le relationnel et le soin',
     storyParagraphs: [
       'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
-      'Au cours de plus de deux décennies, j’ai acquis une solide expérience de terrain en gestion de service client, secrétariat opérationnel, correspondances multilingues, traductions et back-office. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
+      'Mon parcours professionnel s’étend sur plus de deux décennies et comprend différentes expériences. J’y ai développé des compétences en relation client, organisation, back-office et communication multilingue. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
       'Sur le plan universitaire, je suis diplômée d’une licence en Médiation Linguistique (Université de Macerata, 2009, 110/110 et félicitations du jury) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
-      'En complément de mon activité d’assistance, j’ai conçu NoeTom, une assistante opérationnelle intelligente pour accompagner la gestion quotidienne des indépendants.',
+      'En parallèle, je développe NoeTom, un projet interne d’assistance opérationnelle actuellement en phase de test privé.',
     ],
     timeline: [
       {

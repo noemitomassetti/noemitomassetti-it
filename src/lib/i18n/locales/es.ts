@@ -207,15 +207,15 @@ export const esLocale: TranslationDictionary = {
     statusBadge: 'SISTEMA INTERNO EN PRUEBAS PRIVADAS',
     productName: 'NoeTom',
     tagline: 'El sistema individual de productividad operativa desarrollado por Noemi para su flujo de trabajo.',
-    emotionalPromise: '«Organización rigurosa, menos sobrecarga mental y foco diario.»',
+    emotionalPromise: '«Un proyecto para ordenar mejor el trabajo diario y reducir la dispersión de información.»',
     description:
       'NoeTom es un sistema individual de productividad desarrollado por Noemi para su propio flujo operativo, actualmente en fase de pruebas privadas.',
     featuresList: [
-      'Seguimiento exhaustivo de tareas y plazos sin olvidos',
-      'Memoria operativa de preferencias y acuerdos con clientes',
-      'Control de seguimientos y respuestas pendientes',
-      'Apoyo en la redacción de borradores multilingües (IT, EN, FR, ES)',
-      'Revisión y reordenación de prioridades al final de la jornada',
+      'Seguimiento de tareas y plazos previsto en el proyecto',
+      'Notas sobre preferencias y acuerdos autorizados: en desarrollo',
+      'Seguimiento de respuestas pendientes: en desarrollo',
+      'Apoyo a la redacción de borradores multilingües: en desarrollo',
+      'Revisión de prioridades al finalizar la jornada: en desarrollo',
     ],
     ctaDiscover: 'Descubrir NoeTom',
     ctaWaitlist: 'Lista Informativa',
@@ -239,24 +239,24 @@ export const esLocale: TranslationDictionary = {
       items: [
         {
           bad: 'NO es un chatbot genérico de preguntas triviales',
-          good: 'Una memoria operativa continua que conoce a tus clientes y monitoriza el estado de tus compromisos activos.',
+          good: 'Un registro operativo previsto para organizar notas autorizadas, compromisos y seguimientos.',
         },
         {
           bad: 'NO es un CRM empresarial rígido y pesado',
-          good: 'Un asistente ligero que deduce las próximas acciones a partir de notas sencillas y mensajes de voz.',
+          good: 'Un sistema pensado para convertir notas breves en acciones pendientes de revisión.',
         },
         {
           bad: 'NO es una lista pasiva de tareas pendientes',
-          good: 'Un radar operativo que resalta de inmediato lo que está bloqueado, en espera o a punto de vencer.',
+          good: 'Un panel previsto para visualizar tareas pendientes, bloqueos y plazos.',
         },
         {
-          bad: 'NO requiere semanas de aprendizaje ni configuración',
-          good: 'Listo para usar con lenguaje natural: un simple «Dile a NoeTom» basta para registrar cualquier dato.',
+          bad: 'NO pretende añadir procesos de configuración innecesarios',
+          good: 'El objetivo es poder registrar notas y tareas de forma sencilla mediante lenguaje natural.',
         },
       ],
     },
     capabilities: {
-      title: 'Capacidades Operativas Esenciales',
+      title: 'Funciones previstas — en desarrollo',
       subtitle: 'Fruto de más de 20 años de experiencia apoyando a clientes y coordinando tareas.',
       radarTitle: 'El Radar NoeTom',
       radarDesc:
@@ -267,7 +267,7 @@ export const esLocale: TranslationDictionary = {
           name: 'Radar NoeTom',
           tagline: 'Monitorización operativa continua',
           description:
-            'Detecta asuntos prioritarios, respuestas demoradas y fechas clave antes de que se conviertan en emergencias.',
+            'Está diseñado para señalar prioridades, respuestas pendientes y plazos importantes.',
           status: 'in_development',
         },
         {
@@ -275,7 +275,7 @@ export const esLocale: TranslationDictionary = {
           name: 'Memoria de Clientes',
           tagline: 'Contexto de relación siempre a mano',
           description:
-            'Conserva el histórico de conversaciones, acuerdos de precios, preferencias particulares y resúmenes de llamadas.',
+            'Se prevé organizar notas autorizadas de proyectos, preferencias y acuerdos.',
           status: 'in_development',
         },
         {
@@ -283,7 +283,7 @@ export const esLocale: TranslationDictionary = {
           name: 'Asuntos Abiertos & Bloqueos',
           tagline: 'Cabos sueltos bajo control',
           description:
-            'Identifica tareas paralizadas a la espera de un visto bueno, un documento o una respuesta de un tercero.',
+            'Se plantea destacar las tareas pendientes de documentos o aprobaciones.',
           status: 'in_development',
         },
         {
@@ -291,7 +291,7 @@ export const esLocale: TranslationDictionary = {
           name: 'Registro «He Prometido»',
           tagline: 'Método y compromiso',
           description:
-            'Registra compromisos expresados de manera informal («te lo mando el jueves») para ayudarte a cumplirlos siempre.',
+            'La función prevista ayuda a registrar compromisos anotados y sus plazos.',
           status: 'in_development',
         },
         {
@@ -299,7 +299,7 @@ export const esLocale: TranslationDictionary = {
           name: 'Seguimientos Inteligentes',
           tagline: 'Recordatorios amables y profesionales',
           description:
-            'Prepara borradores de seguimiento en español, inglés, francés o italiano cuando un contacto tarda en responder.',
+            'Se prevé la creación de borradores multilingües, sujetos a revisión humana.',
           status: 'in_development',
         },
         {
@@ -307,7 +307,7 @@ export const esLocale: TranslationDictionary = {
           name: '«Dile a NoeTom»',
           tagline: 'Registro sin fricción',
           description:
-            'Dicta o escribe notas directas: «Hablé con Luis, aprueba el presupuesto de 1.400 €, enviarle el contrato el martes». NoeTom organiza todo.',
+            'El flujo previsto busca convertir notas breves en tareas que se puedan revisar y confirmar.',
           status: 'in_development',
         },
         {
@@ -315,7 +315,7 @@ export const esLocale: TranslationDictionary = {
           name: '«¿Qué se me está pasando?»',
           tagline: 'Punto de tranquilidad diaria',
           description:
-            'Un botón antes de apagar el ordenador: NoeTom examina la actividad del día y te advierte si algo quedó olvidado.',
+            'Se plantea un resumen diario para revisar tareas, plazos y compromisos.',
           status: 'preview',
         },
       ],
@@ -324,11 +324,11 @@ export const esLocale: TranslationDictionary = {
       tag: 'HISTORIA',
       title: 'Por qué estoy creando NoeTom',
       storyP1:
-        'Durante más de veinte años he acompañado a profesionales, formadores y pequeñas empresas en sus gestiones diarias. He visto repetirse el mismo patrón: personas excelentes en su profesión, pero sobrepasadas por la acumulación de detalles operativos y compromisos que recordar.',
+        'Mi trayectoria profesional abarca más de veinte años en funciones diversas, entre ellas la organización y la atención al cliente. He visto repetirse el mismo patrón: personas excelentes en su profesión, pero sobrepasadas por la acumulación de detalles operativos y compromisos que recordar.',
       storyP2:
-        'Las herramientas de proyectos tradicionales son excesivamente complejas para un profesional independiente; los CRM corporativos están concebidos para departamentos comerciales enteros; las listas de tareas corrientes son estáticas y pasivas.',
+        'Algunas plataformas de gestión resultan demasiado complejas para profesionales independientes; las listas sencillas, en cambio, pueden carecer de contexto.',
       storyP3:
-        'NoeTom surge de esta realidad: traslada los hábitos de seguimiento, la minuciosidad y el cuidado que aplico en mi labor de asistencia humana a un sistema operativo capaz de aliviar tu carga mental cotidiana.',
+        'NoeTom es un proyecto interno inspirado en mi método de trabajo, pensado para explorar formas más claras de organizar tareas, notas y seguimientos.',
       signatureRole: 'Creadora de NoeTom & Asistente Virtual',
     },
     earlyAccessForm: {
@@ -362,7 +362,7 @@ export const esLocale: TranslationDictionary = {
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
       { title: 'Formación académica destacada', detail: 'Grado en Mediación Lingüística (110/110 con honores) & Máster Universitario en Traducción Especializada' },
       { title: '4 idiomas de trabajo', detail: 'Italiano nativo, soporte profesional en Inglés, Francés, Español' },
-      { title: 'Herramientas e innovación', detail: 'Soporte digital y creadora de la asistente operativa NoeTom IA' },
+      { title: 'Herramientas e innovación', detail: 'Soporte digital y creadora del proyecto interno NoeTom, en desarrollo' },
     ],
     ctaReadMore: 'Conoce mi trayectoria',
   },
@@ -372,9 +372,9 @@ export const esLocale: TranslationDictionary = {
     storyTitle: 'Una trayectoria asentada en la precisión, la cercanía y el compromiso',
     storyParagraphs: [
       'Mi carrera se ha desarrollado en torno a tres constantes: la vocación por los idiomas, el rigor organizativo y la satisfacción de ser un punto de apoyo fiable para los profesionales con quienes trabajo.',
-      'A lo largo de más de dos décadas he acumulado experiencia directa en atención al cliente, secretaría de organización, correspondencia multilingüe, traducción y tareas de back office. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y eliminar los roces operativos cotidianos.',
-      'En mi formación universitaria cuento con el Grado en Mediación Lingüística (Universidad de Macerata, 2009, 110/110 e lode) y el Máster Universitario de I nivel en Traducción Especializada – lengua inglesa (C.A. 2010–2011, 1.500 horas, 60 CFU). Los ámbitos abordados durante el Máster comprenden el área literaria, jurídica, económica, tecnológica y científica (los textos de carácter jurídico se evalúan caso por caso; no realizo traducciones juradas ni juramentadas).',
-      'Junto a mi servicio de asistencia, he creado NoeTom, una asistente operativa inteligente diseñada para acompañar la gestión diaria de los profesionales autónomos.',
+      'Mi trayectoria profesional supera los veinte años y comprende funciones diversas. He desarrollado competencias en atención al cliente, organización, back office y comunicación multilingüe. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y eliminar los roces operativos cotidianos.',
+      'En mi formación universitaria cuento con el Grado en Mediación Lingüística (Universidad de Macerata, 2009, 110/110 e lode) y el Máster Universitario de I nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS). Los ámbitos abordados durante el Máster comprenden el área literaria, jurídica, económica, tecnológica y científica (los textos de carácter jurídico se evalúan caso por caso; no realizo traducciones juradas ni juramentadas).',
+      'También estoy desarrollando NoeTom, un proyecto interno de asistencia operativa que se encuentra en fase de pruebas privadas.',
     ],
     timeline: [
       {
