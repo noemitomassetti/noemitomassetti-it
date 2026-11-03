@@ -186,7 +186,7 @@ export const enLocale: TranslationDictionary = {
         desc: 'From Italian-language website content to written support for existing Italian customers, I help maintain consistent communication.',
       },
     ],
-    badgeNote: 'Language Mediation degree (110/110 e lode) and Italian university Master's in Specialised Translation',
+    badgeNote: 'Language Mediation degree (110/110 e lode) and Italian university Master’s qualification in Specialised Translation',
   },
   productized: {
     tag: 'WAYS TO WORK TOGETHER', title: 'Focused services, tangible deliverables',
