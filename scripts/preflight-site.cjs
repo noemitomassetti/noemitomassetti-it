@@ -41,10 +41,10 @@ for(const file of sources) {
 check(imports>100, `Local source imports resolved (${imports} imports)`);
 const assets=walk(path.join(root,'public'),/\.(html|png|svg|xml|txt)$/);
 const portfolio=assets.filter(f=>f.includes(`${path.sep}portfolio-documenti${path.sep}`)&&f.endsWith('.html'));
-check(portfolio.length===20, '20 standalone portfolio documents exist');
+check(portfolio.length===21, '21 standalone portfolio documents exist');
 const catalog=read('src/lib/portfolioData.ts');
 const matchAll=[...catalog.matchAll(/url:\s*['"](\/portfolio-documenti\/[^'"]+\.html)['"]/g)];
-check(matchAll.length===20, '20 portfolio catalog document paths declared');
+check(matchAll.length===21, '21 portfolio catalog document paths declared');
 for(const m of matchAll)if(!exists(path.join(root,'public',m[1].slice(1))))failures.push(`Missing portfolio asset ${m[1]}`);
 const blog=read('src/lib/blogData.ts');
 check(!/prenota (?:subito )?una (?:call|videochiamata) conoscitiva gratuita/i.test(blog),'No obsolete free-call CTAs in blog');
