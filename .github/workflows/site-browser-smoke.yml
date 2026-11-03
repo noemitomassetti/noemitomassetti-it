@@ -115,6 +115,8 @@ jobs:
                 for(const width of [390,1365]) {
                   await page.setViewportSize({width,height:900});
                   await page.goto('http://127.0.0.1:4173'+item.path,{waitUntil:'networkidle'});
+                  const rejectCookies=page.getByRole('button',{name:/^(Rifiuta|Decline|Refuser|Rechazar)$/i}).first();
+                  if(await rejectCookies.isVisible()) await rejectCookies.click();
                   const lang=await page.locator('html').getAttribute('lang');
                   if(lang!==item.lang) throw Error('Portfolio locale mismatch '+item.path+': '+lang);
                   const buttons=page.locator('article button[aria-expanded]');
@@ -122,6 +124,7 @@ jobs:
                   if(count!==18) throw Error('Expected 18 accessible case studies '+item.path+', got '+count);
                   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3);
                   if(overflow) throw Error('Horizontal page overflow for '+item.path+' at '+width+'px');
+                  await page.screenshot({path:'/tmp/noemi-smoke/portfolio_'+item.lang+'_'+width+'_top.png',fullPage:false});
                   const first=buttons.first();
                   const before=await first.getAttribute('aria-expanded');
                   await first.focus();
