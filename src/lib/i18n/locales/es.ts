@@ -11,7 +11,7 @@ export const esLocale: TranslationDictionary = {
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
     aboutTitle: 'Sobre Mí | Noemi Tomassetti',
-    aboutDesc: 'Más de 20 años de experiencia profesional en organización, idiomas, atención al cliente y back office. Graduada en Mediación Lingüística con matrícula de honor (110 e lode).',
+    aboutDesc: 'Más de 20 años de experiencia profesional en organización, idiomas, atención al cliente y back office. Titulada en Mediación Lingüística con 110/110 e lode (distinción italiana).',
     resourcesTitle: 'Recursos y Artículos | Noemi Tomassetti',
     resourcesDesc: 'Perspectivas prácticas sobre delegación, comunicación multilingüe, claridad operativa y productividad con IA para profesionales independientes.',
     contactTitle: 'Contacto y Presupuestos | Noemi Tomassetti',
@@ -385,7 +385,7 @@ export const esLocale: TranslationDictionary = {
       {
         period: '2009',
         role: 'Grado en Mediación Lingüística',
-        detail: 'Universidad de Macerata, graduada con 110/110 con matrícula de honor.',
+        detail: 'Universidad de Macerata, con la calificación italiana de 110/110 e lode.',
       },
       {
         period: '2010 – 2012',

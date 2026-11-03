@@ -362,7 +362,7 @@ export default function ItalianLocalisationPage() {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-primary" />
-              {lang === 'it' ? 'Laurea in Mediazione Linguistica (110 e lode)' : lang === 'fr' ? 'Diplôme en médiation linguistique avec mention' : lang === 'es' ? 'Grado en Mediación Lingüística con matrícula de honor' : 'Degree in Language Mediation (with honours)'}
+              {lang === 'it' ? 'Laurea in Mediazione Linguistica (110 e lode)' : lang === 'fr' ? 'Diplôme en médiation linguistique avec mention' : lang === 'es' ? 'Título universitario italiano en Mediación Lingüística (110/110 e lode)' : 'Degree in Language Mediation (with honours)'}
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-primary" />
