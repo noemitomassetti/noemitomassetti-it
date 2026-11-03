@@ -4,7 +4,7 @@ import { Layout } from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
 import { BASE_DOMAIN, getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
 import { getPortfolioDocumentPath } from "@/lib/portfolioDocumentPaths";
-import { DOCUMENT_GUIDES } from "@/lib/portfolioDocumentGuides";
+import { DOCUMENT_GUIDES, DOCUMENT_CONTEXT, DOCUMENT_EXACT_EXCERPTS } from "@/lib/portfolioDocumentGuides";
 import { PORTFOLIO_CASES, PORTFOLIO_DOCUMENTS } from "@/lib/portfolioData";
 import type { Language } from "@/lib/i18n/types";
 
@@ -22,6 +22,7 @@ export default function PortfolioDocument() {
   const { num } = useParams<{ num:string }>();
   const doc = PORTFOLIO_DOCUMENTS.find(d => d.num === num);
   const guide = num ? DOCUMENT_GUIDES[num] : undefined;
+  const custom = num ? DOCUMENT_CONTEXT[num]?.[lang] : undefined;
   const study = PORTFOLIO_CASES.find(c => c.id === guide?.caseId);
   const t = labels[lang];
   const ok = !!(doc && guide && study && num);
@@ -61,16 +62,16 @@ export default function PortfolioDocument() {
         <div className="border border-border/70 bg-card rounded-xl p-5 md:p-7 text-foreground/90 leading-relaxed">{guide.focus[lang]}</div>
       </section>
       <section aria-label={t.brief} className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-        {[[t.brief,study.brief[lang]],[t.material,study.startingMaterial[lang]],[t.goal,study.objective[lang]],[t.method,study.approach[lang]]].map(([heading,body]) =>
+        {[[t.brief,custom?.brief??study.brief[lang]],[t.material,custom?.material??study.startingMaterial[lang]],[t.goal,custom?.objective??study.objective[lang]],[t.method,custom?.approach??study.approach[lang]]].map(([heading,body]) =>
           <div key={heading} className="rounded-xl p-5 md:p-6 border border-border/70 bg-card"><h2 className="font-bold text-primary text-base mb-3">{heading}</h2><p className="leading-relaxed text-sm text-foreground/85">{body}</p></div>)}
       </section>
       <section className="mt-12" aria-labelledby="professional-decisions">
         <h2 id="professional-decisions" className="text-2xl font-bold text-foreground mb-5">{t.choices}</h2>
-        <ul className="grid gap-3">{study.keyDecisions[lang].map((dec,i)=>
+        <ul className="grid gap-3">{(custom?.decisions??study.keyDecisions[lang]).map((dec,i)=>
           <li key={i} className="flex gap-3 items-start border border-border/70 bg-card rounded-xl p-4 text-sm leading-relaxed">
             <CheckCircle2 size={18} aria-hidden="true" className="text-primary shrink-0 mt-1"/><span>{dec}</span></li>)}</ul>
       </section>
-      {(study.comparison || study.tableData || study.sampleText) && <section className="mt-12" aria-label={t.source}>
+      {DOCUMENT_EXACT_EXCERPTS.has(doc.num) && (study.comparison || study.tableData || study.sampleText) && <section className="mt-12" aria-label={t.source}>
         {study.comparison && <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="border border-border/70 bg-card rounded-xl p-5"><h2 className="text-xs uppercase font-bold text-muted-foreground mb-3">{t.source} · {study.comparison.sourceLang}</h2><p className="whitespace-pre-wrap leading-relaxed">{study.comparison.sourceText}</p></div>
@@ -85,7 +86,7 @@ export default function PortfolioDocument() {
         </div>}
       </section>}
       <section aria-label={t.outcome} className="mt-10 rounded-xl border border-border/70 bg-secondary/30 p-6">
-        <h2 className="text-xl font-bold mb-3">{t.outcome}</h2><p className="leading-relaxed">{study.deliverable[lang]}</p>
+        <h2 className="text-xl font-bold mb-3">{t.outcome}</h2><p className="leading-relaxed">{custom?.deliverable??study.deliverable[lang]}</p>
       </section>
       <section className="mt-12" aria-labelledby="portfolio-original">
         <div className="flex flex-wrap items-start justify-between gap-5 mb-5">
