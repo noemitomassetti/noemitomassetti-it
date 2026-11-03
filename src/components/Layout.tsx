@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { BookingButton } from "@/components/BookingButton";
 import { DigitalConcierge } from "@/components/DigitalConcierge";
 import { openCookiePreferences } from "@/lib/consent";
+import { PUBLICATIONS_VISIBLE } from "@/lib/publicationsCatalog";
 import {
   Language,
   SUPPORTED_LANGUAGES,
@@ -149,6 +150,9 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
     { href: portfolioPath, label: currentLang === "it" ? "Esempi di Lavoro" : currentLang === "fr" ? "Exemples de Projets" : currentLang === "es" ? "Ejemplos de Trabajo" : "Work Examples", isPage: true },
     { href: noetomPath, label: "NoeTom", isPage: true, badge: "AI" },
     { href: resourcesPath, label: currentLang === "it" ? "Risorse" : currentLang === "fr" ? "Ressources" : currentLang === "es" ? "Recursos" : "Resources", isPage: true },
+    ...(PUBLICATIONS_VISIBLE ? [{ href: getLocalizedPath("publications", currentLang),
+      label: currentLang === "it" ? "Libri e pubblicazioni" : currentLang === "fr" ? "Livres et publications" : currentLang === "es" ? "Libros y publicaciones" : "Books & publications",
+      isPage: true }] : []),
     { href: "#contatti", label: currentLang === "it" ? "Contatti" : currentLang === "fr" ? "Contact" : currentLang === "es" ? "Contacto" : "Contact" },
   ];
 
@@ -545,6 +549,14 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
               {currentLang === "it" ? "Esempi di Lavoro" : currentLang === "fr" ? "Exemples de Projets" : currentLang === "es" ? "Ejemplos de Trabajo" : "Work Examples"}
             </Link>
             <span className="opacity-30">|</span>
+            {PUBLICATIONS_VISIBLE && (
+              <>
+                <Link to={getLocalizedPath("publications", currentLang)} className="hover:text-primary transition-colors">
+                  {currentLang === "it" ? "Libri e pubblicazioni" : currentLang === "fr" ? "Livres et publications" : currentLang === "es" ? "Libros y publicaciones" : "Books & publications"}
+                </Link>
+                <span className="opacity-30">|</span>
+              </>
+            )}
             <Link to={questionnairePath} className="hover:text-primary transition-colors">
               {currentLang === "it" ? "Questionario Operativo" : currentLang === "fr" ? "Questionnaire Opérationnel" : currentLang === "es" ? "Cuestionario Operativo" : "Assessment Questionnaire"}
             </Link>

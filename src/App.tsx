@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Portfolio from "./pages/Portfolio";
+import Publications from "./pages/Publications";
+import { PUBLICATIONS_VISIBLE } from "./lib/publicationsCatalog";
 import ItalianLocalisation from "./pages/ItalianLocalisation";
 import Questionnaire from "./pages/Questionnaire";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -91,6 +93,12 @@ const App = () => (
           <Route path="/es/contacto" element={<Contact />} />
           <Route path="/es/politica-de-privacidad" element={<PrivacyPolicy />} />
           <Route path="/es/politica-de-cookies" element={<CookiePolicy />} />
+
+          {/* Editorial catalogue is prepared, but hidden until real publications are ready. */}
+          <Route path="/publications" element={PUBLICATIONS_VISIBLE ? <Publications /> : <NotFound />} />
+          <Route path="/it/libri" element={PUBLICATIONS_VISIBLE ? <Publications /> : <NotFound />} />
+          <Route path="/fr/livres" element={PUBLICATIONS_VISIBLE ? <Publications /> : <NotFound />} />
+          <Route path="/es/libros" element={PUBLICATIONS_VISIBLE ? <Publications /> : <NotFound />} />
 
           {/* ── BLOG & GUIDES ── */}
           <Route path="/blog" element={<Blog />} />

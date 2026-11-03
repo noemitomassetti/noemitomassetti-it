@@ -12,6 +12,7 @@ export type PageKey =
   | 'privacy'
   | 'cookie'
   | 'portfolio'
+  | 'publications'
   | 'questionnaire'
   | 'italianLocalisation';
 

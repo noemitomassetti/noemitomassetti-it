@@ -85,6 +85,15 @@ export const ROUTES: Record<PageKey, RouteConfig> = {
       es: '/es/ejemplos-de-trabajo',
     },
   },
+  publications: {
+    key: 'publications',
+    paths: {
+      en: '/publications',
+      it: '/it/libri',
+      fr: '/fr/livres',
+      es: '/es/libros',
+    },
+  },
   questionnaire: {
     key: 'questionnaire',
     paths: {
@@ -137,6 +146,7 @@ export function getPageKeyFromPath(pathname: string): PageKey {
   if (clean.includes('servizi') || clean.includes('services') || clean.includes('servicios')) return 'services';
   if (clean.includes('noetom')) return 'noetom';
   if (clean.includes('chi-sono') || clean.includes('about') || clean.includes('a-propos') || clean.includes('sobre-mi')) return 'about';
+  if (clean === '/publications' || clean === '/it/libri' || clean === '/fr/livres' || clean === '/es/libros') return 'publications';
   if (clean.includes('risorse') || clean.includes('resources') || clean.includes('ressources') || clean.includes('recursos') || clean.includes('blog')) return 'resources';
   if (clean.includes('contatt') || clean.includes('contact')) return 'contact';
   if (clean.includes('privacy') || clean.includes('confidentialite') || clean.includes('privacidad')) return 'privacy';
