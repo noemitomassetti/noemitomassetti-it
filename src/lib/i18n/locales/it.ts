@@ -65,7 +65,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Precisione linguistica',
-        desc: 'Madrelingua italiana con piena padronanza di inglese, francese e spagnolo. Ogni comunicazione o traduzione rispetta il contesto e la cultura del destinatario.',
+        desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Traduco professionalmente verso l’italiano e curo le comunicazioni multilingue negli ambiti concordati.',
       },
       {
         title: 'Tecnologia moderna e AI',
@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzione & Comunicazione Multilingue',
         subtitle: 'Italiano · Inglese · Francese · Spagnolo con accuratezza contestuale.',
         description:
-          "Traduzione dall’inglese, dal francese e dallo spagnolo verso l’italiano, revisione di contenuti italiani e supporto alla corrispondenza multilingue nei limiti delle competenze linguistiche. Le traduzioni professionali verso lingue straniere non sono offerte come servizi madrelingua.",
+          "Traduzione dall’inglese, dal francese e dallo spagnolo verso l’italiano, revisione di contenuti italiani e supporto alla corrispondenza multilingue nei limiti delle competenze linguistiche. Non offro traduzioni professionali dall’italiano verso inglese, francese o spagnolo.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti web e landing page',
@@ -168,13 +168,13 @@ export const itLocale: TranslationDictionary = {
   },
   multilingualAdvantage: {
     tag: 'COMUNICAZIONE SENZA FRONTIERE',
-    title: 'Il Vantaggio Multilingue: Apriti ai Clienti Internazionali',
+    title: 'Comunicare con clienti e partner internazionali',
     description:
       'Lavorare con l’estero richiede più di una traduzione automatica: richiede sensibilità culturale, vocabolario appropriato e gestione tempestiva dei contatti.',
     points: [
       {
         title: 'Quattro lingue operative',
-        desc: 'Italiano madrelingua, con padronanza professionale di inglese, francese e spagnolo per dialogare con clienti e partner europei.',
+        desc: 'Italiano madrelingua, inglese e francese avanzati e spagnolo intermedio-alto per la corrispondenza professionale concordata.',
       },
       {
         title: 'Rispetto del contesto',
@@ -182,14 +182,14 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Supporto unificato',
-        desc: 'Dalla prima email fino ai documenti contrattuali e al supporto post-vendita, i messaggi per i clienti esteri vengono curati e verificati.',
+        desc: 'Dalle email alle risposte ai clienti già acquisiti, preparo comunicazioni coerenti con le informazioni e le istruzioni approvate.',
       },
     ],
     badgeNote: 'Formazione specialistica: Laurea in Mediazione Linguistica (110 e lode) + Master in Traduzione Specialistica',
   },
   productized: {
     tag: 'PERCORSI DI COLLABORAZIONE', title: 'Soluzioni su misura per attività concrete',
-    subtitle: 'Esempi di incarichi con risultati verificabili. Il contenuto e i tempi vengono definiti nel preventivo scritto.',
+    subtitle: 'Esempi illustrativi delle attività che posso svolgere. Prestazioni e tempi sono definiti nel preventivo.',
     packages: [
       {id: 'p1', title: 'Back office organizzato', badge: 'Segreteria e supporto operativo',
        description: 'Un intervento mirato per riordinare attività, corrispondenza e documenti ricorrenti.',
@@ -198,7 +198,7 @@ export const itLocale: TranslationDictionary = {
        description: "Supporto alle richieste dei clienti già acquisiti, aggiornamenti su ordini e follow-up di assistenza, con tono e procedure concordati.",
        deliverables: ['Modelli di risposta e FAQ', 'Gestione concordata delle richieste scritte', 'Registro dei follow-up e delle attività'], turnaround: 'Da concordare'},
       {id: 'p3', title: 'Traduzioni e adattamento multilingue', badge: 'IT · EN · FR · ES',
-       description: 'Traduzione e adattamento di testi da e verso l’italiano nelle quattro lingue di lavoro, in base al contenuto e alle competenze linguistiche.',
+       description: 'Traduzione dall’inglese, dal francese e dallo spagnolo verso l’italiano, con supporto distinto alla corrispondenza multilingue.',
        deliverables: ['Analisi di testi, pubblico e terminologia', 'Traduzione o localizzazione dei contenuti concordati', 'Revisione finale e note sulle scelte linguistiche'], turnaround: 'In base al volume'},
       {id: 'p4', title: 'Revisione di contenuti esistenti', badge: 'Chiarezza e coerenza',
        description: 'Intervento su testi professionali e materiali già disponibili, anche di origine multilingue.',
@@ -359,7 +359,7 @@ export const itLocale: TranslationDictionary = {
     lead: 'Assistente Virtuale, traduttrice e supporto operativo per professionisti e aziende.',
     bioParagraphs: [
       'Metto a disposizione oltre vent’anni di esperienza professionale maturata tra customer care, back office, organizzazione e supporto operativo, insieme a una solida formazione linguistica.',
-      'Ho conseguito la Laurea triennale in Mediazione Linguistica presso l’Università di Macerata nel 2009 con 110/110 e lode, e successivamente il Master Universitario di I livello in Traduzione Specialistica – lingua inglese (A.A. 2010–2011, 1.500 ore, 60 CFU) con superamento della prova finale. Gli ambiti affrontati durante il Master comprendono i settori letterario, giuridico, economico, tecnologico e scientifico.',
+      'Ho conseguito la Laurea triennale in Mediazione Linguistica presso l’Università di Macerata nel 2009 con 110/110 e lode, e successivamente il Master Universitario di I livello in Traduzione Specialistica – lingua inglese (2010–2012, 1.500 ore, 60 CFU) con superamento della prova finale. Gli ambiti affrontati durante il Master comprendono i settori letterario, giuridico, economico, tecnologico e scientifico.',
       'L’italiano è la mia lingua madre e fornisco supporto operativo e linguistico professionale in quattro lingue: italiano, inglese, francese e spagnolo, garantendo cura, puntualità e massima riservatezza.',
     ],
     credentials: [
@@ -475,7 +475,7 @@ export const itLocale: TranslationDictionary = {
       errorMsg: 'Compila tutti i campi obbligatori contrassegnati con l’asterisco e accetta l’informativa privacy.',
     },
     directBooking: {
-      title: 'Richiesta di preventivo scritto',
+      title: 'Richiesta di preventivo',
       desc: 'Descrivimi le attività da delegare e le tue esigenze attraverso il modulo: ti risponderò per iscritto con le informazioni necessarie.',
       btnLabel: 'Richiedi un preventivo',
       specs: [

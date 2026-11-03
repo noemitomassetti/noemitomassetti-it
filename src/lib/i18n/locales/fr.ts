@@ -65,15 +65,15 @@ export const frLocale: TranslationDictionary = {
       },
       {
         title: 'Exigence linguistique',
-        desc: 'Italienne de langue maternelle, avec une pratique courante du français, de l’anglais et de l’espagnol. Chaque document et communication respecte les nuances culturelles.',
+        desc: 'De langue maternelle italienne, je maîtrise le français et l’anglais à un niveau avancé et l’espagnol à un niveau intermédiaire supérieur. Je traduis professionnellement vers l’italien.',
       },
       {
         title: 'Levier technologique moderne',
-        desc: 'J’associe rigueur artisanale et outils d’intelligence artificielle avancés, dont mon propre système NoeTom, pour des processus rapides et soignés.',
+        desc: 'J’utilise des outils numériques et d’intelligence artificielle sous supervision humaine. NoeTom est un projet interne encore en développement et en phase de tests privés.',
       },
       {
-        title: 'Confidentialité totale',
-        desc: 'Gestion rigoureuse de vos données professionnelles et de votre correspondance, en stricte conformité avec le RGPD européen.',
+        title: 'Discrétion et méthode',
+        desc: 'Je traite les documents et les échanges confiés avec discrétion, en tenant compte des exigences de confidentialité et de protection des données applicables.',
       },
     ],
   },
@@ -167,14 +167,14 @@ export const frLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'EXPANSION EUROPÉENNE',
-    title: 'L’Atout Multilingue : Dialoguez Directement avec Vos Clients',
+    tag: 'COMMUNIQUER AVEC L’ITALIE',
+    title: 'Communiquer clairement avec vos clients italiens',
     description:
-      'Développer son activité en Europe exige bien plus qu’un outil de traduction automatique. Cela nécessite de la justesse idiomatique, du tact relationnel et de la réactivité.',
+      'Communiquer avec le public italien exige un vocabulaire précis, un registre adapté et des contenus fidèles à votre activité, au-delà d’une traduction littérale.',
     points: [
       {
         title: 'Quatre langues de travail',
-        desc: 'Italien natif, anglais, français et espagnol professionnels pour échanger avec vos interlocuteurs européens avec aisance.',
+        desc: 'Italien langue maternelle, français et anglais avancés, espagnol de niveau intermédiaire supérieur : une communication adaptée au périmètre convenu.',
       },
       {
         title: 'Fidélité au contexte',
@@ -182,7 +182,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         title: 'Fluidité opérationnelle',
-        desc: 'Du premier contact par email jusqu’aux livrables et échanges de suivi, l’expérience de vos clients étrangers demeure sans friction.',
+        desc: 'Des contenus destinés à l’Italie aux échanges avec vos clients italiens existants, je veille à la clarté et à la cohérence des messages.',
       },
     ],
     badgeNote: 'Excellence académique : Diplôme en Médiation Linguistique (110/110 avec les félicitations) & Master en Traduction',
@@ -195,7 +195,7 @@ export const frLocale: TranslationDictionary = {
        deliverables: ['Analyse des tâches à déléguer', 'Organisation des e-mails, fichiers et procédures convenues', 'Synthèse du travail et des priorités'], turnaround: 'À convenir'},
       {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes des clients déjà acquis, informations sur les commandes et suivis de service selon des procédures convenues.",
        deliverables: ['Modèles de réponses et FAQ', 'Gestion convenue des demandes écrites', 'Suivi des relances et activités'], turnaround: 'À convenir'},
-      {id: 'p3', title: 'Traduction et adaptation multilingue', badge: 'IT · EN · FR · ES', description: 'Traduction et adaptation depuis et vers l’italien dans les quatre langues de travail, selon les contenus et les compétences linguistiques.',
+      {id: 'p3', title: 'Traduction et adaptation multilingue', badge: 'IT · EN · FR · ES', description: 'Traduction du français, de l’anglais et de l’espagnol vers l’italien, avec un accompagnement distinct pour les échanges multilingues convenus.',
        deliverables: ['Analyse des textes, publics et termes', 'Traduction ou localisation des contenus définis', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
       {id: 'p4', title: 'Révision de contenus existants', badge: 'Clarté et cohérence', description: 'Relecture et amélioration de documents professionnels et multilingues existants.',
        deliverables: ['Évaluation du texte et des objectifs', 'Amélioration de la structure, du ton et de la lisibilité', 'Document final avec modifications identifiables'], turnaround: 'Selon périmètre'},
@@ -355,7 +355,7 @@ export const frLocale: TranslationDictionary = {
     lead: 'Assistante Virtuelle, traductrice et soutien opérationnel pour professionnels et entreprises.',
     bioParagraphs: [
       'Je mets à votre disposition plus de vingt ans d’expérience professionnelle acquise dans le service client, le back-office, l’organisation et le soutien opérationnel, alliée à une solide formation linguistique.',
-      'Je suis titulaire d’une licence (Laurea triennale) en Médiation Linguistique de l’Université de Macerata (2009, obtenue avec la mention 110/110 et félicitations du jury), suivie d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (A.U. 2010–2011, 1 500 heures, 60 crédits ECTS) avec réussite de l’épreuve finale. Les domaines abordés au cours du Master comprennent les secteurs littéraire, juridique, économique, technologique et scientifique.',
+      'Je suis titulaire d’une licence (Laurea triennale) en Médiation Linguistique de l’Université de Macerata (2009, obtenue avec la mention 110/110 et félicitations du jury), suivie d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 crédits ECTS) avec réussite de l’épreuve finale. Les domaines abordés au cours du Master comprennent les secteurs littéraire, juridique, économique, technologique et scientifique.',
       'L’italien est ma langue maternelle et j’assure un accompagnement professionnel en quatre langues : italien, anglais, français et espagnol, avec rigueur, ponctualité et discrétion.',
     ],
     credentials: [
@@ -373,7 +373,7 @@ export const frLocale: TranslationDictionary = {
     storyParagraphs: [
       'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
       'Au cours de plus de deux décennies, j’ai acquis une solide expérience de terrain en gestion de service client, secrétariat opérationnel, correspondances multilingues, traductions et back-office. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
-      'Sur le plan universitaire, je suis diplômée d’une licence en Médiation Linguistique (Université de Macerata, 2009, 110/110 et félicitations du jury) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (A.U. 2010–2011, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
+      'Sur le plan universitaire, je suis diplômée d’une licence en Médiation Linguistique (Université de Macerata, 2009, 110/110 et félicitations du jury) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
       'En complément de mon activité d’assistance, j’ai conçu NoeTom, une assistante opérationnelle intelligente pour accompagner la gestion quotidienne des indépendants.',
     ],
     timeline: [

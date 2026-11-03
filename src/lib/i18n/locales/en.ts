@@ -60,12 +60,12 @@ export const enLocale: TranslationDictionary = {
       'Running an independent business means balancing your core expertise with an endless stream of emails, scheduling conflicts, client follow-ups, documentation, and cross-border inquiries. I provide senior, confidential, and autonomous operational backing so you can focus on high-value client work.',
     pillars: [
       {
-        title: 'Senior Autonomy',
+        title: 'Experienced and Independent',
         desc: 'Extensive back-office and organizational experience. I anticipate bottlenecks, ask the right questions, and run processes without requiring micromanagement.',
       },
       {
-        title: 'Linguistic Rigor',
-        desc: 'Native Italian, with full professional fluency in English, French, and Spanish. Communications and translations are reviewed for linguistic accuracy and their intended audience.',
+        title: 'Linguistic Accuracy',
+        desc: 'Native Italian speaker, with advanced English and French and upper-intermediate Spanish. I translate professionally into Italian and support multilingual correspondence within my competencies.',
       },
       {
         title: 'Modern Technological Leverage',
@@ -105,7 +105,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Translation & Localization',
         subtitle: 'Native Italian translation from English, French and Spanish.',
         description:
-          "Translation from English, French and Spanish into Italian, plus editing and cultural localisation of Italian websites, landing pages, catalogues, product pages and professional communications. I do not offer native-level translation into English, French or Spanish.",
+          "Translation from English, French and Spanish into Italian, plus editing and cultural localisation of Italian websites, landing pages, catalogues, product pages and professional communications. I do not offer professional translation from Italian into English, French or Spanish.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
@@ -169,21 +169,21 @@ export const enLocale: TranslationDictionary = {
   },
   multilingualAdvantage: {
     tag: 'GLOBAL REACH',
-    title: 'The Multilingual Advantage: Speak Directly to European Clients',
+    title: 'Communicate Clearly with Italian Customers and Partners',
     description:
-      'Doing business across Europe requires more than literal translation. It demands linguistic precision, cultural empathy, and seamless operational coordination.',
+      'Communicating with Italian audiences takes more than literal translation: accurate terminology, suitable tone and local context all matter.',
     points: [
       {
         title: 'Four Core Languages',
-        desc: 'Professional capability in Italian (native), English, French, and Spanish allows you to handle international clients without hesitation.',
+        desc: 'Native Italian, advanced English and French, and upper-intermediate Spanish for agreed professional correspondence.',
       },
       {
         title: 'Contextual Adaptation',
-        desc: 'Nuances, idiomatic terminology, and business etiquette are respected so your brand never sounds automated or foreign.',
+        desc: 'I adapt terminology, tone and cultural references so Italian-language content sounds natural and appropriate to its audience.',
       },
       {
         title: 'Unified Multilingual Operations',
-        desc: 'From initial inquiries to contract translations and ongoing email threads, your international client journey remains consistent.',
+        desc: 'From Italian-language website content to written support for existing Italian customers, I help maintain consistent communication.',
       },
     ],
     badgeNote: 'Academic excellence: Degree in Language Mediation (110 cum laude) + Specialized Translation Master',
@@ -196,7 +196,7 @@ export const enLocale: TranslationDictionary = {
        deliverables: ['Review of activities to delegate', 'Agreed email, document and workflow organisation', 'Summary of work completed and next priorities'], turnaround: 'By agreement'},
       {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: "Written enquiries from existing customers, order-status updates and support follow-ups, within agreed procedures and tone of voice.",
        deliverables: ['Response templates and FAQs', 'Agreed handling of written enquiries', 'Follow-up and activity log'], turnaround: 'By agreement'},
-      {id: 'p3', title: 'Multilingual translation and adaptation', badge: 'IT · EN · FR · ES', description: 'Translation and adaptation to and from Italian across four working languages, assessed case by case according to the material and expertise.',
+      {id: 'p3', title: 'Multilingual translation and adaptation', badge: 'IT · EN · FR · ES', description: 'Translation from English, French and Spanish into Italian, with separate support for agreed multilingual business correspondence.',
        deliverables: ['Source, audience and terminology review', 'Translation or localisation of agreed content', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
       {id: 'p4', title: 'Existing-content review', badge: 'Clarity and consistency', description: 'Careful editing of your existing professional and multilingual materials.',
        deliverables: ['Text and objectives assessment', 'Structure, tone and readability revision', 'Final editable document with traceable changes'], turnaround: 'Based on scope'},
@@ -356,7 +356,7 @@ export const enLocale: TranslationDictionary = {
     lead: 'Virtual Assistant, translator, and operational support partner for professionals and small businesses.',
     bioParagraphs: [
       'I bring over twenty years of professional experience gained across customer care, back office, operations, and operational support, alongside a solid linguistic foundation.',
-      'I hold a Bachelor’s degree in Linguistic Mediation from the University of Macerata (2009, graduated with 110/110 cum laude), followed by a First-level University Master’s in Specialized Translation – English language (A.Y. 2010–2011, 1,500 hours, 60 CFU) with successful completion of the final examination. Areas covered during the Master’s include literary, legal, economic, technological, and scientific fields.',
+      'I hold a Bachelor’s degree in Linguistic Mediation from the University of Macerata (2009, graduated with 110/110 cum laude), followed by a First-level University Master’s in Specialized Translation – English language (2010–2012, 1,500 hours, 60 ECTS) with successful completion of the final examination. Areas covered during the Master’s include literary, legal, economic, technological, and scientific fields.',
       'Italian is my native language, and I provide professional multilingual support in four languages: Italian, English, French, and Spanish, ensuring precision, punctuality, and confidentiality.',
     ],
     credentials: [

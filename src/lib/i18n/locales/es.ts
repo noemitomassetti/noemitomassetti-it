@@ -65,7 +65,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Rigor lingüístico',
-        desc: 'Nativa italiana con dominio profesional de español, inglés y francés. Cada comunicación y traducción respeta el contexto cultural y comercial.',
+        desc: 'Mi lengua materna es el italiano; tengo un nivel avanzado de inglés y francés y un nivel intermedio-alto de español. Traduzco profesionalmente al italiano y apoyo la correspondencia multilingüe acordada.',
       },
       {
         title: 'Tecnología e IA aplicada',
@@ -73,7 +73,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Máxima confidencialidad',
-        desc: 'Gestión rigurosa de tu información y correspondencia con clientes, en estricto cumplimiento de la normativa europea de protección de datos (RGPD).',
+        desc: 'Trato la documentación y las comunicaciones con discreción, teniendo en cuenta los requisitos aplicables de privacidad y protección de datos.',
       },
     ],
   },
@@ -167,14 +167,14 @@ export const esLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'ALCANCE INTERNACIONAL',
-    title: 'La Ventaja Multilingüe: Habla Directamente a Tus Clientes en Europa',
+    tag: 'COMUNICACIÓN CON ITALIA',
+    title: 'Comunícate con claridad con tus clientes italianos',
     description:
-      'Hacer negocios en diferentes países de Europa requiere mucho más que traducciones automáticas: exige exactitud terminológica, empatía cultural y agilidad en el trato.',
+      'Para comunicarte con el público italiano necesitas información precisa, una terminología adecuada y un tono natural, no una traducción literal.',
     points: [
       {
         title: 'Cuatro idiomas de trabajo',
-        desc: 'Italiano nativo, con español, inglés y francés profesionales para dialogar con solvencia con interlocutores de toda Europa.',
+        desc: 'Italiano nativo, inglés y francés avanzados y español intermedio-alto para las comunicaciones profesionales acordadas.',
       },
       {
         title: 'Respeto al contexto',
@@ -182,7 +182,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Operativa unificada',
-        desc: 'Desde la primera consulta por email hasta el seguimiento de contratos, tus clientes internacionales perciben un trato impecable.',
+        desc: 'Desde los contenidos web en italiano hasta los mensajes para clientes italianos existentes, procuro mantener una comunicación clara y coherente.',
       },
     ],
     badgeNote: 'Excelencia académica: Licenciatura en Mediación Lingüística (110/110 con honores) y Máster en Traducción Especializada',
@@ -195,7 +195,7 @@ export const esLocale: TranslationDictionary = {
        deliverables: ['Análisis de tareas delegables', 'Organización acordada de correos, archivos y procesos', 'Resumen de actividades y prioridades'], turnaround: 'Por acordar'},
       {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: "Atención escrita a los clientes existentes, actualizaciones de pedidos y seguimientos de asistencia conforme a los procedimientos acordados.",
        deliverables: ['Plantillas de respuesta y preguntas frecuentes', 'Gestión acordada de consultas escritas', 'Registro de seguimientos y actividades'], turnaround: 'Por acordar'},
-      {id: 'p3', title: 'Traducción y adaptación multilingüe', badge: 'IT · EN · FR · ES', description: 'Traducción y adaptación desde y hacia el italiano en los cuatro idiomas de trabajo, según el contenido y las competencias lingüísticas.',
+      {id: 'p3', title: 'Traducción y adaptación multilingüe', badge: 'IT · EN · FR · ES', description: 'Traducción del español, inglés y francés al italiano, con apoyo aparte para la correspondencia multilingüe acordada.',
        deliverables: ['Análisis de textos, público y terminología', 'Traducción o localización del contenido acordado', 'Revisión final y notas lingüísticas'], turnaround: 'Según volumen'},
       {id: 'p4', title: 'Revisión de contenido existente', badge: 'Claridad y coherencia', description: 'Revisión cuidadosa de materiales profesionales y multilingües existentes.',
        deliverables: ['Evaluación del texto y los objetivos', 'Revisión de estructura, tono y legibilidad', 'Documento final con cambios identificables'], turnaround: 'Según alcance'},
@@ -355,8 +355,8 @@ export const esLocale: TranslationDictionary = {
     lead: 'Asistente Virtual, traductora y soporte operativo para profesionales y empresas.',
     bioParagraphs: [
       'Pongo a tu disposición más de veinte años de experiencia profesional adquirida en atención al cliente, back office, organización y soporte operativo, junto con una sólida formación lingüística.',
-      'Obtuve el Grado (Laurea triennale) en Mediación Lingüística en la Universidad de Macerata (2009, con honores 110/110 e lode), seguido del Máster Universitario de I nivel en Traducción Especializada – lengua inglesa (C.A. 2010–2011, 1.500 horas, 60 CFU) con superación del examen final. Las áreas abordadas durante el Máster incluyen los sectores literario, jurídico, económico, tecnológico y científico.',
-      'El italiano es mi lengua materna y presto soporte profesional multilingüe en cuatro idiomas: italiano, inglés, francés y español, con atención al rigor lingüístico, los plazos acordados y la confidencialidad.',
+      'Obtuve el Grado (Laurea triennale) en Mediación Lingüística en la Universidad de Macerata (2009, con honores 110/110 e lode), seguido del Máster Universitario de I nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS) con superación del examen final. Las áreas abordadas durante el Máster incluyen los sectores literario, jurídico, económico, tecnológico y científico.',
+      'El italiano es mi lengua materna; presto apoyo a las comunicaciones profesionales en cuatro idiomas: italiano, inglés, francés y español, con atención al rigor lingüístico, los plazos acordados y la confidencialidad.',
     ],
     credentials: [
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
