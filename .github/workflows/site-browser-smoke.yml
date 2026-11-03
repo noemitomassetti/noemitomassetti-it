@@ -160,6 +160,45 @@ jobs:
                   console.log('PASS guided sample '+item.path+' '+width+'px, localized page + reachable original');
                 }
               }
+              // Exhaustive portfolio reader audit, not just four representative samples:
+              // every one of the 22 deliverables must be available in all four languages
+              // on a 390px phone without horizontal overflow, broken source documents or
+              // accidentally missing SEO language alternates. Do not send real form data.
+              const samplePrefixes={
+                it:'/it/esempi-di-lavoro/esempio/',
+                en:'/work-examples/sample/',
+                fr:'/fr/exemples-de-projets/exemple/',
+                es:'/es/ejemplos-de-trabajo/ejemplo/'
+              };
+              const checkedOriginals=new Set();
+              await page.setViewportSize({width:390,height:850});
+              for(const [locale,prefix] of Object.entries(samplePrefixes)) {
+                for(let doc=1;doc<=22;doc++) {
+                  const id=String(doc).padStart(2,'0'), route=prefix+id;
+                  await page.goto('http://127.0.0.1:4173'+route,{waitUntil:'domcontentloaded',timeout:20000});
+                  const visible=await page.locator('main').innerText();
+                  const heading=await page.locator('main h1').count();
+                  if(heading!==1 || visible.length<700) throw Error('Reader missing content '+route);
+                  if(await page.locator('html').getAttribute('lang')!==locale) throw Error('Reader lang incorrect '+route);
+                  if(await page.locator('main iframe[title]').count()!==1) throw Error('Accessible work-sample iframe missing '+route);
+                  const src=await page.locator('main iframe').getAttribute('src');
+                  if(!src?.startsWith('/portfolio-documenti/doc-'+id+'-')) throw Error('Incorrect original for '+route+': '+src);
+                  if(!checkedOriginals.has(src)) {
+                    const asset=await page.request.get('http://127.0.0.1:4173'+src);
+                    const source=await asset.text();
+                    if(asset.status()!==200 || !source.includes('<html') || !source.includes('Guide multilingue / Multilingual reading guide'))
+                      throw Error('Original file or multilingual guide missing '+src);
+                    checkedOriginals.add(src);
+                  }
+                  if(await page.locator('link[rel="alternate"][hreflang]').count()!==5) throw Error('Missing document hreflang '+route);
+                  if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3)) throw Error('Phone horizontal overflow '+route);
+                }
+                await page.screenshot({path:'/tmp/noemi-smoke/portfolio_readers_'+locale+'_390.png',fullPage:false});
+                console.log('PASS all 22 guided reader documents in '+locale+', 390px, linked assets, a11y and SEO');
+              }
+              if(checkedOriginals.size!==22) throw Error('Expected 22 distinct source documents; got '+checkedOriginals.size);
+              console.log('PASS all 88 localized reader routes and 22 individual source documents');
+
               await page.setViewportSize({width:390,height:900});
               await page.goto('http://127.0.0.1:4173/work-examples/sample/17',{waitUntil:'networkidle'});
               await page.locator('nav[aria-label="Language / Langue / Idioma"] a[lang="fr"]').click();
