@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Portfolio from "./pages/Portfolio";
+import PortfolioDocument from "./pages/PortfolioDocument";
 import Publications from "./pages/Publications";
 import { PUBLICATIONS_VISIBLE } from "./lib/publicationsCatalog";
 import ItalianLocalisation from "./pages/ItalianLocalisation";
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/italian-localisation" element={<ItalianLocalisation />} />
           <Route path="/italian-localization" element={<ItalianLocalisation />} />
           <Route path="/work-examples" element={<Portfolio />} />
+          <Route path="/work-examples/sample/:num" element={<PortfolioDocument />} />
           <Route path="/professional-research" element={<Questionnaire />} />
           <Route path="/noetom" element={<NoeTom />} />
           <Route path="/noetom/workspace" element={<Navigate to="/noetom" replace />} />
@@ -57,6 +59,7 @@ const App = () => (
           <Route path="/it/servizi" element={<Services />} />
           <Route path="/it/localizzazione-italiano" element={<ItalianLocalisation />} />
           <Route path="/it/esempi-di-lavoro" element={<Portfolio />} />
+          <Route path="/it/esempi-di-lavoro/esempio/:num" element={<PortfolioDocument />} />
           <Route path="/it/ricerca-professionisti" element={<Questionnaire />} />
           <Route path="/it/noetom" element={<NoeTom />} />
           <Route path="/it/noetom/workspace" element={<Navigate to="/noetom" replace />} />
@@ -72,6 +75,7 @@ const App = () => (
           <Route path="/fr/services" element={<Services />} />
           <Route path="/fr/localisation-italien" element={<ItalianLocalisation />} />
           <Route path="/fr/exemples-de-projets" element={<Portfolio />} />
+          <Route path="/fr/exemples-de-projets/exemple/:num" element={<PortfolioDocument />} />
           <Route path="/fr/recherche-professionnels" element={<Questionnaire />} />
           <Route path="/fr/noetom" element={<NoeTom />} />
           <Route path="/fr/a-propos" element={<About />} />
@@ -86,6 +90,7 @@ const App = () => (
           <Route path="/es/servicios" element={<Services />} />
           <Route path="/es/localizacion-italiano" element={<ItalianLocalisation />} />
           <Route path="/es/ejemplos-de-trabajo" element={<Portfolio />} />
+          <Route path="/es/ejemplos-de-trabajo/ejemplo/:num" element={<PortfolioDocument />} />
           <Route path="/es/investigacion-profesionales" element={<Questionnaire />} />
           <Route path="/es/noetom" element={<NoeTom />} />
           <Route path="/es/sobre-mi" element={<About />} />

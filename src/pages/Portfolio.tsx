@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
 import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
+import { getPortfolioDocumentPath } from "@/lib/portfolioDocumentPaths";
 import { Language } from "@/lib/i18n/types";
 import {
   PORTFOLIO_CASES,
@@ -190,7 +191,7 @@ export default function Portfolio() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {featured.map(doc => (
-              <a key={doc.num} href={doc.url} target="_blank" rel="noopener noreferrer"
+              <a key={doc.num} href={getPortfolioDocumentPath(doc.num,lang)} target="_blank" rel="noopener noreferrer"
                  className="group rounded-xl border border-border/60 bg-card p-5 hover:border-primary/60 hover:shadow-md transition-all">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-xs font-bold text-primary">DOC {doc.num}</span>
@@ -698,7 +699,7 @@ export default function Portfolio() {
                     {caseSampleFile[caseItem.id] && (() => {
                       const doc = PORTFOLIO_DOCUMENTS.find(item => item.num === caseSampleFile[caseItem.id]);
                       return doc ? (
-                        <a href={doc.url} target="_blank" rel="noopener noreferrer"
+                        <a href={getPortfolioDocumentPath(doc.num,lang)} target="_blank" rel="noopener noreferrer"
                            className="flex items-center justify-between gap-3 p-4 rounded-xl border border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-semibold text-sm">
                           <span className="flex items-center gap-3">
                             <FileText className="w-5 h-5 shrink-0" aria-hidden="true" />
@@ -777,7 +778,7 @@ export default function Portfolio() {
             {PORTFOLIO_DOCUMENTS.map((doc) => (
               <a
                 key={doc.num}
-                href={doc.url}
+                href={getPortfolioDocumentPath(doc.num,lang)}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${doc.title[lang]} - ${doc.subtitle[lang]}`}

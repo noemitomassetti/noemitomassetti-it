@@ -1,5 +1,6 @@
 import { Language, PageKey, RouteConfig } from './types';
 import { getBlogIndexPath, getBlogPostBySlug, getBlogPostPath, getBlogPosts } from '../blogData';
+import { getPortfolioDocumentNum, getPortfolioDocumentPath } from '../portfolioDocumentPaths';
 
 export const BASE_DOMAIN = 'https://www.noemitomassetti.it';
 
@@ -182,6 +183,8 @@ export function getHreflangAlternates(pageKey: PageKey): Array<{ hrefLang: strin
  * Switch from current path to the corresponding target language path.
  */
 export function switchLanguageUrl(currentPathname: string, targetLang: Language): string {
+  const sampleNum = getPortfolioDocumentNum(currentPathname);
+  if (sampleNum) return getPortfolioDocumentPath(sampleNum, targetLang);
   // Preserve article identity when visitors switch language on a blog page.
   if (currentPathname === '/blog' || currentPathname === '/it/blog' ||
       /^\/(en|fr|es)\/blog\/?$/.test(currentPathname)) return getBlogIndexPath(targetLang);
