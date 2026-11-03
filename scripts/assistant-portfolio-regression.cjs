@@ -30,8 +30,8 @@ assert.match(assistant,/Noemi’s Assistant/);assert.match(assistant,/Assistant 
 assert.match(assistant,/Risposte automatiche, non una chat con Noemi in diretta/);
 const portfolio=fs.readFileSync(path.join(root,'src/lib/portfolioData.ts'),'utf8');
 const links=[...portfolio.matchAll(/url:\s*"(\/portfolio-documenti\/[^"\n]+\.html)"/g)].map(m=>m[1]);
-assert.equal(links.length,21);assert.equal(new Set(links).size,links.length);
+assert.equal(links.length,22);assert.equal(new Set(links).size,links.length);
 for(const url of links){const doc=fs.readFileSync(path.join(root,'public'+url),'utf8');assert.match(doc,/<title>/i);assert.match(doc,/demo|dimostrativ|synthet|fittiz|fictif/i, url)}
 const page=fs.readFileSync(path.join(root,'src/pages/Portfolio.tsx'),'utf8');assert.match(page,/\$\{PORTFOLIO_DOCUMENTS\.length\}/);
 assert.doesNotMatch(page,/10 Documenti di Lavoro Dimostrativi/);
-console.log(`PASS 12 intent examples, 4 language responses, assistant transparency & 21 portfolio documents`);
+console.log(`PASS 12 intent examples, 4 language responses, assistant transparency & 22 portfolio documents`);

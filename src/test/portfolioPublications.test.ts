@@ -21,9 +21,9 @@ describe("Editorial portfolio and future books safeguards", () => {
       expect(PORTFOLIO_CASES.find(x=>x.id===id)?.comparison?.targetLang).toBe("IT");
     }
   });
-  it("references 21 discoverable illustrative work documents", () => {
-    expect(PORTFOLIO_DOCUMENTS.length).toBe(21);
-    expect(new Set(PORTFOLIO_DOCUMENTS.map(d=>d.num)).size).toBe(21);
+  it("references 22 discoverable illustrative work documents", () => {
+    expect(PORTFOLIO_DOCUMENTS.length).toBe(22);
+    expect(new Set(PORTFOLIO_DOCUMENTS.map(d=>d.num)).size).toBe(22);
     expect(PORTFOLIO_DOCUMENTS.find(d=>d.num==="21")?.url).toBe("/portfolio-documenti/doc-21-landing-page-contenuti-en-it.html");
   });
   it("does not advertise nonexistent books before launch", () => {

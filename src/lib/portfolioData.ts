@@ -884,8 +884,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       sourceLang: "IT (Bozza Originale)",
       targetLang: "IT (Testo Revisionato)",
       sourceText: "La nostra compagine professionale si prefigge lo scopo precipuo di implementare soluzioni sinergiche a 360 gradi atte a favorire l'ottimizzazione dei processi operativi dei nostri stimati clienti.",
-      literalText: "Our professional body aims at the main purpose of implementing synergic solutions at 360 degrees capable of favoring the optimization of operational processes of our esteemed clients.",
-      localizedText: "Aiutiamo professionisti e piccole aziende a semplificare il lavoro quotidiano: organizziamo i processi interni, riduciamo il tempo perso e ti restituiamo serenità operativa.",
+      literalText: "La nostra realtà è finalizzata all'implementazione di soluzioni sinergiche a trecentosessanta gradi per ottimizzare i processi dei nostri clienti.",
+      localizedText: "Aiutiamo professionisti e piccole attività a organizzare meglio il lavoro quotidiano con procedure chiare, documenti ordinati e comunicazioni più semplici.",
       notes: {
         it: "Eliminato il burocratese vuoto. Il testo revisionato parla direttamente al lettore in prima persona plurale, definisce l'interlocutore e si concentra sul beneficio reale.",
         en: "Replaces empty bureaucratic waffle with direct, human-centered professional prose emphasizing concrete operational benefits.",
@@ -1060,11 +1060,11 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
 She didn't sign off. A breath, the faint metallic click of the stove being turned down, and the line cut. That was nine months ago, before the boxes in the hallway, before the letters that kept arriving with someone else's name neatly crossed out in blue ink. I still haven't cleared the inbox. Sometimes, when the house settles into that hollow afternoon quiet, I play it just to hear the kettle.`,
       itTarget: `In cucina faceva ancora freddo quando il telefono vibrò sul ripiano di marmo. Erano quarantasei secondi di niente in particolare: il rumore di un bollitore che tremava su un fornello a trecento miglia di distanza, un'auto che passava sotto la pioggia e poi la sua voce, che si schiariva la gola come se avesse sbagliato numero e avesse deciso di scusarsi con il silenzio.
 
-«Ho trovato il libro», disse. «Quello con lo scontrino dentro. Avevi ragione tu sull'anno».
+«Ho trovato il libro», disse. «Quello con il talloncino del biglietto tra le pagine. Avevi ragione tu sull'anno».
 
 Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abbassato e la registrazione si interruppe. Era successo nove mesi fa, prima degli scatoloni nel corridoio, prima delle lettere che continuavano ad arrivare con un nome altrui cancellato con cura a penna blu. Non ho ancora svuotato la casella. A volte, quando la casa sprofonda in quel silenzio vuoto del pomeriggio, la faccio partire solo per sentire il bollitore.`,
       editorialNotes: {
-        it: "Note del traduttore: 'forty-six seconds of nothing in particular' è reso con 'quarantasei secondi di niente in particolare', mantenendo il tono disarmante; 'ticket stub' è adattato nel contesto con 'scontrino' o 'talloncino del biglietto' a seconda dell'oggetto; 'the house settles into that hollow afternoon quiet' è tradotto con 'la casa sprofonda in quel silenzio vuoto del pomeriggio' per restituire la sensazione di peso e solitudine senza enfasi melodrammatica.",
+        it: "Note del traduttore: 'forty-six seconds of nothing in particular' è reso con 'quarantasei secondi di niente in particolare', mantenendo il tono disarmante; 'ticket stub' è reso con 'talloncino del biglietto', non con 'scontrino', perché non si tratta di una ricevuta d’acquisto; 'the house settles into that hollow afternoon quiet' è tradotto con 'la casa sprofonda in quel silenzio vuoto del pomeriggio' per restituire la sensazione di peso e solitudine senza enfasi melodrammatica.",
         en: "Translator's notes: Maintained the quiet cadence of the original; selected evocative Italian verbs ('sprofonda', 'tremava') that mirror the acoustic reality of the memory without calling attention to the translator's hand.",
         fr: "Notes de traduction : Restitution de la pudeur et de l'intimité du passage sans fard littéraire excessif.",
         es: "Notas de traducción: Búsqueda deliberada de la contención emocional a través de una prosodia limpia y verosímil en italiano.",
@@ -2017,5 +2017,6 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
     subtitle: { it: "Headline, FAQ, vantaggi e CTA con confronto linguistico", en: "Source/target headlines, FAQs, benefits and calls to action", fr: "Accroche, FAQ, avantages et appels à l’action comparés", es: "Titulares, ventajas, preguntas frecuentes y CTA comparadas" },
     category: "web",
     url: "/portfolio-documenti/doc-21-landing-page-contenuti-en-it.html",
-  },
+  },  { num: "22", title: {it:"Traduzione letteraria EN → IT",en:"Literary translation EN → IT",fr:"Traduction littéraire EN → IT",es:"Traducción literaria EN → IT"}, subtitle:{it:"Racconto originale e versione italiana a fronte, con note traduttologiche",en:"Original fictional prose and Italian translation, with translator's notes",fr:"Prose originale fictive et traduction italienne commentée",es:"Prosa original ficticia y traducción italiana con notas"},category:"translation",url:"/portfolio-documenti/doc-22-traduzione-letteraria-en-it.html" },
+
 ];
