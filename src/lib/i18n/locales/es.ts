@@ -185,7 +185,7 @@ export const esLocale: TranslationDictionary = {
         desc: 'Desde los contenidos web en italiano hasta los mensajes para clientes italianos existentes, procuro mantener una comunicación clara y coherente.',
       },
     ],
-    badgeNote: 'Excelencia académica: Licenciatura en Mediación Lingüística (110/110 con honores) y Máster en Traducción Especializada',
+    badgeNote: 'Excelencia académica: Licenciatura en Mediación Lingüística (110/110 e lode (distinción italiana)) y Máster en Traducción Especializada',
   },
   productized: {
     tag: 'FORMAS DE COLABORAR', title: 'Servicios concretos y entregables claros',
@@ -355,12 +355,12 @@ export const esLocale: TranslationDictionary = {
     lead: 'Asistente Virtual, traductora y soporte operativo para profesionales y empresas.',
     bioParagraphs: [
       'Pongo a tu disposición más de veinte años de experiencia profesional adquirida en atención al cliente, back office, organización y soporte operativo, junto con una sólida formación lingüística.',
-      'Obtuve el Grado (Laurea triennale) en Mediación Lingüística en la Universidad de Macerata (2009, con honores 110/110 e lode), seguido del máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS) con superación del examen final. Las áreas abordadas durante el Máster incluyen los sectores literario, jurídico, económico, tecnológico y científico.',
+      'Obtuve el Grado (Laurea triennale) en Mediación Lingüística en la Universidad de Macerata (2009, con la calificación italiana de 110/110 e lode), seguido del máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS) con superación del examen final. Las áreas abordadas durante el Máster incluyen los sectores literario, jurídico, económico, tecnológico y científico.',
       'El italiano es mi lengua materna; presto apoyo a las comunicaciones profesionales en cuatro idiomas: italiano, inglés, francés y español, con atención al rigor lingüístico, los plazos acordados y la confidencialidad.',
     ],
     credentials: [
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
-      { title: 'Formación académica destacada', detail: 'Grado en Mediación Lingüística (110/110 con honores) & Máster Universitario en Traducción Especializada' },
+      { title: 'Formación académica destacada', detail: 'Grado en Mediación Lingüística (110/110 e lode (distinción italiana)) & Máster Universitario en Traducción Especializada' },
       { title: 'Cuatro idiomas de trabajo', detail: 'Italiano nativo, inglés y francés avanzados, español intermedio-alto' },
       { title: 'Organización digital', detail: 'Archivos en la nube, herramientas colaborativas y procedimientos operativos' },
     ],
