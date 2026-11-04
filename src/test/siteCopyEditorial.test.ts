@@ -19,7 +19,8 @@ describe("Site copy editorial alignment", () => {
   it("does not recycle old client testimonials or unsupported verified-customer claims",()=>{
     for(const path of ["src/pages/Index.tsx",...localePaths]) {
       const copy=source(path);
-      expect(copy).not.toMatch(/Cliente verificato|Verified customer|Silvia T\\.|Chiara M\\.|Luca B\\./i);
+      expect(copy).not.toMatch(/Cliente verificato|Verified customer/i);
+      for(const name of ["Silvia T.","Chiara M.","Luca B."]) expect(copy).not.toContain(name);
       expect(copy).not.toMatch(/Creo siti web e landing page|I create websites and landing pages/i);
     }
   });
