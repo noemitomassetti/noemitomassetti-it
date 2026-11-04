@@ -125,6 +125,86 @@
       "destination": "/es/ejemplos-de-trabajo/index.html"
     },
     {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug/index.html"
+    },
+    {
+      "source": "/en/blog/:slug",
+      "destination": "/en/blog/:slug/index.html"
+    },
+    {
+      "source": "/fr/blog/:slug",
+      "destination": "/fr/blog/:slug/index.html"
+    },
+    {
+      "source": "/es/blog/:slug",
+      "destination": "/es/blog/:slug/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/en/blog",
+      "destination": "/en/blog/index.html"
+    },
+    {
+      "source": "/fr/blog",
+      "destination": "/fr/blog/index.html"
+    },
+    {
+      "source": "/es/blog",
+      "destination": "/es/blog/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/it/privacy-policy",
+      "destination": "/it/privacy-policy/index.html"
+    },
+    {
+      "source": "/fr/politique-de-confidentialite",
+      "destination": "/fr/politique-de-confidentialite/index.html"
+    },
+    {
+      "source": "/es/politica-de-privacidad",
+      "destination": "/es/politica-de-privacidad/index.html"
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/cookie-policy/index.html"
+    },
+    {
+      "source": "/it/cookie-policy",
+      "destination": "/it/cookie-policy/index.html"
+    },
+    {
+      "source": "/fr/politique-de-cookies",
+      "destination": "/fr/politique-de-cookies/index.html"
+    },
+    {
+      "source": "/es/politica-de-cookies",
+      "destination": "/es/politica-de-cookies/index.html"
+    },
+    {
+      "source": "/professional-research",
+      "destination": "/professional-research/index.html"
+    },
+    {
+      "source": "/it/ricerca-professionisti",
+      "destination": "/it/ricerca-professionisti/index.html"
+    },
+    {
+      "source": "/fr/recherche-professionnels",
+      "destination": "/fr/recherche-professionnels/index.html"
+    },
+    {
+      "source": "/es/investigacion-profesionales",
+      "destination": "/es/investigacion-profesionales/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
