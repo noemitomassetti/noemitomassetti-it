@@ -248,6 +248,8 @@ jobs:
               // Functional direction filter: two independent samples per offered direction.
               await page.goto('http://127.0.0.1:4173/it/esempi-di-lavoro',{waitUntil:'networkidle'});
               const deepDirectory=page.locator('#portfolio-complete-dossiers');
+              if(await deepDirectory.locator('article').count()!==8) throw Error('Expected curated first-eight dossier selection');
+              await deepDirectory.getByRole('button',{name:'Esplora tutti i dossier (27)'}).click();
               if(await deepDirectory.locator('article').count()!==27) throw Error('Deep dossier directory not complete');
               await deepDirectory.getByRole('button',{name:'IT → ES'}).click();
               if(await deepDirectory.locator('article').count()!==2) throw Error('IT to ES dossier filter should show two samples');
