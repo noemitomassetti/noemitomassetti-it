@@ -104,7 +104,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Traduction vers l’italien et communication multilingue',
         subtitle: 'Traduction du français et de l’anglais vers l’italien ; espagnol vers l’italien selon le texte.',
         description:
-          "Traduction du français, de l’anglais et de l’espagnol vers l’italien, révision et adaptation culturelle de sites web, pages de destination, catalogues et communications destinés au marché italien. Je ne propose pas de traduction professionnelle vers le français, l’anglais ou l’espagnol.",
+          "Traduction du français et de l’anglais vers l’italien, avec évaluation préalable des demandes depuis l’espagnol selon la nature du texte. Je révise et adapte également les contenus italiens destinés aux clients en Italie. Je ne propose pas de traduction professionnelle de l’italien vers d’autres langues.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et pages de destination en italien',
