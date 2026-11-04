@@ -187,8 +187,8 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Diplôme en Médiation Linguistique – 110/110 e lode\nMaster en Traduction Spécialisée"
           : lang === "es"
-          ? "Grado en Mediación Lingüística – 110/110 cum laude\nMáster en Traducción Especializada"
-          : "Degree in Language Mediation – 110/110 cum laude\nPostgraduate training in Specialised Translation",
+          ? "Grado en Mediación Lingüística – 110/110 e lode (distinción italiana)\nMáster en Traducción Especializada"
+          : "Degree in Language Mediation – 110/110 e lode (Italian honours)\nPostgraduate training in Specialised Translation",
     },
     {
       icon: Globe,
@@ -1228,7 +1228,7 @@ export default function IndexPage() {
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
-                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU), con approfondimenti in ambito letterario, giuridico, economico, tecnologico e scientifico." : lang === "fr" ? "Diplôme en médiation linguistique avec mention et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Título universitario italiano en Mediación Lingüística (110/110 e lode) y máster universitario italiano de primer nivel en Traducción Especializada (1.500 horas, 60 créditos ECTS)." : "Degree in Language Mediation (with honours) and a postgraduate master’s in Specialist Translation covering five fields."}
+                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU), con approfondimenti in ambito letterario, giuridico, economico, tecnologico e scientifico." : lang === "fr" ? "Diplôme en médiation linguistique (110/110 e lode, mention italienne) et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Título universitario italiano en Mediación Lingüística (110/110 e lode) y máster universitario italiano de primer nivel en Traducción Especializada (1.500 horas, 60 créditos ECTS)." : "Degree in Language Mediation (110/110 e lode, Italian honours) and a postgraduate master’s in Specialist Translation covering five fields."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
