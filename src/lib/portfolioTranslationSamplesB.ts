@@ -146,7 +146,7 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
     "review": {
       "it": "Verificati i limiti della conferma, delle modifiche account e della raccolta di dati sensibili; controllata coerenza delle etichette UI.",
       "en": "Checks cover confirmation status, account settings and sensitive-data warnings.",
-      "fr": "Contrôle des statuts et avertissements.",
+      "fr": "Contrôle des statuts de confirmation, des paramètres du compte et des avertissements de confidentialité.",
       "es": "Se verifican estados y advertencias de datos sensibles."
     },
     "output": {
@@ -357,13 +357,13 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
       "it": "Ho preservato la sequenza operativa e il registro formale, rafforzando la chiarezza senza aggiungere nuove istruzioni tecniche.",
       "en": "Maintains the formal tone and access sequence without adding unsupported technical steps.",
       "fr": "Conserve les étapes et le vouvoiement.",
-      "es": "Mantiene el orden y tono formal."
+      "es": "Mantiene el orden de las instrucciones, el tratamiento formal y las condiciones de autorización."
     },
     "review": {
       "it": "Controllati limiti di accesso, comunicazione della conferma e avvertenze contro la condivisione di credenziali.",
       "en": "Checks cover permissions, confirmation messaging and credential safety.",
       "fr": "Contrôle des droits, confirmations et avertissements.",
-      "es": "Se revisan permisos y advertencias."
+      "es": "Se revisan los permisos, las confirmaciones de acceso y las advertencias para proteger las credenciales."
     },
     "output": {
       "it": "Email ES → IT completa, utilizzabile come dimostrazione di comunicazione postvendita.",
