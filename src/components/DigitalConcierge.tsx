@@ -303,10 +303,10 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
                 lang === "it"
                   ? "Traduzione & Comunicazione Multilingue"
                   : lang === "fr"
-                  ? "Traduction & Communication Multilingue"
+                  ? "Traduction vers l’italien et correspondance multilingue"
                   : lang === "es"
-                  ? "Traducción & Comunicación Multilingüe"
-                  : "Translation & Multilingual Communication",
+                  ? "Traducción al italiano y correspondencia multilingüe"
+                  : "Translation into Italian & Multilingual Correspondence",
               action: () => handleSelectService("translation"),
             },
             {
@@ -323,12 +323,12 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
             {
               label:
                 lang === "it"
-                  ? "Ricerche Online & Benchmark"
+                  ? "Ricerche informative per attività esistenti"
                   : lang === "fr"
-                  ? "Recherches en Ligne & Veille"
+                  ? "Recherche documentaire liée à l’Italie"
                   : lang === "es"
-                  ? "Investigación Online & Desk Research"
-                  : "Online Research & Desk Research",
+                  ? "Investigación informativa relacionada con Italia"
+                  : "Italy-Related Informational Research",
               action: () => handleSelectService("research"),
             },
             {
