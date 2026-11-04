@@ -60,7 +60,7 @@ export const frLocale: TranslationDictionary = {
       'Gérer son activité ne se résume pas à son cœur de métier : c’est aussi jongler avec les emails, le calendrier, les demandes clients, les relances et mille détails opérationnels. Je vous apporte un appui opérationnel senior, fiable et confidentiel pour vous permettre de vous consacrer pleinement à vos clients.',
     pillars: [
       {
-        title: 'Autonomie et expérience',
+        title: 'Expérience et autonomie',
         desc: 'Une solide expérience aux côtés de professionnels et d’entreprises. J’anticipe les priorités, structure les flux et pilote vos tâches sans nécessiter de micro-management.',
       },
       {
@@ -91,18 +91,18 @@ export const frLocale: TranslationDictionary = {
           "Accompagnement écrit en italien auprès des clients existants : courriels, suivi de commandes, échanges professionnels, documents et tâches opérationnelles convenues. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
         iconName: 'Mail',
         items: [
-          'Gestion et tri structuré de la boîte mail',
-          'Organisation d’agenda et coordination de rendez-vous',
+          'Tri et organisation de la messagerie liée aux activités en Italie',
+          'Gestion d’agenda et de rendez-vous avec les interlocuteurs italiens existants',
           'Service aux clients existants et communication professionnelle',
           'Classement documentaire et archivage cloud',
-          'Relances clients et rappels d’échéances',
-          'Support back-office et coordination générale',
+          'Suivi des demandes des clients italiens existants',
+          'Back-office opérationnel en lien avec les activités en Italie',
         ],
       },
       {
         id: 'translation-localization',
         title: 'Traduction vers l’italien et communication multilingue',
-        subtitle: 'Traduction vers l’italien depuis le français, l’anglais et l’espagnol.',
+        subtitle: 'Traduction du français et de l’anglais vers l’italien ; espagnol vers l’italien selon le texte.',
         description:
           "Traduction du français, de l’anglais et de l’espagnol vers l’italien, révision et adaptation culturelle de sites web, pages de destination, catalogues et communications destinés au marché italien. Je ne propose pas de traduction professionnelle vers le français, l’anglais ou l’espagnol.",
         iconName: 'Globe',
@@ -125,9 +125,9 @@ export const frLocale: TranslationDictionary = {
         items: [
           'Révision de pages web et de vente en italien',
           'Adaptation du style et du ton en italien',
-          'Rédaction et révision de courriels clients en italien',
+          'Rédaction et révision de messages destinés aux clients italiens existants',
           'Fiches de services et guides en italien',
-          'Révision d’articles et contenus professionnels italiens',
+          'Révision d’articles et de contenus professionnels en italien',
           'Révision de brouillons italiens générés par IA',
         ],
       },
@@ -361,7 +361,7 @@ export const frLocale: TranslationDictionary = {
     credentials: [
       { title: 'Plus de 20 ans d’expérience', detail: 'Service client, back-office, organisation et gestion opérationnelle' },
       { title: 'Formation universitaire d’excellence', detail: 'Licence en Médiation Linguistique (110/110 e lode) & Master en Traduction Spécialisée' },
-      { title: '4 langues de travail', detail: 'Italien langue maternelle, soutien professionnel en Anglais, Français, Espagnol' },
+      { title: 'Quatre langues de travail', detail: 'Italien langue maternelle, anglais et français avancés, espagnol intermédiaire supérieur' },
       { title: 'Organisation numérique', detail: 'Classement cloud, outils collaboratifs et procédures de travail' },
     ],
     ctaReadMore: 'En savoir plus sur mon approche',
@@ -373,7 +373,7 @@ export const frLocale: TranslationDictionary = {
     storyParagraphs: [
       'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
       'Mon parcours professionnel s’étend sur plus de deux décennies et comprend différentes expériences. J’y ai développé des compétences en relation client, organisation, back-office et communication multilingue. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
-      'Sur le plan universitaire, je suis diplômée d’une licence en Médiation Linguistique (Université de Macerata, 2009, 110/110 e lode (mention italienne)) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
+      'Sur le plan universitaire, je suis diplômée d’une licence en médiation linguistique (Université de Macerata, 2009, mention italienne 110/110 e lode) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
       'Mon approche est concrète : des tâches définies ensemble, des documents bien organisés et un suivi régulier des travaux confiés.',
     ],
     timeline: [
@@ -393,9 +393,9 @@ export const frLocale: TranslationDictionary = {
         detail: '1 500 heures, 60 ECTS, épreuve finale validée. Domaines abordés : littéraire, juridique, économique, technologique, scientifique.',
       },
       {
-        period: '2024 – Présent',
-        role: 'Conception et développement de NoeTom',
-        detail: 'Conception d’une assistante opérationnelle IA adaptée au quotidien des professionnels indépendants.',
+        period: '2026 – aujourd’hui',
+        role: 'Assistante virtuelle et traductrice indépendante',
+        detail: 'Soutien aux activités liées à l’Italie, traduction vers l’italien et relation client écrite.',
       },
     ],
     valuesTitle: 'Mes principes de collaboration',
@@ -507,7 +507,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Charge mentale au travail : mieux suivre les tâches et les engagements',
         excerpt: 'Conserver en tête les relances ouvertes, les emails non traités et les accords informels érode votre énergie créative.',
         date: 'Septembre 2026',
-        category: 'Intelligence Artificielle & NoeTom',
+        category: 'Outils numériques et organisation',
         readTime: '5 min de lecture',
       },
       {
