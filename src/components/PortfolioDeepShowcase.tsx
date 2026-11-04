@@ -28,7 +28,7 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
   }),[filter]);
   const displayed=filter==="all"&&!showAll ? FEATURED_IDS.map(id=>DEEP_PORTFOLIO_ITEMS.find(entry=>entry.item.id===id)).filter((entry):entry is DeepPortfolioItem=>Boolean(entry)) : visible;
   const toggleText={it:["Esplora tutti i dossier","Torna alla selezione"],en:["Explore all dossiers","Back to selected work"],fr:["Voir tous les dossiers","Revenir à la sélection"],es:["Explorar todos los dossiers","Volver a la selección"]};
-  return <section id="portfolio-complete-dossiers" aria-labelledby="dossier-heading" className="py-16 md:py-20 border-b border-border/60 bg-background">
+  return <section id="portfolio-complete-dossiers" aria-labelledby="dossier-heading" className="scroll-mt-24 py-16 md:py-20 border-b border-border/60 bg-background">
     <div className="container max-w-5xl mx-auto px-5">
       <p className="text-xs uppercase tracking-widest text-primary font-bold mb-3 flex items-center gap-2"><BookOpen size={18}/>{t.eyebrow}</p>
       <h2 id="dossier-heading" className="text-2xl md:text-4xl font-bold max-w-4xl leading-tight mb-5">{t.title}</h2>
