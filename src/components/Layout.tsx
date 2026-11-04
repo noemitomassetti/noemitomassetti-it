@@ -82,7 +82,6 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
   const italianLocalisationPath = getLocalizedPath("italianLocalisation", currentLang);
   const portfolioPath = getLocalizedPath("portfolio", currentLang);
   const questionnairePath = getLocalizedPath("questionnaire", currentLang);
-  const noetomPath = getLocalizedPath("noetom", currentLang);
   const resourcesPath = getLocalizedPath("resources", currentLang);
   const privacyPath = getLocalizedPath("privacy", currentLang);
   const cookiePath = getLocalizedPath("cookie", currentLang);
@@ -148,7 +147,6 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
       badge: currentLang === "it" ? undefined : "Flagship",
     },
     { href: portfolioPath, label: currentLang === "it" ? "Esempi di Lavoro" : currentLang === "fr" ? "Exemples de Projets" : currentLang === "es" ? "Ejemplos de Trabajo" : "Work Examples", isPage: true },
-    { href: noetomPath, label: "NoeTom", isPage: true, badge: "AI" },
     { href: resourcesPath, label: currentLang === "it" ? "Risorse" : currentLang === "fr" ? "Ressources" : currentLang === "es" ? "Recursos" : "Resources", isPage: true },
     ...(PUBLICATIONS_VISIBLE ? [{ href: getLocalizedPath("publications", currentLang),
       label: currentLang === "it" ? "Libri e pubblicazioni" : currentLang === "fr" ? "Livres et publications" : currentLang === "es" ? "Libros y publicaciones" : "Books & publications",
