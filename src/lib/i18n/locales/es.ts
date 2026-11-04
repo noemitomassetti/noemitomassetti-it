@@ -4,8 +4,8 @@ export const esLocale: TranslationDictionary = {
   lang: 'es',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Traducción al italiano y apoyo operativo | Noemi Tomassetti',
-    homeDesc: 'Traducción y localización al italiano, atención escrita a clientes existentes y apoyo operativo para empresas que trabajan con Italia.',
+    homeTitle: 'Traducción italiano ↔ ES/EN/FR y apoyo operativo | Noemi Tomassetti',
+    homeDesc: 'Traducciones entre italiano y español, inglés o francés en ambos sentidos, localización al italiano y atención a clientes existentes para empresas que trabajan con Italia.',
     servicesTitle: 'Traducción al italiano y apoyo operativo | Noemi Tomassetti',
     servicesDesc: 'Traducción y localización al italiano, atención escrita a clientes italianos existentes y apoyo operativo para actividades relacionadas con Italia.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
@@ -65,7 +65,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Precisión lingüística',
-        desc: 'Mi lengua materna es el italiano; tengo un nivel avanzado de inglés y francés y un nivel intermedio-alto de español. Traduzco profesionalmente al italiano y apoyo la correspondencia multilingüe acordada.',
+        desc: 'Mi lengua materna es el italiano; tengo un nivel avanzado de inglés y francés y un nivel intermedio-alto de español. Traduzco en ambos sentidos con el italiano, según el ámbito del texto, y apoyo la correspondencia multilingüe acordada.',
       },
       {
         title: 'Herramientas digitales adecuadas',
@@ -110,7 +110,7 @@ export const esLocale: TranslationDictionary = {
           'Localización al italiano de sitios web y páginas de venta',
           'Correspondencia profesional en italiano',
           'Traducción de propuestas y presentaciones (IT ↔ ES/EN/FR)',
-          'Materiales formativos traducidos al italiano',
+          'Traducción de materiales formativos IT ↔ ES/EN/FR',
           'Traducción al italiano de boletines y comunicaciones',
           'Revisión lingüística de contenidos en italiano',
         ],
