@@ -81,8 +81,8 @@ export default function Portfolio() {
   const categories: { id: PortfolioCategory; label: Record<Language, string>; icon: React.ReactNode }[] = [
     { id: "all", label: { it: "Tutti i progetti", en: "All Projects", fr: "Tous les projets", es: "Todos los proyectos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
     { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, icon: <Globe className="w-3.5 h-3.5" /> },
-    { id: "research", label: { it: "Ricerche & Benchmark", en: "Research & Benchmarks", fr: "Recherches & Veille", es: "Investigación y Benchmarking" }, icon: <Search className="w-3.5 h-3.5" /> },
-    { id: "backoffice", label: { it: "Back Office & Organizzazione", en: "Back Office & Operations", fr: "Back-Office & Organisation", es: "Back Office y Organización" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
+    { id: "research", label: { it: "Ricerche informative & confronti", en: "Informational research & comparisons", fr: "Recherche documentaire et comparaisons", es: "Investigación informativa y comparativas" }, icon: <Search className="w-3.5 h-3.5" /> },
+    { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Customer support & operational back office", fr: "Relation client et back-office opérationnel", es: "Atención al cliente y back office operativo" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
     { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, icon: <PenTool className="w-3.5 h-3.5" /> },
     { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus Web & Pages de Destination", es: "Contenidos Web y Landing Pages" }, icon: <Layers className="w-3.5 h-3.5" /> },
   ];
