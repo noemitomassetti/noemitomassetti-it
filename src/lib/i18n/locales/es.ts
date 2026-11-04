@@ -60,16 +60,16 @@ export const esLocale: TranslationDictionary = {
       'Gestionar un negocio exige concentrarse en tu labor principal, pero también atender correos, agenda, peticiones de clientes, documentos y un sinfín de gestiones que agotan tu tiempo y energía. Te ofrezco un respaldo operativo senior, continuo y confidencial para que trabajes con serenidad.',
     pillars: [
       {
-        title: 'Autonomía senior',
+        title: 'Autonomía y experiencia',
         desc: 'Sólida experiencia práctica colaborando con profesionales y empresas. Sé anticipar prioridades, estructurar flujos ordenados y resolver tareas sin necesidad de supervisión constante.',
       },
       {
-        title: 'Rigor lingüístico',
+        title: 'Precisión lingüística',
         desc: 'Mi lengua materna es el italiano; tengo un nivel avanzado de inglés y francés y un nivel intermedio-alto de español. Traduzco profesionalmente al italiano y apoyo la correspondencia multilingüe acordada.',
       },
       {
-        title: 'Tecnología e IA aplicada',
-        desc: 'Combino minuciosidad artesanal con herramientas de inteligencia artificial de vanguardia, incluido NoeTom, mi sistema interno todavía en desarrollo, para lograr agilidad y orden.',
+        title: 'Herramientas digitales adecuadas',
+        desc: 'Utilizo herramientas digitales y procedimientos de trabajo claros, con supervisión humana de las comunicaciones, los documentos y las entregas.',
       },
       {
         title: 'Discreción y atención a la privacidad',
@@ -95,13 +95,13 @@ export const esLocale: TranslationDictionary = {
           'Coordinación de agenda y planificación de citas',
           'Atención a clientes existentes y comunicación profesional',
           'Organización documental y estructura en la nube',
-          'Seguimiento a clientes y recordatorios de gestión',
-          'Labores de secretaría y soporte de back office',
+          'Seguimiento de solicitudes de clientes existentes',
+          'Tareas operativas vinculadas a clientes y pedidos en Italia',
         ],
       },
       {
         id: 'translation-localization',
-        title: 'Traducción & Comunicación Multilingüe',
+        title: 'Traducción al italiano y comunicación multilingüe',
         subtitle: 'Traducciones al italiano desde el español, el inglés y el francés.',
         description:
           "Traducción del español, inglés y francés al italiano, revisión y localización cultural de webs, landing pages, catálogos, fichas de producto y comunicaciones para clientes italianos. No ofrezco traducción profesional al español, inglés o francés.",
@@ -133,7 +133,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         id: 'online-research',
-        title: 'Investigación Informativa de Apoyo',
+        title: 'Investigación informativa vinculada a Italia',
         subtitle: 'Información contrastada para respaldar tus decisiones de negocio.',
         description:
           "Recopilación, comprobación y comparación de información, fuentes, proveedores y herramientas digitales exclusivamente para apoyar las actividades existentes del cliente. Sin búsqueda de contactos, captación de clientes ni prospección.",
@@ -149,7 +149,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         id: 'digital-support',
-        title: 'Soporte Digital',
+        title: 'Organización y herramientas digitales',
         subtitle: 'Optimización de tus herramientas y procedimientos de trabajo.',
         description:
           'Reorganización de tus carpetas compartidas, configuración de herramientas online y definición de procedimientos prácticos para agilizar tus tareas operativas diarias.',
@@ -159,7 +159,7 @@ export const esLocale: TranslationDictionary = {
           'Puesta a punto de herramientas (calendarios, formularios)',
           'Soporte práctico con herramientas digitales habituales',
           'Elaboración de manuales de procedimiento operativo (SOP)',
-          'Optimización del proceso de acogida de nuevos clientes',
+          'Organización de las comunicaciones con clientes ya existentes',
           'Soporte operativo y configuraciones básicas',
         ],
       },
@@ -362,7 +362,7 @@ export const esLocale: TranslationDictionary = {
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
       { title: 'Formación académica destacada', detail: 'Grado en Mediación Lingüística (110/110 con honores) & Máster Universitario en Traducción Especializada' },
       { title: '4 idiomas de trabajo', detail: 'Italiano nativo, soporte profesional en Inglés, Francés, Español' },
-      { title: 'Herramientas e innovación', detail: 'Soporte digital y creadora del proyecto interno NoeTom, en desarrollo' },
+      { title: 'Organización digital', detail: 'Archivos en la nube, herramientas colaborativas y procedimientos operativos' },
     ],
     ctaReadMore: 'Conoce mi trayectoria',
   },
@@ -374,7 +374,7 @@ export const esLocale: TranslationDictionary = {
       'Mi carrera se ha desarrollado en torno a tres constantes: la vocación por los idiomas, el rigor organizativo y la satisfacción de ser un punto de apoyo fiable para los profesionales con quienes trabajo.',
       'Mi trayectoria profesional supera los veinte años y comprende funciones diversas. He desarrollado competencias en atención al cliente, organización, back office y comunicación multilingüe. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y eliminar los roces operativos cotidianos.',
       'En mi formación universitaria cuento con el título universitario italiano de primer ciclo en Mediación Lingüística (Universidad de Macerata, 2009, 110/110 e lode) y el máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa (2010–2012, 1.500 horas, 60 créditos ECTS). Los ámbitos abordados durante el Máster comprenden el área literaria, jurídica, económica, tecnológica y científica (los textos de carácter jurídico se evalúan caso por caso; no realizo traducciones juradas ni juramentadas).',
-      'También estoy desarrollando NoeTom, un proyecto interno de asistencia operativa que se encuentra en fase de pruebas privadas.',
+      'Mi forma de trabajar se basa en tareas acordadas, archivos bien organizados, comunicaciones claras y actualizaciones periódicas.',
     ],
     timeline: [
       {
@@ -393,9 +393,9 @@ export const esLocale: TranslationDictionary = {
         detail: '1.500 horas, 60 CFU, examen final aprobado. Áreas formativas: literaria, jurídica, económica, tecnológica, científica.',
       },
       {
-        period: '2024 – Actualidad',
-        role: 'Creación y desarrollo de NoeTom',
-        detail: 'Diseño de una asistente operativa de IA pensada para las necesidades diarias de los profesionales independientes.',
+        period: '2026 – Actualidad',
+        role: 'Asistencia virtual y traducción independiente',
+        detail: 'Atención a clientes italianos existentes, apoyo operativo y traducción al italiano.',
       },
     ],
     valuesTitle: 'Principios de mi forma de trabajar',
@@ -458,7 +458,6 @@ export const esLocale: TranslationDictionary = {
         'Investigación Informativa de Apoyo',
         'Apoyo digital para actividades relacionadas con Italia',
         'Contenidos para webs y landing pages',
-        'Información sobre el proyecto interno NoeTom',
         'Otra consulta general',
       ],
       preferredLanguage: 'Idioma de comunicación preferido',
@@ -491,7 +490,7 @@ export const esLocale: TranslationDictionary = {
     tag: 'RECURSOS Y CONSEJOS',
     title: 'Guías y Reflexiones Operativas',
     subtitle: 'Ideas prácticas sobre delegación, expansión multilingüe y productividad con IA para profesionales.',
-    categories: ['Todos', 'Organización y Delegación', 'Comunicación y Multilingüe', 'Presencia Web y Digital', 'Inteligencia Artificial y NoeTom'],
+    categories: ['Todos', 'Organización y Delegación', 'Comunicación y Multilingüe', 'Presencia Web y Digital', 'Herramientas digitales y organización'],
     articles: [
       {
         id: 'r1',
@@ -533,7 +532,7 @@ export const esLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Traducción al italiano, localización y apoyo operativo para profesionales y pequeñas empresas que trabajan con Italia. Creadora de NoeTom, un proyecto interno en desarrollo.',
+      'Traducción y localización al italiano, atención escrita a clientes italianos existentes y apoyo operativo para profesionales y pequeñas empresas que trabajan con Italia.',
     servicesTitle: 'Servicios',
     noetomTitle: 'NoeTom · en desarrollo',
     companyTitle: 'Sobre Mí & Recursos',
