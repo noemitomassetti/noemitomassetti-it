@@ -142,6 +142,21 @@ export default function Portfolio() {
   };
 
   const contactPath = getLocalizedPath("contact", lang);
+  const browseSections = [
+    { id:"tangible-work", number:"01",
+      labels:{it:"Documenti in evidenza",en:"Featured samples",fr:"Exemples à la une",es:"Muestras destacadas"},
+      details:{it:"Una selezione da leggere subito",en:"Start with a curated selection",fr:"Une première sélection à découvrir",es:"Una selección para empezar"} },
+    { id:"portfolio-complete-dossiers", number:"02",
+      labels:{it:"27 dossier approfonditi",en:"27 in-depth dossiers",fr:"27 dossiers détaillés",es:"27 dosieres detallados"},
+      details:{it:"Traduzioni a fronte e processi reali simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
+    { id:"portfolio-legacy-cases", number:"03",
+      labels:{it:"18 casi di metodo",en:"18 methodology cases",fr:"18 études méthodologiques",es:"18 casos metodológicos"},
+      details:{it:"Scelte operative e revisioni commentate",en:"Decisions and editorial notes",fr:"Décisions et commentaires de révision",es:"Decisiones y notas de revisión"} },
+    { id:"portfolio-document-library", number:"04",
+      labels:{it:"22 documenti consultabili",en:"22 sample documents",fr:"22 documents à consulter",es:"22 documentos de muestra"},
+      details:{it:"File di esempio con contesto multilingue",en:"Full examples with multilingual context",fr:"Documents et explications multilingues",es:"Documentos y explicaciones multilingües"} }
+  ] as const;
+
 
   return (
     <Layout lang={lang}>
@@ -201,10 +216,21 @@ export default function Portfolio() {
                   : "All cases are independent demonstrations using fictional data, not commissioned client projects or testimonials. The services available are those stated on the Services page."}</span>
             </div>
           </div>
+          <nav aria-label={({it:"Percorsi di consultazione del portfolio",en:"Browse the portfolio",fr:"Explorer le portfolio",es:"Explorar el portfolio"} as const)[lang]}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
+            {browseSections.map(section=>(
+              <a key={section.id} href={"#"+section.id}
+                className="group rounded-xl border border-border/70 bg-background/70 p-4 transition-colors hover:border-primary/70 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <span className="block text-xs font-bold tracking-widest text-primary mb-2">{section.number}</span>
+                <span className="block font-semibold leading-snug text-foreground group-hover:text-primary">{section.labels[lang]}</span>
+                <span className="block text-xs leading-relaxed text-muted-foreground mt-2">{section.details[lang]}</span>
+              </a>
+            ))}
+          </nav>
         </div>
       </section>
 
-      <section aria-labelledby="tangible-work" className="py-12 border-b border-border/40 bg-card/30">
+      <section aria-labelledby="tangible-work" className="scroll-mt-24 py-12 border-b border-border/40 bg-card/30">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <h2 id="tangible-work" className="text-2xl md:text-3xl font-bold text-primary mb-3">
             {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Ejemplos concretos para consultar" : "Explore tangible work samples"}
@@ -327,6 +353,7 @@ export default function Portfolio() {
               key={cat.id}
               type="button"
               onClick={() => setSelectedCategory(cat.id)}
+              aria-pressed={selectedCategory === cat.id}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                 selectedCategory === cat.id
                   ? "bg-primary text-primary-foreground shadow-sm"
@@ -341,7 +368,7 @@ export default function Portfolio() {
       </section>
 
       {/* ── CASE STUDIES LIST ── */}
-      <section className="py-12 md:py-20">
+      <section id="portfolio-legacy-cases" className="py-12 md:py-20 scroll-mt-36">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto space-y-8">
           {filteredCases.map((caseItem: PortfolioCase) => {
             const isExpanded = expandedCaseId === caseItem.id;
@@ -769,7 +796,7 @@ export default function Portfolio() {
       </section>
 
       {/* ── DEMONSTRATION WORK DOCUMENTS SECTION ── */}
-      <section className="py-16 md:py-24 border-t border-border/40 bg-card/40">
+      <section id="portfolio-document-library" className="py-16 md:py-24 border-t border-border/40 bg-card/40 scroll-mt-24">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
             <div>
