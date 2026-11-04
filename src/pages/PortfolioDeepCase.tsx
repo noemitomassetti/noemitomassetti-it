@@ -145,7 +145,7 @@ export default function PortfolioDeepCase() {
 
         <section className="mt-16 pt-10 border-t border-border/60">
           <h2 className="text-2xl font-bold mb-3">{t.output}</h2>
-          <p className="text-foreground/75 mb-7">{t.authored}. {t.disclaimer}.</p>
+          <p className="text-foreground/75 mb-7">{isTranslation ? entry.item.output[lang] : entry.item.handoff[lang]}</p>
           <div className="flex gap-4 flex-wrap">
             <Link to={getLocalizedPath("contact",lang)} className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground px-6 py-3 font-semibold hover:opacity-90">{t.contact}<ArrowRight size={18}/></Link>
             <Link to={getLocalizedPath("services",lang)} className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-semibold hover:border-primary"><Globe2 size={18}/>{t.services}</Link>
