@@ -9,6 +9,7 @@ import { Language, getDictionary, getLanguageFromPath, getLocalizedPath } from "
 import { getQuoteDraft, clearQuoteDraft } from "@/lib/concierge/quoteDraftStore";
 import { submitQuoteRequest, generateIdempotencyKey } from "@/lib/api/clientAdapter";
 import { getManualContactMailto, getManualContactPlainText } from "@/lib/api/mailFallback";
+import { WEB3FORMS_PUBLIC_ACCESS_KEY } from "@/lib/api/web3formsPublicConfig";
 import { localizeContactError, CONTACT_ERROR_TITLES, INVALID_EMAIL } from "@/lib/api/submitErrorI18n";
 import { detectExcludedService, SCOPE_EXCLUDED_REPLY, SCOPE_FORM_NOTICE } from "@/lib/serviceScope";
 
@@ -46,6 +47,13 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
   const dict = getDictionary(lang);
   const t = dict.contactSection.form;
   const privacyPath = getLocalizedPath("privacy", lang);
+  // A released static build may deliberately have no verified provider:
+  // the site must tell visitors before they fill the form.
+  const automatedDeliveryConfigured = Boolean(
+    import.meta.env.VITE_API_BASE_URL?.trim() ||
+    (import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ?? WEB3FORMS_PUBLIC_ACCESS_KEY).trim() ||
+    import.meta.env.VITE_LEGACY_FORMSUBMIT_ENABLED === "true"
+  );
 
   const { toast } = useToast();
   const [formData, setFormData] = useState<FormDataState>(() => {
@@ -252,6 +260,23 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
           </p>
         )}
       </div>
+
+      {!automatedDeliveryConfigured && (
+        <div role="status" data-testid="manual-email-first" className="mb-5 rounded-xl border border-primary/40 bg-primary/10 px-4 py-4 text-sm leading-relaxed text-foreground/90">
+          <p>
+            {lang === "it"
+              ? "Per contattarmi subito, puoi inviarmi una email. L'invio automatico del modulo è in fase di verifica: puoi comunque compilare i campi qui sotto per preparare un messaggio da inviare dal tuo programma di posta."
+              : lang === "fr"
+              ? "Vous pouvez me contacter directement par e-mail. L'envoi automatique du formulaire est en cours de vérification ; les champs ci-dessous permettent de préparer un message à envoyer depuis votre messagerie."
+              : lang === "es"
+              ? "Puedes contactar conmigo directamente por correo electrónico. El envío automático del formulario está en fase de verificación; puedes utilizar los campos siguientes para preparar un mensaje y enviarlo desde tu correo."
+              : "You can email me directly. Automated form delivery is being verified; you can still complete the fields below to prepare a message for your email application."}
+          </p>
+          <a href="mailto:info@noemitomassetti.it" className="mt-2 inline-block font-semibold text-primary underline underline-offset-4 hover:text-foreground">
+            {lang === "it" ? "Scrivimi direttamente" : lang === "fr" ? "M'écrire directement" : lang === "es" ? "Escríbeme directamente" : "Email me directly"}
+          </a>
+        </div>
+      )}
 
       <p className="text-xs text-muted-foreground mt-3 leading-relaxed" data-testid="service-scope-notice">{SCOPE_FORM_NOTICE[lang]}</p>
 
@@ -513,14 +538,23 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
             ) : (
               <>
                 <Send className="w-5 h-5 mr-2" />
-                {t.submit}
+                {automatedDeliveryConfigured ? t.submit
+                    : lang === "it" ? "Prepara l'email"
+                    : lang === "fr" ? "Préparer l’e-mail"
+                    : lang === "es" ? "Preparar el correo"
+                    : "Prepare email"}
               </>
             )}
           </Button>
 
           <div className="pt-1 text-[11px] text-muted-foreground/80 text-center leading-relaxed">
             <span className="inline-block mr-1">🔒</span>
-            {lang === 'it'
+            {!automatedDeliveryConfigured
+              ? (lang === "it" ? "La compilazione non invia automaticamente alcun dato. Dovrai aprire l'email preparata e confermare personalmente l'invio."
+                : lang === "fr" ? "Aucune donnée n'est envoyée automatiquement. Vous devrez ouvrir le courriel préparé et confirmer son envoi."
+                : lang === "es" ? "No se envían datos automáticamente. Tendrás que abrir el correo preparado y confirmar su envío."
+                : "No data is sent automatically. You will need to open the prepared email and confirm sending it.")
+              : lang === 'it'
               ? "La richiesta viene inoltrata tramite il servizio email configurato oppure registrata nel sistema di gestione delle richieste. Consulta l’informativa privacy per conoscere i fornitori e il trattamento dei dati."
               : lang === 'fr'
               ? "Votre demande est transmise par le service d’envoi d’e-mails configuré ou enregistrée dans le système de gestion des demandes. Consultez la politique de confidentialité pour connaître les prestataires et les traitements effectués."
