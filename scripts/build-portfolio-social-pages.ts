@@ -11,6 +11,7 @@ import { itLocale } from "../src/lib/i18n/locales/it";
 import { enLocale } from "../src/lib/i18n/locales/en";
 import { frLocale } from "../src/lib/i18n/locales/fr";
 import { esLocale } from "../src/lib/i18n/locales/es";
+import { ITALIAN_LOCALISATION_META } from "../src/lib/i18n/italianLocalisationMeta";
 
 type Language = "it" | "en" | "fr" | "es";
 const LANGS: Language[] = ["it", "en", "fr", "es"];
@@ -105,8 +106,8 @@ function render(path:string, lang:Language, title:string, description:string, al
 let count = 0;
 for (const [key,titleKey,descKey] of PAGE_META) {
   for (const lang of LANGS) {
-    const title=DICTS[lang].meta[titleKey];
-    const description=DICTS[lang].meta[descKey];
+    const title=key==="italianLocalisation" ? ITALIAN_LOCALISATION_META[lang].title : DICTS[lang].meta[titleKey];
+    const description=key==="italianLocalisation" ? ITALIAN_LOCALISATION_META[lang].description : DICTS[lang].meta[descKey];
     const path=ROUTES[key].paths[lang];
     if (path==="/") {
       // Root SPA entry: meaningful English metadata for visitors without JavaScript.
