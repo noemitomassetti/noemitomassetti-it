@@ -99,7 +99,7 @@ export default function ItalianLocalisationPage() {
     },
     en: {
       metaTitle: "Italian Translation & Localisation Services | Noemi Tomassetti",
-      metaDesc: "Specialist EN→IT, FR→IT and ES→IT localisation, AI translation post-editing, and cultural adaptation for international businesses expanding into Italy.",
+      metaDesc: "Translation and localisation from English and French into Italian, Spanish-to-Italian projects subject to assessment, plus Italian-language editing and cultural adaptation for businesses working with Italy.",
       tag: "ITALIAN-LANGUAGE SERVICES",
       title: "Italian Translation & Cultural Localisation",
       subtitle:
@@ -112,14 +112,14 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Specialist Translation",
-          desc: "Faithful and accurate semantic transfer from English, French or Spanish into Italian for business, commercial, contractual, and technical copy.",
+          desc: "Accurate translation into Italian of business, commercial and technical texts from English and French, with Spanish-language and specialist materials assessed individually.",
           deliverable: "Accurate terminology, a consistent professional register and a glossary where useful.",
         },
         {
           icon: Sparkles,
           title: "2. Cultural Localisation",
           desc: "Adapting marketing hooks, idioms, and value propositions so your brand sounds natural, persuasive, and credible to Italian audiences.",
-          deliverable: "Websites, landing page copy, email sequences, product catalogs, and customer support guides.",
+          deliverable: "Website copy, landing pages, email sequences, product catalogues and customer support guides.",
         },
         {
           icon: FileCheck2,
@@ -150,12 +150,12 @@ export default function ItalianLocalisationPage() {
         localizedText: "Uno spazio pensato per il tuo stile di vita, progettato con materiali di pregio e senza compromessi sulla qualità.",
         notes: "Adapted 'art de vivre' to natural Italian while preserving the references to quality materials and high standards.",
       },
-      scopeTitle: "What I Can Localize for Your Business",
+      scopeTitle: "What I Can Localise for Your Business",
       scopeItems: [
-        "Website and landing page copy (editorial localisation only, not website development)",
-        "E-commerce product sheets, category descriptions, and brand stories",
+        "Website and landing-page copy (language and content localisation only, not website development)",
+        "E-commerce product descriptions, category copy and brand stories",
         "Marketing email sequences, newsletters, and client onboarding guides",
-        "Customer support templates, help centers, and transactional user interface microcopy",
+        "Customer support templates, help centres and user-interface microcopy",
         "Bilingual EN-IT / FR-IT / ES-IT glossaries and market-specific style guides",
         "AI translation post-editing and quality assurance of existing Italian assets",
       ],
@@ -180,7 +180,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Traduction Spécialisée",
-          desc: "Restitution fidèle et rigoureuse du français, de l’anglais ou de l’espagnol vers l’italien pour vos documents commerciaux, techniques et contractuels.",
+          desc: "Traduction rigoureuse du français et de l’anglais vers l’italien pour vos documents professionnels ; les textes espagnols et les contenus spécialisés sont évalués au cas par cas.",
           deliverable: "Vocabulaire précis, respect du registre professionnel et lexique bilingue dédié.",
         },
         {
@@ -220,18 +220,18 @@ export default function ItalianLocalisationPage() {
       },
       scopeTitle: "Périmètre d'Intervention",
       scopeItems: [
-        "Textes de sites web et pages d'atterrissage (adaptation rédactionnelle pure, sans développement web)",
+        "Contenus de sites web et de pages de destination (adaptation linguistique et éditoriale, sans développement technique)",
         "Fiches descriptives pour boutiques en ligne et catalogues",
-        "Séquences d'e-mails commerciaux et lettres d'information",
+        "Courriels professionnels destinés aux clients existants et lettres d’information",
         "Guides utilisateurs, foires aux questions (FAQ) et micro-textes d'application",
         "Glossaires bilingues FR-IT / EN-IT / ES-IT et guides de style pour le marché italien",
         "Post-édition de contenus générés par IA et relecture professionnelle",
       ],
       scopeNote:
-        "Toutes les traductions vers l'italien sont assurées directement par Noemi Tomassetti, locutrice native. Je ne propose pas de traduction professionnelle de l’italien vers le français, l’anglais ou l’espagnol, ni de prospection commerciale, de comptabilité ou de facturation.",
+        "Toutes les traductions vers l’italien sont réalisées et révisées directement par Noemi Tomassetti, de langue maternelle italienne. Je ne propose pas de traduction professionnelle de l’italien vers le français, l’anglais ou l’espagnol, ni de prospection commerciale, de comptabilité ou de facturation.",
       pricingTitle: "Grille Tarifaire Indicative",
       pricingDesc:
-        "Traduction générale dès 0,09 €/mot ; spécialisée vers l’italien dès 0,12 €/mot ; localisation web dès 0,11 €/mot ; révision et post-édition dès 0,03 €/mot. Tarifs indicatifs selon complexité et délais.",
+        "Traduction générale à partir de 0,09 €/mot source ; traduction spécialisée vers l’italien à partir de 0,12 €/mot source ; localisation web à partir de 0,11 €/mot source ; révision et post-édition à partir de 0,03 €/mot. Tarifs indicatifs selon le texte, la complexité et les délais.",
     },
     es: {
       metaTitle: "Traducción y Localización al Italiano | Noemi Tomassetti",
@@ -248,7 +248,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Traducción Especializada",
-          desc: "Traslado riguroso desde el español, el inglés o el francés al italiano de documentos comerciales, contractuales y corporativos.",
+          desc: "Traducción al italiano de textos comerciales y profesionales desde el inglés y el francés; los textos en español y los materiales especializados se valoran individualmente.",
           deliverable: "Exactitud terminológica, tono profesional y glosarios bilingües específicos.",
         },
         {
@@ -270,11 +270,11 @@ export default function ItalianLocalisationPage() {
         title: "Ejemplo EN ➔ IT (Software y Onboarding)",
         sourceLabel: "Texto original en inglés:",
         sourceText: "Almost there! Tell us how you plan to use the app so we can tailor your workspace.",
-        literalLabel: "Traducción automática sin revisar:",
+        literalLabel: "Versión deliberadamente literal creada para este ejemplo:",
         literalText: "Quasi là! Dicci come pianifichi di usare l'app così che possiamo cucire il tuo spazio di lavoro.",
         localizedLabel: "Localización profesional de Noemi:",
         localizedText: "Ci siamo quasi! Raccontaci come pensi di utilizzare l’applicazione: potremo adattare il tuo spazio di lavoro alle tue esigenze.",
-        notes: "Sustitución de expresiones literales por fórmulas naturales en italiano comercial y corrección del giro 'su misura'.",
+        notes: "Se han evitado calcos del inglés y se ha mantenido la petición original sobre el uso de la aplicación con un tono natural en italiano.",
       },
       frExample: {
         title: "Ejemplo FR ➔ IT (Diseño y Calidad)",
@@ -299,7 +299,7 @@ export default function ItalianLocalisationPage() {
         "Todas las traducciones hacia el italiano son realizadas y revisadas directamente por Noemi Tomassetti como profesional nativa. No ofrezco traducción profesional del italiano al español, inglés o francés, ni captación de clientes, contabilidad o facturación.",
       pricingTitle: "Tarifas de Referencia",
       pricingDesc:
-        "Traducción general desde 0,09 €/palabra; especializada al italiano desde 0,12 €/palabra; localización web desde 0,11 €/palabra; revisión y posedición desde 0,03 €/palabra. Tarifas orientativas según complejidad y plazo.",
+        "Traducción general desde 0,09 €/palabra de origen; traducción especializada al italiano desde 0,12 €/palabra de origen; localización web desde 0,11 €/palabra de origen; revisión y posedición desde 0,03 €/palabra. Tarifas orientativas según el texto, la complejidad y el plazo.",
     },
   }[lang];
 
