@@ -20,7 +20,7 @@ const routes=[
     let failures=0;
     for(const route of routes){
       await page.goto("http://127.0.0.1:4173"+route,{waitUntil:"domcontentloaded",timeout:30000});
-      await page.locator("main").waitFor({timeout:12000});
+      await page.locator("main h1").waitFor({timeout:12000});
       await page.addScriptTag({path:require.resolve("axe-core/axe.min.js")});
       const report=await page.evaluate(async ()=>{
         return window.axe.run(document,{runOnly:{type:"tag",values:["wcag2a","wcag2aa","wcag21a","wcag21aa","wcag22aa"]}});
