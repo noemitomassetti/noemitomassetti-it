@@ -1,0 +1,2022 @@
+import { Language } from "./i18n/types";
+
+export type PortfolioCategory =
+  | "all"
+  | "translation"
+  | "research"
+  | "backoffice"
+  | "writing"
+  | "web";
+
+export interface PortfolioCase {
+  id: string;
+  order: number;
+  category: "translation" | "research" | "backoffice" | "writing" | "web";
+  masterField?: "letterario" | "giuridico" | "economico" | "tecnologico" | "scientifico";
+  title: Record<Language, string>;
+  subtitle: Record<Language, string>;
+  brief: Record<Language, string>;
+  startingMaterial: Record<Language, string>;
+  objective: Record<Language, string>;
+  approach: Record<Language, string>;
+  keyDecisions: Record<Language, string[]>;
+  deliverable: Record<Language, string>;
+  comparison?: {
+    sourceLang: string;
+    targetLang: string;
+    sourceText: string;
+    literalText: string;
+    localizedText: string;
+    notes: Record<Language, string>;
+  };
+  tableData?: {
+    headers: Record<Language, string[]>;
+    rows: Record<Language, string[][]>;
+  };
+  sampleText?: {
+    enSource: string;
+    itTarget: string;
+    editorialNotes: Record<Language, string>;
+  };
+  disclaimer: Record<Language, string>;
+  sourceAttribution?: Record<Language, string>;
+}
+
+export const DEMO_DISCLAIMER: Record<Language, string> = {
+  it: "Esempio dimostrativo originale, con dati fittizi: non è un incarico svolto per un cliente reale. Eventuali documenti dei clienti vengono pubblicati soltanto con autorizzazione.",
+  en: "Original fictional work sample, not a commissioned client project. Client documents are published only with permission.",
+  fr: "Exemple professionnel original à partir de données fictives, et non mission client réelle. Aucun document client n’est publié sans autorisation.",
+  es: "Muestra profesional original con datos ficticios, no un encargo real. Los documentos de clientes solo se publican con autorización.",
+};
+
+export const PORTFOLIO_CASES: PortfolioCase[] = [
+  // 01. RESIDENTIAL INTERIOR DESIGN LOCALIZATION
+  {
+    "id": "01-interior-design-localization",
+    "order": 1,
+    "category": "translation",
+    "title": {
+      "it": "Localizzazione EN → IT: sito di interior design",
+      "en": "English-to-Italian website localisation: interior design",
+      "fr": "Localisation EN → IT : site de décoration d’intérieur",
+      "es": "Localización EN → IT: web de interiorismo"
+    },
+    "subtitle": {
+      "it": "Testi web, call to action e note traduttologiche per un pubblico italiano",
+      "en": "Original fictional source/target samples for Italian website copy",
+      "fr": "Exemples concrets de textes web anglais et de leur adaptation italienne",
+      "es": "Ejemplos concretos de textos web en inglés adaptados al italiano"
+    },
+    "brief": {
+      "it": "Scenario simulato: uno studio internazionale di interior design desidera presentare servizi di consulenza d’arredo a persone residenti in Italia.",
+      "en": "Fictional brief: an international interior-design studio needs clear Italian-language copy for customers based in Italy.",
+      "fr": "Scénario fictif : un studio international d’aménagement intérieur s’adresse à des clients résidant en Italie.",
+      "es": "Supuesto ficticio: un estudio internacional de interiorismo necesita textos para clientes residentes en Italia."
+    },
+    "startingMaterial": {
+      "it": "Headline, presentazione del servizio e invito all’azione redatti originariamente in inglese.",
+      "en": "An English headline, service introduction and call to action requiring Italian adaptation.",
+      "fr": "Une accroche, une présentation de service et un appel à l’action rédigés en anglais.",
+      "es": "Un titular, una presentación del servicio y una llamada a la acción escritos en inglés."
+    },
+    "objective": {
+      "it": "Rendere la proposta naturale in italiano, evitare calchi e mantenere solo le promesse contenute nel testo originale.",
+      "en": "Produce idiomatic Italian messaging, avoid calques and preserve the original business claims.",
+      "fr": "Produire un texte italien naturel sans calques ni promesses commerciales ajoutées.",
+      "es": "Crear un mensaje natural en italiano, fiel al contenido y sin promesas inventadas."
+    },
+    "approach": {
+      "it": "Analisi del testo sorgente; scelta terminologica nel settore arredo; adattamento di sintassi, tono e call to action; revisione finale.",
+      "en": "Review source meaning, interior-design vocabulary, tone and calls to action; final language quality control.",
+      "fr": "Analyse du sens, des termes de l’aménagement, du ton et de l’appel à l’action ; relecture finale.",
+      "es": "Análisis del significado, la terminología, el tono y la llamada a la acción; revisión final."
+    },
+    "keyDecisions": {
+      "it": [
+        "«Home» diventa «casa», non «alloggio», per mantenere il tono personale.",
+        "«Designed around» si rende con «pensata per», eliminando la struttura inglese.",
+        "La call to action è «Richiedi informazioni», non una promessa commerciale non autorizzata."
+      ],
+      "en": [
+        "Use «casa» to preserve a warm, personal register.",
+        "Translate meaning, not the syntax of «designed around».",
+        "Keep the CTA truthful: request information, without inventing commitments."
+      ],
+      "fr": [
+        "Privilégier «casa», naturel pour un texte de décoration intérieure.",
+        "Adapter la structure anglaise, plutôt que reproduire un calque.",
+        "Conserver les conditions de l’offre réelle dans l’appel à l’action."
+      ],
+      "es": [
+        "Usar «casa» para mantener un tono cercano.",
+        "Adaptar la estructura inglesa y no calcarla.",
+        "Evitar promesas que no constan en la oferta original."
+      ]
+    },
+    "deliverable": {
+      "it": "Mini-dossier EN → IT con headline, descrizione, CTA e note linguistiche. Esempio consultabile nel documento 01.",
+      "en": "English-to-Italian copy deck with headline, introduction, CTA and review notes, illustrated in document 01.",
+      "fr": "Mini-dossier EN → IT : accroche, description, appel à l’action et notes ; document 01.",
+      "es": "Muestra EN → IT: titular, descripción, llamada a la acción y notas; documento 01."
+    },
+    "comparison": {
+      "sourceLang": "EN",
+      "targetLang": "IT",
+      "sourceText": "A home designed around the way you live. Thoughtful interior design, from furniture choices to the details that make a room feel yours.",
+      "literalText": "Una casa disegnata intorno al modo in cui vivi. Design interno pensieroso, dalle scelte di mobili ai dettagli che fanno sentire una stanza tua.",
+      "localizedText": "Una casa pensata per il tuo modo di vivere. Progetti d’interni curati, dalla scelta degli arredi ai dettagli che rendono ogni ambiente davvero tuo.",
+      "notes": {
+        "it": "«Pensata per» è idiomatico, «arredi» è preciso e «ambiente» è più adatto al contesto di «stanza».",
+        "en": "Idiomatic sentence structure, accurate design terminology and a customer-centred tone.",
+        "fr": "Syntaxe naturelle, vocabulaire précis et registre adapté au public italien.",
+        "es": "Sintaxis natural, terminología precisa y un tono adecuado al público italiano."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+
+    // 02. ECONOMIC / COMMERCIAL SPECIALIST TRANSLATION
+  {
+    id: "02-economic-commercial-translation",
+    order: 2,
+    category: "translation",
+    masterField: "economico",
+    title: {
+      it: "Traduzione specialistica economica e commerciale (EN → IT)",
+      en: "Specialist Economic & Commercial Translation (EN → IT)",
+      fr: "Traduction spécialisée économique et commerciale (EN → IT)",
+      es: "Traducción especializada económica y comercial (EN → IT)",
+    },
+    subtitle: {
+      it: "Strategie di marketing digitale, metriche di performance e pricing models",
+      en: "Digital marketing strategies, performance metrics, and pricing models",
+      fr: "Stratégies de marketing digital, métriques de performance et modèles de tarification",
+      es: "Estrategias de marketing digital, métricas de rendimiento y modelos de precios",
+    },
+    brief: {
+      it: "Traduzione e adattamento in italiano di un manuale operativo sulle strategie di acquisizione clienti e modelli di revenue digitale.",
+      en: "Italian translation and terminology harmonization of a strategic manual on digital customer acquisition and revenue models.",
+      fr: "Traduction en italien d'un guide opérationnel sur l'acquisition client et les modèles de revenus numériques.",
+      es: "Traducción al italiano de un manual estratégico sobre adquisición de clientes y modelos de negocio digital.",
+    },
+    startingMaterial: {
+      it: "Testo di partenza in lingua inglese focalizzato su funnel di vendita, Customer Lifetime Value (LTV), Return on Ad Spend (ROAS) e retention.",
+      en: "English source text focusing on conversion funnels, Customer Lifetime Value, ROAS, and cohort retention.",
+      fr: "Texte source en anglais portant sur les tunnels de conversion, la valeur vie client (LTV) et la rétention.",
+      es: "Texto de origen en inglés centrado en embudos de conversión, Customer Lifetime Value y retención de cohortes.",
+    },
+    objective: {
+      it: "Mantenere precisione e coerenza terminologica nella resa italiana di un testo economico-commerciale fittizio.",
+      en: "Ensure economic precision and terminological consistency between industry standard terms and transparent Italian phrasing.",
+      fr: "Préserver la précision et la cohérence de la terminologie d’un texte économique fictif adapté en italien.",
+      es: "Asegurar la precisión conceptual entre la terminología financiera anglosajona y su redacción en italiano.",
+    },
+    approach: {
+      it: "Costruzione di un glossario preventivo dei termini economici. Mantenimento delle sigle contabili ampiamente riconosciute con definizione al primo utilizzo.",
+      en: "Development of a preliminary economic termbase. Standard abbreviations preserved with context-appropriate glosses on first mention.",
+      fr: "Établissement préalable d'un glossaire économique avec harmonisation des sigles financiers.",
+      es: "Elaboración de un glosario económico previo y desambiguación de métricas comerciales clave.",
+    },
+    keyDecisions: {
+      it: [
+        "Traduzione di 'Customer Acquisition Cost' come 'Costo di acquisizione clienti (CAC)' con esplicitazione della formula.",
+        "Scelta di 'Tasso di abbandono' per 'Churn rate' nel corpo descrittivo, lasciando la sigla tra parentesi per immediatezza professionale.",
+        "Armonizzazione della distinzione tra 'Revenue' (Fatturato/Ricavi) e 'Profit' (Margine operativo/Utile).",
+      ],
+      en: [
+        "Clear distinction maintained between revenue streams, gross margin, and operating profit.",
+        "Preserved established performance marketing acronyms (CAC, LTV, ROAS) alongside contextual explanations.",
+        "Eliminated ambiguous loanwords where standard Italian commercial accounting terms provide superior clarity.",
+      ],
+      fr: [
+        "Maintien de la distinction précise entre chiffre d'affaires, marge brute et bénéfice net.",
+        "Définition contextuelle des acronymes de performance (CAC, LTV, ROAS).",
+        "Remplacement des calques anglo-saxons superflus par des termes de gestion rigoureux.",
+      ],
+      es: [
+        "Distinción inequívoca entre ingresos brutos, margen operativo y beneficio neto.",
+        "Uso estandarizado de siglas comerciales acompañadas de su explicación en la primera mención.",
+        "Evitación de anglicismos innecesarios cuando existe terminología financiera consolidada.",
+      ],
+    },
+    deliverable: {
+      it: "Estratto economico-commerciale EN→IT e glossario di termini selezionati, con note sulle scelte linguistiche.",
+      en: "English-to-Italian economic and commercial excerpt, short terminology glossary and editorial notes.",
+      fr: "Extrait économique EN→IT avec un petit glossaire terminologique et des notes de traduction.",
+      es: "Extracto económico EN→IT, glosario breve y comentarios sobre decisiones terminológicas.",
+    },
+    comparison: {
+      sourceLang: "EN",
+      targetLang: "IT",
+      sourceText: "High customer acquisition costs directly compress operating margins unless repeat purchases extend customer lifetime value.",
+      literalText: "Alti costi di acquisizione clienti comprimono direttamente margini operativi a meno che acquisti ripetuti estendano valore della vita del cliente.",
+      localizedText: "Un costo di acquisizione clienti elevato riduce direttamente i margini operativi, a meno che gli acquisti ricorrenti non aumentino il valore nel tempo di ciascun cliente (LTV).",
+      notes: {
+        it: "La resa professionale adotta una sintassi fluida con congiuntivo ('non aumentino'), esplicita 'nel tempo' per 'lifetime' e inserisce l'acronimo LTV.",
+        en: "The professional Italian rendering uses natural subjunctive syntax and translates 'lifetime value' into intuitive commercial Italian.",
+        fr: "La version italienne privilégie une structure grammaticale rigoureuse et une terminologie comptable claire.",
+        es: "La traducción al italiano estructura la frase con naturalidad sintáctica y precisión en los conceptos de rentabilidad.",
+      },
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 03. SCIENTIFIC / HEALTHCARE DEMONSTRATION
+  {
+    id: "03-scientific-healthcare-translation",
+    order: 3,
+    category: "translation",
+    masterField: "scientifico",
+    title: {
+      it: "Traduzione scientifica: Comunicazione clinica e priorità del paziente (EN → IT)",
+      en: "Scientific Translation: Clinical Communication & Patient Priorities (EN → IT)",
+      fr: "Traduction scientifique : Communication clinique et priorités du patient (EN → IT)",
+      es: "Traducción científica: Comunicación clínica y prioridades del paciente (EN → IT)",
+    },
+    subtitle: {
+      it: "Linee guida per la comunicazione sanitaria tra équipe medica, pazienti e caregiver",
+      en: "Healthcare communication guidelines for multidisciplinary clinical teams and caregivers",
+      fr: "Guides de communication médicale pour équipes soignantes et proches aidants",
+      es: "Pautas de comunicación sanitaria para equipos médicos, pacientes y cuidadores",
+    },
+    brief: {
+      it: "Adattamento divulgativo-clinico di protocolli di dialogo medico-paziente nell'ambito della gestione di patologie croniche multiple.",
+      en: "Clinical-educational translation of communication protocols for managing multiple chronic conditions.",
+      fr: "Traduction de protocoles de dialogue médecin-patient dans le suivi des affections chroniques multiples.",
+      es: "Traducción de protocolos de diálogo clínico en el abordaje de enfermedades crónicas múltiples.",
+    },
+    startingMaterial: {
+      it: "Linee guida in lingua inglese strutturate su domande aperte, ponderazione del rischio terapeutico e allineamento degli obiettivi di cura.",
+      en: "English clinical source text outlining structured questioning, therapeutic risk weighting, and care goal alignment.",
+      fr: "Texte clinique en anglais sur l'écoute active, l'évaluation des risques et la décision partagée.",
+      es: "Pautas en inglés sobre escucha activa, balance de riesgos terapéuticos y objetivos de bienestar.",
+    },
+    objective: {
+      it: "Ricercare una terminologia clinica pertinente e un registro chiaro, senza presentare il campione come testo validato per l’uso medico.",
+      en: "Demonstrate care in clinical-language choices while making clear that this fictional excerpt is not validated for clinical use.",
+      fr: "Rigueur absolue sur le vocabulaire médical alliée à un registre bienveillant et accessible.",
+      es: "Exactitud en la terminología médica y farmacológica junto con un lenguaje empático y transparente.",
+    },
+    approach: {
+      it: "Verifica terminologica incrociata su banche dati della farmacovigilanza e dell'Istituto Superiore di Sanità. Rigoroso controllo di unità di misura e negazioni.",
+      en: "Cross-referencing against official pharmacovigilance databases and Italian healthcare glossaries. Strict check of dosage units and negations.",
+      fr: "Validation terminologique sur les bases de données institutionnelles de santé publique et contrôle scrupuleux des dosages.",
+      es: "Cotejo terminológico con fuentes médicas oficiales y comprobación exhaustiva de unidades de medida y condicionales.",
+    },
+    keyDecisions: {
+      it: [
+        "Traduzione di 'Care goal alignment' come 'Condivisione e allineamento degli obiettivi di cura'.",
+        "Controllo stringente delle negazioni ('non interrompere senza consulto medico') per escludere qualsiasi ambiguità prescrittiva.",
+        "Inserito disclaimer esplicito sulla natura dimostrativa e non prescrittiva della traduzione.",
+      ],
+      en: [
+        "Rendered 'care goal alignment' as a clear, shared clinical milestone rather than a bureaucratic formula.",
+        "Zero-tolerance review on negations and risk statements to avoid any misunderstanding.",
+        "Transparent disclaimer included affirming the non-medical, demonstrative nature of the linguistic work.",
+      ],
+      fr: [
+        "Traduction rigoureuse de la prise de décision partagée en milieu hospitalier.",
+        "Contrôle systématique des avertissements thérapeutiques et des négations.",
+        "Mention claire précisant qu'il s'agit d'une démonstration linguistique sans portée prescriptive.",
+      ],
+      es: [
+        "Adaptación rigurosa de los objetivos terapéuticos compartidos entre médico y paciente.",
+        "Revisión estricta de advertencias y contraindicaciones para evitar ambigüedades.",
+        "Inclusión de advertencia explícita sobre el carácter demostrativo y no asistencial del texto.",
+      ],
+    },
+    deliverable: {
+      it: "Estratto medico-scientifico EN→IT a fronte con una selezione di note terminologiche; dati clinici interamente fittizi.",
+      en: "Illustrative medical English-to-Italian passage with selected terminology notes and entirely fictional clinical data.",
+      fr: "Extrait médical bilingue EN→IT et sélection de commentaires terminologiques sur données fictives.",
+      es: "Extracto médico EN→IT con notas de terminología y datos clínicos ficticios.",
+    },
+    comparison: {
+      sourceLang: "EN",
+      targetLang: "IT",
+      sourceText: "Clinicians should identify what matters most to the individual before initiating complex multi-drug therapeutic regimens.",
+      literalText: "I clinici dovrebbero identificare cosa conta di più per l'individuo prima di iniziare complessi regimi terapeutici di multi-farmaci.",
+      localizedText: "I medici curanti devono individuare le priorità essenziali della persona prima di avviare schemi terapeutici complessi a base di più farmaci.",
+      notes: {
+        it: "Sostituito 'clinici' (calco freddo) con 'medici curanti', 'individuo' con 'persona' e 'regimi terapeutici di multi-farmaci' con la formula italiana corretta 'schemi terapeutici complessi a base di più farmaci'.",
+        en: "Replaced literal 'clinicians' with the natural Italian 'medici curanti', humanized 'individuo' to 'persona', and smoothed the multi-drug description.",
+        fr: "Substitution des calques anglo-saxons par les formules médicales françaises et italiennes consacrées.",
+        es: "Sustitución de términos literales por expresiones clínicas naturales y humanizadas en italiano.",
+      },
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 04. TECHNOLOGICAL / IT TRANSLATION & UI MICROCOPY
+  {
+    id: "04-technological-software-localization",
+    order: 4,
+    category: "translation",
+    masterField: "tecnologico",
+    title: {
+      it: "Traduzione tecnologica e localizzazione software / UI (EN → IT)",
+      en: "Technological Translation & Software / UI Localization (EN → IT)",
+      fr: "Traduction technologique et localisation de logiciels / UI (EN → IT)",
+      es: "Traducción tecnológica y localización de software / UI (EN → IT)",
+    },
+    subtitle: {
+      it: "Documentazione API cloud e microcopy per interfaccia utente di un'applicazione web",
+      en: "Cloud API documentation and user interface microcopy for a web platform",
+      fr: "Documentation d'API cloud et micro-textes d'interface utilisateur pour application web",
+      es: "Documentación de API en la nube y microcopy de interfaz para plataforma web",
+    },
+    brief: {
+      it: "Dimostrazione della differenza cruciale tra traduzione tecnica descrittiva e localizzazione software orientata all'usabilità e ai vincoli di spazio.",
+      en: "Showcasing the critical distinction between technical documentation translation and space-constrained software UI localization.",
+      fr: "Démonstration de la distinction entre documentation technique et micro-textes d'interface soumis à des contraintes de pixels.",
+      es: "Demostración de la diferencia entre traducción técnica de manuales y localización de botones y avisos de interfaz.",
+    },
+    startingMaterial: {
+      it: "Estratti di documentazione per sviluppatori (autenticazione OAuth e webhook) + stringhe UI di pulsanti, stati di caricamento e messaggi di errore.",
+      en: "Excerpts from developer guides (OAuth and webhooks) coupled with UI strings (buttons, tooltips, validation errors).",
+      fr: "Extraits de documentation technique (OAuth, webhooks) et chaînes d'interface (boutons, infobulles, erreurs).",
+      es: "Fragmentos de documentación técnica de API y cadenas de texto de interfaz (botones, estados de error y avisos).",
+    },
+    objective: {
+      it: "Fornire istruzioni tecniche univoche per gli sviluppatori e testi brevi, immediati e grammaticalmente coerenti per l'utente finale.",
+      en: "Deliver unambiguous technical instructions for engineers and concise, intuitive microcopy that fits within tight UI containers.",
+      fr: "Fournir des explications techniques sans équivoque pour les développeurs et des micro-textes clairs et concis.",
+      es: "Ofrecer instrucciones técnicas exactas para desarrolladores y textos de interfaz breves y directos.",
+    },
+    approach: {
+      it: "Mantenimento dei parametri di codice (camelCase, variabili d'ambiente) invariati. Sintesi estrema per i pulsanti per evitare overflow su schermi mobile.",
+      en: "Code parameters, endpoints, and variables preserved verbatim. Radical brevity applied to UI buttons to prevent truncation on mobile viewports.",
+      fr: "Préservation stricte des variables techniques et concision maximale pour les composants d'interface mobile.",
+      es: "Conservación íntegra de parámetros y variables técnicas. Síntesis extrema en botones para evitar desbordamientos.",
+    },
+    keyDecisions: {
+      it: [
+        "Differenziazione tra 'Deploy' (mantenuto nel gergo IT per sviluppatori) e 'Pubblica / Rilascia' (per utenti non tecnici).",
+        "Resa di 'Discard unsaved changes?': 'Annullare le modifiche non salvate?' (stringa chiara in 37 caratteri).",
+        "Uniformazione dei verbi d'azione nei pulsanti all'infinito presente ('Salva', 'Invia', 'Elimina').",
+      ],
+      en: [
+        "Contextual separation between developer-facing terms (deploy, webhook) and client-facing actions.",
+        "Optimized character count on confirmation dialogs to ensure mobile button legibility.",
+        "Standardized UI action verbs using the Italian infinitive ('Salva', 'Annulla', 'Conferma').",
+      ],
+      fr: [
+        "Distinction entre terminologie réservée aux développeurs et interface grand public.",
+        "Calibrage minutieux du nombre de caractères des boutons d'action.",
+        "Harmonisation des verbes d'action à l'infinitif conformément aux standards de localisation.",
+      ],
+      es: [
+        "Separación clara entre documentación para desarrolladores e interfaz de usuario final.",
+        "Ajuste riguroso de la longitud de cadenas para pantallas móviles.",
+        "Estandarización de los verbos de acción en infinitivo según las guías de estilo de software.",
+      ],
+    },
+    deliverable: {
+      it: "Estratto di documentazione software e selezione di stringhe UI EN→IT, con note di adattamento.",
+      en: "English-to-Italian software documentation extract and sample UI-string matrix with localisation notes.",
+      fr: "Extrait de guide logiciel EN→IT et tableau d’exemples de microtextes avec commentaires.",
+      es: "Extracto de guía de software EN→IT y matriz de textos UI de ejemplo con comentarios.",
+    },
+    comparison: {
+      sourceLang: "EN",
+      targetLang: "IT",
+      sourceText: "Failed to authenticate session credentials. Please re-enter your secret token or contact project administrator.",
+      literalText: "Fallito ad autenticare le credenziali della sessione. Per favore ri-inserisci il tuo segreto token o contatta amministratore di progetto.",
+      localizedText: "Autenticazione della sessione non riuscita. Reinserisci il token di sicurezza o contatta l'amministratore del progetto.",
+      notes: {
+        it: "Eliminato il calco anglosassone 'Fallito a...', corretto 'token di sicurezza' e inseriti gli articoli determinativi mancanti.",
+        en: "Replaced broken English calques with standard Italian security notifications, adding appropriate articles and natural passive voice.",
+        fr: "Suppression du calque syntaxique anglais au profit d'une notification système fluide et professionnelle.",
+        es: "Corrección de calcos sintácticos en favor de un mensaje de error claro y formal en italiano.",
+      },
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 05. LEGAL / CONTRACTUAL TRANSLATION
+  {
+    id: "05-legal-contractual-translation",
+    order: 5,
+    category: "translation",
+    masterField: "giuridico",
+    title: {
+      it: "Traduzione contrattuale: Accordo quadro di fornitura servizi (EN → IT)",
+      en: "Contractual Translation: Master Services Agreement Clauses (EN → IT)",
+      fr: "Traduction contractuelle : Clauses de contrat cadre de prestations (EN → IT)",
+      es: "Traducción contractual: Cláusulas de acuerdo marco de servicios (EN → IT)",
+    },
+    subtitle: {
+      it: "Analisi di clausole di riservatezza, SLA, limitazione di responsabilità e risoluzione",
+      en: "Analysis of confidentiality, service level agreements, liability, and termination clauses",
+      fr: "Clauses de confidentialité, accords de niveau de service (SLA), responsabilité et résiliation",
+      es: "Análisis de confidencialidad, acuerdos de nivel de servicio (SLA) y resolución contractual",
+    },
+    brief: {
+      it: "Traduzione accurata di clausole contrattuali standard di fornitura servizi B2B, con analisi dei termini definiti e delle equivalenze concettuali.",
+      en: "High-precision translation of standard B2B commercial service contract clauses, focusing on defined terms and civil law equivalences.",
+      fr: "Traduction rigoureuse de clauses contractuelles B2B avec respect des définitions juridiques.",
+      es: "Traducción precisa de cláusulas contractuales B2B con análisis de equivalencias entre sistemas jurídicos.",
+    },
+    startingMaterial: {
+      it: "Contratto di fornitura in lingua inglese di matrice common law comprendente clausole 'Indemnification', 'Limitation of Liability' e 'Governing Law'.",
+      en: "Common law master services agreement featuring indemnification, liability caps, warranties, and governing law provisions.",
+      fr: "Contrat de prestations rédigé en droit anglo-saxon comprenant clauses d'indemnisation et de force majeure.",
+      es: "Contrato marco anglosajón con cláusulas de limitación de responsabilidad y ley aplicable.",
+    },
+    objective: {
+      it: "Mantenere inalterato il valore vincolante del testo senza creare false equivalenze tra istituti di common law e codice civile italiano.",
+      en: "Preserve the binding scope of obligations without fabricating false equivalences between common law and Italian civil law doctrines.",
+      fr: "Transposer fidèlement les engagements juridiques sans déformer la portée des obligations.",
+      es: "Reflejar fielmente la fuerza vinculante de las obligaciones sin generar falsas equivalencias doctrinales.",
+    },
+    approach: {
+      it: "Distinzione rigorosa tra doveri imperativi ('shall' = 'ha l'obbligo di / dovrà'), facoltà ('may' = 'ha la facoltà di / può') e condizioni essenziali. Nota informativa esplicita sui limiti del testo.",
+      en: "Rigorous distinction between modal imperatives ('shall', 'may', 'must'). Clear notation explaining jurisdictional translation scope.",
+      fr: "Rigueur terminologique absolue sur les obligations impératives et les facultés contractuelles.",
+      es: "Tratamiento riguroso de las modalidades obligacionales ('deberá', 'podrá', 'está obligado a').",
+    },
+    keyDecisions: {
+      it: [
+        "Traduzione di 'Indemnify and hold harmless' come 'manlevare e tenere indenne', formula consolidata nella prassi contrattuale italiana.",
+        "Mantenimento di 'Force Majeure' con esplicitazione delle cause tipizzate (eventi imprevedibili e straordinari al di fuori del controllo).",
+        "Inserimento del disclaimer professionale: Noemi non è traduttore giurato/asseverato; la traduzione contrattuale è a scopo di revisione e comprensione operativa.",
+      ],
+      en: [
+        "Careful rendering of 'indemnify and hold harmless' into standard Italian commercial contract wording.",
+        "Maintained defined terms with initial capital letters strictly mirroring source contractual definitions.",
+        "Transparent professional boundary: translation provided for operational alignment, clearly distinguishing from sworn/certified legal acts.",
+      ],
+      fr: [
+        "Utilisation des formules juridiques consacrées ('relever et garantir indemne').",
+        "Respect strict de la majuscule pour tous les termes définis dans le contrat.",
+        "Mention déontologique claire excluant tout acte de traduction jurée ou assermentée.",
+      ],
+      es: [
+        "Traducción exacta de 'mantener indemne' según la práctica contractual comparada.",
+        "Mantenimiento de mayúsculas en los términos definidos en el preámbulo.",
+        "Delimitación profesional explícita: traducción operativa sin valor de traducción jurada oficial.",
+      ],
+    },
+    deliverable: {
+      it: "Estratto contrattuale EN→IT a fronte con note su alcune clausole e termini ricorrenti; non è consulenza legale.",
+      en: "Sample contractual clauses EN→IT with terminology notes; not legal advice or a certified translation.",
+      fr: "Extrait de clauses contractuelles EN→IT annotées, sans conseil juridique ni traduction assermentée.",
+      es: "Muestra de cláusulas contractuales EN→IT con notas terminológicas; no es asesoría jurídica ni traducción jurada.",
+    },
+    comparison: {
+      sourceLang: "EN",
+      targetLang: "IT",
+      sourceText: "Neither party shall be liable for any indirect, incidental, or consequential damages arising out of this Agreement.",
+      literalText: "Nessuna delle parti sarà responsabile per qualsiasi danno indiretto, incidentale o consequenziale sorgente fuori da questo Accordo.",
+      localizedText: "Nessuna delle parti potrà essere ritenuta responsabile per danni indiretti, incidentali o consequenziali derivanti dal presente Contratto.",
+      notes: {
+        it: "La formulazione giuridica corretta adotta 'potrà essere ritenuta responsabile', sostituisce 'sorgente fuori' con 'derivanti dal' e usa la maiuscola per 'Contratto' in quanto termine definito.",
+        en: "Replaces clumsy calques with the established Italian formula for liability limitation and capitalizes 'Contratto' as a defined instrument.",
+        fr: "Adoption de la formule contractuelle consacrée pour la limitation de responsabilité.",
+        es: "Redacción según la fórmula habitual de limitación de daños en contratos comerciales en italiano.",
+      },
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 06. UX & WEB CONTENT LOCALIZATION
+  {
+    id: "06-ux-web-content-localization",
+    order: 6,
+    category: "translation",
+    title: {
+      it: "Localizzazione UX e contenuti web (EN → IT)",
+      en: "UX & Web Copywriting Localization (EN → IT)",
+      fr: "Localisation UX et contenus web (EN → IT)",
+      es: "Localización UX y contenidos web (EN → IT)",
+    },
+    subtitle: {
+      it: "Flusso di onboarding utente, form multi-step e messaggi di stato transazionali",
+      en: "User onboarding flow, multi-step forms, and transactional status messages",
+      fr: "Parcours d'accueil utilisateur, formulaires pas-à-pas et notifications d'état",
+      es: "Flujo de registro y bienvenida, formularios por pasos y mensajes de estado",
+    },
+    brief: {
+      it: "Rendere un percorso di registrazione e primo utilizzo di un servizio digitale chiaro, rassicurante e piacevole per il pubblico italiano.",
+      en: "Refining a digital onboarding flow to make it intuitive, reassuring, and completely natural for Italian users.",
+      fr: "Adapter un parcours d'onboarding digital pour le rendre fluide, clair et chaleureux pour le public italien.",
+      es: "Adaptar los mensajes de bienvenida de una plataforma digital para mejorar su claridad para un público italiano.",
+    },
+    startingMaterial: {
+      it: "Flow di 4 schermate di onboarding in lingua inglese comprendente consensi opzionali, selezione preferenze e riepilogo account.",
+      en: "Four-step English onboarding flow including permissions, preferences configuration, and welcome prompt.",
+      fr: "Parcours en quatre étapes en anglais avec sélection des préférences et confirmation.",
+      es: "Flujo de cuatro pantallas en inglés que incluye permisos, preferencias y mensaje de bienvenida.",
+    },
+    objective: {
+      it: "Ridurre l'attrito cognitivo e i tassi di abbandono attraverso una microcopy sintetica, positiva e perfettamente contestualizzata.",
+      en: "Minimize cognitive friction and drop-off rates through concise, engaging, and context-aware microcopy.",
+      fr: "Réduire les abandons d'inscription grâce à des micro-textes fluides, concis et rassurants.",
+      es: "Disminuir la fricción del usuario mediante textos breves, amables y precisos.",
+    },
+    approach: {
+      it: "Riscrittura orientata all'utente: preferite spiegazioni sul beneficio ('Cosa puoi fare ora') rispetto a istruzioni tecniche.",
+      en: "Benefit-driven rewriting prioritizing clear user value over dry technical instructions.",
+      fr: "Rédaction axée sur les bénéfices concrets plutôt que sur des consignes techniques rigides.",
+      es: "Redacción orientada a los beneficios del usuario en lugar de meras instrucciones funcionales.",
+    },
+    keyDecisions: {
+      it: [
+        "Sostituzione di 'Get started' con 'Inizia ora' e di 'Skip for now' con 'Potrai farlo più tardi' per un tono più accogliente.",
+        "Esplicitazione dei vantaggi della privacy: 'I tuoi dati restano privati e non saranno mai condivisi con terze parti'.",
+        "Conformità con le linee guida WCAG su leggibilità ed etichette dei campi modulo.",
+      ],
+      en: [
+        "Localized 'Get started' into encouraging Italian actions ('Inizia ora', 'Configura il tuo spazio').",
+        "Reinforced privacy reassurance microcopy to build immediate trust during initial signup.",
+        "Selected understandable form labels and helpful error messages; no accessibility audit or compliance certification is claimed.",
+      ],
+      fr: [
+        "Adaptation des boutons d'action vers des formules encourageantes et bienveillantes.",
+        "Renforcement des messages de réassurance quant au respect des données personnelles.",
+        "Respect scrupuleux des critères d'accessibilité sur les libellés de formulaire.",
+      ],
+      es: [
+        "Traducción de llamadas a la acción con fórmulas cercanas y directas.",
+        "Refuerzo de la tranquilidad del usuario en materia de privacidad de datos.",
+        "Adecuación a criterios de accesibilidad para etiquetas de formulario.",
+      ],
+    },
+    deliverable: {
+      it: "Matrice illustrativa di microcopy e messaggi UI, con esempi EN→IT e motivazioni editoriali.",
+      en: "Illustrative UI microcopy matrix, with selected English-to-Italian examples and editorial rationale.",
+      fr: "Matrice de microtextes d’interface EN→IT avec exemples et commentaires éditoriaux.",
+      es: "Matriz ilustrativa de microtextos EN→IT con ejemplos y notas editoriales.",
+    },
+    comparison: {
+      sourceLang: "EN",
+      targetLang: "IT",
+      sourceText: "Almost there! Tell us how you plan to use the app so we can tailor your workspace.",
+      literalText: "Quasi là! Dicci come pianifichi di usare l'app così che possiamo cucire il tuo spazio di lavoro.",
+      localizedText: "Ci siamo quasi! Seleziona come utilizzerai l'applicazione: prepareremo il tuo spazio di lavoro su misura.",
+      notes: {
+        it: "Sostituito 'Quasi là' (calco inaccettabile) con 'Ci siamo quasi!', e 'cucire' con 'su misura'.",
+        en: "Replaces the unnatural literal translation with friendly, professional Italian conversational phrasing.",
+        fr: "Élimination des calques littéraux au profit d'une formule encourageante et naturelle.",
+        es: "Sustitución de expresiones literales por giros naturales y dinámicos en italiano.",
+      },
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 07. SUPPLIER RESEARCH & BENCHMARK
+  {
+    id: "07-supplier-research-benchmark",
+    order: 7,
+    category: "research",
+    title: {
+      it: "Ricerca fornitori: Analisi comparativa per packaging ecologico e logistica",
+      en: "Supplier Research: Comparative Benchmark for Eco-Packaging & Logistics",
+      fr: "Recherche de fournisseurs : Analyse comparative d'emballages écologiques",
+      es: "Investigación de proveedores: Análisis comparativo de embalaje ecológico",
+    },
+    subtitle: {
+      it: "Scouting, raccolta dati pubblici e sintesi decisionale per una piccola attività manifatturiera",
+      en: "Market scouting, public data gathering, and decision matrix for a boutique producer",
+      fr: "Recherche de fournisseurs, collecte de données publiques et synthèse pour une marque artisanale",
+      es: "Búsqueda, recopilación de datos y matriz comparativa para pequeña empresa",
+    },
+    brief: {
+      it: "Una piccola realtà artigianale italiana deve selezionare un nuovo fornitore di scatole in cartone riciclato certificato FSC e gestione spedizioni.",
+      en: "An artisan Italian business needs to identify a certified FSC packaging supplier and reliable small-batch logistics partner.",
+      fr: "Une petite entreprise artisanale doit identifier un fournisseur d'emballages en carton recyclé FSC et logistique.",
+      es: "Un negocio artesanal necesita seleccionar un proveedor de envases de cartón reciclado FSC y envíos.",
+    },
+    startingMaterial: {
+      it: "Parametri del cliente: budget massimo per pezzo, quantitativi minimi d'ordine (MOQ), tempi di consegna e certificazioni ecologiche richieste.",
+      en: "Client specifications: unit price targets, minimum order quantities (MOQ), turnaround times, and ecological certifications.",
+      fr: "Cahier des charges client : prix unitaire, quantités minimales (MOQ), délais et certifications.",
+      es: "Parámetros del cliente: precio objetivo por unidad, pedidos mínimos (MOQ), plazos y certificados.",
+    },
+    objective: {
+      it: "Raccogliere, verificare e sintetizzare le informazioni pubbliche di 5 fornitori italiani ed europei in una matrice trasparente e subito utilizzabile.",
+      en: "Identify, verify, and summarize public offerings from 5 suppliers into an actionable, decision-ready comparison matrix.",
+      fr: "Recueillir et synthétiser les offres de 5 fournisseurs européens dans une matrice décisionnelle claire.",
+      es: "Recopilar y sintetizar información pública de 5 proveedores en una matriz estructurada y transparente.",
+    },
+    approach: {
+      it: "Analisi desk-research su siti ufficiali, listini pubblici, schede tecniche di prodotto, condizioni di reso e recensioni verificate.",
+      en: "Exhaustive desk research analyzing official websites, public price tiers, technical data sheets, and verified fulfillment times.",
+      fr: "Recherche documentaire approfondie sur les catalogues officiels, fiches techniques et conditions de livraison.",
+      es: "Investigación documental sobre sitios web oficiales, catálogos, fichas técnicas y condiciones de envío.",
+    },
+    keyDecisions: {
+      it: [
+        "Creazione di criteri ponderati: Sostenibilità (FSC/riciclabilità), Costo unitario a scaglioni (100, 500, 1.000 pz), Tempi di produzione.",
+        "Evidenziati costi nascosti come spese di fustella una tantum e minimi di fatturazione non immediati sui siti.",
+        "Fornito riassunto esecutivo di 1 pagina con raccomandazione finale motivata per le 2 migliori opzioni.",
+      ],
+      en: [
+        "Structured weighted criteria: ecological credentials, tiered pricing brackets (100, 500, 1000 units), lead times.",
+        "Uncovered hidden costs such as initial die-cut setup fees and minimum order charges not highlighted on landing pages.",
+        "Produced a concise 1-page executive summary highlighting the top two actionable candidates.",
+      ],
+      fr: [
+        "Définition de critères objectifs : certifications écologiques, dégressivité des prix, délais de fabrication.",
+        "Mise en lumière des frais annexes (frais de calage/matrice, frais de port masqués).",
+        "Synthèse exécutive d'une page mettant en valeur les deux meilleures options.",
+      ],
+      es: [
+        "Establecimiento de criterios ponderados: sostenibilidad, precios por escala y tiempos de entrega.",
+        "Identificación de costes ocultos como costes de cliché inicial y mínimos de facturación.",
+        "Resumen ejecutivo de una página con la recomendación fundamentada de las dos mejores alternativas.",
+      ],
+    },
+    deliverable: {
+      it: "Tabella comparativa dimostrativa di fornitori fittizi, con criteri e sintesi delle informazioni.",
+      en: "Illustrative supplier comparison table using fictional data, criteria and a concise summary.",
+      fr: "Tableau comparatif de fournisseurs fictifs, critères et synthèse informative.",
+      es: "Tabla comparativa de proveedores ficticios, criterios y resumen informativo.",
+    },
+    tableData: {
+      headers: {
+        it: ["Fornitore", "Certificazione", "MOQ Minimo", "Costo Unitario (500 pz)", "Tempi Consegna", "Valutazione"],
+        en: ["Supplier", "Certification", "Minimum MOQ", "Unit Cost (500 pcs)", "Lead Time", "Verdict"],
+        fr: ["Fournisseur", "Certification", "MOQ Minimum", "Coût Unitaire (500 pcs)", "Délai", "Évaluation"],
+        es: ["Proveedor", "Certificación", "MOQ Mínimo", "Coste Unitario (500 uds)", "Plazo Entrega", "Valoración"],
+      },
+      rows: {
+        it: [
+          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 pz", "€ 1,15 / pz", "5-7 gg lavorativi", "Scelta Consigliata"],
+          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 pz", "€ 1,28 / pz", "10-12 gg", "Ottima qualità, tempi più lunghi"],
+          ["Cartotecnica Centro", "PEFC Certified", "1.000 pz", "€ 0,98 / pz", "15 gg", "MOQ troppo elevato per avvio"],
+        ],
+        en: [
+          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 pcs", "€ 1.15 / pc", "5-7 business days", "Recommended Pick"],
+          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 pcs", "€ 1.28 / pc", "10-12 days", "High quality, longer turnaround"],
+          ["Cartotecnica Centro", "PEFC Certified", "1,000 pcs", "€ 0.98 / pc", "15 days", "MOQ exceeds current volume"],
+        ],
+        fr: [
+          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 pcs", "1,15 € / pc", "5-7 jours ouvrés", "Option Recommandée"],
+          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 pcs", "1,28 € / pc", "10-12 jours", "Très bonne qualité, délais plus longs"],
+          ["Cartotecnica Centro", "PEFC Certified", "1.000 pcs", "0,98 € / pc", "15 jours", "Seuil de commande trop élevé"],
+        ],
+        es: [
+          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 uds", "1,15 € / ud", "5-7 días laborables", "Opción Recomendada"],
+          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 uds", "1,28 € / ud", "10-12 días", "Excelente calidad, mayor plazo"],
+          ["Cartotecnica Centro", "PEFC Certified", "1.000 uds", "0,98 € / ud", "15 días", "Volumen mínimo excesivo para inicio"],
+        ],
+      },
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 08. INTERNATIONAL COMPETITOR RESEARCH
+  {
+    id: "08-competitor-benchmarking",
+    order: 8,
+    category: "research",
+    title: {
+      it: "Ricerca competitor: Analisi di posizionamento sul mercato europeo",
+      en: "Competitor Research: Positioning Analysis in European Markets",
+      fr: "Veille concurrentielle : Analyse de positionnement sur le marché européen",
+      es: "Investigación de competencia: Análisis de posicionamiento en el mercado europeo",
+    },
+    subtitle: {
+      it: "Studio comparativo su offerta, listini pubblici, canali e value proposition di 4 realtà",
+      en: "Comparative study across public pricing, service models, and value propositions of 4 firms",
+      fr: "Étude comparative sur les offres, tarifs publics et propositions de valeur de 4 acteurs",
+      es: "Estudio comparativo sobre servicios, precios públicos y propuesta de valor de 4 negocios",
+    },
+    brief: {
+      it: "Consulente freelance italiano intenzionato a offrire servizi a clienti francofoni e anglofoni necessita di una mappatura dell'offerta concorrente.",
+      en: "An independent Italian consultant expanding into French and English-speaking markets requires a clear competitive landscape mapping.",
+      fr: "Un consultant indépendant italien souhaite cartographier l'offre concurrente sur les marchés francophones et anglophones.",
+      es: "Un consultor independiente italiano necesita analizar el panorama competitivo antes de expandir sus servicios a otros países europeos.",
+    },
+    startingMaterial: {
+      it: "Informazioni pubbliche ricavate da siti web, pagine LinkedIn, cataloghi servizi e newsletter aperte di 4 competitor diretti in UK, Francia e Germania.",
+      en: "Public data gathered from websites, LinkedIn company profiles, service decks, and open newsletters of 4 competitors.",
+      fr: "Données publiques issues de sites web, profils LinkedIn et présentations publiques de 4 concurrents en France et en Europe.",
+      es: "Información pública recopilada de páginas web, perfiles profesionales y boletines de 4 empresas competidoras.",
+    },
+    objective: {
+      it: "Individuare spazi di posizionamento non presidiati, fasce di prezzo medie e stili di comunicazione prevalenti senza fare speculazioni.",
+      en: "Identify underserved market niches, baseline pricing benchmarks, and dominant messaging angles based strictly on verified public facts.",
+      fr: "Identifier les segments sous-exploités et les fourchettes tarifaires moyennes sans spéculation.",
+      es: "Localizar oportunidades de diferenciación y rangos de tarifas basándose exclusivamente en hechos públicos comprobables.",
+    },
+    approach: {
+      it: "Netta separazione metodologica tra DATO DI FATTO verificabile (prezzo pubblicato, lingue supportate) e INTERPRETAZIONE strategica.",
+      en: "Methodological separation between verifiable empirical facts (published pricing, stated turnaround) and strategic interpretation.",
+      fr: "Séparation rigoureuse entre faits vérifiables (tarifs affichés, services mentionnés) et analyse stratégique.",
+      es: "Diferenciación metodológica estricta entre datos contrastables (precios visibles, idiomas) e interpretación analítica.",
+    },
+    keyDecisions: {
+      it: [
+        "Esclusi loghi protetti da copyright; utilizzati descrittori neutri per la tutela della riservatezza dei marchi terzi.",
+        "Analizzati i modelli di tariffazione: pacchetti orari fissi vs formule a retainers mensili.",
+        "Evidenziata l'assenza di vero supporto multilingue integrato nella maggior parte dei competitor come vantaggio competitivo.",
+      ],
+      en: [
+        "Excluded proprietary third-party logos, utilizing neutral descriptive identifiers to uphold fair research practices.",
+        "Compared pricing models: hourly ad-hoc billing versus monthly recurring retainer retainers.",
+        "Highlighted the lack of authentic multilingual execution as a major market whitespace for the client.",
+      ],
+      fr: [
+        "Exclusion des logos protégés et recours à des descriptions neutres et factuelles.",
+        "Comparaison des modèles économiques : tarification horaire contre forfaits mensuels récurrents.",
+        "Identification du déficit d'accompagnement réellement multilingue chez les concurrents.",
+      ],
+      es: [
+        "Exclusión de logotipos protegidos y adopción de nombres descriptivos neutros.",
+        "Comparativa de modelos de facturación: bolsa de horas frente a cuotas mensuales recurrentes.",
+        "Detección de una clara ventaja competitiva en la oferta de soporte multilingüe real.",
+      ],
+    },
+    deliverable: {
+      it: "Scheda dimostrativa di confronto tra concorrenti fittizi, criteri di posizionamento e osservazioni.",
+      en: "Short fictional competitor-comparison example with positioning criteria and editorial observations.",
+      fr: "Exemple synthétique de comparaison d’entreprises fictives et de critères de positionnement.",
+      es: "Ejemplo breve de comparación de competidores ficticios y criterios de posicionamiento.",
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 09. BACK OFFICE FOR GENERIC FREELANCE PROFESSIONAL
+  {
+    id: "09-freelance-back-office-system",
+    order: 9,
+    category: "backoffice",
+    title: {
+      it: "Back office e organizzazione operativa: Sistema per libero professionista",
+      en: "Back Office & Operational Management: Systems for Solo Professionals",
+      fr: "Back-office et organisation opérationnelle : Système pour professionnel libéral",
+      es: "Back office y organización operativa: Sistema para profesional independiente",
+    },
+    subtitle: {
+      it: "Triage casella email, gestione buffer in agenda e tracker follow-up clienti",
+      en: "Inbox triage, appointment buffer scheduling, and systematic client follow-up tracker",
+      fr: "Gestion de boîte de réception, planification d'agenda et suivi des relances clients",
+      es: "Gestión de correo, tiempos de descanso en agenda y seguimiento de clientes",
+    },
+    brief: {
+      it: "Un consulente professionista sovraccarico dalla gestione quotidiana perde opportunità commerciali e fatica a tenere traccia delle scadenze.",
+      en: "An overloaded independent consultant is losing potential engagements due to disorganized inbox triage and irregular follow-ups.",
+      fr: "Un professionnel débordé par la gestion quotidienne perd des opportunités par manque de suivi et d'organisation.",
+      es: "Un profesional autónomo saturado por tareas administrativas pierde oportunidades y control sobre los plazos de entrega.",
+    },
+    startingMaterial: {
+      it: "Scenario sintetico con 50 comunicazioni in entrata, richieste appuntamenti disordinate e 3 clienti in attesa di preventivo (Clienti Demo A, B, C).",
+      en: "Synthetic simulation with 50 unfiled client messages, irregular calendar requests, and pending quotes for Demo Clients A, B, and C.",
+      fr: "Scénario synthétique de 50 messages entrants non traités, rendez-vous non confirmés et devis en attente.",
+      es: "Escenario demostrativo con 50 correos sin clasificar, citas desorganizadas y presupuestos pendientes.",
+    },
+    objective: {
+      it: "Costruire un flusso operativo standard (SOP), liberare la casella di posta e strutturare un sistema di follow-up che non lasci cadere alcun contatto.",
+      en: "Build standard operating procedures (SOPs), achieve zero-inbox clarity, and establish an unshakeable follow-up cadence.",
+      fr: "Mettre en place une procédure claire (SOP), désengorger la boîte mail et structurer les relances.",
+      es: "Crear un protocolo de trabajo operativo (SOP), despejar el correo y asegurar el seguimiento riguroso de cada cliente.",
+    },
+    approach: {
+      it: "Applicazione della metodologia 'Open Loops': classificazione per urgenza/importanza, risposte standard personalizzate e introduzione di buffer di 15 min tra call.",
+      en: "Implementation of the Open Loops framework: classification by priority, templated personalized replies, and 15-minute calendar buffers.",
+      fr: "Mise en œuvre d'une méthode de tri rigoureuse, modèles de réponse types personnalisés et temps de pause entre rendez-vous.",
+      es: "Aplicación de clasificación por prioridades, respuestas tipo personalizadas y descansos de 15 minutos entre videollamadas.",
+    },
+    keyDecisions: {
+      it: [
+        "Creata cartella 'In attesa di terzi': ogni richiesta sospesa ha una data limite di sollecito automatico dopo 48 ore.",
+        "Bloccati slot settimanali per lavoro profondo senza interruzioni di chiamate esterne.",
+        "Predisposto un tracker sintetico settimanale con riepilogo inviato ogni venerdì pomeriggio a Noemi / al professionista.",
+      ],
+      en: [
+        "Created a dedicated 'Waiting For' folder: pending client actions are flagged for automated check-in after 48 business hours.",
+        "Protected deep-work calendar blocks reserved strictly for deliverable creation without incoming interruptions.",
+        "Weekly status summary delivered every Friday afternoon tracking commitments, pending decisions, and next best actions.",
+      ],
+      fr: [
+        "Création d'un dossier 'En attente' avec rappel systématique sous 48 heures ouvrées.",
+        "Blocage de créneaux dédiés au travail de fond sans interruption téléphonique.",
+        "Synthèse hebdomadaire transmise chaque vendredi récapitulant les actions finalisées et les priorités de la semaine suivante.",
+      ],
+      es: [
+        "Creación de una carpeta 'En espera': cada asunto pendiente cuenta con aviso de seguimiento a las 48 horas.",
+        "Bloqueo de franjas de concentración en la agenda sin citas externas.",
+        "Informe semanal de control entregado cada viernes con el estado de tareas y prioridades pendientes.",
+      ],
+    },
+    deliverable: {
+      it: "Procedura dimostrativa di gestione email e organizzazione delle attività, con istruzioni e controlli di approvazione.",
+      en: "Illustrative email-triage and operational workflow procedure, with approval checkpoints.",
+      fr: "Procédure de tri des e-mails et d’organisation des tâches, avec validations prévues.",
+      es: "Procedimiento de correos y organización operativa, con controles de aprobación.",
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 10. WRITING & REVISION — BEFORE/AFTER
+  {
+    id: "10-writing-editorial-revision",
+    order: 10,
+    category: "writing",
+    title: {
+      it: "Scrittura e revisione testi: Confronto prima/dopo per presentazione aziendale",
+      en: "Copywriting & Text Revision: Before/After Corporate Presentation",
+      fr: "Rédaction et révision de textes : Comparatif avant/après pour présentation d'entreprise",
+      es: "Redacción y corrección de estilo: Comparativa antes y después para presentación profesional",
+    },
+    subtitle: {
+      it: "Ristrutturazione stilistica, eliminazione del burocratese e valorizzazione della chiarezza",
+      en: "Stylistic overhaul, elimination of corporate fluff, and focus on human clarity",
+      fr: "Refonte stylistique, suppression du jargon administratif et valorisation de la clarté",
+      es: "Reestructuración estilística, eliminación de giros burocráticos y claridad en el mensaje",
+    },
+    brief: {
+      it: "Revisione di un testo di presentazione aziendale originariamente pesante, infarcito di formule impersonali e gergo generico.",
+      en: "Comprehensive revision of a company introduction draft originally bogged down by passive verbs, clichés, and bureaucratic phrasing.",
+      fr: "Révision d'une présentation d'entreprise alourdie par des tournures passives et un vocabulaire ampoulé.",
+      es: "Revisión integral de una presentación corporativa cargada de fórmulas impersonales y clichés comerciales.",
+    },
+    startingMaterial: {
+      it: "Bozza originale: 'La nostra compagine professionale si prefigge lo scopo di implementare soluzioni sinergiche a 360 gradi...'",
+      en: "Original draft: 'Our multifaceted professional entity endeavors to execute 360-degree synergized turnkey methodologies...'",
+      fr: "Projet initial : 'Notre structure s'évertue à mettre en œuvre des synergies holistiques à 360 degrés...'",
+      es: "Borrador inicial: 'Nuestra entidad se complace en implementar soluciones sinérgicas a 360 grados...'",
+    },
+    objective: {
+      it: "Trasformare il testo in una comunicazione autorevole, diretta e piacevole da leggere, mettendo in primo piano ciò che l'azienda fa concretamente.",
+      en: "Transform the copy into direct, credible, and engaging communication clearly stating what the company actually accomplishes.",
+      fr: "Transformer le texte en une communication percutante, élégante et lisible, axée sur les compétences réelles.",
+      es: "Convertir el texto en un mensaje convincente, cercano y profesional que explique con exactitud los servicios ofrecidos.",
+    },
+    approach: {
+      it: "Potatura degli aggettivi vuoti, ripristino della forma attiva con soggetti chiari, spezzatura delle subordinate complesse in frasi incisive.",
+      en: "Elimination of hollow marketing adjectives, active voice restoration, and breaking tortuous clauses into punchy, memorable sentences.",
+      fr: "Suppression des adjectifs superflus, retour à la voix active et découpage en phrases courtes et équilibrées.",
+      es: "Supresión de adjetivos vacíos, adopción de voz activa y descomposición de oraciones complejas en ideas claras.",
+    },
+    keyDecisions: {
+      it: [
+        "Banditi 'sinergia a 360 gradi', 'leader di settore' e 'prefiggersi lo scopo'.",
+        "Strutturata la comunicazione in 3 blocchi: Cosa facciamo, Per chi lavoriamo, Perché i clienti restano con noi.",
+        "Ridotto il conteggio parole del 40% aumentando l'efficacia persuasiva e la memorabilità.",
+      ],
+      en: [
+        "Banned clichés such as 'synergy', '360-degree turnkey', and 'industry leading'.",
+        "Organized message into three intuitive sections: What we do, Who we serve, Why clients stay.",
+        "Trimmed word count by 40% while doubling message retention and professional credibility.",
+      ],
+      fr: [
+        "Suppression des poncifs de communication d'entreprise ('synergies', 'solutions à 360 degrés').",
+        "Organisation en 3 volets limpides : Mission, Public cible, Valeur ajoutée éprouvée.",
+        "Réduction de 40 % du volume de texte avec un gain substantiel de lisibilité.",
+      ],
+      es: [
+        "Eliminación de tópicos de marketing ('sinergias', 'soluciones 360', 'líderes de mercado').",
+        "Estructuración del contenido en 3 apartados: Qué hacemos, Para quién trabajamos, Por qué nos eligen.",
+        "Reducción del 40 % de la longitud del texto aumentando su impacto comercial y profesional.",
+      ],
+    },
+    deliverable: {
+      it: "Confronto editoriale prima/dopo di un testo italiano fittizio con note di revisione.",
+      en: "Before-and-after Italian copy-editing example with editorial commentary.",
+      fr: "Exemple avant/après de révision d’un texte italien, avec commentaires.",
+      es: "Ejemplo antes/después de revisión en italiano, con comentarios editoriales.",
+    },
+    comparison: {
+      sourceLang: "IT (Bozza Originale)",
+      targetLang: "IT (Testo Revisionato)",
+      sourceText: "La nostra compagine professionale si prefigge lo scopo precipuo di implementare soluzioni sinergiche a 360 gradi atte a favorire l'ottimizzazione dei processi operativi dei nostri stimati clienti.",
+      literalText: "La nostra realtà è finalizzata all'implementazione di soluzioni sinergiche a trecentosessanta gradi per ottimizzare i processi dei nostri clienti.",
+      localizedText: "Aiutiamo professionisti e piccole attività a organizzare meglio il lavoro quotidiano con procedure chiare, documenti ordinati e comunicazioni più semplici.",
+      notes: {
+        it: "Eliminato il burocratese vuoto. Il testo revisionato parla direttamente al lettore in prima persona plurale, definisce l'interlocutore e si concentra sul beneficio reale.",
+        en: "Replaces empty bureaucratic waffle with direct, human-centered professional prose emphasizing concrete operational benefits.",
+        fr: "Substitution d'un style ampoulé par une communication directe, bienveillante et axée sur le résultat.",
+        es: "Sustitución de una redacción farragosa por un texto claro, directo y centrado en las necesidades del cliente.",
+      },
+    },
+    disclaimer: DEMO_DISCLAIMER,
+  },
+
+  // 11. ITALIAN LANDING PAGE EDITORIAL LOCALISATION
+  {
+    "id": "11-multilingual-landing-page",
+    "order": 11,
+    "category": "web",
+    "title": {
+      "it": "Revisione dei contenuti di una landing page per il mercato italiano",
+      "en": "Italian landing page: content review and localisation",
+      "fr": "Page de destination italienne : révision et localisation éditoriale",
+      "es": "Landing page en italiano: revisión y localización de contenidos"
+    },
+    "subtitle": {
+      "it": "Headline, servizi, FAQ e CTA: intervento linguistico e organizzazione dei testi, non sviluppo web",
+      "en": "Clear Italian headlines, FAQs and calls to action; editorial work, not website development",
+      "fr": "Accroches, FAQ et appels à l’action en italien ; prestation éditoriale, sans développement web",
+      "es": "Titulares, preguntas frecuentes y llamadas a la acción en italiano, sin desarrollo técnico"
+    },
+    "brief": {
+      "it": "Scenario simulato: un consulente internazionale ha una pagina in inglese e vuole renderne il messaggio comprensibile a visitatori italiani.",
+      "en": "Fictional scenario: an international consultant has an English landing page and wants to communicate clearly with Italian visitors.",
+      "fr": "Scénario fictif : un consultant international souhaite adapter une page anglophone au public italien.",
+      "es": "Supuesto ficticio: un consultor internacional quiere adaptar una página en inglés a lectores italianos."
+    },
+    "startingMaterial": {
+      "it": "Una bozza in inglese contenente titolo, testo introduttivo, servizi, FAQ e invito a chiedere informazioni.",
+      "en": "English copy draft containing a headline, introduction, service list, FAQ and enquiry CTA.",
+      "fr": "Brouillon anglais comprenant titre, présentation, services, FAQ et formulaire de contact.",
+      "es": "Borrador en inglés con título, presentación, servicios, FAQ y llamada a contactar."
+    },
+    "objective": {
+      "it": "Rendere il contenuto italiano chiaro e coerente, con un percorso di lettura ordinato e terminologia uniforme.",
+      "en": "Make the Italian copy clear, consistent and easy to scan without changing the actual offer.",
+      "fr": "Créer des contenus italiens clairs et cohérents, sans modifier la prestation réelle.",
+      "es": "Crear textos en italiano claros, coherentes y fieles a la oferta real."
+    },
+    "approach": {
+      "it": "Inventario dei messaggi, gerarchia dei contenuti, localizzazione EN → IT, revisione di FAQ e CTA, consegna dei testi per il CMS.",
+      "en": "Audit source messages; organise copy hierarchy; localise EN → IT; review FAQs and CTAs; provide CMS-ready text.",
+      "fr": "Recenser les messages, structurer les textes, localiser vers l’italien, réviser FAQ et appels à l’action.",
+      "es": "Revisar los mensajes, estructurar los textos, localizar al italiano y entregar la versión preparada para CMS."
+    },
+    "keyDecisions": {
+      "it": [
+        "Headline specifica per il bisogno del lettore italiano, non slogan generici.",
+        "FAQ costruite dalle domande presenti nel brief, senza inventare condizioni.",
+        "Consegna di testi modificabili, lasciando sviluppo, hosting e form tecnici al cliente."
+      ],
+      "en": [
+        "Prioritise one clear reader question in the Italian headline.",
+        "Write FAQs only from approved source information.",
+        "Deliver editable content; hosting, code and technical form integration are outside scope."
+      ],
+      "fr": [
+        "Une accroche italienne utile, sans slogan vide.",
+        "Aucune condition commerciale ajoutée dans les FAQ.",
+        "Livraison de contenus éditables ; l’intégration technique n’est pas incluse."
+      ],
+      "es": [
+        "Un titular italiano centrado en la necesidad del lector.",
+        "Preguntas frecuentes basadas en datos aprobados.",
+        "Entrega de textos editables; sin programación ni alojamiento web."
+      ]
+    },
+    "deliverable": {
+      "it": "Kit di contenuti IT: titolo, sottotitolo, tre benefici, FAQ e CTA, con note per l’inserimento nel CMS.",
+      "en": "Italian copy kit: headline, subheading, three benefits, FAQ and CTA, ready for client-side CMS integration.",
+      "fr": "Kit éditorial italien : titre, sous-titre, bénéfices, FAQ, CTA et indications pour le CMS.",
+      "es": "Kit editorial italiano: titular, subtítulo, beneficios, preguntas frecuentes, CTA y notas para CMS."
+    },
+    "comparison": {
+      "sourceLang": "EN",
+      "targetLang": "IT",
+      "sourceText": "Get tailored guidance for your next project. Tell us what you need and we will explain the available options.",
+      "literalText": "Ottieni guida su misura per il tuo prossimo progetto. Dici cosa ti serve e spiegheremo le opzioni disponibili.",
+      "localizedText": "Un supporto su misura per il tuo prossimo progetto. Raccontaci di cosa hai bisogno: ti illustreremo le soluzioni disponibili.",
+      "notes": {
+        "it": "«Raccontaci» invita al contatto senza suonare imperativo; sono mantenute le promesse del testo originale.",
+        "en": "Preserves scope and avoids an awkward literal imperative.",
+        "fr": "Invite au contact dans un registre naturel, sans promesse ajoutée.",
+        "es": "Invita a contactar de forma natural y conserva el sentido original."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+
+    // 12. DEDICATED LITERARY TRANSLATION SAMPLE (MASTER FIELD: LETTERARIO)
+  {
+    id: "12-literary-translation-sample",
+    order: 12,
+    category: "translation",
+    masterField: "letterario",
+    title: {
+      it: "Saggio di traduzione letteraria e narrativa: 'The Last Voice Note' (EN → IT)",
+      en: "Literary & Narrative Translation Sample: 'The Last Voice Note' (EN → IT)",
+      fr: "Échantillon de traduction littéraire et narrative : 'The Last Voice Note' (EN → IT)",
+      es: "Muestra de traducción literaria y narrativa: 'The Last Voice Note' (EN → IT)",
+    },
+    subtitle: {
+      it: "Testo originale contemporaneo: studio di ritmo narrativo, sottotesto, resa del parlato e cadenza prosodica",
+      en: "Original contemporary narrative: study of rhythm, subtext, spoken dialogue, and prosodic cadence",
+      fr: "Texte narratif contemporain original : étude du rythme, du non-dit, des dialogues et de la cadence",
+      es: "Texto narrativo contemporáneo original: estudio de ritmo, subtexto, diálogo coloquial y musicalidad",
+    },
+    brief: {
+      it: "Traduzione di un estratto di prosa narrativa contemporanea originale incentrato sulla memoria digitale, l'assenza e i dettagli quotidiani.",
+      en: "Translation of an original contemporary literary passage exploring digital memory, everyday absence, and unspoken emotional weight.",
+      fr: "Traduction d'un extrait de fiction contemporaine originale sur la mémoire numérique et l'intimité du quotidien.",
+      es: "Traducción de un fragmento literario contemporáneo original sobre la memoria digital y la emoción contenida.",
+    },
+    startingMaterial: {
+      it: "Testo sorgente originale in lingua inglese creato appositamente per questo progetto dimostrativo. Nessun autore vivente o protetto da copyright imitato.",
+      en: "Original English narrative source written specifically for this demonstration portfolio. Free from external copyright restrictions.",
+      fr: "Texte source original en anglais rédigé spécifiquement pour ce projet de démonstration.",
+      es: "Texto fuente original en inglés creado exclusivamente para este proyecto demostrativo.",
+    },
+    objective: {
+      it: "Rendere la voce narrante in italiano con naturalezza e rispetto della cadenza interiore, evitando sia l'appiattimento sia il manierismo forzato.",
+      en: "Render the narrator's interior voice into Italian with natural cadence and restraint, avoiding both flat literalism and overwrought poeticism.",
+      fr: "Transposer la voix intérieure du narrateur avec délicatesse, sans lourdeur ni préciosité artificielle.",
+      es: "Recrear la voz narrativa en italiano con musicalidad y sobriedad, eludiendo la literalidad estéril y la afectación.",
+    },
+    approach: {
+      it: "Analisi stilistica preliminare: studio delle pause, della punteggiatura e della tensione non detta. Traduzione basata sulla resa prosodica del respiro narrativo.",
+      en: "Close reading analysis: mapping narrative pauses, punctuation weight, and emotional subtext. Translation shaped around natural breath rhythms.",
+      fr: "Lecture attentive de la ponctuation, des silences et des non-dits pour restituer le souffle de la prose originale.",
+      es: "Análisis pormenorizado del ritmo, las pausas y el subtexto emocional antes de abordar la traducción de cada párrafo.",
+    },
+    keyDecisions: {
+      it: [
+        "Resa di 'voice note': conservato 'nota vocale' nel registro intimo per riflettere l'uso quotidiano autentico in italiano.",
+        "Scelta di tempi verbali: alternanza studiata tra imperfetto narrativo e passato remoto per creare la giusta profondità temporale del ricordo.",
+        "Lavoro meticoloso sull'incipit per preservare la cadenza sussurrata del testo di partenza senza inversioni sintattiche forzate.",
+      ],
+      en: [
+        "Balanced contemporary spoken terms ('voice note' / 'nota vocale') against reflective narrative introspection.",
+        "Calibrated Italian narrative past tenses (imperfetto vs passato remoto) to honor the protagonist's layered temporal recollection.",
+        "Preserved the understated, intimate opening cadence without unnatural Italian inversions.",
+      ],
+      fr: [
+        "Choix rigoureux des temps verbaux pour refléter les différentes strates de la mémoire.",
+        "Préservation de l'économie de moyens et de la sobriété du monologue intérieur.",
+        "Attention portée à la musicalité des fins de phrase pour soutenir l'émotion.",
+      ],
+      es: [
+        "Ajuste preciso de los tiempos verbales narrativos para recrear las capas temporales del recuerdo.",
+        "Mantenimiento de la contención expresiva sin caer en dramatismos artificiales.",
+        "Cuidado del ritmo de las frases para acompañar la respiración del relato.",
+      ],
+    },
+    deliverable: {
+      it: "Testo integrale bilingue a fronte annotato con commento critico sulle scelte stilistiche e traduttologiche.",
+      en: "Dual-language literary presentation with side-by-side text and translator's critical editorial commentary.",
+      fr: "Présentation bilingue annotée avec commentaire critique des choix de traduction.",
+      es: "Texto bilingüe enfrentado con notas del traductor sobre las decisiones estilísticas adoptadas.",
+    },
+    sampleText: {
+      enSource: `The kitchen was still cold when the phone buzzed against the marble counter. It was forty-six seconds of nothing in particular: the sound of a kettle rattling on a stove somewhere three hundred miles away, a car passing in the rain, and then her voice, clearing its throat as if she had dialed the wrong number and decided to apologize to the silence.
+
+"I found the book," she said. "The one with the ticket stub inside. You were right about the year."
+
+She didn't sign off. A breath, the faint metallic click of the stove being turned down, and the line cut. That was nine months ago, before the boxes in the hallway, before the letters that kept arriving with someone else's name neatly crossed out in blue ink. I still haven't cleared the inbox. Sometimes, when the house settles into that hollow afternoon quiet, I play it just to hear the kettle.`,
+      itTarget: `In cucina faceva ancora freddo quando il telefono vibrò sul ripiano di marmo. Erano quarantasei secondi di niente in particolare: il rumore di un bollitore che tremava su un fornello a trecento miglia di distanza, un'auto che passava sotto la pioggia e poi la sua voce, che si schiariva la gola come se avesse sbagliato numero e avesse deciso di scusarsi con il silenzio.
+
+«Ho trovato il libro», disse. «Quello con il talloncino del biglietto tra le pagine. Avevi ragione tu sull'anno».
+
+Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abbassato e la registrazione si interruppe. Era successo nove mesi fa, prima degli scatoloni nel corridoio, prima delle lettere che continuavano ad arrivare con un nome altrui cancellato con cura a penna blu. Non ho ancora svuotato la casella. A volte, quando la casa sprofonda in quel silenzio vuoto del pomeriggio, la faccio partire solo per sentire il bollitore.`,
+      editorialNotes: {
+        it: "Note del traduttore: 'forty-six seconds of nothing in particular' è reso con 'quarantasei secondi di niente in particolare', mantenendo il tono disarmante; 'ticket stub' è reso con 'talloncino del biglietto', non con 'scontrino', perché non si tratta di una ricevuta d’acquisto; 'the house settles into that hollow afternoon quiet' è tradotto con 'la casa sprofonda in quel silenzio vuoto del pomeriggio' per restituire la sensazione di peso e solitudine senza enfasi melodrammatica.",
+        en: "Translator's notes: Maintained the quiet cadence of the original; selected evocative Italian verbs ('sprofonda', 'tremava') that mirror the acoustic reality of the memory without calling attention to the translator's hand.",
+        fr: "Notes de traduction : Restitution de la pudeur et de l'intimité du passage sans fard littéraire excessif.",
+        es: "Notas de traducción: Búsqueda deliberada de la contención emocional a través de una prosodia limpia y verosímil en italiano.",
+      },
+    },
+    disclaimer: {
+      it: "Testo sorgente originale in lingua inglese creato appositamente per questo progetto dimostrativo.",
+      en: "Original English source text created specifically for this demonstration portfolio.",
+      fr: "Texte source original en anglais créé spécifiquement pour ce projet de démonstration.",
+      es: "Texto original en inglés creado expresamente para este proyecto demostrativo.",
+    },
+  },
+  {
+    "id": "13-french-italian-product-localisation",
+    "order": 13,
+    "category": "translation",
+    "title": {
+      "it": "Localizzazione FR → IT: scheda prodotto per la casa",
+      "en": "French-to-Italian product page localisation",
+      "fr": "Localisation FR → IT : fiche produit pour la maison",
+      "es": "Localización FR → IT: ficha de producto para el hogar"
+    },
+    "subtitle": {
+      "it": "Descrizione, specifiche, microcopy e controllo terminologico",
+      "en": "Description, specifications and Italian customer-facing microcopy",
+      "fr": "Description, caractéristiques et microtextes pour le marché italien",
+      "es": "Descripción, especificaciones y microtextos para el público italiano"
+    },
+    "brief": {
+      "it": "Marchio francese immaginario di articoli per la casa che vuole presentare un prodotto sul proprio sito italiano.",
+      "en": "A fictional French homeware brand needs a consistent Italian product listing.",
+      "fr": "Une marque fictive française d’articles pour la maison prépare une fiche en italien.",
+      "es": "Una marca francesa ficticia prepara una ficha de producto para Italia."
+    },
+    "startingMaterial": {
+      "it": "Titolo, descrizione e specifiche in francese, con informazioni di prodotto non negoziabili.",
+      "en": "French product title, description and technical specifications.",
+      "fr": "Titre français, texte descriptif et caractéristiques techniques.",
+      "es": "Título, descripción y características técnicas originales en francés."
+    },
+    "objective": {
+      "it": "Adattare il linguaggio commerciale senza alterare misure, caratteristiche o dotazione.",
+      "en": "Create natural Italian product copy without changing specifications or product promises.",
+      "fr": "Rédiger une fiche italienne naturelle sans modifier les spécifications.",
+      "es": "Redactar una ficha italiana natural sin alterar los datos técnicos."
+    },
+    "approach": {
+      "it": "Terminologia coerente per arredi; controllo delle unità; riformulazione di descrizioni e pulsanti; confronto con il testo sorgente.",
+      "en": "Create a terminology list; verify units; adapt descriptions and CTAs; compare against source.",
+      "fr": "Glossaire, contrôle des unités, adaptation éditoriale et vérification de fidélité.",
+      "es": "Glosario, revisión de unidades, adaptación de descripciones y verificación."
+    },
+    "keyDecisions": {
+      "it": [
+        "«Bras articulé» diventa «braccio snodabile», non «braccio articolato».",
+        "«Ampoule non fournie» è reso esplicitamente come «lampadina non inclusa».",
+        "Le specifiche restano separate dal testo persuasivo."
+      ],
+      "en": [
+        "Translate «bras articulé» as natural Italian «braccio snodabile».",
+        "State clearly when a bulb is not supplied.",
+        "Keep technical specifications distinct from marketing copy."
+      ],
+      "fr": [
+        "«Bras articulé» devient «braccio snodabile» dans l’usage italien.",
+        "L’absence d’ampoule est indiquée sans ambiguïté.",
+        "Les données techniques restent séparées du texte promotionnel."
+      ],
+      "es": [
+        "«Bras articulé» se adapta a «braccio snodabile».",
+        "Se especifica que la bombilla no está incluida.",
+        "Se diferencian prestaciones reales y lenguaje comercial."
+      ]
+    },
+    "deliverable": {
+      "it": "Scheda FR → IT completa con tabella di confronto, glossario e note; documento 17.",
+      "en": "French/Italian comparison sheet with glossary and editorial notes; document 17.",
+      "fr": "Fiche comparative français/italien avec glossaire et notes ; document 17.",
+      "es": "Ficha comparativa francés/italiano con glosario y notas; documento 17."
+    },
+    "comparison": {
+      "sourceLang": "FR",
+      "targetLang": "IT",
+      "sourceText": "Une lumière douce pour accompagner vos moments de lecture. Son bras articulé permet d’orienter l’éclairage selon vos besoins. Ampoule non fournie.",
+      "literalText": "Una luce morbida per accompagnare i vostri momenti di lettura. Il suo braccio articolato permette di orientare l'illuminazione secondo i vostri bisogni. Bulbo non fornito.",
+      "localizedText": "Una luce delicata per i tuoi momenti di lettura. Il braccio snodabile permette di orientare il fascio luminoso secondo le tue esigenze. Lampadina non inclusa.",
+      "notes": {
+        "it": "Registro diretto coerente, collocazioni naturali e specifica tecnica non ambigua.",
+        "en": "Natural Italian collocations and clear equipment information.",
+        "fr": "Collocations naturelles et précision des informations produit.",
+        "es": "Expresiones naturales y precisión técnica."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "14-spanish-italian-existing-customer-email",
+    "order": 14,
+    "category": "translation",
+    "title": {
+      "it": "Adattamento ES → IT: email a un cliente già acquisito",
+      "en": "Spanish-to-Italian email for an existing customer",
+      "fr": "Adaptation ES → IT : e-mail à un client existant",
+      "es": "Adaptación ES → IT: correo a un cliente existente"
+    },
+    "subtitle": {
+      "it": "Una comunicazione professionale cortese, non un'attività di acquisizione clienti",
+      "en": "Professional customer correspondence, not prospecting",
+      "fr": "Correspondance professionnelle, sans prospection commerciale",
+      "es": "Correspondencia profesional sin captación de clientes"
+    },
+    "brief": {
+      "it": "Un fornitore spagnolo immaginario risponde a un cliente italiano già attivo chiedendo un riscontro su una proposta precedentemente inviata.",
+      "en": "A fictional Spanish supplier follows up with an existing Italian customer about a previously requested proposal.",
+      "fr": "Un fournisseur espagnol fictif écrit à un client italien déjà acquis au sujet d’une proposition demandée.",
+      "es": "Un proveedor español ficticio escribe a un cliente italiano ya existente sobre una propuesta solicitada."
+    },
+    "startingMaterial": {
+      "it": "Messaggio di follow-up in spagnolo, con richiesta di conferma e disponibilità a chiarire le informazioni.",
+      "en": "Spanish-language service follow-up message requiring an Italian version.",
+      "fr": "Message espagnol de suivi, à traduire en italien.",
+      "es": "Correo de seguimiento en español destinado a un cliente italiano."
+    },
+    "objective": {
+      "it": "Mantenere cortesia, chiarezza e neutralità, senza trasformare il follow-up in una sollecitazione commerciale aggressiva.",
+      "en": "Preserve a polite, neutral tone without turning support follow-up into cold outreach.",
+      "fr": "Préserver un ton courtois, sans prospection ni insistance excessive.",
+      "es": "Mantener un tono profesional y cercano sin presión comercial."
+    },
+    "approach": {
+      "it": "Analisi del rapporto già esistente, forma di cortesia italiana, scelta dell’oggetto e verifica dell’azione richiesta.",
+      "en": "Review customer relationship, Italian form of address, subject line and next action.",
+      "fr": "Analyse du lien client, des formules italiennes et de l’action attendue.",
+      "es": "Análisis del contexto, fórmulas italianas y acción solicitada."
+    },
+    "keyDecisions": {
+      "it": [
+        "«Nos ponemos en contacto» è reso con «Le scriviamo», senza preamboli superflui.",
+        "Si mantiene il riferimento alla proposta già inviata.",
+        "Il testo non viene trasformato in una comunicazione di prospecting."
+      ],
+      "en": [
+        "Prefer natural Italian «Le scriviamo» over a literal business calque.",
+        "Preserve the reference to a previously submitted proposal.",
+        "Keep the message within existing-customer service, not prospecting."
+      ],
+      "fr": [
+        "Choisir une formule italienne sobre et professionnelle.",
+        "Respecter la référence à la proposition déjà transmise.",
+        "Ne pas transformer le suivi en prospection."
+      ],
+      "es": [
+        "Evitar un calco de «nos ponemos en contacto».",
+        "Mantener la referencia a una propuesta ya enviada.",
+        "No convertir el seguimiento en una acción de captación."
+      ]
+    },
+    "deliverable": {
+      "it": "Email ES → IT con oggetto, corpo, saluti e nota redazionale; documento 18.",
+      "en": "Spanish-to-Italian email draft with subject, message and editorial notes; document 18.",
+      "fr": "Courriel ES → IT avec objet et notes linguistiques ; document 18.",
+      "es": "Correo ES → IT con asunto y notas lingüísticas; documento 18."
+    },
+    "comparison": {
+      "sourceLang": "ES",
+      "targetLang": "IT",
+      "sourceText": "Buenos días, nos ponemos en contacto para saber si ha tenido ocasión de revisar la propuesta enviada la semana pasada. Estaremos encantados de aclarar cualquier detalle.",
+      "literalText": "Buongiorno, ci mettiamo in contatto per sapere se ha avuto occasione di rivedere la proposta inviata la settimana passata. Saremo incantati di chiarire qualsiasi dettaglio.",
+      "localizedText": "Buongiorno, le scriviamo per sapere se ha avuto modo di esaminare la proposta inviata la scorsa settimana. Restiamo a disposizione per qualsiasi chiarimento.",
+      "notes": {
+        "it": "Sintassi più naturale, tono professionale misurato e riferimento al rapporto già esistente.",
+        "en": "Natural Italian business tone and a restrained customer-service register.",
+        "fr": "Registre professionnel italien fluide et discret.",
+        "es": "Registro italiano profesional, natural y sin presión comercial."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "15-italian-written-customer-care",
+    "order": 15,
+    "category": "backoffice",
+    "title": {
+      "it": "Customer care scritto: tre richieste in italiano",
+      "en": "Italian written customer care: three real-world scenarios",
+      "fr": "Relation client écrite en italien : trois situations",
+      "es": "Atención escrita en italiano: tres situaciones"
+    },
+    "subtitle": {
+      "it": "Classificazione dei ticket, risposte pronte e gestione delle eccezioni",
+      "en": "Ticket triage, approved replies and escalation rules",
+      "fr": "Tri des demandes, réponses et règles de validation",
+      "es": "Clasificación, respuestas y criterios de escalado"
+    },
+    "brief": {
+      "it": "Scenario simulato: un piccolo negozio online deve gestire richieste su disponibilità, ordini e tempi di consegna da clienti esistenti.",
+      "en": "Fictional small online shop needs organised Italian replies to current customers about stock, orders and delivery.",
+      "fr": "Boutique en ligne fictive : demandes de clients italiens sur stock, commandes et livraison.",
+      "es": "Tienda online ficticia: consultas de clientes italianos sobre stock, pedidos y entregas."
+    },
+    "startingMaterial": {
+      "it": "Tre email simulate, catalogo approvato e procedura di rinvio delle domande non risolvibili.",
+      "en": "Three synthetic customer messages, approved product details and escalation instructions.",
+      "fr": "Trois e-mails fictifs, informations approuvées et consignes d’escalade.",
+      "es": "Tres correos ficticios, información aprobada y reglas de consulta."
+    },
+    "objective": {
+      "it": "Preparare risposte attendibili, indicare il prossimo passo e non promettere disponibilità o consegne non verificate.",
+      "en": "Provide accurate Italian responses, next steps and no unsupported commitments.",
+      "fr": "Préparer des réponses italiennes exactes, sans engagement non vérifié.",
+      "es": "Preparar respuestas italianas claras y sin promesas no confirmadas."
+    },
+    "approach": {
+      "it": "Classificazione per urgenza, controllo delle fonti, bozza di risposta, approvazione e aggiornamento del registro ticket.",
+      "en": "Triage, verify approved data, draft a reply, obtain authorisation and update the ticket log.",
+      "fr": "Trier, vérifier, rédiger, demander validation et actualiser le suivi.",
+      "es": "Clasificar, comprobar, redactar, validar y actualizar el registro."
+    },
+    "keyDecisions": {
+      "it": [
+        "Non comunicare una data di consegna senza conferma del referente autorizzato.",
+        "Una domanda su fatture o contabilità viene inoltrata: non viene gestita dall’assistente.",
+        "Il registro conserva solo i dati operativi necessari."
+      ],
+      "en": [
+        "Never invent a delivery date.",
+        "Refer billing/accounting issues to the responsible team; do not handle them.",
+        "Record only necessary operational data."
+      ],
+      "fr": [
+        "Ne jamais inventer une date de livraison.",
+        "Rediriger les questions de facturation au service compétent.",
+        "Ne conserver que les données nécessaires."
+      ],
+      "es": [
+        "No inventar fechas de entrega.",
+        "Derivar cuestiones contables o de facturación al responsable.",
+        "Registrar únicamente datos necesarios."
+      ]
+    },
+    "deliverable": {
+      "it": "Registro ticket, modello email italiano e regole di escalation; documento 11.",
+      "en": "Italian ticket tracker, reply template and escalation matrix; sample document 11.",
+      "fr": "Tableau de tickets, réponse italienne et procédure d’escalade ; document 11.",
+      "es": "Registro de tickets, respuesta en italiano y criterios de escalado; documento 11."
+    },
+    "tableData": {
+      "headers": {
+        "it": [
+          "Ticket",
+          "Richiesta",
+          "Risposta operativa"
+        ],
+        "en": [
+          "Ticket",
+          "Customer question",
+          "Operational response"
+        ],
+        "fr": [
+          "Ticket",
+          "Demande",
+          "Réponse opérationnelle"
+        ],
+        "es": [
+          "Ticket",
+          "Consulta",
+          "Respuesta operativa"
+        ]
+      },
+      "rows": {
+        "it": [
+          [
+            "CC-101",
+            "Disponibilità prodotto",
+            "Controllare il catalogo approvato"
+          ],
+          [
+            "CC-102",
+            "Consegna non confermata",
+            "Richiedere conferma al referente"
+          ],
+          [
+            "CC-103",
+            "Informazioni di fatturazione",
+            "Inoltrare al reparto competente"
+          ]
+        ],
+        "en": [
+          [
+            "CC-101",
+            "Product availability",
+            "Check approved product list"
+          ],
+          [
+            "CC-102",
+            "Unconfirmed delivery",
+            "Request authorised status update"
+          ],
+          [
+            "CC-103",
+            "Invoicing question",
+            "Refer to responsible team"
+          ]
+        ],
+        "fr": [
+          [
+            "CC-101",
+            "Disponibilité du produit",
+            "Vérifier le catalogue validé"
+          ],
+          [
+            "CC-102",
+            "Livraison non confirmée",
+            "Consulter le responsable"
+          ],
+          [
+            "CC-103",
+            "Question de facturation",
+            "Transmettre au service compétent"
+          ]
+        ],
+        "es": [
+          [
+            "CC-101",
+            "Disponibilidad del producto",
+            "Consultar catálogo aprobado"
+          ],
+          [
+            "CC-102",
+            "Entrega sin confirmar",
+            "Solicitar estado autorizado"
+          ],
+          [
+            "CC-103",
+            "Pregunta sobre facturación",
+            "Derivar al equipo responsable"
+          ]
+        ]
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "16-order-data-and-price-list",
+    "order": 16,
+    "category": "backoffice",
+    "title": {
+      "it": "Back office: inserimento ordini e controllo listini",
+      "en": "Operational back office: order entry and price-sheet checks",
+      "fr": "Back-office opérationnel : saisie de commandes et contrôle des tarifs",
+      "es": "Back office operativo: registro de pedidos y control de tarifas"
+    },
+    "subtitle": {
+      "it": "Dati sintetici, verifiche prima/dopo e registro delle anomalie",
+      "en": "Synthetic order data, before/after checks and an exception log",
+      "fr": "Données fictives, contrôles de cohérence et journal d’anomalies",
+      "es": "Datos ficticios, controles de coherencia y registro de incidencias"
+    },
+    "brief": {
+      "it": "Un'attività immaginaria deve trascrivere ordini già acquisiti e mantenere coerenti i prezzi pubblicati con un listino approvato.",
+      "en": "A fictional business needs to log existing orders and check published prices against an approved list.",
+      "fr": "Entreprise fictive : enregistrer des commandes reçues et contrôler les tarifs affichés.",
+      "es": "Empresa ficticia: registrar pedidos recibidos y comprobar precios publicados."
+    },
+    "startingMaterial": {
+      "it": "Ordini ricevuti, foglio di inserimento, catalogo e listino validato dal titolare.",
+      "en": "Received orders, entry sheet, catalogue and business-owner-approved price list.",
+      "fr": "Bons de commande, tableau de suivi, catalogue et tarif validé.",
+      "es": "Pedidos recibidos, hoja de registro, catálogo y lista aprobada."
+    },
+    "objective": {
+      "it": "Diminuire errori di trascrizione e segnalare discrepanze senza modificare autonomamente le condizioni commerciali.",
+      "en": "Flag discrepancies without independently changing approved commercial terms.",
+      "fr": "Repérer les écarts sans modifier les conditions commerciales validées.",
+      "es": "Detectar diferencias sin cambiar condiciones comerciales autorizadas."
+    },
+    "approach": {
+      "it": "Campi obbligatori, controllo SKU e prezzo, evidenza di scostamenti, riepilogo e richiesta di conferma.",
+      "en": "Validate required fields, match SKUs and prices, flag inconsistencies and request approval.",
+      "fr": "Contrôler les références, les tarifs et les champs requis ; signaler les écarts.",
+      "es": "Comprobar códigos y precios, marcar diferencias y pedir validación."
+    },
+    "keyDecisions": {
+      "it": [
+        "Il prezzo di listino non viene modificato senza autorizzazione.",
+        "Le anomalie vengono segnalate prima dell'invio di un preventivo.",
+        "Nessuna emissione di fatture o registrazione contabile."
+      ],
+      "en": [
+        "Never change approved prices without permission.",
+        "Flag discrepancies before a quotation is sent.",
+        "No invoices or accounting entries are produced."
+      ],
+      "fr": [
+        "Aucun changement de prix sans validation.",
+        "Signaler les écarts avant l’envoi d’un devis.",
+        "Aucune facturation ni comptabilité."
+      ],
+      "es": [
+        "No cambiar precios sin autorización.",
+        "Comunicar las diferencias antes de enviar presupuestos.",
+        "Sin emisión de facturas ni contabilidad."
+      ]
+    },
+    "deliverable": {
+      "it": "Registro ordini e verifica prezzi, con esempio prima/dopo; vedi documenti 13 e 19.",
+      "en": "Order log and price verification sheet; see documents 13 and 19.",
+      "fr": "Suivi des commandes et vérification des tarifs ; documents 13 et 19.",
+      "es": "Registro de pedidos y control de precios; documentos 13 y 19."
+    },
+    "tableData": {
+      "headers": {
+        "it": [
+          "SKU",
+          "Listino approvato",
+          "Testo in bozza",
+          "Esito"
+        ],
+        "en": [
+          "SKU",
+          "Approved list",
+          "Draft listing",
+          "Check"
+        ],
+        "fr": [
+          "Réf.",
+          "Tarif validé",
+          "Brouillon",
+          "Contrôle"
+        ],
+        "es": [
+          "SKU",
+          "Precio aprobado",
+          "Borrador",
+          "Resultado"
+        ]
+      },
+      "rows": {
+        "it": [
+          [
+            "OG-10",
+            "€ 14,90",
+            "€ 14,90",
+            "Coerente"
+          ],
+          [
+            "OG-11",
+            "€ 19,90",
+            "€ 19,00",
+            "Verificare"
+          ],
+          [
+            "OG-12",
+            "€ 24,00",
+            "€ 24,00",
+            "Coerente"
+          ]
+        ],
+        "en": [
+          [
+            "OG-10",
+            "€14.90",
+            "€14.90",
+            "Match"
+          ],
+          [
+            "OG-11",
+            "€19.90",
+            "€19.00",
+            "Check"
+          ],
+          [
+            "OG-12",
+            "€24.00",
+            "€24.00",
+            "Match"
+          ]
+        ],
+        "fr": [
+          [
+            "OG-10",
+            "14,90 €",
+            "14,90 €",
+            "Conforme"
+          ],
+          [
+            "OG-11",
+            "19,90 €",
+            "19,00 €",
+            "À vérifier"
+          ],
+          [
+            "OG-12",
+            "24,00 €",
+            "24,00 €",
+            "Conforme"
+          ]
+        ],
+        "es": [
+          [
+            "OG-10",
+            "14,90 €",
+            "14,90 €",
+            "Correcto"
+          ],
+          [
+            "OG-11",
+            "19,90 €",
+            "19,00 €",
+            "Revisar"
+          ],
+          [
+            "OG-12",
+            "24,00 €",
+            "24,00 €",
+            "Correcto"
+          ]
+        ]
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "17-online-course-operations",
+    "order": 17,
+    "category": "backoffice",
+    "title": {
+      "it": "Supporto organizzativo per un corso online",
+      "en": "Online course: learner support and file organisation",
+      "fr": "Cours en ligne : organisation et communication",
+      "es": "Curso online: organización y comunicación"
+    },
+    "subtitle": {
+      "it": "Email di benvenuto, struttura cartelle, FAQ e messaggi operativi",
+      "en": "Welcome email, folder structure, FAQs and participant updates",
+      "fr": "E-mail d’accueil, dossiers, FAQ et messages aux participants",
+      "es": "Correo de bienvenida, carpetas, preguntas frecuentes y avisos"
+    },
+    "brief": {
+      "it": "Un formatore immaginario organizza un corso per partecipanti italiani e deve coordinare messaggi e materiali approvati.",
+      "en": "A fictional educator offers a course to Italian learners and needs organised communications and files.",
+      "fr": "Formateur fictif proposant un cours à des apprenants italiens.",
+      "es": "Formador ficticio que ofrece un curso a participantes italianos."
+    },
+    "startingMaterial": {
+      "it": "Programma, calendario del corso, accessi forniti dal responsabile e file di lezione non organizzati.",
+      "en": "Course schedule, approved access steps and disorganised lesson files.",
+      "fr": "Planning, instructions d’accès approuvées et documents de formation dispersés.",
+      "es": "Calendario, instrucciones de acceso aprobadas y materiales dispersos."
+    },
+    "objective": {
+      "it": "Rendere le istruzioni chiare ai partecipanti, ridurre file duplicati e distinguere assistenza organizzativa e insegnamento.",
+      "en": "Clarify access and communication without taking responsibility for teaching or course design.",
+      "fr": "Clarifier l’accès et la communication, sans dispenser de cours.",
+      "es": "Aclarar el acceso y la comunicación, sin impartir clases."
+    },
+    "approach": {
+      "it": "Struttura moduli, naming file, bozza di benvenuto, FAQ basata sulle istruzioni fornite e flusso di escalation.",
+      "en": "Structure files, draft Italian welcome copy, prepare approved FAQ and escalation rules.",
+      "fr": "Classer les fichiers, rédiger l’accueil italien et préparer une FAQ validée.",
+      "es": "Organizar archivos, redactar bienvenida en italiano y FAQ aprobadas."
+    },
+    "keyDecisions": {
+      "it": [
+        "Non inventare link o scadenze: inserire solo dati verificati.",
+        "Le domande didattiche sono inoltrate al docente.",
+        "I dati dei partecipanti sono trattati solo secondo istruzioni concordate."
+      ],
+      "en": [
+        "Do not invent links or deadlines.",
+        "Refer academic questions to the instructor.",
+        "Handle participant data only as instructed."
+      ],
+      "fr": [
+        "Ne jamais inventer de liens ou d’échéances.",
+        "Transmettre les questions pédagogiques au formateur.",
+        "Limiter le traitement des données."
+      ],
+      "es": [
+        "No inventar enlaces ni plazos.",
+        "Derivar preguntas académicas al docente.",
+        "Respetar los permisos sobre datos."
+      ]
+    },
+    "deliverable": {
+      "it": "Modello di email di benvenuto, check-list di accesso e procedura di supporto; documento 15.",
+      "en": "Welcome-email template, access checklist and support procedure; document 15.",
+      "fr": "Modèle d’e-mail d’accueil et checklist ; document 15.",
+      "es": "Correo de bienvenida y lista de control; documento 15."
+    },
+    "comparison": {
+      "sourceLang": "IT",
+      "targetLang": "IT (revised)",
+      "sourceText": "Corso pronto. Guarda i file nella cartella, trovi tutto lì. Se hai problemi scrivici.",
+      "literalText": "Corso pronto. Guarda i file nella cartella, trovi tutto lì. Se hai problemi scrivici.",
+      "localizedText": "Benvenuta e benvenuto al corso! Prima della lezione, consulta la cartella dei materiali condivisa dal docente. Se non riesci ad accedere, rispondi a questa email indicando il problema: verificheremo le istruzioni e ti aggiorneremo.",
+      "notes": {
+        "it": "Da un avviso vago a istruzioni verificabili, senza inventare link o promettere assistenza tecnica illimitata.",
+        "en": "Clear Italian instructions; no invented links or unsupported commitments.",
+        "fr": "Consignes italiennes claires, sans lien fictif ni promesse disproportionnée.",
+        "es": "Instrucciones claras en italiano, sin enlaces inventados ni promesas excesivas."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  },
+  {
+    "id": "18-product-catalogue-copy-review",
+    "order": 18,
+    "category": "writing",
+    "title": {
+      "it": "Cataloghi e schede prodotto: revisione editoriale",
+      "en": "Italian catalogue and product-copy editing",
+      "fr": "Catalogues et fiches produits : révision en italien",
+      "es": "Catálogos y fichas: revisión editorial en italiano"
+    },
+    "subtitle": {
+      "it": "Prima/dopo, uniformità terminologica, controllo informazioni approvate",
+      "en": "Before/after product copy, terminology and approved information",
+      "fr": "Avant/après, terminologie et informations vérifiées",
+      "es": "Antes/después, terminología e información aprobada"
+    },
+    "brief": {
+      "it": "Un piccolo marchio immaginario deve rendere coerenti i testi di schede prodotto, listino e FAQ.",
+      "en": "A fictional small brand needs consistent Italian product descriptions, price-list labels and FAQs.",
+      "fr": "Marque fictive : harmoniser les fiches produits, les tarifs et la FAQ en italien.",
+      "es": "Marca ficticia: unificar fichas, lista de precios y preguntas frecuentes en italiano."
+    },
+    "startingMaterial": {
+      "it": "Descrizioni italiane vaghe, titoli non uniformi e schede con informazioni ripetute.",
+      "en": "Vague Italian descriptions, inconsistent titles and repeated information.",
+      "fr": "Descriptions italiennes imprécises et titres incohérents.",
+      "es": "Descripciones italianas vagas y títulos inconsistentes."
+    },
+    "objective": {
+      "it": "Aumentare chiarezza e uniformità, senza inventare caratteristiche né modificare prezzi.",
+      "en": "Improve clarity and consistency without inventing specifications or changing prices.",
+      "fr": "Clarifier les textes sans inventer de caractéristiques ni changer les prix.",
+      "es": "Mejorar claridad y coherencia sin inventar prestaciones ni cambiar precios."
+    },
+    "approach": {
+      "it": "Inventario dei campi, schema stilistico, riscrittura del testo, verifica con scheda tecnica e controllo versioni.",
+      "en": "Audit fields, establish a style sheet, rewrite Italian copy and verify against approved product facts.",
+      "fr": "Relever les champs, fixer le style, réécrire et vérifier les données produit.",
+      "es": "Revisar campos, crear guía de estilo, reescribir y contrastar datos."
+    },
+    "keyDecisions": {
+      "it": [
+        "«Molto bello» è sostituito da una descrizione verificabile.",
+        "Dimensioni e materiali non vengono dedotti dal contesto.",
+        "I listini restano quelli approvati dal responsabile."
+      ],
+      "en": [
+        "Replace empty praise with specific, verifiable information.",
+        "Never infer measurements or materials.",
+        "Use only business-owner-approved prices."
+      ],
+      "fr": [
+        "Remplacer les adjectifs vagues par des informations vérifiables.",
+        "Ne jamais deviner les dimensions ou matériaux.",
+        "Conserver les tarifs validés."
+      ],
+      "es": [
+        "Sustituir elogios vacíos por información verificable.",
+        "No inventar medidas ni materiales.",
+        "Respetar los precios aprobados."
+      ]
+    },
+    "deliverable": {
+      "it": "Scheda prodotto revisionata, glossario di stile e report delle incongruenze; documento 19.",
+      "en": "Revised Italian listing, terminology sheet and discrepancy report; document 19.",
+      "fr": "Fiche italienne révisée, glossaire et relevé des incohérences ; document 19.",
+      "es": "Ficha italiana revisada, glosario y control de diferencias; documento 19."
+    },
+    "comparison": {
+      "sourceLang": "IT (draft)",
+      "targetLang": "IT (revised)",
+      "sourceText": "Portaoggetti con molti utilizzi. Molto bello, resistente, perfetto per tutti.",
+      "literalText": "Portaoggetti con molti utilizzi. Molto bello, resistente, perfetto per tutti.",
+      "localizedText": "Organizer da scrivania a tre scomparti, pensato per raccogliere piccoli accessori e tenere ordinato lo spazio di lavoro.",
+      "notes": {
+        "it": "Una descrizione specifica sostituisce giudizi vaghi; i tre scomparti derivano dalla scheda prodotto sintetica approvata.",
+        "en": "A specific, factual description replaces unsupported superlatives.",
+        "fr": "Des informations concrètes remplacent les superlatifs sans fondement.",
+        "es": "Información concreta en lugar de elogios no comprobables."
+      }
+    }
+  ,
+    disclaimer: DEMO_DISCLAIMER
+  }
+];
+
+export interface PortfolioDocument {
+  num: string;
+  title: Record<Language, string>;
+  subtitle: Record<Language, string>;
+  category: "translation" | "research" | "backoffice" | "writing" | "web";
+  url: string;
+}
+
+export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
+  {
+    num: "01",
+    title: {
+      it: "Localizzazione Sito Interior Design",
+      en: "Interior Design Website Localization",
+      fr: "Localisation Site Architecture d'Intérieur",
+      es: "Localización Sitio Web Interiorismo",
+    },
+    subtitle: {
+      it: "Confronto EN → IT, testi web e glossario per il mercato italiano",
+      en: "English-to-Italian website copy sample and terminology glossary",
+      fr: "Exemple de localisation EN → IT et glossaire d’aménagement intérieur",
+      es: "Muestra EN → IT de textos web y glosario de interiorismo",
+    },
+    category: "translation",
+    url: "/portfolio-documenti/doc-01-localizzazione-interior-design.html",
+  },
+  {
+    num: "02",
+    title: {
+      it: "Relazione Finanziaria e Commerciale",
+      en: "Financial & Commercial Report",
+      fr: "Rapport Financier & Commercial",
+      es: "Informe Financiero y Comercial",
+    },
+    subtitle: {
+      it: "Esempio EN → IT: traduzione e glossario economico-finanziario",
+      en: "EN → IT financial-language translation and terminology notes",
+      fr: "Exemple EN → IT : traduction et terminologie financière",
+      es: "Ejemplo EN → IT: traducción y terminología financiera",
+    },
+    category: "translation",
+    url: "/portfolio-documenti/doc-02-report-finanziario-commerciale.html",
+  },
+  {
+    num: "03",
+    title: {
+      it: "Abstract Clinico e Farmacologico",
+      en: "Clinical & Pharmacological Abstract",
+      fr: "Abstract Clinique & Pharmacologique",
+      es: "Resumen Clínico y Farmacológico",
+    },
+    subtitle: {
+      it: "Testo clinico fittizio EN → IT e glossario dimostrativo",
+      en: "Fictional clinical excerpt EN → IT with terminology notes",
+      fr: "Texte clinique fictif EN → IT et notes terminologiques",
+      es: "Texto clínico ficticio EN → IT con notas terminológicas",
+    },
+    category: "translation",
+    url: "/portfolio-documenti/doc-03-abstract-clinico-farmacologico.html",
+  },
+  {
+    num: "04",
+    title: {
+      it: "Guida Software SaaS Cloud & UI",
+      en: "Cloud SaaS Software Guide & UI",
+      fr: "Guide Logiciel SaaS Cloud & UI",
+      es: "Guía Software SaaS Cloud e Interfaz",
+    },
+    subtitle: {
+      it: "Stringhe JSON, vincoli di spazio e manuale SSO",
+      en: "JSON strings, character constraints & SSO guide",
+      fr: "Chaînes JSON, limites de caractères & guide SSO",
+      es: "Cadenas JSON, límites de espacio y guía SSO",
+    },
+    category: "translation",
+    url: "/portfolio-documenti/doc-04-guida-software-saas-cloud.html",
+  },
+  {
+    num: "05",
+    title: {
+      it: "Accordo di Riservatezza (NDA) Bilingue",
+      en: "Bilingual Non-Disclosure Agreement (NDA)",
+      fr: "Accord de Confidentialité (NDA) Bilingue",
+      es: "Acuerdo de Confidencialidad (NDA) Bilingüe",
+    },
+    subtitle: {
+      it: "Testo contrattuale IT/EN & diritto comparato",
+      en: "IT/EN contractual clauses & comparative law notes",
+      fr: "Clauses contractuelles IT/EN & droit comparé",
+      es: "Cláusulas contractuales IT/EN y derecho comparado",
+    },
+    category: "translation",
+    url: "/portfolio-documenti/doc-05-accordo-riservatezza-nda.html",
+  },
+  {
+    num: "06",
+    title: {
+      it: "Matrice Microcopy UX & Design System",
+      en: "UX Microcopy Matrix & Design System",
+      fr: "Matrice Micro-textes UX & Design System",
+      es: "Matriz Microcopy UX y Sistema de Diseño",
+    },
+    subtitle: {
+      it: "Stati di interfaccia, errori e CTA in 4 lingue",
+      en: "Interface states, errors & CTAs across 4 languages",
+      fr: "États d'interface, erreurs & CTA en 4 langues",
+      es: "Estados de interfaz, errores y llamadas a la acción",
+    },
+    category: "writing",
+    url: "/portfolio-documenti/doc-06-microcopy-design-system.html",
+  },
+  {
+    num: "07",
+    title: {
+      it: "Matrice Benchmark Fornitori Packaging",
+      en: "Packaging Supplier Benchmark Matrix",
+      fr: "Matrice de Veille Fournisseurs Emballages",
+      es: "Matriz Comparativa Proveedores Embalaje",
+    },
+    subtitle: {
+      it: "Desk research, MOQ, certificazioni FSC e logistica",
+      en: "Desk research, MOQ, FSC certification & delivery",
+      fr: "Desk research, MOQ, certifications FSC & logistique",
+      es: "Desk research, MOQ, sellos FSC y logística verde",
+    },
+    category: "research",
+    url: "/portfolio-documenti/doc-07-benchmark-fornitori-logistica.html",
+  },
+  {
+    num: "08",
+    title: {
+      it: "Analisi Competitiva e Mappatura Offerta",
+      en: "Competitive Analysis & Market Mapping",
+      fr: "Analyse Concurrentielle & Positionnement",
+      es: "Análisis Competitivo y Mapeo de Mercado",
+    },
+    subtitle: {
+      it: "Benchmark su 5 studi professionali e canali di contatto",
+      en: "Benchmark across 5 professional firms & channels",
+      fr: "Benchmark sur 5 cabinets professionnels & canaux",
+      es: "Benchmark de 5 firmas profesionales y canales",
+    },
+    category: "research",
+    url: "/portfolio-documenti/doc-08-analisi-competitiva-benchmark.html",
+  },
+  {
+    num: "09",
+    title: {
+      it: "SOP Back Office: Triage Email e Onboarding",
+      en: "Back Office SOP: Email Triage & Onboarding",
+      fr: "SOP Back-Office : Triage Email & Onboarding",
+      es: "SOP Back Office: Triage Correo y Onboarding",
+    },
+    subtitle: {
+      it: "Procedura standard per raggiungere Inbox Zero",
+      en: "Standard operating procedure to reach Inbox Zero",
+      fr: "Procédure standard pour atteindre Inbox Zero",
+      es: "Protocolo operativo para alcanzar Inbox Zero",
+    },
+    category: "backoffice",
+    url: "/portfolio-documenti/doc-09-procedura-operativa-backoffice.html",
+  },
+  {
+    num: "10",
+    title: {
+      it: "Scheda Revisione Editoriale Prima/Dopo",
+      en: "Editorial Revision Specimen Before/After",
+      fr: "Fiche Révision Éditoriale Avant/Après",
+      es: "Muestra de Corrección Editorial Antes/Después",
+    },
+    subtitle: {
+      it: "Asciugatura testo, eliminazione gerghi e stile incisivo",
+      en: "Text streamlining, eliminating corporate jargon",
+      fr: "Élagage du texte, clarté et rythme éditorial",
+      es: "Poda textual, eliminación de jerga y claridad",
+    },
+    category: "writing",
+    url: "/portfolio-documenti/doc-10-scheda-revisione-editoriale.html",
+  },
+
+  {
+    num: "11",
+    title: { it: "Customer care: gestione di tre richieste", en: "Written customer care: three response scenarios", fr: "Relation client écrite : trois demandes", es: "Atención al cliente: tres solicitudes" },
+    subtitle: { it: "Ticket, classificazione, risposta scritta, controllo prima dell’invio e registro aggiornamenti.", en: "Classification, response draft, approval and case log", fr: "Classification, réponse préparée, validation et suivi", es: "Clasificación, borrador, aprobación y registro" },
+    category: "backoffice",
+    url: "/portfolio-documenti/doc-11-customer-care-email.html",
+  },
+  {
+    num: "12",
+    title: { it: "Email e agenda: settimana organizzata", en: "Inbox and calendar: organised week", fr: "E-mails et agenda : semaine organisée", es: "Correo y agenda: semana organizada" },
+    subtitle: { it: "Esempio di inbox triage, priorità, agenda condivisa e riepilogo operativo senza invii reali.", en: "Inbox triage, priority map and weekly schedule", fr: "Tri des e-mails, priorités et planning", es: "Clasificación de correos, prioridades y agenda" },
+    category: "backoffice",
+    url: "/portfolio-documenti/doc-12-gestione-email-agenda.html",
+  },
+  {
+    num: "13",
+    title: { it: "CRM, ordini e listini: esempio operativo", en: "CRM, orders and price lists: workflow example", fr: "CRM, commandes et tarifs : exemple opérationnel", es: "CRM, pedidos y tarifas: flujo de trabajo" },
+    subtitle: { it: "Scheda di cliente già acquisito, verifica dell’ordine, normalizzazione dei codici prodotto e aggiornamento del listino per il back office operativo.", en: "Existing-customer records, order checks and price-list updates", fr: "Fiche client, commandes et mise à jour des prix", es: "Datos de clientes existentes, control de pedidos y lista de precios" },
+    category: "backoffice",
+    url: "/portfolio-documenti/doc-13-crm-ordini-listini.html",
+  },
+  {
+    num: "14",
+    title: { it: "Organizzazione documenti e archivi digitali", en: "Digital file and archive organisation", fr: "Organisation des documents et archives", es: "Organización de documentos y archivos" },
+    subtitle: { it: "Struttura cartelle, convenzione dei nomi, controllo versioni e accessi per piccoli studi professionali.", en: "Folder structure, naming rules and version control", fr: "Arborescence, nommage et gestion des versions", es: "Estructura de carpetas, nomenclatura y versiones" },
+    category: "backoffice",
+    url: "/portfolio-documenti/doc-14-archivi-drive.html",
+  },
+  {
+    num: "15",
+    title: { it: "Supporto organizzativo a un corso online", en: "Operational support for an online course", fr: "Support organisationnel d’une formation en ligne", es: "Apoyo organizativo para un curso online" },
+    subtitle: { it: "Pianificazione iscrizioni, inviti, materiali, FAQ e riepilogo a un formatore; non attività didattica.", en: "Enrolment, instructions, course materials and FAQs", fr: "Inscriptions, invitations, supports et FAQ", es: "Inscripciones, convocatorias, materiales y preguntas frecuentes" },
+    category: "backoffice",
+    url: "/portfolio-documenti/doc-15-corso-online-supporto.html",
+  },
+  {
+    num: "16",
+    title: { it: "Localizzazione EN → IT per un sito professionale", en: "EN → IT website copy localisation", fr: "Localisation de contenus web EN → IT", es: "Localización de textos web EN → IT" },
+    subtitle: { it: "Tre blocchi di una pagina servizi: originale, versione italiana, scelte lessicali e controlli.", en: "Source copy, Italian adaptation and terminology notes", fr: "Texte source, adaptation italienne et choix terminologiques", es: "Original, adaptación italiana y notas terminológicas" },
+    category: "translation",
+    url: "/portfolio-documenti/doc-16-en-it-localizzazione.html",
+  },
+  {
+    num: "17",
+    title: { it: "Localizzazione FR → IT di una scheda prodotto", en: "FR → IT product description localisation", fr: "Localisation FR → IT d’une fiche produit", es: "Localización FR → IT de una ficha de producto" },
+    subtitle: { it: "Esempio per un marchio immaginario di articoli per la casa, con descrizione, specifiche e glossario.", en: "Product copy, specifications and bilingual glossary", fr: "Fiche produit, caractéristiques et glossaire bilingue", es: "Ficha de producto, características y glosario bilingüe" },
+    category: "translation",
+    url: "/portfolio-documenti/doc-17-fr-it-scheda-prodotto.html",
+  },
+  {
+    num: "18",
+    title: { it: "Adattamento ES → IT di email commerciale", en: "ES → IT commercial email adaptation", fr: "Adaptation ES → IT d’un e-mail commercial", es: "Adaptación ES → IT de un correo comercial" },
+    subtitle: { it: "Traduzione di una comunicazione B2B spagnola verso un italiano naturale e professionale.", en: "B2B source email, Italian adaptation and review", fr: "E-mail B2B, adaptation en italien et relecture", es: "Correo B2B, adaptación al italiano y revisión" },
+    category: "translation",
+    url: "/portfolio-documenti/doc-18-es-it-email-commerciale.html",
+  },
+  {
+    num: "19",
+    title: { it: "Catalogo, listino e contenuti online", en: "Product catalogue, pricing sheet and online copy", fr: "Catalogue, grille tarifaire et contenus web", es: "Catálogo, lista de precios y contenidos web" },
+    subtitle: { it: "Aggiornamento coordinato di schede, listino e FAQ con controllo versioni, senza gestione fiscale.", en: "Catalogue descriptions, price-sheet updates and FAQs", fr: "Fiches catalogue, tarif et FAQ coordonnés", es: "Descripciones de catálogo, tarifas y preguntas frecuentes" },
+    category: "writing",
+    url: "/portfolio-documenti/doc-19-contenuti-cataloghi-listini.html",
+  },
+  {
+    num: "20",
+    title: { it: "Richiesta cliente e preventivo: flusso completo", en: "Client enquiry and quote: complete workflow", fr: "Demande client et devis : procédure complète", es: "Solicitud y presupuesto: proceso completo" },
+    subtitle: { it: "Brief sintetico, stima, verifica delle condizioni, approvazione e registro ore: esempio senza cliente reale.", en: "Fictional brief, estimate, approval checkpoints and time log: a practical example.", fr: "Brief fictif, estimation, validation et suivi des heures : exemple concret.", es: "Brief ficticio, estimación, aprobación y registro de horas: ejemplo práctico." },
+    category: "backoffice",
+    url: "/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html",
+  },
+  {
+    num: "21",
+    title: { it: "Landing page: contenuti EN → IT", en: "Landing page copy EN → IT", fr: "Textes de page de destination EN → IT", es: "Contenidos de landing page EN → IT" },
+    subtitle: { it: "Headline, FAQ, vantaggi e CTA con confronto linguistico", en: "Source/target headlines, FAQs, benefits and calls to action", fr: "Accroche, FAQ, avantages et appels à l’action comparés", es: "Titulares, ventajas, preguntas frecuentes y CTA comparadas" },
+    category: "web",
+    url: "/portfolio-documenti/doc-21-landing-page-contenuti-en-it.html",
+  },  { num: "22", title: {it:"Traduzione letteraria EN → IT",en:"Literary translation EN → IT",fr:"Traduction littéraire EN → IT",es:"Traducción literaria EN → IT"}, subtitle:{it:"Racconto originale e versione italiana a fronte, con note traduttologiche",en:"Original fictional prose and Italian translation, with translator's notes",fr:"Prose originale fictive et traduction italienne commentée",es:"Prosa original ficticia y traducción italiana con notas"},category:"translation",url:"/portfolio-documenti/doc-22-traduzione-letteraria-en-it.html" },
+
+];

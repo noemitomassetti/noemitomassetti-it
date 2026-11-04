@@ -1,6 +1,6 @@
 {
   "name": "Noemi Tomassetti - Assistente Virtuale",
-  "description": "Assistente Virtuale per liberi professionisti e piccole aziende. Delega la gestione operativa, email e appuntamenti per riprendere il controllo del tuo tempo.",
+  "description": "Digital, Multilingual & Operational Support for professionals and businesses. Discover Done-For-You operational services and NoeTom, the AI operations assistant.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

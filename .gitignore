@@ -1,0 +1,10 @@
+# Private operational data are NEVER committed or included in public-site builds.
+/data/users/
+/data/public_requests.json
+/data/backups/
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+*.log

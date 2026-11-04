@@ -1,0 +1,38 @@
+name: Downloadable production-ready static site bundle
+on:
+  push:
+    branches:
+      - 'chatgpt/site-release-audit-2026-10-29'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Build production static files
+        env:
+          SITE_PUBLIC_RELEASE: 'true'
+          VITE_WEB3FORMS_ACCESS_KEY: ''
+        run: npm run build
+      - name: Validate all sitemap pages and release checks
+        run: npm run test:release
+      - name: Confirm indexable production HTML and manual email fallback
+        run: |
+          node -e "const fs=require('fs'); const html=fs.readFileSync('dist/it/esempi-di-lavoro/index.html','utf8'); if(!html.includes('content=\"index, follow\"'))process.exit(2); if(!fs.existsSync('dist/_redirects'))process.exit(3); console.log('PASS production indexing and Netlify routing');"
+      - name: Upload ready-to-deploy dist folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: noemitomassetti-static-release
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7

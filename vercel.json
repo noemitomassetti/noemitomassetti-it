@@ -1,8 +1,251 @@
 {
   "rewrites": [
     {
+      "source": "/work-examples/dossier/:id",
+      "destination": "/work-examples/dossier/:id/index.html"
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/:id",
+      "destination": "/it/esempi-di-lavoro/dossier/:id/index.html"
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/:id",
+      "destination": "/fr/exemples-de-projets/dossier/:id/index.html"
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/:id",
+      "destination": "/es/ejemplos-de-trabajo/dossier/:id/index.html"
+    },
+    {
+      "source": "/work-examples/sample/:num",
+      "destination": "/work-examples/sample/:num/index.html"
+    },
+    {
+      "source": "/it/esempi-di-lavoro/esempio/:num",
+      "destination": "/it/esempi-di-lavoro/esempio/:num/index.html"
+    },
+    {
+      "source": "/fr/exemples-de-projets/exemple/:num",
+      "destination": "/fr/exemples-de-projets/exemple/:num/index.html"
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/ejemplo/:num",
+      "destination": "/es/ejemplos-de-trabajo/ejemplo/:num/index.html"
+    },
+    {
+      "source": "/it",
+      "destination": "/it/index.html"
+    },
+    {
+      "source": "/fr",
+      "destination": "/fr/index.html"
+    },
+    {
+      "source": "/es",
+      "destination": "/es/index.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services/index.html"
+    },
+    {
+      "source": "/it/servizi",
+      "destination": "/it/servizi/index.html"
+    },
+    {
+      "source": "/fr/services",
+      "destination": "/fr/services/index.html"
+    },
+    {
+      "source": "/es/servicios",
+      "destination": "/es/servicios/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/it/chi-sono",
+      "destination": "/it/chi-sono/index.html"
+    },
+    {
+      "source": "/fr/a-propos",
+      "destination": "/fr/a-propos/index.html"
+    },
+    {
+      "source": "/es/sobre-mi",
+      "destination": "/es/sobre-mi/index.html"
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources/index.html"
+    },
+    {
+      "source": "/it/risorse",
+      "destination": "/it/risorse/index.html"
+    },
+    {
+      "source": "/fr/ressources",
+      "destination": "/fr/ressources/index.html"
+    },
+    {
+      "source": "/es/recursos",
+      "destination": "/es/recursos/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/it/contatti",
+      "destination": "/it/contatti/index.html"
+    },
+    {
+      "source": "/fr/contact",
+      "destination": "/fr/contact/index.html"
+    },
+    {
+      "source": "/es/contacto",
+      "destination": "/es/contacto/index.html"
+    },
+    {
+      "source": "/italian-localisation",
+      "destination": "/italian-localisation/index.html"
+    },
+    {
+      "source": "/it/localizzazione-italiano",
+      "destination": "/it/localizzazione-italiano/index.html"
+    },
+    {
+      "source": "/fr/localisation-italien",
+      "destination": "/fr/localisation-italien/index.html"
+    },
+    {
+      "source": "/es/localizacion-italiano",
+      "destination": "/es/localizacion-italiano/index.html"
+    },
+    {
+      "source": "/work-examples",
+      "destination": "/work-examples/index.html"
+    },
+    {
+      "source": "/it/esempi-di-lavoro",
+      "destination": "/it/esempi-di-lavoro/index.html"
+    },
+    {
+      "source": "/fr/exemples-de-projets",
+      "destination": "/fr/exemples-de-projets/index.html"
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo",
+      "destination": "/es/ejemplos-de-trabajo/index.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug/index.html"
+    },
+    {
+      "source": "/en/blog/:slug",
+      "destination": "/en/blog/:slug/index.html"
+    },
+    {
+      "source": "/fr/blog/:slug",
+      "destination": "/fr/blog/:slug/index.html"
+    },
+    {
+      "source": "/es/blog/:slug",
+      "destination": "/es/blog/:slug/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/en/blog",
+      "destination": "/en/blog/index.html"
+    },
+    {
+      "source": "/fr/blog",
+      "destination": "/fr/blog/index.html"
+    },
+    {
+      "source": "/es/blog",
+      "destination": "/es/blog/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/it/privacy-policy",
+      "destination": "/it/privacy-policy/index.html"
+    },
+    {
+      "source": "/fr/politique-de-confidentialite",
+      "destination": "/fr/politique-de-confidentialite/index.html"
+    },
+    {
+      "source": "/es/politica-de-privacidad",
+      "destination": "/es/politica-de-privacidad/index.html"
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/cookie-policy/index.html"
+    },
+    {
+      "source": "/it/cookie-policy",
+      "destination": "/it/cookie-policy/index.html"
+    },
+    {
+      "source": "/fr/politique-de-cookies",
+      "destination": "/fr/politique-de-cookies/index.html"
+    },
+    {
+      "source": "/es/politica-de-cookies",
+      "destination": "/es/politica-de-cookies/index.html"
+    },
+    {
+      "source": "/professional-research",
+      "destination": "/professional-research/index.html"
+    },
+    {
+      "source": "/it/ricerca-professionisti",
+      "destination": "/it/ricerca-professionisti/index.html"
+    },
+    {
+      "source": "/fr/recherche-professionnels",
+      "destination": "/fr/recherche-professionnels/index.html"
+    },
+    {
+      "source": "/es/investigacion-profesionales",
+      "destination": "/es/investigacion-profesionales/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        }
+      ]
     }
   ]
 }

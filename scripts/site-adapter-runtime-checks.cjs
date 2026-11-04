@@ -1,0 +1,43 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const ts=require('typescript');
+const { webcrypto }=require('node:crypto');
+const source=fs.readFileSync(require('node:path').join(__dirname,'..','src/lib/api/clientAdapter.ts'),'utf8').replaceAll('import.meta','__testMeta');
+const out=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}}).outputText;
+let calls=[];let response;
+const sandboxModule={exports:{}};
+const env={VITE_API_BASE_URL:'',VITE_FORM_RECIPIENT_EMAIL:'',VITE_WEB3FORMS_ACCESS_KEY:'',VITE_LEGACY_FORMSUBMIT_ENABLED:'true'};
+const deliveryModule={exports:{}};
+const deliverySource=fs.readFileSync(require('node:path').join(__dirname,'..','src/lib/api/contactDelivery.ts'),'utf8').replaceAll('import.meta','__testMeta');
+const deliveryOut=ts.transpileModule(deliverySource,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}}).outputText;
+vm.runInNewContext(deliveryOut,{module:deliveryModule,exports:deliveryModule.exports,__testMeta:{env}}, {filename:'contactDelivery.transpiled.js'});
+const context={module:sandboxModule,exports:sandboxModule.exports,crypto:webcrypto, URL, Date, Uint8Array, Array, console, AbortController, setTimeout, clearTimeout, require:(id)=>{if(id==='./contactDelivery')return deliveryModule.exports;if(id==='./web3formsPublicConfig')return {WEB3FORMS_PUBLIC_ACCESS_KEY:''};throw new Error('Unexpected import: '+id)}, __testMeta:{env},fetch:async (url,options)=>{calls.push([url,options]);if(response instanceof Error) throw response; return response;}};
+vm.runInNewContext(out,context,{filename:'clientAdapter.transpiled.js'});
+const adapter=sandboxModule.exports;
+const payload={fullName:'Mario Rossi',email:'mario@example.org',brief:'Richiesta per traduzione di una brochure italiana.',serviceId:'translation',locale:'it',engagementType:'hourly_ad_hoc',privacyGdprConsent:true,idempotencyKey:'req_1234567890123456'};
+const ans=(status,data,ct='application/json')=>({status,ok:status>=200&&status<300,headers:{get:()=>ct},json:async()=>data});
+let n=0;
+async function check(name,fn){calls=[];try{await fn();n++; console.log('OK',n,name)}catch(err){console.error('FAIL',name,err.stack||err);process.exitCode=1}}
+async function rejectContains(fn,substr){let error;try{await fn()}catch(e){error=e}assert.ok(error,'expected error');assert.ok(error.message.includes(substr),error.message)}
+(async()=>{
+ await check('opaque key, no email',()=>{let k=adapter.generateIdempotencyKey(payload.email,'translation'); assert.match(k,/^req_[a-z0-9-]{12,}$/); assert.ok(!k.includes('mario'));});
+ await check('no backend inferred',()=>{env.VITE_API_BASE_URL=''; assert.equal(adapter.isBackendConfigured(),false)});
+ await check('honeypot blocks network',async()=>{await rejectContains(()=>adapter.submitQuoteRequest({...payload,honeypot:'bot'}),'anti-bot'); assert.equal(calls.length,0)});
+ await check('missing consent blocks network',async()=>{await rejectContains(()=>adapter.submitQuoteRequest({...payload,privacyGdprConsent:false}),'informativa'); assert.equal(calls.length,0)});
+ await check('provider positive is not proof of delivery',async()=>{env.VITE_API_BASE_URL='';response=ans(200,{success:'true'});const x=await adapter.submitQuoteRequest(payload);assert.equal(x.deliveryStatus,'email_received_by_provider');assert.match(x.message,/non è ancora verificata/);assert.equal(calls.length,1)});
+ await check('provider negative is not success',async()=>{response=ans(200,{success:false});await rejectContains(()=>adapter.submitQuoteRequest(payload),'non ha confermato');assert.equal(calls.length,1)});
+ await check('canonical API mapping',async()=>{env.VITE_API_BASE_URL='https://api.example.org/';response=ans(201,{success:true,requestId:'valid1',status:'received',deliveryStatus:'persisted_in_noetom'});const x=await adapter.submitQuoteRequest(payload);assert.equal(x.requestId,'valid1');assert.equal(calls.length,1);const body=JSON.parse(calls[0][1].body);assert.equal(body.clientName,payload.fullName);assert.equal(body.clientEmail,payload.email);assert.equal(body.description,payload.brief);assert.equal(calls[0][1].headers['X-Idempotency-Key'],payload.idempotencyKey)});
+ await check('HTML 200 is not confirmed',async()=>{response=ans(200,'<html/>','text/html');await rejectContains(()=>adapter.submitQuoteRequest(payload),'conferma valida');assert.equal(calls.length,1)});
+ await check('200 success false is not confirmed',async()=>{response=ans(200,{success:false});await rejectContains(()=>adapter.submitQuoteRequest(payload),'conferma valida');assert.equal(calls.length,1)});
+ await check('timeout does not duplicate via email',async()=>{response=new Error('timeout');await rejectContains(()=>adapter.submitQuoteRequest(payload),'Esito della richiesta non verificabile');assert.equal(calls.length,1)});
+ await check('confirmed duplicate requires ID',async()=>{response=ans(409,{success:true,requestId:'realId',status:'received',deliveryStatus:'persisted_in_noetom'});const x=await adapter.submitQuoteRequest(payload);assert.equal(x.requestId,'realId');assert.equal(calls.length,1)});
+ await check('409 without ID is rejected',async()=>{response=ans(409,{success:false});await rejectContains(()=>adapter.submitQuoteRequest(payload),'conferma valida');assert.equal(calls.length,1)});
+ await check('400 does not fall back',async()=>{response=ans(400,{error:'bad input'});await rejectContains(()=>adapter.submitQuoteRequest(payload),'bad input');assert.equal(calls.length,1)});
+ await check('429 does not fall back',async()=>{response=ans(429,{});await rejectContains(()=>adapter.submitQuoteRequest(payload),'Troppe richieste');assert.equal(calls.length,1)});
+ await check('500 does not fall back',async()=>{response=ans(500,{});await rejectContains(()=>adapter.submitQuoteRequest(payload),'HTTP 500');assert.equal(calls.length,1)});
+ await check('insecure endpoint blocked',async()=>{env.VITE_API_BASE_URL='http://api.example.org';await rejectContains(()=>adapter.submitQuoteRequest(payload),'richiesto HTTPS');assert.equal(calls.length,0)});
+ await check('verified professional FormSubmit destination configurable',async()=>{env.VITE_API_BASE_URL='';env.VITE_FORM_RECIPIENT_EMAIL='info@noemitomassetti.it';response=ans(200,{success:true});await adapter.submitQuoteRequest(payload);assert.equal(calls.length,1);assert.equal(calls[0][0],'https://formsubmit.co/ajax/info%40noemitomassetti.it');env.VITE_FORM_RECIPIENT_EMAIL='';});
+ await check('invalid recipient fails before sending',async()=>{env.VITE_API_BASE_URL='';env.VITE_FORM_RECIPIENT_EMAIL='fake/path';await rejectContains(()=>adapter.submitQuoteRequest(payload),'Destinatario');assert.equal(calls.length,0);env.VITE_FORM_RECIPIENT_EMAIL='';});
+ console.log(`\nTOTAL ${n} of 18 runtime checks passed.`);
+})().catch(x=>{console.error(x);process.exitCode=1});

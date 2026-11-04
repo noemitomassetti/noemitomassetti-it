@@ -1,0 +1,32 @@
+# Optional commercially permitted free-hosting contingency.
+# Not active until explicitly selected and connected by the site owner.
+# Netlify preserves generated route/index.html assets before the SPA fallback.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[context.production.environment]
+  SITE_PUBLIC_RELEASE = "true"
+
+[context.deploy-preview.environment]
+  SITE_PUBLIC_RELEASE = "false"
+
+[context.branch-deploy.environment]
+  SITE_PUBLIC_RELEASE = "false"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
