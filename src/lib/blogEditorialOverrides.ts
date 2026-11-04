@@ -6,6 +6,18 @@
 type Article = {id:number;title:string;excerpt:string;content:string};
 export function alignLegacyBlogCopy<T extends Article>(article:T):T {
   let {title,excerpt,content}=article;
+  if(article.id===2) {
+    content=content.replace(
+      "con la garanzia di affidarti a un valido supporto amministrativo.",
+      "con un supporto organizzativo e di back office operativo definito sulle tue esigenze."
+    );
+  }
+  if(article.id===9) {
+    content=content.replace(
+      "<li>attività amministrative collegate.</li>",
+      "<li>organizzazione dei documenti e dei promemoria operativi.</li>"
+    );
+  }
   if(article.id===13) {
     content=content.replace(
       "Contattami per una consulenza conoscitiva gratuita di 30 minuti",
