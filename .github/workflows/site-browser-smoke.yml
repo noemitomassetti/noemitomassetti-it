@@ -210,14 +210,22 @@ jobs:
                 throw Error('Document language switch failed to keep sample and locale');
               console.log('PASS EN to FR language switch preserves the same portfolio sample');
 
-              // Social crawlers do not run React: verify raw response HTML, not only JS DOM.
+              // Vite preview serves the SPA shell for clean URLs; Vercel's
+              // explicit rewrites route those URLs to the generated /index.html
+              // assets. Verify both the static source files and the Vercel mapping.
+              const vercelRewrites=JSON.parse(require('fs').readFileSync('vercel.json','utf8')).rewrites;
+              // Social crawlers do not run React: verify static response HTML, not only JS DOM.
               for (const rawRoute of [
                 '/it/esempi-di-lavoro/dossier/it-en-consultancy-services',
                 '/fr/exemples-de-projets/dossier/fr-it-handmade-product',
                 '/work-examples/dossier/existing-customer-multilingual-email-pack',
                 '/it/esempi-di-lavoro'
               ]) {
-                const response=await fetch('http://127.0.0.1:4173'+rawRoute);
+                const rewriteSource=rawRoute.includes('/dossier/') ? rawRoute.split('/dossier/')[0]+'/dossier/:id' : rawRoute;
+                const routeMapping=vercelRewrites.find(x=>x.source===rewriteSource);
+                if(!routeMapping || !routeMapping.destination.endsWith('/index.html'))
+                  throw Error('Missing Vercel static HTML routing for '+rawRoute);
+                const response=await fetch('http://127.0.0.1:4173'+rawRoute+'/index.html');
                 const html=await response.text();
                 if(!response.ok) throw Error('Social preview status '+rawRoute+': '+response.status);
                 if(!html.includes('content="https://www.noemitomassetti.it'+rawRoute+'"'))
