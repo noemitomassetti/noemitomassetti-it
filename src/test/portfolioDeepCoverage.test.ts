@@ -92,6 +92,17 @@ describe("Detailed portfolio: complete service coverage",()=>{
     }
     expect(count).toBe(expected);
   });
+  it("contains no duplicate sitemap URL locations, including all deep-case languages",()=>{
+    const sitemap=read("public/sitemap.xml");
+    const locations=[...sitemap.matchAll(/<loc>([^<]+)<\\/loc>/g)].map(x=>x[1]);
+    expect(new Set(locations).size).toBe(locations.length);
+    for(const entry of DEEP_PORTFOLIO_ITEMS){
+      for(const lang of LANGS){
+        const full="https://www.noemitomassetti.it"+getDeepPortfolioPath(entry.item.id,lang);
+        expect(locations.filter(x=>x===full),full).toHaveLength(1);
+      }
+    }
+  });
   it("publishes only fictional sample data with explicit scope and privacy statements",()=>{
     const ui=read("src/pages/PortfolioDeepCase.tsx");
     const catalogue=read("src/components/PortfolioDeepShowcase.tsx");
