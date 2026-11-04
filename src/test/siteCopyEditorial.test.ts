@@ -16,6 +16,14 @@ describe("Site copy editorial alignment", () => {
     expect(home).toContain("110/110 e lode");
   });
 
+  it("does not recycle old client testimonials or unsupported verified-customer claims",()=>{
+    for(const path of ["src/pages/Index.tsx",...localePaths]) {
+      const copy=source(path);
+      expect(copy).not.toMatch(/Cliente verificato|Verified customer|Silvia T\\.|Chiara M\\.|Luca B\\./i);
+      expect(copy).not.toMatch(/Creo siti web e landing page|I create websites and landing pages/i);
+    }
+  });
+
   it("does not misrepresent sample projects as real client commissions", () => {
     const home = source("src/pages/Index.tsx");
     expect(home).not.toContain("deliverable reali");
