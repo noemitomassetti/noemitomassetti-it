@@ -252,12 +252,12 @@ export default function Portfolio() {
             </h2>
             <p className="text-sm text-muted-foreground mt-2 max-w-3xl">
               {lang === "it"
-                ? "Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU). I 5 ambiti di approfondimento accademico e la loro applicazione:"
+                ? "Master in Traduzione Specialistica (1.500 ore, 60 CFU). Cinque ambiti applicativi illustrati attraverso esempi dimostrativi, non altrettante qualifiche autonome:"
                 : lang === "fr"
-                ? "Master universitaire de 1er niveau en traduction spécialisée (1 500 heures, 60 ECTS). Les 5 domaines d'études approfondis :"
+                ? "Master en traduction spécialisée (1 500 heures, 60 ECTS). Cinq domaines d'application illustrés par des exemples fictifs, non cinq qualifications distinctes :"
                 : lang === "es"
-                ? "Máster universitario de 1er nivel en traducción especializada (1.500 horas, 60 ECTS). Los 5 ámbitos académicos aplicados :"
-                : "First-Level Postgraduate University Master's Degree in Specialist Translation (1,500 hours, 60 ECTS). Five rigorous academic training fields:"}
+                ? "Máster en traducción especializada (1.500 horas, 60 ECTS). Cinco ámbitos de aplicación ilustrados con ejemplos ficticios, no cinco titulaciones diferentes:"
+                : "Postgraduate training in Specialist Translation (1,500 hours, 60 ECTS). Five illustrative application fields, not five separate qualifications:"}
             </p>
           </div>
 
