@@ -14,7 +14,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
     ctaTitle: "Hai bisogno di supporto per il tuo lavoro?",
     ctaDesc: "Descrivimi la tua attività e le tue esigenze: valuteremo insieme le prestazioni più adatte.",
     ctaBtn: "Richiedi un preventivo",
-    authorBio: "Assistente virtuale e traduttrice verso l’italiano, con esperienza professionale ultraventennale in diversi ruoli, laurea in Mediazione Linguistica e master in Traduzione Specialistica.",
+    authorBio: "Assistente virtuale multilingue e traduttrice tra italiano e inglese, francese e spagnolo in entrambe le direzioni. Oltre vent'anni di esperienza professionale, laurea in Mediazione Linguistica e master in Traduzione Specialistica.",
     related: "Altri articoli",
     sample: ""
   },
