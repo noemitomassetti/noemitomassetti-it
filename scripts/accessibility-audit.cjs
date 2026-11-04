@@ -9,6 +9,10 @@ const routes=[
   "/","/it","/fr","/es",
   "/services","/it/servizi","/fr/services","/es/servicios",
   "/work-examples","/it/esempi-di-lavoro","/fr/exemples-de-projets","/es/ejemplos-de-trabajo",
+  "/work-examples/sample/01",
+  "/it/esempi-di-lavoro/esempio/02",
+  "/fr/exemples-de-projets/exemple/17",
+  "/es/ejemplos-de-trabajo/ejemplo/18",
   "/it/esempi-di-lavoro/dossier/it-en-consultancy-services",
   "/work-examples/dossier/existing-customer-multilingual-email-pack",
   "/it/contatti","/contact","/it/privacy-policy","/blog"
