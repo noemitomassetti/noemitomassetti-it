@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Portfolio from "./pages/Portfolio";
 import PortfolioDocument from "./pages/PortfolioDocument";
+import PortfolioDeepCase from "./pages/PortfolioDeepCase";
 import Publications from "./pages/Publications";
 import { PUBLICATIONS_VISIBLE } from "./lib/publicationsCatalog";
 import ItalianLocalisation from "./pages/ItalianLocalisation";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/italian-localization" element={<ItalianLocalisation />} />
           <Route path="/work-examples" element={<Portfolio />} />
           <Route path="/work-examples/sample/:num" element={<PortfolioDocument />} />
+          <Route path="/work-examples/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/professional-research" element={<Questionnaire />} />
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />
@@ -56,6 +58,7 @@ const App = () => (
           <Route path="/it/localizzazione-italiano" element={<ItalianLocalisation />} />
           <Route path="/it/esempi-di-lavoro" element={<Portfolio />} />
           <Route path="/it/esempi-di-lavoro/esempio/:num" element={<PortfolioDocument />} />
+          <Route path="/it/esempi-di-lavoro/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/it/ricerca-professionisti" element={<Questionnaire />} />
           <Route path="/it/chi-sono" element={<About />} />
           <Route path="/it/risorse" element={<Resources />} />
@@ -70,6 +73,7 @@ const App = () => (
           <Route path="/fr/localisation-italien" element={<ItalianLocalisation />} />
           <Route path="/fr/exemples-de-projets" element={<Portfolio />} />
           <Route path="/fr/exemples-de-projets/exemple/:num" element={<PortfolioDocument />} />
+          <Route path="/fr/exemples-de-projets/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/fr/recherche-professionnels" element={<Questionnaire />} />
           <Route path="/fr/a-propos" element={<About />} />
           <Route path="/fr/ressources" element={<Resources />} />
@@ -84,6 +88,7 @@ const App = () => (
           <Route path="/es/localizacion-italiano" element={<ItalianLocalisation />} />
           <Route path="/es/ejemplos-de-trabajo" element={<Portfolio />} />
           <Route path="/es/ejemplos-de-trabajo/ejemplo/:num" element={<PortfolioDocument />} />
+          <Route path="/es/ejemplos-de-trabajo/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/es/investigacion-profesionales" element={<Questionnaire />} />
           <Route path="/es/sobre-mi" element={<About />} />
           <Route path="/es/recursos" element={<Resources />} />
