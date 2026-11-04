@@ -1958,7 +1958,7 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "13",
     title: { it: "CRM, ordini e listini: esempio operativo", en: "CRM, orders and price lists: workflow example", fr: "CRM, commandes et tarifs : exemple opérationnel", es: "CRM, pedidos y tarifas: flujo de trabajo" },
-    subtitle: { it: "Scheda lead, controllo dati ordine, normalizzazione SKU e listino per organizzazione amministrativo-commerciale.", en: "Lead records, order checks and price-list updates", fr: "Fiche client, commandes et mise à jour des prix", es: "Registro de clientes, pedidos y lista de precios" },
+    subtitle: { it: "Scheda di cliente già acquisito, verifica dell’ordine, normalizzazione dei codici prodotto e aggiornamento del listino per il back office operativo.", en: "Existing-customer records, order checks and price-list updates", fr: "Fiche client, commandes et mise à jour des prix", es: "Datos de clientes existentes, control de pedidos y lista de precios" },
     category: "backoffice",
     url: "/portfolio-documenti/doc-13-crm-ordini-listini.html",
   },
