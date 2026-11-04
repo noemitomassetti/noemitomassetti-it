@@ -48,7 +48,7 @@ export const esLocale: TranslationDictionary = {
     ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
       experience: 'Amplia trayectoria profesional y organizativa',
-      languages: '4 idiomas de trabajo (ES · EN · IT · FR)',
+      languages: 'Italiano nativo · EN y FR avanzados · ES intermedio-alto',
       focus: 'Soporte a medida y flexible',
     },
     callNote: 'Solicitud por escrito · Sin compromiso',
@@ -91,8 +91,8 @@ export const esLocale: TranslationDictionary = {
           "Apoyo escrito en italiano para clientes existentes: correos, seguimiento de pedidos, comunicaciones profesionales, organización de documentos y tareas operativas acordadas. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
         iconName: 'Mail',
         items: [
-          'Gestión y filtrado ordenado del correo electrónico',
-          'Coordinación de agenda y planificación de citas',
+          'Clasificación y organización de correos relacionados con Italia',
+          'Agenda y citas vinculadas a clientes italianos existentes',
           'Atención a clientes existentes y comunicación profesional',
           'Organización documental y estructura en la nube',
           'Seguimiento de solicitudes de clientes existentes',
@@ -102,7 +102,7 @@ export const esLocale: TranslationDictionary = {
       {
         id: 'translation-localization',
         title: 'Traducción al italiano y comunicación multilingüe',
-        subtitle: 'Traducciones al italiano desde el español, el inglés y el francés.',
+        subtitle: 'Traducción del inglés y el francés al italiano; español al italiano según el texto.',
         description:
           "Traducción del español, inglés y francés al italiano, revisión y localización cultural de webs, landing pages, catálogos, fichas de producto y comunicaciones para clientes italianos. No ofrezco traducción profesional al español, inglés o francés.",
         iconName: 'Globe',
@@ -139,8 +139,8 @@ export const esLocale: TranslationDictionary = {
           "Recopilación, comprobación y comparación de información, fuentes, proveedores y herramientas digitales exclusivamente para apoyar las actividades existentes del cliente. Sin búsqueda de contactos, captación de clientes ni prospección.",
         iconName: 'Search',
         items: [
-          'Análisis comparativo de competidores y precios',
-          'Búsqueda y evaluación de proveedores y software',
+          'Comparación de competidores y precios públicos vinculados a Italia',
+          'Comparación de proveedores y herramientas para proyectos existentes',
           'Recopilación de datos y verificación de fuentes',
           'Investigaciones informativas para proyectos existentes',
           'Informes ejecutivos con conclusiones claras',
@@ -361,7 +361,7 @@ export const esLocale: TranslationDictionary = {
     credentials: [
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
       { title: 'Formación académica destacada', detail: 'Grado en Mediación Lingüística (110/110 con honores) & Máster Universitario en Traducción Especializada' },
-      { title: '4 idiomas de trabajo', detail: 'Italiano nativo, soporte profesional en Inglés, Francés, Español' },
+      { title: 'Cuatro idiomas de trabajo', detail: 'Italiano nativo, inglés y francés avanzados, español intermedio-alto' },
       { title: 'Organización digital', detail: 'Archivos en la nube, herramientas colaborativas y procedimientos operativos' },
     ],
     ctaReadMore: 'Conoce mi trayectoria',
@@ -488,8 +488,8 @@ export const esLocale: TranslationDictionary = {
   },
   resourcesPage: {
     tag: 'RECURSOS Y CONSEJOS',
-    title: 'Guías y Reflexiones Operativas',
-    subtitle: 'Ideas prácticas sobre delegación, expansión multilingüe y productividad con IA para profesionales.',
+    title: 'Guías y consejos prácticos',
+    subtitle: 'Consejos sobre organización, atención a clientes existentes y comunicación en italiano para profesionales y pequeñas empresas.',
     categories: ['Todos', 'Organización y Delegación', 'Comunicación y Multilingüe', 'Presencia Web y Digital', 'Herramientas digitales y organización'],
     articles: [
       {
@@ -507,7 +507,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Carga mental en el trabajo: cómo organizar tareas y compromisos pendientes',
         excerpt: 'Tener en la cabeza correos por responder, seguimientos pendientes y acuerdos informales desgasta tu mejor energía creativa.',
         date: 'Septiembre de 2026',
-        category: 'Inteligencia Artificial y NoeTom',
+        category: 'Herramientas digitales y organización',
         readTime: '5 min de lectura',
       },
       {
