@@ -94,7 +94,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
   });
   it("contains no duplicate sitemap URL locations, including all deep-case languages",()=>{
     const sitemap=read("public/sitemap.xml");
-    const locations=[...sitemap.matchAll(/<loc>([^<]+)<\\/loc>/g)].map(x=>x[1]);
+    const locations=sitemap.split("<loc>").slice(1).map(x=>x.split("</"+"loc>")[0]);
     expect(new Set(locations).size).toBe(locations.length);
     for(const entry of DEEP_PORTFOLIO_ITEMS){
       for(const lang of LANGS){
