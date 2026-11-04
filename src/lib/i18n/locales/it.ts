@@ -28,7 +28,7 @@ export const itLocale: TranslationDictionary = {
     about: 'Chi Sono',
     resources: 'Risorse',
     contact: 'Contatti',
-    bookCall: 'Richiedi Preventivo',
+    bookCall: 'Richiedi un preventivo',
     getInTouch: 'Scrivimi',
     language: 'Lingua',
   },
@@ -57,7 +57,7 @@ export const itLocale: TranslationDictionary = {
     tagline: 'CHIAREZZA OPERATIVA',
     headline: 'Non tutto quello che devi fare deve necessariamente essere fatto da te.',
     paragraph:
-      'Gestire un’attività significa occuparsi del proprio lavoro, ma anche di tutto ciò che gli gira intorno: email, appuntamenti, richieste dei clienti, documenti, comunicazioni e tante piccole attività che finiscono per prosciugare tempo e concentrazione. Ti offro un supporto operativo senior, continuo e discreto per farti lavorare con più serenità.',
+      'Gestire un’attività significa dedicarsi al proprio lavoro, ma anche a email, appuntamenti, richieste dei clienti, documenti e comunicazioni che richiedono tempo e attenzione. Ti offro un supporto operativo organizzato, discreto e concordato sulle tue esigenze, per aiutarti a concentrarti sulle priorità.',
     pillars: [
       {
         title: 'Autonomia ed esperienza',
