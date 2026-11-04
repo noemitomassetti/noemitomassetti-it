@@ -39,6 +39,20 @@ describe("Site copy editorial alignment", () => {
     }
   });
 
+  it("offers translation with Italian in both directions across all four languages", () => {
+    for (const path of localePaths) {
+      const copy = source(path);
+      expect(copy).toContain("↔");
+      expect(copy).not.toMatch(/Non eseguo traduzioni professionali dall.italiano|I do not offer professional translation from Italian|Je ne propose pas de traduction professionnelle de l.italien|No ofrezco traducción profesional del italiano/i);
+    }
+    const pricing = source("src/lib/pricingData.ts");
+    expect(pricing).toContain("IT ↔ EN, IT ↔ FR, IT ↔ ES");
+    const localising = source("src/pages/ItalianLocalisation.tsx");
+    expect(localising).toContain("I also translate from Italian into English, French and Spanish");
+    const contact = source("src/components/ContactForm.tsx");
+    expect(contact).not.toContain("NoeTom");
+  });
+
   it("keeps future product and cookie claims appropriately qualified", () => {
     const project = source("src/pages/NoeTom.tsx");
     expect(project).toContain("Ask about the project");
