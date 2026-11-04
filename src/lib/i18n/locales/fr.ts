@@ -28,8 +28,8 @@ export const frLocale: TranslationDictionary = {
     about: 'À Propos',
     resources: 'Ressources',
     contact: 'Contact',
-    bookCall: 'Demander un Devis',
-    getInTouch: 'Me Contacter',
+    bookCall: 'Demander un devis',
+    getInTouch: 'Me contacter',
     language: 'Langue',
   },
   hero: {
@@ -57,11 +57,11 @@ export const frLocale: TranslationDictionary = {
     tagline: 'SÉRÉNITÉ OPÉRATIONNELLE',
     headline: 'Vous n’avez pas à porter seul l’ensemble de vos tâches quotidiennes.',
     paragraph:
-      'Gérer son activité ne se résume pas à son cœur de métier : c’est aussi jongler avec les emails, le calendrier, les demandes clients, les relances et mille détails opérationnels. Je vous apporte un appui opérationnel senior, fiable et confidentiel pour vous permettre de vous consacrer pleinement à vos clients.',
+      'Gérer une activité, c’est aussi consacrer du temps aux courriels, aux rendez-vous, aux demandes des clients et aux documents professionnels. Je vous apporte un soutien opérationnel structuré et discret, dans un cadre défini ensemble, pour vous aider à vous concentrer sur vos priorités.',
     pillars: [
       {
         title: 'Expérience et autonomie',
-        desc: 'Une solide expérience aux côtés de professionnels et d’entreprises. J’anticipe les priorités, structure les flux et pilote vos tâches sans nécessiter de micro-management.',
+        desc: 'Une expérience acquise dans différents environnements professionnels. Je clarifie les priorités, organise les tâches convenues et soumets les décisions importantes à votre validation.',
       },
       {
         title: 'Exigence linguistique',
