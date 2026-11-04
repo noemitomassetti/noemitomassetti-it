@@ -35,7 +35,7 @@ describe("Deep portfolio user experience", () => {
   it("supports multilingual search, case-insensitive matching and empty results", () => {
     mount();
     const search = screen.getByRole("searchbox", { name: "Cerca nei dossier" });
-    fireEvent.change(search, { target: { value: "SOFTWARE" } });
+    fireEvent.change(search, { target: { value: "ONBOARDING SOFTWARE" } });
     expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
     expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(1);
     fireEvent.change(search, { target: { value: "xyz-never-a-service" } });
