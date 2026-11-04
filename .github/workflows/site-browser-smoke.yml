@@ -207,6 +207,25 @@ jobs:
                 throw Error('Document language switch failed to keep sample and locale');
               console.log('PASS EN to FR language switch preserves the same portfolio sample');
 
+              // Social crawlers do not run React: verify raw response HTML, not only JS DOM.
+              for (const rawRoute of [
+                '/it/esempi-di-lavoro/dossier/it-en-consultancy-services',
+                '/fr/exemples-de-projets/dossier/fr-it-handmade-product',
+                '/work-examples/dossier/existing-customer-multilingual-email-pack',
+                '/it/esempi-di-lavoro'
+              ]) {
+                const response=await fetch('http://127.0.0.1:4173'+rawRoute);
+                const html=await response.text();
+                if(!response.ok) throw Error('Social preview status '+rawRoute+': '+response.status);
+                if(!html.includes('content="https://www.noemitomassetti.it'+rawRoute+'"'))
+                  throw Error('Missing raw canonical/og:url for social crawler '+rawRoute);
+                if(!html.includes('property="og:description"') || !html.includes('hreflang="fr"'))
+                  throw Error('Missing raw social meta or hreflang '+rawRoute);
+                if(html.includes('NoeTom, the AI operations assistant'))
+                  throw Error('Unreleased product advertised in social metadata '+rawRoute);
+              }
+              console.log('PASS four raw HTML social previews, correct route meta without JavaScript');
+
               // New detailed dossier audit: all 27 fictional work samples in 4 languages.
               // Render at phone width to catch broken paths, SEO alternates, missing
               // deliverables and horizontal overflow in parallel translation panels.
