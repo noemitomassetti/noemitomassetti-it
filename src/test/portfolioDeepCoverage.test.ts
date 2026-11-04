@@ -126,11 +126,11 @@ describe("Detailed portfolio: complete service coverage",()=>{
         expect(xml.includes("<loc>"+full+"</loc>"),full).toBe(true);
         expect(switchLanguageUrl(route,"en"),route).toBe(getPortfolioDocumentPath(doc.num,"en"));
         expect(switchLanguageUrl(route,"it"),route).toBe(getPortfolioDocumentPath(doc.num,"it"));
-        const source=route.replace(/\\/\\d{2}$/, "/:num");
+        const source=route.slice(0,-2)+":num";
         expect(vercel.rewrites.some(x=>x.source===source && x.destination.endsWith("/:num/index.html")),route).toBe(true);
       }
     }
-    const locs=[...xml.matchAll(/<loc>([^<]+)<\\/loc>/g)].map(x=>x[1]);
+    const locs=xml.split("<loc>").slice(1).map(x=>x.split("</loc>")[0]);
     expect(locs).toHaveLength(292);
     expect(new Set(locs).size).toBe(locs.length);
   });
