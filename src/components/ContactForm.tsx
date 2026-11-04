@@ -199,7 +199,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
               : lang === 'fr' ? 'Demande acceptée par le service de transfert ; remise finale à confirmer.'
               : lang === 'es' ? 'Solicitud aceptada por el servicio de reenvío; entrega pendiente de verificar.'
               : 'Request accepted by the email relay; final delivery is not yet confirmed.')
-            : (lang === 'it' ? 'Richiesta registrata nel sistema NoeTom.' : lang === 'fr' ? 'Demande enregistrée dans le système NoeTom.' : lang === 'es' ? 'Solicitud registrada en el sistema NoeTom.' : 'Enquiry saved in the NoeTom system.'),
+            : (lang === 'it' ? 'Richiesta registrata. Ti ricontatterò tramite email.' : lang === 'fr' ? 'Demande enregistrée. Je vous contacterai par courriel.' : lang === 'es' ? 'Solicitud registrada. Me pondré en contacto por correo electrónico.' : 'Enquiry recorded. I will follow up by email.'),
         });
       } else {
         throw new Error(result.message || "Errore durante l'elaborazione del messaggio.");
@@ -265,12 +265,12 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
             <p className="text-sm text-foreground/85 max-w-md mx-auto leading-relaxed">
               {submissionDetails?.deliveryStatus === 'persisted_in_noetom'
                 ? (lang === 'it'
-                    ? `Richiesta registrata in NoeTom. Riferimento: ${submissionDetails.requestId}. Ti contatterò via email.`
+                    ? `Richiesta registrata (rif. ${submissionDetails.requestId}). Ti risponderò via email.`
                     : lang === 'fr'
-                    ? `Demande enregistrée dans NoeTom. Référence : ${submissionDetails.requestId}. Je vous contacterai par courriel.`
+                    ? `Demande enregistrée (réf. ${submissionDetails.requestId}). Je vous répondrai par courriel.`
                     : lang === 'es'
-                    ? `Solicitud registrada en NoeTom. Referencia: ${submissionDetails.requestId}. Me pondré en contacto por correo.`
-                    : `Request saved in NoeTom. Reference: ${submissionDetails.requestId}. I will follow up by email.`)
+                    ? `Solicitud registrada (ref. ${submissionDetails.requestId}). Te responderé por correo electrónico.`
+                    : `Enquiry recorded (ref. ${submissionDetails.requestId}). I will reply by email.`)
                 : (lang === 'it'
                     ? `Il servizio di inoltro email ha accettato la richiesta (rif. ${submissionDetails?.requestId}). La consegna alla casella di Noemi non è ancora verificata.`
                     : lang === 'fr'
@@ -521,12 +521,12 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
           <div className="pt-1 text-[11px] text-muted-foreground/80 text-center leading-relaxed">
             <span className="inline-block mr-1">🔒</span>
             {lang === 'it'
-              ? "La richiesta viene gestita tramite il servizio email attivato (FormSubmit o Web3Forms) oppure, se configurato, tramite NoeTom. Consulta la privacy policy per i fornitori e il trattamento dei dati."
+              ? "La richiesta viene inoltrata tramite il servizio email configurato oppure registrata nel sistema di gestione delle richieste. Consulta l’informativa privacy per conoscere i fornitori e il trattamento dei dati."
               : lang === 'fr'
-              ? "La demande passe par le service e-mail activé (FormSubmit ou Web3Forms) ou, si configuré, par NoeTom. Consultez notre politique de confidentialité pour les prestataires et les données traitées."
+              ? "Votre demande est transmise par le service d’envoi d’e-mails configuré ou enregistrée dans le système de gestion des demandes. Consultez la politique de confidentialité pour connaître les prestataires et les traitements effectués."
               : lang === 'es'
-              ? "La solicitud se envía mediante el servicio de correo activado (FormSubmit o Web3Forms), o mediante NoeTom si está configurado. Consulta la política de privacidad."
-              : "Your enquiry is sent through the enabled email relay (FormSubmit or Web3Forms), or NoeTom if configured. Please read the privacy policy for service providers and data processing."}
+              ? "La solicitud se transmite mediante el servicio de correo electrónico configurado o se registra en el sistema de gestión de solicitudes. Consulta la política de privacidad para conocer los proveedores y el tratamiento de los datos."
+              : "Your enquiry is sent through the configured email delivery service or recorded in the request management system. Please read the privacy policy for details about service providers and data processing."}
           </div>
 
           <p className="text-xs text-foreground/50 text-center">* {lang === "it" ? "campi obbligatori" : lang === "fr" ? "champs obligatoires" : lang === "es" ? "campos obligatorios" : "required fields"}</p>
