@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
+import { PortfolioDeepShowcase } from "@/components/PortfolioDeepShowcase";
 import { useSEO } from "@/hooks/useSEO";
 import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
 import { getPortfolioDocumentPath } from "@/lib/portfolioDocumentPaths";
@@ -63,10 +64,10 @@ export default function Portfolio() {
   };
 
   const descriptions = {
-    it: "Esplora esempi dimostrativi e documenti operativi: assistenza virtuale, customer care, back office, traduzione e localizzazione, con contenuti e dati fittizi.",
-    en: "Explore independent work samples and operational documents: virtual assistance, written customer care, back office, translation and Italian localisation.",
-    fr: "Découvrez des exemples professionnels indépendants : assistance virtuelle, relation client écrite, back-office, traduction et localisation en italien.",
-    es: "Explora muestras profesionales independientes: asistencia virtual, atención escrita al cliente, back office, traducción y localización al italiano.",
+    it: "Portfolio approfondito: traduzioni IT ↔ EN, FR, ES con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
+    en: "Detailed translation samples IT ↔ EN, FR, ES, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
+    fr: "Portfolio détaillé : traductions IT ↔ FR, EN, ES, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
+    es: "Portfolio detallado: traducciones IT ↔ ES, EN, FR, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
   };
 
   useSEO({
@@ -74,6 +75,7 @@ export default function Portfolio() {
     description: descriptions[lang],
     pageKey: "portfolio",
     currentLang: lang,
+    ogLocale: {it:"it_IT",en:"en_GB",fr:"fr_FR",es:"es_ES"}[lang],
   });
 
   const categories: { id: PortfolioCategory; label: Record<Language, string>; icon: React.ReactNode }[] = [
@@ -232,7 +234,9 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ── THE 5 MASTER TRAINING FIELDS SHOWCASE ── */}
+      <PortfolioDeepShowcase lang={lang} />
+
+      {/* ── THE 5 MASTER TRAINING FIELDS SHOWCASE ── */
       <section className="py-12 border-b border-border/30 bg-background/50">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <div className="text-center md:text-left mb-8">
