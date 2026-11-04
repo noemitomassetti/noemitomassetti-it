@@ -171,12 +171,12 @@ export default function Portfolio() {
 
           <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed mb-5 md:mb-8 max-w-3xl">
             {lang === "it"
-              ? "Esempi dimostrativi, realizzati con materiali fittizi o originali, per mostrare metodo, accuratezza linguistica e organizzazione del lavoro. Non sono presentati come incarichi di clienti."
+              ? "Esempi completi per conoscere il mio metodo di lavoro: testi e traduzioni a fronte, procedure, documenti e controlli di qualità, con situazioni realistiche."
               : lang === "fr"
-              ? "Des exemples démonstratifs réalisés à partir de contenus fictifs ou originaux pour illustrer la méthode de travail et la rigueur linguistique. Ils ne sont pas présentés comme des missions clients."
+              ? "Des exemples complets pour découvrir ma méthode : traductions en regard, procédures, documents et contrôles, dans des situations plausibles."
               : lang === "es"
-              ? "Ejemplos demostrativos creados con materiales ficticios u originales para mostrar el método de trabajo y el rigor lingüístico. No se presentan como encargos de clientes."
-              : "Demonstration samples created with fictional or original materials to show working methods, linguistic care and operational organisation. These are not presented as commissioned client projects."}
+              ? "Ejemplos completos que muestran mi método: traducciones en paralelo, procedimientos, documentos y controles con situaciones verosímiles."
+              : "Detailed work examples showing the process behind each service: parallel translations, complete documents, procedures and quality checks built around plausible scenarios."}
           </p>
 
           {/* DEMO TRANSPARENCY NOTICE */}
