@@ -44,6 +44,7 @@ const App = () => (
             <Route path="/italian-localisation" element={<ItalianLocalisation />} />
           <Route path="/italian-localization" element={<ItalianLocalisation />} />
           <Route path="/work-examples" element={<Portfolio />} />
+          <Route path="/work-examples/dossier/:slug" element={<PortfolioDossier />} />
           <Route path="/work-examples/sample/:num" element={<PortfolioDocument />} />
           <Route path="/work-examples/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/professional-research" element={<Questionnaire />} />
@@ -59,6 +60,7 @@ const App = () => (
           <Route path="/it/servizi" element={<Services />} />
           <Route path="/it/localizzazione-italiano" element={<ItalianLocalisation />} />
           <Route path="/it/esempi-di-lavoro" element={<Portfolio />} />
+          <Route path="/it/esempi-di-lavoro/dossier/:slug" element={<PortfolioDossier />} />
           <Route path="/it/esempi-di-lavoro/esempio/:num" element={<PortfolioDocument />} />
           <Route path="/it/esempi-di-lavoro/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/it/ricerca-professionisti" element={<Questionnaire />} />
@@ -74,6 +76,7 @@ const App = () => (
           <Route path="/fr/services" element={<Services />} />
           <Route path="/fr/localisation-italien" element={<ItalianLocalisation />} />
           <Route path="/fr/exemples-de-projets" element={<Portfolio />} />
+          <Route path="/fr/exemples-de-projets/dossier/:slug" element={<PortfolioDossier />} />
           <Route path="/fr/exemples-de-projets/exemple/:num" element={<PortfolioDocument />} />
           <Route path="/fr/exemples-de-projets/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/fr/recherche-professionnels" element={<Questionnaire />} />
@@ -89,6 +92,7 @@ const App = () => (
           <Route path="/es/servicios" element={<Services />} />
           <Route path="/es/localizacion-italiano" element={<ItalianLocalisation />} />
           <Route path="/es/ejemplos-de-trabajo" element={<Portfolio />} />
+          <Route path="/es/ejemplos-de-trabajo/dossier/:slug" element={<PortfolioDossier />} />
           <Route path="/es/ejemplos-de-trabajo/ejemplo/:num" element={<PortfolioDocument />} />
           <Route path="/es/ejemplos-de-trabajo/dossier/:slug" element={<PortfolioDeepCase />} />
           <Route path="/es/investigacion-profesionales" element={<Questionnaire />} />
