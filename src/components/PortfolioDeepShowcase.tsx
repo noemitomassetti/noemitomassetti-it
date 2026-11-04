@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, BookOpen, Globe2, BriefcaseBusiness, Languages, ShieldCheck } from "lucide-react";
 import type { Language } from "@/lib/i18n/types";
 import { DEEP_PORTFOLIO_ITEMS, getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
+import type { DeepPortfolioItem } from "@/lib/portfolioDeepCatalog";
 import { DIRECTION_LABELS } from "@/lib/portfolioDeepTypes";
 
+const FEATURED_IDS=["it-en-consultancy-services","fr-it-handmade-product","inbox-calendar-triage","customer-care-escalations","existing-client-notice-editing","website-help-page-microcopy","course-information-source-audit","existing-customer-multilingual-email-pack"];
 type Filter = "all" | "translation" | "operations" | "backoffice" | "research" | "writing" | "web" | "EN-IT" | "IT-EN" | "FR-IT" | "IT-FR" | "ES-IT" | "IT-ES";
 const text = {
   it: {eyebrow:"Approfondimenti e lavori completi",title:"Scopri come lavoro, attraverso gli elaborati",description:"Oltre alle schede sintetiche, consulta dossier originali con brief realistici, documenti completi, traduzioni a fronte, scelte terminologiche, procedure e controlli. Ogni dossier presenta un problema concreto, l’approccio proposto e un elaborato consultabile.",all:"Tutti i dossier",translation:"Traduzioni a fronte",operations:"Assistenza e organizzazione",backoffice:"Segreteria, customer care e back office",research:"Ricerche informative",writing:"Revisione e cataloghi",web:"Contenuti web",read:"Esplora il dossier completo",source:"Traduzione",context:"Caso operativo",notice:"Materiali dimostrativi originali: non sono estratti di lavori commissionati né contengono dati di clienti reali.",caption:"Documenti, testi e metodi consultabili"},
@@ -16,6 +18,7 @@ const DIRECTIONS: Filter[] = ["EN-IT","IT-EN","FR-IT","IT-FR","ES-IT","IT-ES"];
 
 export function PortfolioDeepShowcase({lang}:{lang:Language}) {
   const [filter,setFilter]=useState<Filter>("all");
+  const [showAll,setShowAll]=useState(false);
   const t=text[lang];
   const visible=useMemo(()=>DEEP_PORTFOLIO_ITEMS.filter(entry=>{
     if(filter==="all") return true;
@@ -23,6 +26,8 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
     if(["backoffice","research","writing","web"].includes(filter)) return entry.kind==="operations" && entry.item.category===filter;
     return entry.kind==="translation" && entry.item.direction===filter;
   }),[filter]);
+  const displayed=filter==="all"&&!showAll ? FEATURED_IDS.map(id=>DEEP_PORTFOLIO_ITEMS.find(entry=>entry.item.id===id)).filter((entry):entry is DeepPortfolioItem=>Boolean(entry)) : visible;
+  const toggleText={it:["Esplora tutti i dossier","Torna alla selezione"],en:["Explore all dossiers","Back to selected work"],fr:["Voir tous les dossiers","Revenir à la sélection"],es:["Explorar todos los dossiers","Volver a la selección"]};
   return <section id="portfolio-complete-dossiers" aria-labelledby="dossier-heading" className="py-16 md:py-20 border-b border-border/60 bg-background">
     <div className="container max-w-5xl mx-auto px-5">
       <p className="text-xs uppercase tracking-widest text-primary font-bold mb-3 flex items-center gap-2"><BookOpen size={18}/>{t.eyebrow}</p>
@@ -42,7 +47,7 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
           className={"px-3 py-1.5 rounded-full font-medium text-xs border transition-colors " + (filter===direction?"bg-primary text-primary-foreground border-primary":"bg-card border-border text-foreground/80 hover:border-primary")}>{DIRECTION_LABELS[direction as keyof typeof DIRECTION_LABELS]}</button>)}
       </div>
       <div className="grid md:grid-cols-2 gap-5">
-        {visible.map(entry=>{
+        {displayed.map(entry=>{
           const it=entry.item;
           return <article key={it.id} className="bg-card border border-border/70 hover:border-primary/50 transition-colors rounded-xl p-6 flex flex-col">
             <p className="text-xs uppercase font-bold text-primary tracking-wide mb-3 flex items-center gap-2">{entry.kind==="translation"?<Languages size={16}/>:<BriefcaseBusiness size={16}/>}
@@ -55,7 +60,8 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
           </article>
         })}
       </div>
-      <p className="mt-5 text-xs text-muted-foreground flex gap-2 items-center"><Globe2 size={16}/>{t.caption} · {visible.length}</p>
+      {filter==="all"&&<div className="flex justify-center mt-7"><button type="button" aria-expanded={showAll} onClick={()=>setShowAll(value=>!value)} className="rounded-lg border border-primary px-6 py-3 text-primary font-semibold hover:bg-primary/10">{showAll ? toggleText[lang][1] : toggleText[lang][0]+" ("+visible.length+")"}</button></div>}
+      <p className="mt-5 text-xs text-muted-foreground flex gap-2 items-center"><Globe2 size={16}/>{t.caption} · {displayed.length}/{visible.length}</p>
     </div>
   </section>;
 }
