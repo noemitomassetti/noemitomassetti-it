@@ -28,8 +28,8 @@ export const enLocale: TranslationDictionary = {
     about: 'About',
     resources: 'Resources',
     contact: 'Contact',
-    bookCall: 'Request a Quote',
-    getInTouch: 'Get in Touch',
+    bookCall: 'Request a quote',
+    getInTouch: 'Get in touch',
     language: 'Language',
   },
   hero: {
@@ -57,11 +57,11 @@ export const enLocale: TranslationDictionary = {
     tagline: 'OPERATIONAL CLARITY',
     headline: 'You do not have to carry every operational burden alone.',
     paragraph:
-      'Running an independent business means balancing your core expertise with an endless stream of emails, scheduling conflicts, client follow-ups, documentation, and cross-border inquiries. I provide senior, confidential, and autonomous operational backing so you can focus on high-value client work.',
+      'Running an independent business means balancing your core work with email, scheduling, customer correspondence, documentation and international communication. I provide discreet, well-organised support for clearly agreed tasks, so you can focus on your clients and priorities.',
     pillars: [
       {
         title: 'Experienced and Independent',
-        desc: 'Experience in back office and organisational roles. I anticipate bottlenecks, ask the right questions, and run processes without requiring micromanagement.',
+        desc: 'Experience in back-office and organisational roles. I identify priorities, ask the right questions and manage agreed workflows with clear handovers and appropriate approvals.',
       },
       {
         title: 'Linguistic Accuracy',
