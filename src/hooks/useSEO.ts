@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BASE_DOMAIN, getHreflangAlternates, getLocalizedPath } from "@/lib/i18n/routes";
+import { BASE_DOMAIN, getHreflangAlternates, getLocalizedPath, getLanguageFromPath } from "@/lib/i18n/routes";
 import type { Language, PageKey } from "@/lib/i18n/types";
 
 export interface AlternateLink {
@@ -30,7 +30,7 @@ export const useSEO = ({
   canonical,
   ogImage = "/noemi-tomassetti.png",
   ogType = "website",
-  ogLocale = "it_IT",
+  ogLocale,
   noindex = false,
   alternates,
   schema,
@@ -55,7 +55,14 @@ export const useSEO = ({
     updateMetaTag("og:title", title, true);
     updateMetaTag("og:description", description, true);
     updateMetaTag("og:type", ogType, true);
-    updateMetaTag("og:locale", ogLocale, true);
+    // A number of pages pass only a canonical URL rather than currentLang.
+    // Derive Open Graph locale from the actual route so French, Spanish and
+    // English share cards do not incorrectly claim to be Italian after hydration.
+    const pathname = window.location.pathname;
+    const resolvedLang = currentLang || ((pathname === "/blog" || pathname.startsWith("/blog/"))
+      ? "it" : getLanguageFromPath(pathname));
+    const resolvedOgLocale = ogLocale ?? ({it:"it_IT",en:"en_GB",fr:"fr_FR",es:"es_ES"} as const)[resolvedLang];
+    updateMetaTag("og:locale", resolvedOgLocale, true);
     const absoluteOgImage = new URL(ogImage, "https://www.noemitomassetti.it").href;
     updateMetaTag("og:image", absoluteOgImage, true);
     updateMetaTag("twitter:title", title);
