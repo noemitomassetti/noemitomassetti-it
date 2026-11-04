@@ -4,7 +4,9 @@ export type OperationalCaseCategory = "backoffice" | "research" | "writing" | "w
 
 export interface OperationalArtifact {
   title: Localised;
-  /** Demonstration deliverable in Italian, explicitly labelled as a fictional work sample. */
+  /** Work sample can be in Italian or another displayed language. */
+  language?: "it" | "en" | "fr" | "es";
+  /** Demonstration deliverable, always labelled as fictional. */
   content: string;
   explanation: Localised;
 }
