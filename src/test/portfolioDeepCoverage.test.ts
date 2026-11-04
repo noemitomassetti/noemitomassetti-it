@@ -38,6 +38,14 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
   });
+  it("preserves numeric specifications in source-to-target translation samples",()=>{
+    const numeric=(value:string)=>Array.from(value.matchAll(new RegExp("[0-9]+(?:[.,][0-9]+)*","g")),m=>m[0].replace(",","."));
+    for(const sample of TRANSLATION_DEEP_CASES){
+      const source=numeric(sample.source.join(" "));
+      const target=numeric(sample.target.join(" "));
+      expect(target,sample.id+" numeric values changed").toEqual(source);
+    }
+  });
   it("includes substantive, not just conceptual, work across all operational services",()=>{
     expect(OPERATIONAL_DEEP_CASES.length).toBeGreaterThanOrEqual(15);
     const required=[
