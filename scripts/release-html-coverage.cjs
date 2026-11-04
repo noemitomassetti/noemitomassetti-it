@@ -8,7 +8,7 @@ for(const url of urls){
  const route=url.slice(site.length),file=route?p.join("dist",route,"index.html"):"dist/index.html";
  if(!fs.existsSync(file))throw Error("Missing crawlable HTML: "+file);
  const html=fs.readFileSync(file,"utf8");
- for(const tag of [`<link rel="canonical" href="${url}">`,`<meta property="og:url" content="${url}">`,`hreflang="it"`,`hreflang="en"`,`hreflang="fr"`,`hreflang="es"`,`hreflang="x-default"`])if(!html.includes(tag))throw Error("Missing "+tag+" in "+file);
+ for(const tag of [`<link rel="canonical" href="${url}"`,`<meta property="og:url" content="${url}"`,`hreflang="it"`,`hreflang="en"`,`hreflang="fr"`,`hreflang="es"`,`hreflang="x-default"`])if(!html.includes(tag))throw Error("Missing "+tag+" in "+file);
  if(route.includes("/dossier/"))dossiers++;
  if(route.includes("/blog/")&&route!=="/blog"&&route!=="/en/blog"&&route!=="/fr/blog"&&route!=="/es/blog"){ blogs++;if(!html.includes(`og:type" content="article"`))throw Error("Blog OG type absent: "+url);}
 }
