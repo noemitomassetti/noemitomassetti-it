@@ -3,6 +3,7 @@ import { useParams, useLocation, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { getBlogPostBySlug, getBlogPosts, getBlogPostPath, getBlogIndexPath, getBlogPostAlternates } from "@/lib/blogData";
+import { alignLegacyBlogCopy } from "@/lib/blogEditorialOverrides";
 import { useSEO } from "@/hooks/useSEO";
 import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
 import type { Language } from "@/lib/i18n/types";
@@ -51,7 +52,7 @@ export default function BlogPost() {
   const { pathname } = useLocation();
   const lang: Language = pathname.startsWith("/blog/") ? "it" : getLanguageFromPath(pathname);
   const post = slug ? getBlogPostBySlug(slug,lang) : undefined;
-  const visible = post && post.published !== false ? post : undefined;
+  const visible = post && post.published !== false ? alignLegacyBlogCopy(post) : undefined;
   const copy = COPY[lang];
   const canonical = visible
     ? "https://www.noemitomassetti.it" + getBlogPostPath(visible.slug,lang)
@@ -84,6 +85,7 @@ export default function BlogPost() {
 
   const related = getBlogPosts(lang)
     .filter(item => item.id !== visible.id && item.published !== false)
+    .map(item => alignLegacyBlogCopy(item))
     .sort((a,b) => b.dateISO.localeCompare(a.dateISO))
     .slice(0,2);
 
