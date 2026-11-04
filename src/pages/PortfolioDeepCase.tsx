@@ -50,11 +50,11 @@ export default function PortfolioDeepCase() {
       "about":entry.kind==="translation" ? "Translation and localisation" : entry.item.service.en
     }:undefined
   });
-  if (!entry) return <Layout lang={lang}><main className="container mx-auto max-w-4xl px-5 py-20"><h1 className="text-3xl font-bold">{t.missing}</h1><Link to={getLocalizedPath("portfolio",lang)} className="text-primary underline">{t.back}</Link></main></Layout>;
+  if (!entry) return <Layout lang={lang}><div className="container mx-auto max-w-4xl px-5 py-20"><h1 className="text-3xl font-bold">{t.missing}</h1><Link to={getLocalizedPath("portfolio",lang)} className="text-primary underline">{t.back}</Link></div></Layout>;
 
   const isTranslation=entry.kind==="translation";
   return <Layout lang={lang}>
-    <main className="bg-background pb-24">
+    <div className="bg-background pb-24">
       <header className="border-b border-border/60 bg-secondary/20 py-12 md:py-20">
         <div className="container max-w-5xl mx-auto px-5">
           <Link to={getLocalizedPath("portfolio",lang)} className="inline-flex items-center gap-2 font-semibold text-primary hover:underline text-sm mb-7">
@@ -152,6 +152,6 @@ export default function PortfolioDeepCase() {
           </div>
         </section>
       </div>
-    </main>
+    </div>
   </Layout>;
 }
