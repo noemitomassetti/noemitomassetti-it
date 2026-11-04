@@ -1,6 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
+import { ITALIAN_LOCALISATION_META } from "@/lib/i18n/italianLocalisationMeta";
 import { BookingButton } from "@/components/BookingButton";
 import { ContactForm } from "@/components/ContactForm";
 import {
@@ -30,8 +31,8 @@ export default function ItalianLocalisationPage() {
 
   const content = {
     it: {
-      metaTitle: "Localizzazione in Italiano per Aziende Estere | Noemi Tomassetti",
-      metaDesc: "Localizzazione verso l’italiano, traduzioni EN/FR/ES → IT, revisione e adattamento culturale per aziende estere. Disponibili anche traduzioni IT → EN/FR/ES.",
+      metaTitle: ITALIAN_LOCALISATION_META.it.title,
+      metaDesc: ITALIAN_LOCALISATION_META.it.description,
       tag: "TRADUZIONE E LOCALIZZAZIONE PER L’ITALIA",
       title: "Traduzione e localizzazione verso l’italiano",
       subtitle:
@@ -98,8 +99,8 @@ export default function ItalianLocalisationPage() {
         "Traduzione generale da 0,09 €/parola; specialistica verso l’italiano da 0,12 €/parola; localizzazione web da 0,11 €/parola; revisione e post-editing da 0,03 €/parola. I prezzi sono indicativi e soggetti a valutazione del testo e delle tempistiche.",
     },
     en: {
-      metaTitle: "Italian Translation & Localisation Services | Noemi Tomassetti",
-      metaDesc: "Italian localisation, EN/FR/ES → IT translation and cultural adaptation for businesses working with Italy. Translation from Italian into English, French and Spanish is also available.",
+      metaTitle: ITALIAN_LOCALISATION_META.en.title,
+      metaDesc: ITALIAN_LOCALISATION_META.en.description,
       tag: "ITALIAN-LANGUAGE SERVICES",
       title: "Italian Translation & Cultural Localisation",
       subtitle:
@@ -166,8 +167,8 @@ export default function ItalianLocalisationPage() {
         "General translation from €0.09/source word; specialist translation into Italian from €0.12/word; website localisation from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
     },
     fr: {
-      metaTitle: "Localisation en Italien pour Entreprises | Noemi Tomassetti",
-      metaDesc: "Localisation vers l’italien, traduction FR/EN/ES → IT et adaptation culturelle pour les entreprises travaillant avec l’Italie. Traductions IT → FR/EN/ES également proposées.",
+      metaTitle: ITALIAN_LOCALISATION_META.fr.title,
+      metaDesc: ITALIAN_LOCALISATION_META.fr.description,
       tag: "SERVICES LINGUISTIQUES POUR L’ITALIE",
       title: "Traduction et localisation vers l’italien",
       subtitle:
@@ -234,8 +235,8 @@ export default function ItalianLocalisationPage() {
         "Traduction générale à partir de 0,09 €/mot source ; traduction spécialisée vers l’italien à partir de 0,12 €/mot source ; localisation web à partir de 0,11 €/mot source ; révision et post-édition à partir de 0,03 €/mot. Tarifs indicatifs selon le texte, la complexité et les délais.",
     },
     es: {
-      metaTitle: "Traducción y Localización al Italiano | Noemi Tomassetti",
-      metaDesc: "Localización al italiano, traducción ES/EN/FR → IT y adaptación cultural para empresas que trabajan con Italia. También disponibles traducciones IT → ES/EN/FR.",
+      metaTitle: ITALIAN_LOCALISATION_META.es.title,
+      metaDesc: ITALIAN_LOCALISATION_META.es.description,
       tag: "SERVICIOS LINGÜÍSTICOS PARA ITALIA",
       title: "Traducción y Localización Cultural al Italiano",
       subtitle:
