@@ -4,11 +4,12 @@ import { TRANSLATION_SAMPLES_B } from "./portfolioTranslationSamplesB";
 import { OPERATIONAL_SAMPLES_A } from "./portfolioOperationalSamplesA";
 import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
+import { OPERATIONAL_SAMPLES_D } from "./portfolioOperationalSamplesD";
 import type { TranslationDeepCase } from "./portfolioDeepTypes";
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
 export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B];
-export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C];
+export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D];
 export type DeepPortfolioItem =
   | { kind: "translation"; item: TranslationDeepCase }
   | { kind: "operations"; item: OperationalDeepCase };
