@@ -8,6 +8,8 @@ import {
   getDeepPortfolioItem,
 } from "../lib/portfolioDeepCatalog";
 import { switchLanguageUrl } from "../lib/i18n/routes";
+import { getPortfolioDocumentPath } from "../lib/portfolioDocumentPaths";
+import { PORTFOLIO_DOCUMENTS } from "../lib/portfolioData";
 import type { Language } from "../lib/i18n/types";
 
 const LANGS: Language[] = ["it","en","fr","es"];
@@ -110,6 +112,27 @@ describe("Detailed portfolio: complete service coverage",()=>{
         expect(locations.filter(x=>x===full),full).toHaveLength(1);
       }
     }
+  });
+  it("makes all 22 original portfolio documents crawlable in four languages with reciprocal sitemap links",()=>{
+    const xml=read("public/sitemap.xml");
+    const vercel=JSON.parse(read("vercel.json")) as {rewrites:{source:string;destination:string}[]};
+    expect(PORTFOLIO_DOCUMENTS).toHaveLength(22);
+    const nums=PORTFOLIO_DOCUMENTS.map(x=>x.num);
+    expect(new Set(nums).size).toBe(nums.length);
+    for(const doc of PORTFOLIO_DOCUMENTS){
+      for(const lang of LANGS){
+        const route=getPortfolioDocumentPath(doc.num,lang);
+        const full="https://www.noemitomassetti.it"+route;
+        expect(xml.includes("<loc>"+full+"</loc>"),full).toBe(true);
+        expect(switchLanguageUrl(route,"en"),route).toBe(getPortfolioDocumentPath(doc.num,"en"));
+        expect(switchLanguageUrl(route,"it"),route).toBe(getPortfolioDocumentPath(doc.num,"it"));
+        const source=route.replace(/\\/\\d{2}$/, "/:num");
+        expect(vercel.rewrites.some(x=>x.source===source && x.destination.endsWith("/:num/index.html")),route).toBe(true);
+      }
+    }
+    const locs=[...xml.matchAll(/<loc>([^<]+)<\\/loc>/g)].map(x=>x[1]);
+    expect(locs).toHaveLength(292);
+    expect(new Set(locs).size).toBe(locs.length);
   });
   it("publishes only fictional sample data with explicit scope and privacy statements",()=>{
     const ui=read("src/pages/PortfolioDeepCase.tsx");
