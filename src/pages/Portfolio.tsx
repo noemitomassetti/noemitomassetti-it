@@ -5,11 +5,6 @@ import { PortfolioDeepShowcase } from "@/components/PortfolioDeepShowcase";
 import { useSEO } from "@/hooks/useSEO";
 import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
 import { getPortfolioDocumentPath } from "@/lib/portfolioDocumentPaths";
-import { getDeepPortfolioPath } from "@/pages/PortfolioDossier";
-import { TRANSLATION_SAMPLES_A } from "@/lib/portfolioTranslationSamplesA";
-import { OPERATIONAL_SAMPLES_A } from "@/lib/portfolioOperationalSamplesA";
-import { DIRECTION_LABELS, TRANSLATION_SAMPLE_NOTICE } from "@/lib/portfolioDeepTypes";
-import { OPERATIONAL_NOTICE } from "@/lib/portfolioOperationalTypes";
 import { Language } from "@/lib/i18n/types";
 import {
   PORTFOLIO_CASES,
@@ -240,60 +235,6 @@ export default function Portfolio() {
       </section>
 
       <PortfolioDeepShowcase lang={lang} />
-
-      {/* Original detailed examples: realistic scopes with full documents and translation pairs. */}
-      <section className="py-14 md:py-20 border-b border-border/40 bg-background" aria-labelledby="dossier-depth-title">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto space-y-9">
-          <div className="space-y-3">
-            <span className="text-xs font-bold tracking-widest uppercase text-primary">
-              {lang === "it" ? "Portfolio approfondito" : lang === "fr" ? "Dossiers approfondis" : lang === "es" ? "Dosieres detallados" : "In-depth case studies"}
-            </span>
-            <h2 id="dossier-depth-title" className="text-2xl md:text-3xl font-bold">
-              {lang === "it" ? "Dalla richiesta iniziale all'elaborato completo" : lang === "fr" ? "Du besoin au livrable complet" : lang === "es" ? "De la necesidad al trabajo completo" : "From the brief to a complete work sample"}
-            </h2>
-            <p className="leading-relaxed max-w-4xl text-foreground/80">
-              {lang === "it" ? "Per vedere realmente come potrei lavorare: traduzioni integrali a fronte, scelte terminologiche, email, registri, procedure, controlli e documenti operativi. Tutti i casi sono originali e simulati; non sono presentati come incarichi svolti per clienti." :
-               lang === "fr" ? "Pour découvrir concrètement ma méthode : traductions parallèles, choix terminologiques, courriels, procédures, contrôles et documents opérationnels. Exemples originaux et fictifs, non issus de missions réelles." :
-               lang === "es" ? "Para conocer mi forma de trabajar: traducciones completas en paralelo, decisiones terminológicas, correos, procedimientos, controles y documentos operativos. Son ejemplos originales y ficticios, no encargos reales." :
-               "Explore complete parallel-text translations, terminology decisions, operational emails, trackers, procedures and quality checks. All cases are original fictional demonstrations, not client commissions."}
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-xl md:text-2xl font-bold">
-              {lang === "it" ? "Traduzioni nelle sei direzioni linguistiche" : lang === "fr" ? "Traduction dans les six sens linguistiques" : lang === "es" ? "Traducción en las seis direcciones" : "Translation in all six language directions"}
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {TRANSLATION_SAMPLES_A.map(sample => (
-                <Link key={sample.id} to={getDeepPortfolioPath(sample.id,lang)}
-                  className="group border border-border/70 bg-card rounded-xl p-5 hover:border-primary/60 hover:shadow-md transition-all">
-                  <span className="text-xs font-bold tracking-wide text-primary">{DIRECTION_LABELS[sample.direction]}</span>
-                  <h4 className="text-lg font-bold mt-2 group-hover:text-primary">{sample.title[lang]}</h4>
-                  <p className="mt-2 text-sm text-foreground/75 leading-relaxed">{sample.context[lang]}</p>
-                  <p className="mt-4 text-xs font-semibold text-primary">{lang==="it"?"Leggi testo e traduzione":lang==="fr"?"Lire les deux textes":lang==="es"?"Leer original y traducción":"Read source and translation"} →</p>
-                </Link>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground max-w-4xl">{TRANSLATION_SAMPLE_NOTICE[lang]}</p>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-xl md:text-2xl font-bold">
-              {lang === "it" ? "Assistenza virtuale, segreteria e back office" : lang === "fr" ? "Assistance virtuelle, secrétariat et back-office" : lang === "es" ? "Asistencia virtual, secretaría y back office" : "Virtual assistance, secretarial and back-office support"}
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {OPERATIONAL_SAMPLES_A.map(sample => (
-                <Link key={sample.id} to={getDeepPortfolioPath(sample.id,lang)}
-                  className="group border border-border/70 bg-card rounded-xl p-5 hover:border-primary/60 hover:shadow-md transition-all">
-                  <span className="text-xs font-bold uppercase tracking-wide text-primary">{sample.service[lang]}</span>
-                  <h4 className="text-lg font-bold mt-2 group-hover:text-primary">{sample.title[lang]}</h4>
-                  <p className="mt-2 text-sm text-foreground/75 leading-relaxed">{sample.scenario[lang]}</p>
-                  <p className="mt-4 text-xs font-semibold text-primary">{lang==="it"?"Esplora procedure e documenti":lang==="fr"?"Découvrir les documents":lang==="es"?"Explorar documentos":"Explore full documents"} →</p>
-                </Link>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground max-w-4xl">{OPERATIONAL_NOTICE[lang]}</p>
-          </div>
-        </div>
-      </section>
 
       {/* ── THE 5 MASTER TRAINING FIELDS SHOWCASE ── */}
       <section className="py-12 border-b border-border/30 bg-background/50">
