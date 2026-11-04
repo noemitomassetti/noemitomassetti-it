@@ -55,7 +55,6 @@ export default function IndexPage() {
   });
 
   const servicesPath = getLocalizedPath("services", lang);
-  const noetomPath = getLocalizedPath("noetom", lang);
   const resourcesPath = getLocalizedPath("resources", lang);
 
   const getServiceIcon = (id: string) => {
@@ -1181,64 +1180,6 @@ export default function IndexPage() {
           >
             {dict.hero.ctaButton || "RICHIEDI UN PREVENTIVO"}
           </BookingButton>
-        </div>
-      </section>
-
-      {/* ── SECTION 8: NOETOM (SEAMLESSLY INTEGRATED BRAND FAMILY) ── */}
-      <section className="bg-muted/50 border-y border-border/30 scroll-mt-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both py-12 md:py-20">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
-          <div className="bg-card border border-primary/30 rounded-2xl p-6 md:p-10 shadow-lg relative overflow-hidden">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-              <div className="space-y-4 max-w-2xl">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-primary/20 text-primary border border-primary/30 inline-flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    {dict.noetomTeaser.statusBadge}
-                  </span>
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
-                    {dict.noetomTeaser.tag}
-                  </span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
-                  {dict.noetomTeaser.productName}{" "}
-                  <span className="text-primary font-normal text-xl sm:text-2xl md:text-3xl block sm:inline">
-                    — {dict.noetomTeaser.tagline}
-                  </span>
-                </h2>
-                <p className="text-base md:text-lg text-foreground/85 leading-relaxed">
-                  {dict.noetomTeaser.description}
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-foreground/80">
-                  {dict.noetomTeaser.featuresList.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
-                <Button
-                  asChild
-                  className="px-6 py-6 rounded-md font-bold uppercase text-xs tracking-wider bg-primary text-primary-foreground hover:scale-105 transition-all shadow-md"
-                >
-                  <Link to={noetomPath}>
-                    {dict.noetomTeaser.ctaDiscover}
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="px-6 py-6 rounded-md font-bold uppercase text-xs tracking-wider border-primary/40 text-foreground hover:bg-primary/10 transition-all"
-                >
-                  <Link to={`${getLocalizedPath("services", lang)}#contact-section`}>
-                    {({ it: "Descrivi la tua richiesta", en: "Describe your request", fr: "Décrivez votre demande", es: "Describe tu solicitud" } as const)[lang]}
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
