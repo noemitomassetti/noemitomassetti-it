@@ -174,6 +174,12 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
 
   return (
     <div className="bg-background text-foreground font-sans flex flex-col min-h-screen overflow-x-clip relative selection:bg-primary/20 selection:text-primary">
+      <a
+        href="#contenuto-principale"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-5 focus:py-3 focus:text-primary-foreground focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-ring"
+      >
+        {({it:"Vai al contenuto principale",en:"Skip to main content",fr:"Aller au contenu principal",es:"Ir al contenido principal"} as const)[currentLang]}
+      </a>
       {/* ── HEADER ── */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/75">
         <div className="container px-4 md:px-6 flex h-16 items-center justify-between gap-4">
@@ -432,7 +438,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
       </header>
 
       {/* ── MAIN CONTENT ── */}
-      <main className="flex-1">{children}</main>
+      <main id="contenuto-principale" tabIndex={-1} className="flex-1 scroll-mt-20">{children}</main>
 
       {/* ── FOOTER (EXACT MATCH TO LIVE SITE) ── */}
       <footer className="border-t border-border/40 bg-card/60 text-foreground">
