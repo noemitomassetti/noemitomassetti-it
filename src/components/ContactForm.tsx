@@ -230,19 +230,19 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
 
   const contextualHeaders = {
     it: {
-      title: "Richiesta di Preventivo Scritto",
+      title: "Richiedi un preventivo",
       badge: "Bozza predisposta con l’Assistente di Noemi · Puoi modificare liberamente il messaggio",
     },
     en: {
-      title: "Written Quote Request",
+      title: "Request a quote",
       badge: "Brief prepared with Noemi’s Assistant · Feel free to edit the message below",
     },
     fr: {
-      title: "Demande de Devis Écrit",
+      title: "Demander un devis",
       badge: "Synthèse préparée avec l’assistant de Noemi · Modifiez librement le texte",
     },
     es: {
-      title: "Solicitud de Presupuesto por Escrito",
+      title: "Solicitar presupuesto",
       badge: "Borrador preparado con el asistente de Noemi · Puedes modificar el mensaje",
     },
   };
