@@ -70,9 +70,9 @@ export const PRICING_DATA: PricingData = {
     },
     {
       id: "trans",
-      title: {it: "Traduzione e localizzazione italiana", en: "Translation & Italian localisation", fr: "Traduction et localisation en italien", es: "Traducción y localización al italiano"},
+      title: {it: "Traduzioni IT ↔ EN/FR/ES e localizzazione", en: "Italian ↔ EN/FR/ES Translation & Localisation", fr: "Traduction italien ↔ FR/EN/ES et localisation", es: "Traducción italiano ↔ ES/EN/FR y localización"},
       rate: {it: "da 0,09 € / parola", en: "from €0.09 / word", fr: "dès 0,09 € / mot", es: "desde 0,09 € / palabra"},
-      rateDetail: {it: "Priorità EN/FR → IT; ES → IT su valutazione", en: "Focus on EN/FR → IT; ES → IT on assessment", fr: "Priorité EN/FR → IT ; ES → IT sur évaluation", es: "Principalmente EN/FR → IT; ES → IT según el proyecto"},
+      rateDetail: {it: "IT ↔ EN, IT ↔ FR, IT ↔ ES; testo e direzione da concordare", en: "IT ↔ EN/FR/ES; quoted by language direction and subject", fr: "IT ↔ FR/EN/ES ; selon le sens et le domaine", es: "IT ↔ ES/EN/FR; según el sentido y la especialidad"},
       items: {
         it: ["Traduzione di riferimento: da 0,09 €/parola sorgente", "Localizzazione siti e contenuti: da 0,11 €/parola", "Traduzione specialistica: da 0,12 €/parola", "Revisione testi: da 0,03 €/parola", "Prezzo definitivo dopo analisi del materiale"],
         en: ["Translation: from €0.09/source word", "Website/content localisation: from €0.11/word", "Specialist translation: from €0.12/word", "Text revision: from €0.03/word", "Final fee confirmed after reviewing the source"],
