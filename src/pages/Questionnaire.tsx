@@ -431,7 +431,7 @@ export default function Questionnaire() {
   useSEO({
     title: titles[lang],
     description: descriptions[lang],
-    pageKey: "resources",
+    pageKey: "questionnaire",
     currentLang: lang,
   });
 
