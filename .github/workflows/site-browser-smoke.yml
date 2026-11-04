@@ -297,6 +297,12 @@ jobs:
                 await route.fulfill({status:403, contentType:'text/html', body:'<html>Just a moment...</html>'});
               });
               await page.goto('http://127.0.0.1:4173/it/contatti',{waitUntil:'networkidle'});
+              const manualFirst=page.getByTestId('manual-email-first');
+              await manualFirst.waitFor({timeout:10000});
+              if(!(await manualFirst.innerText()).includes('invio automatico del modulo'))
+                throw Error('Missing upfront manual-email notice with inactive provider');
+              if(!(await page.locator('button[type="submit"]').innerText()).includes("Prepara l'email"))
+                throw Error('Submit control misrepresents unconfigured email as an automatic send');
               await page.locator('#form-firstName').fill('Cliente');
               await page.locator('#form-lastName').fill('Test');
               await page.locator('#form-email').fill('test@example.org');
