@@ -236,7 +236,7 @@ export default function Portfolio() {
 
       <PortfolioDeepShowcase lang={lang} />
 
-      {/* ── THE 5 MASTER TRAINING FIELDS SHOWCASE ── */
+      {/* ── THE 5 MASTER TRAINING FIELDS SHOWCASE ── */}
       <section className="py-12 border-b border-border/30 bg-background/50">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <div className="text-center md:text-left mb-8">
