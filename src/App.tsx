@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { CookieBanner } from "@/components/CookieBanner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -12,9 +13,9 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import Portfolio from "./pages/Portfolio";
-import PortfolioDocument from "./pages/PortfolioDocument";
-import PortfolioDeepCase from "./pages/PortfolioDeepCase";
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const PortfolioDocument = lazy(() => import("./pages/PortfolioDocument"));
+const PortfolioDeepCase = lazy(() => import("./pages/PortfolioDeepCase"));
 import Publications from "./pages/Publications";
 import { PUBLICATIONS_VISIBLE } from "./lib/publicationsCatalog";
 import ItalianLocalisation from "./pages/ItalianLocalisation";
@@ -35,6 +36,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Suspense fallback={<div role="status" className="min-h-[30vh] flex items-center justify-center text-foreground/70 text-sm">Caricamento pagina · Loading page…</div>}>
           <Routes>
             {/* ── ENGLISH / INTERNATIONAL (DEFAULT) ── */}
             <Route path="/" element={<Index />} />
@@ -129,6 +131,7 @@ const App = () => (
           {/* ── 404 CATCH-ALL ── */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
         <CookieBanner />
       </BrowserRouter>
     </TooltipProvider>
