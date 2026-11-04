@@ -60,7 +60,7 @@ export const frLocale: TranslationDictionary = {
       'Gérer son activité ne se résume pas à son cœur de métier : c’est aussi jongler avec les emails, le calendrier, les demandes clients, les relances et mille détails opérationnels. Je vous apporte un appui opérationnel senior, fiable et confidentiel pour vous permettre de vous consacrer pleinement à vos clients.',
     pillars: [
       {
-        title: 'Autonomie senior',
+        title: 'Autonomie et expérience',
         desc: 'Une solide expérience aux côtés de professionnels et d’entreprises. J’anticipe les priorités, structure les flux et pilote vos tâches sans nécessiter de micro-management.',
       },
       {
@@ -68,8 +68,8 @@ export const frLocale: TranslationDictionary = {
         desc: 'De langue maternelle italienne, je maîtrise le français et l’anglais à un niveau avancé et l’espagnol à un niveau intermédiaire supérieur. Je traduis professionnellement vers l’italien.',
       },
       {
-        title: 'Levier technologique moderne',
-        desc: 'J’utilise des outils numériques et d’intelligence artificielle sous supervision humaine. NoeTom est un projet interne encore en développement et en phase de tests privés.',
+        title: 'Outils numériques adaptés',
+        desc: 'J’utilise des outils numériques et des méthodes de travail structurées, en conservant un contrôle humain sur les échanges, les documents et les livrables.',
       },
       {
         title: 'Discrétion et méthode',
@@ -101,7 +101,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Traduction & Communication Multilingue',
+        title: 'Traduction vers l’italien et communication multilingue',
         subtitle: 'Traduction vers l’italien depuis le français, l’anglais et l’espagnol.',
         description:
           "Traduction du français, de l’anglais et de l’espagnol vers l’italien, révision et adaptation culturelle de sites web, pages de destination, catalogues et communications destinés au marché italien. Je ne propose pas de traduction professionnelle vers le français, l’anglais ou l’espagnol.",
@@ -117,7 +117,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         id: 'content-writing',
-        title: 'Rédaction & Révision de Contenus',
+        title: 'Révision et adaptation de contenus en italien',
         subtitle: 'Des textes limpides, percutants et alignés sur vos objectifs.',
         description:
           'Révision, réécriture et adaptation de contenus rédigés en italien : sites web, messages clients et brouillons générés par IA, avec une attention particulière à la fluidité et à la terminologie.',
@@ -133,23 +133,23 @@ export const frLocale: TranslationDictionary = {
       },
       {
         id: 'online-research',
-        title: 'Recherches Documentaires de Soutien',
+        title: 'Recherche documentaire liée à l’Italie',
         subtitle: 'Des informations structurées pour éclairer vos choix stratégiques.',
         description:
           "Recherche, vérification et comparaison d'informations, de sources, de fournisseurs et d'outils numériques uniquement pour soutenir les activités existantes du client. Aucune recherche de prospects ni acquisition commerciale.",
         iconName: 'Search',
         items: [
           'Veille concurrentielle et analyse tarifaire',
-          'Recherche de fournisseurs, partenaires et outils SaaS',
+          'Comparaison de fournisseurs et d’outils pour des activités existantes',
           'Collecte de données et recoupement des sources',
           'Recherche documentaire sur l’Italie pour des projets existants',
-          'Rapports de synthèse exécutifs et points clés',
+          'Synthèses structurées et conclusions utiles',
           'Structuration de bases de données et tableurs',
         ],
       },
       {
         id: 'digital-support',
-        title: 'Support Numérique',
+        title: 'Organisation et outils numériques',
         subtitle: 'Optimisation de vos outils numériques et flux de travail.',
         description:
           'Réorganisation de vos dossiers partagés, paramétrage d’outils en ligne et formalisation de procédures simples pour fluidifier vos démarches opérationnelles quotidiennes.',
@@ -159,7 +159,7 @@ export const frLocale: TranslationDictionary = {
           'Configuration d’outils digitaux (agendas, formulaires)',
           'Soutien pratique aux outils bureautiques et en ligne',
           'Élaboration de procédures opérationnelles (SOP)',
-          'Fluidification du parcours d’accueil client',
+          'Organisation de l’accueil des clients déjà acquis',
           'Assistance numérique courante et paramétrages',
         ],
       },
@@ -355,14 +355,14 @@ export const frLocale: TranslationDictionary = {
     lead: 'Assistante Virtuelle, traductrice et soutien opérationnel pour professionnels et entreprises.',
     bioParagraphs: [
       'Je mets à votre disposition plus de vingt ans d’expérience professionnelle acquise dans le service client, le back-office, l’organisation et le soutien opérationnel, alliée à une solide formation linguistique.',
-      'Je suis titulaire d’une licence (Laurea triennale) en Médiation Linguistique de l’Université de Macerata (2009, obtenue avec la mention 110/110 e lode (mention italienne)), suivie d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 crédits ECTS) avec réussite de l’épreuve finale. Les domaines abordés au cours du Master comprennent les secteurs littéraire, juridique, économique, technologique et scientifique.',
+      'Je suis titulaire d’une licence (Laurea triennale) en Médiation Linguistique de l’Université de Macerata (2009, mention italienne 110/110 e lode), suivie d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 crédits ECTS) avec réussite de l’épreuve finale. Les domaines abordés au cours du Master comprennent les secteurs littéraire, juridique, économique, technologique et scientifique.',
       'L’italien est ma langue maternelle et j’assure un accompagnement professionnel en quatre langues : italien, anglais, français et espagnol, avec rigueur, ponctualité et discrétion.',
     ],
     credentials: [
       { title: 'Plus de 20 ans d’expérience', detail: 'Service client, back-office, organisation et gestion opérationnelle' },
       { title: 'Formation universitaire d’excellence', detail: 'Licence en Médiation Linguistique (110/110 e lode) & Master en Traduction Spécialisée' },
       { title: '4 langues de travail', detail: 'Italien langue maternelle, soutien professionnel en Anglais, Français, Espagnol' },
-      { title: 'Outils et innovation', detail: 'Support numérique et créatrice du projet interne NoeTom, en développement' },
+      { title: 'Organisation numérique', detail: 'Classement cloud, outils collaboratifs et procédures de travail' },
     ],
     ctaReadMore: 'En savoir plus sur mon approche',
   },
@@ -374,7 +374,7 @@ export const frLocale: TranslationDictionary = {
       'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
       'Mon parcours professionnel s’étend sur plus de deux décennies et comprend différentes expériences. J’y ai développé des compétences en relation client, organisation, back-office et communication multilingue. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
       'Sur le plan universitaire, je suis diplômée d’une licence en Médiation Linguistique (Université de Macerata, 2009, 110/110 e lode (mention italienne)) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
-      'En parallèle, je développe NoeTom, un projet interne d’assistance opérationnelle actuellement en phase de test privé.',
+      'Mon approche est concrète : des tâches définies ensemble, des documents bien organisés et un suivi régulier des travaux confiés.',
     ],
     timeline: [
       {
@@ -458,7 +458,6 @@ export const frLocale: TranslationDictionary = {
         'Recherches Documentaires de Soutien',
         'Outils numériques et processus liés à l’Italie',
         'Contenus web et pages de destination en italien',
-        'Informations sur le projet interne NoeTom',
         'Autre / Question générale',
       ],
       preferredLanguage: 'Langue de communication préférée',
@@ -491,7 +490,7 @@ export const frLocale: TranslationDictionary = {
     tag: 'RESSOURCES & CONSEILS',
     title: 'Guides et Réflexions Opérationnelles',
     subtitle: 'Des clés concrètes pour déléguer, rayonner à l’international et optimiser votre organisation.',
-    categories: ['Tous', 'Organisation & Délégation', 'Communication & Multilingue', 'Présence Web & Digitale', 'Intelligence Artificielle & NoeTom'],
+    categories: ['Tous', 'Organisation & Délégation', 'Communication & Multilingue', 'Présence Web & Digitale', 'Outils numériques et organisation'],
     articles: [
       {
         id: 'r1',
@@ -533,7 +532,7 @@ export const frLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Traduction vers l’italien, localisation et soutien opérationnel pour les professionnels et petites entreprises travaillant avec l’Italie. Créatrice de NoeTom, un projet interne en développement.',
+      'Traduction et localisation vers l’italien, échanges écrits avec les clients italiens existants et soutien opérationnel pour les professionnels et petites entreprises travaillant avec l’Italie.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · en développement',
     companyTitle: 'À Propos & Ressources',
