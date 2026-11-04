@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzione verso l’italiano e comunicazione multilingue',
         subtitle: 'Italiano · Inglese · Francese · Spagnolo con accuratezza contestuale.',
         description:
-          "Traduzione dall’inglese, dal francese e dallo spagnolo verso l’italiano, revisione di contenuti italiani e supporto alla corrispondenza multilingue nei limiti delle competenze linguistiche. Non offro traduzioni professionali dall’italiano verso inglese, francese o spagnolo.",
+          "Traduzione dall’inglese e dal francese verso l’italiano; progetti dallo spagnolo verso l’italiano valutati in base al testo. Offro inoltre revisione di contenuti italiani e supporto alla corrispondenza multilingue negli ambiti concordati. Non eseguo traduzioni professionali dall’italiano verso altre lingue.",
         iconName: 'Globe',
         items: [
           'Localizzazione verso l’italiano di siti web e landing page',
