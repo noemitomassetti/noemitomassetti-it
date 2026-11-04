@@ -6,26 +6,26 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-import Index from "./pages/Index";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import Resources from "./pages/Resources";
-import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
+const Index = lazy(() => import("./pages/Index"));
+const Services = lazy(() => import("./pages/Services"));
+const About = lazy(() => import("./pages/About"));
+const Resources = lazy(() => import("./pages/Resources"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const PortfolioDocument = lazy(() => import("./pages/PortfolioDocument"));
 const PortfolioDeepCase = lazy(() => import("./pages/PortfolioDeepCase"));
-import Publications from "./pages/Publications";
+const Publications = lazy(() => import("./pages/Publications"));
 import { PUBLICATIONS_VISIBLE } from "./lib/publicationsCatalog";
-import ItalianLocalisation from "./pages/ItalianLocalisation";
-import Questionnaire from "./pages/Questionnaire";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CookiePolicy from "./pages/CookiePolicy";
+const ItalianLocalisation = lazy(() => import("./pages/ItalianLocalisation"));
+const Questionnaire = lazy(() => import("./pages/Questionnaire"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 
 
 // NoeTom remains an unpublished internal project; public routes are disabled.
-import NotFound from "./pages/NotFound";
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 
 const queryClient = new QueryClient();
