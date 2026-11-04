@@ -207,7 +207,7 @@ jobs:
                 throw Error('Document language switch failed to keep sample and locale');
               console.log('PASS EN to FR language switch preserves the same portfolio sample');
 
-              // New detailed dossier audit: all 23 fictional work samples in 4 languages.
+              // New detailed dossier audit: all 27 fictional work samples in 4 languages.
               // Render at phone width to catch broken paths, SEO alternates, missing
               // deliverables and horizontal overflow in parallel translation panels.
               const dossierSlugs=[
@@ -218,7 +218,9 @@ jobs:
                 'inbox-calendar-triage','customer-care-escalations','order-entry-price-list',
                 'shared-drive-version-control','online-course-secretariat','research-existing-italian-customers',
                 'web-copy-before-after','catalogue-price-list-proofreading','digital-tools-request-workflow',
-                'commercial-quote-from-approved-pricelist','international-client-italian-aftercare'
+                'commercial-quote-from-approved-pricelist','international-client-italian-aftercare',
+                'course-information-source-audit','existing-client-notice-editing',
+                'website-help-page-microcopy','existing-customer-multilingual-email-pack'
               ];
               const dossierPrefixes={
                 it:'/it/esempi-di-lavoro/dossier/',
@@ -246,12 +248,12 @@ jobs:
               // Functional direction filter: two independent samples per offered direction.
               await page.goto('http://127.0.0.1:4173/it/esempi-di-lavoro',{waitUntil:'networkidle'});
               const deepDirectory=page.locator('#portfolio-complete-dossiers');
-              if(await deepDirectory.locator('article').count()!==23) throw Error('Deep dossier directory not complete');
+              if(await deepDirectory.locator('article').count()!==27) throw Error('Deep dossier directory not complete');
               await deepDirectory.getByRole('button',{name:'IT → ES'}).click();
               if(await deepDirectory.locator('article').count()!==2) throw Error('IT to ES dossier filter should show two samples');
               await deepDirectory.getByRole('button',{name:'Ricerche informative'}).click();
-              if(await deepDirectory.locator('article').count()!==1) throw Error('Research service filter missing');
-              console.log('PASS 23 dossier directory and translation/service filters');
+              if(await deepDirectory.locator('article').count()!==2) throw Error('Research service filter missing');
+              console.log('PASS 27 dossier directory and translation/service filters');
 
               // Until the new provider has been verified, NEVER transmit personal data
               // to the previously failing provider. The visitor gets a usable manual draft.
