@@ -257,7 +257,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
       "it": "Un produttore artigiano fittizio presenta tre schede con dimensioni incomplete, materiali ambigui e denominazioni incoerenti dei colori.",
       "en": "A fictional craft maker has three product sheets with ambiguous materials, dimensions and finishes.",
       "fr": "Un producteur fictif a des fiches produits aux caractéristiques ambiguës.",
-      "es": "Un fabricante ficticio tiene fichas con datos ambiguos."
+      "es": "Un fabricante ficticio tiene tres fichas con materiales, dimensiones y variantes de color ambiguas."
     },
     "objective": {
       "it": "Rendere i contenuti coerenti e segnalare le informazioni tecniche da approvare, senza modificare autonomamente prezzi o caratteristiche.",
