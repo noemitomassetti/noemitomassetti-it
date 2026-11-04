@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Link, useLocation } from "react-router-dom";
 import { getBlogPosts, getBlogIndexPath, getBlogIndexAlternates, getBlogPostPath } from "@/lib/blogData";
+import { alignLegacyBlogCopy } from "@/lib/blogEditorialOverrides";
 import { getLanguageFromPath } from "@/lib/i18n/routes";
 import type { Language } from "@/lib/i18n/types";
 import { useSEO } from "@/hooks/useSEO";
@@ -41,6 +42,7 @@ export default function Blog() {
   const canonical = "https://www.noemitomassetti.it" + getBlogIndexPath(lang);
   const posts = getBlogPosts(lang)
     .filter(post => post.published !== false)
+    .map(post => alignLegacyBlogCopy(post))
     .sort((a,b) => b.dateISO.localeCompare(a.dateISO));
 
   useSEO({
