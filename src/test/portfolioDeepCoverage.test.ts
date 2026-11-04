@@ -95,7 +95,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
     expect(ui).toContain("OPERATIONAL_NOTICE");
     expect(catalogue).toContain("getDeepPortfolioPath");
     for(const lang of LANGS) {
-      expect(app).toContain('<Route path="'+getDeepPortfolioPath(":slug",lang)+'" element={<PortfolioDeepCase />} />');
+      expect(app).toContain('<Route path="'+getDeepPortfolioPath("placeholder",lang).replace("placeholder",":slug")+'" element={<PortfolioDeepCase />} />');
     }
     expect(read("src/lib/portfolioOperationalTypes.ts")).toMatch(/non documenta un incarico realmente svolto/);
     expect(read("src/lib/portfolioDeepTypes.ts")).toMatch(/non è un incarico commissionato/);
