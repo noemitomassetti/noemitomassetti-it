@@ -183,6 +183,8 @@ export function getHreflangAlternates(pageKey: PageKey): Array<{ hrefLang: strin
  * Switch from current path to the corresponding target language path.
  */
 export function switchLanguageUrl(currentPathname: string, targetLang: Language): string {
+  const deepMatch = currentPathname.match(/\/dossier\/([a-z0-9-]+)\/?$/);
+  if (deepMatch) return getLocalizedPath("portfolio", targetLang) + "/dossier/" + deepMatch[1];
   const sampleNum = getPortfolioDocumentNum(currentPathname);
   if (sampleNum) return getPortfolioDocumentPath(sampleNum, targetLang);
   // Preserve article identity when visitors switch language on a blog page.
