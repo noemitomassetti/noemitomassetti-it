@@ -14,6 +14,8 @@ import { esLocale } from "../src/lib/i18n/locales/es";
 import { ITALIAN_LOCALISATION_META } from "../src/lib/i18n/italianLocalisationMeta";
 import { getBlogPosts, getBlogIndexPath, getBlogPostPath } from "../src/lib/blogData";
 import { alignLegacyBlogCopy } from "../src/lib/blogEditorialOverrides";
+import { PORTFOLIO_DOCUMENTS } from "../src/lib/portfolioData";
+import { getPortfolioDocumentPath } from "../src/lib/portfolioDocumentPaths";
 
 type Language = "it" | "en" | "fr" | "es";
 const LANGS: Language[] = ["it", "en", "fr", "es"];
@@ -86,7 +88,7 @@ function render(path:string, lang:Language, title:string, description:string, al
   html = html.replace(/\s*<link rel="alternate"[^>]+>/g,"");
   const altTags = [...LANGS.map(l=>'<link rel="alternate" hreflang="'+l+'" href="'+BASE+alternates(l)+'">'),
     '<link rel="alternate" hreflang="x-default" href="'+BASE+alternates("en")+'">'];
-  const isFictionalExample=path.includes("/dossier/") || Object.values(ROOTS).includes(path);
+  const isFictionalExample=path.includes("/dossier/") || Object.values(ROOTS).includes(path) || /\/(?:sample|esempio|exemple|ejemplo)\/\d{2}$/.test(path);
   const schema = {
     "@context":"https://schema.org",
     "@type":isFictionalExample ? "CreativeWork" : pageType, name:title,description,
@@ -137,6 +139,16 @@ for (const entry of DEEP_PORTFOLIO_ITEMS) {
   }
 }
 
+// The 22 full-document readers are first-class portfolio routes, not invisible SPA links.
+for(const doc of PORTFOLIO_DOCUMENTS){
+  for(const lang of LANGS){
+    const title=doc.title[lang]+" · DOC "+doc.num+" | Noemi Tomassetti";
+    const description=(doc.subtitle[lang]+". "+FICTIONAL[lang]).slice(0,235);
+    render(getPortfolioDocumentPath(doc.num,lang),lang,title,description,
+      l=>getPortfolioDocumentPath(doc.num,l),doc.subtitle[lang]);
+    count++;
+  }
+}
 const BLOG_DESC:Record<Language,string> = {
   it:"Articoli pratici di organizzazione, back office, comunicazione professionale, traduzione e localizzazione.",
   en:"Practical articles on Italian translation, localisation and communication with existing Italian customers.",
@@ -175,7 +187,7 @@ for(const lang of LANGS) {
   count++;
 }
 const expected = PAGE_META.length*LANGS.length-1 + 4 + DEEP_PORTFOLIO_ITEMS.length*4
-  + 4 + publishedIds.length*4 + 4;
+  + PORTFOLIO_DOCUMENTS.length*LANGS.length + 4 + publishedIds.length*4 + 4;
 if (count !== expected) throw new Error("Incomplete page generation: "+count+"/"+expected);
 
 if (!isProduction) {
