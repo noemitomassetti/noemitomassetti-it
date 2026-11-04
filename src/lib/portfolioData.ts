@@ -43,10 +43,10 @@ export interface PortfolioCase {
 }
 
 export const DEMO_DISCLAIMER: Record<Language, string> = {
-  it: "Questo progetto è stato realizzato per mostrare concretamente il mio metodo di lavoro e non rappresenta un incarico commissionato da un cliente reale. Eventuali dati dimostrativi relativi a persone o clienti sono interamente sintetici. Quando vengono utilizzati materiali o informazioni di terzi, sono indicate la fonte e, ove applicabile, la relativa licenza o condizione di utilizzo. I casi illustrano competenze e metodi, non ampliano il catalogo dei servizi offerti: sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione di clienti.",
-  en: "This case study was created to demonstrate my professional methodology and does not represent an engagement commissioned by an actual client. Any demonstrative data relating to persons or clients is entirely synthetic. Where third-party materials are used, the source and applicable license conditions are clearly specified. Demonstration topics do not expand the actual service catalogue: business administration, bookkeeping, invoicing and customer acquisition are excluded.",
-  fr: "Ce projet a été conçu pour illustrer concrètement ma méthode de travail et ne constitue pas une mission commandée par un client réel. Les éventuelles données relatives aux personnes ou aux clients sont entièrement synthétiques. Lorsque des ressources de tiers sont utilisées, la source et la licence correspondante sont mentionnées. Les thèmes démonstratifs n'élargissent pas les services proposés : la gestion administrative d'entreprise, la comptabilité, la facturation et l'acquisition de clients sont exclues.",
-  es: "Este proyecto se ha elaborado para mostrar de manera práctica mi metodología de trabajo y no representa un encargo de un cliente real. Los datos demostrativos sobre personas o clientes son completamente sintéticos. Cuando se utilizan materiales de terceros, se indica la fuente y la licencia aplicable. Los temas de ejemplo no amplían los servicios ofrecidos: se excluyen la administración empresarial, la contabilidad, la facturación y la captación de clientes.",
+  it: "Esempio dimostrativo originale, con dati fittizi: non è un incarico svolto per un cliente reale. Eventuali documenti dei clienti vengono pubblicati soltanto con autorizzazione.",
+  en: "Original fictional work sample, not a commissioned client project. Client documents are published only with permission.",
+  fr: "Exemple professionnel original à partir de données fictives, et non mission client réelle. Aucun document client n’est publié sans autorisation.",
+  es: "Muestra profesional original con datos ficticios, no un encargo real. Los documentos de clientes solo se publican con autorización.",
 };
 
 export const PORTFOLIO_CASES: PortfolioCase[] = [
