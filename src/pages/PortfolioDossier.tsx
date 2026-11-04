@@ -34,7 +34,7 @@ export default function PortfolioDossier() {
   const canonical = slug && entry ? "https://www.noemitomassetti.it"+getDeepPortfolioPath(slug,lang) : undefined;
   useSEO({
     title: entry ? entry.title[lang]+" | Portfolio Noemi Tomassetti" : "Portfolio | Noemi Tomassetti",
-    description: entry ? entry.context[lang] : t.sample,
+    description: tr?.context[lang] ?? op?.scenario[lang] ?? t.sample,
     canonical,
     currentLang:lang,
     pageKey:"portfolio",
@@ -50,7 +50,7 @@ export default function PortfolioDossier() {
       <header className="space-y-5">
         <Tag>{t.sample}{tr ? " · "+DIRECTION_LABELS[tr.direction] : ""}</Tag>
         <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">{entry.title[lang]}</h1>
-        <p className="text-lg text-foreground/80 max-w-4xl">{entry.context[lang]}</p>
+        <p className="text-lg text-foreground/80 max-w-4xl">{tr?.context[lang] ?? op?.scenario[lang]}</p>
         <p className="rounded-lg bg-secondary/40 border border-border p-4 text-sm leading-relaxed">{disclaimer}</p>
         <nav aria-label={t.switch} className="flex flex-wrap gap-2">{LANGS.map(l=><Link key={l} lang={l} aria-current={l===lang?"page":undefined} to={getDeepPortfolioPath(entry.id,l)} className={`rounded-full border px-4 py-2 text-sm font-semibold ${l===lang?"bg-primary text-primary-foreground":"hover:border-primary"}`}>{l.toUpperCase()}</Link>)}</nav>
       </header>
