@@ -301,11 +301,11 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
             {
               label:
                 lang === "it"
-                  ? "Traduzione & Comunicazione Multilingue"
+                  ? "Traduzioni IT ↔ EN/FR/ES e comunicazione multilingue"
                   : lang === "fr"
-                  ? "Traduction vers l’italien et correspondance multilingue"
+                  ? "Traduction IT ↔ FR/EN/ES et correspondance"
                   : lang === "es"
-                  ? "Traducción al italiano y correspondencia multilingüe"
+                  ? "Traducción IT ↔ ES/EN/FR y correspondencia"
                   : "Translation into Italian & Multilingual Correspondence",
               action: () => handleSelectService("translation"),
             },
