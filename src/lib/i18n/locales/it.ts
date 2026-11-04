@@ -5,9 +5,9 @@ export const itLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Noemi Tomassetti | Assistente Virtuale Multilingue e Traduttrice',
-    homeDesc: 'Assistenza virtuale, back office, customer care scritto e traduzione verso l’italiano per freelance, professionisti e piccole attività.',
+    homeDesc: 'Segreteria organizzativa, back office operativo, customer care per clienti esistenti, traduzioni verso l’italiano e contenuti digitali per professionisti e piccole imprese.',
     servicesTitle: 'Servizi Professionali | Noemi Tomassetti',
-    servicesDesc: 'Assistenza virtuale, back office, customer care scritto, traduzione e localizzazione italiana per professionisti e piccole imprese.',
+    servicesDesc: 'Segreteria, back office operativo, comunicazione con clienti già acquisiti, contenuti web e traduzione e localizzazione verso l’italiano.',
     noetomTitle: 'NoeTom | Progetto operativo interno',
     noetomDesc: 'NoeTom è il mio sistema operativo interno in sviluppo, pensato per organizzare incarichi, scadenze e attività.',
     aboutTitle: 'Chi Sono | Noemi Tomassetti',
@@ -68,7 +68,7 @@ export const itLocale: TranslationDictionary = {
         desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Traduco professionalmente verso l’italiano e curo le comunicazioni multilingue negli ambiti concordati.',
       },
       {
-        title: 'Tecnologia moderna e AI',
+        title: 'Organizzazione e strumenti digitali',
         desc: 'Utilizzo strumenti digitali e procedure di lavoro organizzate, mantenendo sempre il controllo umano su comunicazioni, documenti e consegne.',
       },
       {
@@ -91,7 +91,7 @@ export const itLocale: TranslationDictionary = {
           "Segreteria organizzativa e back office operativo: email, agenda, scadenze, inserimento dati, ordini, aggiornamento listini, preventivi basati sulle indicazioni del cliente e assistenza ai clienti esistenti. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
         iconName: 'Mail',
         items: [
-          'Gestione e organizzazione della casella email',
+          'Gestione e organizzazione delle email',
           'Gestione agenda e coordinamento appuntamenti',
           'Assistenza e comunicazioni con i clienti già acquisiti',
           'Organizzazione documenti e archivi cloud',
@@ -123,12 +123,12 @@ export const itLocale: TranslationDictionary = {
           'Dai testi per il tuo sito alle email informative, fino alla revisione e all’ottimizzazione di testi generati con AI per renderli naturali, coerenti e adatti al tuo pubblico.',
         iconName: 'PenTool',
         items: [
-          'Copywriting per siti web e landing page',
+          'Revisione e preparazione di testi per siti web e landing page',
           'Rielaborazione e revisione testi esistenti',
           'Stesura di newsletter e comunicazioni ai clienti',
           'Descrizioni di servizi e guide informative',
           'Articoli per blog e materiali divulgativi',
-          'Umanizzazione e affinamento testi creati con AI',
+          'Revisione e affinamento di testi generati con l’AI',
         ],
       },
       {
@@ -149,7 +149,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         id: 'digital-support',
-        title: 'Supporto Digitale',
+        title: 'Supporto digitale',
         subtitle: 'Migliora la tua organizzazione digitale e i tuoi strumenti di lavoro.',
         description:
           'Riorganizzazione di cartelle cloud, impostazione di strumenti di lavoro online e procedure su misura per snellire le attività ripetitive della tua giornata.',
@@ -365,7 +365,7 @@ export const itLocale: TranslationDictionary = {
     credentials: [
       { title: 'Esperienza professionale ultraventennale', detail: 'Customer care, back office, organizzazione e supporto operativo' },
       { title: 'Formazione accademica d’eccellenza', detail: 'Laurea in Mediazione Linguistica (110 e lode) & Master Universitario in Traduzione Specialistica' },
-      { title: 'Quattro lingue di lavoro', detail: 'Italiano madrelingua, supporto professionale in Inglese, Francese, Spagnolo' },
+      { title: 'Quattro lingue di lavoro', detail: 'Italiano madrelingua, inglese e francese avanzati, spagnolo intermedio-alto' },
       { title: 'Organizzazione digitale', detail: 'Archivi condivisi, strumenti di collaborazione e procedure operative' },
     ],
     ctaReadMore: 'Approfondisci il mio percorso',
@@ -511,7 +511,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Il carico mentale nel lavoro quotidiano: come gestire gli impegni aperti',
         excerpt: 'Tenere a mente email a cui rispondere, follow-up aperti e promesse informali consuma la parte migliore delle tue energie.',
         date: 'Settembre 2026',
-        category: 'Intelligenza Artificiale e NoeTom',
+        category: 'Strumenti digitali e organizzazione',
         readTime: '5 min di lettura',
       },
       {
