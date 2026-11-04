@@ -43,7 +43,7 @@ export const frLocale: TranslationDictionary = {
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Demande sans engagement',
     description:
-      'Je traduis du français, de l’anglais et de l’espagnol vers l’italien, révise vos contenus italiens et assure les tâches opérationnelles convenues nécessitant la maîtrise de cette langue.',
+      'Je traduis entre l’italien et le français, l’anglais ou l’espagnol, dans les deux sens. Je révise vos contenus italiens et assure les tâches opérationnelles convenues liées à vos activités avec l’Italie.',
     ctaServices: 'Explorer les Services',
     ctaNoeTom: 'Découvrir NoeTom (en développement)',
     quickStats: {
@@ -101,15 +101,15 @@ export const frLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Traduction vers l’italien et communication multilingue',
-        subtitle: 'Traduction du français et de l’anglais vers l’italien ; espagnol vers l’italien selon le texte.',
+        title: 'Traductions italien ↔ français, anglais et espagnol',
+        subtitle: 'Traductions dans les deux sens avec l’italien, et localisation pour le marché italien.',
         description:
-          "Traduction du français et de l’anglais vers l’italien, avec évaluation préalable des demandes depuis l’espagnol selon la nature du texte. Je révise et adapte également les contenus italiens destinés aux clients en Italie. Je ne propose pas de traduction professionnelle de l’italien vers d’autres langues.",
+          "Je traduis dans les deux sens entre l’italien et le français, l’anglais ou l’espagnol, après évaluation du domaine, de la complexité et du public visé. Je propose également la localisation de contenus pour le marché italien. Si le texte le nécessite, une révision finale par un locuteur natif de la langue cible peut être convenue dans le devis.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et pages de destination en italien',
           'Correspondance professionnelle en italien',
-          'Traduction en italien de propositions et présentations',
+          'Traduction de propositions et présentations (IT ↔ FR/EN/ES)',
           'Supports de formation traduits vers l’italien',
           'Traduction en italien de lettres d’information et messages',
           'Révision et relecture de contenus en italien',
@@ -195,7 +195,7 @@ export const frLocale: TranslationDictionary = {
        deliverables: ['Analyse des tâches à déléguer', 'Organisation des e-mails, fichiers et procédures convenues', 'Synthèse du travail et des priorités'], turnaround: 'À convenir'},
       {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes des clients déjà acquis, informations sur les commandes et suivis de service selon des procédures convenues.",
        deliverables: ['Modèles de réponses et FAQ', 'Gestion convenue des demandes écrites', 'Suivi des relances et activités'], turnaround: 'À convenir'},
-      {id: 'p3', title: 'Traduction et adaptation multilingue', badge: 'IT · EN · FR · ES', description: 'Traduction du français, de l’anglais et de l’espagnol vers l’italien, avec un accompagnement distinct pour les échanges multilingues convenus.',
+      {id: 'p3', title: 'Traduction et adaptation multilingue', badge: 'IT · EN · FR · ES', description: 'Traductions dans les deux sens entre l’italien et le français, l’anglais et l’espagnol ; localisation pour l’Italie et correspondance multilingue convenue.',
        deliverables: ['Analyse des textes, publics et termes', 'Traduction ou localisation des contenus définis', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
       {id: 'p4', title: 'Révision de contenus existants', badge: 'Clarté et cohérence', description: 'Relecture et amélioration de documents professionnels et multilingues existants.',
        deliverables: ['Évaluation du texte et des objectifs', 'Amélioration de la structure, du ton et de la lisibilité', 'Document final avec modifications identifiables'], turnaround: 'Selon périmètre'},
@@ -395,7 +395,7 @@ export const frLocale: TranslationDictionary = {
       {
         period: '2026 – aujourd’hui',
         role: 'Assistante virtuelle et traductrice indépendante',
-        detail: 'Soutien aux activités liées à l’Italie, traduction vers l’italien et relation client écrite.',
+        detail: 'Soutien aux activités liées à l’Italie, traductions dans les deux sens avec l’italien et relation client écrite.',
       },
     ],
     valuesTitle: 'Mes principes de collaboration',
@@ -453,7 +453,7 @@ export const frLocale: TranslationDictionary = {
       serviceNeeded: 'Domaine d’accompagnement souhaité *',
       serviceOptions: [
         'Relation client italienne et soutien opérationnel',
-        'Traduction et localisation vers l’italien (FR/EN/ES → IT)',
+        'Traduction IT ↔ FR/EN/ES et localisation en italien',
         'Révision et adaptation de contenus italiens',
         'Recherches Documentaires de Soutien',
         'Outils numériques et processus liés à l’Italie',
@@ -532,7 +532,7 @@ export const frLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Traduction et localisation vers l’italien, échanges écrits avec les clients italiens existants et soutien opérationnel pour les professionnels et petites entreprises travaillant avec l’Italie.',
+      'Traductions entre l’italien et le français, l’anglais et l’espagnol, localisation vers l’italien et soutien écrit aux clients italiens existants pour les professionnels travaillant avec l’Italie.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · en développement',
     companyTitle: 'À Propos & Ressources',
