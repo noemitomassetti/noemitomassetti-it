@@ -1,11 +1,12 @@
 import type { Language } from "./i18n/types";
 import { TRANSLATION_SAMPLES_A } from "./portfolioTranslationSamplesA";
 import { OPERATIONAL_SAMPLES_A } from "./portfolioOperationalSamplesA";
+import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import type { TranslationDeepCase } from "./portfolioDeepTypes";
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
 export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = TRANSLATION_SAMPLES_A;
-export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = OPERATIONAL_SAMPLES_A;
+export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B];
 export type DeepPortfolioItem =
   | { kind: "translation"; item: TranslationDeepCase }
   | { kind: "operations"; item: OperationalDeepCase };
