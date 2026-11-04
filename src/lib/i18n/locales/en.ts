@@ -11,7 +11,7 @@ export const enLocale: TranslationDictionary = {
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
     aboutTitle: 'About Noemi Tomassetti | Background & Philosophy',
-    aboutDesc: 'Over 20 years of professional experience across operations, linguistics, customer care, and digital workflows. Degree in Language Mediation (110 cum laude).',
+    aboutDesc: 'Over 20 years of experience in back office, customer care and professional communication, supported by specialist language training.',
     resourcesTitle: 'Resources & Insights | Noemi Tomassetti',
     resourcesDesc: 'Actionable perspectives on delegation, multilingual communication, operational clarity, and AI-assisted workflows for solopreneurs.',
     contactTitle: 'Contact & Quotes | Noemi Tomassetti',
@@ -86,24 +86,24 @@ export const enLocale: TranslationDictionary = {
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Italian Customer Communication & Back Office',
+        title: 'Italian-Language Customer Care & Back Office',
         subtitle: 'Organised Italian-language support for your existing customer relationships.',
         description:
           "Written Italian-language support for existing customers, order updates, correspondence, document organisation and operational follow-ups connected with Italy. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
-          'Calendar coordination & appointment scheduling',
+          'Scheduling related to existing Italian customers and appointments',
           'Existing-customer care & professional communication',
-          'Document archiving & cloud file architecture',
+          'Document organisation and cloud filing',
           'Support follow-ups for existing customers',
           'Data entry & back-office coordination',
         ],
       },
       {
         id: 'translation-localization',
-        title: 'Translation & Localisation',
-        subtitle: 'Native Italian translation from English, French and Spanish.',
+        title: 'Translation & Localisation into Italian',
+        subtitle: 'Translation from English and French into Italian; Spanish into Italian subject to text assessment.',
         description:
           "Translation from English, French and Spanish into Italian, plus editing and cultural localisation of Italian websites, landing pages, catalogues, product pages and professional communications. I do not offer professional translation from Italian into English, French or Spanish.",
         iconName: 'Globe',
@@ -140,8 +140,8 @@ export const enLocale: TranslationDictionary = {
           "Gathering, checking and comparing information, sources, suppliers and digital tools solely in support of a client's existing operations. No contact sourcing, customer acquisition or prospecting.",
         iconName: 'Search',
         items: [
-          'Competitor landscape & pricing benchmarking',
-          'Supplier, tool & software vendor comparisons',
+          'Competitor and publicly available pricing comparisons for Italy-related projects',
+          'Supplier and digital-tool comparisons for existing Italy-related activities',
           'Industry data gathering & source validation',
           'Italy-related information research for existing projects',
           'Executive summary reports with key takeaways',
@@ -151,13 +151,13 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'digital-support',
         title: 'Digital Support',
-        subtitle: 'Streamlining your digital ecosystem and practical tools.',
+        subtitle: 'Keeping the tools used for your Italian operations organised.',
         description:
           'From organising Google Workspace and cloud drives to setting up online tools and standard procedures, I help independent professionals operate with clarity and efficiency.',
         iconName: 'Cpu',
         items: [
           'Google Workspace & cloud drive reorganization',
-          'SaaS tools setup (calendars, forms, portals)',
+          'Basic setup of agreed digital tools (calendars and forms)',
           'Practical support with daily business tools',
           'Operational standard operating procedures (SOPs)',
           'Organising approved customer communication workflows',
@@ -362,7 +362,7 @@ export const enLocale: TranslationDictionary = {
     credentials: [
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
       { title: 'Academic Excellence', detail: 'Degree in Linguistic Mediation (110/110 cum laude) & University Master’s in Specialised Translation' },
-      { title: '4 Working Languages', detail: 'Italian native, professional support in English, French, and Spanish' },
+      { title: 'Four Working Languages', detail: 'Native Italian, advanced English and French, upper-intermediate Spanish' },
       { title: 'Digital Organisation', detail: 'Cloud files, collaborative tools and clear operational procedures' },
     ],
     ctaReadMore: 'Read Full Background & Approach',
@@ -489,8 +489,8 @@ export const enLocale: TranslationDictionary = {
   },
   resourcesPage: {
     tag: 'INSIGHTS & GUIDES',
-    title: 'Operational Wisdom for Independent Professionals',
-    subtitle: 'Practical perspectives on delegation, multilingual expansion, and modern AI productivity.',
+    title: 'Practical Guides for Independent Professionals',
+    subtitle: 'Practical guidance on managing existing customers, organising operational tasks and communicating effectively with Italian audiences.',
     categories: ['All', 'Operations & Delegation', 'Multilingual & Localisation', 'Digital Presence & Web', 'Digital Tools & Organisation'],
     articles: [
       {
@@ -508,7 +508,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Managing Mental Load: Keep Track of Open Tasks and Commitments',
         excerpt: 'Open follow-ups, unanswered emails and informal commitments can make the working day harder to organise.',
         date: 'September 2026',
-        category: 'AI & NoeTom',
+        category: 'Digital Tools & Organisation',
         readTime: '5 min read',
       },
       {
