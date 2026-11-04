@@ -381,6 +381,11 @@ jobs:
             } finally {await browser.close();}
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
+      - name: Automated WCAG AA accessibility review (representative routes)
+        shell: bash
+        run: |
+          npm install --no-save --no-package-lock axe-core@4.10.3
+          node scripts/accessibility-audit.cjs
       - name: Upload browser screenshots
         if: always()
         uses: actions/upload-artifact@v4
