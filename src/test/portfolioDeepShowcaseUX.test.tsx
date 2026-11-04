@@ -32,6 +32,19 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("button", { name: /Esplora tutti i dossier/ })).toHaveAttribute("aria-expanded", "false");
   });
 
+  it("supports multilingual search, case-insensitive matching and empty results", () => {
+    mount();
+    const search = screen.getByRole("searchbox", { name: "Cerca nei dossier" });
+    fireEvent.change(search, { target: { value: "SOFTWARE" } });
+    expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
+    expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(1);
+    fireEvent.change(search, { target: { value: "xyz-never-a-service" } });
+    expect(screen.getByRole("status")).toHaveTextContent("0 / 0");
+    expect(screen.getByText(/Nessun dossier corrisponde alla ricerca/)).toBeInTheDocument();
+    fireEvent.change(search, { target: { value: "" } });
+    expect(screen.getByRole("status")).toHaveTextContent("8 / 27");
+  });
+
   it("identifies demonstration work honestly and provides distinct link names", () => {
     mount("en");
     expect(screen.getByRole("heading", { name: /See how I approach each service through detailed samples/ })).toBeInTheDocument();
