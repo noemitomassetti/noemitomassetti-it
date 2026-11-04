@@ -306,7 +306,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
                   ? "Traduction IT ↔ FR/EN/ES et correspondance"
                   : lang === "es"
                   ? "Traducción IT ↔ ES/EN/FR y correspondencia"
-                  : "Translation into Italian & Multilingual Correspondence",
+                  : "IT ↔ EN/FR/ES Translation & Correspondence",
               action: () => handleSelectService("translation"),
             },
             {
