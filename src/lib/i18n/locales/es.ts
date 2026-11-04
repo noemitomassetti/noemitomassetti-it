@@ -104,7 +104,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Traducción al italiano y comunicación multilingüe',
         subtitle: 'Traducción del inglés y el francés al italiano; español al italiano según el texto.',
         description:
-          "Traducción del español, inglés y francés al italiano, revisión y localización cultural de webs, landing pages, catálogos, fichas de producto y comunicaciones para clientes italianos. No ofrezco traducción profesional al español, inglés o francés.",
+          "Traducción del inglés y el francés al italiano, y del español al italiano previa evaluación del texto y su especialidad. También reviso y adapto contenidos para el público italiano. No ofrezco traducción profesional del italiano a otros idiomas.",
         iconName: 'Globe',
         items: [
           'Localización al italiano de sitios web y páginas de venta',
