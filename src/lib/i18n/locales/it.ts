@@ -69,7 +69,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Tecnologia moderna e AI',
-        desc: 'Unisco cura artigianale e strumenti avanzati di intelligenza artificiale, con NoeTom, il mio sistema interno attualmente in sviluppo, per organizzare meglio i processi.',
+        desc: 'Utilizzo strumenti digitali e procedure di lavoro organizzate, mantenendo sempre il controllo umano su comunicazioni, documenti e consegne.',
       },
       {
         title: 'Riservatezza e metodo',
@@ -101,15 +101,15 @@ export const itLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Traduzione & Comunicazione Multilingue',
+        title: 'Traduzione verso l’italiano e comunicazione multilingue',
         subtitle: 'Italiano · Inglese · Francese · Spagnolo con accuratezza contestuale.',
         description:
           "Traduzione dall’inglese, dal francese e dallo spagnolo verso l’italiano, revisione di contenuti italiani e supporto alla corrispondenza multilingue nei limiti delle competenze linguistiche. Non offro traduzioni professionali dall’italiano verso inglese, francese o spagnolo.",
         iconName: 'Globe',
         items: [
-          'Localizzazione di siti web e landing page',
+          'Localizzazione verso l’italiano di siti web e landing page',
           'Corrispondenza professionale multilingue',
-          'Proposte commerciali e presentazioni',
+          'Traduzione verso l’italiano di proposte e presentazioni',
           'Materiali formativi e contenuti per corsi',
           'Traduzione di newsletter e comunicazioni',
           'Revisione e controllo qualità linguistica',
@@ -133,7 +133,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         id: 'online-research',
-        title: 'Ricerche Informative a Supporto',
+        title: 'Ricerche informative a supporto',
         subtitle: 'Informazioni chiare e strutturate per orientare le tue decisioni.',
         description:
           "Raccolta, verifica e confronto di informazioni, fonti, fornitori e strumenti digitali esclusivamente a supporto delle attività concordate con il cliente. Non comprende ricerca contatti, acquisizione clienti o prospecting.",
@@ -366,7 +366,7 @@ export const itLocale: TranslationDictionary = {
       { title: 'Esperienza professionale ultraventennale', detail: 'Customer care, back office, organizzazione e supporto operativo' },
       { title: 'Formazione accademica d’eccellenza', detail: 'Laurea in Mediazione Linguistica (110 e lode) & Master Universitario in Traduzione Specialistica' },
       { title: 'Quattro lingue di lavoro', detail: 'Italiano madrelingua, supporto professionale in Inglese, Francese, Spagnolo' },
-      { title: 'Strumenti e innovazione', detail: 'Supporto digitale e ideatrice del progetto interno NoeTom, in sviluppo' },
+      { title: 'Organizzazione digitale', detail: 'Archivi condivisi, strumenti di collaborazione e procedure operative' },
     ],
     ctaReadMore: 'Approfondisci il mio percorso',
   },
@@ -378,7 +378,7 @@ export const itLocale: TranslationDictionary = {
       'La mia storia professionale si è sviluppata attorno a tre pilastri: la passione per le lingue, la precisione organizzativa e il piacere di essere un punto di riferimento affidabile per i professionisti con cui collaboro.',
       'Ho maturato oltre vent’anni di esperienza professionale in diversi contesti lavorativi, sviluppando competenze in customer care, organizzazione, back office e comunicazione multilingue. Ho imparato che l’efficienza concreta non nasce da formule rigide, ma dalla capacità di ascoltare, semplificare i flussi e togliere gli attriti operativi quotidiani.',
       'Nel mio percorso accademico ho conseguito la Laurea triennale in Mediazione Linguistica (Università di Macerata, 2009, 110/110 e lode) e il Master Universitario di I livello in Traduzione Specialistica – lingua inglese (2010–2012, 1.500 ore, 60 CFU). Tra gli ambiti affrontati durante il Master figurano il settore letterario, giuridico, economico, tecnologico e scientifico (i testi a carattere giuridico vengono valutati caso per caso; non svolgo traduzioni asseverate o giurate).',
-      'Accanto all’assistenza continuativa, sto sviluppando NoeTom, un progetto interno di assistente operativo per organizzare il mio lavoro, attualmente in test privato.',
+      'Lavoro con un approccio pratico: attività concordate, comunicazioni chiare, organizzazione dei materiali e aggiornamenti regolari.',
     ],
     timeline: [
       {
@@ -397,9 +397,9 @@ export const itLocale: TranslationDictionary = {
         detail: '1.500 ore, 60 CFU, prova finale superata. Ambiti affrontati: letterario, giuridico, economico, tecnologico, scientifico.',
       },
       {
-        period: '2024 – Oggi',
-        role: 'Ideazione e sviluppo di NoeTom',
-        detail: 'Progettazione di un assistente operativo AI per la gestione quotidiana dei professionisti.',
+        period: '2026 – Oggi',
+        role: 'Attività professionale indipendente',
+        detail: 'Assistenza virtuale multilingue, back office operativo, traduzione e revisione di contenuti.',
       },
     ],
     valuesTitle: 'I principi del mio modo di lavorare',
@@ -460,9 +460,8 @@ export const itLocale: TranslationDictionary = {
         'Traduzione verso l’italiano (EN/FR/ES → IT) e comunicazione multilingue',
         'Scrittura & Revisione Testi',
         'Ricerche Informative a Supporto',
-        'Supporto Digitale & Flussi AI',
+        'Supporto digitale e organizzazione degli strumenti',
         'Contenuti per siti web e landing page',
-        'Informazioni sul progetto interno NoeTom',
         'Altro / Richiesta generale',
       ],
       preferredLanguage: 'Lingua preferita per le comunicazioni',
@@ -495,7 +494,7 @@ export const itLocale: TranslationDictionary = {
     tag: 'APPROFONDIMENTI',
     title: 'Guide e Riflessioni Operative',
     subtitle: 'Articoli pratici su organizzazione, delega, comunicazione multilingue e tecnologie utili.',
-    categories: ['Tutti', 'Organizzazione e Delega', 'Comunicazione e Multilingue', 'Presenza Online e Web', 'Intelligenza Artificiale e NoeTom'],
+    categories: ['Tutti', 'Organizzazione e Delega', 'Comunicazione e Multilingue', 'Presenza Online e Web', 'Strumenti digitali e organizzazione'],
     articles: [
       {
         id: 'r1',
@@ -537,7 +536,7 @@ export const itLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Supporto digitale, multilingue e operativo per liberi professionisti, consulenti e piccole imprese. Ideatrice di NoeTom, progetto di supporto operativo digitale attualmente in sviluppo.',
+      'Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazioni professionali e traduzioni verso l’italiano per freelance, consulenti e piccole imprese.',
     servicesTitle: 'Servizi',
     noetomTitle: 'NoeTom · in sviluppo',
     companyTitle: 'Chi Sono & Risorse',
