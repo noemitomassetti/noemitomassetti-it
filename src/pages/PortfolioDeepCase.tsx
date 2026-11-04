@@ -79,7 +79,7 @@ export default function PortfolioDeepCase() {
 
         <section className="mt-12">
           <h2 className="text-2xl font-bold mb-5">{t.context}</h2>
-          <p className="text-foreground/85 leading-relaxed max-w-4xl">{entry.item.context ? (entry.kind==="translation"?entry.item.context[lang]:"") : (entry.kind==="operations"?entry.item.scenario[lang]:"")}</p>
+          <p className="text-foreground/85 leading-relaxed max-w-4xl">{entry.kind==="translation" ? entry.item.context[lang] : entry.item.scenario[lang]}</p>
         </section>
 
         {entry.kind==="translation" ? <>
