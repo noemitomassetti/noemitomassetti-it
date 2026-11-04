@@ -12,6 +12,8 @@ import { enLocale } from "../src/lib/i18n/locales/en";
 import { frLocale } from "../src/lib/i18n/locales/fr";
 import { esLocale } from "../src/lib/i18n/locales/es";
 import { ITALIAN_LOCALISATION_META } from "../src/lib/i18n/italianLocalisationMeta";
+import { getBlogPosts, getBlogIndexPath, getBlogPostPath } from "../src/lib/blogData";
+import { alignLegacyBlogCopy } from "../src/lib/blogEditorialOverrides";
 
 type Language = "it" | "en" | "fr" | "es";
 const LANGS: Language[] = ["it", "en", "fr", "es"];
@@ -22,6 +24,8 @@ const PAGE_META = [
   ["about","aboutTitle","aboutDesc"],
   ["resources","resourcesTitle","resourcesDesc"],
   ["contact","contactTitle","contactDesc"],
+  ["privacy","privacyTitle","privacyDesc"],
+  ["cookie","cookieTitle","cookieDesc"],
   ["italianLocalisation","servicesTitle","servicesDesc"]
 ] as const;
 const BASE = "https://www.noemitomassetti.it";
@@ -53,7 +57,7 @@ const esc = (s:string) => s.replaceAll("&","&amp;").replaceAll("<","&lt;").repla
 const templatePath = "dist/index.html";
 if (!existsSync(templatePath)) throw new Error("Build output not found. Run vite build first.");
 const template = readFileSync(templatePath, "utf8");
-const isProduction = process.env.VERCEL_ENV === "production" || process.env.SITE_PUBLIC_RELEASE === "true";
+const isProduction = process.env.VERCEL_ENV === "production" || process.env.CONTEXT === "production" || process.env.SITE_PUBLIC_RELEASE === "true";
 const robots = isProduction ? "index, follow" : "noindex, nofollow";
 
 function updateMeta(html:string, attr:string, key:string, value:string) {
@@ -63,13 +67,14 @@ function updateMeta(html:string, attr:string, key:string, value:string) {
   return html.replace(rex,replacement);
 }
 
-function render(path:string, lang:Language, title:string, description:string, alternates:(l:Language)=>string, summary:string) {
+function render(path:string, lang:Language, title:string, description:string, alternates:(l:Language)=>string, summary:string, pageType:"WebPage"|"BlogPosting"="WebPage") {
   const canonical = BASE + path;
   let html = template.replace(/<html lang="[^"]+"/, '<html lang="'+lang+'"');
   html = html.replace(/<title>[\s\S]*?<\/title>/, "<title>"+esc(title)+"</title>");
   html = updateMeta(html,"name","description",description);
   html = updateMeta(html,"name","robots",robots);
   html = updateMeta(html,"property","og:title",title);
+  if (pageType==="BlogPosting") html = updateMeta(html,"property","og:type","article");
   html = updateMeta(html,"property","og:description",description);
   html = updateMeta(html,"property","og:url",canonical);
   html = updateMeta(html,"property","og:locale",LOCALES[lang]);
@@ -84,7 +89,7 @@ function render(path:string, lang:Language, title:string, description:string, al
   const isFictionalExample=path.includes("/dossier/") || Object.values(ROOTS).includes(path);
   const schema = {
     "@context":"https://schema.org",
-    "@type":isFictionalExample ? "CreativeWork" : "WebPage", name:title,description,
+    "@type":isFictionalExample ? "CreativeWork" : pageType, name:title,description,
     inLanguage:lang,url:canonical,
     ...(isFictionalExample ? {genre:"Original fictional portfolio demonstration"} : {}),
     author:{"@type":"Person",name:"Noemi Tomassetti"}
@@ -131,10 +136,51 @@ for (const entry of DEEP_PORTFOLIO_ITEMS) {
     count++;
   }
 }
-if (count !== PAGE_META.length*4-1 + 4+DEEP_PORTFOLIO_ITEMS.length*4) throw new Error("Incomplete page generation");
+
+const BLOG_DESC:Record<Language,string> = {
+  it:"Articoli pratici di organizzazione, back office, comunicazione professionale, traduzione e localizzazione.",
+  en:"Practical articles on Italian translation, localisation and communication with existing Italian customers.",
+  fr:"Articles sur la traduction vers l’italien, la localisation et les échanges avec des clients italiens existants.",
+  es:"Artículos sobre traducción al italiano, localización y comunicación con clientes italianos actuales."
+};
+for (const lang of LANGS) {
+  render(getBlogIndexPath(lang),lang,DICTS[lang].meta.resourcesTitle+" | Blog",BLOG_DESC[lang],getBlogIndexPath,BLOG_DESC[lang]);
+  count++;
+}
+const publishedIds = getBlogPosts("it").filter(p=>p.published!==false).map(p=>p.id);
+for (const id of publishedIds) {
+  for (const lang of LANGS) {
+    const article=getBlogPosts(lang).find(p=>p.id===id && p.published!==false);
+    if (!article) throw new Error("Missing published blog post "+id+"/"+lang);
+    const post=alignLegacyBlogCopy(article);
+    const alt=(l:Language)=>{
+      const counterpart=getBlogPosts(l).find(p=>p.id===id && p.published!==false);
+      if(!counterpart) throw new Error("Missing blog alternate "+id+"/"+l);
+      return getBlogPostPath(counterpart.slug,l);
+    };
+    render(getBlogPostPath(post.slug,lang),lang,post.title+" | Noemi Tomassetti",post.excerpt,alt,post.excerpt,"BlogPosting");
+    count++;
+  }
+}
+const QUESTIONNAIRE_META:Record<Language,{title:string;description:string}> = {
+  it:{title:"Richiesta guidata di supporto professionale | Noemi Tomassetti",description:"Descrivi la tua attività e le esigenze di segreteria, back office, comunicazione o traduzione attraverso un percorso guidato."},
+  en:{title:"Request Operational or Italian-Language Support | Noemi Tomassetti",description:"Describe your translation, Italian-market localisation or existing-customer communication needs through a guided enquiry."},
+  fr:{title:"Demande de soutien professionnel | Noemi Tomassetti",description:"Présentez vos besoins de traduction vers l’italien, de localisation ou de communication avec vos clients italiens existants."},
+  es:{title:"Solicitud de asistencia profesional | Noemi Tomassetti",description:"Describe tus necesidades de traducción al italiano, localización y atención a clientes italianos existentes."}
+};
+for(const lang of LANGS) {
+  const details=QUESTIONNAIRE_META[lang];
+  render(ROUTES.questionnaire.paths[lang],lang,details.title,details.description,
+    l=>ROUTES.questionnaire.paths[l],details.description);
+  count++;
+}
+const expected = PAGE_META.length*LANGS.length-1 + 4 + DEEP_PORTFOLIO_ITEMS.length*4
+  + 4 + publishedIds.length*4 + 4;
+if (count !== expected) throw new Error("Incomplete page generation: "+count+"/"+expected);
+
 if (!isProduction) {
   let shell = readFileSync(templatePath,"utf8");
   shell = updateMeta(shell,"name","robots","noindex, nofollow");
   writeFileSync(templatePath,shell,"utf8");
 }
-console.log("PASS: "+count+" static multilingual pages (main site + portfolio dossiers), production="+isProduction);
+console.log("PASS: "+count+" static multilingual pages (all public sitemap URLs except root), production="+isProduction);
