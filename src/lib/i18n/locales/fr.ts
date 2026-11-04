@@ -4,8 +4,8 @@ export const frLocale: TranslationDictionary = {
   lang: 'fr',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Traduction vers l’italien et accompagnement | Noemi Tomassetti',
-    homeDesc: 'Traduction et localisation vers l’italien, relation client écrite et soutien opérationnel pour les professionnels travaillant avec l’Italie.',
+    homeTitle: 'Traduction italien ↔ FR/EN/ES et accompagnement | Noemi Tomassetti',
+    homeDesc: 'Traduction dans les deux sens entre italien et français, anglais ou espagnol, localisation vers l’italien et soutien aux professionnels travaillant avec l’Italie.',
     servicesTitle: 'Traduction italienne et soutien opérationnel | Noemi Tomassetti',
     servicesDesc: 'Traduction et localisation vers l’italien, suivi écrit des clients italiens existants et soutien opérationnel pour les activités liées à l’Italie.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
@@ -65,7 +65,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         title: 'Exigence linguistique',
-        desc: 'De langue maternelle italienne, je maîtrise le français et l’anglais à un niveau avancé et l’espagnol à un niveau intermédiaire supérieur. Je traduis professionnellement vers l’italien.',
+        desc: 'De langue maternelle italienne, je maîtrise le français et l’anglais à un niveau avancé et l’espagnol à un niveau intermédiaire supérieur. Je traduis dans les deux sens avec l’italien, selon le domaine et le public visé.',
       },
       {
         title: 'Outils numériques adaptés',
@@ -110,7 +110,7 @@ export const frLocale: TranslationDictionary = {
           'Localisation de sites web et pages de destination en italien',
           'Correspondance professionnelle en italien',
           'Traduction de propositions et présentations (IT ↔ FR/EN/ES)',
-          'Supports de formation traduits vers l’italien',
+          'Traduction de supports de formation IT ↔ FR/EN/ES',
           'Traduction en italien de lettres d’information et messages',
           'Révision et relecture de contenus en italien',
         ],
