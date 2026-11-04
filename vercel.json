@@ -17,6 +17,22 @@
       "destination": "/es/ejemplos-de-trabajo/dossier/:id/index.html"
     },
     {
+      "source": "/work-examples/sample/:num",
+      "destination": "/work-examples/sample/:num/index.html"
+    },
+    {
+      "source": "/it/esempi-di-lavoro/esempio/:num",
+      "destination": "/it/esempi-di-lavoro/esempio/:num/index.html"
+    },
+    {
+      "source": "/fr/exemples-de-projets/exemple/:num",
+      "destination": "/fr/exemples-de-projets/exemple/:num/index.html"
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/ejemplo/:num",
+      "destination": "/es/ejemplos-de-trabajo/ejemplo/:num/index.html"
+    },
+    {
       "source": "/it",
       "destination": "/it/index.html"
     },
