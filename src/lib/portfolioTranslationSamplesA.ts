@@ -357,8 +357,8 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
       "Si los nuevos plazos no se ajustan a las necesidades de su proyecto, puede responder a este correo. Le explicaremos las opciones previstas en las condiciones de su pedido, sin realizar cambios sin su autorización. Lamentamos las molestias y agradecemos su comprensión. Atentamente, Equipo de Atención al Cliente."
     ],
     "target": [
-      "Oggetto: aggiornamento sull’ordine ES-2148. Buongiorno Lucia, grazie per il messaggio. Abbiamo verificato il suo ordine e le confermiamo che la finitura rovere chiaro è ancora in attesa di una nuova fornitura del produttore. Gli altri articoli sono pronti, ma non sono ancora stati spediti.",
-      "Per questo motivo non possiamo confermare la settimana di spedizione inizialmente stimata. Il nostro team aggiornerà la pianificazione non appena riceverà conferma dal fornitore. Le scriveremo quando avremo una data di partenza attendibile. Per il momento non è necessario che faccia nulla.",
+      "Oggetto: aggiornamento sull’ordine ES-2148. Buongiorno Lucía, grazie per il messaggio. Abbiamo verificato il suo ordine e le confermiamo che la finitura rovere chiaro è ancora in attesa di una nuova fornitura del produttore. Gli altri articoli sono pronti, ma non sono ancora stati spediti.",
+      "Per questo motivo non possiamo confermare la settimana di spedizione inizialmente stimata. Il nostro team aggiornerà la pianificazione non appena riceverà conferma dal fornitore. Le scriveremo quando avremo una data di spedizione attendibile. Per il momento non è necessario che faccia nulla.",
       "Se le nuove tempistiche non fossero compatibili con le esigenze del suo progetto, può rispondere a questa email. Le illustreremo le possibilità previste dalle condizioni dell’ordine, senza apportare modifiche senza la sua autorizzazione. Ci scusiamo per il disagio e la ringraziamo per la comprensione. Cordiali saluti, Servizio clienti."
     ],
     "terminology": [
@@ -422,10 +422,10 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
       "es": "Catálogos y fichas de producto"
     },
     "title": {
-      "it": "Scheda prodotto sostenibile IT → ES",
-      "en": "Sustainable homeware product page: Italian to Spanish",
-      "fr": "Fiche produit : italien vers espagnol",
-      "es": "Ficha de producto: italiano a español"
+      "it": "Scheda tessile per la casa IT → ES",
+      "en": "Home-textile product page: Italian to Spanish",
+      "fr": "Fiche de linge de table : italien vers espagnol",
+      "es": "Ficha de textil de mesa: italiano a español"
     },
     "context": {
       "it": "Un’azienda immaginaria italiana desidera una scheda in spagnolo per un articolo di tessile casa: materiali, manutenzione e condizioni di disponibilità, senza dichiarazioni ambientali non verificabili.",
