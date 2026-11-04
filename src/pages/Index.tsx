@@ -438,12 +438,12 @@ export default function IndexPage() {
           : "Are you available for international clients?",
       a:
         lang === "it"
-          ? "Noemi è disponibile a lavorare da remoto con professionisti e aziende sia in Italia sia all'estero, offrendo pieno supporto operativo e linguistico in quattro lingue: italiano, inglese, francese e spagnolo."
+          ? "Sì. Lavoro da remoto con professionisti italiani e con attività estere che hanno già clienti o progetti in Italia. Traduco dall’inglese, dal francese e dallo spagnolo verso l’italiano e, negli ambiti concordati, seguo le comunicazioni con clienti già acquisiti."
           : lang === "fr"
-          ? "Noemi est disponible pour collaborer à distance avec des professionnels et entreprises en Italie comme à l'étranger, en assurant un soutien opérationnel et linguistique complet en quatre langues : italien, anglais, français et espagnol."
+          ? "Oui. Je travaille à distance avec des professionnels et petites entreprises ayant déjà des clients ou des activités en Italie. Je traduis du français, de l’anglais et de l’espagnol vers l’italien et peux prendre en charge les échanges convenus avec les clients italiens existants."
           : lang === "es"
-          ? "Noemi está disponible para colaborar a distancia con profesionales y empresas en Italia y en el extranjero, ofreciendo soporte operativo y lingüístico integral en cuatro idiomas: italiano, inglés, francés y español."
-          : "Noemi is available to work remotely with professionals and businesses in Italy and abroad, providing dedicated operational and linguistic support across four languages: Italian, English, French, and Spanish.",
+          ? "Sí. Trabajo a distancia con profesionales y pequeñas empresas que ya tienen clientes o actividades en Italia. Traduzco del español, el inglés y el francés al italiano y puedo encargarme de comunicaciones acordadas con clientes italianos ya existentes."
+          : "Yes. I work remotely with professionals and small businesses that already serve Italian customers or operate in Italy. I translate from English, French and Spanish into Italian and provide agreed written communication support for existing Italian customers.",
     },
     {
       q:
@@ -456,12 +456,12 @@ export default function IndexPage() {
           : "Can you help me with my website?",
       a:
         lang === "it"
-          ? "Sì. Creo siti web vetrina e landing page essenziali, e posso occuparmi anche di aggiornamenti di testi, layout o contenuti su un sito esistente."
+          ? "Sì, per la parte editoriale: posso organizzare, aggiornare e revisionare testi e contenuti di siti e landing page esistenti. Sviluppo tecnico, hosting e manutenzione non fanno parte di questo servizio."
           : lang === "fr"
-          ? "Oui. Je conçois des sites vitrines et des pages d'atterrissage épurées, et je peux également actualiser les textes, la mise en page ou les contenus de votre site existant."
+          ? "Oui, pour la partie éditoriale : je révise, adapte et organise les contenus de sites et de pages de destination existants. Je ne propose pas le développement technique, l’hébergement ou la maintenance web."
           : lang === "es"
-          ? "Sí. Diseño sitios web corporativos y landing pages claras, y también puedo ocuparme de actualizar textos, diseño o contenidos en una web existente."
-          : "Yes. I create showcase websites and essential landing pages, and can assist with updating copy, layout, or content on existing sites.",
+          ? "Sí, en la parte editorial: reviso, adapto y organizo textos y contenidos de sitios web y páginas de destino existentes. Este servicio no incluye desarrollo técnico, alojamiento ni mantenimiento web."
+          : "Yes, on the editorial side: I review, adapt and organise copy for existing websites and landing pages. Website development, hosting and technical maintenance are not included.",
     },
     {
       q:
@@ -1194,7 +1194,7 @@ export default function IndexPage() {
               ? "Transparence & Preuves Concrètes"
               : lang === "es"
               ? "Transparencia & Compromiso Real"
-              : "Authentic Identity & Verified Experience"}
+              : "Transparent Background & Work Examples"}
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
             {lang === "it"
@@ -1209,7 +1209,7 @@ export default function IndexPage() {
             {lang === "it"
               ? "La fiducia non nasce da slogan o recensioni anonime, ma da fatti verificabili: formazione accademica d'eccellenza, oltre vent'anni di esperienza professionale e deliverable dimostrativi aperti."
               : lang === "fr"
-              ? "La confiance ne repose pas sur des slogans mais sur des faits : double diplôme universitaire, plus de 20 ans de pratique et des études de cas réelles."
+              ? "La confiance repose sur des informations vérifiables : un parcours universitaire spécialisé, plus de vingt ans d’expérience professionnelle et des études de cas clairement présentées comme des exemples fictifs."
               : lang === "es"
               ? "La confianza se basa en hechos comprobables: formación universitaria con honores, más de 20 años de experiencia y proyectos demostrativos abiertos."
               : "Trust is built on verifiable facts: academic honors, 20+ years of operational experience, transparent pricing, and comprehensive demonstration case studies."}
@@ -1228,7 +1228,7 @@ export default function IndexPage() {
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
-                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU) nei 5 ambiti: letterario, giuridico, economico, tecnologico e scientifico." : lang === "fr" ? "Diplôme en médiation linguistique avec mention et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Título universitario italiano en Mediación Lingüística (110/110 e lode) y máster universitario italiano de primer nivel en Traducción Especializada (1.500 horas, 60 créditos ECTS)." : "Degree in Language Mediation (with honours) and a postgraduate master’s in Specialist Translation covering five fields."}
+                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU), con approfondimenti in ambito letterario, giuridico, economico, tecnologico e scientifico." : lang === "fr" ? "Diplôme en médiation linguistique avec mention et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Título universitario italiano en Mediación Lingüística (110/110 e lode) y máster universitario italiano de primer nivel en Traducción Especializada (1.500 horas, 60 créditos ECTS)." : "Degree in Language Mediation (with honours) and a postgraduate master’s in Specialist Translation covering five fields."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
@@ -1247,8 +1247,8 @@ export default function IndexPage() {
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
-                  ? "Oltre due decenni di lavoro continuativo tra assistenza clienti, organizzazione operativa, gestione back office e coordinamento da remoto."
-                  : lang === "fr" ? "Plus de vingt ans d’expérience dans la relation client, l’organisation, le back-office et la communication professionnelle." : lang === "es" ? "Más de veinte años de experiencia en atención al cliente, organización, back office y comunicación profesional." : "Over two decades in customer care, operational coordination, remote back office support, and client communication."}
+                  ? "Oltre vent’anni di esperienze professionali in diversi contesti, tra assistenza clienti, organizzazione e attività di back office."
+                  : lang === "fr" ? "Plus de vingt ans d’expérience dans la relation client, l’organisation, le back-office et la communication professionnelle." : lang === "es" ? "Más de veinte años de experiencia en atención al cliente, organización, back office y comunicación profesional." : "Over twenty years of professional experience across customer care, organisation, back-office tasks and client communication."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
