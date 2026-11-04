@@ -28,7 +28,7 @@ export const esLocale: TranslationDictionary = {
     about: 'Sobre Mí',
     resources: 'Recursos',
     contact: 'Contacto',
-    bookCall: 'Solicitar Presupuesto',
+    bookCall: 'Solicitar un presupuesto',
     getInTouch: 'Escríbeme',
     language: 'Idioma',
   },
@@ -38,7 +38,7 @@ export const esLocale: TranslationDictionary = {
     titleHighlight: 'para trabajar con Italia',
     subtitle: "Traducción y localización al italiano, comunicación escrita con clientes italianos existentes y apoyo operativo para las actividades relacionadas con Italia.",
     headline: 'Comunícate de forma natural con tu público italiano.',
-    desc1: 'Soy hablante nativa de italiano, tengo formación especializada en traducción y más de veinte años de experiencia profesional.',
+    desc1: 'El italiano es mi lengua materna. Tengo formación especializada en traducción y más de veinte años de experiencia profesional.',
     desc2: 'Desde páginas web y landing pages hasta comunicaciones con clientes italianos existentes: traducción, localización y apoyo operativo adaptados a tu actividad en Italia.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
@@ -57,11 +57,11 @@ export const esLocale: TranslationDictionary = {
     tagline: 'CLARIDAD OPERATIVA',
     headline: 'No todo lo que tienes que hacer debes hacerlo tú en persona.',
     paragraph:
-      'Gestionar un negocio exige concentrarse en tu labor principal, pero también atender correos, agenda, peticiones de clientes, documentos y un sinfín de gestiones que agotan tu tiempo y energía. Te ofrezco un respaldo operativo senior, continuo y confidencial para que trabajes con serenidad.',
+      'Gestionar una actividad profesional también implica atender correos, citas, consultas de clientes, documentos y otras tareas que requieren tiempo y atención. Te ofrezco apoyo operativo organizado y discreto, dentro de un marco de trabajo acordado, para que puedas centrarte en tus prioridades.',
     pillars: [
       {
         title: 'Autonomía y experiencia',
-        desc: 'Sólida experiencia práctica colaborando con profesionales y empresas. Sé anticipar prioridades, estructurar flujos ordenados y resolver tareas sin necesidad de supervisión constante.',
+        desc: 'Experiencia en distintos entornos profesionales. Organizo las tareas acordadas, aclaro las prioridades y someto a tu aprobación las decisiones que requieren tu intervención.',
       },
       {
         title: 'Precisión lingüística',
