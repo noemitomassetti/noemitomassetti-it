@@ -1,13 +1,154 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [
+    {
+      "source": "/work-examples/dossier/:id",
+      "destination": "/work-examples/dossier/:id/index.html"
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/:id",
+      "destination": "/it/esempi-di-lavoro/dossier/:id/index.html"
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/:id",
+      "destination": "/fr/exemples-de-projets/dossier/:id/index.html"
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/:id",
+      "destination": "/es/ejemplos-de-trabajo/dossier/:id/index.html"
+    },
+    {
+      "source": "/it",
+      "destination": "/it/index.html"
+    },
+    {
+      "source": "/fr",
+      "destination": "/fr/index.html"
+    },
+    {
+      "source": "/es",
+      "destination": "/es/index.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services/index.html"
+    },
+    {
+      "source": "/it/servizi",
+      "destination": "/it/servizi/index.html"
+    },
+    {
+      "source": "/fr/services",
+      "destination": "/fr/services/index.html"
+    },
+    {
+      "source": "/es/servicios",
+      "destination": "/es/servicios/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/it/chi-sono",
+      "destination": "/it/chi-sono/index.html"
+    },
+    {
+      "source": "/fr/a-propos",
+      "destination": "/fr/a-propos/index.html"
+    },
+    {
+      "source": "/es/sobre-mi",
+      "destination": "/es/sobre-mi/index.html"
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources/index.html"
+    },
+    {
+      "source": "/it/risorse",
+      "destination": "/it/risorse/index.html"
+    },
+    {
+      "source": "/fr/ressources",
+      "destination": "/fr/ressources/index.html"
+    },
+    {
+      "source": "/es/recursos",
+      "destination": "/es/recursos/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/it/contatti",
+      "destination": "/it/contatti/index.html"
+    },
+    {
+      "source": "/fr/contact",
+      "destination": "/fr/contact/index.html"
+    },
+    {
+      "source": "/es/contacto",
+      "destination": "/es/contacto/index.html"
+    },
+    {
+      "source": "/italian-localisation",
+      "destination": "/italian-localisation/index.html"
+    },
+    {
+      "source": "/it/localizzazione-italiano",
+      "destination": "/it/localizzazione-italiano/index.html"
+    },
+    {
+      "source": "/fr/localisation-italien",
+      "destination": "/fr/localisation-italien/index.html"
+    },
+    {
+      "source": "/es/localizacion-italiano",
+      "destination": "/es/localizacion-italiano/index.html"
+    },
+    {
+      "source": "/work-examples",
+      "destination": "/work-examples/index.html"
+    },
+    {
+      "source": "/it/esempi-di-lavoro",
+      "destination": "/it/esempi-di-lavoro/index.html"
+    },
+    {
+      "source": "/fr/exemples-de-projets",
+      "destination": "/fr/exemples-de-projets/index.html"
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo",
+      "destination": "/es/ejemplos-de-trabajo/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        }
       ]
     }
   ]
