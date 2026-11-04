@@ -6,9 +6,23 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { DEEP_PORTFOLIO_ITEMS, getDeepPortfolioPath } from "../src/lib/portfolioDeepCatalog";
+import { ROUTES } from "../src/lib/i18n/routes";
+import { itLocale } from "../src/lib/i18n/locales/it";
+import { enLocale } from "../src/lib/i18n/locales/en";
+import { frLocale } from "../src/lib/i18n/locales/fr";
+import { esLocale } from "../src/lib/i18n/locales/es";
 
 type Language = "it" | "en" | "fr" | "es";
 const LANGS: Language[] = ["it", "en", "fr", "es"];
+const DICTS = {it:itLocale,en:enLocale,fr:frLocale,es:esLocale};
+const PAGE_META = [
+  ["home","homeTitle","homeDesc"],
+  ["services","servicesTitle","servicesDesc"],
+  ["about","aboutTitle","aboutDesc"],
+  ["resources","resourcesTitle","resourcesDesc"],
+  ["contact","contactTitle","contactDesc"],
+  ["italianLocalisation","servicesTitle","servicesDesc"]
+] as const;
 const BASE = "https://www.noemitomassetti.it";
 const OG_IMAGE = BASE + "/noemi-tomassetti.png";
 const LOCALES: Record<Language, string> = { it: "it_IT", en: "en_GB", fr: "fr_FR", es: "es_ES" };
@@ -66,15 +80,16 @@ function render(path:string, lang:Language, title:string, description:string, al
   html = html.replace(/\s*<link rel="alternate"[^>]+>/g,"");
   const altTags = [...LANGS.map(l=>'<link rel="alternate" hreflang="'+l+'" href="'+BASE+alternates(l)+'">'),
     '<link rel="alternate" hreflang="x-default" href="'+BASE+alternates("en")+'">'];
+  const isFictionalExample=path.includes("/dossier/") || Object.values(ROOTS).includes(path);
   const schema = {
     "@context":"https://schema.org",
-    "@type":"CreativeWork", name:title,description,
+    "@type":isFictionalExample ? "CreativeWork" : "WebPage", name:title,description,
     inLanguage:lang,url:canonical,
-    genre:"Original fictional portfolio demonstration",
+    ...(isFictionalExample ? {genre:"Original fictional portfolio demonstration"} : {}),
     author:{"@type":"Person",name:"Noemi Tomassetti"}
   };
   html = html.replace("</head>", altTags.join("\n")+"\n<script type=\"application/ld+json\">"+JSON.stringify(schema).replaceAll("<","\\u003c")+"</script>\n</head>");
-  html = html.replace('<div id="root"></div>','<div id="root"><noscript><main><h1>'+esc(title)+'</h1><p>'+esc(summary)+'</p><p>'+esc(FICTIONAL[lang])+'</p><a href="'+esc(BASE+ROOTS[lang])+'">Portfolio</a></main></noscript></div>');
+  html = html.replace('<div id="root"></div>','<div id="root"><noscript><main><h1>'+esc(title)+'</h1><p>'+esc(summary)+'</p>'+(isFictionalExample?'<p>'+esc(FICTIONAL[lang])+'</p>':'')+'<a href="'+esc(BASE+ROOTS[lang])+'">Portfolio</a></main></noscript></div>');
   const out = join("dist",path.replace(/^\/+/,""),"index.html");
   mkdirSync(dirname(out),{recursive:true});
   writeFileSync(out,html,"utf8");
@@ -88,6 +103,19 @@ function render(path:string, lang:Language, title:string, description:string, al
 }
 
 let count = 0;
+for (const [key,titleKey,descKey] of PAGE_META) {
+  for (const lang of LANGS) {
+    const title=DICTS[lang].meta[titleKey];
+    const description=DICTS[lang].meta[descKey];
+    const path=ROUTES[key].paths[lang];
+    if (path==="/") {
+      // Root SPA entry: meaningful English metadata for visitors without JavaScript.
+      continue;
+    }
+    render(path,lang,title,description,l=>ROUTES[key].paths[l],description);
+    count++;
+  }
+}
 for (const lang of LANGS) {
   render(ROOTS[lang],lang,TITLES[lang],DESCRIPTIONS[lang],l=>ROOTS[l],DESCRIPTIONS[lang]);
   count++;
@@ -102,10 +130,10 @@ for (const entry of DEEP_PORTFOLIO_ITEMS) {
     count++;
   }
 }
-if (count !== 4+DEEP_PORTFOLIO_ITEMS.length*4) throw new Error("Incomplete page generation");
+if (count !== PAGE_META.length*4-1 + 4+DEEP_PORTFOLIO_ITEMS.length*4) throw new Error("Incomplete page generation");
 if (!isProduction) {
   let shell = readFileSync(templatePath,"utf8");
   shell = updateMeta(shell,"name","robots","noindex, nofollow");
   writeFileSync(templatePath,shell,"utf8");
 }
-console.log("PASS: "+count+" static social/SEO share pages (dossiers + portfolio hubs), production="+isProduction);
+console.log("PASS: "+count+" static multilingual pages (main site + portfolio dossiers), production="+isProduction);
