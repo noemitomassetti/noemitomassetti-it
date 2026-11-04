@@ -39,15 +39,20 @@ describe("Detailed portfolio: complete service coverage",()=>{
     }
   });
   it("includes substantive, not just conceptual, work across all operational services",()=>{
-    expect(OPERATIONAL_DEEP_CASES.length).toBeGreaterThanOrEqual(11);
+    expect(OPERATIONAL_DEEP_CASES.length).toBeGreaterThanOrEqual(15);
     const required=[
       "inbox-calendar-triage","customer-care-escalations","order-entry-price-list",
       "shared-drive-version-control","online-course-secretariat",
       "research-existing-italian-customers","web-copy-before-after",
       "catalogue-price-list-proofreading","digital-tools-request-workflow",
-      "commercial-quote-from-approved-pricelist","international-client-italian-aftercare"
+      "commercial-quote-from-approved-pricelist","international-client-italian-aftercare",
+      "course-information-source-audit","existing-client-notice-editing",
+      "website-help-page-microcopy","existing-customer-multilingual-email-pack"
     ];
     for(const id of required) expect(OPERATIONAL_DEEP_CASES.some(x=>x.id===id),id).toBe(true);
+    const multilingual=OPERATIONAL_DEEP_CASES.find(x=>x.id==="existing-customer-multilingual-email-pack");
+    expect(multilingual?.artifacts.map(x=>x.language)).toEqual(["en","fr","es"]);
+    expect(read("src/pages/PortfolioDeepCase.tsx")).toContain('lang={art.language ?? "it"}');
     for(const item of OPERATIONAL_DEEP_CASES){
       expect(item.artifacts.length,item.id).toBeGreaterThanOrEqual(2);
       expect(item.workflow.length,item.id).toBeGreaterThanOrEqual(4);
