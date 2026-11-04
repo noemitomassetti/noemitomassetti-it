@@ -4,10 +4,10 @@ export const enLocale: TranslationDictionary = {
   lang: 'en',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Italian Translation & Business Support | Noemi Tomassetti',
-    homeDesc: 'Native Italian translation, website localisation and operational support for international professionals and small businesses working with Italy.',
+    homeTitle: 'Italian Translation, Localisation & Support | Noemi Tomassetti',
+    homeDesc: 'Italian ↔ English/French/Spanish translation, Italian-market localisation and operational support for professionals and small businesses working with Italy.',
     servicesTitle: 'Italian Translation & Operational Support | Noemi Tomassetti',
-    servicesDesc: 'Italian translation and localisation, existing Italian customer support and operational assistance for businesses working with Italy.',
+    servicesDesc: 'Italian ↔ EN/FR/ES translation, Italian-language localisation, written customer support and operational assistance for businesses working with Italy.',
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
     aboutTitle: 'About Noemi Tomassetti | Background & Philosophy',
@@ -65,7 +65,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Linguistic Accuracy',
-        desc: 'Native Italian speaker, with advanced English and French and upper-intermediate Spanish. I translate professionally into Italian and support multilingual correspondence within my competencies.',
+        desc: 'Native Italian speaker, with advanced English and French and upper-intermediate Spanish. I translate in both directions between Italian and these languages, with each assignment scoped to the subject and audience.',
       },
       {
         title: 'Practical Digital Tools',
@@ -111,8 +111,8 @@ export const enLocale: TranslationDictionary = {
           'Italian website and landing page localisation',
           'Italian-language professional correspondence',
           'Translation of proposals and presentations (IT ↔ EN/FR/ES)',
-          'Training materials translated into Italian',
-          'Italian marketing and newsletter translations',
+          'Training material translated between Italian and EN/FR/ES',
+          'Marketing and newsletter translation for Italian and international readers',
           'Italian-language editing and linguistic quality checks',
         ],
       },
