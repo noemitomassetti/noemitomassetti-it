@@ -11,7 +11,7 @@ export const frLocale: TranslationDictionary = {
     noetomTitle: 'NoeTom | Projet opérationnel interne',
     noetomDesc: 'NoeTom est le projet opérationnel interne de Noemi Tomassetti, actuellement en développement et en phase de test privé.',
     aboutTitle: 'À Propos | Noemi Tomassetti',
-    aboutDesc: 'Plus de 20 ans d’expérience opérationnelle, linguistique et relation client. Diplômée en Médiation Linguistique avec mention très honorable (110 e lode).',
+    aboutDesc: 'Plus de 20 ans d’expérience opérationnelle, linguistique et relation client. Diplômée en médiation linguistique avec la note italienne 110/110 e lode.',
     resourcesTitle: 'Ressources & Guides | Noemi Tomassetti',
     resourcesDesc: 'Conseils pratiques sur la délégation, la gestion du temps, la communication multilingue et l’IA au service des indépendants.',
     contactTitle: 'Contact & Devis | Noemi Tomassetti',
