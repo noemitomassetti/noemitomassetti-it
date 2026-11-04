@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import NoeTom from "./pages/NoeTom";
 import About from "./pages/About";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
@@ -23,8 +22,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 
 
-// Public website does not mount the private NoeTom application.
-// Private operations belong only in the dedicated NoeTom repository.
+// NoeTom remains an unpublished internal project; public routes are disabled.
 import NotFound from "./pages/NotFound";
 
 
@@ -45,8 +43,6 @@ const App = () => (
           <Route path="/work-examples" element={<Portfolio />} />
           <Route path="/work-examples/sample/:num" element={<PortfolioDocument />} />
           <Route path="/professional-research" element={<Questionnaire />} />
-          <Route path="/noetom" element={<NoeTom />} />
-          <Route path="/noetom/workspace" element={<Navigate to="/noetom" replace />} />
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
@@ -61,8 +57,6 @@ const App = () => (
           <Route path="/it/esempi-di-lavoro" element={<Portfolio />} />
           <Route path="/it/esempi-di-lavoro/esempio/:num" element={<PortfolioDocument />} />
           <Route path="/it/ricerca-professionisti" element={<Questionnaire />} />
-          <Route path="/it/noetom" element={<NoeTom />} />
-          <Route path="/it/noetom/workspace" element={<Navigate to="/noetom" replace />} />
           <Route path="/it/chi-sono" element={<About />} />
           <Route path="/it/risorse" element={<Resources />} />
           <Route path="/it/contatti" element={<Contact />} />
@@ -77,7 +71,6 @@ const App = () => (
           <Route path="/fr/exemples-de-projets" element={<Portfolio />} />
           <Route path="/fr/exemples-de-projets/exemple/:num" element={<PortfolioDocument />} />
           <Route path="/fr/recherche-professionnels" element={<Questionnaire />} />
-          <Route path="/fr/noetom" element={<NoeTom />} />
           <Route path="/fr/a-propos" element={<About />} />
           <Route path="/fr/ressources" element={<Resources />} />
           <Route path="/fr/contact" element={<Contact />} />
@@ -92,7 +85,6 @@ const App = () => (
           <Route path="/es/ejemplos-de-trabajo" element={<Portfolio />} />
           <Route path="/es/ejemplos-de-trabajo/ejemplo/:num" element={<PortfolioDocument />} />
           <Route path="/es/investigacion-profesionales" element={<Questionnaire />} />
-          <Route path="/es/noetom" element={<NoeTom />} />
           <Route path="/es/sobre-mi" element={<About />} />
           <Route path="/es/recursos" element={<Resources />} />
           <Route path="/es/contacto" element={<Contact />} />
@@ -128,7 +120,6 @@ const App = () => (
           <Route path="/collaborazione" element={<Navigate to="/it/servizi" replace />} />
           <Route path="/come-collaborare" element={<Navigate to="/it/servizi" replace />} />
           <Route path="/contatti" element={<Navigate to="/it/contatti" replace />} />
-          <Route path="/admin" element={<Navigate to="/noetom" replace />} />
 
           {/* ── 404 CATCH-ALL ── */}
           <Route path="*" element={<NotFound />} />
