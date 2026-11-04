@@ -39,10 +39,10 @@ export default function PortfolioDocument() {
     ] : [],
     noindex:!ok,
   });
-  if (!doc || !guide || !study || !num) return <Layout lang={lang}><main className="container max-w-4xl mx-auto py-16 px-5"><h1 className="text-2xl font-bold">{t.missing}</h1><Link className="text-primary underline" to={getLocalizedPath("portfolio",lang)}>{t.back}</Link></main></Layout>;
+  if (!doc || !guide || !study || !num) return <Layout lang={lang}><div className="container max-w-4xl mx-auto py-16 px-5"><h1 className="text-2xl font-bold">{t.missing}</h1><Link className="text-primary underline" to={getLocalizedPath("portfolio",lang)}>{t.back}</Link></div></Layout>;
 
   return <Layout lang={lang}>
-    <main className="container max-w-5xl mx-auto px-4 md:px-6 py-10 md:py-16">
+    <div className="container max-w-5xl mx-auto px-4 md:px-6 py-10 md:py-16">
       <Link className="inline-flex items-center gap-2 font-semibold text-primary hover:underline text-sm mb-7" to={getLocalizedPath("portfolio",lang)}><ArrowLeft size={16}/>{t.back}</Link>
       <p className="text-xs uppercase tracking-wider font-bold text-primary flex gap-2 items-center"><BookOpen size={18}/>{t.sample} · DOC {doc.num}</p>
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight mt-4 max-w-4xl">{doc.title[lang]}</h1>
@@ -100,6 +100,6 @@ export default function PortfolioDocument() {
         </div>
         <p className="text-muted-foreground text-xs mt-4">{t.safety}</p>
       </section>
-    </main>
+    </div>
   </Layout>;
 }
