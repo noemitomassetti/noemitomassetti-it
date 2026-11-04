@@ -68,8 +68,8 @@ export const enLocale: TranslationDictionary = {
         desc: 'Native Italian speaker, with advanced English and French and upper-intermediate Spanish. I translate professionally into Italian and support multilingual correspondence within my competencies.',
       },
       {
-        title: 'Modern Technological Leverage',
-        desc: 'Combining hands-on human craftsmanship with advanced AI tools and my internal NoeTom workflow project, currently in development, to support structured work.',
+        title: 'Practical Digital Tools',
+        desc: 'I use digital tools and structured workflows to support agreed assignments, with human oversight of client communications, documents and final deliverables.',
       },
       {
         title: 'Confidentiality and care',
@@ -118,7 +118,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         id: 'content-writing',
-        title: 'Content Writing & Revision',
+        title: 'Italian Content Editing & Revision',
         subtitle: 'Clear, compelling messaging that builds credibility.',
         description:
           'I review, edit and adapt Italian-language website copy, customer emails, newsletters and AI-assisted drafts to make them clear, natural and consistent for readers in Italy.',
@@ -174,7 +174,7 @@ export const enLocale: TranslationDictionary = {
       'Communicating with Italian audiences takes more than literal translation: accurate terminology, suitable tone and local context all matter.',
     points: [
       {
-        title: 'Four Core Languages',
+        title: 'Languages for Professional Communication',
         desc: 'Native Italian, advanced English and French, and upper-intermediate Spanish for agreed professional correspondence.',
       },
       {
@@ -363,7 +363,7 @@ export const enLocale: TranslationDictionary = {
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
       { title: 'Academic Excellence', detail: 'Degree in Linguistic Mediation (110/110 cum laude) & University Master’s in Specialised Translation' },
       { title: '4 Working Languages', detail: 'Italian native, professional support in English, French, and Spanish' },
-      { title: 'Digital Tools & Innovation', detail: 'Digital support and creator of NoeTom, an internal project in development' },
+      { title: 'Digital Organisation', detail: 'Cloud files, collaborative tools and clear operational procedures' },
     ],
     ctaReadMore: 'Read Full Background & Approach',
   },
@@ -375,7 +375,7 @@ export const enLocale: TranslationDictionary = {
       'My professional path has always developed around three constants: organisational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
       'My career spans more than two decades across different roles. I have developed skills in customer care, operational coordination, back office and multilingual communication. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
       'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 cum laude) and an Italian first-level university Master’s qualification in Specialised Translation (English) (2010–2012, 1,500 hours, 60 ECTS credits). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
-      'Alongside my professional services, I am developing NoeTom, an internal operational-assistance project currently in private testing.',
+      'My approach is practical and transparent: clearly agreed tasks, well-organised files, consistent communication and regular progress updates.',
     ],
     timeline: [
       {
@@ -394,9 +394,9 @@ export const enLocale: TranslationDictionary = {
         detail: '1,500 hours, 60 CFU, final examination passed. Fields covered: literary, legal, economic, technological, scientific.',
       },
       {
-        period: '2024 – Present',
-        role: 'Creator of NoeTom',
-        detail: 'Designing an AI operational assistant tailored to the daily realities of independent professionals.',
+        period: '2026 – Present',
+        role: 'Independent virtual assistance and translation',
+        detail: 'Italian-language customer support, operational back office and translation and localisation into Italian.',
       },
     ],
     valuesTitle: 'Core Operational Principles',
@@ -438,7 +438,7 @@ export const enLocale: TranslationDictionary = {
       {
         num: '04',
         title: 'Autonomy & Ongoing Peace of Mind',
-        desc: 'I execute independently, provide structured weekly updates, and ensure your operations run like clockwork.',
+        desc: 'I carry out the agreed tasks independently and provide progress updates at the frequency we have agreed.',
       },
     ],
   },
@@ -456,10 +456,9 @@ export const enLocale: TranslationDictionary = {
         'Italian Customer Communication & Operational Support',
         'Translation & Localisation into Italian (EN/FR/ES → IT)',
         'Italian Content Editing & Revision',
-        'Online Research & Desk Research',
-        'Digital Support & AI Workflows',
-        'Website and landing page content',
-        'Enquiry about the internal NoeTom project',
+        'Italy-related Informational Research',
+        'Digital Organisation & Practical Tools',
+        'Italian Website & Landing Page Content',
         'Other / General Inquiries',
       ],
       preferredLanguage: 'Preferred Communication Language',
@@ -492,7 +491,7 @@ export const enLocale: TranslationDictionary = {
     tag: 'INSIGHTS & GUIDES',
     title: 'Operational Wisdom for Independent Professionals',
     subtitle: 'Practical perspectives on delegation, multilingual expansion, and modern AI productivity.',
-    categories: ['All', 'Operations & Delegation', 'Multilingual & Localisation', 'Digital Presence & Web', 'AI & NoeTom'],
+    categories: ['All', 'Operations & Delegation', 'Multilingual & Localisation', 'Digital Presence & Web', 'Digital Tools & Organisation'],
     articles: [
       {
         id: 'r1',
@@ -534,7 +533,7 @@ export const enLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Italian translation, localisation and operational support for international professionals and small businesses working with Italy. Creator of NoeTom, an internal project in development.',
+      'Translation and localisation into Italian, written support for existing Italian customers and operational assistance for professionals and small businesses working with Italy.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · in development',
     companyTitle: 'About & Insights',
