@@ -85,8 +85,8 @@ export const SCOPE_EXCLUDED_REPLY: Record<ExcludedService, Record<Language, stri
 };
 
 export const SCOPE_FORM_NOTICE: Record<Language, string> = {
-  it: 'Servizi disponibili: segreteria organizzativa, back office operativo, assistenza ai clienti già acquisiti, corrispondenza multilingue, traduzioni verso l’italiano e contenuti digitali. Non accetto incarichi di amministrazione aziendale, contabilità, fatturazione o acquisizione commerciale.',
-  en: 'For international clients: translation and localisation into Italian, written support for existing Italian customers, and operational tasks related to Italy. No business administration, accounting, invoicing, sales prospecting or cold outreach.',
-  fr: 'Pour les clients internationaux : traduction et localisation vers l’italien, échanges écrits avec les clients italiens existants et soutien opérationnel lié à l’Italie. Pas de gestion administrative, de comptabilité, de facturation ni de prospection.',
-  es: 'Para clientes internacionales: traducción y localización al italiano, atención escrita a clientes italianos existentes y apoyo operativo relacionado con Italia. No ofrezco administración empresarial, contabilidad, facturación ni captación comercial.',
+  it: 'Servizi disponibili: segreteria organizzativa, back office operativo, assistenza ai clienti già acquisiti, corrispondenza multilingue, traduzioni IT ↔ EN/FR/ES e contenuti digitali. Non accetto incarichi di amministrazione aziendale, contabilità, fatturazione o acquisizione commerciale.',
+  en: 'For international clients: IT ↔ EN/FR/ES translation, Italian-market localisation, written support for existing Italian customers, and operational tasks related to Italy. No business administration, accounting, invoicing, sales prospecting or cold outreach.',
+  fr: 'Pour les clients internationaux : traduction dans les deux sens entre l’italien et le français, l’anglais ou l’espagnol, localisation vers l’italien et soutien aux clients italiens existants. Pas de gestion administrative, de comptabilité, de facturation ni de prospection.',
+  es: 'Para clientes internacionales: traducciones en ambos sentidos entre el italiano y el español, el inglés o el francés, localización al italiano y atención a clientes italianos existentes. No ofrezco administración empresarial, contabilidad, facturación ni captación comercial.',
 };
