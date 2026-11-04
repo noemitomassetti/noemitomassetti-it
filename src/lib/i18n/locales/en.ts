@@ -105,7 +105,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Translation & Localisation into Italian',
         subtitle: 'Translation from English and French into Italian; Spanish into Italian subject to text assessment.',
         description:
-          "Translation from English, French and Spanish into Italian, plus editing and cultural localisation of Italian websites, landing pages, catalogues, product pages and professional communications. I do not offer professional translation from Italian into English, French or Spanish.",
+          "Translation from English and French into Italian, with Spanish-to-Italian requests assessed by text and subject matter. I also edit and localise Italian websites, landing pages, catalogues and professional correspondence. I do not offer professional translation from Italian into other languages.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
