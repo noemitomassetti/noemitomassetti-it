@@ -63,7 +63,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     },
     "subtitle": {
       "it": "Testi web, call to action e note traduttologiche per un pubblico italiano",
-      "en": "Real source/target examples for Italian-facing website copy",
+      "en": "Original fictional source/target samples for Italian website copy",
       "fr": "Exemples concrets de textes web anglais et de leur adaptation italienne",
       "es": "Ejemplos concretos de textos web en inglés adaptados al italiano"
     },
