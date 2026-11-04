@@ -286,7 +286,22 @@ jobs:
               if(await deepDirectory.locator('article').count()!==2) throw Error('IT to ES dossier filter should show two samples');
               await deepDirectory.getByRole('button',{name:'Ricerche informative'}).click();
               if(await deepDirectory.locator('article').count()!==2) throw Error('Research service filter missing');
-              console.log('PASS 27 dossier directory and translation/service filters');
+              // Search must find the right dossier in Italian, bypass the featured-only view
+              // and display clear feedback when there are no matches.
+              await deepDirectory.getByRole('button',{name:'Tutti i dossier'}).click();
+              const searchDossiers=deepDirectory.getByRole('searchbox',{name:'Cerca nei dossier'});
+              await searchDossiers.fill('ONBOARDING SOFTWARE');
+              if(await deepDirectory.locator('article').count()!==1)
+                throw Error('Deep dossier search failed to find exact relevant example');
+              await searchDossiers.fill('not-a-real-dossier-search-term');
+              if(await deepDirectory.locator('article').count()!==0)
+                throw Error('Deep dossier search should show zero matching items');
+              if(!await deepDirectory.getByText(/Nessun dossier corrisponde alla ricerca/).isVisible())
+                throw Error('Missing empty-search result message');
+              await searchDossiers.clear();
+              if(await deepDirectory.locator('article').count()!==8)
+                throw Error('Clearing search did not restore featured portfolio');
+              console.log('PASS 27 dossier directory, filters and keyword search');
 
               // Until the new provider has been verified, NEVER transmit personal data
               // to the previously failing provider. The visitor gets a usable manual draft.
