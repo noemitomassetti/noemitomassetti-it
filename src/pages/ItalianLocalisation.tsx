@@ -560,7 +560,7 @@ export default function ItalianLocalisationPage() {
         <div className="container max-w-4xl px-4 sm:px-6">
           <ContactForm
             lang={lang}
-            selectedService={lang === "it" ? "Traduzione verso l’italiano (EN/FR/ES → IT) e comunicazione multilingue" : lang === "fr" ? "Traduction et localisation vers l’italien (FR/EN/ES → IT)" : lang === "es" ? "Traducción y localización al italiano (ES/EN/FR → IT)" : "Translation & Localisation into Italian (EN/FR/ES → IT)"}
+            selectedService={lang === "it" ? "Traduzioni IT ↔ EN/FR/ES e localizzazione verso l’italiano" : lang === "fr" ? "Traduction IT ↔ FR/EN/ES et localisation en italien" : lang === "es" ? "Traducción IT ↔ ES/EN/FR y localización al italiano" : "Translation IT ↔ EN/FR/ES & Italian Localisation"}
           />
         </div>
       </section>
