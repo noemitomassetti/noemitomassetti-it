@@ -300,12 +300,12 @@ export default function IndexPage() {
           : "Businesses Working with Italy",
       description:
         lang === "it"
-          ? "Le mie competenze linguistiche possono essere utili per comunicazioni, traduzioni e contenuti destinati a interlocutori internazionali."
+          ? "Traduco nei due sensi tra italiano e inglese, francese e spagnolo e supporto le comunicazioni professionali con interlocutori internazionali."
           : lang === "fr"
-          ? "Je traduis vers l’italien et apporte un soutien adapté à vos communications professionnelles avec des interlocuteurs italiens."
+          ? "Je traduis dans les deux sens entre l’italien et le français, l’anglais et l’espagnol, tout en accompagnant vos échanges avec vos interlocuteurs italiens."
           : lang === "es"
-          ? "Traduzco al italiano y te ayudo a preparar comunicaciones profesionales adecuadas para tus interlocutores italianos."
-          : "I translate into Italian and help make written communications with your existing Italian customers clear and appropriate.",
+          ? "Traduzco en ambos sentidos entre el italiano y el español, el inglés y el francés y te ayudo a preparar comunicaciones para tus interlocutores italianos."
+          : "I translate between Italian and English, French and Spanish in both directions and help you communicate with existing Italian customers.",
     },
   ];
 
@@ -438,12 +438,12 @@ export default function IndexPage() {
           : "Are you available for international clients?",
       a:
         lang === "it"
-          ? "Sì. Lavoro da remoto con professionisti italiani e con attività estere che hanno già clienti o progetti in Italia. Traduco dall’inglese, dal francese e dallo spagnolo verso l’italiano e, negli ambiti concordati, seguo le comunicazioni con clienti già acquisiti."
+          ? "Sì. Lavoro da remoto con professionisti italiani e attività estere che hanno già clienti o progetti in Italia. Offro traduzioni nei due sensi tra italiano e inglese, francese e spagnolo, oltre alla localizzazione per il pubblico italiano e al supporto per le comunicazioni con clienti già acquisiti."
           : lang === "fr"
-          ? "Oui. Je travaille à distance avec des professionnels et petites entreprises ayant déjà des clients ou des activités en Italie. Je traduis du français, de l’anglais et de l’espagnol vers l’italien et peux prendre en charge les échanges convenus avec les clients italiens existants."
+          ? "Oui. Je travaille à distance avec des professionnels et de petites entreprises ayant des clients ou des activités en Italie. Je traduis dans les deux sens entre l’italien et le français, l’anglais ou l’espagnol ; la localisation vers l’italien et les échanges avec les clients existants sont également proposés."
           : lang === "es"
-          ? "Sí. Trabajo a distancia con profesionales y pequeñas empresas que ya tienen clientes o actividades en Italia. Traduzco del español, el inglés y el francés al italiano y puedo encargarme de comunicaciones acordadas con clientes italianos ya existentes."
-          : "Yes. I work remotely with professionals and small businesses that already serve Italian customers or operate in Italy. I translate from English, French and Spanish into Italian and provide agreed written communication support for existing Italian customers.",
+          ? "Sí. Trabajo a distancia con profesionales y pequeñas empresas que ya tienen clientes o actividades en Italia. Traduzco en ambos sentidos entre el italiano y el español, el inglés o el francés; también ofrezco localización al italiano y apoyo escrito a clientes existentes."
+          : "Yes. I work remotely with professionals and small businesses that have customers or activities in Italy. I translate between Italian and English, French or Spanish in both directions, with a particular focus on localisation for Italian audiences and written support for existing customers.",
     },
     {
       q:
@@ -546,9 +546,9 @@ export default function IndexPage() {
               {lang === "it"
                 ? "Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e contenuti per siti web."
                 : lang === "fr"
-                ? "Noemi Tomassetti - Assistante Virtuelle pour professionnels et entreprises. Organisation, secrétariat opérationnel, traduction vers l’italien et contenus web en italien."
+                ? "Noemi Tomassetti - Assistante virtuelle pour professionnels et petites entreprises. Soutien opérationnel lié à l’Italie, traduction italien ↔ français/anglais/espagnol et localisation en italien."
                 : lang === "es"
-                ? "Noemi Tomassetti - Asistente Virtual para profesionales y empresas. Organización, secretaría operativa, traducción al italiano y contenidos web en italiano."
+                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Apoyo operativo relacionado con Italia, traducción italiano ↔ español/inglés/francés y localización al italiano."
                 : "Noemi Tomassetti - Virtual Assistant for professionals and small businesses. Operational back office, organisational support, multilingual communication and Italian-language website content."}
             </h1>
 
@@ -681,10 +681,10 @@ export default function IndexPage() {
                 {lang === "it"
                   ? "Posso occuparmi di alcune delle attività di segreteria, organizzazione, comunicazione e supporto operativo che fanno parte della gestione quotidiana della tua attività."
                   : lang === "fr"
-                  ? "Je peux prendre en charge des tâches convenues de secrétariat organisationnel, de correspondance avec les clients existants, de traduction vers l’italien et de back-office opérationnel."
+                  ? "Je peux prendre en charge la correspondance avec les clients italiens existants, les tâches de back-office convenues, les traductions dans les deux sens avec l’italien et la localisation pour l’Italie."
                   : lang === "es"
-                  ? "Puedo encargarme de tareas acordadas de secretaría organizativa, atención escrita a clientes existentes, traducción al italiano y back office operativo."
-                  : "I can help with agreed operational back-office tasks, written support for existing Italian customers and translation into Italian."}
+                  ? "Puedo encargarme de la atención escrita a clientes italianos existentes, tareas operativas acordadas, traducciones en ambos sentidos con el italiano y localización para Italia."
+                  : "I can help with Italy-related back-office tasks, written support for existing Italian customers, translation in both directions with Italian, and localisation for Italy."}
               </p>
               <p>
                 {lang === "it"
@@ -791,19 +791,19 @@ export default function IndexPage() {
           <p>
             {lang === "it" ? (
               <>
-                L'italiano è la mia lingua madre. Utilizzo anche <strong>inglese, francese e spagnolo</strong> per le comunicazioni professionali e traduco contenuti da queste lingue verso l'italiano.
+                L'italiano è la mia lingua madre. Offro traduzioni <strong>IT ↔ EN, IT ↔ FR e IT ↔ ES</strong>, nei due sensi, valutando testi e ambiti specialistici prima del preventivo. Curo inoltre le comunicazioni professionali multilingue.
               </>
             ) : lang === "fr" ? (
               <>
-                L’italien est ma langue maternelle. Je travaille également avec <strong>le français, l’anglais et l’espagnol</strong> pour traduire vos contenus vers l’italien et faciliter vos échanges avec vos interlocuteurs italiens.
+                L’italien est ma langue maternelle. Je traduis <strong>entre l’italien et le français, l’anglais ou l’espagnol dans les deux sens</strong>, selon le texte, et j’accompagne vos communications avec vos interlocuteurs italiens.
               </>
             ) : lang === "es" ? (
               <>
-                Mi lengua materna es el italiano. También trabajo con <strong>español, inglés y francés</strong> para traducir contenidos al italiano y facilitar la comunicación con clientes e interlocutores italianos.
+                Mi lengua materna es el italiano. Ofrezco traducciones <strong>entre el italiano y el español, el inglés o el francés en ambos sentidos</strong>, según el texto, y apoyo las comunicaciones con tus clientes e interlocutores italianos.
               </>
             ) : (
               <>
-                Italian is my native language. I also work with <strong>English, French and Spanish</strong> to translate content into Italian and support professional communication with Italian customers and partners.
+                Italian is my native language. I translate <strong>between Italian and English, French or Spanish in both directions</strong>, assessing each text and its intended use, and support communications with existing Italian customers and partners.
               </>
             )}
           </p>
