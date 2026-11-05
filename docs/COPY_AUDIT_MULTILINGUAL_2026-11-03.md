@@ -1,5 +1,8 @@
 # Revisione editoriale multilingue — Noemi Tomassetti / NoeTom
 
+> **Aggiornamento di stato del 4/11/2026 (successivo a questo audit):** la PR #1 è stata unita a `main` nel commit `5469bf8`, e il deployment Vercel ha avuto esito positivo. Le diciture seguenti «PR in bozza», «produzione invariata», «nessun merge» e «blocco attuale Vercel» descrivono un momento precedente e **non rappresentano più lo stato attuale**. La nuova revisione di qualità è nella [PR #2](https://github.com/noemitomassetti/noemitomassetti-it/pull/2), non ancora pubblicata. Rimangono da verificare il recapito email sul dominio, la conformità del piano di hosting all'uso commerciale e l'audit manuale completo.
+
+
 **Data:** 3 novembre 2026  
 **Ramo:** `chatgpt/site-release-audit-2026-10-29` (PR #1, **non pubblicata su main**).  
 **Destinatari:** professionisti, freelance e piccole attività in Italia; nella versione EN/FR/ES, soprattutto operatori esteri che lavorano con il mercato e con clienti italiani già acquisiti.
