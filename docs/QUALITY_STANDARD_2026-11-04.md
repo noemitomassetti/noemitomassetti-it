@@ -1,5 +1,5 @@
 # NoeTom — standard di eccellenza: sito e portfolio
-Data: 2026-11-04 · Ambito: produzione su `main` e successiva revisione su ramo separato.
+Data: 2026-11-04 · Aggiornamento: 2026-11-05 · Ambito: produzione su `main` e successiva revisione su ramo separato.
 
 ## Principio di valutazione
 Una build verde non equivale a esperienza eccellente; una valutazione di eccellenza richiede prove verificabili. Non attribuire voti 10/10 o "WCAG conforme" senza un audit completo. Contare il numero di pagine o dossier non è prova di qualità.
@@ -17,7 +17,7 @@ Una build verde non equivale a esperienza eccellente; una valutazione di eccelle
 | SEO internazionale | HTML leggibile senza JS, title/description specifici, canonical, hreflang reciproci, sitemap e robots coerenti | Controlli di build e 292 URL previsti; test live su dominio ancora necessario |
 | Conversione | CTA appropriate, form senza errori, recapito effettivo e fallback email disponibile | Web3Forms testato in anteprima secondo il checklist; invio/ricezione live da ripetere |
 | Privacy e conformità | Minimo trattamento dati, informativa accurata, consenso coerente e condizioni hosting idonee | Revisione normativa esterna quando necessaria; Hobby Vercel non destinato all'uso commerciale |
-| Affidabilità | Suite unit, build, browser smoke, no regression, rollback | CI GitHub attivata dalla PR #2; risultati da controllare prima del merge |
+| Affidabilità | Suite unit, build, browser smoke, no regression, rollback | CI GitHub verificata sul commit 5d19b930: build, TypeScript, test, check release/editoriali, smoke browser e audit axe automatizzati completati con esito success; anteprima Vercel e QA manuale ancora da verificare |
 
 ## Priorità operative
 **P0 (bloccante):** verificare consegna reale delle richieste, leggibilità del portfolio live, conformità contrattuale dell'hosting commerciale, nessuna affermazione fuorviante.
