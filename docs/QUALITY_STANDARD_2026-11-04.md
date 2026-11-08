@@ -34,38 +34,40 @@ Servizi offerti: segreteria, back office operativo, comunicazioni con clienti gi
 
 ## Aggiornamento 8 novembre 2026 — revisione tecnica ed editoriale
 
-**Ramo di revisione:** `chatgpt/portfolio-excellence-2026-11-04`  
-**Commit verificato:** `4fb0fb862501573cc0537641de48b7c6b6a4699e`  
-**Produzione:** `main` invariato (`5469bf8`); nessun merge, modifica DNS o rilascio sul dominio pubblico.
+**Ramo:** `chatgpt/portfolio-excellence-2026-11-04`  
+**Ultimo commit di codice verificato:** `0de82bd7e9b9ff912a2472f51c3933ff63774a21`  
+**PR:** [#2 — revisione di qualità](https://github.com/noemitomassetti/noemitomassetti-it/pull/2), ancora in bozza.  
+**Produzione:** `main` resta al commit `5469bf891ec7ca39c4b18c535d8feb20678d8f51`; nessun merge, modifica DNS o rilascio sul dominio pubblico.
 
 ### Interventi completati nel ramo
 
-- Corretto il riconoscimento della lingua per gli URL storici `/blog` e la rimozione di canonical/og:url obsoleti durante la navigazione client-side.
-- Eliminati i landmark `main` annidati nelle pagine Blog, Pubblicazioni e Dossier.
-- Corretta l'associazione tariffaria del customer care e resa più precisa la terminologia economico-finanziaria.
-- Uniformate in IT/EN/FR/ES le qualifiche universitarie, la denominazione degli istituti e la presentazione dei CFU; eliminati gli anni dalla timeline formativa.
-- Rafforzata la navigazione laptop/mobile, compresi nome accessibile, stato espanso e contrasto dell'icona del menu.
-- Aggiunte anteprime fedeli degli elaborati dimostrativi nelle schede del portfolio.
-- Riformulati nel blog alcuni claim non documentati, i riferimenti a fatturazione e contabilità e le promesse assolute di sicurezza/backup.
-- Aggiornato l'articolo sugli strumenti digitali: distinzione fra funzioni gratuite e piani a pagamento, con informativa datata e link ai fornitori localizzati.
-- Aggiunti test di regressione per SEO, locale, pricing, contrasto, anteprime portfolio, qualifiche e claim editoriali.
+- SEO e routing: locale italiana per le rotte storiche del blog; canonical e `og:url` obsoleti rimossi durante la navigazione; metadati e hreflang verificati.
+- Accessibilità e struttura: landmark `main` annidati rimossi; nomi accessibili e stato espanso del menu; contrasto del menu mobile verificato; filtri portfolio visibili e non tagliati a 390 px.
+- Cookie banner: copy abbreviato in IT/EN/FR/ES, card più compatta, titolo e descrizione associati al dialogo; scelta di rifiuto e accettazione sempre disponibili.
+- Portfolio: conteggio pubblico corretto a 21 dossier; filtri responsive a due righe su smartphone; anteprime fedeli degli elaborati; dati fittizi dichiarati.
+- Perimetro linguistico: traduzioni professionali solo EN/FR/ES → IT; localizzazione per il mercato italiano; supporto scritto multilingue per clienti già acquisiti. Rimossi dai dataset pubblici i sei vecchi esempi IT → EN/FR/ES e ristretto il tipo TypeScript alle direzioni effettivamente offerte.
+- Qualità traduttiva: registro formale preservato nei due esempi FR → IT; controlli su corrispondenza dei segmenti, valori numerici e completezza dei sei esempi pubblici.
+- Copy multilingue: qualifiche e istituti uniformati; testi di servizio, metadata e footer corretti; claim del blog e limiti dei piani gratuiti qualificati.
+- Pricing: associazione customer care corretta; test di regressione dedicati.
+- Sitemap: 268 URL unici verificati; rotte dei 21 dossier e dei 22 documenti controllate nelle quattro lingue.
 
 ### Evidenze automatiche
 
-- [Build, TypeScript, test unitari e controlli editoriali/rilascio — esito positivo](https://github.com/noemitomassetti/noemitomassetti-it/actions/runs/42489860993).
-- [Browser smoke, responsive, navigazione, portfolio, blog multilingue, fallback form simulato e axe su percorsi rappresentativi — esito positivo](https://github.com/noemitomassetti/noemitomassetti-it/actions/runs/42489860994).
-- Check di deployment Vercel sul ramo: `success`.
-- Preview Cloudflare Pages del ramo: [chatgpt-portfolio-excellence.noemitomassetti-it.pages.dev](https://chatgpt-portfolio-excellence.noemitomassetti-it.pages.dev).
+- [Build, TypeScript, test unitari e controlli editoriali/rilascio — SUCCESS](https://github.com/noemitomassetti/noemitomassetti-it/actions/runs/42493466860).
+- [Browser smoke, viewport responsive, filtri portfolio, dossier, blog multilingue, modulo con provider simulato e axe su percorsi rappresentativi — SUCCESS](https://github.com/noemitomassetti/noemitomassetti-it/actions/runs/42493466829).
+- Check Vercel sul ramo: `success`.
+- [Anteprima Cloudflare Pages del ramo](https://chatgpt-portfolio-excellence.noemitomassetti-it.pages.dev): deploy riuscito.
+- Schermate browser a 390 px esaminate dopo le modifiche.
 
-I controlli axe riguardano percorsi rappresentativi e **non costituiscono una certificazione WCAG 2.2 AA**. I test del modulo utilizzano un provider simulato e non dimostrano la ricezione di email reali.
+I controlli axe sono rappresentativi e non equivalgono a certificazione WCAG 2.2 AA. Il provider del modulo è simulato: la ricezione di email reali non è stata dimostrata.
 
-### Condizioni ancora necessarie prima del rilascio
+### Gate ancora aperti prima del rilascio
 
-1. Verificare sul dominio il recapito effettivo delle richieste del modulo.
-2. Eseguire una revisione linguistica indipendente e completa di EN/FR/ES.
-3. Verificare provenienza/licenze delle immagini e completare l'ottimizzazione degli asset.
-4. Completare controlli manuali con screen reader e dispositivi reali.
-5. Scegliere un hosting compatibile con l'uso commerciale. Le condizioni Vercel aggiornate il 19 ottobre 2026 limitano il piano Hobby all'uso personale o non commerciale: [Vercel Terms of Service — Hobby Plan](https://vercel.com/legal/terms#hobby-plan). Non attivare piani a pagamento né modificare DNS senza autorizzazione.
+1. Verificare il recapito reale del modulo Web3Forms sulla casella professionale.
+2. Completare la rilettura indipendente madrelingua dell'intero copy EN/FR/ES.
+3. Eseguire test manuali con screen reader, tastiera e dispositivi reali.
+4. Verificare licenze, provenienza e ottimizzazione di tutte le immagini.
+5. Scegliere hosting conforme all'uso commerciale: Vercel Hobby è limitato all'uso personale/non commerciale; la preview Cloudflare su `pages.dev` non è il dominio di produzione.
+6. Verificare manualmente la dicitura attuale del profilo LinkedIn.
 
-**Esito:** revisione del codice e collaudi automatici superati sul ramo; sito non ancora autorizzato al rilascio in produzione.
-
+**Esito:** codice e controlli automatici superati sul ramo di revisione; il sito non è ancora autorizzato al rilascio in produzione.

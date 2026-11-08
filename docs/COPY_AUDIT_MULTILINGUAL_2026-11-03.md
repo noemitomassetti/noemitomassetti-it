@@ -35,8 +35,8 @@
 
 - La **correttezza giuridica e fiscale** delle informative e delle clausole contrattuali richiede, ove necessario, verifica da parte dei professionisti competenti. L'editing non equivale a certificazione di conformità.
 - Non dichiarare **identità testuale** fra blog italiano e le tre versioni straniere; per una vera traduzione integrale serve un progetto editoriale specifico.
-- Confermare l'esito dei controlli automatici sull'**ultimo SHA** e verificare l'anteprima su Vercel prima del merge su `main`.
-- **LinkedIn:** il titolo precedente conteneva `IT ↔ EN/FR/ES`; adeguare sul profilo pubblico la dicitura relativa alle **traduzioni professionali EN/FR/ES → IT**, distinguendole dalle comunicazioni multilingue.
+- I controlli automatici sull'ultimo SHA della revisione sono superati; resta la verifica manuale dell'anteprima e l'approvazione esplicita prima di un eventuale merge su `main`.
+- **LinkedIn — controllo esterno ancora aperto:** verificare sul profilo pubblico che non sia rimasta la vecchia dicitura `IT ↔ EN/FR/ES` e che le traduzioni siano presentate come **EN/FR/ES → IT**, distinte dal supporto scritto multilingue ai clienti già acquisiti.
 - Il copy rispecchia l'offerta dichiarata; non costituisce verifica indipendente di risultati professionali, certificazioni o referenze non fornite.
 
 ## Regola di rilascio
