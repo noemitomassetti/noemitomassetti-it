@@ -45,6 +45,15 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("status")).toHaveTextContent("8 / 27");
   });
 
+  it("shows faithful deliverable excerpts on the featured portfolio cards", () => {
+    mount();
+    expect(screen.getAllByText("Anteprima dell’elaborato")).toHaveLength(8);
+    expect(screen.getAllByText((_, element) =>
+      element?.tagName.toLowerCase() === "p" && Boolean(element.textContent?.trim()) &&
+      element.textContent !== "Anteprima dell’elaborato"
+    ).length).toBeGreaterThanOrEqual(8);
+  });
+
   it("identifies demonstration work honestly and provides distinct link names", () => {
     mount("en");
     expect(screen.getByRole("heading", { name: /See how I approach each service through detailed samples/ })).toBeInTheDocument();
