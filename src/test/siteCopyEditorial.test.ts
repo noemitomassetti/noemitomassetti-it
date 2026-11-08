@@ -5,15 +5,17 @@ const source = (path: string) => readFileSync(path, "utf8");
 const localePaths = ["it", "en", "fr", "es"].map(lang => `src/lib/i18n/locales/${lang}.ts`);
 
 describe("Site copy editorial alignment", () => {
-  it("keeps the same degree timeline in all languages and the homepage", () => {
+  it("keeps academic credentials consistent and omits graduation years in all languages", () => {
     for (const path of [...localePaths, "src/pages/Index.tsx"]) {
       const text = source(path);
-      expect(text).not.toMatch(/2010[–-]2011|2010\s*[-–]\s*2011/);
-      expect(text).toMatch(/2010[–-]2012/);
+      expect(text).not.toMatch(/2009|2010[–-]2012|2010\s*[-–]\s*2012/);
+      expect(text).toContain("Università degli Studi di Macerata");
+      expect(text).toContain("Scuola Superiore per Mediatori Linguistici di Ancona");
+      expect(text).toContain("110/110 e lode");
+      expect(text).toMatch(/60 CFU/);
     }
     const home = source("src/pages/Index.tsx");
     expect(home).not.toMatch(/summa cum laude|félicitations du jury|matrícula de honor/i);
-    expect(home).toContain("110/110 e lode");
   });
 
   it("does not recycle old client testimonials or unsupported verified-customer claims",()=>{
