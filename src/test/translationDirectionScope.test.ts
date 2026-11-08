@@ -20,7 +20,7 @@ describe("Professional translation direction and public service scope", () => {
   it("does not advertise professional translation from Italian into other languages", () => {
     for (const path of publicCopyFiles) {
       const copy = readFileSync(path, "utf8");
-      expect(copy, path).not.toMatch(/IT\s*↔|both directions|dans les deux sens|en ambos sentidos/i);
+      expect(copy, path).not.toMatch(/(?:IT|Italian|italien|italiano)\s*↔|both directions|dans les deux sens|en ambos sentidos/i);
     }
   });
 

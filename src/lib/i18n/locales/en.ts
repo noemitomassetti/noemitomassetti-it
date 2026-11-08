@@ -5,9 +5,9 @@ export const enLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Italian Translation, Localisation & Support | Noemi Tomassetti',
-    homeDesc: 'Italian ↔ English/French/Spanish translation, Italian-market localisation and operational support for professionals and small businesses working with Italy.',
+    homeDesc: 'Professional translation from English, French and Spanish into Italian, Italian-market localisation and operational support for professionals and small businesses working with Italy.',
     servicesTitle: 'Italian Translation & Operational Support | Noemi Tomassetti',
-    servicesDesc: 'Italian ↔ EN/FR/ES translation, Italian-language localisation, written customer support and operational assistance for businesses working with Italy.',
+    servicesDesc: 'EN/FR/ES → IT translation, Italian-language localisation, written customer support in four languages and operational assistance for businesses working with Italy.',
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
     aboutTitle: 'About Noemi Tomassetti | Background & Philosophy',
@@ -102,7 +102,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Italian ↔ English, French & Spanish Translation',
+        title: 'EN/FR/ES → IT Translation and Italian Localisation',
         subtitle: 'Translation both from and into Italian; Italian-market localisation is a core focus.',
         description:
           "I translate English, French and Spanish into Italian, assessing each assignment by subject, complexity and target audience. My services also include localisation of websites, catalogues and professional communications for Italian readers, as well as agreed written support for existing customers in Italian, English, French and Spanish.",
@@ -533,7 +533,7 @@ export const enLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Italian ↔ English/French/Spanish translation, localisation for Italian audiences, written support for existing Italian customers and operational assistance for professionals and small businesses working with Italy.',
+      'Professional EN/FR/ES → IT translation, localisation for Italian audiences, written support for existing Italian customers and operational assistance for professionals and small businesses working with Italy.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · in development',
     companyTitle: 'About & Insights',
