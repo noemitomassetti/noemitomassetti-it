@@ -78,13 +78,13 @@ export default function Portfolio() {
     ogLocale: {it:"it_IT",en:"en_GB",fr:"fr_FR",es:"es_ES"}[lang],
   });
 
-  const categories: { id: PortfolioCategory; label: Record<Language, string>; icon: React.ReactNode }[] = [
-    { id: "all", label: { it: "Tutti i progetti", en: "All Projects", fr: "Tous les projets", es: "Todos los proyectos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
-    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, icon: <Globe className="w-3.5 h-3.5" /> },
-    { id: "research", label: { it: "Ricerche informative & confronti", en: "Informational research & comparisons", fr: "Recherche documentaire et comparaisons", es: "Investigación informativa y comparativas" }, icon: <Search className="w-3.5 h-3.5" /> },
-    { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Customer support & operational back office", fr: "Relation client et back-office opérationnel", es: "Atención al cliente y back office operativo" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
-    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, icon: <PenTool className="w-3.5 h-3.5" /> },
-    { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus Web & Pages de Destination", es: "Contenidos Web y Landing Pages" }, icon: <Layers className="w-3.5 h-3.5" /> },
+  const categories: { id: PortfolioCategory; label: Record<Language, string>; shortLabel: Record<Language, string>; icon: React.ReactNode }[] = [
+    { id: "all", label: { it: "Tutti i progetti", en: "All Projects", fr: "Tous les projets", es: "Todos los proyectos" }, shortLabel: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
+    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, shortLabel: { it: "Traduzioni", en: "Translation", fr: "Traduction", es: "Traducción" }, icon: <Globe className="w-3.5 h-3.5" /> },
+    { id: "research", label: { it: "Ricerche informative & confronti", en: "Informational research & comparisons", fr: "Recherche documentaire et comparaisons", es: "Investigación informativa y comparativas" }, shortLabel: { it: "Ricerche", en: "Research", fr: "Recherche", es: "Investigación" }, icon: <Search className="w-3.5 h-3.5" /> },
+    { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Customer support & operational back office", fr: "Relation client et back-office opérationnel", es: "Atención al cliente y back office operativo" }, shortLabel: { it: "Back office", en: "Back office", fr: "Back-office", es: "Back office" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
+    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, shortLabel: { it: "Revisione", en: "Writing", fr: "Révision", es: "Redacción" }, icon: <PenTool className="w-3.5 h-3.5" /> },
+    { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus Web & Pages de Destination", es: "Contenidos Web y Landing Pages" }, shortLabel: { it: "Contenuti web", en: "Web copy", fr: "Contenus web", es: "Contenidos web" }, icon: <Layers className="w-3.5 h-3.5" /> },
   ];
 
 
@@ -346,22 +346,24 @@ export default function Portfolio() {
       </section>
 
       {/* ── FILTER BUTTONS ── */}
-      <section className="sticky top-16 z-30 bg-background/95 backdrop-blur border-b border-border/40 py-4 shadow-sm">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto flex items-center gap-2 overflow-x-auto no-scrollbar">
+      <section className="sticky top-16 z-30 bg-background/95 backdrop-blur border-b border-border/40 py-3 sm:py-4 shadow-sm">
+        <div id="portfolio-category-filters" role="group" aria-label={({it:"Filtra i progetti per categoria",en:"Filter projects by category",fr:"Filtrer les projets par catégorie",es:"Filtrar proyectos por categoría"} as const)[lang]} className="container px-4 md:px-6 max-w-5xl mx-auto flex flex-wrap items-center gap-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
               type="button"
               onClick={() => setSelectedCategory(cat.id)}
+              aria-label={cat.label[lang]}
               aria-pressed={selectedCategory === cat.id}
-              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
+              className={`inline-flex min-h-11 items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                 selectedCategory === cat.id
                   ? "bg-primary text-primary-foreground shadow-sm"
                   : "bg-secondary/60 text-muted-foreground hover:text-foreground hover:bg-secondary"
               }`}
             >
               {cat.icon}
-              {cat.label[lang]}
+              <span className="sm:hidden">{cat.shortLabel[lang]}</span>
+              <span className="hidden sm:inline">{cat.label[lang]}</span>
             </button>
           ))}
         </div>

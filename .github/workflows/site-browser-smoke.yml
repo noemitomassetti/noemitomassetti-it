@@ -141,6 +141,22 @@ jobs:
                   if(await rejectCookies.isVisible()) await rejectCookies.click();
                   const lang=await page.locator('html').getAttribute('lang');
                   if(lang!==item.lang) throw Error('Portfolio locale mismatch '+item.path+': '+lang);
+                  if(width===390) {
+                    const filters=page.locator('#portfolio-category-filters');
+                    if(await filters.getByRole('button').count()!==6)
+                      throw Error('Expected six portfolio category filters '+item.path);
+                    const geometry=await filters.evaluate(el=>{
+                      const bounds=el.getBoundingClientRect();
+                      const buttons=Array.from(el.querySelectorAll('button')).map(button=>{
+                        const rect=button.getBoundingClientRect();
+                        return {left:rect.left,right:rect.right};
+                      });
+                      return {left:bounds.left,right:bounds.right,clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,buttons};
+                    });
+                    if(geometry.scrollWidth>geometry.clientWidth+1 ||
+                      geometry.buttons.some(button=>button.left<geometry.left-1 || button.right>geometry.right+1))
+                      throw Error('Portfolio category filters are clipped or horizontally scrollable on mobile '+item.path);
+                  }
                   const buttons=page.locator('article button[aria-expanded]');
                   const count=await buttons.count();
                   if(count!==18) throw Error('Expected 18 accessible case studies '+item.path+', got '+count);
