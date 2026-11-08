@@ -31,3 +31,41 @@ Non unire la PR #2 a `main` finché test TypeScript, build, test Vitest, release
 
 ## Ambito commerciale
 Servizi offerti: segreteria, back office operativo, comunicazioni con clienti già acquisiti, traduzione/localizzazione prioritariamente EN/FR/ES→IT, contenuti e ricerche informative a supporto degli incarichi. Non offrire contabilità, fatturazione, amministrazione, prospecting, lead generation, telemarketing, chiamate a freddo o reclutamento intervistati.
+
+## Aggiornamento 8 novembre 2026 — revisione tecnica ed editoriale
+
+**Ramo di revisione:** `chatgpt/portfolio-excellence-2026-11-04`  
+**Commit verificato:** `4fb0fb862501573cc0537641de48b7c6b6a4699e`  
+**Produzione:** `main` invariato (`5469bf8`); nessun merge, modifica DNS o rilascio sul dominio pubblico.
+
+### Interventi completati nel ramo
+
+- Corretto il riconoscimento della lingua per gli URL storici `/blog` e la rimozione di canonical/og:url obsoleti durante la navigazione client-side.
+- Eliminati i landmark `main` annidati nelle pagine Blog, Pubblicazioni e Dossier.
+- Corretta l'associazione tariffaria del customer care e resa più precisa la terminologia economico-finanziaria.
+- Uniformate in IT/EN/FR/ES le qualifiche universitarie, la denominazione degli istituti e la presentazione dei CFU; eliminati gli anni dalla timeline formativa.
+- Rafforzata la navigazione laptop/mobile, compresi nome accessibile, stato espanso e contrasto dell'icona del menu.
+- Aggiunte anteprime fedeli degli elaborati dimostrativi nelle schede del portfolio.
+- Riformulati nel blog alcuni claim non documentati, i riferimenti a fatturazione e contabilità e le promesse assolute di sicurezza/backup.
+- Aggiornato l'articolo sugli strumenti digitali: distinzione fra funzioni gratuite e piani a pagamento, con informativa datata e link ai fornitori localizzati.
+- Aggiunti test di regressione per SEO, locale, pricing, contrasto, anteprime portfolio, qualifiche e claim editoriali.
+
+### Evidenze automatiche
+
+- [Build, TypeScript, test unitari e controlli editoriali/rilascio — esito positivo](https://github.com/noemitomassetti/noemitomassetti-it/actions/runs/42489860993).
+- [Browser smoke, responsive, navigazione, portfolio, blog multilingue, fallback form simulato e axe su percorsi rappresentativi — esito positivo](https://github.com/noemitomassetti/noemitomassetti-it/actions/runs/42489860994).
+- Check di deployment Vercel sul ramo: `success`.
+- Preview Cloudflare Pages del ramo: [chatgpt-portfolio-excellence.noemitomassetti-it.pages.dev](https://chatgpt-portfolio-excellence.noemitomassetti-it.pages.dev).
+
+I controlli axe riguardano percorsi rappresentativi e **non costituiscono una certificazione WCAG 2.2 AA**. I test del modulo utilizzano un provider simulato e non dimostrano la ricezione di email reali.
+
+### Condizioni ancora necessarie prima del rilascio
+
+1. Verificare sul dominio il recapito effettivo delle richieste del modulo.
+2. Eseguire una revisione linguistica indipendente e completa di EN/FR/ES.
+3. Verificare provenienza/licenze delle immagini e completare l'ottimizzazione degli asset.
+4. Completare controlli manuali con screen reader e dispositivi reali.
+5. Scegliere un hosting compatibile con l'uso commerciale. Le condizioni Vercel aggiornate il 19 ottobre 2026 limitano il piano Hobby all'uso personale o non commerciale: [Vercel Terms of Service — Hobby Plan](https://vercel.com/legal/terms#hobby-plan). Non attivare piani a pagamento né modificare DNS senza autorizzazione.
+
+**Esito:** revisione del codice e collaudi automatici superati sul ramo; sito non ancora autorizzato al rilascio in produzione.
+
