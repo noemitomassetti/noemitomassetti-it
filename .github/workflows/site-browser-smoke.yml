@@ -102,9 +102,18 @@ jobs:
                 await page.screenshot({path:'/tmp/noemi-smoke/responsive_'+width+'.png',fullPage:false});
                 console.log('PASS responsive header '+width+'px');
                 if (width===390) {
-                  await page.getByRole('button',{name:'Toggle navigation menu'}).click();
-                  if(!await page.getByRole('navigation').count()) throw new Error('Mobile nav missing');
-                  console.log('PASS mobile menu');
+                  const menuButton=page.getByRole('button',{name:'Apri il menu'});
+                  if(await menuButton.getAttribute('aria-expanded')!=='false')
+                    throw new Error('Mobile menu should start collapsed');
+                  if(await menuButton.getAttribute('aria-controls')!=='noetom-navigation-drawer')
+                    throw new Error('Mobile menu control is not associated with its region');
+                  await menuButton.click();
+                  const closeButton=page.getByRole('button',{name:'Chiudi il menu'});
+                  if(await closeButton.getAttribute('aria-expanded')!=='true')
+                    throw new Error('Mobile menu expanded state was not announced');
+                  if(!await page.locator('#noetom-navigation-drawer').isVisible())
+                    throw new Error('Mobile navigation region missing or hidden');
+                  console.log('PASS mobile menu, localized accessible name and expanded state');
                 }
               }
               // Portfolio quality gate: all four languages, two viewport sizes, keyboard use and real sample routes.
