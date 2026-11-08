@@ -111,7 +111,7 @@ export const itLocale: TranslationDictionary = {
           'Corrispondenza professionale multilingue',
           'Traduzione in italiano di proposte e presentazioni EN/FR/ES',
           'Materiali formativi e contenuti per corsi',
-          'Traduzione di newsletter e comunicazioni',
+          'Traduzione in italiano di newsletter e comunicazioni EN/FR/ES',
           'Revisione e controllo qualità linguistica',
         ],
       },

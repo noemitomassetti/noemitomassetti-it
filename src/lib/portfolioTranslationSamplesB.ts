@@ -185,7 +185,7 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
     "target": [
       "Laboratorio: organizzare le comunicazioni scritte con i clienti già acquisiti. Il corso online si rivolge a liberi professionisti e piccoli team che desiderano gestire meglio le attività quotidiane. Presenta metodi per classificare le richieste, preparare le risposte e monitorare le decisioni ancora in sospeso.",
       "Il programma prevede tre incontri in diretta di due ore ciascuno, per un totale di sei ore. I partecipanti ricevono esercitazioni pratiche e una checklist. Gli incontri non vengono registrati; per partecipare sono necessari un computer e una connessione Internet stabile. Non è richiesto alcun software a pagamento.",
-      "Le iscrizioni sono aperte fino a esaurimento dei posti. Il calendario definitivo e le modalità di pagamento vengono comunicati prima della conferma dell’iscrizione. Il laboratorio non rilascia certificazioni professionali. Per qualsiasi domanda, contatta la segreteria per iscritto prima di inviare ulteriori dati personali."
+      "Le iscrizioni sono aperte fino a esaurimento dei posti. Il calendario definitivo e le modalità di pagamento vengono comunicati prima della conferma dell’iscrizione. Il laboratorio non rilascia certificazioni professionali. Per qualsiasi domanda, contatti la segreteria per iscritto prima di inviare ulteriori dati personali."
     ],
     "terminology": [
       {
@@ -210,7 +210,7 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
       }
     ],
     "method": {
-      "it": "Struttura informativa invariata: destinatari, contenuti, durata, requisiti, iscrizioni e certificazione.",
+      "it": "Struttura informativa invariata: destinatari, contenuti, durata, requisiti, iscrizioni e certificazione; mantenuto il registro di cortesia del testo originale.",
       "en": "Preserves audience, course format, time, access and certification boundaries.",
       "fr": "Respecte programme, durée et conditions.",
       "es": "Respeta programa, duración y requisitos."

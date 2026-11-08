@@ -194,8 +194,8 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
     ],
     "target": [
       "Vaso Sillage — una presenza discreta, modellata a mano. Ogni vaso è realizzato nel nostro laboratorio in gres e rifinito con uno smalto opaco che lascia emergere leggere variazioni di tonalità. Queste sfumature sono caratteristiche della lavorazione artigianale e non costituiscono difetti.",
-      "Dimensioni: altezza 26 cm, diametro massimo 15 cm. Il vaso è pensato per fiori secchi o come elemento decorativo. Poiché non è garantita la tenuta stagna dell’interno, sconsigliamo di riempirlo d’acqua. Rimuovi la polvere con un panno morbido e asciutto; evita prodotti abrasivi.",
-      "I pezzi sono realizzati in piccole serie. Se il colore che desideri è esaurito, puoi chiedere di essere avvisato quando tornerà disponibile. L’iscrizione all’avviso non equivale a una prenotazione né a un ordine. Per informazioni sulle caratteristiche del prodotto, contatta il nostro team."
+      "Dimensioni: altezza 26 cm, diametro massimo 15 cm. Il vaso è pensato per fiori secchi o come elemento decorativo. Poiché non è garantita la tenuta stagna dell’interno, sconsigliamo di riempirlo d’acqua. Rimuova la polvere con un panno morbido e asciutto; eviti prodotti abrasivi.",
+      "I pezzi sono realizzati in piccole serie. Se il colore desiderato è esaurito, può chiedere di ricevere un avviso quando tornerà disponibile. L’iscrizione all’avviso non equivale a una prenotazione né a un ordine. Per informazioni sulle caratteristiche del prodotto, contatti il nostro team."
     ],
     "terminology": [
       {
@@ -230,7 +230,7 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
       }
     ],
     "method": {
-      "it": "Ho separato stile evocativo e informazioni di sicurezza, mantenendo le condizioni d’uso e il trattamento coerente con il tono del marchio.",
+      "it": "Ho separato lo stile evocativo dalle informazioni di sicurezza, mantenendo le condizioni d’uso e il registro di cortesia del testo originale.",
       "en": "Separates brand tone from important use restrictions, while retaining measurements and product care.",
       "fr": "Distingue style évocateur et consignes d’usage sans altérer les mesures.",
       "es": "Separa estilo y advertencias, manteniendo medidas y cuidado."

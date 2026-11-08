@@ -322,9 +322,9 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
 
             {/* Mobile Hamburger Menu */}
             <Button
-              variant="ghost"
+              variant="default"
               size="icon"
-              className="2xl:hidden text-foreground hover:text-accent-foreground h-9 w-9"
+              className="2xl:hidden h-10 w-10 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground shadow-sm"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-expanded={mobileOpen}
               aria-controls="noetom-navigation-drawer"

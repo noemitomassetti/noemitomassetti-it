@@ -7,7 +7,7 @@ export const enLocale: TranslationDictionary = {
     homeTitle: 'Italian Translation, Localisation & Support | Noemi Tomassetti',
     homeDesc: 'Professional translation from English, French and Spanish into Italian, Italian-market localisation and operational support for professionals and small businesses working with Italy.',
     servicesTitle: 'Italian Translation & Operational Support | Noemi Tomassetti',
-    servicesDesc: 'EN/FR/ES → IT translation, Italian-language localisation, written customer support in four languages and operational assistance for businesses working with Italy.',
+    servicesDesc: 'Professional EN/FR/ES → IT translation, Italian-market localisation, written support for existing customers in Italian, English, French and Spanish, and operational back-office assistance for businesses working with Italy.',
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
     aboutTitle: 'About Noemi Tomassetti | Background & Philosophy',
@@ -112,7 +112,7 @@ export const enLocale: TranslationDictionary = {
           'Italian-language professional correspondence',
           'Translation of proposals and presentations from EN/FR/ES into Italian',
           'Training materials translated from EN/FR/ES into Italian',
-          'Marketing and newsletter translation for Italian and international readers',
+          'Translation into Italian of marketing copy and newsletters from EN/FR/ES',
           'Italian-language editing and linguistic quality checks',
         ],
       },
@@ -533,7 +533,7 @@ export const enLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Professional EN/FR/ES → IT translation, localisation for Italian audiences, written support for existing Italian customers and operational assistance for professionals and small businesses working with Italy.',
+      'Professional translation from English, French and Spanish into Italian, localisation for Italian audiences, written support for existing customers in Italian, English, French and Spanish, and operational assistance for professionals and small businesses working with Italy.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · in development',
     companyTitle: 'About & Insights',
