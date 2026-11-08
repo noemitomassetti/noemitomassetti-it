@@ -45,11 +45,14 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       expect(research?.description.toLowerCase(),lang).toMatch(/client|prospect|contatti|clientes|commercial/i);
     }
   });
-  it("respects the Italy-first international service positioning and bilingual direction",()=>{
+  it("respects the Italy-first international service positioning and EN/FR/ES-to-Italian translation direction",()=>{
     for(const lang of LANGS){
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
-      expect(cat?.title,lang).toContain("↔");
       expect(cat?.description.length,lang).toBeGreaterThan(160);
+      if(lang==="it") expect(cat?.description).toContain("verso l’italiano");
+      if(lang==="en") expect(cat?.description).toContain("from English, French and Spanish into Italian");
+      if(lang==="fr") expect(cat?.description).toContain("de l’anglais, du français et de l’espagnol vers l’italien");
+      if(lang==="es") expect(cat?.description).toContain("del inglés, francés y español al italiano");
       if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
     }
     expect(enLocale.servicesSection.categories[0].description).toContain("Italian-language");
@@ -57,9 +60,9 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
     expect(esLocale.servicesSection.categories[0].description).toContain("en italiano");
   });
   it("has real demonstrative deliverables for each offer, with no client-testimonial claims",()=>{
-    expect(TRANSLATION_DEEP_CASES.length).toBe(12);
+    expect(TRANSLATION_DEEP_CASES.length).toBe(6);
     expect(OPERATIONAL_DEEP_CASES.length).toBe(15);
-    expect(DEEP_PORTFOLIO_ITEMS.length).toBe(27);
+    expect(DEEP_PORTFOLIO_ITEMS.length).toBe(21);
     expect(PORTFOLIO_CASES.length).toBe(18);
     expect(PORTFOLIO_DOCUMENTS.length).toBe(22);
     const operations=OPERATIONAL_DEEP_CASES;

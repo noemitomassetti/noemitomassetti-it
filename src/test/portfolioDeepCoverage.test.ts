@@ -13,12 +13,12 @@ import { PORTFOLIO_DOCUMENTS } from "../lib/portfolioData";
 import type { Language } from "../lib/i18n/types";
 
 const LANGS: Language[] = ["it","en","fr","es"];
-const DIRECTIONS = ["EN-IT","IT-EN","FR-IT","IT-FR","ES-IT","IT-ES"];
+const DIRECTIONS = ["EN-IT","FR-IT","ES-IT"];
 const read = (path:string) => readFileSync(path,"utf8");
 
 describe("Detailed portfolio: complete service coverage",()=>{
-  it("provides multiple actual source/target demonstration samples for all six translation directions",()=>{
-    expect(TRANSLATION_DEEP_CASES.length).toBeGreaterThanOrEqual(12);
+  it("provides multiple actual source/target demonstration samples for the three offered translation directions",()=>{
+    expect(TRANSLATION_DEEP_CASES.length).toBeGreaterThanOrEqual(6);
     for(const dir of DIRECTIONS){
       const cases=TRANSLATION_DEEP_CASES.filter(sample=>sample.direction===dir);
       expect(cases.length,dir).toBeGreaterThanOrEqual(2);
@@ -131,7 +131,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
     const locs=xml.split("<loc>").slice(1).map(x=>x.split("</loc>")[0]);
-    expect(locs).toHaveLength(292);
+    expect(locs).toHaveLength(268);
     expect(new Set(locs).size).toBe(locs.length);
   });
   it("publishes only fictional sample data with explicit scope and privacy statements",()=>{

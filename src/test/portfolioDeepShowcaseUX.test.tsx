@@ -17,7 +17,7 @@ describe("Deep portfolio user experience", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /Esplora tutti i dossier/ }));
     expect(status).toHaveTextContent("21 / 21");
-    expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(27);
+    expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(21);
   });
 
   it("resets the expanded selection when changing filters and gives feedback", () => {
