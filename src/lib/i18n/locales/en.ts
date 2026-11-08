@@ -43,7 +43,7 @@ export const enLocale: TranslationDictionary = {
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
-      'I translate between Italian and English, French and Spanish in both directions. I also refine Italian-language content and support agreed operations involving existing Italian customers and partners.',
+      'My professional translation work is from English, French and Spanish into Italian. I also refine Italian-language content and support agreed written communication with existing customers in Italian, English, French and Spanish.',
     ctaServices: 'Explore Services',
     ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
@@ -65,7 +65,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Linguistic Accuracy',
-        desc: 'Native Italian speaker, with advanced English and French and upper-intermediate Spanish. I translate in both directions between Italian and these languages, with each assignment scoped to the subject and audience.',
+        desc: 'Native Italian speaker, with advanced English and French and upper-intermediate Spanish. My professional translations are from English, French and Spanish into Italian; I also provide agreed written support for existing customers in all four languages.',
       },
       {
         title: 'Practical Digital Tools',
@@ -105,13 +105,13 @@ export const enLocale: TranslationDictionary = {
         title: 'Italian ↔ English, French & Spanish Translation',
         subtitle: 'Translation both from and into Italian; Italian-market localisation is a core focus.',
         description:
-          "I translate between Italian and English, French and Spanish in both directions, assessing each assignment by subject, complexity and target audience. My services also include localisation of websites, catalogues and professional communications for Italian readers. Where appropriate, final native-language review for English, French or Spanish output can be agreed as part of the scope.",
+          "I translate English, French and Spanish into Italian, assessing each assignment by subject, complexity and target audience. My services also include localisation of websites, catalogues and professional communications for Italian readers, as well as agreed written support for existing customers in Italian, English, French and Spanish.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
           'Italian-language professional correspondence',
-          'Translation of proposals and presentations (IT ↔ EN/FR/ES)',
-          'Training material translated between Italian and EN/FR/ES',
+          'Translation of proposals and presentations from EN/FR/ES into Italian',
+          'Training materials translated from EN/FR/ES into Italian',
           'Marketing and newsletter translation for Italian and international readers',
           'Italian-language editing and linguistic quality checks',
         ],
@@ -196,8 +196,8 @@ export const enLocale: TranslationDictionary = {
        deliverables: ['Review of activities to delegate', 'Agreed email, document and workflow organisation', 'Summary of work completed and next priorities'], turnaround: 'By agreement'},
       {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: "Written enquiries from existing customers, order-status updates and support follow-ups, within agreed procedures and tone of voice.",
        deliverables: ['Response templates and FAQs', 'Agreed handling of written enquiries', 'Follow-up and activity log'], turnaround: 'By agreement'},
-      {id: 'p3', title: 'Multilingual translation and adaptation', badge: 'IT · EN · FR · ES', description: 'Translation between Italian and English, French and Spanish in both directions, plus Italian-market localisation and agreed multilingual correspondence.',
-       deliverables: ['Source, audience and terminology review', 'Translation or localisation of agreed content', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
+      {id: 'p3', title: 'Translation into Italian and Italian-market localisation', badge: 'IT · EN · FR · ES', description: 'Professional translation from English, French and Spanish into Italian, Italian-market localisation and agreed multilingual correspondence with existing customers.',
+       deliverables: ['Source, audience and terminology review', 'Translation into Italian or Italian-market localisation of agreed content', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
       {id: 'p4', title: 'Existing-content review', badge: 'Clarity and consistency', description: 'Careful editing of your existing professional and multilingual materials.',
        deliverables: ['Text and objectives assessment', 'Structure, tone and readability revision', 'Final editable document with traceable changes'], turnaround: 'Based on scope'},
     ],
@@ -396,7 +396,7 @@ export const enLocale: TranslationDictionary = {
       {
         period: '2026 – Present',
         role: 'Independent virtual assistance and translation',
-        detail: 'Italian-language customer support, operational back office, translation with Italian in both directions and Italian-market localisation.',
+        detail: 'Italian-language customer support, operational back office, translation from EN/FR/ES into Italian and Italian-market localisation.',
       },
     ],
     valuesTitle: 'Core Operational Principles',
@@ -454,7 +454,7 @@ export const enLocale: TranslationDictionary = {
       serviceNeeded: 'Primary Area of Interest *',
       serviceOptions: [
         'Italian Customer Communication & Operational Support',
-        'Translation IT ↔ EN/FR/ES & Italian Localisation',
+        'Translation EN/FR/ES → IT & Italian Localisation',
         'Italian Content Editing & Revision',
         'Italy-related Informational Research',
         'Digital Organisation & Practical Tools',

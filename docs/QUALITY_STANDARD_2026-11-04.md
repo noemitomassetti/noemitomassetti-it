@@ -7,7 +7,7 @@ Una build verde non equivale a esperienza eccellente; una valutazione di eccelle
 | Area | Condizione per un giudizio «ottimo» | Evidenza / gap |
 | --- | --- | --- |
 | Posizionamento | Servizi chiarissimi, target specifico, esclusioni uniformi IT/EN/FR/ES | Catalogo e dichiarazioni presenti; revisione completa in ogni pagina da ripetere |
-| Portfolio | 3–8 esempi prioritari da leggere subito; archivio ricercabile/filtrabile; brief, scelte, consegna reale dimostrativa e limiti | 27 dossier, 18 casi metodologici e 22 documenti; filtri e selezione migliorati nel nuovo ramo |
+| Portfolio | 3–8 esempi prioritari da leggere subito; archivio ricercabile/filtrabile; brief, scelte, consegna reale dimostrativa e limiti | 21 dossier pubblici (6 traduzioni EN/FR/ES → IT e 15 casi operativi), 18 casi sintetici e 22 documenti; filtri e selezione migliorati nel nuovo ramo |
 | Onestà | Escludere clienti, risultati, referenze o prestazioni non verificabili | I materiali usano dati fittizi e ne dichiarano la natura; vietate promesse di risultati |
 | Localizzazione | IT nativo, EN/FR/ES naturali; traduzioni specialistiche orientate in primo luogo verso IT | Test automatizzati presenti; manca seconda revisione umana integrale |
 | Grafica | Identità coordinata, elementi coerenti, gerarchia leggibile, niente decorazioni fini a se stesse | Da verificare su schermi reali 320, 390, 768, 1365, 1920 px |

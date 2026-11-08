@@ -546,9 +546,9 @@ export default function IndexPage() {
               {lang === "it"
                 ? "Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e contenuti per siti web."
                 : lang === "fr"
-                ? "Noemi Tomassetti - Assistante virtuelle pour professionnels et petites entreprises. Soutien opérationnel lié à l’Italie, traduction italien ↔ français/anglais/espagnol et localisation en italien."
+                ? "Noemi Tomassetti - Assistante virtuelle pour professionnels et petites entreprises. Traduction professionnelle de l’anglais, du français et de l’espagnol vers l’italien, localisation en italien et soutien opérationnel lié à l’Italie."
                 : lang === "es"
-                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Apoyo operativo relacionado con Italia, traducción italiano ↔ español/inglés/francés y localización al italiano."
+                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Traducción profesional del inglés, francés y español al italiano, localización al italiano y apoyo operativo relacionado con Italia."
                 : "Noemi Tomassetti - Virtual Assistant for professionals and small businesses. Operational back office, organisational support, multilingual communication and Italian-language website content."}
             </h1>
 

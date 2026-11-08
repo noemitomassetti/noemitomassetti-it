@@ -5,7 +5,7 @@ export const itLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Noemi Tomassetti | Assistente Virtuale Multilingue e Traduttrice',
-    homeDesc: 'Segreteria organizzativa, back office operativo, customer care per clienti esistenti, traduzioni IT ↔ EN/FR/ES e contenuti digitali per professionisti e piccole imprese.',
+    homeDesc: 'Segreteria organizzativa, back office operativo, customer care per clienti esistenti, traduzioni professionali EN/FR/ES → IT e contenuti digitali per professionisti e piccole imprese.',
     servicesTitle: 'Servizi Professionali | Noemi Tomassetti',
     servicesDesc: 'Segreteria, back office, comunicazione con clienti già acquisiti, traduzione tra italiano e inglese, francese e spagnolo, e localizzazione di contenuti.',
     noetomTitle: 'NoeTom | Progetto operativo interno',
@@ -101,15 +101,15 @@ export const itLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Traduzioni IT ↔ EN, FR, ES e localizzazione',
-        subtitle: 'Traduzioni in entrambe le direzioni con l’italiano; localizzazione per il pubblico italiano.',
+        title: 'Traduzioni EN/FR/ES → IT e localizzazione per l’Italia',
+        subtitle: 'Traduzioni professionali verso l’italiano e localizzazione per il pubblico italiano.',
         description:
-          "Traduco dall’inglese, dal francese e dallo spagnolo all’italiano e dall’italiano verso inglese, francese e spagnolo, in base all’ambito e alla complessità del testo. Offro localizzazione per il mercato italiano, revisione dei contenuti e corrispondenza multilingue. Per testi particolarmente specialistici o destinati alla pubblicazione, l’eventuale revisione madrelingua nella lingua di arrivo viene concordata nel preventivo.",
+          "Traduco professionalmente dall’inglese, dal francese e dallo spagnolo verso l’italiano, valutando ambito, complessità e pubblico destinatario. Offro inoltre localizzazione per il mercato italiano, revisione di contenuti italiani e supporto operativo per la corrispondenza multilingue con clienti già acquisiti.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti e landing page per il pubblico italiano',
           'Corrispondenza professionale multilingue',
-          'Traduzione di proposte e presentazioni IT ↔ EN/FR/ES',
+          'Traduzione in italiano di proposte e presentazioni EN/FR/ES',
           'Materiali formativi e contenuti per corsi',
           'Traduzione di newsletter e comunicazioni',
           'Revisione e controllo qualità linguistica',
@@ -457,7 +457,7 @@ export const itLocale: TranslationDictionary = {
       serviceNeeded: 'Area di supporto di tuo interesse *',
       serviceOptions: [
         'Segreteria Organizzativa & Back Office Operativo',
-        'Traduzioni IT ↔ EN/FR/ES e localizzazione verso l’italiano',
+        'Traduzioni professionali EN/FR/ES → IT e localizzazione per il mercato italiano',
         'Scrittura & Revisione Testi',
         'Ricerche Informative a Supporto',
         'Supporto digitale e organizzazione degli strumenti',
@@ -536,7 +536,7 @@ export const itLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazioni professionali e traduzioni IT ↔ EN/FR/ES per freelance, consulenti e piccole imprese.',
+      'Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazioni professionali e traduzioni professionali EN/FR/ES → IT per freelance, consulenti e piccole imprese.',
     servicesTitle: 'Servizi',
     noetomTitle: 'NoeTom · in sviluppo',
     companyTitle: 'Chi Sono & Risorse',
