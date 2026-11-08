@@ -18,7 +18,8 @@ const read = (path:string) => readFileSync(path,"utf8");
 
 describe("Detailed portfolio: complete service coverage",()=>{
   it("provides multiple actual source/target demonstration samples for the three offered translation directions",()=>{
-    expect(TRANSLATION_DEEP_CASES.length).toBeGreaterThanOrEqual(6);
+    expect(TRANSLATION_DEEP_CASES).toHaveLength(6);
+    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(21);
     for(const dir of DIRECTIONS){
       const cases=TRANSLATION_DEEP_CASES.filter(sample=>sample.direction===dir);
       expect(cases.length,dir).toBeGreaterThanOrEqual(2);
@@ -81,6 +82,13 @@ describe("Detailed portfolio: complete service coverage",()=>{
         expect(item.limits[lang].trim().length).toBeGreaterThan(25);
       }
     }
+  });
+  it("keeps the overview dossier count aligned with the public catalogue in all four languages", () => {
+    const page = read("src/pages/Portfolio.tsx");
+    for (const label of ["21 dossier approfonditi", "21 in-depth dossiers", "21 dossiers détaillés", "21 dosieres detallados"]) {
+      expect(page).toContain(label);
+    }
+    expect(page).not.toMatch(/27 dossier approfonditi|27 in-depth dossiers|27 dossiers détaillés|27 dosieres detallados/);
   });
   it("has unique slugs and valid multilingual deep-dossier navigation",()=>{
     const slugs=DEEP_PORTFOLIO_ITEMS.map(x=>x.item.id);
