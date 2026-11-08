@@ -5,9 +5,9 @@ import { OPERATIONAL_SAMPLES_A } from "./portfolioOperationalSamplesA";
 import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
 import { OPERATIONAL_SAMPLES_D } from "./portfolioOperationalSamplesD";
-import type { TranslationDeepCase } from "./portfolioDeepTypes";
+import type { PublicTranslationDirection, TranslationDeepCase } from "./portfolioDeepTypes";
 
-type PublicTranslationDirection = "EN-IT" | "FR-IT" | "ES-IT";
+/** Only EN/FR/ES → IT translation samples are public; reverse-direction drafts are not offered as translation services. */
 type PublicTranslationDeepCase = Omit<TranslationDeepCase, "direction"> & { direction: PublicTranslationDirection };
 const isPublicTranslation = (item: TranslationDeepCase): item is PublicTranslationDeepCase =>
   item.direction === "EN-IT" || item.direction === "FR-IT" || item.direction === "ES-IT";

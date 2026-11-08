@@ -5,10 +5,10 @@ import { ArrowUpRight, BookOpen, Globe2, BriefcaseBusiness, Languages, ShieldChe
 import type { Language } from "@/lib/i18n/types";
 import { DEEP_PORTFOLIO_ITEMS, getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
 import type { DeepPortfolioItem } from "@/lib/portfolioDeepCatalog";
-import { DIRECTION_LABELS } from "@/lib/portfolioDeepTypes";
+import { DIRECTION_LABELS, type PublicTranslationDirection } from "@/lib/portfolioDeepTypes";
 
 const FEATURED_IDS=["en-it-digital-onboarding","fr-it-handmade-product","es-it-existing-customer","inbox-calendar-triage","customer-care-escalations","website-help-page-microcopy","course-information-source-audit","existing-customer-multilingual-email-pack"];
-type Filter = "all" | "translation" | "operations" | "backoffice" | "research" | "writing" | "web" | "EN-IT" | "FR-IT" | "ES-IT";
+type Filter = "all" | "translation" | "operations" | "backoffice" | "research" | "writing" | "web" | PublicTranslationDirection;
 const text = {
   it: {eyebrow:"Approfondimenti e lavori completi",title:"Scopri come lavoro, attraverso gli elaborati",description:"Oltre alle schede sintetiche, consulta dossier originali con brief realistici, documenti completi, traduzioni a fronte, scelte terminologiche, procedure e controlli. Ogni dossier presenta un problema concreto, l’approccio proposto e un elaborato consultabile.",all:"Tutti i dossier",translation:"Traduzioni a fronte",operations:"Assistenza e organizzazione",backoffice:"Segreteria, customer care e back office",research:"Ricerche informative",writing:"Revisione e cataloghi",web:"Contenuti web",read:"Esplora il dossier completo",source:"Traduzione",context:"Caso operativo",notice:"Materiali dimostrativi originali: non sono estratti di lavori commissionati né contengono dati di clienti reali.",caption:"Documenti, testi e metodi consultabili",results:"Dossier visualizzati",search:"Cerca nei dossier",searchHint:"Cerca per servizio, tema o settore",noResults:"Nessun dossier corrisponde alla ricerca. Prova un altro termine o cambia filtro."},
   en: {eyebrow:"In-depth work examples",title:"See how I approach each service through detailed samples",description:"Read original, detailed dossiers with realistic briefs, complete sample documents, source/target translations, terminology decisions, workflows and QA. Each dossier demonstrates a practical problem, a proposed approach and a concrete deliverable.",all:"All dossiers",translation:"Translation samples",operations:"Operational work",backoffice:"Secretarial & customer support",research:"Desk research",writing:"Editorial revision",web:"Website content",read:"Read the complete dossier",source:"Translation",context:"Operational study",notice:"Original fictional samples, not excerpts from commissioned work or real customer data.",caption:"Sample deliverables and working methods",results:"Dossiers shown",search:"Search dossiers",searchHint:"Search by service, topic or sector",noResults:"No matching dossiers. Try another term or filter."},
@@ -21,7 +21,7 @@ const previewLabels:Record<Language,string> = {
   fr: "Aperçu du livrable",
   es: "Vista previa del trabajo",
 };
-const DIRECTIONS: Filter[] = ["EN-IT","FR-IT","ES-IT"];
+const DIRECTIONS: PublicTranslationDirection[] = ["EN-IT","FR-IT","ES-IT"];
 const normalise = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase().trim();
 
 export function PortfolioDeepShowcase({lang}:{lang:Language}) {
@@ -69,7 +69,7 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
       </div>
       <div role="group" className="flex flex-wrap gap-2 mb-8" aria-label="EN IT FR ES">
         {DIRECTIONS.map(direction=><button type="button" key={direction} onClick={()=>chooseFilter(direction)} aria-pressed={filter===direction} aria-controls="dossier-results"
-          className={"inline-flex min-h-11 items-center px-3 py-2 rounded-full font-medium text-sm border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 " + (filter===direction?"bg-primary text-primary-foreground border-primary":"bg-card border-border text-foreground/80 hover:border-primary")}>{DIRECTION_LABELS[direction as keyof typeof DIRECTION_LABELS]}</button>)}
+          className={"inline-flex min-h-11 items-center px-3 py-2 rounded-full font-medium text-sm border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 " + (filter===direction?"bg-primary text-primary-foreground border-primary":"bg-card border-border text-foreground/80 hover:border-primary")}>{DIRECTION_LABELS[direction]}</button>)}
       </div>
       <p role="status" aria-live="polite" aria-atomic="true" className="mb-5 text-sm text-foreground/80">{t.results}: {displayed.length} / {visible.length}</p>
       {visible.length===0&&<p className="rounded-lg border border-border bg-card p-5 mb-5 text-foreground/80">{t.noResults}</p>}
