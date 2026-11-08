@@ -324,7 +324,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="2xl:hidden text-foreground hover:text-primary h-9 w-9"
+              className="2xl:hidden text-foreground hover:text-accent-foreground h-9 w-9"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-expanded={mobileOpen}
               aria-controls="noetom-navigation-drawer"
