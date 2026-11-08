@@ -235,7 +235,7 @@ jobs:
               const vercelRewrites=JSON.parse(require('fs').readFileSync('vercel.json','utf8')).rewrites;
               // Social crawlers do not run React: verify static response HTML, not only JS DOM.
               for (const rawRoute of [
-                '/it/esempi-di-lavoro/dossier/it-en-consultancy-services',
+                '/it/esempi-di-lavoro/dossier/en-it-digital-onboarding',
                 '/fr/exemples-de-projets/dossier/fr-it-handmade-product',
                 '/work-examples/dossier/existing-customer-multilingual-email-pack',
                 '/it/esempi-di-lavoro'
