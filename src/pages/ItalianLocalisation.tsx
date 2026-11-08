@@ -93,10 +93,10 @@ export default function ItalianLocalisationPage() {
         "Post-editing di traduzioni AI e revisione critica di bozze esistenti",
       ],
       scopeNote:
-        "Questa pagina approfondisce la localizzazione verso l’italiano, mia lingua madre. Offro anche traduzioni dall’italiano verso inglese, francese e spagnolo, valutando tipologia, complessità e destinatari dei testi; l’eventuale revisione madrelingua nella lingua di arrivo può essere concordata. Non offro acquisizione clienti, contabilità o fatturazione.",
+        "Questa pagina approfondisce la localizzazione verso l’italiano, mia lingua madre. Le mie traduzioni professionali sono dall’inglese, dal francese e dallo spagnolo verso l’italiano, con valutazione di tipologia, complessità e destinatari dei testi. Offro inoltre supporto operativo per comunicazioni multilingue con clienti già acquisiti. Non offro acquisizione clienti, contabilità o fatturazione.",
       pricingTitle: "Tariffario di Riferimento",
       pricingDesc:
-        "Traduzione generale da 0,09 €/parola; specialistica verso l’italiano da 0,12 €/parola; localizzazione web da 0,11 €/parola; revisione e post-editing da 0,03 €/parola. I prezzi sono indicativi e soggetti a valutazione del testo e delle tempistiche.",
+        "Traduzione generale EN/FR/ES → IT da 0,09 €/parola; specialistica verso l’italiano da 0,12 €/parola; localizzazione web da 0,11 €/parola; revisione e post-editing da 0,03 €/parola. I prezzi sono indicativi e soggetti a valutazione del testo e delle tempistiche.",
     },
     en: {
       metaTitle: ITALIAN_LOCALISATION_META.en.title,
@@ -113,7 +113,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Specialist Translation",
-          desc: "Translation into Italian from English, French or Spanish for professional content. I also offer translations from Italian into these languages, subject to the type and complexity of the text.",
+          desc: "Professional translation into Italian from English, French or Spanish for professional content, assessed by subject, complexity and intended audience. I also support agreed written communication with existing customers in Italian, English, French and Spanish.",
           deliverable: "Accurate terminology, a consistent professional register and a glossary where useful.",
         },
         {
@@ -161,10 +161,10 @@ export default function ItalianLocalisationPage() {
         "AI translation post-editing and quality assurance of existing Italian assets",
       ],
       scopeNote:
-        "This page focuses on localisation into my native Italian. I also translate from Italian into English, French and Spanish, assessing the subject, complexity and intended audience for each project; a native-target-language review can be agreed where appropriate. I do not provide telemarketing, customer acquisition, bookkeeping or invoicing.",
+        "This page focuses on localisation into my native Italian. My professional translation work is from English, French and Spanish into Italian, with each assignment assessed by subject, complexity and intended audience. I also provide agreed operational support for multilingual correspondence with existing customers. I do not provide telemarketing, customer acquisition, bookkeeping or invoicing.",
       pricingTitle: "Baseline Indicative Pricing",
       pricingDesc:
-        "General translation from €0.09/source word; specialist translation into Italian from €0.12/word; website localisation from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
+        "General EN/FR/ES → IT translation from €0.09/source word; specialist translation into Italian from €0.12/word; website localisation from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
     },
     fr: {
       metaTitle: ITALIAN_LOCALISATION_META.fr.title,
@@ -181,7 +181,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Traduction Spécialisée",
-          desc: "Traduction vers l’italien depuis le français, l’anglais ou l’espagnol pour des contenus professionnels. Les traductions depuis l’italien vers ces langues sont également proposées, selon le texte et sa complexité.",
+          desc: "Traduction professionnelle de l’anglais, du français ou de l’espagnol vers l’italien pour des contenus professionnels, après évaluation du domaine, de la complexité et du public destinataire.",
           deliverable: "Vocabulaire précis, respect du registre professionnel et lexique bilingue dédié.",
         },
         {
@@ -229,10 +229,10 @@ export default function ItalianLocalisationPage() {
         "Post-édition de contenus générés par IA et relecture professionnelle",
       ],
       scopeNote:
-        "Cette page présente surtout la localisation vers ma langue maternelle, l’italien. Je traduis également de l’italien vers le français, l’anglais et l’espagnol, selon le domaine, la complexité et le public visé ; une révision par un locuteur natif de la langue cible peut être convenue si nécessaire. Je ne propose ni prospection commerciale, ni comptabilité, ni facturation.",
+        "Cette page présente surtout la localisation vers ma langue maternelle, l’italien. Mes traductions professionnelles vont de l’anglais, du français et de l’espagnol vers l’italien. J’assure également un soutien opérationnel convenu pour les échanges multilingues avec des clients existants. Je ne propose ni prospection commerciale, ni comptabilité, ni facturation.",
       pricingTitle: "Grille Tarifaire Indicative",
       pricingDesc:
-        "Traduction générale à partir de 0,09 €/mot source ; traduction spécialisée vers l’italien à partir de 0,12 €/mot source ; localisation web à partir de 0,11 €/mot source ; révision et post-édition à partir de 0,03 €/mot. Tarifs indicatifs selon le texte, la complexité et les délais.",
+        "Traduction EN/FR/ES → IT à partir de 0,09 €/mot source ; traduction spécialisée vers l’italien à partir de 0,12 €/mot source ; localisation web à partir de 0,11 €/mot source ; révision et post-édition à partir de 0,03 €/mot. Tarifs indicatifs selon le texte, la complexité et les délais.",
     },
     es: {
       metaTitle: ITALIAN_LOCALISATION_META.es.title,
@@ -249,7 +249,7 @@ export default function ItalianLocalisationPage() {
         {
           icon: Globe,
           title: "1. Traducción Especializada",
-          desc: "Traducción al italiano de textos profesionales desde el español, el inglés y el francés. También ofrezco traducciones del italiano a estos idiomas, previa valoración del tipo de texto y su complejidad.",
+          desc: "Traducción profesional del inglés, francés y español al italiano para textos profesionales, previa valoración del ámbito, la complejidad y el público destinatario.",
           deliverable: "Exactitud terminológica, tono profesional y glosarios bilingües específicos.",
         },
         {
@@ -297,10 +297,10 @@ export default function ItalianLocalisationPage() {
         "Posedición de traducciones generadas por IA y control de calidad",
       ],
       scopeNote:
-        "Esta página se centra en la localización a mi lengua materna, el italiano. También traduzco del italiano al español, al inglés y al francés, previa valoración del tema, la complejidad y los destinatarios; se puede acordar una revisión por una persona nativa de la lengua de destino cuando corresponda. No ofrezco captación de clientes, contabilidad ni facturación.",
+        "Esta página se centra en la localización a mi lengua materna, el italiano. Mis traducciones profesionales son del inglés, francés y español al italiano, tras valorar el tema, la complejidad y el público destinatario. También presto apoyo operativo acordado para la comunicación multilingüe con clientes existentes. No ofrezco captación de clientes, contabilidad ni facturación.",
       pricingTitle: "Tarifas de Referencia",
       pricingDesc:
-        "Traducción general desde 0,09 €/palabra de origen; traducción especializada al italiano desde 0,12 €/palabra de origen; localización web desde 0,11 €/palabra de origen; revisión y posedición desde 0,03 €/palabra. Tarifas orientativas según el texto, la complejidad y el plazo.",
+        "Traducción EN/FR/ES → IT desde 0,09 €/palabra de origen; traducción especializada al italiano desde 0,12 €/palabra de origen; localización web desde 0,11 €/palabra de origen; revisión y posedición desde 0,03 €/palabra. Tarifas orientativas según el texto, la complejidad y el plazo.",
     },
   }[lang];
 
@@ -561,7 +561,7 @@ export default function ItalianLocalisationPage() {
         <div className="container max-w-4xl px-4 sm:px-6">
           <ContactForm
             lang={lang}
-            selectedService={lang === "it" ? "Traduzioni IT ↔ EN/FR/ES e localizzazione verso l’italiano" : lang === "fr" ? "Traduction IT ↔ FR/EN/ES et localisation en italien" : lang === "es" ? "Traducción IT ↔ ES/EN/FR y localización al italiano" : "Translation IT ↔ EN/FR/ES & Italian Localisation"}
+            selectedService={lang === "it" ? "Traduzioni professionali EN/FR/ES → IT e localizzazione" : lang === "fr" ? "Traduction professionnelle EN/FR/ES → IT et localisation" : lang === "es" ? "Traducción profesional EN/FR/ES → IT y localización" : "Professional EN/FR/ES → IT translation & localisation"}
           />
         </div>
       </section>
