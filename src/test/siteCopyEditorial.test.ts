@@ -50,16 +50,19 @@ describe("Site copy editorial alignment", () => {
     }
   });
 
-  it("offers translation with Italian in both directions across all four languages", () => {
+  it("limits professional translation to EN/FR/ES into Italian and separates multilingual support", () => {
     for (const path of localePaths) {
       const copy = source(path);
-      expect(copy).toContain("↔");
-      expect(copy).not.toMatch(/Non eseguo traduzioni professionali dall.italiano|I do not offer professional translation from Italian|Je ne propose pas de traduction professionnelle de l.italien|No ofrezco traducción profesional del italiano/i);
+      expect(copy).not.toContain("↔");
+      expect(copy).not.toMatch(/both directions|dans les deux sens|en ambos sentidos/i);
     }
+    const scope = source("src/lib/serviceScope.ts");
+    expect(scope).toContain("EN/FR/ES verso IT");
     const pricing = source("src/lib/pricingData.ts");
-    expect(pricing).toContain("IT ↔ EN, IT ↔ FR, IT ↔ ES");
+    expect(pricing).toContain("EN/FR/ES → IT");
     const localising = source("src/pages/ItalianLocalisation.tsx");
-    expect(localising).toContain("I also translate from Italian into English, French and Spanish");
+    expect(localising).toContain("My professional translation work is from English, French and Spanish into Italian");
+    expect(localising).not.toMatch(/from Italian into English|du français vers l’italien et de l’italien vers|del italiano al español/i);
     const contact = source("src/components/ContactForm.tsx");
     expect(contact).not.toContain("NoeTom");
   });

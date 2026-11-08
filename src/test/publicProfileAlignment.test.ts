@@ -50,7 +50,7 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
       expect(cat?.description.length,lang).toBeGreaterThan(160);
       if(lang==="it") expect(cat?.description).toContain("verso l’italiano");
-      if(lang==="en") expect(cat?.description).toContain("from English, French and Spanish into Italian");
+      if(lang==="en") expect(cat?.description).toContain("translate English, French and Spanish into Italian");
       if(lang==="fr") expect(cat?.description).toContain("de l’anglais, du français et de l’espagnol vers l’italien");
       if(lang==="es") expect(cat?.description).toContain("del inglés, francés y español al italiano");
       if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
