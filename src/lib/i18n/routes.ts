@@ -120,6 +120,8 @@ export const ROUTES: Record<PageKey, RouteConfig> = {
  */
 export function getLanguageFromPath(pathname: string): Language {
   const normalized = pathname.toLowerCase();
+  // The original /blog routes are Italian; keep global components in the same locale.
+  if (normalized === '/blog' || normalized.startsWith('/blog/')) return 'it';
   if (normalized === '/it' || normalized.startsWith('/it/')) return 'it';
   if (normalized === '/fr' || normalized.startsWith('/fr/')) return 'fr';
   if (normalized === '/es' || normalized.startsWith('/es/')) return 'es';

@@ -38,7 +38,7 @@ export const frLocale: TranslationDictionary = {
     titleHighlight: 'pour vos activités avec l’Italie',
     subtitle: "Traduction et localisation vers l’italien, échanges écrits avec vos clients italiens existants et soutien opérationnel lié à vos activités avec l’Italie.",
     headline: 'Communiquez naturellement avec votre public italien.',
-    desc1: "De langue maternelle italienne, je suis formée à la traduction spécialisée et possède plus de vingt ans d’expérience professionnelle.",
+    desc1: "Je mets plus de vingt ans d’expérience professionnelle à votre service pour vous aider à mieux organiser votre travail au quotidien. L’italien est ma langue maternelle et je suis formée à la traduction spécialisée.",
     desc2: 'Sites web, pages de destination, contenus professionnels et échanges écrits avec vos clients italiens : un accompagnement adapté à vos activités avec l’Italie.',
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Demande sans engagement',
@@ -355,7 +355,7 @@ export const frLocale: TranslationDictionary = {
     lead: 'Assistante Virtuelle, traductrice et soutien opérationnel pour professionnels et entreprises.',
     bioParagraphs: [
       'Je mets à votre disposition plus de vingt ans d’expérience professionnelle acquise dans le service client, le back-office, l’organisation et le soutien opérationnel, alliée à une solide formation linguistique.',
-      'Je suis titulaire d’une licence (Laurea triennale) en Médiation Linguistique de l’Université de Macerata (2009, mention italienne 110/110 e lode), suivie d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 crédits ECTS) avec réussite de l’épreuve finale. Les domaines abordés au cours du Master comprennent les secteurs littéraire, juridique, économique, technologique et scientifique.',
+      'Je suis titulaire d’un diplôme universitaire italien de premier cycle (Laurea triennale) en médiation linguistique de l’Università degli Studi di Macerata, obtenu avec la note de 110/110 e lode (distinction italienne maximale). J’ai ensuite suivi un master universitaire italien de premier niveau en traduction spécialisée à la Scuola Superiore per Mediatori Linguistici di Ancona (1 500 heures, 60 CFU/crédits ECTS) et validé l’épreuve finale. La formation couvrait des textes littéraires, juridiques, économiques, technologiques et scientifiques.',
       'L’italien est ma langue maternelle et j’assure un accompagnement professionnel en quatre langues : italien, anglais, français et espagnol, avec rigueur, ponctualité et discrétion.',
     ],
     credentials: [
@@ -373,7 +373,7 @@ export const frLocale: TranslationDictionary = {
     storyParagraphs: [
       'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
       'Mon parcours professionnel s’étend sur plus de deux décennies et comprend différentes expériences. J’y ai développé des compétences en relation client, organisation, back-office et communication multilingue. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
-      'Sur le plan universitaire, je suis diplômée d’une licence en médiation linguistique (Université de Macerata, 2009, mention italienne 110/110 e lode) et d’un Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise (2010–2012, 1 500 heures, 60 ECTS). Les domaines abordés lors du Master englobent les champs littéraire, juridique, économique, technologique et scientifique (les textes juridiques sont examinés au cas par cas ; je ne propose pas de traductions assermentées).',
+      'Mon parcours universitaire comprend un diplôme italien de premier cycle en médiation linguistique de l’Università degli Studi di Macerata (110/110 e lode, distinction italienne maximale) et un master universitaire italien de premier niveau en traduction spécialisée à la Scuola Superiore per Mediatori Linguistici di Ancona (1 500 heures, 60 CFU/crédits ECTS, épreuve finale validée). La formation portait sur des textes littéraires, juridiques, économiques, technologiques et scientifiques. J’examine les textes juridiques au cas par cas et ne propose pas de traductions assermentées.',
       'Mon approche est concrète : des tâches définies ensemble, des documents bien organisés et un suivi régulier des travaux confiés.',
     ],
     timeline: [
@@ -383,14 +383,14 @@ export const frLocale: TranslationDictionary = {
         detail: 'Soutien organisationnel, relation client, correspondance et assistance opérationnelle auprès de professionnels et petites structures.',
       },
       {
-        period: '2009',
+        period: 'Études universitaires',
         role: 'Licence en Médiation Linguistique',
-        detail: 'Université de Macerata, diplômée avec 110/110 e lode (mention italienne).',
+        detail: 'Università degli Studi di Macerata · 110/110 e lode (distinction italienne maximale).',
       },
       {
-        period: '2010 – 2012',
+        period: 'Spécialisation universitaire',
         role: 'Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise',
-        detail: '1 500 heures, 60 ECTS, épreuve finale validée. Domaines abordés : littéraire, juridique, économique, technologique, scientifique.',
+        detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1 500 heures · 60 CFU/crédits ECTS · épreuve finale validée. Domaines littéraire, juridique, économique, technologique et scientifique.',
       },
       {
         period: '2026 – aujourd’hui',

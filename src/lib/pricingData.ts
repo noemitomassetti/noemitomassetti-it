@@ -92,7 +92,7 @@ export function getServicePricingSummary(serviceKey: string, lang: Language): st
     trans: "trans",
     writing: "va",
     research: "va",
-    support: "va",
+    support: "support",
     customerCare: "support",
     web: "va",
   };

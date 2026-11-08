@@ -15,6 +15,7 @@ const labels = {
   fr: { back:"Retour au portfolio", eyebrow:"Dossier détaillé de démonstration", disclaimer:"Comment lire cet exemple", context:"Contexte et besoin", source:"Texte source", target:"Traduction proposée", italianWorkNote:"Le document d’exemple est en italien car il illustre un travail destiné à des clients italiens. Les explications sont disponibles dans la langue sélectionnée.", multilingualWorkNote:"Cet exemple présente des livrables dans la langue indiquée pour chaque document ; les explications sont disponibles dans la langue de navigation.", method:"Méthode et décisions", glossary:"Terminologie et choix de traduction", quality:"Contrôles de qualité et limites", output:"Livrable et transmission", workflow:"Procédure opérationnelle", inputs:"Documents de départ", objective:"Objectif", artifacts:"Livrables de démonstration", limits:"Ce que la prestation n’inclut pas", contact:"Demander un devis pour un projet similaire", services:"Voir les prestations", note:"Pourquoi ce choix", missing:"Dossier indisponible", authored:"Exemple original, non commandé", result:"Ce que recevrait le client" },
   es: { back:"Volver al portfolio", eyebrow:"Dossier de demostración detallado", disclaimer:"Cómo interpretar el ejemplo", context:"Contexto y necesidad", source:"Texto de origen", target:"Traducción propuesta", italianWorkNote:"El documento de muestra está en italiano porque representa tareas destinadas a clientes italianos. Las explicaciones están disponibles en el idioma elegido.", multilingualWorkNote:"Este ejemplo presenta documentos en el idioma indicado en cada uno; las explicaciones están disponibles en el idioma de navegación.", method:"Método y decisiones", glossary:"Terminología y decisiones", quality:"Controles de calidad y límites", output:"Entrega y resultado", workflow:"Proceso operativo", inputs:"Materiales iniciales", objective:"Objetivo", artifacts:"Documentos de muestra", limits:"Qué no incluye el servicio", contact:"Solicitar presupuesto para un trabajo similar", services:"Ver los servicios", note:"Por qué se eligió esta solución", missing:"Dossier no disponible", authored:"Muestra original, no encargada", result:"Qué recibiría el cliente" }
 } satisfies Record<Language,Record<string,string>>;
+const CTA_HEADINGS:Record<Language,string>={it:"Hai un progetto simile?",en:"Working on something similar?",fr:"Vous avez un projet similaire ?",es:"¿Tienes un proyecto similar?"};
 const OG_LOCALES:Record<Language,string>={it:"it_IT",en:"en_GB",fr:"fr_FR",es:"es_ES"};
 
 export default function PortfolioDeepCase() {
@@ -144,8 +145,7 @@ export default function PortfolioDeepCase() {
         </>}
 
         <section className="mt-16 pt-10 border-t border-border/60">
-          <h2 className="text-2xl font-bold mb-3">{t.output}</h2>
-          <p className="text-foreground/75 mb-7">{isTranslation ? entry.item.output[lang] : entry.item.handoff[lang]}</p>
+          <h2 className="text-2xl font-bold mb-3">{CTA_HEADINGS[lang]}</h2>
           <div className="flex gap-4 flex-wrap">
             <Link to={getLocalizedPath("contact",lang)} className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground px-6 py-3 font-semibold hover:opacity-90">{t.contact}<ArrowRight size={18}/></Link>
             <Link to={getLocalizedPath("services",lang)} className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-semibold hover:border-primary"><Globe2 size={18}/>{t.services}</Link>

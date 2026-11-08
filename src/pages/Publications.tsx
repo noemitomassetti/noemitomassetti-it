@@ -68,7 +68,7 @@ export default function Publications() {
 
   return (
     <Layout lang={lang}>
-      <main className="container max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20">
+      <div className="container max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 text-primary font-semibold uppercase tracking-wide text-xs mb-5">
             <BookOpen className="h-4 w-4" aria-hidden="true" /> {t.eyebrow}
@@ -108,7 +108,7 @@ export default function Publications() {
         <div className="mt-12">
           <Link to={getLocalizedPath("services", lang)} className="text-primary font-semibold hover:underline">{t.back}</Link>
         </div>
-      </main>
+      </div>
     </Layout>
   );
 }

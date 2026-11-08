@@ -18,10 +18,35 @@ export function alignLegacyBlogCopy<T extends Article>(article:T):T {
       "<li>organizzazione dei documenti e dei promemoria operativi.</li>"
     );
   }
+  if(article.id===3) {
+    content=content.replace(
+      "Il tuo ufficio digitale, sicuro e sempre accessibile.",
+      "Uno spazio digitale per organizzare e condividere documenti, da configurare con accessi appropriati e procedure di recupero."
+    ).replace(
+      "eliminando definitivamente il caos dei file sparsi sul desktop o salvati su chiavette USB.",
+      "riducendo il rischio di documenti dispersi tra dispositivi e versioni differenti."
+    ).replace(
+      "strumenti gratuiti, intuitivi e facili da imparare che possono davvero trasformare la tua organizzazione quotidiana",
+      "strumenti con piani gratuiti, la cui disponibilità e i cui limiti dipendono dal fornitore, che possono aiutare a organizzare il lavoro"
+    );
+  }
+  if(article.id===6) {
+    content=content.replace(
+      "riduce del 50% le domande di assistenza e rassicura subito il cliente.",
+      "può ridurre le richieste ripetitive e chiarire i passaggi successivi ai partecipanti."
+    ).replace(
+      "<strong>Gestione fatturazione:</strong> Assicurati che i sistemi di pagamento e la generazione delle ricevute siano snelli e tracciabili.",
+      "<strong>Informazioni sui pagamenti:</strong> Chiedi al responsabile di comunicare chiaramente ai partecipanti le modalità e le condizioni previste, senza occuparti di fatture o contabilità."
+    );
+  }
   if(article.id===13) {
     content=content.replace(
       "Contattami per una consulenza conoscitiva gratuita di 30 minuti",
       "Descrivimi le tue esigenze e richiedi un preventivo per supporto operativo"
+    );
+    excerpt=excerpt.replace(
+      "delegare senza ansia, eliminare errori ripetitivi e garantire continuità",
+      "delegare con maggiore chiarezza, ridurre gli errori ricorrenti e favorire la continuità"
     );
   }
   if(article.id===14) {

@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { portfolioPreview } from "@/lib/portfolioPreview";
 import { ArrowUpRight, BookOpen, Globe2, BriefcaseBusiness, Languages, ShieldCheck } from "lucide-react";
 import type { Language } from "@/lib/i18n/types";
 import { DEEP_PORTFOLIO_ITEMS, getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
@@ -14,6 +15,12 @@ const text = {
   fr: {eyebrow:"Exemples approfondis",title:"Découvrez le travail concret derrière chaque prestation",description:"Consultez des dossiers détaillés : scénarios plausibles, documents complets, traductions en regard, choix terminologiques, procédures et contrôles. Chaque dossier présente un besoin concret, une méthode et un livrable consultable.",all:"Tous les dossiers",translation:"Exemples de traduction",operations:"Soutien opérationnel",backoffice:"Secrétariat et relation client",research:"Recherche documentaire",writing:"Révision éditoriale",web:"Contenus web",read:"Consulter le dossier complet",source:"Traduction",context:"Étude opérationnelle",notice:"Échantillons fictifs originaux, et non extraits de travaux réels ou de données clients.",caption:"Livrables et méthodes à consulter",results:"Dossiers affichés",search:"Rechercher dans les dossiers",searchHint:"Service, sujet ou secteur",noResults:"Aucun dossier ne correspond à la recherche. Essayez un autre terme ou filtre."},
   es: {eyebrow:"Muestras de trabajo detalladas",title:"Descubre el trabajo concreto detrás de cada servicio",description:"Consulta dossiers originales y detallados con supuestos verosímiles, documentos completos, traducciones en paralelo, decisiones terminológicas, procedimientos y controles. Cada dossier presenta una situación concreta, el método y un entregable.",all:"Todos los dossiers",translation:"Muestras de traducción",operations:"Apoyo operativo",backoffice:"Secretaría y atención al cliente",research:"Investigación documental",writing:"Revisión editorial",web:"Contenidos web",read:"Ver dossier completo",source:"Traducción",context:"Caso operativo",notice:"Ejemplos originales ficticios, no extractos de trabajos encargados ni datos de clientes reales.",caption:"Entregables y métodos para consultar",results:"Dosieres mostrados",search:"Buscar en los dosieres",searchHint:"Servicio, tema o sector",noResults:"No hay dosieres que coincidan. Prueba otro término o filtro."}
 } satisfies Record<Language,Record<string,string>>;
+const previewLabels:Record<Language,string> = {
+  it: "Anteprima dell’elaborato",
+  en: "Deliverable preview",
+  fr: "Aperçu du livrable",
+  es: "Vista previa del trabajo",
+};
 const DIRECTIONS: Filter[] = ["EN-IT","IT-EN","FR-IT","IT-FR","ES-IT","IT-ES"];
 const normalise = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase().trim();
 
@@ -74,6 +81,13 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
               {entry.kind==="translation" ? DIRECTION_LABELS[entry.item.direction]+" · "+entry.item.domain[lang] : entry.item.service[lang]}</p>
             <h3 className="text-xl font-bold leading-snug mb-3">{it.title[lang]}</h3>
             <p className="text-sm text-foreground/80 leading-relaxed mb-5 flex-1">{entry.kind==="translation"?entry.item.context[lang]:entry.item.scenario[lang]}</p>
+            <div className="border-t border-border/60 pt-4 pb-4">
+              <p className="text-xs font-bold uppercase tracking-wide text-primary mb-2">{previewLabels[lang]}</p>
+              <p
+                lang={entry.kind==="translation"?entry.item.direction.split("-")[1].toLowerCase():(entry.item.artifacts[0]?.language??"it")}
+                className="text-sm text-foreground/85 leading-relaxed whitespace-pre-line"
+              >{portfolioPreview(entry.kind==="translation"?entry.item.target[0]:(entry.item.artifacts[0]?.content??""))}</p>
+            </div>
             <Link to={getDeepPortfolioPath(it.id,lang)} aria-label={`${t.read}: ${it.title[lang]}`} className="inline-flex min-h-11 gap-2 items-center font-semibold text-primary hover:underline text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded">
               {t.read}<ArrowUpRight size={17} aria-hidden="true"/>
             </Link>

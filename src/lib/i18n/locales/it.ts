@@ -38,7 +38,7 @@ export const itLocale: TranslationDictionary = {
     titleHighlight: 'per la tua attività',
     subtitle: "Assistenza virtuale multilingue per segreteria organizzativa, back office operativo, assistenza ai clienti già acquisiti, comunicazioni e contenuti professionali.",
     headline: 'Il supporto che ti aiuta a lavorare meglio, con più ordine.',
-    desc1: "Metto a disposizione oltre vent'anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano.",
+    desc1: "Metto a disposizione oltre vent'anni di esperienza lavorativa per aiutarti a gestire meglio il lavoro quotidiano.",
     desc2: 'Dalla gestione di email e appuntamenti alla comunicazione con i clienti, dalla traduzione alla revisione dei contenuti per siti web e landing page: un supporto professionale e flessibile, costruito sulle tue esigenze.',
     ctaButton: 'RICHIEDI UN PREVENTIVO',
     callReassurance: 'Richiesta senza impegno',
@@ -359,7 +359,7 @@ export const itLocale: TranslationDictionary = {
     lead: 'Assistente Virtuale, traduttrice e supporto operativo per professionisti e aziende.',
     bioParagraphs: [
       'Metto a disposizione oltre vent’anni di esperienza professionale maturata tra customer care, back office, organizzazione e supporto operativo, insieme a una solida formazione linguistica.',
-      'Ho conseguito la Laurea triennale in Mediazione Linguistica presso l’Università di Macerata nel 2009 con 110/110 e lode, e successivamente il Master Universitario di I livello in Traduzione Specialistica – lingua inglese (2010–2012, 1.500 ore, 60 CFU) con superamento della prova finale. Gli ambiti affrontati durante il Master comprendono i settori letterario, giuridico, economico, tecnologico e scientifico.',
+      'Ho conseguito la laurea triennale in Mediazione Linguistica presso l’Università degli Studi di Macerata, con votazione 110/110 e lode, e il master universitario di primo livello in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 ore, 60 CFU), con superamento della prova finale. Durante il master ho approfondito ambiti letterari, giuridici, economici, tecnologici e scientifici.',
       'L’italiano è la mia lingua madre e fornisco supporto operativo e linguistico professionale in quattro lingue: italiano, inglese, francese e spagnolo, con attenzione alla qualità, alle scadenze concordate e alla riservatezza.',
     ],
     credentials: [
@@ -377,7 +377,7 @@ export const itLocale: TranslationDictionary = {
     storyParagraphs: [
       'La mia storia professionale si è sviluppata attorno a tre pilastri: la passione per le lingue, la precisione organizzativa e il piacere di essere un punto di riferimento affidabile per i professionisti con cui collaboro.',
       'Ho maturato oltre vent’anni di esperienza professionale in diversi contesti lavorativi, sviluppando competenze in customer care, organizzazione, back office e comunicazione multilingue. Ho imparato che l’efficienza concreta non nasce da formule rigide, ma dalla capacità di ascoltare, semplificare i flussi e togliere gli attriti operativi quotidiani.',
-      'Nel mio percorso accademico ho conseguito la Laurea triennale in Mediazione Linguistica (Università di Macerata, 2009, 110/110 e lode) e il Master Universitario di I livello in Traduzione Specialistica – lingua inglese (2010–2012, 1.500 ore, 60 CFU). Tra gli ambiti affrontati durante il Master figurano il settore letterario, giuridico, economico, tecnologico e scientifico (i testi a carattere giuridico vengono valutati caso per caso; non svolgo traduzioni asseverate o giurate).',
+      'La mia formazione comprende la laurea triennale in Mediazione Linguistica presso l’Università degli Studi di Macerata (110/110 e lode) e il master universitario di primo livello in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 ore, 60 CFU, prova finale superata). Ho approfondito ambiti letterari, giuridici, economici, tecnologici e scientifici. Valuto i testi giuridici caso per caso e non offro traduzioni giurate o asseverate.',
       'Lavoro con un approccio pratico: attività concordate, comunicazioni chiare, organizzazione dei materiali e aggiornamenti regolari.',
     ],
     timeline: [
@@ -387,14 +387,14 @@ export const itLocale: TranslationDictionary = {
         detail: 'Gestione organizzativa, assistenza clienti, corrispondenza e supporto a professionisti e piccole realtà.',
       },
       {
-        period: '2009',
+        period: 'Formazione universitaria',
         role: 'Laurea triennale in Mediazione Linguistica',
-        detail: 'Università di Macerata, votazione 110/110 e lode.',
+        detail: 'Università degli Studi di Macerata · 110/110 e lode.',
       },
       {
-        period: '2010 – 2012',
+        period: 'Specializzazione post-laurea',
         role: 'Master Universitario di I livello in Traduzione Specialistica – lingua inglese',
-        detail: '1.500 ore, 60 CFU, prova finale superata. Ambiti affrontati: letterario, giuridico, economico, tecnologico, scientifico.',
+        detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1.500 ore · 60 CFU · prova finale superata. Ambiti: letterario, giuridico, economico, tecnologico e scientifico.',
       },
       {
         period: '2026 – Oggi',

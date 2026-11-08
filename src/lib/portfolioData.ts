@@ -182,7 +182,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       it: [
         "Traduzione di 'Customer Acquisition Cost' come 'Costo di acquisizione clienti (CAC)' con esplicitazione della formula.",
         "Scelta di 'Tasso di abbandono' per 'Churn rate' nel corpo descrittivo, lasciando la sigla tra parentesi per immediatezza professionale.",
-        "Armonizzazione della distinzione tra 'Revenue' (Fatturato/Ricavi) e 'Profit' (Margine operativo/Utile).",
+        "Distinzione fra 'revenue' (ricavi, oppure fatturato secondo il contesto) e 'profit' (utile); margine lordo, risultato operativo e utile netto richiedono rese distinte.",
       ],
       en: [
         "Clear distinction maintained between revenue streams, gross margin, and operating profit.",

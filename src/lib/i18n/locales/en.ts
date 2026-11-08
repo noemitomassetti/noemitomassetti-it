@@ -38,7 +38,7 @@ export const enLocale: TranslationDictionary = {
     titleHighlight: 'for your work with Italy',
     subtitle: "Native Italian-language support: translation and localisation into Italian, written support for existing Italian customers and operational tasks connected with Italy.",
     headline: 'Communicate naturally with your Italian audience.',
-    desc1: 'I am a native Italian speaker with specialist translation training and over twenty years of professional experience.',
+    desc1: 'I draw on over twenty years of professional experience to help you manage your day-to-day work more effectively. I am a native Italian speaker trained in specialised translation.',
     desc2: 'From websites and landing pages to Italian-language customer correspondence and operational coordination, I support your business activities involving Italy.',
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
@@ -356,7 +356,7 @@ export const enLocale: TranslationDictionary = {
     lead: 'Virtual Assistant, translator, and operational support partner for professionals and small businesses.',
     bioParagraphs: [
       'I bring over twenty years of professional experience gained across customer care, back office, operations, and operational support, alongside a solid linguistic foundation.',
-      'I hold a Bachelor’s degree in Linguistic Mediation from the University of Macerata (2009, graduated with 110/110 e lode (highest honours in Italy)), followed by an Italian first-level university Master’s qualification in Specialised Translation (English) (2010–2012, 1,500 hours, 60 ECTS) with successful completion of the final examination. Areas covered during the Master’s include literary, legal, economic, technological, and scientific fields.',
+      'I hold a three-year degree in Language Mediation from the Università degli Studi di Macerata, awarded 110/110 e lode (highest honours in the Italian grading system). I subsequently completed an Italian first-level university master’s programme in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona (1,500 hours, 60 CFU/ECTS credits), passing the final assessment. The programme covered literary, legal, economic, technological and scientific texts.',
       'Italian is my native language, and I provide professional multilingual support in four languages: Italian, English, French, and Spanish, ensuring precision, punctuality, and confidentiality.',
     ],
     credentials: [
@@ -374,7 +374,7 @@ export const enLocale: TranslationDictionary = {
     storyParagraphs: [
       'My professional path has always developed around three constants: organisational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
       'My career spans more than two decades across different roles. I have developed skills in customer care, operational coordination, back office and multilingual communication. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
-      'My academic credentials include a Bachelor’s degree in Linguistic Mediation (University of Macerata, 2009, 110/110 e lode (highest honours in Italy)) and an Italian first-level university Master’s qualification in Specialised Translation (English) (2010–2012, 1,500 hours, 60 ECTS credits). The training fields covered during the Master’s include literary, legal, economic, technological, and scientific domains (legal texts are evaluated case by case; I do not provide sworn or asseverated translations).',
+      'My qualifications include a three-year degree in Language Mediation from the Università degli Studi di Macerata (110/110 e lode, the highest Italian honours) and an Italian first-level university master’s programme in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona (1,500 hours, 60 CFU/ECTS credits, final assessment passed). The programme covered literary, legal, economic, technological and scientific material. Legal texts are assessed case by case; I do not provide sworn or officially certified translations.',
       'My approach is practical and transparent: clearly agreed tasks, well-organised files, consistent communication and regular progress updates.',
     ],
     timeline: [
@@ -384,14 +384,14 @@ export const enLocale: TranslationDictionary = {
         detail: 'Hands-on organisational support, client communications, correspondence, and operational assistance for professionals and small businesses.',
       },
       {
-        period: '2009',
+        period: 'University studies',
         role: 'Bachelor’s Degree in Linguistic Mediation',
-        detail: 'University of Macerata, graduated with 110/110 e lode (highest honours in Italy).',
+        detail: 'Università degli Studi di Macerata · 110/110 e lode (highest Italian honours).',
       },
       {
-        period: '2010 – 2012',
+        period: 'Postgraduate specialisation',
         role: 'First-level University Master’s in Specialised Translation – English language',
-        detail: '1,500 hours, 60 CFU, final examination passed. Fields covered: literary, legal, economic, technological, scientific.',
+        detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1,500 hours · 60 CFU/ECTS credits · final assessment passed. Literary, legal, economic, technological and scientific fields.',
       },
       {
         period: '2026 – Present',

@@ -602,7 +602,7 @@ export default function IndexPage() {
               <div className="space-y-3">
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
                   {dict.hero.desc1 ||
-                    "Metto a disposizione oltre vent'anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano."}
+                    "Metto a disposizione oltre vent'anni di esperienza lavorativa per aiutarti a gestire meglio il lavoro quotidiano."}
                 </p>
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
                   {dict.hero.desc2 ||
@@ -765,26 +765,26 @@ export default function IndexPage() {
             {lang === "it" ? (
               <>
                 Ho conseguito la{" "}
-                <strong>Laurea triennale in Mediazione Linguistica presso l'Università degli Studi di Macerata</strong> (2009, con votazione <strong>110/110 e lode</strong>), seguita dal{" "}
-                <strong>Master Universitario di I livello in Traduzione Specialistica – lingua inglese</strong> (2010–2012, 1.500 ore, 60 CFU) con superamento della prova finale.
+                <strong>laurea triennale in Mediazione Linguistica presso l'Università degli Studi di Macerata</strong>, con votazione <strong>110/110 e lode</strong>, seguita dal{" "}
+                <strong>master universitario di primo livello in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1.500 ore, 60 CFU</strong>), con superamento della prova finale.
               </>
             ) : lang === "fr" ? (
               <>
-                Je suis titulaire d’une{" "}
-                <strong>licence en Médiation Linguistique de l’Université de Macerata</strong> (2009, mention <strong>110/110 e lode (mention italienne)</strong>), suivie d’un{" "}
-                <strong>Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise</strong> (2010–2012, 1 500 heures, 60 ECTS) avec épreuve finale validée.
+                Je suis titulaire d’un{" "}
+                <strong>diplôme universitaire italien de premier cycle en médiation linguistique de l’Università degli Studi di Macerata</strong>, obtenu avec la note de <strong>110/110 e lode (distinction italienne maximale)</strong>, suivi d’un{" "}
+                <strong>master universitaire italien de premier niveau en traduction spécialisée à la Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1 500 heures, 60 CFU/crédits ECTS</strong>), avec réussite de l’épreuve finale.
               </>
             ) : lang === "es" ? (
               <>
-                Cuento con el{" "}
-                <strong>Grado en Mediación Lingüística por la Universidad de Macerata</strong> (2009, calificada con <strong>110/110 e lode (distinción italiana)</strong>), seguido del{" "}
-                <strong>máster universitario italiano de primer nivel en Traducción Especializada (inglés)</strong> (2010–2012, 1.500 horas, 60 créditos ECTS) con examen final superado.
+                Obtuve una{" "}
+                <strong>titulación universitaria italiana de primer ciclo en Mediación Lingüística en la Università degli Studi di Macerata</strong>, con una calificación de <strong>110/110 e lode (máxima distinción italiana)</strong>, seguida de un{" "}
+                <strong>máster universitario italiano de primer nivel en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1.500 horas, 60 CFU/créditos ECTS</strong>), con la prueba final superada.
               </>
             ) : (
               <>
                 I hold a{" "}
-                <strong>Bachelor's Degree in Linguistic Mediation from the University of Macerata</strong> (2009, awarded <strong>110/110 e lode (highest honours in Italy)</strong>), followed by a{" "}
-                <strong>1st-Level University Postgraduate training in Specialised Translation – English language</strong> (2010–2012, 1,500 hours, 60 ECTS credits) with successful final examination.
+                <strong>three-year degree in Language Mediation from the Università degli Studi di Macerata</strong>, awarded <strong>110/110 e lode (highest honours under the Italian grading system)</strong>, followed by an{" "}
+                <strong>Italian first-level university master’s programme in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1,500 hours, 60 CFU/ECTS credits</strong>), with the final assessment successfully passed.
               </>
             )}
           </p>
