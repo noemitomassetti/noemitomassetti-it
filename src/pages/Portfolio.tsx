@@ -347,7 +347,7 @@ export default function Portfolio() {
 
       {/* ── FILTER BUTTONS ── */}
       <section className="sticky top-16 z-30 bg-background/95 backdrop-blur border-b border-border/40 py-3 sm:py-4 shadow-sm">
-        <div id="portfolio-category-filters" role="group" aria-label={({it:"Filtra i progetti per categoria",en:"Filter projects by category",fr:"Filtrer les projets par catégorie",es:"Filtrar proyectos por categoría"} as const)[lang]} className="container px-4 md:px-6 max-w-5xl mx-auto flex flex-wrap items-center gap-2">
+        <div id="portfolio-category-filters" role="group" aria-label={({it:"Filtra i progetti per categoria",en:"Filter projects by category",fr:"Filtrer les projets par catégorie",es:"Filtrar proyectos por categoría"} as const)[lang]} className="container px-4 md:px-6 max-w-5xl mx-auto grid grid-cols-3 sm:flex sm:flex-wrap items-center gap-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
@@ -355,13 +355,13 @@ export default function Portfolio() {
               onClick={() => setSelectedCategory(cat.id)}
               aria-label={cat.label[lang]}
               aria-pressed={selectedCategory === cat.id}
-              className={`inline-flex min-h-11 items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
+              className={`inline-flex min-h-11 w-full sm:w-auto justify-center items-center gap-1.5 px-2 sm:px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                 selectedCategory === cat.id
                   ? "bg-primary text-primary-foreground shadow-sm"
                   : "bg-secondary/60 text-muted-foreground hover:text-foreground hover:bg-secondary"
               }`}
             >
-              {cat.icon}
+              <span className="hidden sm:inline-flex">{cat.icon}</span>
               <span className="sm:hidden">{cat.shortLabel[lang]}</span>
               <span className="hidden sm:inline">{cat.label[lang]}</span>
             </button>
