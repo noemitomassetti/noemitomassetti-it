@@ -109,7 +109,7 @@ jobs:
                     throw new Error('Mobile menu control is not associated with its region');
                   await menuButton.hover();
                   const iconContrast=await menuButton.evaluate(el=>{
-                    const rgb=(value:string)=>value.match(/[\\d.]+/g)?.slice(0,3).map(Number)??[0,0,0];
+                    const rgb=(value:string)=>value.match(/[\d.]+/g)?.slice(0,3).map(Number)??[0,0,0];
                     const linear=(value:number)=>{const v=value/255;return v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4;};
                     const luminance=(values:number[])=>0.2126*linear(values[0])+0.7152*linear(values[1])+0.0722*linear(values[2]);
                     const foreground=luminance(rgb(getComputedStyle(el).color));
