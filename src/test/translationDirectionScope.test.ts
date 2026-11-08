@@ -26,6 +26,20 @@ describe("Professional translation direction and public service scope", () => {
     }
   });
 
+  it("states the supported translation direction and existing-customer limit in every locale", () => {
+    const expectations = {
+      it: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /clienti già acquisiti/i },
+      en: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /existing customers/i },
+      fr: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /clients existants/i },
+      es: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /clientes existentes/i },
+    } as const;
+    for (const lang of ["it", "en", "fr", "es"] as const) {
+      const copy = readFileSync(`src/lib/i18n/locales/${lang}.ts`, "utf8");
+      expect(copy, lang).toMatch(expectations[lang].direction);
+      expect(copy, lang).toMatch(expectations[lang].support);
+    }
+  });
+
   it("publishes only English, French and Spanish into Italian translation samples", () => {
     const directions = [...new Set(TRANSLATION_DEEP_CASES.map(item => item.direction))].sort();
     expect(directions).toEqual(["EN-IT", "ES-IT", "FR-IT"]);

@@ -6,14 +6,14 @@ import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
 import { OPERATIONAL_SAMPLES_D } from "./portfolioOperationalSamplesD";
 import type { TranslationDeepCase } from "./portfolioDeepTypes";
+import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
 /** The imported translation datasets contain only the supported EN/FR/ES → IT direction. */
-import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
 export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B];
 export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D];
 export type DeepPortfolioItem =
-  | { kind: "translation"; item: PublicTranslationDeepCase }
+  | { kind: "translation"; item: TranslationDeepCase }
   | { kind: "operations"; item: OperationalDeepCase };
 export const DEEP_PORTFOLIO_ITEMS: DeepPortfolioItem[] = [
   ...TRANSLATION_DEEP_CASES.map(item => ({ kind: "translation" as const, item })),
