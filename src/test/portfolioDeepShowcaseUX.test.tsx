@@ -12,11 +12,11 @@ describe("Deep portfolio user experience", () => {
   it("shows an accessible featured selection and exposes all samples on request", () => {
     mount();
     const status = screen.getByRole("status");
-    expect(status).toHaveTextContent("8 / 27");
+    expect(status).toHaveTextContent("8 / 21");
     expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(8);
 
     fireEvent.click(screen.getByRole("button", { name: /Esplora tutti i dossier/ }));
-    expect(status).toHaveTextContent("27 / 27");
+    expect(status).toHaveTextContent("21 / 21");
     expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(27);
   });
 
@@ -25,10 +25,10 @@ describe("Deep portfolio user experience", () => {
     fireEvent.click(screen.getByRole("button", { name: /Esplora tutti i dossier/ }));
     fireEvent.click(screen.getByRole("button", { name: "Traduzioni a fronte" }));
     expect(screen.getByRole("button", { name: "Traduzioni a fronte" })).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getByRole("status")).toHaveTextContent("12 / 12");
+    expect(screen.getByRole("status")).toHaveTextContent("6 / 6");
 
     fireEvent.click(screen.getByRole("button", { name: "Tutti i dossier" }));
-    expect(screen.getByRole("status")).toHaveTextContent("8 / 27");
+    expect(screen.getByRole("status")).toHaveTextContent("8 / 21");
     expect(screen.getByRole("button", { name: /Esplora tutti i dossier/ })).toHaveAttribute("aria-expanded", "false");
   });
 
@@ -42,12 +42,15 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("status")).toHaveTextContent("0 / 0");
     expect(screen.getByText(/Nessun dossier corrisponde alla ricerca/)).toBeInTheDocument();
     fireEvent.change(search, { target: { value: "" } });
-    expect(screen.getByRole("status")).toHaveTextContent("8 / 27");
+    expect(screen.getByRole("status")).toHaveTextContent("8 / 21");
   });
 
   it("shows faithful deliverable excerpts on the featured portfolio cards", () => {
     mount();
     expect(screen.getAllByText("Anteprima dell’elaborato")).toHaveLength(8);
+    expect(screen.queryByRole("button", { name: "IT → EN" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "IT → FR" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "IT → ES" })).toBeNull();
     expect(screen.getAllByText((_, element) =>
       element?.tagName.toLowerCase() === "p" && Boolean(element.textContent?.trim()) &&
       element.textContent !== "Anteprima dell’elaborato"

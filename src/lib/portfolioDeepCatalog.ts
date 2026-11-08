@@ -6,12 +6,17 @@ import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
 import { OPERATIONAL_SAMPLES_D } from "./portfolioOperationalSamplesD";
 import type { TranslationDeepCase } from "./portfolioDeepTypes";
+
+type PublicTranslationDirection = "EN-IT" | "FR-IT" | "ES-IT";
+type PublicTranslationDeepCase = Omit<TranslationDeepCase, "direction"> & { direction: PublicTranslationDirection };
+const isPublicTranslation = (item: TranslationDeepCase): item is PublicTranslationDeepCase =>
+  item.direction === "EN-IT" || item.direction === "FR-IT" || item.direction === "ES-IT";
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
-export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B];
+export const TRANSLATION_DEEP_CASES: PublicTranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B].filter(isPublicTranslation);
 export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D];
 export type DeepPortfolioItem =
-  | { kind: "translation"; item: TranslationDeepCase }
+  | { kind: "translation"; item: PublicTranslationDeepCase }
   | { kind: "operations"; item: OperationalDeepCase };
 export const DEEP_PORTFOLIO_ITEMS: DeepPortfolioItem[] = [
   ...TRANSLATION_DEEP_CASES.map(item => ({ kind: "translation" as const, item })),

@@ -64,10 +64,10 @@ export default function Portfolio() {
   };
 
   const descriptions = {
-    it: "Portfolio approfondito: traduzioni IT ↔ EN, FR, ES con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
-    en: "Detailed translation samples IT ↔ EN, FR, ES, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
-    fr: "Portfolio détaillé : traductions IT ↔ FR, EN, ES, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
-    es: "Portfolio detallado: traducciones IT ↔ ES, EN, FR, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
+    it: "Portfolio approfondito: traduzioni professionali EN/FR/ES → IT con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
+    en: "Detailed EN/FR/ES → IT translation samples, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
+    fr: "Portfolio détaillé : traductions professionnelles EN/FR/ES → IT, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
+    es: "Portfolio detallado: traducciones profesionales EN/FR/ES → IT, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
   };
 
   useSEO({
@@ -908,7 +908,7 @@ export default function Portfolio() {
               ? "De la localisation en italien aux échanges avec vos clients italiens, découvrons des solutions linguistiques et opérationnelles."
               : lang === "es"
               ? "Desde la localización al italiano hasta la comunicación escrita con tus clientes italianos actuales, podemos concretar las tareas que necesitas delegar."
-              : "From Italian translation and localisation to written support for existing Italian customers, I can help with agreed operational and language tasks."}
+              : "From EN/FR/ES translation into Italian and Italian-market localisation to written support for existing Italian customers, I can help with agreed operational and language tasks."}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link

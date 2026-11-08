@@ -256,14 +256,12 @@ jobs:
               }
               console.log('PASS four raw HTML social previews, correct route meta without JavaScript');
 
-              // New detailed dossier audit: all 27 fictional work samples in 4 languages.
+              // Public detailed dossier audit: 21 fictional samples (EN/FR/ES → IT translation plus operational cases) in 4 languages.
               // Render at phone width to catch broken paths, SEO alternates, missing
               // deliverables and horizontal overflow in parallel translation panels.
               const dossierSlugs=[
-                'en-it-digital-onboarding','it-en-consultancy-services','fr-it-handmade-product',
-                'it-fr-professional-training','es-it-existing-customer','it-es-product-information',
-                'it-en-existing-order','en-it-professional-faq','fr-it-workshop-details',
-                'it-fr-product-order-guide','es-it-existing-customer-onboarding','it-es-workshop-reminder',
+                'en-it-digital-onboarding','fr-it-handmade-product','es-it-existing-customer',
+                'en-it-professional-faq','fr-it-workshop-details','es-it-existing-customer-onboarding',
                 'inbox-calendar-triage','customer-care-escalations','order-entry-price-list',
                 'shared-drive-version-control','online-course-secretariat','research-existing-italian-customers',
                 'web-copy-before-after','catalogue-price-list-proofreading','digital-tools-request-workflow',
@@ -305,11 +303,11 @@ jobs:
               if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3))
                 throw Error('Deep portfolio card previews create horizontal overflow on mobile');
               await page.screenshot({path:'/tmp/noemi-smoke/deep_dossiers_it_390.png',fullPage:false});
-              await deepDirectory.getByRole('button',{name:'Esplora tutti i dossier (27)'}).click();
-              await page.waitForFunction(()=>document.querySelectorAll('#portfolio-complete-dossiers article').length===27,null,{timeout:10000});
-              if(await deepDirectory.locator('article').count()!==27) throw Error('Deep dossier directory not complete');
-              await deepDirectory.getByRole('button',{name:'IT → ES'}).click();
-              if(await deepDirectory.locator('article').count()!==2) throw Error('IT to ES dossier filter should show two samples');
+              await deepDirectory.getByRole('button',{name:'Esplora tutti i dossier (21)'}).click();
+              await page.waitForFunction(()=>document.querySelectorAll('#portfolio-complete-dossiers article').length===21,null,{timeout:10000});
+              if(await deepDirectory.locator('article').count()!==21) throw Error('Deep dossier directory not complete');
+              await deepDirectory.getByRole('button',{name:'EN → IT'}).click();
+              if(await deepDirectory.locator('article').count()!==2) throw Error('EN to IT dossier filter should show two samples');
               await deepDirectory.getByRole('button',{name:'Ricerche informative'}).click();
               if(await deepDirectory.locator('article').count()!==2) throw Error('Research service filter missing');
               // Search must find the right dossier in Italian, bypass the featured-only view
@@ -327,7 +325,7 @@ jobs:
               await searchDossiers.clear();
               if(await deepDirectory.locator('article').count()!==8)
                 throw Error('Clearing search did not restore featured portfolio');
-              console.log('PASS 27 dossier directory, filters and keyword search');
+              console.log('PASS 21 public dossier directory, offered-direction filters and keyword search');
 
               // The same tool article is independently localised; verify the dated plan notice
               // and the correct provider links in all four languages.
