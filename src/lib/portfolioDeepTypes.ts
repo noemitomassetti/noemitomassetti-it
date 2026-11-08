@@ -9,11 +9,10 @@ export interface TerminologyChoice {
 }
 
 export type PublicTranslationDirection = "EN-IT" | "FR-IT" | "ES-IT";
-export type InternalTranslationDirection = PublicTranslationDirection | "IT-EN" | "IT-FR" | "IT-ES";
 
 export interface TranslationDeepCase {
   id: string;
-  direction: InternalTranslationDirection;
+  direction: PublicTranslationDirection;
   domain: Localised;
   title: Localised;
   context: Localised;

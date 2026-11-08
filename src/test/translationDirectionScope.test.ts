@@ -15,13 +15,14 @@ const publicCopyFiles = [
   "src/lib/i18n/locales/en.ts",
   "src/lib/i18n/locales/fr.ts",
   "src/lib/i18n/locales/es.ts",
+  "src/lib/portfolioDeepTypes.ts",
 ];
 
 describe("Professional translation direction and public service scope", () => {
   it("does not advertise professional translation from Italian into other languages", () => {
     for (const path of publicCopyFiles) {
       const copy = readFileSync(path, "utf8");
-      expect(copy, path).not.toMatch(/(?:IT|Italian|italien|italiano)\s*↔|both\s+(?:from and into|directions)|from and into Italian|from Italian into (?:English|French|Spanish)|in entrambe le direzioni|dans les deux sens|en ambos sentidos/i);
+      expect(copy, path).not.toMatch(/(?:IT|Italian|italien|italiano)\s*↔|IT\s*→\s*(?:EN|FR|ES)|both\s+(?:from and into|directions)|from and into Italian|from Italian into (?:English|French|Spanish)|in entrambe le direzioni|dans les deux sens|en ambos sentidos/i);
     }
   });
 
@@ -29,6 +30,7 @@ describe("Professional translation direction and public service scope", () => {
     const directions = [...new Set(TRANSLATION_DEEP_CASES.map(item => item.direction))].sort();
     expect(directions).toEqual(["EN-IT", "ES-IT", "FR-IT"]);
     expect(TRANSLATION_DEEP_CASES).toHaveLength(6);
+    expect(TRANSLATION_DEEP_CASES.every(sample => ["EN-IT", "FR-IT", "ES-IT"].includes(sample.direction))).toBe(true);
     expect(Object.keys(DIRECTION_LABELS).sort()).toEqual(["EN-IT", "ES-IT", "FR-IT"]);
     for (const id of [
       "it-en-consultancy-services", "it-fr-professional-training", "it-es-product-information",

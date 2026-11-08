@@ -87,7 +87,7 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Pagine web e landing page (adattamento puramente testuale, non sviluppo tecnico)",
         "Schede prodotto per e-commerce e cataloghi commerciali",
-        "Campagne email, newsletter e sequenze di onboarding clienti",
+        "Email informative, newsletter e comunicazioni di onboarding per clienti già acquisiti",
         "Documentazione di supporto, FAQ e microcopy per applicazioni digitali",
         "Glossari bilingue EN-IT / FR-IT / ES-IT e linee guida di stile per il mercato italiano",
         "Post-editing di traduzioni AI e revisione critica di bozze esistenti",
@@ -155,7 +155,7 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Website and landing-page copy (language and content localisation only, not website development)",
         "E-commerce product descriptions, category copy and brand stories",
-        "Marketing email sequences, newsletters, and client onboarding guides",
+        "Customer emails, newsletters and onboarding messages for existing customers",
         "Customer support templates, help centres and user-interface microcopy",
         "Bilingual EN-IT / FR-IT / ES-IT glossaries and market-specific style guides",
         "AI translation post-editing and quality assurance of existing Italian assets",
@@ -223,7 +223,7 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Contenus de sites web et de pages de destination (adaptation linguistique et éditoriale, sans développement technique)",
         "Fiches descriptives pour boutiques en ligne et catalogues",
-        "Courriels professionnels destinés aux clients existants et lettres d’information",
+        "Courriels d’information, newsletters et messages d’accueil destinés aux clients existants",
         "Guides utilisateurs, foires aux questions (FAQ) et micro-textes d'application",
         "Glossaires bilingues FR-IT / EN-IT / ES-IT et guides de style pour le marché italien",
         "Post-édition de contenus générés par IA et relecture professionnelle",
@@ -291,7 +291,7 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Textos web y páginas de aterrizaje (adaptación puramente textual, sin desarrollo web)",
         "Fichas de producto para tiendas online y catálogos de servicios",
-        "Campañas de correo, boletines informativos y mensajes de bienvenida",
+        "Correos informativos, boletines y mensajes de bienvenida para clientes existentes",
         "Documentos de ayuda, preguntas frecuentes y textos breves de interfaz",
         "Glosarios bilingües y guías de estilo para el mercado italiano",
         "Posedición de traducciones generadas por IA y control de calidad",

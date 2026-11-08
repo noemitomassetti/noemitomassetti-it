@@ -5,15 +5,12 @@ import { OPERATIONAL_SAMPLES_A } from "./portfolioOperationalSamplesA";
 import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
 import { OPERATIONAL_SAMPLES_D } from "./portfolioOperationalSamplesD";
-import type { PublicTranslationDirection, TranslationDeepCase } from "./portfolioDeepTypes";
+import type { TranslationDeepCase } from "./portfolioDeepTypes";
 
-/** Only EN/FR/ES → IT translation samples are public; reverse-direction drafts are not offered as translation services. */
-type PublicTranslationDeepCase = Omit<TranslationDeepCase, "direction"> & { direction: PublicTranslationDirection };
-const isPublicTranslation = (item: TranslationDeepCase): item is PublicTranslationDeepCase =>
-  item.direction === "EN-IT" || item.direction === "FR-IT" || item.direction === "ES-IT";
+/** The imported translation datasets contain only the supported EN/FR/ES → IT direction. */
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
-export const TRANSLATION_DEEP_CASES: PublicTranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B].filter(isPublicTranslation);
+export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B];
 export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D];
 export type DeepPortfolioItem =
   | { kind: "translation"; item: PublicTranslationDeepCase }
