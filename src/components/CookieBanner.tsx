@@ -61,7 +61,7 @@ const BANNER_STRINGS: Record<
   es: {
     title: "Gestión de Cookies y Privacidad",
     description:
-      "Las cookies necesarias permiten el funcionamiento del sitio. Google Analytics 4 solo se activa con tu consentimiento para medir el uso. Consulta la Política de Cookies para conocer el tratamiento de datos.",
+      "Las cookies necesarias permiten el funcionamiento del sitio. Google Analytics 4 se activa solo con tu consentimiento para medir el uso. Más detalles en la Política de Cookies.",
     policyLink: "Leer la Política de Cookies completa",
     currentChoicePrefix: "Elección actual: ",
     accepted: "Aceptadas",
