@@ -5,7 +5,7 @@ export const enLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Multilingual Virtual Assistant & Translator | Noemi Tomassetti',
-    homeDesc: 'Multilingual virtual assistance, operational back office, written customer care for existing customers, digital content and professional translation between Italian and English, French and Spanish.',
+    homeDesc: 'Multilingual virtual assistance, secretarial and back-office support, customer care, professional communications, digital content and IT ↔ EN/FR/ES translation.',
     servicesTitle: 'Virtual Assistance & Translation Services | Noemi Tomassetti',
     servicesDesc: 'Multilingual virtual assistance, scheduling and email management, operational back office, written customer care, content editing and translation in both directions between Italian and English, French and Spanish.',
     noetomTitle: 'NoeTom | Internal operations project',
@@ -36,7 +36,7 @@ export const enLocale: TranslationDictionary = {
     badge: 'MULTILINGUAL VIRTUAL ASSISTANT',
     titleLine1: 'Virtual assistance, multilingual communication and translation',
     titleHighlight: 'for your day-to-day business',
-    subtitle: "Organisational secretarial work, operational back office, written care for existing customers, digital content and translation between Italian and English, French and Spanish.",
+    subtitle: "Virtual secretarial support, operational back office, customer care, professional communications, digital content and translation between Italian and English, French and Spanish.",
     headline: 'Clearer communication. More organised daily operations.',
     desc1: 'I draw on over twenty years of professional experience to help you manage your day-to-day work more effectively. I am a native Italian speaker trained in specialised translation.',
     desc2: 'From email and scheduling to written customer care, translation and website content revision, I support agreed tasks for professionals and small businesses.',
