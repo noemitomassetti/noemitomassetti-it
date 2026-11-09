@@ -80,7 +80,7 @@ export const itLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'COSA FACCIO',
     title: 'Aree di Supporto Operativo',
-    subtitle: 'Puoi affidarmi una singola attività o costruire nel tempo una collaborazione continuativa.',
+    subtitle: 'Queste sono alcune delle attività che posso svolgere. Ogni incarico comprende soltanto le prestazioni concordate nel preventivo, in base alle tue esigenze.',
     viewAllCta: 'Approfondisci tutti i servizi',
     categories: [
       {
@@ -88,7 +88,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Segreteria Organizzativa & Back Office Operativo',
         subtitle: 'Ordine, continuità e reattività per la tua gestione quotidiana.',
         description:
-          "Segreteria organizzativa e back office operativo: email, agenda, scadenze, inserimento dati, ordini, aggiornamento listini, preventivi basati sulle indicazioni del cliente e assistenza ai clienti. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
+          "Il supporto può comprendere l’organizzazione di email, agenda e scadenze, l’inserimento dati, la gestione di ordini e listini già approvati, la preparazione di preventivi secondo le tue indicazioni e le comunicazioni con i clienti. Le attività specifiche vengono concordate prima dell’avvio. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
         iconName: 'Mail',
         items: [
           'Gestione e organizzazione delle email',
@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzioni IT ↔ EN/FR/ES e localizzazione',
         subtitle: 'Traduzioni professionali dall’italiano e verso l’italiano; localizzazione dei contenuti.',
         description:
-          "Traduco professionalmente tra l’italiano e l’inglese, il francese e lo spagnolo, valutando ambito, complessità e pubblico destinatario. Offro inoltre localizzazione per il mercato italiano, revisione di contenuti italiani e supporto operativo per la corrispondenza multilingue con clienti.",
+          "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. In base al progetto, il servizio può comprendere traduzione, localizzazione per il mercato italiano, revisione linguistica o supporto alla corrispondenza multilingue. Lingue, testi e lavorazioni vengono definiti nel preventivo.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti e landing page per il pubblico italiano',
@@ -120,7 +120,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Scrittura & Revisione Testi',
         subtitle: 'Testi chiari, professionali e orientati agli obiettivi.',
         description:
-          'Dai testi per il tuo sito alle email informative, fino alla revisione e all’ottimizzazione di testi generati con AI per renderli naturali, coerenti e adatti al tuo pubblico.',
+          'In base alle esigenze, posso redigere o revisionare testi per siti web, comunicazioni, newsletter e materiali informativi, anche a partire da bozze già disponibili o generate con strumenti di AI. Il tipo di intervento e i contenuti da consegnare vengono concordati.',
         iconName: 'PenTool',
         items: [
           'Revisione e preparazione di testi per siti web e landing page',
@@ -136,7 +136,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Ricerche informative a supporto',
         subtitle: 'Informazioni chiare e strutturate per orientare le tue decisioni.',
         description:
-          "Raccolta, verifica e confronto di informazioni, fonti, fornitori e strumenti digitali esclusivamente a supporto delle attività concordate con il cliente. Non comprende ricerca contatti, acquisizione clienti o prospecting.",
+          "Le ricerche possono comprendere raccolta e verifica di informazioni pubbliche, confronti tra fornitori, strumenti digitali e fonti, oppure sintesi documentali a supporto di progetti già definiti. Non comprendono ricerca di contatti commerciali, acquisizione clienti o prospecting.",
         iconName: 'Search',
         items: [
           'Analisi dei concorrenti e benchmark delle tariffe',
@@ -152,7 +152,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Supporto digitale',
         subtitle: 'Migliora la tua organizzazione digitale e i tuoi strumenti di lavoro.',
         description:
-          'Riorganizzazione di cartelle cloud, impostazione di strumenti di lavoro online e procedure su misura per snellire le attività ripetitive della tua giornata.',
+          'Il supporto può riguardare l’organizzazione di cartelle e documenti condivisi, la configurazione di base di strumenti digitali già scelti e la preparazione di semplici procedure operative. Strumenti, accessi e attività vengono concordati prima dell’intervento.',
         iconName: 'Cpu',
         items: [
           'Organizzazione di cartelle e documenti in Google Workspace e cloud drive',
@@ -163,7 +163,7 @@ export const itLocale: TranslationDictionary = {
           'Supporto operativo e impostazioni di base',
         ],
       },
-      { id: 'web-landing', title: 'Contenuti per siti web e landing page', subtitle: 'Testi e struttura dei contenuti per una presenza online più chiara.', description: 'Revisione, adattamento linguistico e organizzazione dei contenuti di siti esistenti. Sviluppo tecnico, hosting e manutenzione del sito non fanno parte di questo servizio di contenuti.', iconName: 'Layout', items: ['Revisione dei testi di home e pagine servizi', 'Localizzazione italiana di contenuti web', 'Organizzazione di titoli, FAQ e call to action', 'Controllo terminologico e coerenza', 'Consegna di testi pronti per il CMS', 'Supporto alla revisione di contenuti multilingue'] },
+      { id: 'web-landing', title: 'Contenuti per siti web e landing page', subtitle: 'Testi e struttura dei contenuti per una presenza online più chiara.', description: 'Per siti già esistenti posso occuparmi, in base al brief, della revisione dei testi, dell’adattamento linguistico e dell’organizzazione di titoli, FAQ e contenuti. Lo sviluppo tecnico, l’hosting e la manutenzione del sito non sono inclusi in questo servizio editoriale.', iconName: 'Layout', items: ['Revisione dei testi di home e pagine servizi', 'Localizzazione italiana di contenuti web', 'Organizzazione di titoli, FAQ e call to action', 'Controllo terminologico e coerenza', 'Consegna di testi pronti per il CMS', 'Supporto alla revisione di contenuti multilingue'] },
     ],
   },
   multilingualAdvantage: {
@@ -189,7 +189,7 @@ export const itLocale: TranslationDictionary = {
   },
   productized: {
     tag: 'PERCORSI DI COLLABORAZIONE', title: 'Soluzioni su misura per attività concrete',
-    subtitle: 'Esempi illustrativi delle attività che posso svolgere. Prestazioni e tempi sono definiti nel preventivo.',
+    subtitle: 'Esempi di collaborazioni e possibili risultati, non pacchetti predefiniti. Il preventivo indica quali attività e consegne sono effettivamente comprese.',
     packages: [
       {id: 'p1', title: 'Back office organizzato', badge: 'Segreteria e supporto operativo',
        description: 'Un intervento mirato per riordinare attività, corrispondenza e documenti ricorrenti.',
@@ -204,7 +204,7 @@ export const itLocale: TranslationDictionary = {
        description: 'Intervento su testi professionali e materiali già disponibili, anche di origine multilingue.',
        deliverables: ['Verifica del testo e degli obiettivi', 'Revisione di struttura, tono e leggibilità', 'Documento finale con modifiche verificabili'], turnaround: 'In base al materiale'},
     ],
-    customScopeNote: 'Ogni incarico è personalizzato. Nessuna chiamata obbligatoria: invia le informazioni e riceverai una proposta scritta.',
+    customScopeNote: 'Gli esempi non sono prestazioni automaticamente incluse. Definiamo per iscritto attività, eventuali consegne, tempi e compensi prima dell’avvio. Puoi richiedere un preventivo senza chiamata obbligatoria.',
   },
   noetomTeaser: {
     tag: 'PROGETTO INTERNO · PRODUTTIVITÀ',
