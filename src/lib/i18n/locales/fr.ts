@@ -360,7 +360,7 @@ export const frLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: 'Plus de 20 ans d’expérience', detail: 'Service client, back-office, organisation et gestion opérationnelle' },
-      { title: 'Formation universitaire spécialisée', detail: 'Licence en Médiation Linguistique (110/110 e lode) & Master en Traduction Spécialisée' },
+      { title: 'Formation universitaire spécialisée', detail: 'Diplôme universitaire italien en médiation linguistique (110/110 e lode) et master en traduction spécialisée' },
       { title: 'Quatre langues de travail', detail: 'Italien langue maternelle, anglais et français avancés, espagnol intermédiaire supérieur' },
       { title: 'Organisation numérique', detail: 'Classement cloud, outils collaboratifs et procédures de travail' },
     ],
