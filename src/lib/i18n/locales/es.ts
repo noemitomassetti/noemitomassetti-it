@@ -4,9 +4,9 @@ export const esLocale: TranslationDictionary = {
   lang: 'es',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Traducción EN/FR/ES al italiano y apoyo operativo | Noemi Tomassetti',
+    homeTitle: 'Traducción IT ↔ EN/FR/ES y apoyo operativo | Noemi Tomassetti',
     homeDesc: 'Traducción profesional entre el italiano y el inglés, francés y español, localización para el mercado italiano y apoyo operativo a profesionales que trabajan con Italia.',
-    servicesTitle: 'Traducción al italiano y apoyo operativo | Noemi Tomassetti',
+    servicesTitle: 'Traducción IT ↔ EN/FR/ES y apoyo operativo | Noemi Tomassetti',
     servicesDesc: 'Traducción entre el italiano y el inglés, francés y español, atención escrita a clientes italianos existentes y apoyo operativo para actividades relacionadas con Italia.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
@@ -79,7 +79,7 @@ export const esLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'QUÉ HAGO',
-    title: 'Traducción al italiano y apoyo operativo',
+    title: 'Traducción IT ↔ EN/FR/ES y apoyo operativo',
     subtitle: 'Traducción, localización y apoyo práctico para tus actividades relacionadas con Italia.',
     viewAllCta: 'Ver todos los servicios',
     categories: [
@@ -196,7 +196,7 @@ export const esLocale: TranslationDictionary = {
       {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: "Atención escrita a los clientes existentes, actualizaciones de pedidos y seguimientos de asistencia conforme a los procedimientos acordados.",
        deliverables: ['Plantillas de respuesta y preguntas frecuentes', 'Gestión acordada de consultas escritas', 'Registro de seguimientos y actividades'], turnaround: 'Por acordar'},
       {id: 'p3', title: 'Traducción IT ↔ EN/FR/ES y localización para el mercado italiano', badge: 'IT · EN · FR · ES', description: 'Traducción profesional entre el italiano y el inglés, francés y español, localización para Italia y correspondencia multilingüe acordada con clientes existentes.',
-       deliverables: ['Análisis de textos, público y terminología', 'Traducción al italiano o localización del contenido acordado para el mercado italiano', 'Revisión final y notas lingüísticas'], turnaround: 'Según volumen'},
+       deliverables: ['Análisis de textos, público y terminología', 'Traducción IT ↔ EN/FR/ES o localización del contenido acordado para el mercado italiano', 'Revisión final y notas lingüísticas'], turnaround: 'Según volumen'},
       {id: 'p4', title: 'Revisión de contenido existente', badge: 'Claridad y coherencia', description: 'Revisión cuidadosa de materiales profesionales y multilingües existentes.',
        deliverables: ['Evaluación del texto y los objetivos', 'Revisión de estructura, tono y legibilidad', 'Documento final con cambios identificables'], turnaround: 'Según alcance'},
     ],
