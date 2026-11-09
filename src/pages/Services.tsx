@@ -180,9 +180,9 @@ export default function ServicesPage() {
                 <Globe className="w-3.5 h-3.5" />
                 <span>
                   {lang === "it"
-                    ? "Traduzioni e localizzazione verso l’italiano"
-                    : lang === "fr" ? "Traduction et localisation vers l’italien"
-                    : lang === "es" ? "Traducción y localización al italiano"
+                    ? "Traduzioni IT ↔ EN/FR/ES e localizzazione"
+                    : lang === "fr" ? "Traduction IT ↔ EN/FR/ES et localisation"
+                    : lang === "es" ? "Traducción IT ↔ EN/FR/ES y localización"
                     : "Italian localisation for international clients"}
                 </span>
               </div>
@@ -191,14 +191,14 @@ export default function ServicesPage() {
                   ? "Hai un’attività che si rivolge al mercato italiano?"
                   : lang === "fr" ? "Vous vous adressez à une clientèle italienne ?"
                   : lang === "es" ? "¿Tu empresa se dirige al público italiano?"
-                  : "Reaching Italian customers? EN/FR/ES → IT localisation"}
+                  : "Need translation between Italian and EN/FR/ES?"}
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
                 {lang === "it"
-                  ? "Traduzione, revisione e localizzazione di siti web, landing page e comunicazioni professionali verso l’italiano."
+                  ? "Traduzione, revisione e localizzazione di contenuti web e comunicazioni professionali tra italiano e EN/FR/ES."
                   : lang === "fr" ? "Traduction, révision et localisation en italien de sites web, pages de destination et communications professionnelles."
-                  : lang === "es" ? "Traducción, revisión y localización al italiano de sitios web, landing pages y comunicaciones profesionales."
-                  : "Translation, editing and localisation into Italian for websites, landing pages and professional communications."}
+                  : lang === "es" ? "Traducción, revisión y localización de contenidos web y comunicaciones profesionales entre el italiano y EN/FR/ES."
+                  : "Translation, editing and localisation between Italian and EN/FR/ES for websites, landing pages and professional communications."}
               </p>
             </div>
             <Button asChild className="rounded-full shrink-0 font-semibold text-xs uppercase tracking-wider">
@@ -215,7 +215,7 @@ export default function ServicesPage() {
               const macroTags: Record<string, Record<Language, string>> = {
                 "virtual-assistance": { it: "Back office operativo", en: "Italian customer operations", fr: "Relation client et opérations en italien", es: "Atención al cliente y operaciones en italiano" },
                 "digital-support": { it: "Organizzazione digitale", en: "Digital organisation", fr: "Organisation numérique", es: "Organización digital" },
-                "translation-localization": { it: "Traduzioni EN/FR/ES → IT", en: "EN/FR/ES → IT Translation", fr: "Traduction EN/FR/ES → IT", es: "Traducción EN/FR/ES → IT" },
+                "translation-localization": { it: "Traduzioni IT ↔ EN/FR/ES", en: "IT ↔ EN/FR/ES Translation", fr: "Traduction IT ↔ EN/FR/ES", es: "Traducción IT ↔ EN/FR/ES" },
                 "content-writing": { it: "Scrittura e revisione testi", en: "Italian content editing", fr: "Révision des contenus italiens", es: "Revisión de contenidos en italiano" },
                 "online-research": { it: "Ricerche informative", en: "Informational research", fr: "Recherche documentaire", es: "Investigación informativa" },
                 "web-landing": { it: "Contenuti per il web", en: "Italian web content", fr: "Contenus web en italien", es: "Contenidos web en italiano" },
