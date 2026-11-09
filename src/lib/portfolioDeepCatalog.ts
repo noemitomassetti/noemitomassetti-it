@@ -1,6 +1,7 @@
 import type { Language } from "./i18n/types";
 import { TRANSLATION_SAMPLES_A } from "./portfolioTranslationSamplesA";
 import { TRANSLATION_SAMPLES_B } from "./portfolioTranslationSamplesB";
+import { TRANSLATION_SAMPLES_REVERSE } from "./portfolioTranslationSamplesReverse";
 import { OPERATIONAL_SAMPLES_A } from "./portfolioOperationalSamplesA";
 import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
@@ -8,9 +9,9 @@ import { OPERATIONAL_SAMPLES_D } from "./portfolioOperationalSamplesD";
 import type { TranslationDeepCase } from "./portfolioDeepTypes";
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
-/** The imported translation datasets contain only the supported EN/FR/ES → IT direction. */
+/** Fictional professional samples cover all six IT ↔ EN/FR/ES translation directions. */
 
-export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B];
+export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B, ...TRANSLATION_SAMPLES_REVERSE];
 export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D];
 export type DeepPortfolioItem =
   | { kind: "translation"; item: TranslationDeepCase }
