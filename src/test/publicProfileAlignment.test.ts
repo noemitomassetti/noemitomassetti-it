@@ -71,9 +71,9 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
     expect(esLocale.servicesSection.categories[0].description).toContain("en italiano");
   });
   it("has real demonstrative deliverables for each offer, with no client-testimonial claims",()=>{
-    expect(TRANSLATION_DEEP_CASES.length).toBe(9);
+    expect(TRANSLATION_DEEP_CASES.length).toBe(11);
     expect(OPERATIONAL_DEEP_CASES.length).toBe(15);
-    expect(DEEP_PORTFOLIO_ITEMS.length).toBe(24);
+    expect(DEEP_PORTFOLIO_ITEMS.length).toBe(26);
     expect(PORTFOLIO_CASES.length).toBe(18);
     expect(PORTFOLIO_DOCUMENTS.length).toBe(22);
     const operations=OPERATIONAL_DEEP_CASES;
