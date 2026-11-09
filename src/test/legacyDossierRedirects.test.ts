@@ -34,6 +34,6 @@ describe("Legacy reverse-direction dossier retirement", () => {
   it("removes retired reverse-direction dossiers from the public sitemap", () => {
     const sitemap = readFileSync("public/sitemap.xml", "utf8");
     for (const slug of legacySlugs) expect(sitemap).not.toContain(slug);
-    expect([...sitemap.matchAll(/<loc>/g)]).toHaveLength(280);
+    expect([...sitemap.matchAll(/<loc>/g)]).toHaveLength(288);
   });
 });
