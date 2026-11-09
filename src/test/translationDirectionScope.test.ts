@@ -32,18 +32,14 @@ describe("Professional translation direction and public service scope", () => {
     }
   });
 
-  it("publishes only English, French and Spanish into Italian translation samples", () => {
+  it("publishes original translation demonstrations in all six directions", () => {
     const directions = [...new Set(TRANSLATION_DEEP_CASES.map(item => item.direction))].sort();
-    expect(directions).toEqual(["EN-IT", "ES-IT", "FR-IT"]);
-    expect(TRANSLATION_DEEP_CASES).toHaveLength(6);
-    expect(TRANSLATION_DEEP_CASES.every(sample => ["EN-IT", "FR-IT", "ES-IT"].includes(sample.direction))).toBe(true);
-    expect(Object.keys(DIRECTION_LABELS).sort()).toEqual(["EN-IT", "ES-IT", "FR-IT"]);
-    for (const id of [
-      "it-en-consultancy-services", "it-fr-professional-training", "it-es-product-information",
-      "it-en-existing-order", "it-fr-product-order-guide", "it-es-workshop-reminder",
-    ]) {
-      expect(getDeepPortfolioItem(id)).toBeUndefined();
+    expect(directions).toEqual(["EN-IT", "ES-IT", "FR-IT", "IT-EN", "IT-ES", "IT-FR"]);
+    expect(TRANSLATION_DEEP_CASES).toHaveLength(9);
+    expect(Object.keys(DIRECTION_LABELS).sort()).toEqual(directions);
+    for (const id of ["it-en-existing-order-update", "it-fr-training-workshop", "it-es-product-information"]) {
+      expect(getDeepPortfolioItem(id)?.kind).toBe("translation");
     }
-    expect(DEEP_PORTFOLIO_ITEMS.filter(entry => entry.kind === "translation")).toHaveLength(6);
+    expect(DEEP_PORTFOLIO_ITEMS.filter(entry => entry.kind === "translation")).toHaveLength(9);
   });
 });
