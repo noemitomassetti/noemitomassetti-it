@@ -7,7 +7,7 @@ export const frLocale: TranslationDictionary = {
     homeTitle: 'Assistante virtuelle multilingue et traductrice | Noemi Tomassetti',
     homeDesc: 'Assistance virtuelle multilingue, secrétariat organisationnel, back-office, relation client écrite, contenus numériques et traduction IT ↔ EN/FR/ES.',
     servicesTitle: 'Assistance virtuelle et traduction professionnelle | Noemi Tomassetti',
-    servicesDesc: 'Traduction entre l’italien et l’anglais, le français et l’espagnol, suivi écrit des clients italiens existants et soutien opérationnel pour les activités liées à l’Italie.',
+    servicesDesc: 'Secrétariat à distance, back-office opérationnel, suivi écrit des clients existants, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
     noetomDesc: 'NoeTom est le projet opérationnel interne de Noemi Tomassetti, actuellement en développement et en phase de test privé.',
     aboutTitle: 'À Propos | Noemi Tomassetti',
@@ -43,7 +43,7 @@ export const frLocale: TranslationDictionary = {
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Demande sans engagement',
     description:
-      'Je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien. Je révise également vos contenus italiens et assure les tâches opérationnelles convenues liées à vos activités avec l’Italie.',
+      'Je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que dans le sens inverse. Je propose également un accompagnement organisationnel et la révision de contenus professionnels dans le cadre convenu.',
     ctaServices: 'Explorer les Services',
     ctaNoeTom: 'Découvrir NoeTom (en développement)',
     quickStats: {
@@ -85,7 +85,7 @@ export const frLocale: TranslationDictionary = {
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Secrétariat organisationnel et back-office opérationnel',
+        title: 'Secrétariat à distance et back-office opérationnel',
         subtitle: 'Une organisation fiable et un suivi écrit des clients existants.',
         description:
           "Secrétariat organisationnel et back-office opérationnel : courriels, agenda, saisie de données, suivi des commandes, tarifs validés, devis selon vos consignes et accompagnement écrit des clients existants, y compris en italien. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
@@ -95,7 +95,7 @@ export const frLocale: TranslationDictionary = {
           'Gestion d’agenda et coordination des rendez-vous',
           'Service aux clients existants et communication professionnelle',
           'Classement documentaire et archivage cloud',
-          'Suivi des demandes des clients italiens existants',
+          'Suivi des demandes de vos clients existants',
           'Back-office opérationnel en lien avec les activités en Italie',
         ],
       },
@@ -125,7 +125,7 @@ export const frLocale: TranslationDictionary = {
         items: [
           'Révision de pages web et de vente en italien',
           'Adaptation du style et du ton en italien',
-          'Rédaction et révision de messages destinés aux clients italiens existants',
+          'Rédaction et révision de messages destinés aux clients existants',
           'Fiches de services et guides en italien',
           'Révision d’articles et de contenus professionnels en italien',
           'Révision de brouillons italiens générés par IA',
@@ -167,8 +167,8 @@ export const frLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'COMMUNIQUER AVEC L’ITALIE',
-    title: 'Communiquer clairement avec vos clients italiens',
+    tag: 'COMMUNICATION MULTILINGUE',
+    title: 'Communiquer clairement avec vos interlocuteurs',
     description:
       'Communiquer avec le public italien exige un vocabulaire précis, un registre adapté et des contenus fidèles à votre activité, au-delà d’une traduction littérale.',
     points: [
@@ -182,7 +182,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         title: 'Fluidité opérationnelle',
-        desc: 'Des contenus destinés à l’Italie aux échanges avec vos clients italiens existants, je veille à la clarté et à la cohérence des messages.',
+        desc: 'Des contenus professionnels aux échanges avec vos clients existants, je veille à la clarté du message, à la cohérence du vocabulaire et à l’adaptation au destinataire.',
       },
     ],
     badgeNote: 'Formation linguistique : diplôme en médiation linguistique (110/110 e lode) et master universitaire en traduction spécialisée',
@@ -196,7 +196,7 @@ export const frLocale: TranslationDictionary = {
       {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes des clients déjà acquis, informations sur les commandes et suivis de service selon des procédures convenues.",
        deliverables: ['Modèles de réponses et FAQ', 'Gestion convenue des demandes écrites', 'Suivi des relances et activités'], turnaround: 'À convenir'},
       {id: 'p3', title: 'Traduction IT ↔ EN/FR/ES et localisation pour le marché italien', badge: 'IT · EN · FR · ES', description: 'Traduction professionnelle entre l’italien et l’anglais, le français et l’espagnol, localisation pour l’Italie et correspondance multilingue convenue avec les clients existants.',
-       deliverables: ['Analyse des textes, publics et termes', 'Traduction vers l’italien ou localisation des contenus définis pour le marché italien', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
+       deliverables: ['Analyse des textes, publics et termes', 'Traduction IT ↔ EN/FR/ES ou localisation des contenus selon le public visé', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
       {id: 'p4', title: 'Révision de contenus existants', badge: 'Clarté et cohérence', description: 'Relecture et amélioration de documents professionnels et multilingues existants.',
        deliverables: ['Évaluation du texte et des objectifs', 'Amélioration de la structure, du ton et de la lisibilité', 'Document final avec modifications identifiables'], turnaround: 'Selon périmètre'},
     ],
@@ -360,7 +360,7 @@ export const frLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: 'Plus de 20 ans d’expérience', detail: 'Service client, back-office, organisation et gestion opérationnelle' },
-      { title: 'Formation universitaire d’excellence', detail: 'Licence en Médiation Linguistique (110/110 e lode) & Master en Traduction Spécialisée' },
+      { title: 'Formation universitaire spécialisée', detail: 'Licence en Médiation Linguistique (110/110 e lode) & Master en Traduction Spécialisée' },
       { title: 'Quatre langues de travail', detail: 'Italien langue maternelle, anglais et français avancés, espagnol intermédiaire supérieur' },
       { title: 'Organisation numérique', detail: 'Classement cloud, outils collaboratifs et procédures de travail' },
     ],
@@ -532,7 +532,7 @@ export const frLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Traductions professionnelles dans les deux sens entre l’italien et l’anglais, le français et l’espagnol, localisation pour le marché italien et soutien écrit aux clients italiens existants pour les professionnels travaillant avec l’Italie.',
+      'Assistance virtuelle, secrétariat à distance, back-office, relation client écrite, révision de contenus et traduction professionnelle IT ↔ EN/FR/ES, avec localisation pour le marché italien lorsque nécessaire.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · en développement',
     companyTitle: 'À Propos & Ressources',
