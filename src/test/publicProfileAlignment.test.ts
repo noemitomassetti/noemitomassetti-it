@@ -50,7 +50,7 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
     expect(trustCopy).toMatch(/dall’italiano verso l’inglese.*dal francese e dallo spagnolo verso l’italiano/i);
     for(const lang of LANGS){
       const category=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
-      expect(category?.description,lang).toMatch(/IT\s*↔\s*EN\/FR\/ES|both directions|dans les deux sens|ambas direcciones|tra l’italiano.*inglese.*francese.*spagnolo/i);
+      expect(category?.description,lang).toMatch(/IT\s*↔\s*EN\/FR\/ES|between Italian and English, French and Spanish|dans les deux sens|ambas direcciones|tra l’italiano.*inglese.*francese.*spagnolo|entre l’italien et l’anglais|entre el italiano y el inglés/i);
     }
   });
   it("respects the international service positioning and bidirectional translation offer",()=>{
@@ -58,9 +58,9 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
       expect(cat?.description.length,lang).toBeGreaterThan(160);
       if(lang==="it") expect(cat?.description).toContain("tra l’italiano e l’inglese");
-      if(lang==="en") expect(cat?.description).toContain("translate between Italian and English, French and Spanish");
-      if(lang==="fr") expect(cat?.description).toContain("dans les deux sens entre l’italien et l’anglais");
-      if(lang==="es") expect(cat?.description).toContain("en ambas direcciones entre el italiano y el inglés");
+      if(lang==="en") expect(cat?.description).toContain("translation between Italian and English, French and Spanish");
+      if(lang==="fr") expect(cat?.description).toContain("entre l’italien et l’anglais");
+      if(lang==="es") expect(cat?.description).toContain("entre el italiano y el inglés");
       if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
     }
     expect(enLocale.servicesSection.categories[0].description).toContain("Italian-language");
