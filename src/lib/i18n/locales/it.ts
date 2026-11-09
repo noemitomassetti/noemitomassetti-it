@@ -5,9 +5,9 @@ export const itLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Noemi Tomassetti | Assistente Virtuale Multilingue e Traduttrice',
-    homeDesc: 'Segreteria organizzativa, back office operativo, customer care per clienti esistenti, traduzioni professionali EN/FR/ES → IT e contenuti digitali per professionisti e piccole imprese.',
+    homeDesc: 'Segreteria organizzativa, back office operativo, customer care per clienti esistenti, traduzioni professionali IT ↔ EN/FR/ES e contenuti digitali per professionisti e piccole imprese.',
     servicesTitle: 'Servizi Professionali | Noemi Tomassetti',
-    servicesDesc: 'Segreteria, back office, assistenza scritta ai clienti già acquisiti, traduzioni professionali EN/FR/ES → IT e localizzazione per il mercato italiano.',
+    servicesDesc: 'Segreteria, back office, assistenza scritta ai clienti già acquisiti, traduzioni professionali IT ↔ EN/FR/ES e localizzazione per il mercato italiano.',
     noetomTitle: 'NoeTom | Progetto operativo interno',
     noetomDesc: 'NoeTom è il mio sistema operativo interno in sviluppo, pensato per organizzare incarichi, scadenze e attività.',
     aboutTitle: 'Chi Sono | Noemi Tomassetti',
@@ -65,7 +65,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Precisione linguistica',
-        desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Le mie traduzioni professionali sono dall’inglese, dal francese e dallo spagnolo verso l’italiano. Curo inoltre le comunicazioni multilingue concordate con i clienti già acquisiti.',
+        desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Curo inoltre le comunicazioni multilingue concordate con i clienti già acquisiti.',
       },
       {
         title: 'Organizzazione e strumenti digitali',
@@ -101,17 +101,17 @@ export const itLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Traduzioni EN/FR/ES → IT e localizzazione per l’Italia',
-        subtitle: 'Traduzioni professionali verso l’italiano e localizzazione per il pubblico italiano.',
+        title: 'Traduzioni IT ↔ EN/FR/ES e localizzazione',
+        subtitle: 'Traduzioni professionali dall’italiano e verso l’italiano; localizzazione dei contenuti.',
         description:
-          "Traduco professionalmente dall’inglese, dal francese e dallo spagnolo verso l’italiano, valutando ambito, complessità e pubblico destinatario. Offro inoltre localizzazione per il mercato italiano, revisione di contenuti italiani e supporto operativo per la corrispondenza multilingue con clienti già acquisiti.",
+          "Traduco professionalmente tra l’italiano e l’inglese, il francese e lo spagnolo, valutando ambito, complessità e pubblico destinatario. Offro inoltre localizzazione per il mercato italiano, revisione di contenuti italiani e supporto operativo per la corrispondenza multilingue con clienti già acquisiti.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti e landing page per il pubblico italiano',
           'Corrispondenza professionale multilingue',
-          'Traduzione in italiano di proposte e presentazioni EN/FR/ES',
+          'Traduzione di proposte e presentazioni IT ↔ EN/FR/ES',
           'Materiali formativi e contenuti per corsi',
-          'Traduzione in italiano di newsletter e comunicazioni EN/FR/ES',
+          'Traduzione di newsletter e comunicazioni IT ↔ EN/FR/ES',
           'Revisione e controllo qualità linguistica',
         ],
       },
@@ -197,9 +197,9 @@ export const itLocale: TranslationDictionary = {
       {id: 'p2', title: 'Customer care scritto', badge: 'Comunicazioni professionali',
        description: "Supporto alle richieste dei clienti già acquisiti, aggiornamenti su ordini e follow-up di assistenza, con tono e procedure concordati.",
        deliverables: ['Modelli di risposta e FAQ', 'Gestione concordata delle richieste scritte', 'Registro dei follow-up e delle attività'], turnaround: 'Da concordare'},
-      {id: 'p3', title: 'Traduzioni verso l’italiano e supporto multilingue', badge: 'IT · EN · FR · ES',
-       description: 'Le traduzioni professionali sono dall’inglese, dal francese e dallo spagnolo verso l’italiano. Offro inoltre localizzazione per il mercato italiano e supporto operativo per la corrispondenza multilingue con clienti già acquisiti.',
-       deliverables: ['Analisi di testi, pubblico e terminologia', 'Traduzione verso l’italiano o localizzazione dei contenuti concordati', 'Supporto scritto multilingue ai clienti esistenti, secondo procedure concordate', 'Revisione finale e note sulle scelte linguistiche'], turnaround: 'In base al volume'},
+      {id: 'p3', title: 'Traduzioni IT ↔ EN/FR/ES e supporto multilingue', badge: 'IT · EN · FR · ES',
+       description: 'Le traduzioni professionali sono dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Offro inoltre localizzazione per il mercato italiano e supporto operativo per la corrispondenza multilingue con clienti già acquisiti.',
+       deliverables: ['Analisi di testi, pubblico e terminologia', 'Traduzione IT ↔ EN/FR/ES o localizzazione dei contenuti concordati', 'Supporto scritto multilingue ai clienti esistenti, secondo procedure concordate', 'Revisione finale e note sulle scelte linguistiche'], turnaround: 'In base al volume'},
       {id: 'p4', title: 'Revisione di contenuti esistenti', badge: 'Chiarezza e coerenza',
        description: 'Intervento su testi professionali e materiali già disponibili, anche di origine multilingue.',
        deliverables: ['Verifica del testo e degli obiettivi', 'Revisione di struttura, tono e leggibilità', 'Documento finale con modifiche verificabili'], turnaround: 'In base al materiale'},
@@ -457,7 +457,7 @@ export const itLocale: TranslationDictionary = {
       serviceNeeded: 'Area di supporto di tuo interesse *',
       serviceOptions: [
         'Segreteria Organizzativa & Back Office Operativo',
-        'Traduzioni professionali EN/FR/ES → IT e localizzazione per il mercato italiano',
+        'Traduzioni professionali IT ↔ EN/FR/ES e localizzazione dei contenuti',
         'Scrittura & Revisione Testi',
         'Ricerche Informative a Supporto',
         'Supporto digitale e organizzazione degli strumenti',
@@ -536,7 +536,7 @@ export const itLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazioni professionali e traduzioni professionali EN/FR/ES → IT per freelance, consulenti e piccole imprese.',
+      'Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazioni professionali e traduzioni professionali IT ↔ EN/FR/ES per freelance, consulenti e piccole imprese.',
     servicesTitle: 'Servizi',
     noetomTitle: 'NoeTom · in sviluppo',
     companyTitle: 'Chi Sono & Risorse',
