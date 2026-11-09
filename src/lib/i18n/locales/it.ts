@@ -140,7 +140,7 @@ export const itLocale: TranslationDictionary = {
         iconName: 'Search',
         items: [
           'Analisi dei concorrenti e benchmark delle tariffe',
-          'Ricerca fornitori, software e soluzioni digitali',
+          'Confronto informativo di fornitori, software e soluzioni digitali',
           'Raccolta informazioni e verifica fonti',
           'Ricerche informative a supporto di progetti e attività esistenti',
           'Report esecutivi e sintesi strutturate',
@@ -156,7 +156,7 @@ export const itLocale: TranslationDictionary = {
         iconName: 'Cpu',
         items: [
           'Organizzazione di cartelle e documenti in Google Workspace e cloud drive',
-          'Configurazione tool online (calendari, form, aree clienti)',
+          'Impostazioni di base di calendari, moduli e strumenti già concordati',
           'Supporto pratico con strumenti digitali di lavoro',
           'Definizione procedure operative interne (SOP)',
           'Organizzazione dei materiali per clienti',
