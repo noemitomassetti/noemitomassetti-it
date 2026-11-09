@@ -7,7 +7,7 @@ import { DEEP_PORTFOLIO_ITEMS, getDeepPortfolioPath } from "@/lib/portfolioDeepC
 import type { DeepPortfolioItem } from "@/lib/portfolioDeepCatalog";
 import { DIRECTION_LABELS, type PublicTranslationDirection } from "@/lib/portfolioDeepTypes";
 
-const FEATURED_IDS=["en-it-digital-onboarding","fr-it-handmade-product","es-it-existing-customer","inbox-calendar-triage","customer-care-escalations","website-help-page-microcopy","course-information-source-audit","existing-customer-multilingual-email-pack"];
+const FEATURED_IDS=["en-it-digital-onboarding","fr-it-handmade-product","es-it-existing-customer","it-en-existing-order-update","it-fr-training-workshop","it-es-product-information","inbox-calendar-triage","customer-care-escalations","website-help-page-microcopy","course-information-source-audit","existing-customer-multilingual-email-pack"];
 type Filter = "all" | "translation" | "operations" | "backoffice" | "research" | "writing" | "web" | PublicTranslationDirection;
 const text = {
   it: {eyebrow:"Approfondimenti e lavori completi",title:"Scopri come lavoro, attraverso gli elaborati",description:"Oltre alle schede sintetiche, consulta dossier originali con brief realistici, documenti completi, traduzioni a fronte, scelte terminologiche, procedure e controlli. Ogni dossier presenta un problema concreto, l’approccio proposto e un elaborato consultabile.",all:"Tutti i dossier",translation:"Traduzioni a fronte",operations:"Assistenza e organizzazione",backoffice:"Segreteria, customer care e back office",research:"Ricerche informative",writing:"Revisione e cataloghi",web:"Contenuti web",read:"Esplora il dossier completo",source:"Traduzione",context:"Caso operativo",notice:"Materiali dimostrativi originali: non sono estratti di lavori commissionati né contengono dati di clienti reali.",caption:"Documenti, testi e metodi consultabili",results:"Dossier visualizzati",search:"Cerca nei dossier",searchHint:"Cerca per servizio, tema o settore",noResults:"Nessun dossier corrisponde alla ricerca. Prova un altro termine o cambia filtro."},
@@ -21,7 +21,7 @@ const previewLabels:Record<Language,string> = {
   fr: "Aperçu du livrable",
   es: "Vista previa del trabajo",
 };
-const DIRECTIONS: PublicTranslationDirection[] = ["EN-IT","FR-IT","ES-IT"];
+const DIRECTIONS: PublicTranslationDirection[] = ["EN-IT","FR-IT","ES-IT","IT-EN","IT-FR","IT-ES"];
 const normalise = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase().trim();
 
 export function PortfolioDeepShowcase({lang}:{lang:Language}) {
@@ -67,7 +67,7 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
         {(["backoffice","research","writing","web"] as Filter[]).map(key=><button type="button" key={key} onClick={()=>chooseFilter(key)} aria-pressed={filter===key} aria-controls="dossier-results"
           className={"inline-flex min-h-11 items-center px-3 py-2 rounded-full text-sm font-medium border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 " + (filter===key?"bg-primary text-primary-foreground border-primary":"bg-card border-border hover:border-primary")}>{t[key as "backoffice"|"research"|"writing"|"web"]}</button>)}
       </div>
-      <div role="group" className="flex flex-wrap gap-2 mb-8" aria-label="EN IT FR ES">
+      <div role="group" className="flex flex-wrap gap-2 mb-8" aria-label={lang==="it"?"Direzioni di traduzione":lang==="fr"?"Sens de traduction":lang==="es"?"Direcciones de traducción":"Translation directions"}>
         {DIRECTIONS.map(direction=><button type="button" key={direction} onClick={()=>chooseFilter(direction)} aria-pressed={filter===direction} aria-controls="dossier-results"
           className={"inline-flex min-h-11 items-center px-3 py-2 rounded-full font-medium text-sm border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 " + (filter===direction?"bg-primary text-primary-foreground border-primary":"bg-card border-border text-foreground/80 hover:border-primary")}>{DIRECTION_LABELS[direction]}</button>)}
       </div>
