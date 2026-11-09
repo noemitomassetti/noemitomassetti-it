@@ -65,7 +65,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Precisione linguistica',
-        desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Traduco nei due sensi tra l’italiano e queste lingue, valutando tipologia e complessità dei testi, e curo le comunicazioni multilingue negli ambiti concordati.',
+        desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Le mie traduzioni professionali sono dall’inglese, dal francese e dallo spagnolo verso l’italiano. Curo inoltre le comunicazioni multilingue concordate con i clienti già acquisiti.',
       },
       {
         title: 'Organizzazione e strumenti digitali',
