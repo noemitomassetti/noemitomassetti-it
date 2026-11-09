@@ -185,7 +185,7 @@ export const esLocale: TranslationDictionary = {
         desc: 'Desde los contenidos web hasta los mensajes para clientes existentes, cuido la claridad, la coherencia terminológica y la adaptación al destinatario.',
       },
     ],
-    badgeNote: 'Excelencia académica: Licenciatura en Mediación Lingüística (110/110 e lode (distinción italiana)) y Máster en Traducción Especializada',
+    badgeNote: 'Formación universitaria: título italiano en Mediación Lingüística (110/110 e lode) y máster universitario en Traducción Especializada',
   },
   productized: {
     tag: 'FORMAS DE COLABORAR', title: 'Servicios concretos y entregables claros',
