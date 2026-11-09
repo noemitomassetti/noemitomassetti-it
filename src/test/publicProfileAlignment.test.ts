@@ -47,7 +47,7 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
   });
   it("matches LinkedIn's bidirectional Italian/EN/FR/ES translation offer",()=>{
     const trustCopy=itLocale.trust.pillars.map(p=>p.desc).join(" ");
-    expect(trustCopy).toMatch(/dall’italiano verso l’inglese.*dal francese e dallo spagnolo verso l’italiano/i);
+    expect(trustCopy).toMatch(/dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano/i);
     for(const lang of LANGS){
       const category=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
       expect(category?.description,lang).toMatch(/IT\s*↔\s*EN\/FR\/ES|between Italian and English, French and Spanish|dans les deux sens|ambas direcciones|tra l’italiano.*inglese.*francese.*spagnolo|entre l’italien et l’anglais|entre el italiano y el inglés/i);
@@ -58,7 +58,7 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
       expect(cat?.description.length,lang).toBeGreaterThan(160);
       if(lang==="it") expect(cat?.description).toContain("tra l’italiano e l’inglese");
-      if(lang==="en") expect(cat?.description).toContain("translation between Italian and English, French and Spanish");
+      if(lang==="en") expect(cat?.description).toContain("translate between Italian and English, French and Spanish");
       if(lang==="fr") expect(cat?.description).toContain("entre l’italien et l’anglais");
       if(lang==="es") expect(cat?.description).toContain("entre el italiano y el inglés");
       if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
