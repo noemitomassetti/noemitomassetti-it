@@ -4,9 +4,9 @@ export const esLocale: TranslationDictionary = {
   lang: 'es',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Traducción IT ↔ EN/FR/ES y apoyo operativo | Noemi Tomassetti',
-    homeDesc: 'Traducción profesional entre el italiano y el inglés, francés y español, localización para el mercado italiano y apoyo operativo a profesionales que trabajan con Italia.',
-    servicesTitle: 'Traducción IT ↔ EN/FR/ES y apoyo operativo | Noemi Tomassetti',
+    homeTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
+    homeDesc: 'Asistencia virtual multilingüe, secretaría organizativa, back office, atención escrita a clientes existentes, contenidos digitales y traducción IT ↔ EN/FR/ES.',
+    servicesTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
     servicesDesc: 'Traducción entre el italiano y el inglés, francés y español, atención escrita a clientes italianos existentes y apoyo operativo para actividades relacionadas con Italia.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
@@ -33,13 +33,13 @@ export const esLocale: TranslationDictionary = {
     language: 'Idioma',
   },
   hero: {
-    badge: 'SERVICIOS LINGÜÍSTICOS PARA ITALIA',
-    titleLine1: 'Traducción, localización y apoyo operativo',
-    titleHighlight: 'para trabajar con Italia',
-    subtitle: "Traducción entre el italiano y el inglés, francés y español, comunicación escrita con clientes italianos existentes y apoyo operativo para las actividades relacionadas con Italia.",
-    headline: 'Comunícate de forma natural con tu público italiano.',
+    badge: 'ASISTENTE VIRTUAL MULTILINGÜE',
+    titleLine1: 'Asistencia virtual, back office y traducción',
+    titleHighlight: 'para organizar mejor tu actividad',
+    subtitle: "Secretaría organizativa, back office, atención escrita a clientes existentes, contenidos digitales y traducción en ambas direcciones entre el italiano y el inglés, francés y español.",
+    headline: 'Comunicación clara y una actividad mejor organizada.',
     desc1: 'Pongo a tu disposición más de veinte años de experiencia laboral para ayudarte a gestionar mejor tu trabajo diario. El italiano es mi lengua materna y tengo formación en traducción especializada.',
-    desc2: 'Desde páginas web y landing pages hasta comunicaciones con clientes italianos existentes: traducción, localización y apoyo operativo adaptados a tu actividad en Italia.',
+    desc2: 'Desde la gestión del correo y la agenda hasta la atención escrita a clientes existentes, la traducción y la revisión de contenidos web: apoyo adaptado a tu actividad.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
@@ -79,20 +79,20 @@ export const esLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'QUÉ HAGO',
-    title: 'Traducción IT ↔ EN/FR/ES y apoyo operativo',
-    subtitle: 'Traducción, localización y apoyo práctico para tus actividades relacionadas con Italia.',
+    title: 'Asistencia virtual y traducción profesional',
+    subtitle: 'Secretaría, back office, atención a clientes existentes, contenidos digitales y traducción IT ↔ EN/FR/ES.',
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Atención escrita a clientes italianos y back office',
-        subtitle: 'Comunicación clara con tus clientes italianos existentes.',
+        title: 'Secretaría organizativa y back office operativo',
+        subtitle: 'Organización profesional, pedidos y atención escrita a clientes existentes.',
         description:
-          "Apoyo escrito en italiano para clientes existentes: correos, seguimiento de pedidos, comunicaciones profesionales, organización de documentos y tareas operativas acordadas. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
+          "Secretaría organizativa y back office operativo: correos, agenda, entrada de datos, seguimiento de pedidos, listas de precios aprobadas, presupuestos según tus instrucciones y atención escrita a clientes existentes, también en italiano. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
         iconName: 'Mail',
         items: [
-          'Clasificación y organización de correos relacionados con Italia',
-          'Agenda y citas vinculadas a clientes italianos existentes',
+          'Clasificación y organización del correo profesional',
+          'Gestión de agenda y coordinación de citas',
           'Atención a clientes existentes y comunicación profesional',
           'Organización documental y estructura en la nube',
           'Seguimiento de solicitudes de clientes existentes',
@@ -108,7 +108,7 @@ export const esLocale: TranslationDictionary = {
         iconName: 'Globe',
         items: [
           'Localización al italiano de sitios web y páginas de venta',
-          'Correspondencia profesional en italiano',
+          'Correspondencia profesional en IT, EN, FR y ES',
           'Traducción de propuestas y presentaciones entre IT y EN/FR/ES',
           'Traducción de materiales formativos entre IT y EN/FR/ES',
           'Traducción de boletines y comunicaciones entre IT y EN/FR/ES',
@@ -360,7 +360,7 @@ export const esLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
-      { title: 'Formación académica destacada', detail: 'Grado en Mediación Lingüística (110/110 e lode (distinción italiana)) & Máster Universitario en Traducción Especializada' },
+      { title: 'Formación académica destacada', detail: 'Grado italiano en Mediación Lingüística (110/110 e lode, máxima distinción italiana) y máster universitario italiano de primer nivel en Traducción Especializada' },
       { title: 'Cuatro idiomas de trabajo', detail: 'Italiano nativo, inglés y francés avanzados, español intermedio-alto' },
       { title: 'Organización digital', detail: 'Archivos en la nube, herramientas colaborativas y procedimientos operativos' },
     ],
@@ -410,7 +410,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Cumplimiento y transparencia',
-        desc: 'Un plazo acordado es un plazo cumplido. Puedes delegar con la tranquilidad de que tus gestiones avanzan con seguridad.',
+        desc: 'Acordamos plazos realistas, te aviso de cualquier imprevisto y reviso los detalles importantes antes de entregar el trabajo.',
       },
     ],
   },
