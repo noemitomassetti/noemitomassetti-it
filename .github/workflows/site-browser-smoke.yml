@@ -272,13 +272,14 @@ jobs:
               }
               console.log('PASS four raw HTML social previews, correct route meta without JavaScript');
 
-              // Public detailed dossier audit: 24 fictional samples (IT ↔ EN/FR/ES translation plus operational cases) in 4 languages.
+              // Public detailed dossier audit: 26 fictional samples (IT ↔ EN/FR/ES translation plus operational cases) in 4 languages.
               // Render at phone width to catch broken paths, SEO alternates, missing
               // deliverables and horizontal overflow in parallel translation panels.
               const dossierSlugs=[
                 'en-it-digital-onboarding','fr-it-handmade-product','es-it-existing-customer',
                 'en-it-professional-faq','fr-it-workshop-details','es-it-existing-customer-onboarding',
                 'it-en-order-status-message','it-fr-training-workshop','it-es-desk-accessory-catalogue',
+                'it-en-audio-handover-instructions','fr-it-contractual-information',
                 'inbox-calendar-triage','customer-care-escalations','order-entry-price-list',
                 'shared-drive-version-control','online-course-secretariat','research-existing-italian-customers',
                 'web-copy-before-after','catalogue-price-list-proofreading','digital-tools-request-workflow',
@@ -309,7 +310,7 @@ jobs:
                 await page.screenshot({path:'/tmp/noemi-smoke/dossiers_'+locale+'_390.png',fullPage:false});
                 console.log('PASS '+dossierSlugs.length+' deep dossiers in '+locale+' at 390px: content, SEO, accessible language and overflow');
               }
-              // Functional direction filters: two examples per source-to-Italian direction and one per Italian-to-target direction.
+              // Functional direction filters: source-to-Italian and Italian-to-target examples with meaningful coverage.
               await page.setViewportSize({width:390,height:844});
               await page.goto('http://127.0.0.1:4173/it/esempi-di-lavoro',{waitUntil:'networkidle'});
               const deepDirectory=page.locator('#portfolio-complete-dossiers');
@@ -320,13 +321,13 @@ jobs:
               if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3))
                 throw Error('Deep portfolio card previews create horizontal overflow on mobile');
               await page.screenshot({path:'/tmp/noemi-smoke/deep_dossiers_it_390.png',fullPage:false});
-              await deepDirectory.getByRole('button',{name:'Esplora tutti i dossier (24)'}).click();
-              await page.waitForFunction(()=>document.querySelectorAll('#portfolio-complete-dossiers article').length===24,null,{timeout:10000});
-              if(await deepDirectory.locator('article').count()!==24) throw Error('Deep dossier directory not complete');
+              await deepDirectory.getByRole('button',{name:'Esplora tutti i dossier (26)'}).click();
+              await page.waitForFunction(()=>document.querySelectorAll('#portfolio-complete-dossiers article').length===26,null,{timeout:10000});
+              if(await deepDirectory.locator('article').count()!==26) throw Error('Deep dossier directory not complete');
               await deepDirectory.getByRole('button',{name:'EN → IT'}).click();
               if(await deepDirectory.locator('article').count()!==2) throw Error('EN to IT dossier filter should show two samples');
               await deepDirectory.getByRole('button',{name:'IT → EN'}).click();
-              if(await deepDirectory.locator('article').count()!==1) throw Error('IT to EN dossier filter should show one full sample');
+              if(await deepDirectory.locator('article').count()!==2) throw Error('IT to EN dossier filter should show two full samples');
               await deepDirectory.getByRole('button',{name:'IT → FR'}).click();
               if(await deepDirectory.locator('article').count()!==1) throw Error('IT to FR dossier filter should show one full sample');
               await deepDirectory.getByRole('button',{name:'IT → ES'}).click();
@@ -348,7 +349,7 @@ jobs:
               await searchDossiers.clear();
               if(await deepDirectory.locator('article').count()!==8)
                 throw Error('Clearing search did not restore featured portfolio');
-              console.log('PASS 24 public dossier directory, bidirectional translation filters and keyword search');
+              console.log('PASS 26 public dossier directory, bidirectional translation filters and keyword search');
 
               // The same tool article is independently localised; verify the dated plan notice
               // and the correct provider links in all four languages.
