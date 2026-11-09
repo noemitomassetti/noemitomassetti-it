@@ -45,19 +45,22 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       expect(research?.description.toLowerCase(),lang).toMatch(/client|prospect|contatti|clientes|commercial/i);
     }
   });
-  it("does not advertise Italian-to-foreign-language translation in any Italian trust statement",()=>{
+  it("matches LinkedIn's bidirectional Italian/EN/FR/ES translation offer",()=>{
     const trustCopy=itLocale.trust.pillars.map(p=>p.desc).join(" ");
-    expect(trustCopy).not.toMatch(/nei due sensi|in entrambe le direzioni|dall'italiano verso/i);
-    expect(trustCopy).toMatch(/dall'inglese.*verso l'italiano/i);
+    expect(trustCopy).toMatch(/dall’italiano verso l’inglese.*dal francese e dallo spagnolo verso l’italiano/i);
+    for(const lang of LANGS){
+      const category=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
+      expect(category?.description,lang).toMatch(/IT\s*↔\s*EN\/FR\/ES|both directions|dans les deux sens|ambas direcciones|tra l’italiano.*inglese.*francese.*spagnolo/i);
+    }
   });
-  it("respects the Italy-first international service positioning and EN/FR/ES-to-Italian translation direction",()=>{
+  it("respects the international service positioning and bidirectional translation offer",()=>{
     for(const lang of LANGS){
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
       expect(cat?.description.length,lang).toBeGreaterThan(160);
-      if(lang==="it") expect(cat?.description).toContain("verso l’italiano");
-      if(lang==="en") expect(cat?.description).toContain("translate English, French and Spanish into Italian");
-      if(lang==="fr") expect(cat?.description).toContain("de l’anglais, du français et de l’espagnol vers l’italien");
-      if(lang==="es") expect(cat?.description).toContain("del inglés, francés y español al italiano");
+      if(lang==="it") expect(cat?.description).toContain("tra l’italiano e l’inglese");
+      if(lang==="en") expect(cat?.description).toContain("translate between Italian and English, French and Spanish");
+      if(lang==="fr") expect(cat?.description).toContain("dans les deux sens entre l’italien et l’anglais");
+      if(lang==="es") expect(cat?.description).toContain("en ambas direcciones entre el italiano y el inglés");
       if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
     }
     expect(enLocale.servicesSection.categories[0].description).toContain("Italian-language");
