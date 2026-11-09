@@ -45,7 +45,7 @@ export const PRICING_DATA: PricingData = {
   categories: [
     {
       id: "va",
-      title: {it: "Segreteria e back office", en: "Italian-market operational support", fr: "Soutien opérationnel pour l’Italie", es: "Apoyo operativo para Italia"},
+      title: {it: "Segreteria e back office", en: "Virtual assistance & back office", fr: "Secrétariat et back-office", es: "Secretaría y back office"},
       rate: {it: "25 € / ora", en: "€25 / hour", fr: "25 € / heure", es: "25 € / hora"},
       rateDetail: {it: "Incarichi singoli e pacchetti di ore", en: "Ad hoc tasks and hour packages", fr: "Missions ponctuelles et forfaits horaires", es: "Encargos puntuales y paquetes de horas"},
       items: {
@@ -60,7 +60,7 @@ export const PRICING_DATA: PricingData = {
       id: "support",
       title: {it: "Customer care e comunicazioni", en: "Customer care & communications", fr: "Relation client et communications", es: "Atención al cliente y comunicaciones"},
       rate: {it: "25 € / ora", en: "€25 / hour", fr: "25 € / heure", es: "25 € / hora"},
-      rateDetail: {it: "Supporto scritto, in italiano e multilingue", en: "Written support for existing Italian customers", fr: "Échanges écrits avec les clients italiens existants", es: "Atención escrita a clientes italianos existentes"},
+      rateDetail: {it: "Supporto scritto, in italiano e multilingue", en: "Written support for existing customers, in four languages", fr: "Échanges écrits avec les clients existants en quatre langues", es: "Atención escrita a clientes existentes en cuatro idiomas"},
       items: {
         it: ["Gestione e organizzazione della posta", "Risposte ai clienti in bozza o concordate", "Follow-up e informazioni operative", "FAQ, modelli email e procedure", "Perimetro e ore concordati nel preventivo"],
         en: ["Email inbox organisation", "Drafted or approved customer responses", "Follow-ups and routine information", "FAQs, email templates and processes", "Scope and hours confirmed in the quote"],
