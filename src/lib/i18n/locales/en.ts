@@ -15,7 +15,7 @@ export const enLocale: TranslationDictionary = {
     resourcesTitle: 'Resources & Insights | Noemi Tomassetti',
     resourcesDesc: 'Actionable perspectives on delegation, multilingual communication, operational clarity, and AI-assisted workflows for solopreneurs.',
     contactTitle: 'Contact & Quotes | Noemi Tomassetti',
-    contactDesc: 'Request a quote for virtual assistance, operational back office, existing-customer support, digital content, translation and localisation.',
+    contactDesc: 'Request a quote for virtual assistance, operational back office, customer care, digital content, translation and localisation.',
     privacyTitle: 'Privacy Policy | Noemi Tomassetti',
     privacyDesc: 'Transparent privacy and personal data protection policy in accordance with EU Regulation 2016/679 (GDPR).',
     cookieTitle: 'Cookie Policy | Noemi Tomassetti',
@@ -43,7 +43,7 @@ export const enLocale: TranslationDictionary = {
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
-      'I translate both from Italian into English, French and Spanish and from these languages into Italian. I also refine Italian-language content and support agreed written communication with existing customers in Italian, English, French and Spanish.',
+      'I translate both from Italian into English, French and Spanish and from these languages into Italian. I also refine Italian-language content and support agreed written communication with customers in Italian, English, French and Spanish.',
     ctaServices: 'Explore Services',
     ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
@@ -65,7 +65,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Linguistic Accuracy',
-        desc: 'A native Italian speaker with advanced English and French and upper-intermediate Spanish, I translate between Italian and each of these languages in both directions. I also assist with agreed written communication for existing customers.',
+        desc: 'A native Italian speaker with advanced English and French and upper-intermediate Spanish, I translate between Italian and each of these languages in both directions. I also assist with agreed written communication for customers.',
       },
       {
         title: 'Practical Digital Tools',
@@ -89,14 +89,14 @@ export const enLocale: TranslationDictionary = {
         title: 'Virtual Secretarial Support & Operational Back Office',
         subtitle: 'Reliable organisation, order handling and written customer support.',
         description:
-          "Organisational secretarial work and operational back-office support: email, scheduling, data entry, orders, approved price lists, operational quotations and written care for existing customers, including Italian-language correspondence. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
+          "Organisational secretarial work and operational back-office support: email, scheduling, data entry, orders, approved price lists, operational quotations and written care for customers, including Italian-language correspondence. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
           'Calendar and appointment coordination',
           'Existing-customer care & professional communication',
           'Document organisation and cloud filing',
-          'Support follow-ups for existing customers',
+          'Support follow-ups for customers',
           'Data entry & back-office coordination',
         ],
       },
@@ -105,7 +105,7 @@ export const enLocale: TranslationDictionary = {
         title: 'IT ↔ EN/FR/ES Translation and Italian Localisation',
         subtitle: 'Professional translation between Italian and English, French and Spanish; Italian-market localisation is a core focus.',
         description:
-          "I translate between Italian and English, French and Spanish, assessing each assignment by subject, complexity and target audience. My services also include localisation of websites, catalogues and professional communications for Italian readers, as well as agreed written support for existing customers in Italian, English, French and Spanish.",
+          "I translate between Italian and English, French and Spanish, assessing each assignment by subject, complexity and target audience. My services also include localisation of websites, catalogues and professional communications for Italian readers, as well as agreed written support for customers in Italian, English, French and Spanish.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
@@ -126,7 +126,7 @@ export const enLocale: TranslationDictionary = {
         items: [
           'Website and landing-page copy review',
           'Tone-of-voice and style adaptation',
-          'Newsletters and emails for existing customers',
+          'Newsletters and emails for customers',
           'Service guides and FAQs',
           'Editing articles and professional content',
           'Review of AI-assisted and machine-generated drafts',
@@ -183,7 +183,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Unified Multilingual Operations',
-        desc: 'From multilingual correspondence and content editing to written support for existing customers, I help keep communication clear, consistent and appropriate to its audience.',
+        desc: 'From multilingual correspondence and content editing to written support for customers, I help keep communication clear, consistent and appropriate to its audience.',
       },
     ],
     badgeNote: 'Language Mediation degree (110/110 e lode) and Italian university Master’s qualification in Specialised Translation',
@@ -194,9 +194,9 @@ export const enLocale: TranslationDictionary = {
     packages: [
       {id: 'p1', title: 'Organised back office', badge: 'Operational secretarial support', description: 'Practical help to organise recurring tasks, email correspondence and documents.',
        deliverables: ['Review of activities to delegate', 'Agreed email, document and workflow organisation', 'Summary of work completed and next priorities'], turnaround: 'By agreement'},
-      {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: "Written enquiries from existing customers, order-status updates and support follow-ups, within agreed procedures and tone of voice.",
+      {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: "Written enquiries from customers, order-status updates and support follow-ups, within agreed procedures and tone of voice.",
        deliverables: ['Response templates and FAQs', 'Agreed handling of written enquiries', 'Follow-up and activity log'], turnaround: 'By agreement'},
-      {id: 'p3', title: 'Translation between Italian and EN/FR/ES and Italian-market localisation', badge: 'IT · EN · FR · ES', description: 'Professional translation between Italian and English, French and Spanish, Italian-market localisation and agreed multilingual correspondence with existing customers.',
+      {id: 'p3', title: 'Translation between Italian and EN/FR/ES and Italian-market localisation', badge: 'IT · EN · FR · ES', description: 'Professional translation between Italian and English, French and Spanish, Italian-market localisation and agreed multilingual correspondence with customers.',
        deliverables: ['Source, audience and terminology review', 'Translation in either direction between Italian and EN/FR/ES, or agreed localisation', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
       {id: 'p4', title: 'Existing-content review', badge: 'Clarity and consistency', description: 'Careful editing of your existing professional and multilingual materials.',
        deliverables: ['Text and objectives assessment', 'Structure, tone and readability revision', 'Final editable document with traceable changes'], turnaround: 'Based on scope'},
@@ -490,7 +490,7 @@ export const enLocale: TranslationDictionary = {
   resourcesPage: {
     tag: 'INSIGHTS & GUIDES',
     title: 'Practical Guides for Independent Professionals',
-    subtitle: 'Practical guidance on managing existing customers, organising operational tasks and communicating effectively with Italian audiences.',
+    subtitle: 'Practical guidance on managing customers, organising operational tasks and communicating effectively with Italian audiences.',
     categories: ['All', 'Operations & Delegation', 'Multilingual & Localisation', 'Digital Presence & Web', 'Digital Tools & Organisation'],
     articles: [
       {
@@ -540,7 +540,7 @@ export const enLocale: TranslationDictionary = {
     legalTitle: 'Legal & Privacy',
     rights: 'All rights reserved.',
     disclaimer:
-      "Organisational secretarial work, operational back office, existing-customer support, multilingual correspondence, translation and digital content. I do not provide telemarketing, cold outreach, lead generation, prospecting, bookkeeping, invoicing, administrative or tax services.",
+      "Organisational secretarial work, operational back office, customer care, multilingual correspondence, translation and digital content. I do not provide telemarketing, cold outreach, lead generation, prospecting, bookkeeping, invoicing, administrative or tax services.",
     cookiePrefs: 'Cookie Preferences',
   },
 };
