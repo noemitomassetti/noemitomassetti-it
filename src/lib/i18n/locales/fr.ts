@@ -4,9 +4,9 @@ export const frLocale: TranslationDictionary = {
   lang: 'fr',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Traduction IT ↔ EN/FR/ES et soutien opérationnel | Noemi Tomassetti',
-    homeDesc: 'Traduction professionnelle entre l’italien et l’anglais, le français et l’espagnol, localisation pour le marché italien et soutien opérationnel aux professionnels travaillant avec l’Italie.',
-    servicesTitle: 'Traduction italienne et soutien opérationnel | Noemi Tomassetti',
+    homeTitle: 'Assistante virtuelle multilingue et traductrice | Noemi Tomassetti',
+    homeDesc: 'Assistance virtuelle multilingue, secrétariat organisationnel, back-office, relation client écrite, contenus numériques et traduction IT ↔ EN/FR/ES.',
+    servicesTitle: 'Assistance virtuelle et traduction professionnelle | Noemi Tomassetti',
     servicesDesc: 'Traduction entre l’italien et l’anglais, le français et l’espagnol, suivi écrit des clients italiens existants et soutien opérationnel pour les activités liées à l’Italie.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
     noetomDesc: 'NoeTom est le projet opérationnel interne de Noemi Tomassetti, actuellement en développement et en phase de test privé.',
@@ -33,13 +33,13 @@ export const frLocale: TranslationDictionary = {
     language: 'Langue',
   },
   hero: {
-    badge: 'SERVICES LINGUISTIQUES POUR L’ITALIE',
-    titleLine1: 'Traduction, localisation et soutien opérationnel',
-    titleHighlight: 'pour vos activités avec l’Italie',
-    subtitle: "Traduction entre l’italien et l’anglais, le français et l’espagnol, échanges écrits avec vos clients italiens existants et soutien opérationnel lié à vos activités avec l’Italie.",
-    headline: 'Communiquez naturellement avec votre public italien.',
+    badge: 'ASSISTANTE VIRTUELLE MULTILINGUE',
+    titleLine1: 'Assistance virtuelle, back-office et traduction',
+    titleHighlight: 'pour accompagner votre activité',
+    subtitle: "Secrétariat, back-office, accompagnement écrit des clients existants, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.",
+    headline: 'Des échanges plus clairs et un quotidien mieux organisé.',
     desc1: "Je mets plus de vingt ans d’expérience professionnelle à votre service pour vous aider à mieux organiser votre travail au quotidien. L’italien est ma langue maternelle et je suis formée à la traduction spécialisée.",
-    desc2: 'Sites web, pages de destination, contenus professionnels et échanges écrits avec vos clients italiens : un accompagnement adapté à vos activités avec l’Italie.',
+    desc2: 'Courriels, agenda, suivi des commandes, relation client existante, contenus web et traductions : des missions définies selon vos besoins.',
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Demande sans engagement',
     description:
@@ -79,20 +79,20 @@ export const frLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'MON EXPERTISE',
-    title: 'Traduction et accompagnement pour l’Italie',
-    subtitle: 'Traduction IT ↔ EN/FR/ES, adaptation de contenus et soutien opérationnel pour vos activités avec l’Italie.',
+    title: 'Assistance virtuelle, communication et traduction',
+    subtitle: 'Traduction IT ↔ EN/FR/ES, adaptation de contenus et soutien opérationnel pour accompagner votre activité.',
     viewAllCta: 'Consulter le détail des services',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Relation client italienne et back-office opérationnel',
-        subtitle: 'Des échanges écrits fiables avec vos clients italiens existants.',
+        title: 'Secrétariat organisationnel et back-office opérationnel',
+        subtitle: 'Une organisation fiable et un suivi écrit des clients existants.',
         description:
-          "Accompagnement écrit en italien auprès des clients existants : courriels, suivi de commandes, échanges professionnels, documents et tâches opérationnelles convenues. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
+          "Secrétariat organisationnel et back-office opérationnel : courriels, agenda, saisie de données, suivi des commandes, tarifs validés, devis selon vos consignes et accompagnement écrit des clients existants, y compris en italien. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
         iconName: 'Mail',
         items: [
-          'Tri et organisation de la messagerie liée aux activités en Italie',
-          'Gestion d’agenda et de rendez-vous avec les interlocuteurs italiens existants',
+          'Tri et organisation des courriels professionnels',
+          'Gestion d’agenda et coordination des rendez-vous',
           'Service aux clients existants et communication professionnelle',
           'Classement documentaire et archivage cloud',
           'Suivi des demandes des clients italiens existants',
@@ -108,7 +108,7 @@ export const frLocale: TranslationDictionary = {
         iconName: 'Globe',
         items: [
           'Localisation de sites web et pages de destination en italien',
-          'Correspondance professionnelle en italien',
+          'Correspondance professionnelle en IT, EN, FR et ES',
           'Traduction de propositions et présentations entre IT et EN/FR/ES',
           'Traduction de supports de formation entre IT et EN/FR/ES',
           'Traduction de lettres d’information et messages entre IT et EN/FR/ES',
@@ -395,7 +395,7 @@ export const frLocale: TranslationDictionary = {
       {
         period: '2026 – aujourd’hui',
         role: 'Assistante virtuelle et traductrice indépendante',
-        detail: 'Soutien aux activités liées à l’Italie, traduction de l’anglais, du français et de l’espagnol vers l’italien et relation client écrite.',
+        detail: 'Secrétariat, back-office opérationnel, relation client écrite et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.',
       },
     ],
     valuesTitle: 'Mes principes de collaboration',
@@ -410,7 +410,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         title: 'Fiabilité et engagement',
-        desc: 'Un engagement pris est un engagement tenu dans les délais. Vous pouvez déléguer en toute sérénité.',
+        desc: 'Je définis des délais réalistes, communique rapidement tout imprévu et vérifie les points essentiels avant livraison.',
       },
     ],
   },
