@@ -12,12 +12,12 @@ describe("Deep portfolio user experience", () => {
   it("shows an accessible featured selection and exposes all samples on request", () => {
     mount();
     const status = screen.getByRole("status");
-    expect(status).toHaveTextContent("8 / 24");
+    expect(status).toHaveTextContent("8 / 26");
     expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(8);
 
     fireEvent.click(screen.getByRole("button", { name: /Esplora tutti i dossier/ }));
-    expect(status).toHaveTextContent("24 / 24");
-    expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(24);
+    expect(status).toHaveTextContent("26 / 26");
+    expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(26);
   });
 
   it("resets the expanded selection when changing filters and gives feedback", () => {
@@ -25,10 +25,10 @@ describe("Deep portfolio user experience", () => {
     fireEvent.click(screen.getByRole("button", { name: /Esplora tutti i dossier/ }));
     fireEvent.click(screen.getByRole("button", { name: "Traduzioni a fronte" }));
     expect(screen.getByRole("button", { name: "Traduzioni a fronte" })).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getByRole("status")).toHaveTextContent("9 / 9");
+    expect(screen.getByRole("status")).toHaveTextContent("11 / 11");
 
     fireEvent.click(screen.getByRole("button", { name: "Tutti i dossier" }));
-    expect(screen.getByRole("status")).toHaveTextContent("8 / 24");
+    expect(screen.getByRole("status")).toHaveTextContent("8 / 26");
     expect(screen.getByRole("button", { name: /Esplora tutti i dossier/ })).toHaveAttribute("aria-expanded", "false");
   });
 
@@ -42,7 +42,7 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("status")).toHaveTextContent("0 / 0");
     expect(screen.getByText(/Nessun dossier corrisponde alla ricerca/)).toBeInTheDocument();
     fireEvent.change(search, { target: { value: "" } });
-    expect(screen.getByRole("status")).toHaveTextContent("8 / 24");
+    expect(screen.getByRole("status")).toHaveTextContent("8 / 26");
   });
 
   it("searches complete source and target passages and flexible language-direction notation", () => {
