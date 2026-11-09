@@ -156,7 +156,7 @@ export const enLocale: TranslationDictionary = {
           'Support may include organising shared files, configuring selected everyday digital tools at a basic level and documenting straightforward workflows. Access permissions, tools and tasks are agreed in advance.',
         iconName: 'Cpu',
         items: [
-          'Google Workspace & cloud drive reorganization',
+          'Organising Google Workspace and shared cloud folders',
           'Basic setup of agreed digital tools (calendars and forms)',
           'Practical support with daily business tools',
           'Operational standard operating procedures (SOPs)',
