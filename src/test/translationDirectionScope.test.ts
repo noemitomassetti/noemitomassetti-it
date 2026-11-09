@@ -37,7 +37,7 @@ describe("Professional translation direction and public service scope", () => {
     expect(directions).toEqual(["EN-IT", "ES-IT", "FR-IT", "IT-EN", "IT-ES", "IT-FR"]);
     expect(TRANSLATION_DEEP_CASES).toHaveLength(9);
     expect(Object.keys(DIRECTION_LABELS).sort()).toEqual(directions);
-    for (const id of ["it-en-existing-order-update", "it-fr-training-workshop", "it-es-desk-accessory-catalogue"]) {
+    for (const id of ["it-en-order-status-message", "it-fr-training-workshop", "it-es-desk-accessory-catalogue"]) {
       expect(getDeepPortfolioItem(id)?.kind).toBe("translation");
     }
     expect(DEEP_PORTFOLIO_ITEMS.filter(entry => entry.kind === "translation")).toHaveLength(9);
