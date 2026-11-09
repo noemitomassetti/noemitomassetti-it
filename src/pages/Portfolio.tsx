@@ -907,10 +907,10 @@ export default function Portfolio() {
             {lang === "it"
               ? "Dalla gestione di email, agenda e ordini alle traduzioni IT ↔ EN/FR/ES, al customer care scritto e ai contenuti digitali: valutiamo insieme le attività da affidarmi."
               : lang === "fr"
-              ? "Du secrétariat et du back-office aux traductions IT ↔ EN/FR/ES, aux contenus numériques et au suivi écrit de vos clients existants : définissons ensemble les tâches à me confier."
+              ? "Du secrétariat et du back-office aux traductions IT ↔ EN/FR/ES, aux contenus numériques et au suivi écrit de vos clients : définissons ensemble les tâches à me confier."
               : lang === "es"
-              ? "Desde la secretaría y el back office hasta la traducción IT ↔ EN/FR/ES, los contenidos digitales y la atención escrita a clientes existentes: podemos concretar qué tareas necesitas delegar."
-              : "From email organisation and operational back office to IT ↔ EN/FR/ES translation, digital content and written care for existing customers, I can support clearly agreed tasks."}
+              ? "Desde la secretaría y el back office hasta la traducción IT ↔ EN/FR/ES, los contenidos digitales y la atención escrita a clientes: podemos concretar qué tareas necesitas delegar."
+              : "From email organisation and operational back office to IT ↔ EN/FR/ES translation, digital content and written care for customers, I can support clearly agreed tasks."}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
