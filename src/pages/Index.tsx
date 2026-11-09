@@ -1288,7 +1288,7 @@ export default function IndexPage() {
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
                   ? "Sede a Castelfidardo (AN), supporto operativo da remoto in tutta Italia ed estero. Parli direttamente con Noemi, senza agenzie o intermediari."
-                  : lang === "fr" ? "Installée à Castelfidardo (Italie), je travaille à distance avec des clients internationaux pour leurs besoins liés à l’italien. Vous échangez directement avec moi." : lang === "es" ? "Trabajo desde Castelfidardo (Italia) y presto servicios a distancia para actividades relacionadas con el mercado italiano. Tratarás directamente conmigo." : "Based in Castelfidardo (AN), Italy. Remote operational support across Europe. Direct contact with Noemi, no agency middlemen."}
+                  : lang === "fr" ? "Installée à Castelfidardo (Italie), je travaille à distance avec des professionnels en Italie et à l’international, pour des missions de secrétariat, de back-office et de traduction. Vous échangez directement avec moi." : lang === "es" ? "Trabajo desde Castelfidardo (Italia) y colaboro a distancia con profesionales de Italia y del extranjero en tareas de secretaría, back office y traducción. Tratarás directamente conmigo." : "Based in Castelfidardo (Italy), I support professionals remotely in Italy and internationally. You work directly with me, without an agency intermediary."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
@@ -1335,7 +1335,7 @@ export default function IndexPage() {
             <p className="text-base md:text-lg text-foreground/80">
               {lang === "it"
                 ? "Approfondimenti, consigli pratici e strumenti per organizzare il tuo lavoro, comunicare meglio e gestire la tua attività."
-                : lang === "fr" ? "Découvrez des articles adaptés en français sur la communication avec l’Italie, la traduction et l’organisation professionnelle." : lang === "es" ? "Descubre artículos adaptados al español sobre comunicación con Italia, traducción y organización del trabajo." : "Explore articles adapted into English on Italian-market communication, translation and practical organisation."}
+                : lang === "fr" ? "Découvrez des articles en français sur la communication multilingue, la traduction et l’organisation professionnelle." : lang === "es" ? "Descubre artículos en español sobre comunicación multilingüe, traducción y organización del trabajo." : "Explore articles adapted into English on Italian-market communication, translation and practical organisation."}
             </p>
           </div>
 
@@ -1518,7 +1518,7 @@ export default function IndexPage() {
                       <span itemProp="addressCountry">ITALIA</span>
                     </span>
                     <span className="text-muted-foreground text-xs sm:text-sm">
-                      {lang === "it" ? "Supporto da remoto in tutta Italia" : lang === "fr" ? "Prestations à distance pour votre activité avec l’Italie" : lang === "es" ? "Servicios a distancia para trabajar con Italia" : "Remote support for businesses working with Italy"}
+                      {lang === "it" ? "Supporto da remoto in tutta Italia" : lang === "fr" ? "Prestations à distance en Italie et à l’international" : lang === "es" ? "Servicios a distancia en Italia y otros países" : "Remote support for clients in Italy and abroad"}
                     </span>
                   </div>
                 </div>
