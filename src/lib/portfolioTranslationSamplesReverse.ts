@@ -147,7 +147,7 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
     }
   },
   {
-    "id": "it-es-product-information",
+    "id": "it-es-desk-accessory-catalogue",
     "direction": "IT-ES",
     "domain": {
       "it": "Cataloghi e schede prodotto",
