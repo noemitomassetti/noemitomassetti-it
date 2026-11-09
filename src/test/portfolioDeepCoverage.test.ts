@@ -18,8 +18,8 @@ const read = (path:string) => readFileSync(path,"utf8");
 
 describe("Detailed portfolio: complete service coverage",()=>{
   it("provides multiple actual source/target demonstration samples for all six Italian/EN/FR/ES translation directions",()=>{
-    expect(TRANSLATION_DEEP_CASES).toHaveLength(9);
-    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(24);
+    expect(TRANSLATION_DEEP_CASES).toHaveLength(11);
+    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(26);
     for(const dir of DIRECTIONS){
       const cases=TRANSLATION_DEEP_CASES.filter(sample=>sample.direction===dir);
       expect(cases.length,dir).toBeGreaterThanOrEqual(dir.startsWith("IT-") ? 1 : 2);
@@ -85,7 +85,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
   });
   it("keeps the overview dossier count aligned with the public catalogue in all four languages", () => {
     const page = read("src/pages/Portfolio.tsx");
-    for (const label of ["24 dossier approfonditi", "24 in-depth dossiers", "24 dossiers détaillés", "24 dosieres detallados"]) {
+    for (const label of ["26 dossier approfonditi", "26 in-depth dossiers", "26 dossiers détaillés", "26 dosieres detallados"]) {
       expect(page).toContain(label);
     }
     expect(page).not.toMatch(/27 dossier approfonditi|27 in-depth dossiers|27 dossiers détaillés|27 dosieres detallados/);
