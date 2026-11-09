@@ -87,13 +87,13 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Pagine web e landing page (adattamento puramente testuale, non sviluppo tecnico)",
         "Schede prodotto per e-commerce e cataloghi commerciali",
-        "Email informative, newsletter e comunicazioni di onboarding per clienti già acquisiti",
+        "Email informative, newsletter e comunicazioni di onboarding per clienti",
         "Documentazione di supporto, FAQ e microcopy per applicazioni digitali",
         "Glossari bilingue EN-IT / FR-IT / ES-IT e linee guida di stile per il mercato italiano",
         "Post-editing di traduzioni AI e revisione critica di bozze esistenti",
       ],
       scopeNote:
-        "Questa pagina approfondisce la localizzazione per il mercato italiano. Offro traduzioni professionali in entrambe le direzioni tra italiano, inglese, francese e spagnolo, valutando tipologia, complessità e destinatari dei testi. Offro inoltre supporto operativo per comunicazioni multilingue con clienti già acquisiti. Non offro acquisizione clienti, contabilità o fatturazione.",
+        "Questa pagina approfondisce la localizzazione per il mercato italiano. Offro traduzioni professionali in entrambe le direzioni tra italiano, inglese, francese e spagnolo, valutando tipologia, complessità e destinatari dei testi. Offro inoltre supporto operativo per comunicazioni multilingue con clienti. Non offro acquisizione clienti, contabilità o fatturazione.",
       pricingTitle: "Tariffario di Riferimento",
       pricingDesc:
         "Traduzione generale EN/FR/ES → IT da 0,09 €/parola; specialistica verso l’italiano da 0,12 €/parola; localizzazione web da 0,11 €/parola; revisione e post-editing da 0,03 €/parola. I prezzi sono indicativi e soggetti a valutazione del testo e delle tempistiche.",
@@ -155,13 +155,13 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Website and landing-page copy (language and content localisation only, not website development)",
         "E-commerce product descriptions, category copy and brand stories",
-        "Customer emails, newsletters and onboarding messages for existing customers",
+        "Customer emails, newsletters and onboarding messages for customers",
         "Customer support templates, help centres and user-interface microcopy",
         "Bilingual EN-IT / FR-IT / ES-IT glossaries and market-specific style guides",
         "AI translation post-editing and quality assurance of existing Italian assets",
       ],
       scopeNote:
-        "This page focuses on localisation for the Italian market. I offer professional translation in both directions between Italian and English, French and Spanish, with each assignment assessed by subject, complexity and intended audience. I also provide agreed operational support for multilingual correspondence with existing customers. I do not provide telemarketing, customer acquisition, bookkeeping or invoicing.",
+        "This page focuses on localisation for the Italian market. I offer professional translation in both directions between Italian and English, French and Spanish, with each assignment assessed by subject, complexity and intended audience. I also provide agreed operational support for multilingual correspondence with customers. I do not provide telemarketing, customer acquisition, bookkeeping or invoicing.",
       pricingTitle: "Baseline Indicative Pricing",
       pricingDesc:
         "General EN/FR/ES → IT translation from €0.09/source word; specialist translation into Italian from €0.12/word; website localisation from €0.11/word; proofreading & post-editing from €0.03/word. Final quotes depend on scope, complexity, and requested turnaround.",
@@ -223,13 +223,13 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Contenus de sites web et de pages de destination (adaptation linguistique et éditoriale, sans développement technique)",
         "Fiches descriptives pour boutiques en ligne et catalogues",
-        "Courriels d’information, newsletters et messages d’accueil destinés aux clients existants",
+        "Courriels d’information, newsletters et messages d’accueil destinés aux clients",
         "Guides utilisateurs, foires aux questions (FAQ) et micro-textes d'application",
         "Glossaires bilingues FR-IT / EN-IT / ES-IT et guides de style pour le marché italien",
         "Post-édition de contenus générés par IA et relecture professionnelle",
       ],
       scopeNote:
-        "Cette page présente surtout la localisation pour le marché italien. Je propose des traductions professionnelles dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’assure également un soutien opérationnel convenu pour les échanges multilingues avec des clients existants. Je ne propose ni prospection commerciale, ni comptabilité, ni facturation.",
+        "Cette page présente surtout la localisation pour le marché italien. Je propose des traductions professionnelles dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’assure également un soutien opérationnel convenu pour les échanges multilingues avec des clients. Je ne propose ni prospection commerciale, ni comptabilité, ni facturation.",
       pricingTitle: "Grille Tarifaire Indicative",
       pricingDesc:
         "Traduction EN/FR/ES → IT à partir de 0,09 €/mot source ; traduction spécialisée vers l’italien à partir de 0,12 €/mot source ; localisation web à partir de 0,11 €/mot source ; révision et post-édition à partir de 0,03 €/mot. Tarifs indicatifs selon le texte, la complexité et les délais.",
@@ -291,13 +291,13 @@ export default function ItalianLocalisationPage() {
       scopeItems: [
         "Textos web y páginas de aterrizaje (adaptación puramente textual, sin desarrollo web)",
         "Fichas de producto para tiendas online y catálogos de servicios",
-        "Correos informativos, boletines y mensajes de bienvenida para clientes existentes",
+        "Correos informativos, boletines y mensajes de bienvenida para clientes",
         "Documentos de ayuda, preguntas frecuentes y textos breves de interfaz",
         "Glosarios bilingües y guías de estilo para el mercado italiano",
         "Posedición de traducciones generadas por IA y control de calidad",
       ],
       scopeNote:
-        "Esta página se centra en la localización para el mercado italiano. Ofrezco traducción profesional en ambas direcciones entre el italiano y el inglés, francés y español, tras valorar el tema, la complejidad y el público destinatario. También presto apoyo operativo acordado para la comunicación multilingüe con clientes existentes. No ofrezco captación de clientes, contabilidad ni facturación.",
+        "Esta página se centra en la localización para el mercado italiano. Ofrezco traducción profesional en ambas direcciones entre el italiano y el inglés, francés y español, tras valorar el tema, la complejidad y el público destinatario. También presto apoyo operativo acordado para la comunicación multilingüe con clientes. No ofrezco captación de clientes, contabilidad ni facturación.",
       pricingTitle: "Tarifas de Referencia",
       pricingDesc:
         "Traducción EN/FR/ES → IT desde 0,09 €/palabra de origen; traducción especializada al italiano desde 0,12 €/palabra de origen; localización web desde 0,11 €/palabra de origen; revisión y posedición desde 0,03 €/palabra. Tarifas orientativas según el texto, la complejidad y el plazo.",
