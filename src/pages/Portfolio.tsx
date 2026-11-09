@@ -905,12 +905,12 @@ export default function Portfolio() {
           </h2>
           <p className="text-foreground/80 leading-relaxed">
             {lang === "it"
-              ? "Dalla revisione dei contenuti alla gestione di email, agenda e back office, fino alla localizzazione verso l’italiano: valutiamo insieme le attività da affidarmi."
+              ? "Dalla gestione di email, agenda e ordini alle traduzioni IT ↔ EN/FR/ES, al customer care scritto e ai contenuti digitali: valutiamo insieme le attività da affidarmi."
               : lang === "fr"
-              ? "De la localisation en italien aux échanges avec vos clients italiens, découvrons des solutions linguistiques et opérationnelles."
+              ? "Du secrétariat et du back-office aux traductions IT ↔ EN/FR/ES, aux contenus numériques et au suivi écrit de vos clients existants : définissons ensemble les tâches à me confier."
               : lang === "es"
-              ? "Desde la localización al italiano hasta la comunicación escrita con tus clientes italianos actuales, podemos concretar las tareas que necesitas delegar."
-              : "From EN/FR/ES translation into Italian and Italian-market localisation to written support for existing Italian customers, I can help with agreed operational and language tasks."}
+              ? "Desde la secretaría y el back office hasta la traducción IT ↔ EN/FR/ES, los contenidos digitales y la atención escrita a clientes existentes: podemos concretar qué tareas necesitas delegar."
+              : "From email organisation and operational back office to IT ↔ EN/FR/ES translation, digital content and written care for existing customers, I can support clearly agreed tasks."}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
