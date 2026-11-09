@@ -52,7 +52,7 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
     expect(screen.getByRole("link", { name: /Aggiornamento ordine: italiano → inglese/ })).toBeInTheDocument();
     fireEvent.change(search, { target: { value: "IT → EN" } });
-    expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
+    expect(screen.getByRole("status")).toHaveTextContent("2 / 2");
     fireEvent.change(search, { target: { value: "fieltro reciclado" } });
     expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
   });
