@@ -19,24 +19,16 @@ const publicCopyFiles = [
 ];
 
 describe("Professional translation direction and public service scope", () => {
-  it("does not advertise professional translation from Italian into other languages", () => {
-    for (const path of publicCopyFiles) {
-      const copy = readFileSync(path, "utf8");
-      expect(copy, path).not.toMatch(/(?:IT|Italian|italien|italiano)\s*↔|IT\s*→\s*(?:EN|FR|ES)|both\s+(?:from and into|directions)|from and into Italian|from Italian into (?:English|French|Spanish)|in entrambe le direzioni|dans les deux sens|en ambos sentidos/i);
-    }
-  });
-
-  it("states the supported translation direction and existing-customer limit in every locale", () => {
+  it("advertises professional translation in both directions between Italian and EN/FR/ES", () => {
     const expectations = {
-      it: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /clienti già acquisiti/i },
-      en: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /existing customers/i },
-      fr: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /clients existants/i },
-      es: { direction: /EN\/FR\/ES\s*→\s*IT/, support: /clientes existentes/i },
+      it: /dall[’']italiano verso l[’']inglese.*dal francese e dallo spagnolo verso l[’']italiano/i,
+      en: /both from Italian into English, French and Spanish and from these languages into Italian/i,
+      fr: /de l[’']italien vers l[’']anglais, le français et l[’']espagnol.*de ces langues vers l[’']italien/i,
+      es: /tanto del italiano al inglés, francés y español como de estos idiomas al italiano/i,
     } as const;
     for (const lang of ["it", "en", "fr", "es"] as const) {
       const copy = readFileSync(`src/lib/i18n/locales/${lang}.ts`, "utf8");
-      expect(copy, lang).toMatch(expectations[lang].direction);
-      expect(copy, lang).toMatch(expectations[lang].support);
+      expect(copy, lang).toMatch(expectations[lang]);
     }
   });
 
