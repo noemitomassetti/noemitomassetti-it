@@ -50,6 +50,25 @@ describe("Release editorial consistency across four languages", () => {
     expect(privacy).toContain("FormSubmit únicamente si se habilita de forma expresa");
   });
 
+  it("presents customer care naturally in all four language homepages", () => {
+    const labels = {
+      it: /assistenza clienti/i,
+      en: /customer care/i,
+      fr: /relation client/i,
+      es: /atención al cliente/i,
+    };
+    for (const lang of ["it", "en", "fr", "es"] as const) {
+      const locale = locales[lang];
+      expect(locale.hero.subtitle, lang).toMatch(labels[lang]);
+      expect(locale.meta.homeDesc, lang).toMatch(labels[lang]);
+      expect(locale.hero.subtitle, lang).not.toMatch(/già acquisiti|esistenti|existing customers|clients existants|clientes existentes/i);
+    }
+    const scope = read("src/lib/serviceScope.ts");
+    for (const phrase of ["acquisizione commerciale", "sales prospecting", "prospection", "captación comercial"]) {
+      expect(scope).toContain(phrase);
+    }
+  });
+
   it("keeps private NoeTom app marketing out of the public homepage", () => {
     const home = read("src/pages/Index.tsx");
     expect(home).not.toMatch(/noetomTeaser|ctaNoeTom|\/noetom(?:["'])/i);
