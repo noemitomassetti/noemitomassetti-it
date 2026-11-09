@@ -183,20 +183,20 @@ export default function ServicesPage() {
                     ? "Traduzioni IT ↔ EN/FR/ES e localizzazione"
                     : lang === "fr" ? "Traduction IT ↔ EN/FR/ES et localisation"
                     : lang === "es" ? "Traducción IT ↔ EN/FR/ES y localización"
-                    : "Italian localisation for international clients"}
+                    : "IT ↔ EN/FR/ES translation and localisation"}
                 </span>
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-foreground">
                 {lang === "it"
-                  ? "Hai un’attività che si rivolge al mercato italiano?"
+                  ? "Hai contenuti professionali da tradurre o localizzare?"
                   : lang === "fr" ? "Vous vous adressez à une clientèle italienne ?"
-                  : lang === "es" ? "¿Tu empresa se dirige al público italiano?"
+                  : lang === "es" ? "¿Necesitas traducir o adaptar contenidos profesionales?"
                   : "Need translation between Italian and EN/FR/ES?"}
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
                 {lang === "it"
                   ? "Traduzione, revisione e localizzazione di contenuti web e comunicazioni professionali tra italiano e EN/FR/ES."
-                  : lang === "fr" ? "Traduction, révision et localisation en italien de sites web, pages de destination et communications professionnelles."
+                  : lang === "fr" ? "Traduction IT ↔ EN/FR/ES, révision de contenus web et adaptation linguistique pour le marché italien."
                   : lang === "es" ? "Traducción, revisión y localización de contenidos web y comunicaciones profesionales entre el italiano y EN/FR/ES."
                   : "Translation, editing and localisation between Italian and EN/FR/ES for websites, landing pages and professional communications."}
               </p>
@@ -213,12 +213,12 @@ export default function ServicesPage() {
             {s.categories.map((cat) => {
               const IconComponent = getServiceIcon(cat.id);
               const macroTags: Record<string, Record<Language, string>> = {
-                "virtual-assistance": { it: "Back office operativo", en: "Italian customer operations", fr: "Relation client et opérations en italien", es: "Atención al cliente y operaciones en italiano" },
+                "virtual-assistance": { it: "Back office operativo", en: "Virtual assistance & back office", fr: "Secrétariat et back-office", es: "Secretaría y back office" },
                 "digital-support": { it: "Organizzazione digitale", en: "Digital organisation", fr: "Organisation numérique", es: "Organización digital" },
                 "translation-localization": { it: "Traduzioni IT ↔ EN/FR/ES", en: "IT ↔ EN/FR/ES Translation", fr: "Traduction IT ↔ EN/FR/ES", es: "Traducción IT ↔ EN/FR/ES" },
-                "content-writing": { it: "Scrittura e revisione testi", en: "Italian content editing", fr: "Révision des contenus italiens", es: "Revisión de contenidos en italiano" },
+                "content-writing": { it: "Scrittura e revisione testi", en: "Content writing & editing", fr: "Rédaction et révision", es: "Redacción y revisión" },
                 "online-research": { it: "Ricerche informative", en: "Informational research", fr: "Recherche documentaire", es: "Investigación informativa" },
-                "web-landing": { it: "Contenuti per il web", en: "Italian web content", fr: "Contenus web en italien", es: "Contenidos web en italiano" },
+                "web-landing": { it: "Contenuti per il web", en: "Website content", fr: "Contenus pour sites web", es: "Contenidos web" },
               };
               const macroTag = macroTags[cat.id]?.[lang] ?? cat.title;
 
