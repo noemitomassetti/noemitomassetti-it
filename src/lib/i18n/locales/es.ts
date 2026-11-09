@@ -104,7 +104,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Traducción IT ↔ EN/FR/ES y localización',
         subtitle: 'Traducción profesional en ambas direcciones entre el italiano y el inglés, francés y español, y localización para el mercado italiano.',
         description:
-          "Traduzco del italiano al inglés, francés y español, y de estos idiomas al italiano. Según las necesidades, el encargo puede comprender traducción, localización para el mercado italiano, revisión lingüística o apoyo a la correspondencia multilingüe. Los idiomas, los textos y los entregables se definen en el presupuesto.",
+          "Traduzco del italiano al inglés, francés y español y de estos idiomas al italiano. Según las necesidades, el encargo puede comprender traducción, localización para el mercado italiano, revisión lingüística o apoyo a la correspondencia multilingüe. Los idiomas, los textos y los entregables se definen en el presupuesto.",
         iconName: 'Globe',
         items: [
           'Localización al italiano de sitios web y páginas de venta',
