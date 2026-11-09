@@ -45,6 +45,11 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       expect(research?.description.toLowerCase(),lang).toMatch(/client|prospect|contatti|clientes|commercial/i);
     }
   });
+  it("does not advertise Italian-to-foreign-language translation in any Italian trust statement",()=>{
+    const trustCopy=itLocale.trust.pillars.map(p=>p.desc).join(" ");
+    expect(trustCopy).not.toMatch(/nei due sensi|in entrambe le direzioni|dall'italiano verso/i);
+    expect(trustCopy).toMatch(/dall'inglese.*verso l'italiano/i);
+  });
   it("respects the Italy-first international service positioning and EN/FR/ES-to-Italian translation direction",()=>{
     for(const lang of LANGS){
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
