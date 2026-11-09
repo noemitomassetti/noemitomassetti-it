@@ -50,19 +50,22 @@ describe("Site copy editorial alignment", () => {
     }
   });
 
-  it("limits professional translation to EN/FR/ES into Italian and separates multilingual support", () => {
-    for (const path of localePaths) {
-      const copy = source(path);
-      expect(copy).not.toContain("↔");
-      expect(copy).not.toMatch(/both directions|dans les deux sens|en ambos sentidos/i);
+  it("offers translation IT ↔ EN/FR/ES and separates multilingual correspondence from acquisition", () => {
+    const descriptions = {
+      it: /IT\s*↔\s*EN\/FR\/ES/,
+      en: /IT\s*↔\s*EN\/FR\/ES/,
+      fr: /IT\s*↔\s*EN\/FR\/ES/,
+      es: /IT\s*↔\s*EN\/FR\/ES/
+    };
+    for (const lang of ["it","en","fr","es"] as const) {
+      expect(source(`src/lib/i18n/locales/${lang}.ts`),lang).toMatch(descriptions[lang]);
     }
     const scope = source("src/lib/serviceScope.ts");
-    expect(scope).toContain("EN/FR/ES verso IT");
-    const pricing = source("src/lib/pricingData.ts");
-    expect(pricing).toContain("EN/FR/ES → IT");
+    expect(scope).toContain("IT e EN/FR/ES");
+    expect(scope).toMatch(/No business administration|Non accetto incarichi di amministrazione/i);
     const localising = source("src/pages/ItalianLocalisation.tsx");
-    expect(localising).toContain("My professional translation work is from English, French and Spanish into Italian");
-    expect(localising).not.toMatch(/from Italian into English|du français vers l’italien et de l’italien vers|del italiano al español/i);
+    expect(localising).toContain("both directions between Italian and English, French and Spanish");
+    expect(localising).toContain("This page focuses on localisation for the Italian market");
     const contact = source("src/components/ContactForm.tsx");
     expect(contact).not.toContain("NoeTom");
   });
