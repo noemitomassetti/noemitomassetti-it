@@ -5,9 +5,9 @@ export const esLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Traducción EN/FR/ES al italiano y apoyo operativo | Noemi Tomassetti',
-    homeDesc: 'Traducción profesional del inglés, francés y español al italiano, localización para el mercado italiano y apoyo operativo a profesionales que trabajan con Italia.',
+    homeDesc: 'Traducción profesional entre el italiano y el inglés, francés y español, localización para el mercado italiano y apoyo operativo a profesionales que trabajan con Italia.',
     servicesTitle: 'Traducción al italiano y apoyo operativo | Noemi Tomassetti',
-    servicesDesc: 'Traducción y localización al italiano, atención escrita a clientes italianos existentes y apoyo operativo para actividades relacionadas con Italia.',
+    servicesDesc: 'Traducción entre el italiano y el inglés, francés y español, atención escrita a clientes italianos existentes y apoyo operativo para actividades relacionadas con Italia.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
     aboutTitle: 'Sobre Mí | Noemi Tomassetti',
@@ -36,14 +36,14 @@ export const esLocale: TranslationDictionary = {
     badge: 'SERVICIOS LINGÜÍSTICOS PARA ITALIA',
     titleLine1: 'Traducción, localización y apoyo operativo',
     titleHighlight: 'para trabajar con Italia',
-    subtitle: "Traducción y localización al italiano, comunicación escrita con clientes italianos existentes y apoyo operativo para las actividades relacionadas con Italia.",
+    subtitle: "Traducción entre el italiano y el inglés, francés y español, comunicación escrita con clientes italianos existentes y apoyo operativo para las actividades relacionadas con Italia.",
     headline: 'Comunícate de forma natural con tu público italiano.',
     desc1: 'Pongo a tu disposición más de veinte años de experiencia laboral para ayudarte a gestionar mejor tu trabajo diario. El italiano es mi lengua materna y tengo formación en traducción especializada.',
     desc2: 'Desde páginas web y landing pages hasta comunicaciones con clientes italianos existentes: traducción, localización y apoyo operativo adaptados a tu actividad en Italia.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
-      'Mis traducciones profesionales son del inglés, francés y español al italiano. También reviso contenidos en italiano y presto apoyo en las tareas operativas acordadas relacionadas con Italia.',
+      'Traduzco tanto del italiano al inglés, francés y español como de estos idiomas al italiano. También reviso contenidos en italiano y presto apoyo en las tareas operativas acordadas relacionadas con Italia.',
     ctaServices: 'Explorar Servicios',
     ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
@@ -65,7 +65,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Precisión lingüística',
-        desc: 'Mi lengua materna es el italiano; tengo un nivel avanzado de inglés y francés y un nivel intermedio-alto de español. Mis traducciones profesionales son del inglés, francés y español al italiano.',
+        desc: 'Mi lengua materna es el italiano; tengo un nivel avanzado de inglés y francés y un nivel intermedio-alto de español. Traduzco tanto del italiano al inglés, francés y español como de estos idiomas al italiano.',
       },
       {
         title: 'Herramientas digitales adecuadas',
@@ -101,17 +101,17 @@ export const esLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'Traducción EN/FR/ES al italiano y localización',
-        subtitle: 'Traducción profesional al italiano y localización para el mercado italiano.',
+        title: 'Traducción IT ↔ EN/FR/ES y localización',
+        subtitle: 'Traducción profesional en ambas direcciones entre el italiano y el inglés, francés y español, y localización para el mercado italiano.',
         description:
-          "Traduzco profesionalmente del inglés, francés y español al italiano, tras valorar el tema, la complejidad y el público destinatario. También localizo contenidos para el mercado italiano y presto apoyo operativo acordado para la comunicación con clientes existentes.",
+          "Traduzco profesionalmente del italiano al inglés, francés y español y de estos idiomas al italiano, tras valorar el tema, la complejidad y el público destinatario. También localizo contenidos para el mercado italiano y presto apoyo operativo acordado para la comunicación con clientes existentes.",
         iconName: 'Globe',
         items: [
           'Localización al italiano de sitios web y páginas de venta',
           'Correspondencia profesional en italiano',
-          'Traducción al italiano de propuestas y presentaciones EN/FR/ES',
-          'Traducción al italiano de materiales formativos EN/FR/ES',
-          'Traducción al italiano de boletines y comunicaciones',
+          'Traducción de propuestas y presentaciones entre IT y EN/FR/ES',
+          'Traducción de materiales formativos entre IT y EN/FR/ES',
+          'Traducción de boletines y comunicaciones entre IT y EN/FR/ES',
           'Revisión lingüística de contenidos en italiano',
         ],
       },
@@ -195,7 +195,7 @@ export const esLocale: TranslationDictionary = {
        deliverables: ['Análisis de tareas delegables', 'Organización acordada de correos, archivos y procesos', 'Resumen de actividades y prioridades'], turnaround: 'Por acordar'},
       {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: "Atención escrita a los clientes existentes, actualizaciones de pedidos y seguimientos de asistencia conforme a los procedimientos acordados.",
        deliverables: ['Plantillas de respuesta y preguntas frecuentes', 'Gestión acordada de consultas escritas', 'Registro de seguimientos y actividades'], turnaround: 'Por acordar'},
-      {id: 'p3', title: 'Traducción al italiano y localización para el mercado italiano', badge: 'IT · EN · FR · ES', description: 'Traducción profesional del inglés, francés y español al italiano, localización para Italia y correspondencia multilingüe acordada con clientes existentes.',
+      {id: 'p3', title: 'Traducción IT ↔ EN/FR/ES y localización para el mercado italiano', badge: 'IT · EN · FR · ES', description: 'Traducción profesional entre el italiano y el inglés, francés y español, localización para Italia y correspondencia multilingüe acordada con clientes existentes.',
        deliverables: ['Análisis de textos, público y terminología', 'Traducción al italiano o localización del contenido acordado para el mercado italiano', 'Revisión final y notas lingüísticas'], turnaround: 'Según volumen'},
       {id: 'p4', title: 'Revisión de contenido existente', badge: 'Claridad y coherencia', description: 'Revisión cuidadosa de materiales profesionales y multilingües existentes.',
        deliverables: ['Evaluación del texto y los objetivos', 'Revisión de estructura, tono y legibilidad', 'Documento final con cambios identificables'], turnaround: 'Según alcance'},
@@ -395,7 +395,7 @@ export const esLocale: TranslationDictionary = {
       {
         period: '2026 – Actualidad',
         role: 'Asistencia virtual y traducción independiente',
-        detail: 'Atención a clientes italianos existentes, apoyo operativo y traducción del inglés, francés y español al italiano.',
+        detail: 'Atención a clientes italianos existentes, apoyo operativo y traducción entre el italiano y el inglés, francés y español.',
       },
     ],
     valuesTitle: 'Principios de mi forma de trabajar',
@@ -453,7 +453,7 @@ export const esLocale: TranslationDictionary = {
       serviceNeeded: 'Área de soporte de tu interés *',
       serviceOptions: [
         'Atención escrita a clientes italianos y apoyo operativo',
-        'Traducción EN/FR/ES → IT y localización al italiano',
+        'Traducción IT ↔ EN/FR/ES y localización',
         'Revisión y adaptación de textos en italiano',
         'Investigación Informativa de Apoyo',
         'Apoyo digital para actividades relacionadas con Italia',
@@ -532,7 +532,7 @@ export const esLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Traducciones profesionales del inglés, francés y español al italiano, localización para Italia y atención escrita a clientes italianos existentes para profesionales que trabajan con Italia.',
+      'Traducciones profesionales en ambas direcciones entre el italiano y el inglés, francés y español, localización para Italia y atención escrita a clientes italianos existentes para profesionales que trabajan con Italia.',
     servicesTitle: 'Servicios',
     noetomTitle: 'NoeTom · en desarrollo',
     companyTitle: 'Sobre Mí & Recursos',
