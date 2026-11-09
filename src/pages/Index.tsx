@@ -383,8 +383,8 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Vous vous recentrez sur votre cœur de métier. Je prends en charge les tâches déléguées avec rigueur."
           : lang === "es"
-          ? "Tú te enfocas en tus prioridades. Yo me encargo de las gestiones delegadas con total autonomía."
-          : "You focus fully on high-value client work while I handle the operational foundation.",
+          ? "Puedes centrarte en tus prioridades mientras gestiono las tareas acordadas y consulto contigo las decisiones que requieren tu aprobación."
+          : "You focus on your priorities while I manage the agreed tasks, keeping you informed and seeking approval where needed.",
     },
   ];
 
@@ -420,12 +420,12 @@ export default function IndexPage() {
           : "Do I have to commit to a fixed number of hours?",
       a:
         lang === "it"
-          ? "No. La modalità di collaborazione viene definita in base alle attività e alle tue esigenze, a tariffa oraria o a pacchetto, con massima flessibilità e senza vincoli rigidi."
+          ? "Non necessariamente. Puoi richiedere un intervento a ore, un pacchetto oppure una collaborazione continuativa. Attività, ore e condizioni vengono concordate nel preventivo."
           : lang === "fr"
-          ? "Non. Les modalités de travail sont convenues selon vos besoins effectifs, au taux horaire ou au forfait, avec une grande flexibilité et sans contrainte rigide."
+          ? "Pas nécessairement. Vous pouvez demander une intervention à l'heure, un forfait d'heures ou un accompagnement régulier. Les tâches, les heures et les conditions sont précisées dans le devis."
           : lang === "es"
-          ? "No. La modalidad de colaboración se define según tus necesidades y volumen real, por horas o por paquete, con total flexibilidad y sin ataduras rígidas."
-          : "No. The terms of collaboration are structured flexibly around your specific workload and actual needs, hourly or packaged, without rigid lock-ins.",
+          ? "No necesariamente. Puedes solicitar un trabajo por horas, un paquete de horas o una colaboración continuada. Las tareas, las horas y las condiciones se concretan en el presupuesto."
+          : "Not necessarily. You can request hourly work, an hour package or ongoing support. The agreed tasks, hours and terms will be stated in your written quote.",
     },
     {
       q:
@@ -484,20 +484,20 @@ export default function IndexPage() {
     {
       q:
         lang === "it"
-          ? "Posso iniziare con una sola attività?"
+          ? "Le attività elencate sono tutte incluse?"
           : lang === "fr"
-          ? "Puis-je commencer par une seule mission ?"
+          ? "Toutes les tâches présentées sont-elles incluses ?"
           : lang === "es"
-          ? "¿Puedo empezar con una sola tarea?"
-          : "Can I start with just one assignment?",
+          ? "¿Están incluidas todas las tareas que aparecen en la web?"
+          : "Are all the listed activities included in a service?",
       a:
         lang === "it"
-          ? "Certamente. Possiamo partire da ciò che oggi ti occupa più tempo o ti crea maggiore difficoltà."
+          ? "No. Sono esempi delle attività che posso svolgere, non un pacchetto completo. Nel preventivo indico precisamente le prestazioni concordate, gli eventuali materiali da consegnare, i tempi e il compenso."
           : lang === "fr"
-          ? "Absolument. Nous pouvons débuter par la tâche qui absorbe le plus clair de votre temps ou freine votre productivité."
+          ? "Non. Il s'agit d'exemples de prestations possibles, pas d'un forfait tout compris. Le devis précise les tâches retenues, les éventuels livrables, les délais et les honoraires."
           : lang === "es"
-          ? "Por supuesto. Podemos empezar por la tarea que hoy te absorbe más tiempo o te genera mayor atasco."
-          : "Certainly. Starting with the single task that drains most of your time is often the best first step.",
+          ? "No. Son ejemplos de tareas que puedo realizar, no un paquete con todo incluido. El presupuesto precisa los servicios acordados, los posibles entregables, los plazos y los honorarios."
+          : "No. They illustrate tasks I can take on, not an all-inclusive package. Your written quote will identify the agreed services, any deliverables, deadlines and fees.",
     },
     {
       q:
