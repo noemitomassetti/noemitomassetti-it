@@ -4,9 +4,9 @@ export const enLocale: TranslationDictionary = {
   lang: 'en',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Italian Translation, Localisation & Support | Noemi Tomassetti',
-    homeDesc: 'Professional translation between Italian and English, French and Spanish, Italian-market localisation and operational support for professionals and small businesses working with Italy.',
-    servicesTitle: 'Italian Translation & Operational Support | Noemi Tomassetti',
+    homeTitle: 'Multilingual Virtual Assistant & Translator | Noemi Tomassetti',
+    homeDesc: 'Multilingual virtual assistance, operational back office, written customer care for existing customers, digital content and professional translation between Italian and English, French and Spanish.',
+    servicesTitle: 'Virtual Assistance & Translation Services | Noemi Tomassetti',
     servicesDesc: 'Professional IT ↔ EN/FR/ES translation, Italian-market localisation, written support for existing customers in Italian, English, French and Spanish, and operational back-office assistance for businesses working with Italy.',
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
@@ -15,7 +15,7 @@ export const enLocale: TranslationDictionary = {
     resourcesTitle: 'Resources & Insights | Noemi Tomassetti',
     resourcesDesc: 'Actionable perspectives on delegation, multilingual communication, operational clarity, and AI-assisted workflows for solopreneurs.',
     contactTitle: 'Contact & Quotes | Noemi Tomassetti',
-    contactDesc: 'Request a quote for Italian translation, localisation, existing-customer communication and Italy-related operational support.',
+    contactDesc: 'Request a quote for virtual assistance, operational back office, existing-customer support, digital content, translation and localisation.',
     privacyTitle: 'Privacy Policy | Noemi Tomassetti',
     privacyDesc: 'Transparent privacy and personal data protection policy in accordance with EU Regulation 2016/679 (GDPR).',
     cookieTitle: 'Cookie Policy | Noemi Tomassetti',
@@ -33,13 +33,13 @@ export const enLocale: TranslationDictionary = {
     language: 'Language',
   },
   hero: {
-    badge: 'NATIVE ITALIAN LANGUAGE SUPPORT',
-    titleLine1: 'Italian translation, localisation and operational support',
-    titleHighlight: 'for your work with Italy',
-    subtitle: "Native Italian-language support: translation between Italian and English, French and Spanish, written support for existing Italian customers and operational tasks connected with Italy.",
-    headline: 'Communicate naturally with your Italian audience.',
+    badge: 'MULTILINGUAL VIRTUAL ASSISTANT',
+    titleLine1: 'Virtual assistance, multilingual communication and translation',
+    titleHighlight: 'for your day-to-day business',
+    subtitle: "Organisational secretarial work, operational back office, written care for existing customers, digital content and translation between Italian and English, French and Spanish.",
+    headline: 'Clearer communication. More organised daily operations.',
     desc1: 'I draw on over twenty years of professional experience to help you manage your day-to-day work more effectively. I am a native Italian speaker trained in specialised translation.',
-    desc2: 'From websites and landing pages to Italian-language customer correspondence and operational coordination, I support your business activities involving Italy.',
+    desc2: 'From email and scheduling to written customer care, translation and website content revision, I support agreed tasks for professionals and small businesses.',
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
@@ -79,21 +79,21 @@ export const enLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'WHAT I DO',
-    title: 'Italian Language & Operational Services',
+    title: 'Virtual Assistance, Translation & Digital Content',
     subtitle:
-      'Translation between Italian and English, French and Spanish, existing-customer correspondence and practical support for your work with Italy.',
+      'Translation between Italian and English, French and Spanish, existing-customer correspondence and practical support for your day-to-day business.',
     viewAllCta: 'View Full Service Details',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Italian-Language Customer Care & Back Office',
-        subtitle: 'Organised Italian-language support for your existing customer relationships.',
+        title: 'Organisational Secretarial & Operational Back Office',
+        subtitle: 'Reliable organisation, order handling and written customer support.',
         description:
-          "Written Italian-language support for existing customers, order updates, correspondence, document organisation and operational follow-ups connected with Italy. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
+          "Organisational secretarial work and operational back-office support: email, scheduling, data entry, orders, approved price lists, operational quotations and written care for existing customers, including Italian-language correspondence. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
-          'Scheduling related to existing Italian customers and appointments',
+          'Calendar and appointment coordination',
           'Existing-customer care & professional communication',
           'Document organisation and cloud filing',
           'Support follow-ups for existing customers',
@@ -109,7 +109,7 @@ export const enLocale: TranslationDictionary = {
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
-          'Italian-language professional correspondence',
+          'Professional correspondence in IT, EN, FR and ES',
           'Translation of proposals and presentations between IT and EN/FR/ES',
           'Training materials translated between IT and EN/FR/ES',
           'Translation of marketing copy and newsletters between IT and EN/FR/ES',
@@ -361,7 +361,7 @@ export const enLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
-      { title: 'Academic Excellence', detail: 'Degree in Linguistic Mediation (110/110 e lode (highest honours in Italy)) & University Master’s in Specialised Translation' },
+      { title: 'Academic Excellence', detail: 'Degree in Language Mediation (110/110 e lode, highest Italian honours) and Italian first-level university Master’s in Specialised Translation' },
       { title: 'Four Working Languages', detail: 'Native Italian, advanced English and French, upper-intermediate Spanish' },
       { title: 'Digital Organisation', detail: 'Cloud files, collaborative tools and clear operational procedures' },
     ],
@@ -411,7 +411,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Uncompromising Reliability',
-        desc: 'If I commit to a deadline, it is met. If a detail requires verification, it is checked. You can delegate and disconnect with peace of mind.',
+        desc: 'I agree realistic deadlines, flag risks promptly and verify important details before completing an agreed task.',
       },
     ],
   },
