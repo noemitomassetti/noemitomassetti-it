@@ -81,7 +81,7 @@ export const enLocale: TranslationDictionary = {
     tag: 'WHAT I DO',
     title: 'Virtual Assistance, Translation & Digital Content',
     subtitle:
-      'Translation between Italian and English, French and Spanish, existing-customer correspondence and practical support for your day-to-day business.',
+      'These are examples of services I can provide, not an all-inclusive package. Each quote defines the agreed tasks, deliverables and working arrangements.',
     viewAllCta: 'View Full Service Details',
     categories: [
       {
@@ -89,12 +89,12 @@ export const enLocale: TranslationDictionary = {
         title: 'Virtual Secretarial Support & Operational Back Office',
         subtitle: 'Reliable organisation, order handling and written customer support.',
         description:
-          "Organisational secretarial work and operational back-office support: email, scheduling, data entry, orders, approved price lists, operational quotations and written care for customers, including Italian-language correspondence. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
+          "Depending on the brief, I can support inbox and calendar organisation, data entry, order updates, approved price lists, quotations based on your instructions and written customer communications. Specific tasks are agreed before work begins. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
           'Calendar and appointment coordination',
-          'Existing-customer care & professional communication',
+          'Customer care & professional communication',
           'Document organisation and cloud filing',
           'Support follow-ups for customers',
           'Data entry & back-office coordination',
@@ -105,7 +105,7 @@ export const enLocale: TranslationDictionary = {
         title: 'IT ↔ EN/FR/ES Translation and Italian Localisation',
         subtitle: 'Professional translation between Italian and English, French and Spanish; Italian-market localisation is a core focus.',
         description:
-          "I translate between Italian and English, French and Spanish, assessing each assignment by subject, complexity and target audience. My services also include localisation of websites, catalogues and professional communications for Italian readers, as well as agreed written support for customers in Italian, English, French and Spanish.",
+          "I translate from Italian into English, French and Spanish and from each of these languages into Italian. Depending on the assignment, the work may involve translation, Italian-market localisation, linguistic revision or support with multilingual correspondence. Language pairs, source materials and deliverables are agreed in the written quote.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
@@ -121,7 +121,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Professional Content Writing & Editing',
         subtitle: 'Clear, appropriate wording for professional audiences.',
         description:
-          'I write and edit professional web content, customer emails, newsletters and existing drafts, including Italian-language localisation and agreed multilingual material. Each brief defines the audience, channel and language.',
+          'I can write or edit website content, customer correspondence, newsletters and informational material, including existing or AI-assisted drafts. The brief determines the audience, language, editorial work and agreed deliverables.',
         iconName: 'PenTool',
         items: [
           'Website and landing-page copy review',
@@ -137,7 +137,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Informational Research Support',
         subtitle: 'Structured intelligence to inform your strategic decisions.',
         description:
-          "Gathering, checking and comparing information, sources, suppliers and digital tools solely in support of a client's existing operations. No contact sourcing, customer acquisition or prospecting.",
+          "Depending on the assignment, research may cover publicly available information, source checks, comparisons of suppliers or digital tools, and structured summaries for agreed projects. No sales-contact sourcing, customer acquisition or prospecting.",
         iconName: 'Search',
         items: [
           'Competitor and public pricing comparisons for existing projects',
@@ -153,7 +153,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Digital Support',
         subtitle: 'Practical organisation of everyday digital tools.',
         description:
-          'From organising Google Workspace and cloud drives to setting up online tools and standard procedures, I help independent professionals operate with clarity and efficiency.',
+          'Support may include organising shared files, configuring selected everyday digital tools at a basic level and documenting straightforward workflows. Access permissions, tools and tasks are agreed in advance.',
         iconName: 'Cpu',
         items: [
           'Google Workspace & cloud drive reorganization',
@@ -164,7 +164,7 @@ export const enLocale: TranslationDictionary = {
           'Basic digital assistance & setup support',
         ],
       },
-      { id: 'web-landing', title: 'Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'Editing, language adaptation and organisation of content for existing websites. Website development, hosting and technical maintenance are outside this editorial content service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian-market localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
+      { id: 'web-landing', title: 'Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'For existing websites, the agreed editorial work may include copy review, language adaptation and the structure of headings, FAQs and page content. Website development, hosting and technical maintenance are outside this service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian-market localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
     ],
   },
   multilingualAdvantage: {
@@ -190,7 +190,7 @@ export const enLocale: TranslationDictionary = {
   },
   productized: {
     tag: 'WAYS TO WORK TOGETHER', title: 'Focused services, tangible deliverables',
-    subtitle: 'Examples of clearly scoped assignments. Deliverables and timelines are agreed in the written quote.',
+    subtitle: 'Illustrative ways of working together and possible outputs, not fixed all-inclusive packages. The written quote specifies exactly what is included.',
     packages: [
       {id: 'p1', title: 'Organised back office', badge: 'Operational secretarial support', description: 'Practical help to organise recurring tasks, email correspondence and documents.',
        deliverables: ['Review of activities to delegate', 'Agreed email, document and workflow organisation', 'Summary of work completed and next priorities'], turnaround: 'By agreement'},
@@ -201,7 +201,7 @@ export const enLocale: TranslationDictionary = {
       {id: 'p4', title: 'Existing-content review', badge: 'Clarity and consistency', description: 'Careful editing of your existing professional and multilingual materials.',
        deliverables: ['Text and objectives assessment', 'Structure, tone and readability revision', 'Final editable document with traceable changes'], turnaround: 'Based on scope'},
     ],
-    customScopeNote: 'Every assignment is tailored. No introductory call required: send your brief and receive a written proposal.',
+    customScopeNote: 'The examples above are not automatically included in a service. We agree the tasks, deliverables, deadlines and fees in writing before work begins. No introductory call is required to request a quote.',
   },
   noetomTeaser: {
     tag: 'INTERNAL PROJECT · PRODUCTIVITY',
