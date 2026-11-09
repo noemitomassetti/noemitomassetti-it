@@ -45,6 +45,18 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("status")).toHaveTextContent("8 / 24");
   });
 
+  it("searches complete source and target passages and flexible language-direction notation", () => {
+    mount();
+    const search = screen.getByRole("searchbox", { name: "Cerca nei dossier" });
+    fireEvent.change(search, { target: { value: "riassortimento" } });
+    expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
+    expect(screen.getByRole("link", { name: /Aggiornamento ordine: italiano → inglese/ })).toBeInTheDocument();
+    fireEvent.change(search, { target: { value: "IT → EN" } });
+    expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
+    fireEvent.change(search, { target: { value: "fieltro reciclado" } });
+    expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
+  });
+
   it("shows faithful deliverable excerpts on the featured portfolio cards", () => {
     mount();
     expect(screen.getAllByText("Anteprima dell’elaborato")).toHaveLength(8);
