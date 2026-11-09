@@ -7,7 +7,7 @@ export const esLocale: TranslationDictionary = {
     homeTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
     homeDesc: 'Asistencia virtual multilingüe, secretaría organizativa, back office, atención escrita a clientes existentes, contenidos digitales y traducción IT ↔ EN/FR/ES.',
     servicesTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
-    servicesDesc: 'Traducción entre el italiano y el inglés, francés y español, atención escrita a clientes italianos existentes y apoyo operativo para actividades relacionadas con Italia.',
+    servicesDesc: 'Asistencia virtual multilingüe, secretaría, back office, atención escrita a clientes existentes, contenidos digitales y traducción IT ↔ EN/FR/ES.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
     aboutTitle: 'Sobre Mí | Noemi Tomassetti',
@@ -43,7 +43,7 @@ export const esLocale: TranslationDictionary = {
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
-      'Traduzco tanto del italiano al inglés, francés y español como de estos idiomas al italiano. También reviso contenidos en italiano y presto apoyo en las tareas operativas acordadas relacionadas con Italia.',
+      'Traduzco del italiano al inglés, francés y español y también en sentido inverso. Además, reviso contenidos profesionales y presto apoyo organizativo dentro del alcance acordado.',
     ctaServices: 'Explorar Servicios',
     ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
@@ -96,7 +96,7 @@ export const esLocale: TranslationDictionary = {
           'Atención a clientes existentes y comunicación profesional',
           'Organización documental y estructura en la nube',
           'Seguimiento de solicitudes de clientes existentes',
-          'Tareas operativas vinculadas a clientes y pedidos en Italia',
+          'Seguimiento operativo de clientes existentes y pedidos',
         ],
       },
       {
@@ -167,8 +167,8 @@ export const esLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'COMUNICACIÓN CON ITALIA',
-    title: 'Comunícate con claridad con tus clientes italianos',
+    tag: 'COMUNICACIÓN MULTILINGÜE',
+    title: 'Comunícate con claridad en varios idiomas',
     description:
       'Para comunicarte con el público italiano necesitas información precisa, una terminología adecuada y un tono natural, no una traducción literal.',
     points: [
@@ -182,7 +182,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Operativa unificada',
-        desc: 'Desde los contenidos web en italiano hasta los mensajes para clientes italianos existentes, procuro mantener una comunicación clara y coherente.',
+        desc: 'Desde los contenidos web hasta los mensajes para clientes existentes, cuido la claridad, la coherencia terminológica y la adaptación al destinatario.',
       },
     ],
     badgeNote: 'Excelencia académica: Licenciatura en Mediación Lingüística (110/110 e lode (distinción italiana)) y Máster en Traducción Especializada',
@@ -360,7 +360,7 @@ export const esLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
-      { title: 'Formación académica destacada', detail: 'Grado italiano en Mediación Lingüística (110/110 e lode, máxima distinción italiana) y máster universitario italiano de primer nivel en Traducción Especializada' },
+      { title: 'Formación académica especializada', detail: 'Grado italiano en Mediación Lingüística (110/110 e lode, máxima distinción italiana) y máster universitario italiano de primer nivel en Traducción Especializada' },
       { title: 'Cuatro idiomas de trabajo', detail: 'Italiano nativo, inglés y francés avanzados, español intermedio-alto' },
       { title: 'Organización digital', detail: 'Archivos en la nube, herramientas colaborativas y procedimientos operativos' },
     ],
@@ -395,7 +395,7 @@ export const esLocale: TranslationDictionary = {
       {
         period: '2026 – Actualidad',
         role: 'Asistencia virtual y traducción independiente',
-        detail: 'Atención a clientes italianos existentes, apoyo operativo y traducción entre el italiano y el inglés, francés y español.',
+        detail: 'Atención escrita a clientes existentes, apoyo operativo y traducción en ambas direcciones entre el italiano y el inglés, francés y español.',
       },
     ],
     valuesTitle: 'Principios de mi forma de trabajar',
@@ -532,7 +532,7 @@ export const esLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Traducciones profesionales en ambas direcciones entre el italiano y el inglés, francés y español, localización para Italia y atención escrita a clientes italianos existentes para profesionales que trabajan con Italia.',
+      'Asistencia virtual, secretaría, back office, atención escrita a clientes existentes, revisión de contenidos y traducción profesional IT ↔ EN/FR/ES, con localización para el mercado italiano cuando corresponda.',
     servicesTitle: 'Servicios',
     noetomTitle: 'NoeTom · en desarrollo',
     companyTitle: 'Sobre Mí & Recursos',
