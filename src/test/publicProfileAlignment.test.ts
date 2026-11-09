@@ -50,7 +50,10 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
     expect(trustCopy).toMatch(/dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano/i);
     for(const lang of LANGS){
       const category=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
-      expect(category?.description,lang).toMatch(/IT\s*↔\s*EN\/FR\/ES|between Italian and English, French and Spanish|dans les deux sens|ambas direcciones|tra l’italiano.*inglese.*francese.*spagnolo|entre l’italien et l’anglais|entre el italiano y el inglés/i);
+      if(lang==="it") expect(category?.description,lang).toMatch(/tra l’italiano e l’inglese, il francese e lo spagnolo/);
+      if(lang==="en") expect(category?.description,lang).toMatch(/translate between Italian and English, French and Spanish/);
+      if(lang==="fr") expect(category?.description,lang).toMatch(/de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien/);
+      if(lang==="es") expect(category?.description,lang).toMatch(/del italiano al inglés, francés y español y de estos idiomas al italiano/);
     }
   });
   it("respects the international service positioning and bidirectional translation offer",()=>{
@@ -59,8 +62,8 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       expect(cat?.description.length,lang).toBeGreaterThan(160);
       if(lang==="it") expect(cat?.description).toContain("tra l’italiano e l’inglese");
       if(lang==="en") expect(cat?.description).toContain("translate between Italian and English, French and Spanish");
-      if(lang==="fr") expect(cat?.description).toContain("entre l’italien et l’anglais");
-      if(lang==="es") expect(cat?.description).toContain("entre el italiano y el inglés");
+      if(lang==="fr") expect(cat?.description).toContain("de l’italien vers l’anglais");
+      if(lang==="es") expect(cat?.description).toContain("del italiano al inglés");
       if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
     }
     expect(enLocale.servicesSection.categories[0].description).toContain("Italian-language");
