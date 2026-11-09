@@ -39,7 +39,7 @@ export const frLocale: TranslationDictionary = {
     subtitle: "Secrétariat à distance, back-office, relation client, communication professionnelle, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.",
     headline: 'Des échanges plus clairs et un quotidien mieux organisé.',
     desc1: "Je mets plus de vingt ans d’expérience professionnelle à votre service pour vous aider à mieux organiser votre travail au quotidien. L’italien est ma langue maternelle et je suis formée à la traduction spécialisée.",
-    desc2: 'Courriels, agenda, suivi des commandes, relation client existante, contenus web et traductions : des missions définies selon vos besoins.',
+    desc2: 'Courriels, agenda, suivi des commandes, relation client, contenus web et traductions : des missions définies selon vos besoins.',
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Demande sans engagement',
     description:
