@@ -441,7 +441,7 @@ export const itLocale: TranslationDictionary = {
       {
         num: '04',
         title: 'Autonomia e continuità',
-        desc: 'Gestisco le attività in autonomia fornendoti aggiornamenti periodici, così puoi concentrarti sulle tue priorità di business.',
+        desc: 'Gestisco le attività concordate con autonomia operativa, fornendoti aggiornamenti e sottoponendo a conferma le decisioni che lo richiedono.',
       },
     ],
   },
@@ -469,7 +469,7 @@ export const itLocale: TranslationDictionary = {
       gdpr: 'Ho letto e accetto l’informativa sulla privacy per il trattamento dei dati personali (GDPR).',
       submit: 'Invia il messaggio',
       sending: 'Invio in corso...',
-      successTitle: 'Messaggio inviato con successo!',
+      successTitle: 'Richiesta accettata dal servizio di inoltro',
       successDesc: 'Grazie per avermi scritto. Il servizio di inoltro ha accettato la richiesta; il recapito finale deve ancora essere verificato.',
       errorMsg: 'Compila tutti i campi obbligatori contrassegnati con l’asterisco e accetta l’informativa privacy.',
     },
