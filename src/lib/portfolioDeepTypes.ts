@@ -8,7 +8,7 @@ export interface TerminologyChoice {
   explanation: Localised;
 }
 
-export type PublicTranslationDirection = "EN-IT" | "FR-IT" | "ES-IT";
+export type PublicTranslationDirection = "EN-IT" | "FR-IT" | "ES-IT" | "IT-EN" | "IT-FR" | "IT-ES";
 
 export interface TranslationDeepCase {
   id: string;
@@ -33,5 +33,6 @@ export const TRANSLATION_SAMPLE_NOTICE: Localised = {
 };
 
 export const DIRECTION_LABELS: Record<PublicTranslationDirection, string> = {
-  "EN-IT": "EN → IT", "FR-IT": "FR → IT", "ES-IT": "ES → IT"
+  "EN-IT": "EN → IT", "FR-IT": "FR → IT", "ES-IT": "ES → IT",
+  "IT-EN": "IT → EN", "IT-FR": "IT → FR", "IT-ES": "IT → ES"
 };
