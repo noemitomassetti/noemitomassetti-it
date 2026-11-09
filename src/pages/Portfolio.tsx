@@ -64,10 +64,10 @@ export default function Portfolio() {
   };
 
   const descriptions = {
-    it: "Portfolio approfondito: traduzioni professionali EN/FR/ES → IT con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
-    en: "Detailed EN/FR/ES → IT translation samples, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
-    fr: "Portfolio détaillé : traductions professionnelles EN/FR/ES → IT, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
-    es: "Portfolio detallado: traducciones profesionales EN/FR/ES → IT, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
+    it: "Portfolio approfondito: traduzioni professionali IT ↔ EN/FR/ES con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
+    en: "Detailed IT ↔ EN/FR/ES translation samples, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
+    fr: "Portfolio détaillé : traductions professionnelles IT ↔ EN/FR/ES, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
+    es: "Portfolio detallado: traducciones profesionales IT ↔ EN/FR/ES, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
   };
 
   useSEO({
