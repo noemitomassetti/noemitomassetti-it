@@ -5,7 +5,7 @@ export const frLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Assistante virtuelle multilingue et traductrice | Noemi Tomassetti',
-    homeDesc: 'Assistance virtuelle multilingue, secrétariat organisationnel, back-office, relation client écrite, contenus numériques et traduction IT ↔ EN/FR/ES.',
+    homeDesc: 'Assistance virtuelle multilingue, secrétariat à distance, back-office, relation client, communication professionnelle, contenus numériques et traduction IT ↔ EN/FR/ES.',
     servicesTitle: 'Assistance virtuelle et traduction professionnelle | Noemi Tomassetti',
     servicesDesc: 'Secrétariat à distance, back-office opérationnel, suivi écrit des clients existants, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
@@ -36,7 +36,7 @@ export const frLocale: TranslationDictionary = {
     badge: 'ASSISTANTE VIRTUELLE MULTILINGUE',
     titleLine1: 'Assistance virtuelle, back-office et traduction',
     titleHighlight: 'pour accompagner votre activité',
-    subtitle: "Secrétariat, back-office, accompagnement écrit des clients existants, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.",
+    subtitle: "Secrétariat à distance, back-office, relation client, communication professionnelle, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.",
     headline: 'Des échanges plus clairs et un quotidien mieux organisé.',
     desc1: "Je mets plus de vingt ans d’expérience professionnelle à votre service pour vous aider à mieux organiser votre travail au quotidien. L’italien est ma langue maternelle et je suis formée à la traduction spécialisée.",
     desc2: 'Courriels, agenda, suivi des commandes, relation client existante, contenus web et traductions : des missions définies selon vos besoins.',
