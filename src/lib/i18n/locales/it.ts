@@ -155,7 +155,7 @@ export const itLocale: TranslationDictionary = {
           'Riorganizzazione di cartelle cloud, impostazione di strumenti di lavoro online e procedure su misura per snellire le attività ripetitive della tua giornata.',
         iconName: 'Cpu',
         items: [
-          'Riorganizzazione Google Workspace e cloud drive',
+          'Organizzazione di cartelle e documenti in Google Workspace e cloud drive',
           'Configurazione tool online (calendari, form, aree clienti)',
           'Supporto pratico con strumenti digitali di lavoro',
           'Definizione procedure operative interne (SOP)',
@@ -170,7 +170,7 @@ export const itLocale: TranslationDictionary = {
     tag: 'COMUNICAZIONE SENZA FRONTIERE',
     title: 'Comunicare con clienti e partner internazionali',
     description:
-      'Lavorare con l’estero richiede più di una traduzione automatica: richiede sensibilità culturale, vocabolario appropriato e gestione tempestiva dei contatti.',
+      'Lavorare con l’estero richiede sensibilità culturale, terminologia appropriata e comunicazioni chiare con gli interlocutori già acquisiti.',
     points: [
       {
         title: 'Quattro lingue operative',
@@ -178,7 +178,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Rispetto del contesto',
-        desc: 'Le espressioni idiomatiche e il tono di voce vengono modulati affinché la tua proposta risulti sempre autentica e affidabile.',
+        desc: 'Adatto lessico, registro e tono al destinatario, nel rispetto del contenuto originale e delle indicazioni concordate.',
       },
       {
         title: 'Supporto unificato',
