@@ -681,9 +681,9 @@ export default function IndexPage() {
                 {lang === "it"
                   ? "Posso occuparmi di alcune delle attività di segreteria, organizzazione, comunicazione e supporto operativo che fanno parte della gestione quotidiana della tua attività."
                   : lang === "fr"
-                  ? "Je peux prendre en charge la correspondance avec les clients italiens existants, les tâches de back-office convenues, la traduction professionnelle de l’anglais, du français et de l’espagnol vers l’italien et la localisation pour l’Italie."
+                  ? "Je peux prendre en charge la correspondance avec les clients italiens existants, les tâches de back-office convenues, la traduction professionnelle dans les deux sens entre l’italien et l’anglais, le français et l’espagnol et la localisation pour l’Italie."
                   : lang === "es"
-                  ? "Puedo encargarme de la atención escrita a clientes italianos existentes, tareas operativas acordadas, traducción profesional del inglés, francés y español al italiano y localización para Italia."
+                  ? "Puedo encargarme de la atención escrita a clientes italianos existentes, tareas operativas acordadas, traducción profesional en ambas direcciones entre el italiano y el inglés, francés y español, y localización para Italia."
                   : "I can help with Italy-related back-office tasks, written support for existing Italian customers, professional translation in both directions between Italian and EN/FR/ES, and localisation for Italy."}
               </p>
               <p>
@@ -803,7 +803,7 @@ export default function IndexPage() {
               </>
             ) : (
               <>
-                Italian is my native language. My professional translations are from English, French and Spanish into Italian, with each text assessed for subject and intended use. I also provide agreed operational support for multilingual correspondence with existing customers and partners.
+                Italian is my native language. I translate in both directions between Italian and English, French and Spanish, assessing each text by subject and intended use. I also provide agreed operational support for multilingual correspondence with existing customers and partners.
               </>
             )}
           </p>
