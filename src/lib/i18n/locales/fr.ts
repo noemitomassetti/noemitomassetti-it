@@ -139,7 +139,7 @@ export const frLocale: TranslationDictionary = {
           "Selon la mission, les recherches peuvent porter sur des informations publiques, la vérification de sources, la comparaison de fournisseurs ou d’outils numériques et la préparation de synthèses pour des projets déjà définis. Aucune recherche de prospects ni acquisition commerciale.",
         iconName: 'Search',
         items: [
-          'Veille concurrentielle et analyse tarifaire',
+          'Comparaison documentée de concurrents et tarifs publics',
           'Comparaison de fournisseurs et d’outils pour des activités existantes',
           'Collecte de données et recoupement des sources',
           'Recherche documentaire pour des projets existants',
@@ -156,7 +156,7 @@ export const frLocale: TranslationDictionary = {
         iconName: 'Cpu',
         items: [
           'Restructuration Google Workspace et espaces cloud',
-          'Configuration d’outils digitaux (agendas, formulaires)',
+          'Paramétrage simple d’outils numériques convenus (agendas, formulaires)',
           'Soutien pratique aux outils bureautiques et en ligne',
           'Élaboration de procédures opérationnelles (SOP)',
           'Organisation du suivi et des communications clients',
