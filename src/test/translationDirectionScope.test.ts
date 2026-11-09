@@ -21,7 +21,7 @@ const publicCopyFiles = [
 describe("Professional translation direction and public service scope", () => {
   it("advertises professional translation in both directions between Italian and EN/FR/ES", () => {
     const expectations = {
-      it: /dall[’']italiano verso l[’']inglese.*dal francese e dallo spagnolo verso l[’']italiano/i,
+      it: /dall[’']italiano verso l[’']inglese, il francese e lo spagnolo e da queste lingue verso l[’']italiano/i,
       en: /both from Italian into English, French and Spanish and from these languages into Italian/i,
       fr: /de l[’']italien vers l[’']anglais, le français et l[’']espagnol.*de ces langues vers l[’']italien/i,
       es: /tanto del italiano al inglés, francés y español como de estos idiomas al italiano/i,
@@ -37,7 +37,7 @@ describe("Professional translation direction and public service scope", () => {
     expect(directions).toEqual(["EN-IT", "ES-IT", "FR-IT", "IT-EN", "IT-ES", "IT-FR"]);
     expect(TRANSLATION_DEEP_CASES).toHaveLength(9);
     expect(Object.keys(DIRECTION_LABELS).sort()).toEqual(directions);
-    for (const id of ["it-en-existing-order-update", "it-fr-training-workshop", "it-es-product-information"]) {
+    for (const id of ["it-en-existing-order-update", "it-fr-training-workshop", "it-es-desk-accessory-catalogue"]) {
       expect(getDeepPortfolioItem(id)?.kind).toBe("translation");
     }
     expect(DEEP_PORTFOLIO_ITEMS.filter(entry => entry.kind === "translation")).toHaveLength(9);
