@@ -3,7 +3,7 @@ import { TRANSLATION_DEEP_CASES } from "../lib/portfolioDeepCatalog";
 
 describe("Public translation sample editorial quality", () => {
   it("pairs every source segment with exactly one target segment", () => {
-    expect(TRANSLATION_DEEP_CASES).toHaveLength(9);
+    expect(TRANSLATION_DEEP_CASES).toHaveLength(11);
     for (const sample of TRANSLATION_DEEP_CASES) {
       expect(sample.source.length, sample.id).toBeGreaterThan(0);
       expect(sample.target.length, sample.id).toBe(sample.source.length);
