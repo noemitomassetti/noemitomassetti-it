@@ -935,8 +935,8 @@ export default function IndexPage() {
           </h2>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
             {lang === "it"
-              ? "Il mio supporto si concentra su alcune aree precise. Puoi affidarmi una singola attività oppure costruire nel tempo una collaborazione più ampia."
-              : lang === "fr" ? "Mon accompagnement porte sur des tâches bien définies. Vous pouvez commencer par une mission ponctuelle ou mettre en place une collaboration suivie." : lang === "es" ? "Mi apoyo se centra en tareas concretas. Puedes empezar por un encargo puntual o establecer una colaboración continuada." : "My assistance focuses on well-defined domains. You can start with a single assignment or establish an ongoing operational partnership."}
+              ? "Ti presento alcune attività che posso svolgere. Puoi richiedere un intervento specifico o una collaborazione continuativa: contenuti, modalità e tempi vengono definiti insieme nel preventivo."
+              : lang === "fr" ? "Voici des exemples de tâches que je peux prendre en charge. Une mission ponctuelle ou une collaboration suivie est définie avec vous dans un devis précisant les prestations, les modalités et les délais." : lang === "es" ? "Estos son ejemplos de tareas que puedo realizar. Tanto en encargos puntuales como en colaboraciones continuadas, el presupuesto define las actividades, las condiciones y los plazos acordados." : "These are examples of tasks I can take on. Whether you need a one-off assignment or ongoing support, the written quote will specify the agreed activities, working arrangements and deadlines."}
           </p>
         </div>
 
@@ -963,12 +963,12 @@ export default function IndexPage() {
                 <div className="space-y-2 text-foreground/80 text-sm leading-relaxed mb-6 flex-grow">
                   <p className="font-semibold text-foreground/90 text-xs uppercase tracking-wider">
                     {lang === "it"
-                      ? "Cosa include:"
+                      ? "Esempi di attività possibili:"
                       : lang === "fr"
-                      ? "Exemples d'interventions :"
+                      ? "Exemples de tâches possibles :"
                       : lang === "es"
-                      ? "Qué incluye:"
-                      : "What is included:"}
+                      ? "Ejemplos de tareas posibles:"
+                      : "Examples of tasks I can take on:"}
                   </p>
                   <ul className="space-y-1.5 pl-2">
                     {svc.items.map((b, idx) => (
