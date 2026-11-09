@@ -118,18 +118,18 @@ export const enLocale: TranslationDictionary = {
       },
       {
         id: 'content-writing',
-        title: 'Italian Content Editing & Revision',
-        subtitle: 'Clear, compelling messaging that builds credibility.',
+        title: 'Professional Content Writing & Editing',
+        subtitle: 'Clear, appropriate wording for professional audiences.',
         description:
-          'I review, edit and adapt Italian-language website copy, customer emails, newsletters and AI-assisted drafts to make them clear, natural and consistent for readers in Italy.',
+          'I write and edit professional web content, customer emails, newsletters and existing drafts, including Italian-language localisation and agreed multilingual material. Each brief defines the audience, channel and language.',
         iconName: 'PenTool',
         items: [
-          'Italian website and landing page copy editing',
-          'Italian tone-of-voice and style adaptation',
-          'Italian-language newsletters and client emails',
-          'Service guides and FAQs in Italian',
-          'Editing articles and professional content in Italian',
-          'Review of machine-generated Italian-language drafts',
+          'Website and landing-page copy review',
+          'Tone-of-voice and style adaptation',
+          'Newsletters and emails for existing customers',
+          'Service guides and FAQs',
+          'Editing articles and professional content',
+          'Review of AI-assisted and machine-generated drafts',
         ],
       },
       {
@@ -140,10 +140,10 @@ export const enLocale: TranslationDictionary = {
           "Gathering, checking and comparing information, sources, suppliers and digital tools solely in support of a client's existing operations. No contact sourcing, customer acquisition or prospecting.",
         iconName: 'Search',
         items: [
-          'Competitor and publicly available pricing comparisons for Italy-related projects',
-          'Supplier and digital-tool comparisons for existing Italy-related activities',
+          'Competitor and public pricing comparisons for existing projects',
+          'Supplier and digital-tool comparisons for agreed work',
           'Industry data gathering & source validation',
-          'Italy-related information research for existing projects',
+          'Information research to support existing projects',
           'Executive summary reports with key takeaways',
           'Structured spreadsheets & data curation',
         ],
@@ -151,7 +151,7 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'digital-support',
         title: 'Digital Support',
-        subtitle: 'Keeping the tools used for your Italian operations organised.',
+        subtitle: 'Practical organisation of everyday digital tools.',
         description:
           'From organising Google Workspace and cloud drives to setting up online tools and standard procedures, I help independent professionals operate with clarity and efficiency.',
         iconName: 'Cpu',
@@ -164,7 +164,7 @@ export const enLocale: TranslationDictionary = {
           'Basic digital assistance & setup support',
         ],
       },
-      { id: 'web-landing', title: 'Italian Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'Editing, language adaptation and organisation of content for existing websites. Website development, hosting and technical maintenance are outside this editorial content service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
+      { id: 'web-landing', title: 'Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'Editing, language adaptation and organisation of content for existing websites. Website development, hosting and technical maintenance are outside this editorial content service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian-market localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
     ],
   },
   multilingualAdvantage: {
