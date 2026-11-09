@@ -189,7 +189,7 @@ export default function ServicesPage() {
               <h3 className="text-lg sm:text-xl font-bold text-foreground">
                 {lang === "it"
                   ? "Hai contenuti professionali da tradurre o localizzare?"
-                  : lang === "fr" ? "Vous vous adressez à une clientèle italienne ?"
+                  : lang === "fr" ? "Vous souhaitez traduire ou adapter vos contenus ?"
                   : lang === "es" ? "¿Necesitas traducir o adaptar contenidos profesionales?"
                   : "Need translation between Italian and EN/FR/ES?"}
               </h3>
