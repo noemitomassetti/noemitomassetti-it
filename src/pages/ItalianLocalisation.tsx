@@ -561,7 +561,7 @@ export default function ItalianLocalisationPage() {
         <div className="container max-w-4xl px-4 sm:px-6">
           <ContactForm
             lang={lang}
-            selectedService={lang === "it" ? "Traduzioni professionali EN/FR/ES → IT e localizzazione" : lang === "fr" ? "Traduction professionnelle EN/FR/ES → IT et localisation" : lang === "es" ? "Traducción profesional EN/FR/ES → IT y localización" : "Professional EN/FR/ES → IT translation & localisation"}
+            selectedService={lang === "it" ? "Traduzioni professionali IT ↔ EN/FR/ES e localizzazione" : lang === "fr" ? "Traduction professionnelle IT ↔ EN/FR/ES et localisation" : lang === "es" ? "Traducción profesional IT ↔ EN/FR/ES y localización" : "Professional IT ↔ EN/FR/ES translation & localisation"}
           />
         </div>
       </section>
