@@ -148,7 +148,7 @@ export default function Portfolio() {
       details:{it:"Una selezione da leggere subito",en:"Start with a curated selection",fr:"Une première sélection à découvrir",es:"Una selección para empezar"} },
     { id:"portfolio-complete-dossiers", number:"02",
       labels:{it:"26 dossier approfonditi",en:"26 in-depth dossiers",fr:"26 dossiers détaillés",es:"26 dosieres detallados"},
-      details:{it:"Traduzioni a fronte e processi reali simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
+      details:{it:"Traduzioni a fronte e processi operativi simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
     { id:"portfolio-legacy-cases", number:"03",
       labels:{it:"18 casi di metodo",en:"18 methodology cases",fr:"18 études méthodologiques",es:"18 casos metodológicos"},
       details:{it:"Scelte operative e revisioni commentate",en:"Decisions and editorial notes",fr:"Décisions et commentaires de révision",es:"Decisiones y notas de revisión"} },
@@ -698,7 +698,7 @@ export default function Portfolio() {
                                     : lang === "fr"
                                     ? "Traduction Italienne de Noemi (Rendu Littéraire)"
                                     : lang === "es"
-                                    ? "Traducción al Italiano por Noemi (Rendición Narrativa)"
+                                    ? "Traducción literaria al italiano — versión propuesta por Noemi"
                                     : "Italian Target Translation (Literary Rendering by Noemi)"}
                                 </span>
                                 <div className="text-foreground/90 whitespace-pre-line font-serif text-sm leading-relaxed">
