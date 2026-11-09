@@ -22,7 +22,7 @@ const previewLabels:Record<Language,string> = {
   es: "Vista previa del trabajo",
 };
 const DIRECTIONS: PublicTranslationDirection[] = ["EN-IT","FR-IT","ES-IT","IT-EN","IT-FR","IT-ES"];
-const normalise = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase().trim();
+const normalise = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[→↔–—/_-]+/g," ").replace(/\s+/g," ").toLocaleLowerCase().trim();
 
 export function PortfolioDeepShowcase({lang}:{lang:Language}) {
   const [filter,setFilter]=useState<Filter>("all");
@@ -41,8 +41,15 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
       if(!filterMatches) return false;
       if(!needle) return true;
       const searchable=entry.kind==="translation"
-        ? [entry.item.title[lang],entry.item.context[lang],entry.item.domain[lang],entry.item.direction]
-        : [entry.item.title[lang],entry.item.scenario[lang],entry.item.service[lang],entry.item.category];
+        ? [entry.item.id,entry.item.title[lang],entry.item.context[lang],entry.item.domain[lang],entry.item.direction,
+            entry.item.method[lang],entry.item.review[lang],entry.item.output[lang],
+            ...entry.item.source,...entry.item.target,
+            ...entry.item.terminology.flatMap(term=>[term.source,term.target,term.explanation[lang]])]
+        : [entry.item.id,entry.item.title[lang],entry.item.scenario[lang],entry.item.service[lang],
+            entry.item.objective[lang],entry.item.category,entry.item.handoff[lang],
+            ...entry.item.workflow.map(step=>step[lang]),
+            ...entry.item.qualityChecks.map(check=>check[lang]),
+            ...entry.item.artifacts.flatMap(artifact=>[artifact.title[lang],artifact.explanation[lang],artifact.content])];
       return normalise(searchable.join(" ")).includes(needle);
     });
   },[filter,query,lang]);
