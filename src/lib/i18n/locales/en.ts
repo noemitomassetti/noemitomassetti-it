@@ -102,7 +102,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         id: 'translation-localization',
-        title: 'EN/FR/ES → IT Translation and Italian Localisation',
+        title: 'IT ↔ EN/FR/ES Translation and Italian Localisation',
         subtitle: 'Professional translation between Italian and English, French and Spanish; Italian-market localisation is a core focus.',
         description:
           "I translate between Italian and English, French and Spanish, assessing each assignment by subject, complexity and target audience. My services also include localisation of websites, catalogues and professional communications for Italian readers, as well as agreed written support for existing customers in Italian, English, French and Spanish.",
