@@ -80,7 +80,7 @@ export const esLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'QUÉ HAGO',
     title: 'Asistencia virtual y traducción profesional',
-    subtitle: 'Secretaría, back office, atención a clientes, contenidos digitales y traducción IT ↔ EN/FR/ES.',
+    subtitle: 'Estos son ejemplos de servicios posibles, no un paquete que lo incluya todo. Cada presupuesto especifica las tareas y los entregables acordados.',
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
@@ -88,7 +88,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Secretaría organizativa y back office operativo',
         subtitle: 'Organización profesional, pedidos y atención escrita a clientes.',
         description:
-          "Secretaría organizativa y back office operativo: correos, agenda, entrada de datos, seguimiento de pedidos, listas de precios aprobadas, presupuestos según tus instrucciones y atención escrita a clientes, también en italiano. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
+          "Según el encargo, puedo organizar el correo y la agenda, introducir datos, hacer seguimiento de pedidos, actualizar listas de precios ya aprobadas, preparar presupuestos según tus instrucciones y gestionar comunicaciones escritas con clientes. Las tareas se concretan antes de empezar. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
         iconName: 'Mail',
         items: [
           'Clasificación y organización del correo profesional',
@@ -104,7 +104,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Traducción IT ↔ EN/FR/ES y localización',
         subtitle: 'Traducción profesional en ambas direcciones entre el italiano y el inglés, francés y español, y localización para el mercado italiano.',
         description:
-          "Traduzco profesionalmente del italiano al inglés, francés y español y de estos idiomas al italiano, tras valorar el tema, la complejidad y el público destinatario. También localizo contenidos para el mercado italiano y presto apoyo operativo acordado para la comunicación con clientes.",
+          "Traduzco del italiano al inglés, francés y español, y de estos idiomas al italiano. Según las necesidades, el encargo puede comprender traducción, localización para el mercado italiano, revisión lingüística o apoyo a la correspondencia multilingüe. Los idiomas, los textos y los entregables se definen en el presupuesto.",
         iconName: 'Globe',
         items: [
           'Localización al italiano de sitios web y páginas de venta',
@@ -120,7 +120,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Redacción y revisión de contenidos profesionales',
         subtitle: 'Mensajes claros, persuasivos y alineados con tu público.',
         description:
-          'Redacto y reviso contenidos profesionales para webs, comunicaciones con clientes, boletines y borradores, con adaptación al italiano cuando el encargo lo requiera.',
+          'Según el proyecto, puedo redactar o revisar páginas web, comunicaciones con clientes, boletines y otros contenidos profesionales, incluidos borradores existentes o elaborados con ayuda de IA. El tipo de intervención y los entregables se acuerdan previamente.',
         iconName: 'PenTool',
         items: [
           'Revisión de textos web y páginas de destino',
@@ -136,7 +136,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Investigación documental y comparación de información',
         subtitle: 'Información contrastada para respaldar tus decisiones de negocio.',
         description:
-          "Recopilación, comprobación y comparación de información, fuentes, proveedores y herramientas digitales exclusivamente para apoyar las actividades existentes del cliente. Sin búsqueda de contactos, captación de clientes ni prospección.",
+          "Según el encargo, las investigaciones pueden incluir la consulta de información pública, la verificación de fuentes, la comparación de proveedores o herramientas digitales y la elaboración de informes para proyectos ya definidos. Sin búsqueda de contactos comerciales, captación de clientes ni prospección.",
         iconName: 'Search',
         items: [
           'Comparación de competidores y precios públicos para proyectos existentes',
@@ -152,7 +152,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Organización y herramientas digitales',
         subtitle: 'Optimización de tus herramientas y procedimientos de trabajo.',
         description:
-          'Reorganización de tus carpetas compartidas, configuración de herramientas online y definición de procedimientos prácticos para agilizar tus tareas operativas diarias.',
+          'El apoyo puede incluir la organización de documentos compartidos, la configuración básica de herramientas digitales ya elegidas y la preparación de procedimientos operativos sencillos. Los accesos, las herramientas y las tareas se acuerdan antes de empezar.',
         iconName: 'Cpu',
         items: [
           'Reorganización de Google Workspace y discos en la nube',
@@ -163,7 +163,7 @@ export const esLocale: TranslationDictionary = {
           'Soporte operativo y configuraciones básicas',
         ],
       },
-      { id: 'web-landing', title: 'Contenidos para webs y páginas de destino', subtitle: 'Mensajes web más claros y bien organizados.', description: 'Revisión, adaptación lingüística y organización de contenidos para webs existentes. El desarrollo técnico, el alojamiento y el mantenimiento web quedan fuera de este servicio de contenidos.', iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización de contenido web para el mercado italiano', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
+      { id: 'web-landing', title: 'Contenidos para webs y páginas de destino', subtitle: 'Mensajes web más claros y bien organizados.', description: 'Para webs existentes, puedo revisar textos, adaptarlos lingüísticamente u organizar títulos, preguntas frecuentes y contenidos, según lo acordado. El desarrollo técnico, el alojamiento y el mantenimiento web quedan fuera de este servicio editorial.', iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización de contenido web para el mercado italiano', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
     ],
   },
   multilingualAdvantage: {
@@ -189,7 +189,7 @@ export const esLocale: TranslationDictionary = {
   },
   productized: {
     tag: 'FORMAS DE COLABORAR', title: 'Servicios concretos y entregables claros',
-    subtitle: 'Ejemplos de encargos con un alcance definido. Los resultados y plazos se acuerdan por escrito.',
+    subtitle: 'Ejemplos de colaboraciones y posibles entregables, no paquetes cerrados con todo incluido. El presupuesto detalla los servicios que se contratan.',
     packages: [
       {id: 'p1', title: 'Back office organizado', badge: 'Secretaría operativa', description: 'Apoyo práctico para organizar tareas habituales, correos y documentos.',
        deliverables: ['Análisis de tareas delegables', 'Organización acordada de correos, archivos y procesos', 'Resumen de actividades y prioridades'], turnaround: 'Por acordar'},
@@ -200,7 +200,7 @@ export const esLocale: TranslationDictionary = {
       {id: 'p4', title: 'Revisión de contenido existente', badge: 'Claridad y coherencia', description: 'Revisión cuidadosa de materiales profesionales y multilingües existentes.',
        deliverables: ['Evaluación del texto y los objetivos', 'Revisión de estructura, tono y legibilidad', 'Documento final con cambios identificables'], turnaround: 'Según alcance'},
     ],
-    customScopeNote: 'Cada encargo se adapta a tus necesidades. No se requiere llamada previa: envía la información y recibe una propuesta escrita.',
+    customScopeNote: 'Los ejemplos anteriores no están incluidos automáticamente. Antes de empezar, acordamos por escrito las tareas, los entregables, los plazos y los honorarios. Puedes solicitar un presupuesto sin llamada previa.',
   },
   noetomTeaser: {
     tag: 'PROYECTO INTERNO · PRODUCTIVIDAD',
