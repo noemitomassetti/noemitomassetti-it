@@ -548,7 +548,7 @@ export default function IndexPage() {
                 : lang === "fr"
                 ? "Noemi Tomassetti - Assistante virtuelle pour professionnels et petites entreprises. Traduction professionnelle IT ↔ EN/FR/ES, localisation et soutien opérationnel lié à l’Italie."
                 : lang === "es"
-                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Traducción profesional del inglés, francés y español al italiano, localización al italiano y apoyo operativo relacionado con Italia."
+                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Traducción profesional IT ↔ EN/FR/ES, localización de contenidos y asistencia virtual operativa."
                 : "Noemi Tomassetti - Virtual Assistant for professionals and small businesses. Operational back office, organisational support, multilingual communication and Italian-language website content."}
             </h1>
 
