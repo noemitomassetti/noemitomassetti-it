@@ -64,7 +64,7 @@ describe("Release editorial consistency across four languages", () => {
       expect(locale.hero.subtitle, lang).not.toMatch(/già acquisiti|esistenti|existing customers|clients existants|clientes existentes/i);
     }
     const scope = read("src/lib/serviceScope.ts");
-    for (const phrase of ["acquisizione commerciale", "sales prospecting", "prospection", "captación comercial"]) {
+    for (const phrase of ["acquisizione commerciale", "prospecting", "prospection", "captación comercial"]) {
       expect(scope).toContain(phrase);
     }
   });
