@@ -254,12 +254,12 @@ export default function ServicesPage() {
                     <div className="pt-2 border-t border-border/40">
                       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
                         {lang === "it"
-                          ? "Cosa include:"
+                          ? "Attività che posso svolgere:"
                           : lang === "fr"
-                          ? "Exemples de réalisations :"
+                          ? "Exemples de prestations possibles :"
                           : lang === "es"
-                          ? "Qué incluye:"
-                          : "What is included:"}
+                          ? "Ejemplos de tareas que puedo realizar:"
+                          : "Examples of available services:"}
                       </p>
                       <ul className="space-y-2">
                         {cat.items.map((item, i) => (
@@ -282,12 +282,12 @@ export default function ServicesPage() {
                     >
                       <span>
                         {lang === "it"
-                          ? "Richiedi questo servizio"
+                          ? "Chiedi un preventivo per quest'area"
                           : lang === "fr"
-                          ? "Demander ce service"
+                          ? "Demander un devis pour cette prestation"
                           : lang === "es"
-                          ? "Solicitar este servicio"
-                          : "Inquire about this service"}
+                          ? "Solicitar un presupuesto para este servicio"
+                          : "Request a quote for this service"}
                       </span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Button>
@@ -338,12 +338,12 @@ export default function ServicesPage() {
                   <div className="pt-3 border-t border-border/40">
                     <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2.5">
                       {lang === "it"
-                        ? "Risultati previsti:"
+                        ? "Esempi di risultati possibili:"
                         : lang === "fr"
-                        ? "Livrables prévus :"
+                        ? "Exemples de livrables possibles :"
                         : lang === "es"
-                        ? "Entregables previstos:"
-                        : "Expected deliverables:"}
+                        ? "Ejemplos de entregables posibles:"
+                        : "Examples of possible deliverables:"}
                     </p>
                     <ul className="space-y-2">
                       {pkg.deliverables.map((d, idx) => (
