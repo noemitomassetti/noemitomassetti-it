@@ -147,7 +147,7 @@ export default function Portfolio() {
       labels:{it:"Documenti in evidenza",en:"Featured samples",fr:"Exemples à la une",es:"Muestras destacadas"},
       details:{it:"Una selezione da leggere subito",en:"Start with a curated selection",fr:"Une première sélection à découvrir",es:"Una selección para empezar"} },
     { id:"portfolio-complete-dossiers", number:"02",
-      labels:{it:"21 dossier approfonditi",en:"21 in-depth dossiers",fr:"21 dossiers détaillés",es:"21 dosieres detallados"},
+      labels:{it:"24 dossier approfonditi",en:"24 in-depth dossiers",fr:"24 dossiers détaillés",es:"24 dosieres detallados"},
       details:{it:"Traduzioni a fronte e processi reali simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
     { id:"portfolio-legacy-cases", number:"03",
       labels:{it:"18 casi di metodo",en:"18 methodology cases",fr:"18 études méthodologiques",es:"18 casos metodológicos"},
