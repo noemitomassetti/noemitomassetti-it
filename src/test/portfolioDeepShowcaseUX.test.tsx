@@ -12,8 +12,8 @@ describe("Deep portfolio user experience", () => {
   it("shows an accessible featured selection and exposes all samples on request", () => {
     mount();
     const status = screen.getByRole("status");
-    expect(status).toHaveTextContent("11 / 24");
-    expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(11);
+    expect(status).toHaveTextContent("8 / 24");
+    expect(screen.getAllByRole("link", { name: /Esplora il dossier completo:/ })).toHaveLength(8);
 
     fireEvent.click(screen.getByRole("button", { name: /Esplora tutti i dossier/ }));
     expect(status).toHaveTextContent("24 / 24");
@@ -28,7 +28,7 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("status")).toHaveTextContent("9 / 9");
 
     fireEvent.click(screen.getByRole("button", { name: "Tutti i dossier" }));
-    expect(screen.getByRole("status")).toHaveTextContent("11 / 24");
+    expect(screen.getByRole("status")).toHaveTextContent("8 / 24");
     expect(screen.getByRole("button", { name: /Esplora tutti i dossier/ })).toHaveAttribute("aria-expanded", "false");
   });
 
@@ -42,19 +42,19 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByRole("status")).toHaveTextContent("0 / 0");
     expect(screen.getByText(/Nessun dossier corrisponde alla ricerca/)).toBeInTheDocument();
     fireEvent.change(search, { target: { value: "" } });
-    expect(screen.getByRole("status")).toHaveTextContent("11 / 24");
+    expect(screen.getByRole("status")).toHaveTextContent("8 / 24");
   });
 
   it("shows faithful deliverable excerpts on the featured portfolio cards", () => {
     mount();
-    expect(screen.getAllByText("Anteprima dell’elaborato")).toHaveLength(11);
+    expect(screen.getAllByText("Anteprima dell’elaborato")).toHaveLength(8);
     expect(screen.queryByRole("button", { name: "IT → EN" })).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "IT → FR" })).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "IT → ES" })).toBeInTheDocument();
     expect(screen.getAllByText((_, element) =>
       element?.tagName.toLowerCase() === "p" && Boolean(element.textContent?.trim()) &&
       element.textContent !== "Anteprima dell’elaborato"
-    ).length).toBeGreaterThanOrEqual(11);
+    ).length).toBeGreaterThanOrEqual(8);
   });
 
   it("identifies demonstration work honestly and provides distinct link names", () => {
@@ -63,7 +63,7 @@ describe("Deep portfolio user experience", () => {
     expect(screen.getByText(/not excerpts from commissioned work/)).toBeInTheDocument();
     const labels = screen.getAllByRole("link", { name: /Read the complete dossier:/ })
       .map(link => link.getAttribute("aria-label"));
-    expect(labels).toHaveLength(11);
-    expect(new Set(labels).size).toBe(11);
+    expect(labels).toHaveLength(8);
+    expect(new Set(labels).size).toBe(8);
   });
 });
