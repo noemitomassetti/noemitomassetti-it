@@ -7,7 +7,7 @@ export const frLocale: TranslationDictionary = {
     homeTitle: 'Assistante virtuelle multilingue et traductrice | Noemi Tomassetti',
     homeDesc: 'Assistance virtuelle multilingue, secrétariat à distance, back-office, relation client, communication professionnelle, contenus numériques et traduction IT ↔ EN/FR/ES.',
     servicesTitle: 'Assistance virtuelle et traduction professionnelle | Noemi Tomassetti',
-    servicesDesc: 'Secrétariat à distance, back-office opérationnel, suivi écrit des clients existants, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.',
+    servicesDesc: 'Secrétariat à distance, back-office opérationnel, suivi écrit des clients, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
     noetomDesc: 'NoeTom est le projet opérationnel interne de Noemi Tomassetti, actuellement en développement et en phase de test privé.',
     aboutTitle: 'À Propos | Noemi Tomassetti',
@@ -86,16 +86,16 @@ export const frLocale: TranslationDictionary = {
       {
         id: 'virtual-assistance',
         title: 'Secrétariat à distance et back-office opérationnel',
-        subtitle: 'Une organisation fiable et un suivi écrit des clients existants.',
+        subtitle: 'Une organisation fiable et un suivi écrit des clients.',
         description:
-          "Secrétariat organisationnel et back-office opérationnel : courriels, agenda, saisie de données, suivi des commandes, tarifs validés, devis selon vos consignes et accompagnement écrit des clients existants, y compris en italien. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
+          "Secrétariat organisationnel et back-office opérationnel : courriels, agenda, saisie de données, suivi des commandes, tarifs validés, devis selon vos consignes et accompagnement écrit des clients, y compris en italien. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
         iconName: 'Mail',
         items: [
           'Tri et organisation des courriels professionnels',
           'Gestion d’agenda et coordination des rendez-vous',
-          'Service aux clients existants et communication professionnelle',
+          'Service aux clients et communication professionnelle',
           'Classement documentaire et archivage cloud',
-          'Suivi des demandes de vos clients existants',
+          'Suivi des demandes de vos clients',
           'Back-office opérationnel en lien avec les activités en Italie',
         ],
       },
@@ -104,7 +104,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Traductions IT ↔ EN/FR/ES et localisation',
         subtitle: 'Traduction professionnelle dans les deux sens entre l’italien et l’anglais, le français et l’espagnol, avec localisation pour le marché italien.',
         description:
-          "Je traduis professionnellement de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien, après évaluation du domaine, de la complexité et du public visé. Je propose également la localisation de contenus pour le marché italien et un soutien opérationnel convenu pour les échanges avec les clients existants.",
+          "Je traduis professionnellement de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien, après évaluation du domaine, de la complexité et du public visé. Je propose également la localisation de contenus pour le marché italien et un soutien opérationnel convenu pour les échanges avec les clients.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et pages de destination en italien',
@@ -120,12 +120,12 @@ export const frLocale: TranslationDictionary = {
         title: 'Rédaction et révision de contenus professionnels',
         subtitle: 'Des textes limpides, percutants et alignés sur vos objectifs.',
         description:
-          'Rédaction et révision de contenus professionnels : pages web, courriels destinés aux clients existants, lettres d’information et brouillons, avec adaptation linguistique vers l’italien lorsque le projet le prévoit.',
+          'Rédaction et révision de contenus professionnels : pages web, courriels destinés aux clients, lettres d’information et brouillons, avec adaptation linguistique vers l’italien lorsque le projet le prévoit.',
         iconName: 'PenTool',
         items: [
           'Révision de pages web et de contenus commerciaux',
           'Adaptation du style et du ton selon le destinataire',
-          'Rédaction et révision de messages destinés aux clients existants',
+          'Rédaction et révision de messages destinés aux clients',
           'Fiches de services et guides pratiques',
           'Révision d’articles et de contenus professionnels',
           'Révision critique de brouillons générés par IA',
@@ -182,7 +182,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         title: 'Fluidité opérationnelle',
-        desc: 'Des contenus professionnels aux échanges avec vos clients existants, je veille à la clarté du message, à la cohérence du vocabulaire et à l’adaptation au destinataire.',
+        desc: 'Des contenus professionnels aux échanges avec vos clients, je veille à la clarté du message, à la cohérence du vocabulaire et à l’adaptation au destinataire.',
       },
     ],
     badgeNote: 'Formation linguistique : diplôme en médiation linguistique (110/110 e lode) et master universitaire en traduction spécialisée',
@@ -195,7 +195,7 @@ export const frLocale: TranslationDictionary = {
        deliverables: ['Analyse des tâches à déléguer', 'Organisation des e-mails, fichiers et procédures convenues', 'Synthèse du travail et des priorités'], turnaround: 'À convenir'},
       {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes des clients déjà acquis, informations sur les commandes et suivis de service selon des procédures convenues.",
        deliverables: ['Modèles de réponses et FAQ', 'Gestion convenue des demandes écrites', 'Suivi des relances et activités'], turnaround: 'À convenir'},
-      {id: 'p3', title: 'Traduction IT ↔ EN/FR/ES et localisation pour le marché italien', badge: 'IT · EN · FR · ES', description: 'Traduction professionnelle entre l’italien et l’anglais, le français et l’espagnol, localisation pour l’Italie et correspondance multilingue convenue avec les clients existants.',
+      {id: 'p3', title: 'Traduction IT ↔ EN/FR/ES et localisation pour le marché italien', badge: 'IT · EN · FR · ES', description: 'Traduction professionnelle entre l’italien et l’anglais, le français et l’espagnol, localisation pour l’Italie et correspondance multilingue convenue avec les clients.',
        deliverables: ['Analyse des textes, publics et termes', 'Traduction IT ↔ EN/FR/ES ou localisation des contenus selon le public visé', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
       {id: 'p4', title: 'Révision de contenus existants', badge: 'Clarté et cohérence', description: 'Relecture et amélioration de documents professionnels et multilingues existants.',
        deliverables: ['Évaluation du texte et des objectifs', 'Amélioration de la structure, du ton et de la lisibilité', 'Document final avec modifications identifiables'], turnaround: 'Selon périmètre'},
@@ -539,7 +539,7 @@ export const frLocale: TranslationDictionary = {
     legalTitle: 'Informations Légales',
     rights: 'Tous droits réservés.',
     disclaimer:
-      "Secrétariat organisationnel, back-office opérationnel, suivi des clients existants, correspondance multilingue, traduction et contenus numériques. Je ne propose ni télémarketing, ni démarchage à froid, ni prospection ou acquisition de clients, ni comptabilité, facturation, gestion administrative ou services fiscaux.",
+      "Secrétariat organisationnel, back-office opérationnel, suivi des clients, correspondance multilingue, traduction et contenus numériques. Je ne propose ni télémarketing, ni démarchage à froid, ni prospection ou acquisition de clients, ni comptabilité, facturation, gestion administrative ou services fiscaux.",
     cookiePrefs: 'Préférences Cookies',
   },
 };
