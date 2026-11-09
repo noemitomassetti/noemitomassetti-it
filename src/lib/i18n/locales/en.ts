@@ -7,7 +7,7 @@ export const enLocale: TranslationDictionary = {
     homeTitle: 'Multilingual Virtual Assistant & Translator | Noemi Tomassetti',
     homeDesc: 'Multilingual virtual assistance, operational back office, written customer care for existing customers, digital content and professional translation between Italian and English, French and Spanish.',
     servicesTitle: 'Virtual Assistance & Translation Services | Noemi Tomassetti',
-    servicesDesc: 'Professional IT ↔ EN/FR/ES translation, Italian-market localisation, written support for existing customers in Italian, English, French and Spanish, and operational back-office assistance for businesses working with Italy.',
+    servicesDesc: 'Multilingual virtual assistance, scheduling and email management, operational back office, written customer care, content editing and translation in both directions between Italian and English, French and Spanish.',
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
     aboutTitle: 'About Noemi Tomassetti | Background & Philosophy',
@@ -65,7 +65,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Linguistic Accuracy',
-        desc: 'Native Italian speaker, with advanced English and French and upper-intermediate Spanish. I translate both from Italian into English, French and Spanish and from these languages into Italian; I also provide agreed written support for existing customers in all four languages.',
+        desc: 'A native Italian speaker with advanced English and French and upper-intermediate Spanish, I translate between Italian and each of these languages in both directions. I also assist with agreed written communication for existing customers.',
       },
       {
         title: 'Practical Digital Tools',
@@ -86,7 +86,7 @@ export const enLocale: TranslationDictionary = {
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Organisational Secretarial & Operational Back Office',
+        title: 'Virtual Secretarial Support & Operational Back Office',
         subtitle: 'Reliable organisation, order handling and written customer support.',
         description:
           "Organisational secretarial work and operational back-office support: email, scheduling, data entry, orders, approved price lists, operational quotations and written care for existing customers, including Italian-language correspondence. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
@@ -169,7 +169,7 @@ export const enLocale: TranslationDictionary = {
   },
   multilingualAdvantage: {
     tag: 'GLOBAL REACH',
-    title: 'Communicate Clearly with Italian Customers and Partners',
+    title: 'Communicate Clearly Across Languages',
     description:
       'Communicating with Italian audiences takes more than literal translation: accurate terminology, suitable tone and local context all matter.',
     points: [
@@ -183,7 +183,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Unified Multilingual Operations',
-        desc: 'From Italian-language website content to written support for existing Italian customers, I help maintain consistent communication.',
+        desc: 'From multilingual correspondence and content editing to written support for existing customers, I help keep communication clear, consistent and appropriate to its audience.',
       },
     ],
     badgeNote: 'Language Mediation degree (110/110 e lode) and Italian university Master’s qualification in Specialised Translation',
@@ -197,7 +197,7 @@ export const enLocale: TranslationDictionary = {
       {id: 'p2', title: 'Written customer care', badge: 'Client communications', description: "Written enquiries from existing customers, order-status updates and support follow-ups, within agreed procedures and tone of voice.",
        deliverables: ['Response templates and FAQs', 'Agreed handling of written enquiries', 'Follow-up and activity log'], turnaround: 'By agreement'},
       {id: 'p3', title: 'Translation between Italian and EN/FR/ES and Italian-market localisation', badge: 'IT · EN · FR · ES', description: 'Professional translation between Italian and English, French and Spanish, Italian-market localisation and agreed multilingual correspondence with existing customers.',
-       deliverables: ['Source, audience and terminology review', 'Translation into Italian or Italian-market localisation of agreed content', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
+       deliverables: ['Source, audience and terminology review', 'Translation in either direction between Italian and EN/FR/ES, or agreed localisation', 'Final revision and notes on language choices'], turnaround: 'Based on volume'},
       {id: 'p4', title: 'Existing-content review', badge: 'Clarity and consistency', description: 'Careful editing of your existing professional and multilingual materials.',
        deliverables: ['Text and objectives assessment', 'Structure, tone and readability revision', 'Final editable document with traceable changes'], turnaround: 'Based on scope'},
     ],
@@ -355,13 +355,13 @@ export const enLocale: TranslationDictionary = {
     title: 'Hello, I am Noemi Tomassetti.',
     lead: 'Virtual Assistant, translator, and operational support partner for professionals and small businesses.',
     bioParagraphs: [
-      'I bring over twenty years of professional experience gained across customer care, back office, operations, and operational support, alongside a solid linguistic foundation.',
+      'I bring more than twenty years of experience across customer care, back-office work and organisational support, together with a strong academic background in languages.',
       'I hold a three-year degree in Language Mediation from the Università degli Studi di Macerata, awarded 110/110 e lode (highest honours in the Italian grading system). I subsequently completed an Italian first-level university master’s programme in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona (1,500 hours, 60 CFU/ECTS credits), passing the final assessment. The programme covered literary, legal, economic, technological and scientific texts.',
       'Italian is my native language, and I provide professional multilingual support in four languages: Italian, English, French, and Spanish, ensuring precision, punctuality, and confidentiality.',
     ],
     credentials: [
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
-      { title: 'Academic Excellence', detail: 'Degree in Language Mediation (110/110 e lode, highest Italian honours) and Italian first-level university Master’s in Specialised Translation' },
+      { title: 'Academic Qualifications', detail: 'Degree in Language Mediation (110/110 e lode, highest Italian honours) and Italian first-level university Master’s in Specialised Translation' },
       { title: 'Four Working Languages', detail: 'Native Italian, advanced English and French, upper-intermediate Spanish' },
       { title: 'Digital Organisation', detail: 'Cloud files, collaborative tools and clear operational procedures' },
     ],
@@ -533,7 +533,7 @@ export const enLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Professional translation between Italian and English, French and Spanish, localisation for Italian audiences, written support for existing customers in Italian, English, French and Spanish, and operational assistance for professionals and small businesses working with Italy.',
+      'Multilingual virtual assistance, operational back office, written customer care, editorial support and professional translation in both directions between Italian and English, French and Spanish; Italian-market localisation is also available.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · in development',
     companyTitle: 'About & Insights',
