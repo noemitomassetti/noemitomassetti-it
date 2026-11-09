@@ -56,7 +56,7 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       if(lang==="es") expect(category?.description,lang).toMatch(/del italiano al inglés, francés y español y de estos idiomas al italiano/);
     }
   });
-  it("respects the international service positioning and bidirectional translation offer",()=>{
+  it("respects the full multilingual service positioning and bidirectional translation offer",()=>{
     for(const lang of LANGS){
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
       expect(cat?.description.length,lang).toBeGreaterThan(160);
@@ -64,7 +64,7 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       if(lang==="en") expect(cat?.description).toContain("translate between Italian and English, French and Spanish");
       if(lang==="fr") expect(cat?.description).toContain("de l’italien vers l’anglais");
       if(lang==="es") expect(cat?.description).toContain("del italiano al inglés");
-      if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
+      expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/traduzion|translation|traduction|traducción/);
     }
     expect(enLocale.servicesSection.categories[0].description).toContain("Italian-language");
     expect(frLocale.servicesSection.categories[0].description).toContain("en italien");
