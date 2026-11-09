@@ -245,10 +245,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Se lavori su appuntamento o gestisci direttamente i tuoi clienti, posso supportarti nella gestione di agenda, email, richieste e comunicazioni."
           : lang === "fr"
-          ? "Si vous travaillez sur rendez-vous, je peux organiser votre agenda, vos courriels et les demandes de vos clients existants selon vos consignes."
+          ? "Si vous travaillez sur rendez-vous, je peux organiser votre agenda, vos courriels et les demandes de vos clients selon vos consignes."
           : lang === "es"
           ? "Si trabajas con citas o clientes directos, te ayudo a gestionar agenda, correos y comunicaciones."
-          : "If your work involves appointments and existing customers, I can manage agreed scheduling, email organisation and professional correspondence.",
+          : "If your work involves appointments and customers, I can manage agreed scheduling, email organisation and professional correspondence.",
     },
     {
       icon: GraduationCap,
@@ -300,12 +300,12 @@ export default function IndexPage() {
           : "Professionals Working Internationally",
       description:
         lang === "it"
-          ? "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Supporto inoltre le comunicazioni professionali con interlocutori internazionali già acquisiti."
+          ? "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Supporto inoltre le comunicazioni professionali con interlocutori internazionali."
           : lang === "fr"
           ? "Je traduis dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’accompagne également les échanges écrits convenus avec vos clients et interlocuteurs professionnels déjà acquis."
           : lang === "es"
           ? "Traduzco en ambas direcciones entre el italiano y el inglés, francés y español. También apoyo las comunicaciones escritas acordadas con tus clientes y contactos profesionales existentes."
-          : "I translate in both directions between Italian and English, French and Spanish. I also support agreed written communication with existing customers and professional contacts.",
+          : "I translate in both directions between Italian and English, French and Spanish. I also support agreed written communication with customers and professional contacts.",
     },
   ];
 
@@ -438,12 +438,12 @@ export default function IndexPage() {
           : "Are you available for international clients?",
       a:
         lang === "it"
-          ? "Sì. Lavoro da remoto con professionisti italiani e attività estere che hanno già clienti o progetti in Italia. Offro traduzioni professionali in entrambe le direzioni tra italiano, inglese, francese e spagnolo, localizzazione per il pubblico italiano e supporto scritto ai clienti già acquisiti in italiano, inglese, francese e spagnolo."
+          ? "Sì. Lavoro da remoto con professionisti italiani e attività estere che hanno già clienti o progetti in Italia. Offro traduzioni professionali in entrambe le direzioni tra italiano, inglese, francese e spagnolo, localizzazione per il pubblico italiano e supporto scritto ai clienti in italiano, inglese, francese e spagnolo."
           : lang === "fr"
-          ? "Oui. Je travaille à distance avec des professionnels et de petites entreprises, en Italie comme à l'étranger. Je propose du secrétariat organisationnel, du back-office, un soutien écrit aux clients existants et des traductions dans les deux sens entre l’italien et l’anglais, le français et l’espagnol."
+          ? "Oui. Je travaille à distance avec des professionnels et de petites entreprises, en Italie comme à l'étranger. Je propose du secrétariat organisationnel, du back-office, un soutien écrit aux clients et des traductions dans les deux sens entre l’italien et l’anglais, le français et l’espagnol."
           : lang === "es"
-          ? "Sí. Trabajo a distancia con profesionales y pequeñas empresas de Italia y del extranjero. Ofrezco secretaría organizativa, back office, atención escrita a clientes existentes y traducción en ambas direcciones entre el italiano y el inglés, francés y español."
-          : "Yes. I work remotely with professionals and small businesses in Italy and abroad. My services include organisational secretarial work, operational back office, written support for existing customers and translation in both directions between Italian and English, French and Spanish.",
+          ? "Sí. Trabajo a distancia con profesionales y pequeñas empresas de Italia y del extranjero. Ofrezco secretaría organizativa, back office, atención escrita a clientes y traducción en ambas direcciones entre el italiano y el inglés, francés y español."
+          : "Yes. I work remotely with professionals and small businesses in Italy and abroad. My services include organisational secretarial work, operational back office, written support for customers and translation in both directions between Italian and English, French and Spanish.",
     },
     {
       q:
@@ -681,10 +681,10 @@ export default function IndexPage() {
                 {lang === "it"
                   ? "Posso occuparmi di alcune delle attività di segreteria, organizzazione, comunicazione e supporto operativo che fanno parte della gestione quotidiana della tua attività."
                   : lang === "fr"
-                  ? "Je peux organiser vos courriels et votre agenda, assurer les tâches de back-office convenues, contribuer aux échanges écrits avec vos clients existants et traduire dans les deux sens entre l’italien et l’anglais, le français et l’espagnol."
+                  ? "Je peux organiser vos courriels et votre agenda, assurer les tâches de back-office convenues, contribuer aux échanges écrits avec vos clients et traduire dans les deux sens entre l’italien et l’anglais, le français et l’espagnol."
                   : lang === "es"
-                  ? "Puedo ayudarte con la organización del correo y la agenda, las tareas de back office acordadas, la atención escrita a clientes existentes y la traducción en ambas direcciones entre el italiano y el inglés, francés y español."
-                  : "I can organise email and calendars, handle agreed operational back-office tasks, support existing customers in writing and translate in both directions between Italian and English, French and Spanish."}
+                  ? "Puedo ayudarte con la organización del correo y la agenda, las tareas de back office acordadas, la atención escrita a clientes y la traducción en ambas direcciones entre el italiano y el inglés, francés y español."
+                  : "I can organise email and calendars, handle agreed operational back-office tasks, support customers in writing and translate in both directions between Italian and English, French and Spanish."}
               </p>
               <p>
                 {lang === "it"
@@ -791,19 +791,19 @@ export default function IndexPage() {
           <p>
             {lang === "it" ? (
               <>
-                L'italiano è la mia lingua madre. Traduco professionalmente dall'italiano verso l'inglese, il francese e lo spagnolo e da queste lingue verso l'italiano, valutando il testo e l'ambito specialistico prima di accettare l'incarico. Offro inoltre supporto operativo per le comunicazioni multilingue con clienti già acquisiti, nell'ambito concordato.
+                L'italiano è la mia lingua madre. Traduco professionalmente dall'italiano verso l'inglese, il francese e lo spagnolo e da queste lingue verso l'italiano, valutando il testo e l'ambito specialistico prima di accettare l'incarico. Offro inoltre supporto operativo per le comunicazioni multilingue con clienti, nell'ambito concordato.
               </>
             ) : lang === "fr" ? (
               <>
-                L’italien est ma langue maternelle. Je traduis dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’assure également un soutien opérationnel convenu pour les échanges multilingues avec des clients existants.
+                L’italien est ma langue maternelle. Je traduis dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’assure également un soutien opérationnel convenu pour les échanges multilingues avec des clients.
               </>
             ) : lang === "es" ? (
               <>
-                Mi lengua materna es el italiano. Traduzco en ambas direcciones entre el italiano y el inglés, francés y español. También ofrezco apoyo operativo acordado para la comunicación multilingüe con clientes existentes.
+                Mi lengua materna es el italiano. Traduzco en ambas direcciones entre el italiano y el inglés, francés y español. También ofrezco apoyo operativo acordado para la comunicación multilingüe con clientes.
               </>
             ) : (
               <>
-                Italian is my native language. I translate in both directions between Italian and English, French and Spanish, assessing each text by subject and intended use. I also provide agreed operational support for multilingual correspondence with existing customers and partners.
+                Italian is my native language. I translate in both directions between Italian and English, French and Spanish, assessing each text by subject and intended use. I also provide agreed operational support for multilingual correspondence with customers and partners.
               </>
             )}
           </p>
