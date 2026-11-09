@@ -7,7 +7,7 @@ export const itLocale: TranslationDictionary = {
     homeTitle: 'Noemi Tomassetti | Assistente Virtuale Multilingue e Traduttrice',
     homeDesc: 'Assistenza virtuale multilingue, segreteria organizzativa, back office operativo, assistenza clienti, traduzioni professionali IT ↔ EN/FR/ES e contenuti digitali.',
     servicesTitle: 'Servizi Professionali | Noemi Tomassetti',
-    servicesDesc: 'Segreteria, back office, assistenza scritta ai clienti già acquisiti, traduzioni professionali IT ↔ EN/FR/ES e localizzazione per il mercato italiano.',
+    servicesDesc: 'Segreteria, back office, assistenza scritta ai clienti, traduzioni professionali IT ↔ EN/FR/ES e localizzazione per il mercato italiano.',
     noetomTitle: 'NoeTom | Progetto operativo interno',
     noetomDesc: 'NoeTom è il mio sistema operativo interno in sviluppo, pensato per organizzare incarichi, scadenze e attività.',
     aboutTitle: 'Chi Sono | Noemi Tomassetti',
@@ -65,7 +65,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Precisione linguistica',
-        desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Curo inoltre le comunicazioni multilingue concordate con i clienti già acquisiti.',
+        desc: 'Madrelingua italiana, con inglese e francese avanzati e spagnolo a livello intermedio-alto. Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Curo inoltre le comunicazioni multilingue concordate con i clienti.',
       },
       {
         title: 'Organizzazione e strumenti digitali',
@@ -88,14 +88,14 @@ export const itLocale: TranslationDictionary = {
         title: 'Segreteria Organizzativa & Back Office Operativo',
         subtitle: 'Ordine, continuità e reattività per la tua gestione quotidiana.',
         description:
-          "Segreteria organizzativa e back office operativo: email, agenda, scadenze, inserimento dati, ordini, aggiornamento listini, preventivi basati sulle indicazioni del cliente e assistenza ai clienti esistenti. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
+          "Segreteria organizzativa e back office operativo: email, agenda, scadenze, inserimento dati, ordini, aggiornamento listini, preventivi basati sulle indicazioni del cliente e assistenza ai clienti. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
         iconName: 'Mail',
         items: [
           'Gestione e organizzazione delle email',
           'Gestione agenda e coordinamento appuntamenti',
-          'Assistenza e comunicazioni con i clienti già acquisiti',
+          'Assistenza e comunicazioni con i clienti',
           'Organizzazione documenti e archivi cloud',
-          'Follow-up di assistenza ai clienti esistenti',
+          'Follow-up di assistenza ai clienti',
           'Inserimento dati, gestione ordini, listini e preventivi operativi',
         ],
       },
@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzioni IT ↔ EN/FR/ES e localizzazione',
         subtitle: 'Traduzioni professionali dall’italiano e verso l’italiano; localizzazione dei contenuti.',
         description:
-          "Traduco professionalmente tra l’italiano e l’inglese, il francese e lo spagnolo, valutando ambito, complessità e pubblico destinatario. Offro inoltre localizzazione per il mercato italiano, revisione di contenuti italiani e supporto operativo per la corrispondenza multilingue con clienti già acquisiti.",
+          "Traduco professionalmente tra l’italiano e l’inglese, il francese e lo spagnolo, valutando ambito, complessità e pubblico destinatario. Offro inoltre localizzazione per il mercato italiano, revisione di contenuti italiani e supporto operativo per la corrispondenza multilingue con clienti.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti e landing page per il pubblico italiano',
@@ -159,7 +159,7 @@ export const itLocale: TranslationDictionary = {
           'Configurazione tool online (calendari, form, aree clienti)',
           'Supporto pratico con strumenti digitali di lavoro',
           'Definizione procedure operative interne (SOP)',
-          'Organizzazione dei materiali per clienti già acquisiti',
+          'Organizzazione dei materiali per clienti',
           'Supporto operativo e impostazioni di base',
         ],
       },
@@ -170,7 +170,7 @@ export const itLocale: TranslationDictionary = {
     tag: 'COMUNICAZIONE SENZA FRONTIERE',
     title: 'Comunicare con clienti e partner internazionali',
     description:
-      'Lavorare con l’estero richiede sensibilità culturale, terminologia appropriata e comunicazioni chiare con gli interlocutori già acquisiti.',
+      'Lavorare con l’estero richiede sensibilità culturale, terminologia appropriata e comunicazioni chiare con gli interlocutori.',
     points: [
       {
         title: 'Quattro lingue operative',
@@ -182,7 +182,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         title: 'Supporto unificato',
-        desc: 'Dalle email alle risposte ai clienti già acquisiti, preparo comunicazioni coerenti con le informazioni e le istruzioni approvate.',
+        desc: 'Dalle email alle risposte ai clienti, preparo comunicazioni coerenti con le informazioni e le istruzioni approvate.',
       },
     ],
     badgeNote: 'Formazione specialistica: Laurea in Mediazione Linguistica (110 e lode) + Master in Traduzione Specialistica',
@@ -195,11 +195,11 @@ export const itLocale: TranslationDictionary = {
        description: 'Un intervento mirato per riordinare attività, corrispondenza e documenti ricorrenti.',
        deliverables: ['Analisi delle attività da delegare', 'Organizzazione email, file e procedure concordate', 'Riepilogo delle attività e delle priorità'], turnaround: 'Da concordare'},
       {id: 'p2', title: 'Customer care scritto', badge: 'Comunicazioni professionali',
-       description: "Supporto alle richieste dei clienti già acquisiti, aggiornamenti su ordini e follow-up di assistenza, con tono e procedure concordati.",
+       description: "Supporto alle richieste dei clienti, aggiornamenti su ordini e follow-up di assistenza, con tono e procedure concordati.",
        deliverables: ['Modelli di risposta e FAQ', 'Gestione concordata delle richieste scritte', 'Registro dei follow-up e delle attività'], turnaround: 'Da concordare'},
       {id: 'p3', title: 'Traduzioni IT ↔ EN/FR/ES e supporto multilingue', badge: 'IT · EN · FR · ES',
-       description: 'Le traduzioni professionali sono dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Offro inoltre localizzazione per il mercato italiano e supporto operativo per la corrispondenza multilingue con clienti già acquisiti.',
-       deliverables: ['Analisi di testi, pubblico e terminologia', 'Traduzione IT ↔ EN/FR/ES o localizzazione dei contenuti concordati', 'Supporto scritto multilingue ai clienti esistenti, secondo procedure concordate', 'Revisione finale e note sulle scelte linguistiche'], turnaround: 'In base al volume'},
+       description: 'Le traduzioni professionali sono dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Offro inoltre localizzazione per il mercato italiano e supporto operativo per la corrispondenza multilingue con clienti.',
+       deliverables: ['Analisi di testi, pubblico e terminologia', 'Traduzione IT ↔ EN/FR/ES o localizzazione dei contenuti concordati', 'Supporto scritto multilingue ai clienti, secondo procedure concordate', 'Revisione finale e note sulle scelte linguistiche'], turnaround: 'In base al volume'},
       {id: 'p4', title: 'Revisione di contenuti esistenti', badge: 'Chiarezza e coerenza',
        description: 'Intervento su testi professionali e materiali già disponibili, anche di origine multilingue.',
        deliverables: ['Verifica del testo e degli obiettivi', 'Revisione di struttura, tono e leggibilità', 'Documento finale con modifiche verificabili'], turnaround: 'In base al materiale'},
@@ -536,14 +536,14 @@ export const itLocale: TranslationDictionary = {
   },
   footer: {
     brandBio:
-      'Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazioni professionali e traduzioni professionali IT ↔ EN/FR/ES per freelance, consulenti e piccole imprese.',
+      'Segreteria organizzativa, back office operativo, assistenza ai clienti, comunicazioni professionali e traduzioni professionali IT ↔ EN/FR/ES per freelance, consulenti e piccole imprese.',
     servicesTitle: 'Servizi',
     noetomTitle: 'NoeTom · in sviluppo',
     companyTitle: 'Chi Sono & Risorse',
     legalTitle: 'Note Legali',
     rights: 'Tutti i diritti riservati.',
     disclaimer:
-      "Segreteria organizzativa, back office operativo, assistenza ai clienti esistenti, comunicazione multilingue, traduzione e contenuti digitali. Non offro telemarketing, chiamate a freddo, ricerca di contatti commerciali, acquisizione clienti, contabilità, fatturazione, gestione amministrativa o consulenza fiscale.",
+      "Segreteria organizzativa, back office operativo, assistenza ai clienti, comunicazione multilingue, traduzione e contenuti digitali. Non offro telemarketing, chiamate a freddo, ricerca di contatti commerciali, acquisizione clienti, contabilità, fatturazione, gestione amministrativa o consulenza fiscale.",
     cookiePrefs: 'Preferenze Cookie',
   },
 };
