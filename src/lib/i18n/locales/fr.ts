@@ -80,7 +80,7 @@ export const frLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'MON EXPERTISE',
     title: 'Assistance virtuelle, communication et traduction',
-    subtitle: 'Traduction IT ↔ EN/FR/ES, adaptation de contenus et soutien opérationnel pour accompagner votre activité.',
+    subtitle: 'Voici des exemples de prestations possibles, et non un ensemble de services automatiquement inclus. Chaque devis précise les tâches et livrables convenus.',
     viewAllCta: 'Consulter le détail des services',
     categories: [
       {
@@ -88,7 +88,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Secrétariat à distance et back-office opérationnel',
         subtitle: 'Une organisation fiable et un suivi écrit des clients.',
         description:
-          "Secrétariat organisationnel et back-office opérationnel : courriels, agenda, saisie de données, suivi des commandes, tarifs validés, devis selon vos consignes et accompagnement écrit des clients, y compris en italien. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
+          "Selon la mission, je peux prendre en charge l’organisation des courriels et de l’agenda, la saisie de données, le suivi des commandes, la mise à jour de tarifs déjà validés, la préparation de devis selon vos consignes et les échanges écrits avec les clients. Les tâches sont définies avant le début du travail. Pas de télémarketing, de prospection, de comptabilité, de facturation ni de gestion administrative.",
         iconName: 'Mail',
         items: [
           'Tri et organisation des courriels professionnels',
@@ -96,7 +96,7 @@ export const frLocale: TranslationDictionary = {
           'Service aux clients et communication professionnelle',
           'Classement documentaire et archivage cloud',
           'Suivi des demandes de vos clients',
-          'Back-office opérationnel en lien avec les activités en Italie',
+          'Suivi opérationnel des commandes, données et documents',
         ],
       },
       {
@@ -104,7 +104,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Traductions IT ↔ EN/FR/ES et localisation',
         subtitle: 'Traduction professionnelle dans les deux sens entre l’italien et l’anglais, le français et l’espagnol, avec localisation pour le marché italien.',
         description:
-          "Je traduis professionnellement de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien, après évaluation du domaine, de la complexité et du public visé. Je propose également la localisation de contenus pour le marché italien et un soutien opérationnel convenu pour les échanges avec les clients.",
+          "Je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien. Selon les besoins, la prestation peut porter sur la traduction, la localisation pour le marché italien, la révision linguistique ou la correspondance multilingue. Les langues, les textes et les livrables sont précisés dans le devis.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et pages de destination en italien',
@@ -120,7 +120,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Rédaction et révision de contenus professionnels',
         subtitle: 'Des textes limpides, percutants et alignés sur vos objectifs.',
         description:
-          'Rédaction et révision de contenus professionnels : pages web, courriels destinés aux clients, lettres d’information et brouillons, avec adaptation linguistique vers l’italien lorsque le projet le prévoit.',
+          'Selon le projet, je peux rédiger ou réviser des pages web, des courriels, des lettres d’information et d’autres contenus professionnels, y compris des brouillons existants ou assistés par IA. Le type d’intervention et les livrables sont convenus à l’avance.',
         iconName: 'PenTool',
         items: [
           'Révision de pages web et de contenus commerciaux',
@@ -136,7 +136,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Recherche documentaire et comparaison d’informations',
         subtitle: 'Des informations structurées pour éclairer vos choix stratégiques.',
         description:
-          "Recherche, vérification et comparaison d'informations, de sources, de fournisseurs et d'outils numériques uniquement pour soutenir les activités existantes du client. Aucune recherche de prospects ni acquisition commerciale.",
+          "Selon la mission, les recherches peuvent porter sur des informations publiques, la vérification de sources, la comparaison de fournisseurs ou d’outils numériques et la préparation de synthèses pour des projets déjà définis. Aucune recherche de prospects ni acquisition commerciale.",
         iconName: 'Search',
         items: [
           'Veille concurrentielle et analyse tarifaire',
@@ -152,18 +152,18 @@ export const frLocale: TranslationDictionary = {
         title: 'Organisation et outils numériques',
         subtitle: 'Optimisation de vos outils numériques et flux de travail.',
         description:
-          'Réorganisation de vos dossiers partagés, paramétrage d’outils en ligne et formalisation de procédures simples pour fluidifier vos démarches opérationnelles quotidiennes.',
+          'Le soutien peut comprendre le classement de documents partagés, le paramétrage simple d’outils numériques déjà choisis et la rédaction de procédures opérationnelles. Les accès, les outils et les tâches sont validés avant l’intervention.',
         iconName: 'Cpu',
         items: [
           'Restructuration Google Workspace et espaces cloud',
           'Configuration d’outils digitaux (agendas, formulaires)',
           'Soutien pratique aux outils bureautiques et en ligne',
           'Élaboration de procédures opérationnelles (SOP)',
-          'Organisation de l’accueil des clients déjà acquis',
+          'Organisation du suivi et des communications clients',
           'Assistance numérique courante et paramétrages',
         ],
       },
-      { id: 'web-landing', title: 'Contenus pour sites web et pages de destination', subtitle: 'Des contenus en ligne plus clairs et structurés.', description: 'Révision, adaptation linguistique et organisation du contenu de sites existants. Le développement technique, l’hébergement et la maintenance du site ne font pas partie de cette prestation éditoriale.', iconName: 'Layout', items: ['Révision des textes des pages principales', 'Localisation de contenus web pour le marché italien', 'Titres, FAQ et appels à l’action', 'Cohérence terminologique', 'Remise de textes prêts pour le CMS', 'Révision de contenus multilingues'] },
+      { id: 'web-landing', title: 'Contenus pour sites web et pages de destination', subtitle: 'Des contenus en ligne plus clairs et structurés.', description: 'Pour les sites existants, je peux proposer, selon le besoin, une révision rédactionnelle, une adaptation linguistique ou une organisation des titres, FAQ et contenus. Le développement technique, l’hébergement et la maintenance ne font pas partie de cette prestation éditoriale.', iconName: 'Layout', items: ['Révision des textes des pages principales', 'Localisation de contenus web pour le marché italien', 'Titres, FAQ et appels à l’action', 'Cohérence terminologique', 'Remise de textes prêts pour le CMS', 'Révision de contenus multilingues'] },
     ],
   },
   multilingualAdvantage: {
@@ -189,18 +189,18 @@ export const frLocale: TranslationDictionary = {
   },
   productized: {
     tag: 'FORMULES DE COLLABORATION', title: 'Des missions ciblées, des livrables concrets',
-    subtitle: 'Exemples de prestations au périmètre défini. Les livrables et les délais figurent dans le devis écrit.',
+    subtitle: 'Exemples de collaborations et de livrables possibles, et non forfaits tout compris. Le devis précise les prestations effectivement incluses.',
     packages: [
       {id: 'p1', title: 'Back-office organisé', badge: 'Secrétariat opérationnel', description: 'Un soutien concret pour structurer les tâches récurrentes, les e-mails et les documents.',
        deliverables: ['Analyse des tâches à déléguer', 'Organisation des e-mails, fichiers et procédures convenues', 'Synthèse du travail et des priorités'], turnaround: 'À convenir'},
-      {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes des clients déjà acquis, informations sur les commandes et suivis de service selon des procédures convenues.",
+      {id: 'p2', title: 'Relation client écrite', badge: 'Communication professionnelle', description: "Traitement écrit des demandes clients, informations sur les commandes et suivi du service, selon les procédures convenues.",
        deliverables: ['Modèles de réponses et FAQ', 'Gestion convenue des demandes écrites', 'Suivi des relances et activités'], turnaround: 'À convenir'},
       {id: 'p3', title: 'Traduction IT ↔ EN/FR/ES et localisation pour le marché italien', badge: 'IT · EN · FR · ES', description: 'Traduction professionnelle entre l’italien et l’anglais, le français et l’espagnol, localisation pour l’Italie et correspondance multilingue convenue avec les clients.',
        deliverables: ['Analyse des textes, publics et termes', 'Traduction IT ↔ EN/FR/ES ou localisation des contenus selon le public visé', 'Révision finale et notes linguistiques'], turnaround: 'Selon volume'},
       {id: 'p4', title: 'Révision de contenus existants', badge: 'Clarté et cohérence', description: 'Relecture et amélioration de documents professionnels et multilingues existants.',
        deliverables: ['Évaluation du texte et des objectifs', 'Amélioration de la structure, du ton et de la lisibilité', 'Document final avec modifications identifiables'], turnaround: 'Selon périmètre'},
     ],
-    customScopeNote: 'Chaque mission est personnalisée. Aucun appel obligatoire : transmettez votre besoin pour recevoir un devis écrit.',
+    customScopeNote: 'Ces exemples ne sont pas automatiquement inclus dans une prestation. Les tâches, les livrables, les délais et les honoraires sont définis par écrit avant le début de la mission. Aucun appel préalable obligatoire.',
   },
   noetomTeaser: {
     tag: 'PROJET INTERNE · PRODUCTIVITÉ',
