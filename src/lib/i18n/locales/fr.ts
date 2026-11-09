@@ -4,7 +4,7 @@ export const frLocale: TranslationDictionary = {
   lang: 'fr',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Traduction EN/FR/ES vers l’italien et soutien opérationnel | Noemi Tomassetti',
+    homeTitle: 'Traduction IT ↔ EN/FR/ES et soutien opérationnel | Noemi Tomassetti',
     homeDesc: 'Traduction professionnelle entre l’italien et l’anglais, le français et l’espagnol, localisation pour le marché italien et soutien opérationnel aux professionnels travaillant avec l’Italie.',
     servicesTitle: 'Traduction italienne et soutien opérationnel | Noemi Tomassetti',
     servicesDesc: 'Traduction entre l’italien et l’anglais, le français et l’espagnol, suivi écrit des clients italiens existants et soutien opérationnel pour les activités liées à l’Italie.',
@@ -80,7 +80,7 @@ export const frLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'MON EXPERTISE',
     title: 'Traduction et accompagnement pour l’Italie',
-    subtitle: 'Traduction vers l’italien, adaptation de contenus et soutien opérationnel pour vos activités avec l’Italie.',
+    subtitle: 'Traduction IT ↔ EN/FR/ES, adaptation de contenus et soutien opérationnel pour vos activités avec l’Italie.',
     viewAllCta: 'Consulter le détail des services',
     categories: [
       {
