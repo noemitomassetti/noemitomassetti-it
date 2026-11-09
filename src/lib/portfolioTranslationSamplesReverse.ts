@@ -3,7 +3,7 @@ import type { TranslationDeepCase } from "./portfolioDeepTypes";
 /** Original fictional demonstrations; not commissioned client work. */
 export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
   {
-    "id": "it-en-existing-order-update",
+    "id": "it-en-order-status-message",
     "direction": "IT-EN",
     "domain": {
       "it": "Customer care e ordini",
