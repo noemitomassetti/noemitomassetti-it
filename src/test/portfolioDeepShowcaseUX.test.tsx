@@ -64,6 +64,6 @@ describe("Deep portfolio user experience", () => {
     const labels = screen.getAllByRole("link", { name: /Read the complete dossier:/ })
       .map(link => link.getAttribute("aria-label"));
     expect(labels).toHaveLength(11);
-    expect(new Set(labels).size).toBe(8);
+    expect(new Set(labels).size).toBe(11);
   });
 });
