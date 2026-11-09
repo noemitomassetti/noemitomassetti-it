@@ -5,7 +5,7 @@ export const itLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Noemi Tomassetti | Assistente Virtuale Multilingue e Traduttrice',
-    homeDesc: 'Segreteria organizzativa, back office operativo, customer care per clienti esistenti, traduzioni professionali IT ↔ EN/FR/ES e contenuti digitali per professionisti e piccole imprese.',
+    homeDesc: 'Assistenza virtuale multilingue, segreteria organizzativa, back office operativo, assistenza clienti, traduzioni professionali IT ↔ EN/FR/ES e contenuti digitali.',
     servicesTitle: 'Servizi Professionali | Noemi Tomassetti',
     servicesDesc: 'Segreteria, back office, assistenza scritta ai clienti già acquisiti, traduzioni professionali IT ↔ EN/FR/ES e localizzazione per il mercato italiano.',
     noetomTitle: 'NoeTom | Progetto operativo interno',
@@ -36,7 +36,7 @@ export const itLocale: TranslationDictionary = {
     badge: 'ASSISTENTE VIRTUALE',
     titleLine1: 'Supporto operativo, organizzativo e multilingue',
     titleHighlight: 'per la tua attività',
-    subtitle: "Assistenza virtuale multilingue per segreteria organizzativa, back office operativo, assistenza ai clienti già acquisiti, comunicazioni e contenuti professionali.",
+    subtitle: "Assistenza virtuale multilingue per segreteria organizzativa, back office operativo, assistenza clienti, comunicazioni e contenuti professionali.",
     headline: 'Il supporto che ti aiuta a lavorare meglio, con più ordine.',
     desc1: "Metto a disposizione oltre vent'anni di esperienza lavorativa per aiutarti a gestire meglio il lavoro quotidiano.",
     desc2: 'Dalla gestione di email e appuntamenti alla comunicazione con i clienti, dalla traduzione alla revisione dei contenuti per siti web e landing page: un supporto professionale e flessibile, costruito sulle tue esigenze.',
