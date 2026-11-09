@@ -156,7 +156,7 @@ export const esLocale: TranslationDictionary = {
         iconName: 'Cpu',
         items: [
           'Reorganización de Google Workspace y discos en la nube',
-          'Puesta a punto de herramientas (calendarios, formularios)',
+          'Configuración básica de herramientas acordadas (calendarios y formularios)',
           'Soporte práctico con herramientas digitales habituales',
           'Elaboración de manuales de procedimiento operativo (SOP)',
           'Organización de las comunicaciones con clientes',
