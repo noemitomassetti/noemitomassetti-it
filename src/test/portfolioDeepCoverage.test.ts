@@ -139,7 +139,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
     const locs=xml.split("<loc>").slice(1).map(x=>x.split("</loc>")[0]);
-    expect(locs).toHaveLength(280);
+    expect(locs).toHaveLength(288);
     expect(new Set(locs).size).toBe(locs.length);
   });
   it("publishes only fictional sample data with explicit scope and privacy statements",()=>{
