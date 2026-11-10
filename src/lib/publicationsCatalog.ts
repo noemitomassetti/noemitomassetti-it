@@ -6,7 +6,7 @@ import type { Language } from "./i18n/types";
  * eligible for purchase links. A draft / KDP dashboard URL is never a listing.
  * The website does not process payments; customers check out on Amazon.
  */
-export const PUBLICATIONS_VISIBLE = false;
+export const PUBLICATIONS_VISIBLE = true;
 
 export type PublicationStatus = "in_preparation" | "published";
 
