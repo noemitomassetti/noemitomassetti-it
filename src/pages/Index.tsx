@@ -4,6 +4,8 @@ import { useSEO } from "@/hooks/useSEO";
 import { BookingButton } from "@/components/BookingButton";
 import { ContactForm } from "@/components/ContactForm";
 import { PricingSection } from "@/components/PricingSection";
+import { SERVICE_DECISION_PATHS } from "@/lib/serviceDecisionPaths";
+import { getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
 import {
   Language,
   getLanguageFromPath,
@@ -943,6 +945,7 @@ export default function IndexPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {dict.servicesSection.categories.map((svc) => {
             const Icon = getServiceIcon(svc.id);
+            const decision = SERVICE_DECISION_PATHS[svc.id];
             return (
               <div
                 key={svc.id}
@@ -955,6 +958,11 @@ export default function IndexPage() {
                 {svc.subtitle && (
                   <p className="text-xs font-semibold text-primary/85 mb-3">
                     {svc.subtitle}
+                  </p>
+                )}
+                {decision && (
+                  <p className="text-sm font-medium text-foreground/90 bg-secondary/25 rounded-lg px-3 py-2 mb-3">
+                    {decision.need[lang]}
                   </p>
                 )}
                 <p className="text-sm text-foreground/80 leading-relaxed mb-4">
@@ -980,7 +988,13 @@ export default function IndexPage() {
                   </ul>
                 </div>
 
-                <div className="pt-4 border-t border-border/40 mt-auto">
+                <div className="pt-4 border-t border-border/40 mt-auto space-y-3">
+                  {decision && (
+                    <Link className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" to={getDeepPortfolioPath(decision.dossierId, lang)}>
+                      {lang === "it" ? "Vedi un esempio dimostrativo" : lang === "fr" ? "Voir un exemple fictif" : lang === "es" ? "Ver un ejemplo demostrativo" : "View a fictional work example"}
+                      <ArrowRight aria-hidden="true" className="w-3.5 h-3.5" />
+                    </Link>
+                  )}
                   <Button
                     asChild
                     variant="outline"
