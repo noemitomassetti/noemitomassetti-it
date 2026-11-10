@@ -55,9 +55,9 @@ jobs:
                 const text = await page.locator('body').innerText();
                 if (text.length < 150) throw new Error('Too little rendered text for '+path+': '+text.length);
                 if (['/', '/it', '/fr', '/es'].includes(path)) {
-                  if (await page.locator('a[href="/publications"],a[href="/it/libri"],a[href="/fr/livres"],a[href="/es/libros"]').count() > 0)
-                    throw new Error('Unpublished books publicly promoted at '+path);
-                  console.log('PASS book section remains hidden on '+path);
+                  if (await page.locator('a[href="/publications"],a[href="/it/libri"],a[href="/fr/livres"],a[href="/es/libros"]').count() === 0)
+                    throw new Error('Pre-launch books section is not discoverable at '+path);
+                  console.log('PASS book pre-launch section linked on '+path);
                 }
                 const safe = path.replace(/[^a-z0-9]/gi,'_')||'home';
                 await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
@@ -65,8 +65,10 @@ jobs:
               }
               for (const path of ['/publications','/it/libri','/fr/livres','/es/libros']) {
                 await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle'});
-                if (!(await page.locator('h1').innerText()).includes('404')) throw new Error('Book route must be disabled before launch: '+path);
-                console.log('PASS unpublished book route hidden '+path);
+                const body = await page.locator('body').innerText();
+                if (!body.includes('Business English in Practice')) throw new Error('Book pre-launch page missing: '+path);
+                if (await page.locator('a[href*="amazon."]').count() > 0) throw new Error('Unpublished book has purchase link: '+path);
+                console.log('PASS book pre-launch visible without purchase link '+path);
               }
               for (const path of ['/portfolio-documenti/doc-01-localizzazione-interior-design.html','/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html']) {
                 const response = await page.request.get('http://127.0.0.1:4173'+path);
