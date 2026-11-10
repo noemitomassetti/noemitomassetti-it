@@ -6,6 +6,7 @@ import { BookingButton } from "@/components/BookingButton";
 import { ContactForm } from "@/components/ContactForm";
 import { PricingSection } from "@/components/PricingSection";
 import { SERVICE_DECISION_PATHS } from "@/lib/serviceDecisionPaths";
+import { COLLABORATION_GUIDANCE } from "@/lib/collaborationGuidance";
 import { getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
 import {
   Language,
@@ -352,6 +353,12 @@ export default function ServicesPage() {
                   </div>
 
                   <h3 className="text-xl font-bold text-foreground">{pkg.title}</h3>
+                  <div className="rounded-lg bg-secondary/25 px-3 py-2">
+                    <p className="text-xs font-bold uppercase tracking-wide text-primary mb-1">
+                      {lang === "it" ? "A chi può essere utile" : lang === "fr" ? "Pour qui ?" : lang === "es" ? "¿A quién puede ayudar?" : "Who it may help"}
+                    </p>
+                    <p className="text-sm text-foreground/85">{COLLABORATION_GUIDANCE[pkg.id]?.[lang]}</p>
+                  </div>
                   <p className="text-sm text-foreground/80 leading-relaxed">{pkg.description}</p>
 
                   <div className="pt-3 border-t border-border/40">
