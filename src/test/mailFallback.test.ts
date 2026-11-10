@@ -28,4 +28,22 @@ describe('Manual contact alternative', () => {
     expect(draft.subject).not.toContain('\n');
     expect(draft.subject).not.toContain('\r');
   });
+  it('localises fallback subject and labels without altering the visitor message', () => {
+    const expectations = {
+      it: ['Richiesta dal sito', 'Oggetto:', 'Nome:'],
+      en: ['Website enquiry', 'Subject:', 'Name:'],
+      fr: ['Demande depuis le site', 'Objet:', 'Nom:'],
+      es: ['Solicitud desde el sitio web', 'Asunto:', 'Nombre:'],
+    } as const;
+    for (const locale of ['it', 'en', 'fr', 'es'] as const) {
+      const output = getManualContactPlainText(sample, locale);
+      for (const label of expectations[locale]) expect(output).toContain(label);
+      expect(output).toContain(sample.message);
+      expect(output).toContain(sample.reference);
+      const mailto = decodeURIComponent(getManualContactMailto(sample, locale));
+      expect(mailto).toContain(expectations[locale][0]);
+      expect(mailto).toContain(sample.message);
+    }
+  });
+
 });
