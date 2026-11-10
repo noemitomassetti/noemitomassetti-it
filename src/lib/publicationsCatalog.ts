@@ -6,7 +6,7 @@ import type { Language } from "./i18n/types";
  * When enabled, this automatically shows the four-language publication page
  * in the navigation and footer; routes already exist for each language.
  */
-export const PUBLICATIONS_VISIBLE = false;
+export const PUBLICATIONS_VISIBLE = true;
 
 export type PublicationStatus = "in_preparation" | "published";
 
