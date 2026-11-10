@@ -48,12 +48,18 @@ jobs:
               const page = await browser.newPage({viewport:{width:1365,height:920}});
               const errors = [];
               page.on('pageerror',e=>errors.push(e.message));
-              const routes = ['/', '/it', '/fr', '/es', '/it/contatti', '/it/esempi-di-lavoro', '/blog', '/en/blog', '/fr/blog', '/es/blog', '/en/blog/communicating-with-italian-customers', '/fr/blog/communiquer-avec-ses-clients-italiens', '/es/blog/comunicacion-con-clientes-italianos-localizacion', '/en-not-a-page'];
+              const routes = ['/', '/it', '/fr', '/es', '/publications', '/it/libri', '/fr/livres', '/es/libros', '/it/contatti', '/it/esempi-di-lavoro', '/blog', '/en/blog', '/fr/blog', '/es/blog', '/en/blog/communicating-with-italian-customers', '/fr/blog/communiquer-avec-ses-clients-italiens', '/es/blog/comunicacion-con-clientes-italianos-localizacion', '/en-not-a-page'];
               for (const path of routes) {
                 const resp = await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle',timeout:20000});
                 if(!resp || resp.status()!==200) throw new Error('Route '+path+' HTTP '+resp?.status());
                 const text = await page.locator('body').innerText();
                 if (text.length < 150) throw new Error('Too little rendered text for '+path+': '+text.length);
+                if (['/publications','/it/libri','/fr/livres','/es/libros'].includes(path)) {
+                  const prelaunch = { '/publications': 'NOT YET FOR SALE', '/it/libri': 'NON ANCORA IN VENDITA', '/fr/livres': 'PAS ENCORE EN VENTE', '/es/libros': 'TODAVÍA NO ESTÁ A LA VENTA' };
+                  if (!text.includes(prelaunch[path])) throw new Error('Book prelaunch status missing in '+path);
+                  if (await page.locator('a[href*="amazon."]').count() > 0) throw new Error('Amazon purchase link shown before publication: '+path);
+                  console.log('PASS truthful book prelaunch '+path);
+                }
                 const safe = path.replace(/[^a-z0-9]/gi,'_')||'home';
                 await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
                 console.log('PASS route '+path+' content chars='+text.length+' title='+await page.title());
