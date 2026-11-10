@@ -57,8 +57,8 @@ describe("Editorial portfolio and future books safeguards", () => {
       }
     }
   });
-  it("does not advertise nonexistent books before launch", () => {
-    expect(PUBLICATIONS_VISIBLE).toBe(false);
+  it("displays a truthful pre-launch page without offering nonexistent books for sale", () => {
+    expect(PUBLICATIONS_VISIBLE).toBe(true);
     expect(PUBLICATIONS).toEqual([]);
     expect(getPublishedBooks()).toEqual([]);
     expect(getLocalizedPath("publications","it")).toBe("/it/libri");
