@@ -4,6 +4,7 @@ import { useSEO } from "@/hooks/useSEO";
 import { BookingButton } from "@/components/BookingButton";
 import { ContactForm } from "@/components/ContactForm";
 import { PricingSection } from "@/components/PricingSection";
+import { PUBLICATIONS_VISIBLE, getPublishedBooks } from "@/lib/publicationsCatalog";
 import { SERVICE_DECISION_PATHS } from "@/lib/serviceDecisionPaths";
 import { getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
 import {
@@ -16,6 +17,7 @@ import {
 import { getBlogPosts, getBlogPostPath, getBlogIndexPath } from "@/lib/blogData";
 import {
   Mail,
+  BookOpen,
   Globe,
   PenTool,
   Search,
@@ -58,6 +60,7 @@ export default function IndexPage() {
 
   const servicesPath = getLocalizedPath("services", lang);
   const resourcesPath = getLocalizedPath("resources", lang);
+  const publishedBooks = getPublishedBooks();
 
   const getServiceIcon = (id: string) => {
     switch (id) {
@@ -1335,6 +1338,37 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+
+      {/* Books: show prelaunch honestly; Amazon sales only after verified listings exist. */}
+      {PUBLICATIONS_VISIBLE && (
+        <section aria-labelledby="books-home-title" className="border-y border-border/40 bg-card/35">
+          <div className="container px-4 md:px-6 py-10 md:py-14">
+            <div className="max-w-6xl mx-auto rounded-2xl border border-primary/25 bg-card p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="max-w-3xl">
+                <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                  <BookOpen className="w-4 h-4" aria-hidden="true"/>
+                  {lang === "it" ? "Libri e pubblicazioni" : lang === "fr" ? "Livres et publications" : lang === "es" ? "Libros y publicaciones" : "Books & publications"}
+                </p>
+                <h2 id="books-home-title" className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
+                  {publishedBooks.length > 0
+                    ? (lang === "it" ? "I miei libri per comunicare e lavorare meglio" : lang === "fr" ? "Mes livres pour mieux communiquer au travail" : lang === "es" ? "Mis libros para comunicarte mejor en el trabajo" : "My practical language and communication books")
+                    : "Business English in Practice"}
+                </h2>
+                <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                  {publishedBooks.length > 0
+                    ? (lang === "it" ? "Guide pratiche e strumenti editoriali. Consulta i titoli disponibili e acquista attraverso le relative pagine Amazon." : lang === "fr" ? "Des guides pratiques à découvrir et à acheter sur leurs pages Amazon." : lang === "es" ? "Guías prácticas para descubrir y comprar en sus páginas de Amazon." : "Practical guides and editorial resources, available to buy through their Amazon listings.")
+                    : (lang === "it" ? "Un prontuario bilingue di inglese professionale, con esempi e risposte per le situazioni di lavoro. In preparazione: non è ancora in vendita." : lang === "fr" ? "Un guide bilingue d’anglais professionnel avec des exemples adaptés au travail. En préparation : pas encore en vente." : lang === "es" ? "Una guía bilingüe de inglés profesional con ejemplos para el trabajo. En preparación: todavía no está a la venta." : "An Italian–English guide to practical workplace communication. In preparation: not yet for sale.")}
+                </p>
+              </div>
+              <Link to={getLocalizedPath("publications", lang)}
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                {lang === "it" ? "Scopri i libri" : lang === "fr" ? "Découvrir les livres" : lang === "es" ? "Descubre los libros" : "Explore the books"}
+                <ArrowRight className="w-4 h-4" aria-hidden="true"/>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── SECTION 10: BLOG & RISORSE (#blog) ── */}
       <section
