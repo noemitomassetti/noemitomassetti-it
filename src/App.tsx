@@ -98,7 +98,7 @@ const App = () => (
           <Route path="/es/politica-de-privacidad" element={<PrivacyPolicy />} />
           <Route path="/es/politica-de-cookies" element={<CookiePolicy />} />
 
-          {/* Editorial catalogue is prepared, but hidden until real publications are ready. */}
+          {/* Editorial catalogue may display truthful pre-launch content, with no sales links until verified publication. */}
           <Route path="/publications" element={PUBLICATIONS_VISIBLE ? <Publications /> : <NotFound />} />
           <Route path="/it/libri" element={PUBLICATIONS_VISIBLE ? <Publications /> : <NotFound />} />
           <Route path="/fr/livres" element={PUBLICATIONS_VISIBLE ? <Publications /> : <NotFound />} />
