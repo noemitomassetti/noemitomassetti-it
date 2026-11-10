@@ -3,8 +3,8 @@ import { readFileSync } from "node:fs";
 import { getPublishedBooks, isAmazonBookUrl, PUBLICATIONS_VISIBLE } from "../lib/publicationsCatalog";
 
 describe("Books section release safeguards", () => {
-  it("keeps the prepared editorial page hidden until the author releases it", () => {
-    expect(PUBLICATIONS_VISIBLE).toBe(false);
+  it("shows the editorial pre-launch page without offering unpublished books for sale", () => {
+    expect(PUBLICATIONS_VISIBLE).toBe(true);
     expect(getPublishedBooks()).toHaveLength(0);
     const page = readFileSync("src/pages/Publications.tsx", "utf8");
     expect(page).toContain("IN PREPARAZIONE · NON ANCORA IN VENDITA");
