@@ -1,5 +1,8 @@
 # Audit editoriale, tecnico e competitivo — 4 novembre 2026
 
+> **Aggiornamento di stato del 4/11/2026 (successivo a questo audit):** la PR #1 è stata unita a `main` nel commit `5469bf8`, e il deployment Vercel ha avuto esito positivo. Le diciture seguenti «PR in bozza», «produzione invariata», «nessun merge» e «blocco attuale Vercel» descrivono un momento precedente e **non rappresentano più lo stato attuale**. La nuova revisione di qualità è nella [PR #2](https://github.com/noemitomassetti/noemitomassetti-it/pull/2), non ancora pubblicata. Rimangono da verificare il recapito email sul dominio, la conformità del piano di hosting all'uso commerciale e l'audit manuale completo.
+
+
 ## Decisione di rilascio
 
 Codice e contenuti sul ramo `chatgpt/site-release-audit-2026-10-29`. Il sito pubblico non è stato ancora sostituito. **Il deploy pubblico richiede una piattaforma autorizzata all'uso commerciale, verifica del form e un controllo finale del dominio.**
@@ -16,11 +19,11 @@ Codice e contenuti sul ramo `chatgpt/site-release-audit-2026-10-29`. Il sito pub
 
 ## Checklist di coerenza
 
-Sei categorie di servizi offerte nelle quattro lingue: segreteria/back office operativo, traduzioni e localizzazione IT↔EN/FR/ES, contenuti e revisione, ricerca informativa, documenti/strumenti digitali e testi editoriali per siti. Per l'estero prevalgono localizzazione verso italiano e comunicazioni con clienti italiani esistenti.
+Sei categorie di servizi offerte nelle quattro lingue: segreteria/back office operativo, traduzioni professionali EN/FR/ES → IT e localizzazione per il mercato italiano, contenuti e revisione, ricerca informativa, documenti/strumenti digitali e testi editoriali per siti. Per l'estero prevalgono localizzazione verso italiano e comunicazioni con clienti italiani esistenti.
 
 **Non offerti:** amministrazione, contabilità, emissione fatture, consulenza fiscale, acquisizione contatti, lead generation, telemarketing, cold outreach, reclutamento intervistati, hosting o sviluppo tecnico di siti, traduzioni giurate.
 
-Il catalogo di 27 dossier ha 12 traduzioni e 15 esempi operativi; restano accessibili gli altri 18 casi e 22 documenti originali, tutti segnalati come esempi dimostrativi non commissionati. Servizi e categorie coincidono nei testi italiani, inglesi, francesi e spagnoli.
+Il catalogo pubblico comprende 21 dossier: 6 esempi di traduzione professionale EN/FR/ES → IT e 15 esempi operativi. I 6 dossier con traduzioni IT → EN/FR/ES sono esclusi dalla presentazione pubblica perché non corrispondono ai servizi offerti; restano disponibili 18 casi sintetici e 22 documenti originali, tutti dichiarati come esempi dimostrativi non commissionati. Servizi e categorie coincidono nei testi italiani, inglesi, francesi e spagnoli.
 
 ## SEO e tecnologia
 

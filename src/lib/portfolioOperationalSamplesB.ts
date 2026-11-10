@@ -91,6 +91,21 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Les inconnues restent visibles.",
           "es": "Las incógnitas quedan visibles."
         }
+      },
+      {
+        "title": {
+          "it": "Matrice decisionale e approvazioni",
+          "en": "Decision matrix and approval trail",
+          "fr": "Matrice de décision et validations",
+          "es": "Matriz de decisión y aprobaciones"
+        },
+        "content": "ESEMPIO DIMOSTRATIVO — DATI INTERAMENTE INVENTATI\nObiettivo: scegliere un sistema di gestione richieste per clienti già acquisiti; nessuna ricerca contatti commerciali.\nCriteri e pesi approvati nel brief: controllo accessi 30%; esportazione dati 25%; accessibilità 20%; semplicità d'uso 15%; costo dichiarato 10%.\nSoluzione A (fittizia): 4/5, 5/5, 3/5, 4/5, 3/5 → 3,95/5.\nSoluzione B (fittizia): 5/5, 3/5, 4/5, 3/5, 4/5 → 3,95/5.\nParità: non scegliere automaticamente. Richiedere al responsabile una prova documentata su esportazione e accessibilità.\nStato: IN ATTESA DI VALIDAZIONE — nessun acquisto, nessun accesso o contratto attivato.\nCampi da compilare prima della decisione: fonte ufficiale per ogni criterio, data di verifica, limiti del piano, responsabile, approvazione scritta.\nNota: punteggi e soluzioni sono inventati per illustrare la procedura; non sono recensioni di software reali.",
+        "explanation": {
+          "it": "Il confronto distingue dati verificati, valutazioni interne e decisione riservata al cliente, senza trasformarsi in acquisizione di contatti.",
+          "en": "The matrix separates verifiable facts, fictional scoring and the client's final approval; it is not a prospecting exercise.",
+          "fr": "La matrice sépare faits vérifiables, notes fictives et décision du client, sans démarche de prospection.",
+          "es": "La matriz distingue los hechos verificables, las puntuaciones ficticias y la aprobación del cliente, sin prospección comercial."
+        }
       }
     ],
     "qualityChecks": [
@@ -208,6 +223,21 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "en": "FAQs clarify scope and approval conditions.",
           "fr": "La FAQ clarifie le périmètre et les validations.",
           "es": "La FAQ aclara el servicio y las autorizaciones."
+        }
+      },
+      {
+        "title": {
+          "it": "Scheda pronta per l'inserimento nel CMS",
+          "en": "CMS-ready editorial content sheet",
+          "fr": "Fiche éditoriale prête pour le CMS",
+          "es": "Ficha editorial lista para el CMS"
+        },
+        "content": "ESEMPIO DIMOSTRATIVO — SCHEDA REDAZIONALE PER SITO ESISTENTE\nPagina: Servizio di assistenza scritta ai clienti già acquisiti.\nTitolo SEO proposto: Assistenza clienti via email | Servizi e modalità operative\nMeta description proposta: Scopri come richiedere assistenza scritta per ordini già effettuati, quali informazioni preparare e quando riceverai un aggiornamento.\nH1: Assistenza scritta per i tuoi ordini\nTesto introduttivo: Hai già effettuato un ordine e desideri ricevere informazioni? Scrivici indicando il codice ordine e la tua richiesta. Verificheremo i dati disponibili e ti risponderemo secondo le tempistiche comunicate.\nFAQ: Posso modificare un ordine già confermato? Ogni richiesta viene verificata in base allo stato dell'ordine; nessuna modifica è garantita senza conferma.\nCTA: Invia una richiesta di assistenza\nControlli: un solo H1, nessuna promessa di risposta immediata, terminologia coerente, linguaggio semplice, testi dei pulsanti descrittivi.\nConsegna: contenuti testuali per un CMS già esistente; installazione, codice, SEO tecnico e pubblicazione non inclusi.",
+        "explanation": {
+          "it": "Non soltanto una riscrittura: il cliente vede titolo, metadati, H1, FAQ, CTA e controlli editoriali, con confini tecnici dichiarati.",
+          "en": "A practical deliverable: title, metadata, H1, FAQ, CTA and editorial checks, with technical development clearly excluded.",
+          "fr": "Un livrable concret : titre, métadonnées, H1, FAQ, appel à l'action et contrôles rédactionnels, hors développement technique.",
+          "es": "Un entregable práctico con título, metadatos, H1, FAQ, CTA y controles editoriales; no incluye desarrollo técnico."
         }
       }
     ],
@@ -327,6 +357,21 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Les points ouverts doivent être approuvés.",
           "es": "Las incidencias deben resolverse antes de publicar."
         }
+      },
+      {
+        "title": {
+          "it": "Estratto di controllo incrociato schede e listino",
+          "en": "Cross-check extract: product sheets and price list",
+          "fr": "Extrait de contrôle croisé : fiches et tarifs",
+          "es": "Extracto de cotejo: fichas y lista de precios"
+        },
+        "content": "ESEMPIO DIMOSTRATIVO — CATALOGO E LISTINO CON DATI INVENTATI\nRiferimento: revisione editoriale v1.2, non aggiornamento contabile.\nART-041 | Portadocumenti Linea | Scheda: feltro riciclato, 32 × 24 cm | Listino approvato: €18,50 | Stato: COERENTE.\nART-042 | Custodia Note | Scheda: tessuto, 18 × 12 cm | Listino approvato: €12,00 | Bozza catalogo: €21,00 | Stato: DISALLINEAMENTO DA CORREGGERE SU APPROVAZIONE.\nART-043 | Vassoio Piano | Scheda: 25 × 15 cm | Bozza: 25 × 51 cm | Stato: DIMENSIONE DA VERIFICARE SULLA FONTE ORIGINALE.\nRegistro correzioni: [A01] prezzo ART-042, fonte listino cliente, in attesa di conferma; [A02] dimensione ART-043, fonte scheda tecnica, non modificare autonomamente.\nNota di consegna: evidenziare modifiche approvate, conservare una copia precedente e trasmettere le richieste irrisolte al referente.\nEsclusioni: nessuna definizione autonoma dei prezzi, nessuna fatturazione, nessuna pubblicazione o modifica senza autorizzazione.",
+        "explanation": {
+          "it": "La tabella mostra il controllo di codici, unità di misura e prezzi già approvati, distinguendo le anomalie dalle modifiche autorizzate.",
+          "en": "Demonstrates matching item codes, dimensions and approved price-list information, while leaving business decisions to the client.",
+          "fr": "Le contrôle rapproche références, dimensions et tarifs déjà validés ; les décisions commerciales restent au client.",
+          "es": "Se cotejan códigos, medidas y precios ya aprobados, sin tomar decisiones comerciales por cuenta del cliente."
+        }
       }
     ],
     "qualityChecks": [
@@ -444,6 +489,21 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "en": "The workflow is software-agnostic and does not claim a live implementation.",
           "fr": "La méthode n’affirme aucune mise en service réelle.",
           "es": "El proceso no afirma una implementación real."
+        }
+      },
+      {
+        "title": {
+          "it": "Modello di richiesta e consenso operativo",
+          "en": "Operational access-request and approval template",
+          "fr": "Modèle de demande d'accès et de validation",
+          "es": "Plantilla de solicitud de acceso y aprobación"
+        },
+        "content": "ESEMPIO DIMOSTRATIVO — RICHIESTA DI ACCESSO E CAMBIO PROCEDURA\nOggetto: autorizzazione per organizzazione cartelle condivise — progetto Delta.\nBuongiorno, per sistemare la struttura dei documenti del progetto Delta propongo tre interventi: (1) creare una cartella «Da verificare», (2) uniformare i nomi dei file secondo la convenzione concordata, (3) predisporre un indice delle versioni approvate.\nNon sposterò o cancellerò alcun documento senza la tua conferma. Chiedo di indicare il referente, le cartelle autorizzate, il livello di accesso minimo necessario e le eventuali scadenze.\nModulo decisione: cartelle incluse [___]; cartelle escluse [___]; permessi autorizzati [sola lettura/modifica limitata]; responsabile [___]; data [___].\nControlli prima dell'avvio: nessuna password condivisa in chiaro; accesso individuale quando disponibile; elenco file da non spostare; piano di ripristino e registro modifiche.\nConsegna prevista: struttura approvata, indice documenti, breve procedura di mantenimento e lista delle anomalie rimaste aperte.",
+        "explanation": {
+          "it": "Un modello riutilizzabile che rende espliciti permessi, approvazioni e possibilità di ripristino, senza promettere sviluppo software.",
+          "en": "A reusable handover template covering least-privilege access, approval, change logging and rollback without implying software development.",
+          "fr": "Un modèle réutilisable de gestion des droits, validations et suivi des modifications, sans prestation de développement logiciel.",
+          "es": "Una plantilla reutilizable sobre permisos mínimos, autorizaciones, registro de cambios y recuperación, sin desarrollo de software."
         }
       }
     ],

@@ -88,6 +88,9 @@ export const useSEO = ({
       }
       link.setAttribute("href", resolvedCanonical);
       updateMetaTag("og:url", resolvedCanonical, true);
+    } else {
+      document.querySelector('link[rel="canonical"]')?.remove();
+      document.querySelector('meta[property="og:url"]')?.remove();
     }
 
     // Manage hreflang alternate links

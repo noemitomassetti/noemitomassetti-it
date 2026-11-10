@@ -13,15 +13,16 @@ import { PORTFOLIO_DOCUMENTS } from "../lib/portfolioData";
 import type { Language } from "../lib/i18n/types";
 
 const LANGS: Language[] = ["it","en","fr","es"];
-const DIRECTIONS = ["EN-IT","IT-EN","FR-IT","IT-FR","ES-IT","IT-ES"];
+const DIRECTIONS = ["EN-IT","FR-IT","ES-IT","IT-EN","IT-FR","IT-ES"];
 const read = (path:string) => readFileSync(path,"utf8");
 
 describe("Detailed portfolio: complete service coverage",()=>{
-  it("provides multiple actual source/target demonstration samples for all six translation directions",()=>{
-    expect(TRANSLATION_DEEP_CASES.length).toBeGreaterThanOrEqual(12);
+  it("provides multiple actual source/target demonstration samples for all six Italian/EN/FR/ES translation directions",()=>{
+    expect(TRANSLATION_DEEP_CASES).toHaveLength(11);
+    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(26);
     for(const dir of DIRECTIONS){
       const cases=TRANSLATION_DEEP_CASES.filter(sample=>sample.direction===dir);
-      expect(cases.length,dir).toBeGreaterThanOrEqual(2);
+      expect(cases.length,dir).toBeGreaterThanOrEqual(dir.startsWith("IT-") ? 1 : 2);
       for(const item of cases){
         expect(item.source.length).toBeGreaterThanOrEqual(3);
         expect(item.target.length).toBe(item.source.length);
@@ -82,6 +83,13 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
   });
+  it("keeps the overview dossier count aligned with the public catalogue in all four languages", () => {
+    const page = read("src/pages/Portfolio.tsx");
+    for (const label of ["26 dossier approfonditi", "26 in-depth dossiers", "26 dossiers détaillés", "26 dosieres detallados"]) {
+      expect(page).toContain(label);
+    }
+    expect(page).not.toMatch(/27 dossier approfonditi|27 in-depth dossiers|27 dossiers détaillés|27 dosieres detallados/);
+  });
   it("has unique slugs and valid multilingual deep-dossier navigation",()=>{
     const slugs=DEEP_PORTFOLIO_ITEMS.map(x=>x.item.id);
     expect(new Set(slugs).size).toBe(slugs.length);
@@ -131,7 +139,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
     const locs=xml.split("<loc>").slice(1).map(x=>x.split("</loc>")[0]);
-    expect(locs).toHaveLength(292);
+    expect(locs).toHaveLength(288);
     expect(new Set(locs).size).toBe(locs.length);
   });
   it("publishes only fictional sample data with explicit scope and privacy statements",()=>{

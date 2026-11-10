@@ -54,9 +54,19 @@ jobs:
                 if(!resp || resp.status()!==200) throw new Error('Route '+path+' HTTP '+resp?.status());
                 const text = await page.locator('body').innerText();
                 if (text.length < 150) throw new Error('Too little rendered text for '+path+': '+text.length);
+                if (['/', '/it', '/fr', '/es'].includes(path)) {
+                  if (await page.locator('a[href="/publications"],a[href="/it/libri"],a[href="/fr/livres"],a[href="/es/libros"]').count() > 0)
+                    throw new Error('Unpublished books publicly promoted at '+path);
+                  console.log('PASS book section remains hidden on '+path);
+                }
                 const safe = path.replace(/[^a-z0-9]/gi,'_')||'home';
                 await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
                 console.log('PASS route '+path+' content chars='+text.length+' title='+await page.title());
+              }
+              for (const path of ['/publications','/it/libri','/fr/livres','/es/libros']) {
+                await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle'});
+                if (!(await page.locator('h1').innerText()).includes('404')) throw new Error('Book route must be disabled before launch: '+path);
+                console.log('PASS unpublished book route hidden '+path);
               }
               for (const path of ['/portfolio-documenti/doc-01-localizzazione-interior-design.html','/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html']) {
                 const response = await page.request.get('http://127.0.0.1:4173'+path);
@@ -88,7 +98,7 @@ jobs:
               console.log('PASS original Italian blog slug preserved');
 
               // Specifically guard against clipped header links on narrow mobile/laptop/wide screens.
-              for (const width of [390, 768, 1365, 1536]) {
+              for (const width of [320, 390, 768, 1365, 1536, 1920]) {
                 await page.setViewportSize({width,height:900});
                 await page.goto('http://127.0.0.1:4173/it',{waitUntil:'networkidle'});
                 const clipped = await page.locator('header a, header button').evaluateAll(elements =>
@@ -102,12 +112,31 @@ jobs:
                 await page.screenshot({path:'/tmp/noemi-smoke/responsive_'+width+'.png',fullPage:false});
                 console.log('PASS responsive header '+width+'px');
                 if (width===390) {
-                  await page.getByRole('button',{name:'Toggle navigation menu'}).click();
-                  if(!await page.getByRole('navigation').count()) throw new Error('Mobile nav missing');
-                  console.log('PASS mobile menu');
+                  const menuButton=page.getByRole('button',{name:'Apri il menu'});
+                  if(await menuButton.getAttribute('aria-expanded')!=='false')
+                    throw new Error('Mobile menu should start collapsed');
+                  if(await menuButton.getAttribute('aria-controls')!=='noetom-navigation-drawer')
+                    throw new Error('Mobile menu control is not associated with its region');
+                  await menuButton.hover();
+                  const iconContrast=await menuButton.evaluate(el=>{
+                    const rgb=(value:string)=>value.match(/[\d.]+/g)?.slice(0,3).map(Number)??[0,0,0];
+                    const linear=(value:number)=>{const v=value/255;return v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4;};
+                    const luminance=(values:number[])=>0.2126*linear(values[0])+0.7152*linear(values[1])+0.0722*linear(values[2]);
+                    const foreground=luminance(rgb(getComputedStyle(el).color));
+                    const background=luminance(rgb(getComputedStyle(el).backgroundColor));
+                    return (Math.max(foreground,background)+0.05)/(Math.min(foreground,background)+0.05);
+                  });
+                  if(iconContrast<3) throw new Error('Mobile menu icon contrast below 3:1 on hover: '+iconContrast);
+                  await menuButton.click();
+                  const closeButton=page.getByRole('button',{name:'Chiudi il menu'});
+                  if(await closeButton.getAttribute('aria-expanded')!=='true')
+                    throw new Error('Mobile menu expanded state was not announced');
+                  if(!await page.locator('#noetom-navigation-drawer').isVisible())
+                    throw new Error('Mobile navigation region missing or hidden');
+                  console.log('PASS mobile menu, localized accessible name and expanded state');
                 }
               }
-              // Portfolio quality gate: all four languages, two viewport sizes, keyboard use and real sample routes.
+              // Portfolio quality gate: four languages, four device widths (320–1920px), keyboard use and real sample routes.
               const portfolioRoutes = [
                 {lang:'it',path:'/it/esempi-di-lavoro'},
                 {lang:'en',path:'/work-examples'},
@@ -115,13 +144,29 @@ jobs:
                 {lang:'es',path:'/es/ejemplos-de-trabajo'}
               ];
               for(const item of portfolioRoutes) {
-                for(const width of [390,1365]) {
+                for(const width of [320,390,1365,1920]) {
                   await page.setViewportSize({width,height:900});
                   await page.goto('http://127.0.0.1:4173'+item.path,{waitUntil:'networkidle'});
                   const rejectCookies=page.getByRole('button',{name:/^(Rifiuta|Decline|Refuser|Rechazar)$/i}).first();
                   if(await rejectCookies.isVisible()) await rejectCookies.click();
                   const lang=await page.locator('html').getAttribute('lang');
                   if(lang!==item.lang) throw Error('Portfolio locale mismatch '+item.path+': '+lang);
+                  if(width<=390) {
+                    const filters=page.locator('#portfolio-category-filters');
+                    if(await filters.getByRole('button').count()!==6)
+                      throw Error('Expected six portfolio category filters '+item.path);
+                    const geometry=await filters.evaluate(el=>{
+                      const bounds=el.getBoundingClientRect();
+                      const buttons=Array.from(el.querySelectorAll('button')).map(button=>{
+                        const rect=button.getBoundingClientRect();
+                        return {left:rect.left,right:rect.right};
+                      });
+                      return {left:bounds.left,right:bounds.right,clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,buttons};
+                    });
+                    if(geometry.scrollWidth>geometry.clientWidth+1 ||
+                      geometry.buttons.some(button=>button.left<geometry.left-1 || button.right>geometry.right+1))
+                      throw Error('Portfolio category filters are clipped or horizontally scrollable on mobile '+item.path);
+                  }
                   const buttons=page.locator('article button[aria-expanded]');
                   const count=await buttons.count();
                   if(count!==18) throw Error('Expected 18 accessible case studies '+item.path+', got '+count);
@@ -216,7 +261,7 @@ jobs:
               const vercelRewrites=JSON.parse(require('fs').readFileSync('vercel.json','utf8')).rewrites;
               // Social crawlers do not run React: verify static response HTML, not only JS DOM.
               for (const rawRoute of [
-                '/it/esempi-di-lavoro/dossier/it-en-consultancy-services',
+                '/it/esempi-di-lavoro/dossier/en-it-digital-onboarding',
                 '/fr/exemples-de-projets/dossier/fr-it-handmade-product',
                 '/work-examples/dossier/existing-customer-multilingual-email-pack',
                 '/it/esempi-di-lavoro'
@@ -237,14 +282,14 @@ jobs:
               }
               console.log('PASS four raw HTML social previews, correct route meta without JavaScript');
 
-              // New detailed dossier audit: all 27 fictional work samples in 4 languages.
+              // Public detailed dossier audit: 26 fictional samples (IT ↔ EN/FR/ES translation plus operational cases) in 4 languages.
               // Render at phone width to catch broken paths, SEO alternates, missing
               // deliverables and horizontal overflow in parallel translation panels.
               const dossierSlugs=[
-                'en-it-digital-onboarding','it-en-consultancy-services','fr-it-handmade-product',
-                'it-fr-professional-training','es-it-existing-customer','it-es-product-information',
-                'it-en-existing-order','en-it-professional-faq','fr-it-workshop-details',
-                'it-fr-product-order-guide','es-it-existing-customer-onboarding','it-es-workshop-reminder',
+                'en-it-digital-onboarding','fr-it-handmade-product','es-it-existing-customer',
+                'en-it-professional-faq','fr-it-workshop-details','es-it-existing-customer-onboarding',
+                'it-en-order-status-message','it-fr-training-workshop','it-es-desk-accessory-catalogue',
+                'it-en-audio-handover-instructions','fr-it-contractual-information',
                 'inbox-calendar-triage','customer-care-escalations','order-entry-price-list',
                 'shared-drive-version-control','online-course-secretariat','research-existing-italian-customers',
                 'web-copy-before-after','catalogue-price-list-proofreading','digital-tools-request-workflow',
@@ -275,18 +320,69 @@ jobs:
                 await page.screenshot({path:'/tmp/noemi-smoke/dossiers_'+locale+'_390.png',fullPage:false});
                 console.log('PASS '+dossierSlugs.length+' deep dossiers in '+locale+' at 390px: content, SEO, accessible language and overflow');
               }
-              // Functional direction filter: two independent samples per offered direction.
+              // Functional direction filters: source-to-Italian and Italian-to-target examples with meaningful coverage.
+              await page.setViewportSize({width:390,height:844});
               await page.goto('http://127.0.0.1:4173/it/esempi-di-lavoro',{waitUntil:'networkidle'});
               const deepDirectory=page.locator('#portfolio-complete-dossiers');
               if(await deepDirectory.locator('article').count()!==8) throw Error('Expected curated first-eight dossier selection');
-              await deepDirectory.getByRole('button',{name:'Esplora tutti i dossier (27)'}).click();
-              await page.waitForFunction(()=>document.querySelectorAll('#portfolio-complete-dossiers article').length===27,null,{timeout:10000});
-              if(await deepDirectory.locator('article').count()!==27) throw Error('Deep dossier directory not complete');
+              await deepDirectory.scrollIntoViewIfNeeded();
+              if(!await deepDirectory.getByText('Anteprima dell’elaborato').first().isVisible())
+                throw Error('Featured portfolio cards are missing their faithful deliverable preview');
+              if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3))
+                throw Error('Deep portfolio card previews create horizontal overflow on mobile');
+              await page.screenshot({path:'/tmp/noemi-smoke/deep_dossiers_it_390.png',fullPage:false});
+              await deepDirectory.getByRole('button',{name:'Esplora tutti i dossier (26)'}).click();
+              await page.waitForFunction(()=>document.querySelectorAll('#portfolio-complete-dossiers article').length===26,null,{timeout:10000});
+              if(await deepDirectory.locator('article').count()!==26) throw Error('Deep dossier directory not complete');
+              await deepDirectory.getByRole('button',{name:'EN → IT'}).click();
+              if(await deepDirectory.locator('article').count()!==2) throw Error('EN to IT dossier filter should show two samples');
+              await deepDirectory.getByRole('button',{name:'IT → EN'}).click();
+              if(await deepDirectory.locator('article').count()!==2) throw Error('IT to EN dossier filter should show two full samples');
+              await deepDirectory.getByRole('button',{name:'IT → FR'}).click();
+              if(await deepDirectory.locator('article').count()!==1) throw Error('IT to FR dossier filter should show one full sample');
               await deepDirectory.getByRole('button',{name:'IT → ES'}).click();
-              if(await deepDirectory.locator('article').count()!==2) throw Error('IT to ES dossier filter should show two samples');
+              if(await deepDirectory.locator('article').count()!==1) throw Error('IT to ES dossier filter should show one full sample');
               await deepDirectory.getByRole('button',{name:'Ricerche informative'}).click();
               if(await deepDirectory.locator('article').count()!==2) throw Error('Research service filter missing');
-              console.log('PASS 27 dossier directory and translation/service filters');
+              // Search must find the right dossier in Italian, bypass the featured-only view
+              // and display clear feedback when there are no matches.
+              await deepDirectory.getByRole('button',{name:'Tutti i dossier'}).click();
+              const searchDossiers=deepDirectory.getByRole('searchbox',{name:'Cerca nei dossier'});
+              await searchDossiers.fill('ONBOARDING SOFTWARE');
+              if(await deepDirectory.locator('article').count()!==1)
+                throw Error('Deep dossier search failed to find exact relevant example');
+              await searchDossiers.fill('not-a-real-dossier-search-term');
+              if(await deepDirectory.locator('article').count()!==0)
+                throw Error('Deep dossier search should show zero matching items');
+              if(!await deepDirectory.getByText(/Nessun dossier corrisponde alla ricerca/).isVisible())
+                throw Error('Missing empty-search result message');
+              await searchDossiers.clear();
+              if(await deepDirectory.locator('article').count()!==8)
+                throw Error('Clearing search did not restore featured portfolio');
+              console.log('PASS 26 public dossier directory, bidirectional translation filters and keyword search');
+
+              // The same tool article is independently localised; verify the dated plan notice
+              // and the correct provider links in all four languages.
+              const freePlanArticles=[
+                {lang:'it',path:'/blog/5-strumenti-gratuiti-utili-per-organizzare-meglio-il-lavoro-con-clienti-e-appuntamenti',heading:'Piani gratuiti: verifica i limiti'},
+                {lang:'en',path:'/en/blog/free-tools-to-organise-customer-work',heading:'Free plans: check the limits'},
+                {lang:'fr',path:'/fr/blog/cinq-outils-gratuits-organisation-clients-rendez-vous',heading:'Offres gratuites : vérifiez les limites'},
+                {lang:'es',path:'/es/blog/cinco-herramientas-gratuitas-organizar-trabajo',heading:'Planes gratuitos: comprueba los límites'}
+              ];
+              for(const item of freePlanArticles) {
+                await page.setViewportSize({width:390,height:844});
+                await page.goto('http://127.0.0.1:4173'+item.path,{waitUntil:'networkidle'});
+                if(await page.locator('html').getAttribute('lang')!==item.lang)
+                  throw Error('Free-plan article locale mismatch '+item.path);
+                const disclosure=page.locator('aside[aria-label]').filter({has:page.getByRole('heading',{name:item.heading})});
+                if(await disclosure.count()!==1) throw Error('Missing localized free-plan disclosure '+item.path);
+                if(await disclosure.getByRole('link').count()!==3)
+                  throw Error('Expected three official provider links in '+item.path);
+                if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3))
+                  throw Error('Free-plan disclosure overflows on mobile '+item.path);
+                await page.screenshot({path:'/tmp/noemi-smoke/free_plans_'+item.lang+'_390.png',fullPage:false});
+                console.log('PASS free-plan disclosure '+item.lang+' with three provider links');
+              }
 
               // Until the new provider has been verified, NEVER transmit personal data
               // to the previously failing provider. The visitor gets a usable manual draft.

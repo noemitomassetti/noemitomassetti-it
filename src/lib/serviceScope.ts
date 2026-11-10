@@ -85,8 +85,8 @@ export const SCOPE_EXCLUDED_REPLY: Record<ExcludedService, Record<Language, stri
 };
 
 export const SCOPE_FORM_NOTICE: Record<Language, string> = {
-  it: 'Servizi disponibili: segreteria organizzativa, back office operativo, assistenza ai clienti già acquisiti, corrispondenza multilingue, traduzioni IT ↔ EN/FR/ES e contenuti digitali. Non accetto incarichi di amministrazione aziendale, contabilità, fatturazione o acquisizione commerciale.',
-  en: 'For international clients: IT ↔ EN/FR/ES translation, Italian-market localisation, written support for existing Italian customers, and operational tasks related to Italy. No business administration, accounting, invoicing, sales prospecting or cold outreach.',
-  fr: 'Pour les clients internationaux : traduction dans les deux sens entre l’italien et le français, l’anglais ou l’espagnol, localisation vers l’italien et soutien aux clients italiens existants. Pas de gestion administrative, de comptabilité, de facturation ni de prospection.',
-  es: 'Para clientes internacionales: traducciones en ambos sentidos entre el italiano y el español, el inglés o el francés, localización al italiano y atención a clientes italianos existentes. No ofrezco administración empresarial, contabilidad, facturación ni captación comercial.',
+  it: 'Puoi richiedere segreteria, back office, assistenza clienti, comunicazioni, contenuti digitali e traduzioni professionali tra IT e EN/FR/ES. Le attività da svolgere saranno precisate nel preventivo. Non accetto incarichi di amministrazione aziendale, contabilità, fatturazione o acquisizione commerciale.',
+  en: 'You can enquire about virtual secretarial support, back office, customer care, professional communications, digital content and translation between Italian and English, French and Spanish in both directions. The written quote sets out the agreed work. No business administration, bookkeeping, invoicing or customer acquisition.',
+  fr: 'Vous pouvez demander un accompagnement en secrétariat, back-office, relation client, communication professionnelle, contenus numériques ou traduction IT ↔ EN/FR/ES. Le devis précise les prestations retenues. Je ne propose ni gestion administrative, ni comptabilité, ni facturation, ni prospection commerciale.',
+  es: 'Puedes solicitar apoyo en secretaría, back office, atención al cliente, comunicación profesional, contenidos digitales o traducción IT ↔ EN/FR/ES. El presupuesto especifica las tareas acordadas. No ofrezco administración empresarial, contabilidad, facturación ni captación comercial.',
 };

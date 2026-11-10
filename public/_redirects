@@ -1,3 +1,27 @@
 # Netlify static file precedence: generated /route/index.html wins;
 # all other React Router paths use the SPA shell.
+/work-examples/dossier/it-en-consultancy-services /work-examples 301
+/it/esempi-di-lavoro/dossier/it-en-consultancy-services /it/esempi-di-lavoro 301
+/fr/exemples-de-projets/dossier/it-en-consultancy-services /fr/exemples-de-projets 301
+/es/ejemplos-de-trabajo/dossier/it-en-consultancy-services /es/ejemplos-de-trabajo 301
+/work-examples/dossier/it-fr-professional-training /work-examples 301
+/it/esempi-di-lavoro/dossier/it-fr-professional-training /it/esempi-di-lavoro 301
+/fr/exemples-de-projets/dossier/it-fr-professional-training /fr/exemples-de-projets 301
+/es/ejemplos-de-trabajo/dossier/it-fr-professional-training /es/ejemplos-de-trabajo 301
+/work-examples/dossier/it-es-product-information /work-examples 301
+/it/esempi-di-lavoro/dossier/it-es-product-information /it/esempi-di-lavoro 301
+/fr/exemples-de-projets/dossier/it-es-product-information /fr/exemples-de-projets 301
+/es/ejemplos-de-trabajo/dossier/it-es-product-information /es/ejemplos-de-trabajo 301
+/work-examples/dossier/it-en-existing-order /work-examples 301
+/it/esempi-di-lavoro/dossier/it-en-existing-order /it/esempi-di-lavoro 301
+/fr/exemples-de-projets/dossier/it-en-existing-order /fr/exemples-de-projets 301
+/es/ejemplos-de-trabajo/dossier/it-en-existing-order /es/ejemplos-de-trabajo 301
+/work-examples/dossier/it-fr-product-order-guide /work-examples 301
+/it/esempi-di-lavoro/dossier/it-fr-product-order-guide /it/esempi-di-lavoro 301
+/fr/exemples-de-projets/dossier/it-fr-product-order-guide /fr/exemples-de-projets 301
+/es/ejemplos-de-trabajo/dossier/it-fr-product-order-guide /es/ejemplos-de-trabajo 301
+/work-examples/dossier/it-es-workshop-reminder /work-examples 301
+/it/esempi-di-lavoro/dossier/it-es-workshop-reminder /it/esempi-di-lavoro 301
+/fr/exemples-de-projets/dossier/it-es-workshop-reminder /fr/exemples-de-projets 301
+/es/ejemplos-de-trabajo/dossier/it-es-workshop-reminder /es/ejemplos-de-trabajo 301
 /*  /index.html  200

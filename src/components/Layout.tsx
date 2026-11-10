@@ -197,6 +197,16 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
             <BrandLogo />
           </Link>
 
+          {/* Laptop navigation: keep the most requested paths visible before the full desktop breakpoint. */}
+          <nav
+            aria-label={currentLang === "it" ? "Navigazione principale" : currentLang === "fr" ? "Navigation principale" : currentLang === "es" ? "Navegación principal" : "Primary navigation"}
+            className="hidden xl:flex 2xl:hidden items-center gap-3 text-sm whitespace-nowrap"
+          >
+            <Link to={getLocalizedPath("services", currentLang)} className="font-medium text-foreground/80 hover:text-primary">{dict.nav.services}</Link>
+            <Link to={portfolioPath} className="font-medium text-foreground/80 hover:text-primary">{navLinks.find(item => item.href === portfolioPath)?.label}</Link>
+            <Link to={getLocalizedPath("contact", currentLang)} className="font-medium text-foreground/80 hover:text-primary">{dict.nav.contact}</Link>
+          </nav>
+
           {/* Desktop Navigation Links */}
           <nav className="hidden 2xl:flex items-center gap-4 text-sm">
             {navLinks.map((item) => {
@@ -312,11 +322,13 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
 
             {/* Mobile Hamburger Menu */}
             <Button
-              variant="ghost"
+              variant="default"
               size="icon"
-              className="2xl:hidden text-foreground hover:text-primary h-9 w-9"
+              className="2xl:hidden h-10 w-10 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground shadow-sm"
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle navigation menu"
+              aria-expanded={mobileOpen}
+              aria-controls="noetom-navigation-drawer"
+              aria-label={currentLang === "it" ? (mobileOpen ? "Chiudi il menu" : "Apri il menu") : currentLang === "fr" ? (mobileOpen ? "Fermer le menu" : "Ouvrir le menu") : currentLang === "es" ? (mobileOpen ? "Cerrar el menú" : "Abrir el menú") : (mobileOpen ? "Close menu" : "Open menu")}
             >
               {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -325,7 +337,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
 
         {/* Mobile Dropdown Menu */}
         {mobileOpen && (
-          <div className="2xl:hidden border-t border-border/50 bg-background/98 backdrop-blur-md px-6 py-6 space-y-5 animate-in slide-in-from-top-3 duration-200">
+          <div id="noetom-navigation-drawer" className="2xl:hidden border-t border-border/50 bg-background/98 backdrop-blur-md px-6 py-6 space-y-5 animate-in slide-in-from-top-3 duration-200">
             {/* Mobile Language Switcher */}
             <div className="flex items-center justify-between pb-3 border-b border-border/40">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">

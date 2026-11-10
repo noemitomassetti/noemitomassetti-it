@@ -33,10 +33,10 @@ export const PRICING_DATA: PricingData = {
     es: "Un punto de partida claro: alcance, plazos y honorarios se acuerdan por escrito antes de empezar.",
   },
   disclaimer: {
-    it: "Compensi indicativi, non un'offerta vincolante. Il preventivo scritto specifica attività incluse, volume, tempi, modalità e condizioni di pagamento, con eventuali aspetti fiscali applicabili. Per collaborazioni continuative, la tariffa viene concordata in base all'impegno effettivo. I pacchetti si attivano dopo accettazione del preventivo e pagamento anticipato, salvo diverso accordo scritto.",
-    en: "Indicative fees, not a binding offer. Your written quote sets out scope, volume, timing, payment terms and applicable tax information. Ongoing work is quoted individually. Hour packages are activated after acceptance and advance payment, unless agreed otherwise in writing.",
-    fr: "Tarifs indicatifs, sans valeur d'offre ferme. Le devis écrit précise la prestation, le volume, les délais, le paiement et les informations fiscales applicables. Les collaborations régulières font l'objet d'un devis adapté. Les forfaits sont activés après acceptation et paiement anticipé, sauf accord écrit contraire.",
-    es: "Honorarios orientativos, no una oferta vinculante. El presupuesto escrito define alcance, volumen, plazos, pago e información fiscal aplicable. Las colaboraciones continuadas se presupuestan individualmente. Los paquetes se activan tras la aceptación y el pago anticipado, salvo acuerdo escrito diferente.",
+    it: "Le tariffe sono indicative e non costituiscono un'offerta vincolante. Gli elenchi di servizi sono esempi di attività possibili: né la tariffa oraria né i pacchetti comprendono automaticamente tutte le attività indicate. Il preventivo scritto definisce ciò che è incluso, volume, tempi, condizioni di pagamento ed eventuali aspetti fiscali applicabili. Le collaborazioni continuative sono valutate singolarmente. I pacchetti si attivano dopo l'accettazione del preventivo e il pagamento anticipato, salvo diverso accordo scritto.",
+    en: "Rates are indicative, not a binding offer. Service lists show possible tasks: neither the hourly rate nor an hour package automatically includes every activity shown. The written quote specifies exactly what is included, the volume, deadlines, payment terms and applicable tax details. Ongoing work is quoted individually. Hour packages start after acceptance and advance payment, unless agreed otherwise in writing.",
+    fr: "Les tarifs sont indicatifs et ne constituent pas une offre ferme. Les listes présentent des prestations possibles : ni le tarif horaire ni un forfait d'heures ne comprennent automatiquement toutes les tâches proposées. Le devis écrit précise les prestations incluses, le volume, les délais, les conditions de paiement et les informations fiscales applicables. Les collaborations régulières sont chiffrées au cas par cas. Les forfaits sont activés après acceptation et paiement anticipé, sauf accord écrit contraire.",
+    es: "Las tarifas son orientativas y no constituyen una oferta vinculante. Las listas muestran tareas posibles: ni la tarifa por horas ni los paquetes incluyen automáticamente todas las actividades mencionadas. El presupuesto escrito especifica qué servicios se incluyen, el volumen, los plazos, las condiciones de pago y los datos fiscales aplicables. Las colaboraciones continuadas se presupuestan individualmente. Los paquetes se activan tras la aceptación y el pago anticipado, salvo acuerdo escrito en contrario.",
   },
   bookCall: {
     it: "Richiedi un preventivo", en: "Request a quote",
@@ -45,14 +45,14 @@ export const PRICING_DATA: PricingData = {
   categories: [
     {
       id: "va",
-      title: {it: "Segreteria e back office", en: "Italian-market operational support", fr: "Soutien opérationnel pour l’Italie", es: "Apoyo operativo para Italia"},
+      title: {it: "Segreteria e back office", en: "Virtual assistance & back office", fr: "Secrétariat et back-office", es: "Secretaría y back office"},
       rate: {it: "25 € / ora", en: "€25 / hour", fr: "25 € / heure", es: "25 € / hora"},
       rateDetail: {it: "Incarichi singoli e pacchetti di ore", en: "Ad hoc tasks and hour packages", fr: "Missions ponctuelles et forfaits horaires", es: "Encargos puntuales y paquetes de horas"},
       items: {
-        it: ["Intervento a ore: 25 €/ora", "Pacchetto 5 ore: 125 €", "Pacchetto 10 ore: 240 €", "Pacchetto 20 ore: 460 €", "Collaborazioni continuative: preventivo personalizzato"],
-        en: ["Hourly work: €25/hour", "5-hour package: €125", "10-hour package: €240", "20-hour package: €460", "Ongoing work: tailored quote"],
-        fr: ["Mission ponctuelle : 25 €/heure", "Forfait 5 heures : 125 €", "Forfait 10 heures : 240 €", "Forfait 20 heures : 460 €", "Collaboration régulière : devis personnalisé"],
-        es: ["Trabajo por horas: 25 €/hora", "Paquete de 5 horas: 125 €", "Paquete de 10 horas: 240 €", "Paquete de 20 horas: 460 €", "Colaboración continuada: presupuesto a medida"],
+        it: ["Intervento a ore: 25 €/ora", "Pacchetto 5 ore: 125 € — per attività circoscritte", "Pacchetto 10 ore: 240 € — per esigenze operative distribuite su più attività", "Pacchetto 20 ore: 460 € — per un maggior volume di attività concordate", "Collaborazioni continuative: preventivo personalizzato"],
+        en: ["Hourly work: €25/hour", "5-hour package: €125 — for focused assignments", "10-hour package: €240 — for several agreed operational tasks", "20-hour package: €460 — for a larger agreed workload", "Ongoing work: tailored quote"],
+        fr: ["Mission ponctuelle : 25 €/heure", "Forfait 5 heures : 125 € — pour des tâches ciblées", "Forfait 10 heures : 240 € — pour plusieurs tâches convenues", "Forfait 20 heures : 460 € — pour un volume de travail convenu plus important", "Collaboration régulière : devis personnalisé"],
+        es: ["Trabajo por horas: 25 €/hora", "Paquete de 5 horas: 125 € — para tareas concretas", "Paquete de 10 horas: 240 € — para varias tareas acordadas", "Paquete de 20 horas: 460 € — para un mayor volumen de trabajo acordado", "Colaboración continuada: presupuesto a medida"],
       },
       highlight: {it: "Per delegare con flessibilità", en: "Flexible delegation", fr: "Délégation flexible", es: "Delegación flexible"},
     },
@@ -60,7 +60,7 @@ export const PRICING_DATA: PricingData = {
       id: "support",
       title: {it: "Customer care e comunicazioni", en: "Customer care & communications", fr: "Relation client et communications", es: "Atención al cliente y comunicaciones"},
       rate: {it: "25 € / ora", en: "€25 / hour", fr: "25 € / heure", es: "25 € / hora"},
-      rateDetail: {it: "Supporto scritto, in italiano e multilingue", en: "Written support for existing Italian customers", fr: "Échanges écrits avec les clients italiens existants", es: "Atención escrita a clientes italianos existentes"},
+      rateDetail: {it: "Supporto scritto, in italiano e multilingue", en: "Written support for customers, in four languages", fr: "Échanges écrits avec les clients en quatre langues", es: "Atención escrita a clientes en cuatro idiomas"},
       items: {
         it: ["Gestione e organizzazione della posta", "Risposte ai clienti in bozza o concordate", "Follow-up e informazioni operative", "FAQ, modelli email e procedure", "Perimetro e ore concordati nel preventivo"],
         en: ["Email inbox organisation", "Drafted or approved customer responses", "Follow-ups and routine information", "FAQs, email templates and processes", "Scope and hours confirmed in the quote"],
@@ -70,14 +70,14 @@ export const PRICING_DATA: PricingData = {
     },
     {
       id: "trans",
-      title: {it: "Traduzioni IT ↔ EN/FR/ES e localizzazione", en: "Italian ↔ EN/FR/ES Translation & Localisation", fr: "Traduction italien ↔ FR/EN/ES et localisation", es: "Traducción italiano ↔ ES/EN/FR y localización"},
+      title: {it: "Traduzioni IT ↔ EN/FR/ES e localizzazione", en: "IT ↔ EN/FR/ES Translation & Localisation", fr: "Traduction professionnelle IT ↔ EN/FR/ES et localisation", es: "Traducción profesional IT ↔ EN/FR/ES y localización"},
       rate: {it: "da 0,09 € / parola", en: "from €0.09 / word", fr: "dès 0,09 € / mot", es: "desde 0,09 € / palabra"},
-      rateDetail: {it: "IT ↔ EN, IT ↔ FR, IT ↔ ES; testo e direzione da concordare", en: "IT ↔ EN/FR/ES; quoted by language direction and subject", fr: "IT ↔ FR/EN/ES ; selon le sens et le domaine", es: "IT ↔ ES/EN/FR; según el sentido y la especialidad"},
+      rateDetail: {it: "Tariffa di partenza per EN/FR/ES → IT; IT → EN/FR/ES su preventivo", en: "Starting rate for EN/FR/ES → IT; IT → EN/FR/ES quoted individually", fr: "Tarif de base EN/FR/ES → IT ; devis spécifique pour IT → EN/FR/ES", es: "Tarifa inicial EN/FR/ES → IT; IT → EN/FR/ES con presupuesto individual"},
       items: {
-        it: ["Traduzione di riferimento: da 0,09 €/parola sorgente", "Localizzazione siti e contenuti: da 0,11 €/parola", "Traduzione specialistica: da 0,12 €/parola", "Revisione testi: da 0,03 €/parola", "Prezzo definitivo dopo analisi del materiale"],
-        en: ["Translation: from €0.09/source word", "Website/content localisation: from €0.11/word", "Specialist translation: from €0.12/word", "Text revision: from €0.03/word", "Final fee confirmed after reviewing the source"],
-        fr: ["Traduction : dès 0,09 €/mot source", "Localisation de sites/contenus : dès 0,11 €/mot", "Traduction spécialisée : dès 0,12 €/mot", "Révision de textes : dès 0,03 €/mot", "Devis définitif après examen des documents"],
-        es: ["Traducción: desde 0,09 €/palabra origen", "Localización de webs/contenidos: desde 0,11 €/palabra", "Traducción especializada: desde 0,12 €/palabra", "Revisión de textos: desde 0,03 €/palabra", "Precio definitivo tras revisar el material"],
+        it: ["Traduzione EN/FR/ES → IT: da 0,09 €/parola sorgente", "Localizzazione siti e contenuti: da 0,11 €/parola", "Traduzione specialistica: da 0,12 €/parola", "Revisione testi: da 0,03 €/parola", "IT → EN/FR/ES: preventivo su testo e settore; prezzo definitivo dopo analisi"],
+        en: ["EN/FR/ES → IT translation: from €0.09/source word", "Website/content localisation: from €0.11/word", "Specialist translation: from €0.12/word", "Text revision: from €0.03/word", "IT → EN/FR/ES: quote on request; final fee after reviewing the text"],
+        fr: ["Traduction EN/FR/ES → IT : dès 0,09 €/mot source", "Localisation de sites/contenus : dès 0,11 €/mot", "Traduction spécialisée : dès 0,12 €/mot", "Révision de textes : dès 0,03 €/mot", "IT → EN/FR/ES : devis personnalisé après examen du texte"],
+        es: ["Traducción EN/FR/ES → IT: desde 0,09 €/palabra origen", "Localización de webs/contenidos: desde 0,11 €/palabra", "Traducción especializada: desde 0,12 €/palabra", "Revisión de textos: desde 0,03 €/palabra", "IT → EN/FR/ES: presupuesto personalizado tras revisar el texto"],
       },
       highlight: {it: "Italiano madrelingua", en: "Native Italian expertise", fr: "Italien langue maternelle", es: "Italiano nativo"},
     },
@@ -92,7 +92,7 @@ export function getServicePricingSummary(serviceKey: string, lang: Language): st
     trans: "trans",
     writing: "va",
     research: "va",
-    support: "va",
+    support: "support",
     customerCare: "support",
     web: "va",
   };

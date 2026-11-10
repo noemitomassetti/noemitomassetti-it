@@ -8,9 +8,11 @@ export interface TerminologyChoice {
   explanation: Localised;
 }
 
+export type PublicTranslationDirection = "EN-IT" | "FR-IT" | "ES-IT" | "IT-EN" | "IT-FR" | "IT-ES";
+
 export interface TranslationDeepCase {
   id: string;
-  direction: "EN-IT" | "IT-EN" | "FR-IT" | "IT-FR" | "ES-IT" | "IT-ES";
+  direction: PublicTranslationDirection;
   domain: Localised;
   title: Localised;
   context: Localised;
@@ -30,7 +32,7 @@ export const TRANSLATION_SAMPLE_NOTICE: Localised = {
   es: "Muestra profesional original con marcas, textos y datos ficticios: no es un encargo real ni un testimonio. La comparación explica decisiones traductoras y no acredita una revisión externa."
 };
 
-export const DIRECTION_LABELS: Record<TranslationDeepCase["direction"], string> = {
-  "EN-IT": "EN → IT", "IT-EN": "IT → EN", "FR-IT": "FR → IT",
-  "IT-FR": "IT → FR", "ES-IT": "ES → IT", "IT-ES": "IT → ES"
+export const DIRECTION_LABELS: Record<PublicTranslationDirection, string> = {
+  "EN-IT": "EN → IT", "FR-IT": "FR → IT", "ES-IT": "ES → IT",
+  "IT-EN": "IT → EN", "IT-FR": "IT → FR", "IT-ES": "IT → ES"
 };

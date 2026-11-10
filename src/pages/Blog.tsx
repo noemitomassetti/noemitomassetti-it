@@ -65,7 +65,7 @@ export default function Blog() {
 
   return (
     <Layout lang={lang}>
-      <main className="container px-4 md:px-6 py-10 md:py-16">
+      <div className="container px-4 md:px-6 py-10 md:py-16">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">{copy.heading}</h1>
           <p className="text-lg md:text-xl text-foreground/80">{copy.introduction}</p>
@@ -94,7 +94,7 @@ export default function Blog() {
             </Card>
           ))}
         </div>
-      </main>
+      </div>
     </Layout>
   );
 }

@@ -182,7 +182,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       it: [
         "Traduzione di 'Customer Acquisition Cost' come 'Costo di acquisizione clienti (CAC)' con esplicitazione della formula.",
         "Scelta di 'Tasso di abbandono' per 'Churn rate' nel corpo descrittivo, lasciando la sigla tra parentesi per immediatezza professionale.",
-        "Armonizzazione della distinzione tra 'Revenue' (Fatturato/Ricavi) e 'Profit' (Margine operativo/Utile).",
+        "Distinzione fra 'revenue' (ricavi, oppure fatturato secondo il contesto) e 'profit' (utile); margine lordo, risultato operativo e utile netto richiedono rese distinte.",
       ],
       en: [
         "Clear distinction maintained between revenue streams, gross margin, and operating profit.",
@@ -1841,16 +1841,16 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "05",
     title: {
-      it: "Accordo di Riservatezza (NDA) Bilingue",
-      en: "Bilingual Non-Disclosure Agreement (NDA)",
-      fr: "Accord de Confidentialité (NDA) Bilingue",
-      es: "Acuerdo de Confidencialidad (NDA) Bilingüe",
+      it: "Accordo di Riservatezza (NDA): adattamento EN → IT",
+      en: "Non-Disclosure Agreement (NDA): EN → IT adaptation",
+      fr: "Accord de confidentialité (NDA) : adaptation EN → IT",
+      es: "Acuerdo de confidencialidad (NDA): adaptación EN → IT",
     },
     subtitle: {
-      it: "Testo contrattuale IT/EN & diritto comparato",
-      en: "IT/EN contractual clauses & comparative law notes",
-      fr: "Clauses contractuelles IT/EN & droit comparé",
-      es: "Cláusulas contractuales IT/EN y derecho comparado",
+      it: "Testo inglese e versione italiana a fronte, con note di diritto comparato",
+      en: "English source and Italian translation, with comparative-law notes",
+      fr: "Texte source anglais et traduction italienne, avec notes de droit comparé",
+      es: "Texto fuente en inglés y traducción al italiano, con notas de derecho comparado",
     },
     category: "translation",
     url: "/portfolio-documenti/doc-05-accordo-riservatezza-nda.html",

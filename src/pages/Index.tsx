@@ -4,6 +4,9 @@ import { useSEO } from "@/hooks/useSEO";
 import { BookingButton } from "@/components/BookingButton";
 import { ContactForm } from "@/components/ContactForm";
 import { PricingSection } from "@/components/PricingSection";
+import { PUBLICATIONS_VISIBLE, getPublishedBooks } from "@/lib/publicationsCatalog";
+import { SERVICE_DECISION_PATHS } from "@/lib/serviceDecisionPaths";
+import { getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
 import {
   Language,
   getLanguageFromPath,
@@ -14,6 +17,7 @@ import {
 import { getBlogPosts, getBlogPostPath, getBlogIndexPath } from "@/lib/blogData";
 import {
   Mail,
+  BookOpen,
   Globe,
   PenTool,
   Search,
@@ -56,6 +60,7 @@ export default function IndexPage() {
 
   const servicesPath = getLocalizedPath("services", lang);
   const resourcesPath = getLocalizedPath("resources", lang);
+  const publishedBooks = getPublishedBooks();
 
   const getServiceIcon = (id: string) => {
     switch (id) {
@@ -245,10 +250,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Se lavori su appuntamento o gestisci direttamente i tuoi clienti, posso supportarti nella gestione di agenda, email, richieste e comunicazioni."
           : lang === "fr"
-          ? "Si vous travaillez sur rendez-vous, je prends en charge votre agenda, vos courriels et vos demandes clients."
+          ? "Si vous travaillez sur rendez-vous, je peux organiser votre agenda, vos courriels et les demandes de vos clients selon vos consignes."
           : lang === "es"
           ? "Si trabajas con citas o clientes directos, te ayudo a gestionar agenda, correos y comunicaciones."
-          : "If your business relies on meetings and direct client care, I manage scheduling, emails, and ongoing correspondence.",
+          : "If your work involves appointments and customers, I can manage agreed scheduling, email organisation and professional correspondence.",
     },
     {
       icon: GraduationCap,
@@ -294,18 +299,18 @@ export default function IndexPage() {
         lang === "it"
           ? "Professionisti che lavorano con l'estero"
           : lang === "fr"
-          ? "Professionnels travaillant avec l’Italie"
+          ? "Professionnels travaillant à l’international"
           : lang === "es"
-          ? "Empresas que trabajan con Italia"
-          : "Businesses Working with Italy",
+          ? "Profesionales con actividad internacional"
+          : "Professionals Working Internationally",
       description:
         lang === "it"
-          ? "Traduco nei due sensi tra italiano e inglese, francese e spagnolo e supporto le comunicazioni professionali con interlocutori internazionali."
+          ? "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Supporto inoltre le comunicazioni professionali con interlocutori internazionali."
           : lang === "fr"
-          ? "Je traduis dans les deux sens entre l’italien et le français, l’anglais et l’espagnol, tout en accompagnant vos échanges avec vos interlocuteurs italiens."
+          ? "Je traduis dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’accompagne également les échanges écrits convenus avec vos clients et interlocuteurs professionnels déjà acquis."
           : lang === "es"
-          ? "Traduzco en ambos sentidos entre el italiano y el español, el inglés y el francés y te ayudo a preparar comunicaciones para tus interlocutores italianos."
-          : "I translate between Italian and English, French and Spanish in both directions and help you communicate with existing Italian customers.",
+          ? "Traduzco en ambas direcciones entre el italiano y el inglés, francés y español. También apoyo las comunicaciones escritas acordadas con tus clientes y contactos profesionales existentes."
+          : "I translate in both directions between Italian and English, French and Spanish. I also support agreed written communication with customers and professional contacts.",
     },
   ];
 
@@ -345,8 +350,8 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Nous sélectionnons ensemble les missions précises pour lesquelles mon aide sera la plus efficace."
           : lang === "es"
-          ? "Fijamos las tareas concretas donde mi soporte marcará una diferencia real e inmediata."
-          : "We define the specific operational tasks where senior delegation delivers instant relief.",
+          ? "Identificamos las tareas concretas en las que puedo ayudarte y acordamos prioridades y entregables."
+          : "We identify the specific tasks I can take on and agree clear priorities, responsibilities and deliverables.",
     },
     {
       number: "03",
@@ -383,8 +388,8 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Vous vous recentrez sur votre cœur de métier. Je prends en charge les tâches déléguées avec rigueur."
           : lang === "es"
-          ? "Tú te enfocas en tus prioridades. Yo me encargo de las gestiones delegadas con total autonomía."
-          : "You focus fully on high-value client work while I handle the operational foundation.",
+          ? "Puedes centrarte en tus prioridades mientras gestiono las tareas acordadas y consulto contigo las decisiones que requieren tu aprobación."
+          : "You focus on your priorities while I manage the agreed tasks, keeping you informed and seeking approval where needed.",
     },
   ];
 
@@ -420,12 +425,12 @@ export default function IndexPage() {
           : "Do I have to commit to a fixed number of hours?",
       a:
         lang === "it"
-          ? "No. La modalità di collaborazione viene definita in base alle attività e alle tue esigenze, a tariffa oraria o a pacchetto, con massima flessibilità e senza vincoli rigidi."
+          ? "Non necessariamente. Puoi richiedere un intervento a ore, un pacchetto oppure una collaborazione continuativa. Attività, ore e condizioni vengono concordate nel preventivo."
           : lang === "fr"
-          ? "Non. Les modalités de travail sont convenues selon vos besoins effectifs, au taux horaire ou au forfait, avec une grande flexibilité et sans contrainte rigide."
+          ? "Pas nécessairement. Vous pouvez demander une intervention à l'heure, un forfait d'heures ou un accompagnement régulier. Les tâches, les heures et les conditions sont précisées dans le devis."
           : lang === "es"
-          ? "No. La modalidad de colaboración se define según tus necesidades y volumen real, por horas o por paquete, con total flexibilidad y sin ataduras rígidas."
-          : "No. The terms of collaboration are structured flexibly around your specific workload and actual needs, hourly or packaged, without rigid lock-ins.",
+          ? "No necesariamente. Puedes solicitar un trabajo por horas, un paquete de horas o una colaboración continuada. Las tareas, las horas y las condiciones se concretan en el presupuesto."
+          : "Not necessarily. You can request hourly work, an hour package or ongoing support. The agreed tasks, hours and terms will be stated in your written quote.",
     },
     {
       q:
@@ -438,12 +443,12 @@ export default function IndexPage() {
           : "Are you available for international clients?",
       a:
         lang === "it"
-          ? "Sì. Lavoro da remoto con professionisti italiani e attività estere che hanno già clienti o progetti in Italia. Offro traduzioni nei due sensi tra italiano e inglese, francese e spagnolo, oltre alla localizzazione per il pubblico italiano e al supporto per le comunicazioni con clienti già acquisiti."
+          ? "Sì. Lavoro da remoto con professionisti italiani e attività estere che hanno già clienti o progetti in Italia. Offro traduzioni professionali in entrambe le direzioni tra italiano, inglese, francese e spagnolo, localizzazione per il pubblico italiano e supporto scritto ai clienti in italiano, inglese, francese e spagnolo."
           : lang === "fr"
-          ? "Oui. Je travaille à distance avec des professionnels et de petites entreprises ayant des clients ou des activités en Italie. Je traduis dans les deux sens entre l’italien et le français, l’anglais ou l’espagnol ; la localisation vers l’italien et les échanges avec les clients existants sont également proposés."
+          ? "Oui. Je travaille à distance avec des professionnels et de petites entreprises, en Italie comme à l'étranger. Je propose du secrétariat organisationnel, du back-office, un soutien écrit aux clients et des traductions dans les deux sens entre l’italien et l’anglais, le français et l’espagnol."
           : lang === "es"
-          ? "Sí. Trabajo a distancia con profesionales y pequeñas empresas que ya tienen clientes o actividades en Italia. Traduzco en ambos sentidos entre el italiano y el español, el inglés o el francés; también ofrezco localización al italiano y apoyo escrito a clientes existentes."
-          : "Yes. I work remotely with professionals and small businesses that have customers or activities in Italy. I translate between Italian and English, French or Spanish in both directions, with a particular focus on localisation for Italian audiences and written support for existing customers.",
+          ? "Sí. Trabajo a distancia con profesionales y pequeñas empresas de Italia y del extranjero. Ofrezco secretaría organizativa, back office, atención escrita a clientes y traducción en ambas direcciones entre el italiano y el inglés, francés y español."
+          : "Yes. I work remotely with professionals and small businesses in Italy and abroad. My services include organisational secretarial work, operational back office, written support for customers and translation in both directions between Italian and English, French and Spanish.",
     },
     {
       q:
@@ -484,20 +489,20 @@ export default function IndexPage() {
     {
       q:
         lang === "it"
-          ? "Posso iniziare con una sola attività?"
+          ? "Le attività elencate sono tutte incluse?"
           : lang === "fr"
-          ? "Puis-je commencer par une seule mission ?"
+          ? "Toutes les tâches présentées sont-elles incluses ?"
           : lang === "es"
-          ? "¿Puedo empezar con una sola tarea?"
-          : "Can I start with just one assignment?",
+          ? "¿Están incluidas todas las tareas que aparecen en la web?"
+          : "Are all the listed activities included in a service?",
       a:
         lang === "it"
-          ? "Certamente. Possiamo partire da ciò che oggi ti occupa più tempo o ti crea maggiore difficoltà."
+          ? "No. Sono esempi delle attività che posso svolgere, non un pacchetto completo. Nel preventivo indico precisamente le prestazioni concordate, gli eventuali materiali da consegnare, i tempi e il compenso."
           : lang === "fr"
-          ? "Absolument. Nous pouvons débuter par la tâche qui absorbe le plus clair de votre temps ou freine votre productivité."
+          ? "Non. Il s'agit d'exemples de prestations possibles, pas d'un forfait tout compris. Le devis précise les tâches retenues, les éventuels livrables, les délais et les honoraires."
           : lang === "es"
-          ? "Por supuesto. Podemos empezar por la tarea que hoy te absorbe más tiempo o te genera mayor atasco."
-          : "Certainly. Starting with the single task that drains most of your time is often the best first step.",
+          ? "No. Son ejemplos de tareas que puedo realizar, no un paquete con todo incluido. El presupuesto precisa los servicios acordados, los posibles entregables, los plazos y los honorarios."
+          : "No. They illustrate tasks I can take on, not an all-inclusive package. Your written quote will identify the agreed services, any deliverables, deadlines and fees.",
     },
     {
       q:
@@ -546,10 +551,10 @@ export default function IndexPage() {
               {lang === "it"
                 ? "Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e contenuti per siti web."
                 : lang === "fr"
-                ? "Noemi Tomassetti - Assistante virtuelle pour professionnels et petites entreprises. Soutien opérationnel lié à l’Italie, traduction italien ↔ français/anglais/espagnol et localisation en italien."
+                ? "Noemi Tomassetti - Assistante virtuelle multilingue et traductrice pour professionnels et petites entreprises. Secrétariat, back-office, relation client écrite et traduction IT ↔ EN/FR/ES."
                 : lang === "es"
-                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Apoyo operativo relacionado con Italia, traducción italiano ↔ español/inglés/francés y localización al italiano."
-                : "Noemi Tomassetti - Virtual Assistant for professionals and small businesses. Operational back office, organisational support, multilingual communication and Italian-language website content."}
+                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Traducción profesional IT ↔ EN/FR/ES, localización de contenidos y asistencia virtual operativa."
+                : "Noemi Tomassetti - Multilingual Virtual Assistant and Translator. Organisational secretarial work, operational back office, written customer care, digital content and professional translation IT ↔ EN/FR/ES."}
             </h1>
 
             {/* SVG Logo: Noemi Tomassetti / VIRTUAL ASSISTANT */}
@@ -602,7 +607,7 @@ export default function IndexPage() {
               <div className="space-y-3">
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
                   {dict.hero.desc1 ||
-                    "Metto a disposizione oltre vent'anni di esperienza organizzativa e linguistica per aiutarti a gestire meglio il lavoro quotidiano."}
+                    "Metto a disposizione oltre vent'anni di esperienza lavorativa per aiutarti a gestire meglio il lavoro quotidiano."}
                 </p>
                 <p className="font-light text-white/95 text-sm sm:text-base md:text-base lg:text-lg drop-shadow-sm">
                   {dict.hero.desc2 ||
@@ -681,10 +686,10 @@ export default function IndexPage() {
                 {lang === "it"
                   ? "Posso occuparmi di alcune delle attività di segreteria, organizzazione, comunicazione e supporto operativo che fanno parte della gestione quotidiana della tua attività."
                   : lang === "fr"
-                  ? "Je peux prendre en charge la correspondance avec les clients italiens existants, les tâches de back-office convenues, les traductions dans les deux sens avec l’italien et la localisation pour l’Italie."
+                  ? "Je peux organiser vos courriels et votre agenda, assurer les tâches de back-office convenues, contribuer aux échanges écrits avec vos clients et traduire dans les deux sens entre l’italien et l’anglais, le français et l’espagnol."
                   : lang === "es"
-                  ? "Puedo encargarme de la atención escrita a clientes italianos existentes, tareas operativas acordadas, traducciones en ambos sentidos con el italiano y localización para Italia."
-                  : "I can help with Italy-related back-office tasks, written support for existing Italian customers, translation in both directions with Italian, and localisation for Italy."}
+                  ? "Puedo ayudarte con la organización del correo y la agenda, las tareas de back office acordadas, la atención escrita a clientes y la traducción en ambas direcciones entre el italiano y el inglés, francés y español."
+                  : "I can organise email and calendars, handle agreed operational back-office tasks, support customers in writing and translate in both directions between Italian and English, French and Spanish."}
               </p>
               <p>
                 {lang === "it"
@@ -765,45 +770,45 @@ export default function IndexPage() {
             {lang === "it" ? (
               <>
                 Ho conseguito la{" "}
-                <strong>Laurea triennale in Mediazione Linguistica presso l'Università degli Studi di Macerata</strong> (2009, con votazione <strong>110/110 e lode</strong>), seguita dal{" "}
-                <strong>Master Universitario di I livello in Traduzione Specialistica – lingua inglese</strong> (2010–2012, 1.500 ore, 60 CFU) con superamento della prova finale.
+                <strong>laurea triennale in Mediazione Linguistica presso l'Università degli Studi di Macerata</strong>, con votazione <strong>110/110 e lode</strong>, seguita dal{" "}
+                <strong>master universitario di primo livello in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1.500 ore, 60 CFU</strong>), con superamento della prova finale.
               </>
             ) : lang === "fr" ? (
               <>
-                Je suis titulaire d’une{" "}
-                <strong>licence en Médiation Linguistique de l’Université de Macerata</strong> (2009, mention <strong>110/110 e lode (mention italienne)</strong>), suivie d’un{" "}
-                <strong>Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise</strong> (2010–2012, 1 500 heures, 60 ECTS) avec épreuve finale validée.
+                Je suis titulaire d’un{" "}
+                <strong>diplôme universitaire italien de premier cycle en médiation linguistique de l’Università degli Studi di Macerata</strong>, obtenu avec la note de <strong>110/110 e lode (distinction italienne maximale)</strong>, suivi d’un{" "}
+                <strong>master universitaire italien de premier niveau en traduction spécialisée à la Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1 500 heures, 60 CFU/crédits ECTS</strong>), avec réussite de l’épreuve finale.
               </>
             ) : lang === "es" ? (
               <>
-                Cuento con el{" "}
-                <strong>Grado en Mediación Lingüística por la Universidad de Macerata</strong> (2009, calificada con <strong>110/110 e lode (distinción italiana)</strong>), seguido del{" "}
-                <strong>máster universitario italiano de primer nivel en Traducción Especializada (inglés)</strong> (2010–2012, 1.500 horas, 60 créditos ECTS) con examen final superado.
+                Obtuve una{" "}
+                <strong>titulación universitaria italiana de primer ciclo en Mediación Lingüística en la Università degli Studi di Macerata</strong>, con una calificación de <strong>110/110 e lode (máxima distinción italiana)</strong>, seguida de un{" "}
+                <strong>máster universitario italiano de primer nivel en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1.500 horas, 60 CFU/créditos ECTS</strong>), con la prueba final superada.
               </>
             ) : (
               <>
                 I hold a{" "}
-                <strong>Bachelor's Degree in Linguistic Mediation from the University of Macerata</strong> (2009, awarded <strong>110/110 e lode (highest honours in Italy)</strong>), followed by a{" "}
-                <strong>1st-Level University Postgraduate training in Specialised Translation – English language</strong> (2010–2012, 1,500 hours, 60 ECTS credits) with successful final examination.
+                <strong>three-year degree in Language Mediation from the Università degli Studi di Macerata</strong>, awarded <strong>110/110 e lode (highest honours under the Italian grading system)</strong>, followed by an{" "}
+                <strong>Italian first-level university master’s programme in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona</strong> (<strong>1,500 hours, 60 CFU/ECTS credits</strong>), with the final assessment successfully passed.
               </>
             )}
           </p>
           <p>
             {lang === "it" ? (
               <>
-                L'italiano è la mia lingua madre. Offro traduzioni <strong>IT ↔ EN, IT ↔ FR e IT ↔ ES</strong>, nei due sensi, valutando testi e ambiti specialistici prima del preventivo. Curo inoltre le comunicazioni professionali multilingue.
+                L'italiano è la mia lingua madre. Traduco professionalmente dall'italiano verso l'inglese, il francese e lo spagnolo e da queste lingue verso l'italiano, valutando il testo e l'ambito specialistico prima di accettare l'incarico. Offro inoltre supporto operativo per le comunicazioni multilingue con clienti, nell'ambito concordato.
               </>
             ) : lang === "fr" ? (
               <>
-                L’italien est ma langue maternelle. Je traduis <strong>entre l’italien et le français, l’anglais ou l’espagnol dans les deux sens</strong>, selon le texte, et j’accompagne vos communications avec vos interlocuteurs italiens.
+                L’italien est ma langue maternelle. Je traduis dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’assure également un soutien opérationnel convenu pour les échanges multilingues avec des clients.
               </>
             ) : lang === "es" ? (
               <>
-                Mi lengua materna es el italiano. Ofrezco traducciones <strong>entre el italiano y el español, el inglés o el francés en ambos sentidos</strong>, según el texto, y apoyo las comunicaciones con tus clientes e interlocutores italianos.
+                Mi lengua materna es el italiano. Traduzco en ambas direcciones entre el italiano y el inglés, francés y español. También ofrezco apoyo operativo acordado para la comunicación multilingüe con clientes.
               </>
             ) : (
               <>
-                Italian is my native language. I translate <strong>between Italian and English, French or Spanish in both directions</strong>, assessing each text and its intended use, and support communications with existing Italian customers and partners.
+                Italian is my native language. I translate in both directions between Italian and English, French and Spanish, assessing each text by subject and intended use. I also provide agreed operational support for multilingual correspondence with customers and partners.
               </>
             )}
           </p>
@@ -935,14 +940,15 @@ export default function IndexPage() {
           </h2>
           <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
             {lang === "it"
-              ? "Il mio supporto si concentra su alcune aree precise. Puoi affidarmi una singola attività oppure costruire nel tempo una collaborazione più ampia."
-              : lang === "fr" ? "Mon accompagnement porte sur des tâches bien définies. Vous pouvez commencer par une mission ponctuelle ou mettre en place une collaboration suivie." : lang === "es" ? "Mi apoyo se centra en tareas concretas. Puedes empezar por un encargo puntual o establecer una colaboración continuada." : "My assistance focuses on well-defined domains. You can start with a single assignment or establish an ongoing operational partnership."}
+              ? "Ti presento alcune attività che posso svolgere. Puoi richiedere un intervento specifico o una collaborazione continuativa: contenuti, modalità e tempi vengono definiti insieme nel preventivo."
+              : lang === "fr" ? "Voici des exemples de tâches que je peux prendre en charge. Une mission ponctuelle ou une collaboration suivie est définie avec vous dans un devis précisant les prestations, les modalités et les délais." : lang === "es" ? "Estos son ejemplos de tareas que puedo realizar. Tanto en encargos puntuales como en colaboraciones continuadas, el presupuesto define las actividades, las condiciones y los plazos acordados." : "These are examples of tasks I can take on. Whether you need a one-off assignment or ongoing support, the written quote will specify the agreed activities, working arrangements and deadlines."}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {dict.servicesSection.categories.map((svc) => {
             const Icon = getServiceIcon(svc.id);
+            const decision = SERVICE_DECISION_PATHS[svc.id];
             return (
               <div
                 key={svc.id}
@@ -957,18 +963,23 @@ export default function IndexPage() {
                     {svc.subtitle}
                   </p>
                 )}
+                {decision && (
+                  <p className="text-sm font-medium text-foreground/90 bg-secondary/25 rounded-lg px-3 py-2 mb-3">
+                    {decision.need[lang]}
+                  </p>
+                )}
                 <p className="text-sm text-foreground/80 leading-relaxed mb-4">
                   {svc.description}
                 </p>
                 <div className="space-y-2 text-foreground/80 text-sm leading-relaxed mb-6 flex-grow">
                   <p className="font-semibold text-foreground/90 text-xs uppercase tracking-wider">
                     {lang === "it"
-                      ? "Cosa include:"
+                      ? "Esempi di attività possibili:"
                       : lang === "fr"
-                      ? "Exemples d'interventions :"
+                      ? "Exemples de tâches possibles :"
                       : lang === "es"
-                      ? "Qué incluye:"
-                      : "What is included:"}
+                      ? "Ejemplos de tareas posibles:"
+                      : "Examples of tasks I can take on:"}
                   </p>
                   <ul className="space-y-1.5 pl-2">
                     {svc.items.map((b, idx) => (
@@ -980,7 +991,13 @@ export default function IndexPage() {
                   </ul>
                 </div>
 
-                <div className="pt-4 border-t border-border/40 mt-auto">
+                <div className="pt-4 border-t border-border/40 mt-auto space-y-3">
+                  {decision && (
+                    <Link className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" to={getDeepPortfolioPath(decision.dossierId, lang)}>
+                      {lang === "it" ? "Vedi un esempio dimostrativo" : lang === "fr" ? "Voir un exemple fictif" : lang === "es" ? "Ver un ejemplo demostrativo" : "View a fictional work example"}
+                      <ArrowRight aria-hidden="true" className="w-3.5 h-3.5" />
+                    </Link>
+                  )}
                   <Button
                     asChild
                     variant="outline"
@@ -1288,7 +1305,7 @@ export default function IndexPage() {
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
                   ? "Sede a Castelfidardo (AN), supporto operativo da remoto in tutta Italia ed estero. Parli direttamente con Noemi, senza agenzie o intermediari."
-                  : lang === "fr" ? "Installée à Castelfidardo (Italie), je travaille à distance avec des clients internationaux pour leurs besoins liés à l’italien. Vous échangez directement avec moi." : lang === "es" ? "Trabajo desde Castelfidardo (Italia) y presto servicios a distancia para actividades relacionadas con el mercado italiano. Tratarás directamente conmigo." : "Based in Castelfidardo (AN), Italy. Remote operational support across Europe. Direct contact with Noemi, no agency middlemen."}
+                  : lang === "fr" ? "Installée à Castelfidardo (Italie), je travaille à distance avec des professionnels en Italie et à l’international, pour des missions de secrétariat, de back-office et de traduction. Vous échangez directement avec moi." : lang === "es" ? "Trabajo desde Castelfidardo (Italia) y colaboro a distancia con profesionales de Italia y del extranjero en tareas de secretaría, back office y traducción. Tratarás directamente conmigo." : "Based in Castelfidardo (Italy), I support professionals remotely in Italy and internationally. You work directly with me, without an agency intermediary."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
@@ -1322,6 +1339,37 @@ export default function IndexPage() {
         </div>
       </section>
 
+      {/* Books: show prelaunch honestly; Amazon sales only after verified listings exist. */}
+      {PUBLICATIONS_VISIBLE && (
+        <section aria-labelledby="books-home-title" className="border-y border-border/40 bg-card/35">
+          <div className="container px-4 md:px-6 py-10 md:py-14">
+            <div className="max-w-6xl mx-auto rounded-2xl border border-primary/25 bg-card p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="max-w-3xl">
+                <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary mb-3">
+                  <BookOpen className="w-4 h-4" aria-hidden="true"/>
+                  {lang === "it" ? "Libri e pubblicazioni" : lang === "fr" ? "Livres et publications" : lang === "es" ? "Libros y publicaciones" : "Books & publications"}
+                </p>
+                <h2 id="books-home-title" className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
+                  {publishedBooks.length > 0
+                    ? (lang === "it" ? "I miei libri per comunicare e lavorare meglio" : lang === "fr" ? "Mes livres pour mieux communiquer au travail" : lang === "es" ? "Mis libros para comunicarte mejor en el trabajo" : "My practical language and communication books")
+                    : "Business English in Practice"}
+                </h2>
+                <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
+                  {publishedBooks.length > 0
+                    ? (lang === "it" ? "Guide pratiche e strumenti editoriali. Consulta i titoli disponibili e acquista attraverso le relative pagine Amazon." : lang === "fr" ? "Des guides pratiques à découvrir et à acheter sur leurs pages Amazon." : lang === "es" ? "Guías prácticas para descubrir y comprar en sus páginas de Amazon." : "Practical guides and editorial resources, available to buy through their Amazon listings.")
+                    : (lang === "it" ? "Un prontuario bilingue di inglese professionale, con esempi e risposte per le situazioni di lavoro. In preparazione: non è ancora in vendita." : lang === "fr" ? "Un guide bilingue d’anglais professionnel avec des exemples adaptés au travail. En préparation : pas encore en vente." : lang === "es" ? "Una guía bilingüe de inglés profesional con ejemplos para el trabajo. En preparación: todavía no está a la venta." : "An Italian–English guide to practical workplace communication. In preparation: not yet for sale.")}
+                </p>
+              </div>
+              <Link to={getLocalizedPath("publications", lang)}
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                {lang === "it" ? "Scopri i libri" : lang === "fr" ? "Découvrir les livres" : lang === "es" ? "Descubre los libros" : "Explore the books"}
+                <ArrowRight className="w-4 h-4" aria-hidden="true"/>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── SECTION 10: BLOG & RISORSE (#blog) ── */}
       <section
         id="blog"
@@ -1335,7 +1383,7 @@ export default function IndexPage() {
             <p className="text-base md:text-lg text-foreground/80">
               {lang === "it"
                 ? "Approfondimenti, consigli pratici e strumenti per organizzare il tuo lavoro, comunicare meglio e gestire la tua attività."
-                : lang === "fr" ? "Découvrez des articles adaptés en français sur la communication avec l’Italie, la traduction et l’organisation professionnelle." : lang === "es" ? "Descubre artículos adaptados al español sobre comunicación con Italia, traducción y organización del trabajo." : "Explore articles adapted into English on Italian-market communication, translation and practical organisation."}
+                : lang === "fr" ? "Découvrez des articles en français sur la communication multilingue, la traduction et l’organisation professionnelle." : lang === "es" ? "Descubre artículos en español sobre comunicación multilingüe, traducción y organización del trabajo." : "Explore articles adapted into English on Italian-market communication, translation and practical organisation."}
             </p>
           </div>
 
@@ -1443,14 +1491,14 @@ export default function IndexPage() {
       >
         <div className="container px-4 md:px-6 py-12 md:py-20 max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
-            {lang === "it" ? "C'è qualcosa che vorresti smettere di gestire da solo?" : lang === "fr" ? "Besoin d’aide pour vos communications avec l’Italie ?" : lang === "es" ? "¿Necesitas apoyo para comunicarte con Italia?" : "Need support with your Italian-language communications?"}
+            {lang === "it" ? "C'è qualcosa che vorresti smettere di gestire da solo?" : lang === "fr" ? "Besoin d’aide pour vos tâches et communications professionnelles ?" : lang === "es" ? "¿Necesitas apoyo con tus tareas y comunicaciones profesionales?" : "Need support with your daily tasks or multilingual communication?"}
           </h2>
           <div className="text-foreground/85 text-base md:text-lg mb-10 max-w-2xl space-y-3 leading-relaxed">
             <p className="font-semibold text-primary">
               {lang === "it" ? "Parliamone." : lang === "fr" ? "Parlons de votre projet." : lang === "es" ? "Hablemos de tu proyecto." : "Tell me about your project."}
             </p>
             <p>
-              {lang === "it" ? "Raccontami di cosa ti occupi, quali attività ti portano via più tempo e cosa vorresti riuscire a delegare." : lang === "fr" ? "Décrivez vos contenus à traduire en italien ou les échanges avec vos clients italiens pour lesquels vous souhaitez un soutien." : lang === "es" ? "Cuéntame qué contenidos necesitas traducir al italiano o qué tareas de comunicación con clientes italianos deseas delegar." : "Tell me which content you need translated into Italian or which existing Italian customer communications you would like support with."}
+              {lang === "it" ? "Raccontami di cosa ti occupi, quali attività ti portano via più tempo e cosa vorresti riuscire a delegare." : lang === "fr" ? "Décrivez les tâches que vous souhaitez déléguer ou les textes que vous devez traduire entre l’italien et l’anglais, le français ou l’espagnol." : lang === "es" ? "Cuéntame qué tareas quieres delegar o qué contenidos necesitas traducir entre el italiano y el inglés, francés o español." : "Tell me which tasks you would like to delegate or what content you need translated between Italian and English, French or Spanish."}
             </p>
             <p className="font-medium text-foreground">
               {lang === "it" ? "Partiamo da lì." : lang === "fr" ? "Nous partirons de vos besoins concrets." : lang === "es" ? "Partiremos de tus necesidades concretas." : "We will start with your specific needs."}
@@ -1518,7 +1566,7 @@ export default function IndexPage() {
                       <span itemProp="addressCountry">ITALIA</span>
                     </span>
                     <span className="text-muted-foreground text-xs sm:text-sm">
-                      {lang === "it" ? "Supporto da remoto in tutta Italia" : lang === "fr" ? "Prestations à distance pour votre activité avec l’Italie" : lang === "es" ? "Servicios a distancia para trabajar con Italia" : "Remote support for businesses working with Italy"}
+                      {lang === "it" ? "Supporto da remoto in tutta Italia" : lang === "fr" ? "Prestations à distance en Italie et à l’international" : lang === "es" ? "Servicios a distancia en Italia y otros países" : "Remote support for clients in Italy and abroad"}
                     </span>
                   </div>
                 </div>

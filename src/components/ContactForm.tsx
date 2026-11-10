@@ -230,19 +230,19 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
 
   const contextualHeaders = {
     it: {
-      title: "Richiesta di Preventivo Scritto",
+      title: "Richiedi un preventivo",
       badge: "Bozza predisposta con l’Assistente di Noemi · Puoi modificare liberamente il messaggio",
     },
     en: {
-      title: "Written Quote Request",
+      title: "Request a quote",
       badge: "Brief prepared with Noemi’s Assistant · Feel free to edit the message below",
     },
     fr: {
-      title: "Demande de Devis Écrit",
+      title: "Demander un devis",
       badge: "Synthèse préparée avec l’assistant de Noemi · Modifiez librement le texte",
     },
     es: {
-      title: "Solicitud de Presupuesto por Escrito",
+      title: "Solicitar presupuesto",
       badge: "Borrador preparado con el asistente de Noemi · Puedes modificar el mensaje",
     },
   };
@@ -490,7 +490,7 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
             <Textarea
               id="form-message"
               required
-              placeholder={lang === "it" ? "Raccontami brevemente la tua attività e quali aspetti vorresti delegare o organizzare meglio." : lang === "fr" ? "Présentez votre projet et précisez les contenus italiens ou les tâches opérationnelles pour lesquels vous avez besoin d’aide." : lang === "es" ? "Describe tu proyecto y los contenidos en italiano o las tareas operativas para las que necesitas apoyo." : "Tell me about your business and which operational areas you would like to streamline."}
+              placeholder={lang === "it" ? "Raccontami brevemente la tua attività e quali aspetti vorresti delegare o organizzare meglio." : lang === "fr" ? "Présentez votre activité et les tâches de secrétariat, de back-office ou de traduction que vous souhaitez me confier." : lang === "es" ? "Describe tu actividad y las tareas de secretaría, back office, comunicación o traducción para las que necesitas apoyo." : "Tell me about your business and the back-office, communication, content or translation tasks you would like help with."}
               className="min-h-[120px] resize-none"
               value={formData.messaggio}
               onChange={(e) => handleChange("messaggio", e.target.value)}

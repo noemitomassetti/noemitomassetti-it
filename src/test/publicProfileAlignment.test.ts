@@ -45,21 +45,35 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       expect(research?.description.toLowerCase(),lang).toMatch(/client|prospect|contatti|clientes|commercial/i);
     }
   });
-  it("respects the Italy-first international service positioning and bilingual direction",()=>{
+  it("matches LinkedIn's bidirectional Italian/EN/FR/ES translation offer",()=>{
+    const trustCopy=itLocale.trust.pillars.map(p=>p.desc).join(" ");
+    expect(trustCopy).toMatch(/dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano/i);
+    for(const lang of LANGS){
+      const category=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
+      if(lang==="it") expect(category?.description,lang).toMatch(/dall’italiano verso l’inglese, il francese e lo spagnolo/);
+      if(lang==="en") expect(category?.description,lang).toMatch(/translate from Italian into English, French and Spanish/);
+      if(lang==="fr") expect(category?.description,lang).toMatch(/de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien/);
+      if(lang==="es") expect(category?.description,lang).toMatch(/del italiano al inglés, francés y español y de estos idiomas al italiano/);
+    }
+  });
+  it("respects the full multilingual service positioning and bidirectional translation offer",()=>{
     for(const lang of LANGS){
       const cat=locales[lang].servicesSection.categories.find(x=>x.id==="translation-localization");
-      expect(cat?.title,lang).toContain("↔");
       expect(cat?.description.length,lang).toBeGreaterThan(160);
-      if (lang!=="it") expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/italia|itali|italien/);
+      if(lang==="it") expect(cat?.description).toContain("dall’italiano verso l’inglese");
+      if(lang==="en") expect(cat?.description).toContain("translate from Italian into English, French and Spanish");
+      if(lang==="fr") expect(cat?.description).toContain("de l’italien vers l’anglais");
+      if(lang==="es") expect(cat?.description).toContain("del italiano al inglés");
+      expect(locales[lang].meta.homeDesc.toLowerCase(),lang).toMatch(/traduzion|translation|traduction|traducción/);
     }
-    expect(enLocale.servicesSection.categories[0].description).toContain("Italian-language");
-    expect(frLocale.servicesSection.categories[0].description).toContain("en italien");
-    expect(esLocale.servicesSection.categories[0].description).toContain("en italiano");
+    expect(enLocale.servicesSection.categories[0].description).toContain("Depending on the brief");
+    expect(frLocale.servicesSection.categories[0].description).toContain("Selon la mission");
+    expect(esLocale.servicesSection.categories[0].description).toContain("Según el encargo");
   });
   it("has real demonstrative deliverables for each offer, with no client-testimonial claims",()=>{
-    expect(TRANSLATION_DEEP_CASES.length).toBe(12);
+    expect(TRANSLATION_DEEP_CASES.length).toBe(11);
     expect(OPERATIONAL_DEEP_CASES.length).toBe(15);
-    expect(DEEP_PORTFOLIO_ITEMS.length).toBe(27);
+    expect(DEEP_PORTFOLIO_ITEMS.length).toBe(26);
     expect(PORTFOLIO_CASES.length).toBe(18);
     expect(PORTFOLIO_DOCUMENTS.length).toBe(22);
     const operations=OPERATIONAL_DEEP_CASES;

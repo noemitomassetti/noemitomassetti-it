@@ -47,6 +47,14 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   }
 };
 
+// Provider plan limits checked against official provider pages on 8 November 2026.
+const FREE_PLAN_NOTICE:Record<Language,{title:string;body:string;sources:string;links:{name:string;url:string}[]}>={
+  it:{title:"Piani gratuiti: verifica i limiti",body:"Informazioni verificate l’8 novembre 2026. Calendly Free include un tipo di evento e un calendario collegato; Zoom Basic limita normalmente le riunioni a 40 minuti; Asana Personal è pensato per una o due persone. Funzioni e condizioni possono cambiare: consulta le pagine ufficiali prima di scegliere.",sources:"Piani e condizioni ufficiali",links:[{name:"Calendly",url:"https://calendly.com/pricing"},{name:"Zoom",url:"https://support.zoom.com/hc/it/article?id=zm_kb&sysparm_article=KB0067973"},{name:"Asana",url:"https://asana.com/it/pricing"}]},
+  en:{title:"Free plans: check the limits",body:"Information checked on 8 November 2026. This article discusses Google Calendar, Google Drive, Trello, Notion and Google Forms. Free features, storage, collaboration limits and integrations vary by account type and plan; check the providers’ official pages before choosing.",sources:"Official plans and terms",links:[{name:"Google Workspace",url:"https://workspace.google.com/pricing/"},{name:"Trello",url:"https://trello.com/en/pricing"},{name:"Notion",url:"https://www.notion.com/pricing"}]},
+  fr:{title:"Offres gratuites : vérifiez les limites",body:"Informations vérifiées le 8 novembre 2026. Cet article présente Google Agenda, Google Drive, Trello, Notion et Google Forms. Les fonctions gratuites, le stockage, les limites de collaboration et les intégrations dépendent du type de compte et de l’offre ; consultez les pages officielles avant de choisir.",sources:"Offres et conditions officielles",links:[{name:"Google Workspace",url:"https://workspace.google.com/pricing/"},{name:"Trello",url:"https://trello.com/en/pricing"},{name:"Notion",url:"https://www.notion.com/pricing"}]},
+  es:{title:"Planes gratuitos: comprueba los límites",body:"Información comprobada el 8 de noviembre de 2026. Este artículo presenta Google Calendar, Google Drive, Trello, Notion y Google Forms. Las funciones gratuitas, el almacenamiento, los límites de colaboración y las integraciones dependen del tipo de cuenta y del plan; consulta las páginas oficiales antes de elegir.",sources:"Planes y condiciones oficiales",links:[{name:"Google Workspace",url:"https://workspace.google.com/pricing/"},{name:"Trello",url:"https://trello.com/en/pricing"},{name:"Notion",url:"https://www.notion.com/pricing"}]}
+};
+
 export default function BlogPost() {
   const { slug } = useParams();
   const { pathname } = useLocation();
@@ -110,6 +118,11 @@ export default function BlogPost() {
           </div>
         </header>
         <div className="prose prose-invert prose-lg max-w-none text-foreground/90 prose-headings:text-primary prose-strong:text-primary prose-a:text-primary prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6" dangerouslySetInnerHTML={{__html:visible.content}} />
+        {visible.id===3 && <aside aria-label={FREE_PLAN_NOTICE[lang].title} className="mt-8 rounded-xl border border-border/70 bg-card px-5 py-5 text-sm leading-relaxed text-foreground/85">
+          <h2 className="font-semibold text-base text-foreground mb-2">{FREE_PLAN_NOTICE[lang].title}</h2>
+          <p>{FREE_PLAN_NOTICE[lang].body}</p>
+          <p className="mt-3 text-muted-foreground">{FREE_PLAN_NOTICE[lang].sources}: {FREE_PLAN_NOTICE[lang].links.map((ref,i)=><span key={ref.name}>{i>0?" · ":null}<a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">{ref.name}</a></span>)}</p>
+        </aside>}
         <div className="my-12 p-6 md:p-8 bg-card border border-primary/30 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
             <h2 className="text-xl font-bold text-primary">{copy.ctaTitle}</h2>

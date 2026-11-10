@@ -1,4 +1,126 @@
 {
+  "redirects": [
+    {
+      "source": "/work-examples/dossier/it-en-consultancy-services",
+      "destination": "/work-examples",
+      "permanent": true
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/it-en-consultancy-services",
+      "destination": "/it/esempi-di-lavoro",
+      "permanent": true
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/it-en-consultancy-services",
+      "destination": "/fr/exemples-de-projets",
+      "permanent": true
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/it-en-consultancy-services",
+      "destination": "/es/ejemplos-de-trabajo",
+      "permanent": true
+    },
+    {
+      "source": "/work-examples/dossier/it-fr-professional-training",
+      "destination": "/work-examples",
+      "permanent": true
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/it-fr-professional-training",
+      "destination": "/it/esempi-di-lavoro",
+      "permanent": true
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/it-fr-professional-training",
+      "destination": "/fr/exemples-de-projets",
+      "permanent": true
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/it-fr-professional-training",
+      "destination": "/es/ejemplos-de-trabajo",
+      "permanent": true
+    },
+    {
+      "source": "/work-examples/dossier/it-es-product-information",
+      "destination": "/work-examples",
+      "permanent": true
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/it-es-product-information",
+      "destination": "/it/esempi-di-lavoro",
+      "permanent": true
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/it-es-product-information",
+      "destination": "/fr/exemples-de-projets",
+      "permanent": true
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/it-es-product-information",
+      "destination": "/es/ejemplos-de-trabajo",
+      "permanent": true
+    },
+    {
+      "source": "/work-examples/dossier/it-en-existing-order",
+      "destination": "/work-examples",
+      "permanent": true
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/it-en-existing-order",
+      "destination": "/it/esempi-di-lavoro",
+      "permanent": true
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/it-en-existing-order",
+      "destination": "/fr/exemples-de-projets",
+      "permanent": true
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/it-en-existing-order",
+      "destination": "/es/ejemplos-de-trabajo",
+      "permanent": true
+    },
+    {
+      "source": "/work-examples/dossier/it-fr-product-order-guide",
+      "destination": "/work-examples",
+      "permanent": true
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/it-fr-product-order-guide",
+      "destination": "/it/esempi-di-lavoro",
+      "permanent": true
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/it-fr-product-order-guide",
+      "destination": "/fr/exemples-de-projets",
+      "permanent": true
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/it-fr-product-order-guide",
+      "destination": "/es/ejemplos-de-trabajo",
+      "permanent": true
+    },
+    {
+      "source": "/work-examples/dossier/it-es-workshop-reminder",
+      "destination": "/work-examples",
+      "permanent": true
+    },
+    {
+      "source": "/it/esempi-di-lavoro/dossier/it-es-workshop-reminder",
+      "destination": "/it/esempi-di-lavoro",
+      "permanent": true
+    },
+    {
+      "source": "/fr/exemples-de-projets/dossier/it-es-workshop-reminder",
+      "destination": "/fr/exemples-de-projets",
+      "permanent": true
+    },
+    {
+      "source": "/es/ejemplos-de-trabajo/dossier/it-es-workshop-reminder",
+      "destination": "/es/ejemplos-de-trabajo",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/work-examples/dossier/:id",
@@ -239,7 +361,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "DENY"
+          "value": "SAMEORIGIN"
         },
         {
           "key": "Permissions-Policy",

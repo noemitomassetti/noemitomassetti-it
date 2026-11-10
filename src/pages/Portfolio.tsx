@@ -64,10 +64,10 @@ export default function Portfolio() {
   };
 
   const descriptions = {
-    it: "Portfolio approfondito: traduzioni IT ↔ EN, FR, ES con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
-    en: "Detailed translation samples IT ↔ EN, FR, ES, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
-    fr: "Portfolio détaillé : traductions IT ↔ FR, EN, ES, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
-    es: "Portfolio detallado: traducciones IT ↔ ES, EN, FR, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
+    it: "Portfolio approfondito: traduzioni professionali IT ↔ EN/FR/ES con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
+    en: "Detailed IT ↔ EN/FR/ES translation samples, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
+    fr: "Portfolio détaillé : traductions professionnelles IT ↔ EN/FR/ES, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
+    es: "Portfolio detallado: traducciones profesionales IT ↔ EN/FR/ES, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
   };
 
   useSEO({
@@ -78,13 +78,13 @@ export default function Portfolio() {
     ogLocale: {it:"it_IT",en:"en_GB",fr:"fr_FR",es:"es_ES"}[lang],
   });
 
-  const categories: { id: PortfolioCategory; label: Record<Language, string>; icon: React.ReactNode }[] = [
-    { id: "all", label: { it: "Tutti i progetti", en: "All Projects", fr: "Tous les projets", es: "Todos los proyectos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
-    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, icon: <Globe className="w-3.5 h-3.5" /> },
-    { id: "research", label: { it: "Ricerche informative & confronti", en: "Informational research & comparisons", fr: "Recherche documentaire et comparaisons", es: "Investigación informativa y comparativas" }, icon: <Search className="w-3.5 h-3.5" /> },
-    { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Customer support & operational back office", fr: "Relation client et back-office opérationnel", es: "Atención al cliente y back office operativo" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
-    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, icon: <PenTool className="w-3.5 h-3.5" /> },
-    { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus Web & Pages de Destination", es: "Contenidos Web y Landing Pages" }, icon: <Layers className="w-3.5 h-3.5" /> },
+  const categories: { id: PortfolioCategory; label: Record<Language, string>; shortLabel: Record<Language, string>; icon: React.ReactNode }[] = [
+    { id: "all", label: { it: "Tutti i progetti", en: "All Projects", fr: "Tous les projets", es: "Todos los proyectos" }, shortLabel: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
+    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, shortLabel: { it: "Traduzioni", en: "Translation", fr: "Traduction", es: "Traducción" }, icon: <Globe className="w-3.5 h-3.5" /> },
+    { id: "research", label: { it: "Ricerche informative & confronti", en: "Informational research & comparisons", fr: "Recherche documentaire et comparaisons", es: "Investigación informativa y comparativas" }, shortLabel: { it: "Ricerche", en: "Research", fr: "Recherche", es: "Investigación" }, icon: <Search className="w-3.5 h-3.5" /> },
+    { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Customer support & operational back office", fr: "Relation client et back-office opérationnel", es: "Atención al cliente y back office operativo" }, shortLabel: { it: "Back office", en: "Back office", fr: "Back-office", es: "Back office" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
+    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, shortLabel: { it: "Revisione", en: "Writing", fr: "Révision", es: "Redacción" }, icon: <PenTool className="w-3.5 h-3.5" /> },
+    { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus Web & Pages de Destination", es: "Contenidos Web y Landing Pages" }, shortLabel: { it: "Contenuti web", en: "Web copy", fr: "Contenus web", es: "Contenidos web" }, icon: <Layers className="w-3.5 h-3.5" /> },
   ];
 
 
@@ -147,8 +147,8 @@ export default function Portfolio() {
       labels:{it:"Documenti in evidenza",en:"Featured samples",fr:"Exemples à la une",es:"Muestras destacadas"},
       details:{it:"Una selezione da leggere subito",en:"Start with a curated selection",fr:"Une première sélection à découvrir",es:"Una selección para empezar"} },
     { id:"portfolio-complete-dossiers", number:"02",
-      labels:{it:"27 dossier approfonditi",en:"27 in-depth dossiers",fr:"27 dossiers détaillés",es:"27 dosieres detallados"},
-      details:{it:"Traduzioni a fronte e processi reali simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
+      labels:{it:"26 dossier approfonditi",en:"26 in-depth dossiers",fr:"26 dossiers détaillés",es:"26 dosieres detallados"},
+      details:{it:"Traduzioni a fronte e processi operativi simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
     { id:"portfolio-legacy-cases", number:"03",
       labels:{it:"18 casi di metodo",en:"18 methodology cases",fr:"18 études méthodologiques",es:"18 casos metodológicos"},
       details:{it:"Scelte operative e revisioni commentate",en:"Decisions and editorial notes",fr:"Décisions et commentaires de révision",es:"Decisiones y notas de revisión"} },
@@ -346,22 +346,24 @@ export default function Portfolio() {
       </section>
 
       {/* ── FILTER BUTTONS ── */}
-      <section className="sticky top-16 z-30 bg-background/95 backdrop-blur border-b border-border/40 py-4 shadow-sm">
-        <div className="container px-4 md:px-6 max-w-5xl mx-auto flex items-center gap-2 overflow-x-auto no-scrollbar">
+      <section className="sticky top-16 z-30 bg-background/95 backdrop-blur border-b border-border/40 py-3 sm:py-4 shadow-sm">
+        <div id="portfolio-category-filters" role="group" aria-label={({it:"Filtra i progetti per categoria",en:"Filter projects by category",fr:"Filtrer les projets par catégorie",es:"Filtrar proyectos por categoría"} as const)[lang]} className="container px-4 md:px-6 max-w-5xl mx-auto grid grid-cols-3 sm:flex sm:flex-wrap items-center gap-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
               type="button"
               onClick={() => setSelectedCategory(cat.id)}
+              aria-label={cat.label[lang]}
               aria-pressed={selectedCategory === cat.id}
-              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
+              className={`inline-flex min-h-11 w-full sm:w-auto justify-center items-center gap-1.5 px-2 sm:px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 ${
                 selectedCategory === cat.id
                   ? "bg-primary text-primary-foreground shadow-sm"
                   : "bg-secondary/60 text-muted-foreground hover:text-foreground hover:bg-secondary"
               }`}
             >
-              {cat.icon}
-              {cat.label[lang]}
+              <span className="hidden sm:inline-flex">{cat.icon}</span>
+              <span className="sm:hidden">{cat.shortLabel[lang]}</span>
+              <span className="hidden sm:inline">{cat.label[lang]}</span>
             </button>
           ))}
         </div>
@@ -696,7 +698,7 @@ export default function Portfolio() {
                                     : lang === "fr"
                                     ? "Traduction Italienne de Noemi (Rendu Littéraire)"
                                     : lang === "es"
-                                    ? "Traducción al Italiano por Noemi (Rendición Narrativa)"
+                                    ? "Traducción literaria al italiano — versión propuesta por Noemi"
                                     : "Italian Target Translation (Literary Rendering by Noemi)"}
                                 </span>
                                 <div className="text-foreground/90 whitespace-pre-line font-serif text-sm leading-relaxed">
@@ -903,12 +905,12 @@ export default function Portfolio() {
           </h2>
           <p className="text-foreground/80 leading-relaxed">
             {lang === "it"
-              ? "Dalla revisione dei contenuti alla gestione di email, agenda e back office, fino alla localizzazione verso l’italiano: valutiamo insieme le attività da affidarmi."
+              ? "Dalla gestione di email, agenda e ordini alle traduzioni IT ↔ EN/FR/ES, al customer care scritto e ai contenuti digitali: valutiamo insieme le attività da affidarmi."
               : lang === "fr"
-              ? "De la localisation en italien aux échanges avec vos clients italiens, découvrons des solutions linguistiques et opérationnelles."
+              ? "Du secrétariat et du back-office aux traductions IT ↔ EN/FR/ES, aux contenus numériques et au suivi écrit de vos clients : définissons ensemble les tâches à me confier."
               : lang === "es"
-              ? "Desde la localización al italiano hasta la comunicación escrita con tus clientes italianos actuales, podemos concretar las tareas que necesitas delegar."
-              : "From Italian translation and localisation to written support for existing Italian customers, I can help with agreed operational and language tasks."}
+              ? "Desde la secretaría y el back office hasta la traducción IT ↔ EN/FR/ES, los contenidos digitales y la atención escrita a clientes: podemos concretar qué tareas necesitas delegar."
+              : "From email organisation and operational back office to IT ↔ EN/FR/ES translation, digital content and written care for customers, I can support clearly agreed tasks."}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link

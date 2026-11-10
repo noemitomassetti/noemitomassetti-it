@@ -42,10 +42,10 @@ export default function PortfolioDossier() {
     noindex:!entry,
     ogType:"article"
   });
-  if (!entry) return <Layout lang={lang}><main className="container max-w-4xl py-16"><h1>{t.sample}</h1><Link to={getLocalizedPath("portfolio",lang)}>{t.back}</Link></main></Layout>;
+  if (!entry) return <Layout lang={lang}><div className="container max-w-4xl py-16"><h1>{t.sample}</h1><Link to={getLocalizedPath("portfolio",lang)}>{t.back}</Link></div></Layout>;
   const disclaimer = tr ? TRANSLATION_SAMPLE_NOTICE[lang] : OPERATIONAL_NOTICE[lang];
   return <Layout lang={lang}>
-    <main className="container max-w-5xl mx-auto px-5 py-12 md:py-20 space-y-10">
+    <div className="container max-w-5xl mx-auto px-5 py-12 md:py-20 space-y-10">
       <Link className="text-primary font-semibold hover:underline" to={getLocalizedPath("portfolio",lang)}>← {t.back}</Link>
       <header className="space-y-5">
         <Tag>{t.sample}{tr ? " · "+DIRECTION_LABELS[tr.direction] : ""}</Tag>
@@ -77,6 +77,6 @@ export default function PortfolioDossier() {
         <section className="space-y-3"><h2 className="text-2xl font-bold">{t.checks}</h2><ul className="list-disc pl-5 space-y-2">{op.qualityChecks.map((check,i)=><li key={i}>{check[lang]}</li>)}</ul><h2 className="text-xl font-bold pt-4">{t.limits}</h2><p>{op.limits[lang]}</p><h2 className="text-xl font-bold pt-4">{t.handoff}</h2><p>{op.handoff[lang]}</p></section>
       </> : null}
       <div className="border-t pt-8"><Link to={getLocalizedPath("contact",lang)} className="inline-flex rounded-full bg-primary text-primary-foreground font-semibold py-3 px-6 hover:opacity-90">{t.contact}</Link></div>
-    </main>
+    </div>
   </Layout>;
 }

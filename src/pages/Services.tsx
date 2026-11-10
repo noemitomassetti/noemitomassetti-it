@@ -5,6 +5,9 @@ import { useSEO } from "@/hooks/useSEO";
 import { BookingButton } from "@/components/BookingButton";
 import { ContactForm } from "@/components/ContactForm";
 import { PricingSection } from "@/components/PricingSection";
+import { SERVICE_DECISION_PATHS } from "@/lib/serviceDecisionPaths";
+import { COLLABORATION_GUIDANCE } from "@/lib/collaborationGuidance";
+import { getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
 import {
   Language,
   getLanguageFromPath,
@@ -180,25 +183,25 @@ export default function ServicesPage() {
                 <Globe className="w-3.5 h-3.5" />
                 <span>
                   {lang === "it"
-                    ? "Traduzioni e localizzazione verso l’italiano"
-                    : lang === "fr" ? "Traduction et localisation vers l’italien"
-                    : lang === "es" ? "Traducción y localización al italiano"
-                    : "Italian localisation for international clients"}
+                    ? "Traduzioni IT ↔ EN/FR/ES e localizzazione"
+                    : lang === "fr" ? "Traduction IT ↔ EN/FR/ES et localisation"
+                    : lang === "es" ? "Traducción IT ↔ EN/FR/ES y localización"
+                    : "IT ↔ EN/FR/ES translation and localisation"}
                 </span>
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-foreground">
                 {lang === "it"
-                  ? "Hai un’attività che si rivolge al mercato italiano?"
-                  : lang === "fr" ? "Vous vous adressez à une clientèle italienne ?"
-                  : lang === "es" ? "¿Tu empresa se dirige al público italiano?"
-                  : "Reaching Italian customers? EN/FR/ES → IT localisation"}
+                  ? "Hai contenuti professionali da tradurre o localizzare?"
+                  : lang === "fr" ? "Vous souhaitez traduire ou adapter vos contenus ?"
+                  : lang === "es" ? "¿Necesitas traducir o adaptar contenidos profesionales?"
+                  : "Need translation between Italian and EN/FR/ES?"}
               </h3>
               <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
                 {lang === "it"
-                  ? "Traduzione, revisione e localizzazione di siti web, landing page e comunicazioni professionali verso l’italiano."
-                  : lang === "fr" ? "Traduction, révision et localisation en italien de sites web, pages de destination et communications professionnelles."
-                  : lang === "es" ? "Traducción, revisión y localización al italiano de sitios web, landing pages y comunicaciones profesionales."
-                  : "Translation, editing and localisation into Italian for websites, landing pages and professional communications."}
+                  ? "Traduzione, revisione e localizzazione di contenuti web e comunicazioni professionali tra italiano e EN/FR/ES."
+                  : lang === "fr" ? "Traduction IT ↔ EN/FR/ES, révision de contenus web et adaptation linguistique pour le marché italien."
+                  : lang === "es" ? "Traducción, revisión y localización de contenidos web y comunicaciones profesionales entre el italiano y EN/FR/ES."
+                  : "Translation, editing and localisation between Italian and EN/FR/ES for websites, landing pages and professional communications."}
               </p>
             </div>
             <Button asChild className="rounded-full shrink-0 font-semibold text-xs uppercase tracking-wider">
@@ -212,13 +215,14 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {s.categories.map((cat) => {
               const IconComponent = getServiceIcon(cat.id);
+              const decision = SERVICE_DECISION_PATHS[cat.id];
               const macroTags: Record<string, Record<Language, string>> = {
-                "virtual-assistance": { it: "Back office operativo", en: "Italian customer operations", fr: "Relation client et opérations en italien", es: "Atención al cliente y operaciones en italiano" },
+                "virtual-assistance": { it: "Back office operativo", en: "Virtual assistance & back office", fr: "Secrétariat et back-office", es: "Secretaría y back office" },
                 "digital-support": { it: "Organizzazione digitale", en: "Digital organisation", fr: "Organisation numérique", es: "Organización digital" },
-                "translation-localization": { it: "Traduzioni IT ↔ EN/FR/ES", en: "IT ↔ EN/FR/ES Translation", fr: "Traduction IT ↔ FR/EN/ES", es: "Traducción IT ↔ ES/EN/FR" },
-                "content-writing": { it: "Scrittura e revisione testi", en: "Italian content editing", fr: "Révision des contenus italiens", es: "Revisión de contenidos en italiano" },
+                "translation-localization": { it: "Traduzioni IT ↔ EN/FR/ES", en: "IT ↔ EN/FR/ES Translation", fr: "Traduction IT ↔ EN/FR/ES", es: "Traducción IT ↔ EN/FR/ES" },
+                "content-writing": { it: "Scrittura e revisione testi", en: "Content writing & editing", fr: "Rédaction et révision", es: "Redacción y revisión" },
                 "online-research": { it: "Ricerche informative", en: "Informational research", fr: "Recherche documentaire", es: "Investigación informativa" },
-                "web-landing": { it: "Contenuti per il web", en: "Italian web content", fr: "Contenus web en italien", es: "Contenidos web en italiano" },
+                "web-landing": { it: "Contenuti per il web", en: "Website content", fr: "Contenus pour sites web", es: "Contenidos web" },
               };
               const macroTag = macroTags[cat.id]?.[lang] ?? cat.title;
 
@@ -247,6 +251,11 @@ export default function ServicesPage() {
                       </p>
                     </div>
 
+                    {decision && (
+                      <p className="text-sm font-semibold text-foreground/90 bg-secondary/25 rounded-lg p-3">
+                        {decision.need[lang]}
+                      </p>
+                    )}
                     <p className="text-sm text-foreground/80 leading-relaxed">
                       {cat.description}
                     </p>
@@ -254,12 +263,12 @@ export default function ServicesPage() {
                     <div className="pt-2 border-t border-border/40">
                       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">
                         {lang === "it"
-                          ? "Cosa include:"
+                          ? "Attività che posso svolgere:"
                           : lang === "fr"
-                          ? "Exemples de réalisations :"
+                          ? "Exemples de prestations possibles :"
                           : lang === "es"
-                          ? "Qué incluye:"
-                          : "What is included:"}
+                          ? "Ejemplos de tareas que puedo realizar:"
+                          : "Examples of available services:"}
                       </p>
                       <ul className="space-y-2">
                         {cat.items.map((item, i) => (
@@ -270,9 +279,20 @@ export default function ServicesPage() {
                         ))}
                       </ul>
                     </div>
+                    {decision && (
+                      <p className="text-xs sm:text-sm text-muted-foreground border-l-2 border-primary/40 pl-3">
+                        {decision.possibleOutcome[lang]}
+                      </p>
+                    )}
                   </div>
 
-                  <div className="pt-6 mt-4 border-t border-border/30">
+                  <div className="pt-6 mt-4 border-t border-border/30 space-y-3">
+                    {decision && (
+                      <Link className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" to={getDeepPortfolioPath(decision.dossierId, lang)}>
+                        {lang === "it" ? "Esamina un dossier dimostrativo" : lang === "fr" ? "Consulter un dossier fictif" : lang === "es" ? "Consultar un dossier demostrativo" : "Explore a fictional case dossier"}
+                        <ArrowRight aria-hidden="true" className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
                     <Button
                       type="button"
                       variant="ghost"
@@ -282,12 +302,12 @@ export default function ServicesPage() {
                     >
                       <span>
                         {lang === "it"
-                          ? "Richiedi questo servizio"
+                          ? "Chiedi un preventivo per quest'area"
                           : lang === "fr"
-                          ? "Demander ce service"
+                          ? "Demander un devis pour cette prestation"
                           : lang === "es"
-                          ? "Solicitar este servicio"
-                          : "Inquire about this service"}
+                          ? "Solicitar un presupuesto para este servicio"
+                          : "Request a quote for this service"}
                       </span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Button>
@@ -333,17 +353,23 @@ export default function ServicesPage() {
                   </div>
 
                   <h3 className="text-xl font-bold text-foreground">{pkg.title}</h3>
+                  <div className="rounded-lg bg-secondary/25 px-3 py-2">
+                    <p className="text-xs font-bold uppercase tracking-wide text-primary mb-1">
+                      {lang === "it" ? "A chi può essere utile" : lang === "fr" ? "Pour qui ?" : lang === "es" ? "¿A quién puede ayudar?" : "Who it may help"}
+                    </p>
+                    <p className="text-sm text-foreground/85">{COLLABORATION_GUIDANCE[pkg.id]?.[lang]}</p>
+                  </div>
                   <p className="text-sm text-foreground/80 leading-relaxed">{pkg.description}</p>
 
                   <div className="pt-3 border-t border-border/40">
                     <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2.5">
                       {lang === "it"
-                        ? "Risultati previsti:"
+                        ? "Esempi di risultati possibili:"
                         : lang === "fr"
-                        ? "Livrables prévus :"
+                        ? "Exemples de livrables possibles :"
                         : lang === "es"
-                        ? "Entregables previstos:"
-                        : "Expected deliverables:"}
+                        ? "Ejemplos de entregables posibles:"
+                        : "Examples of possible deliverables:"}
                     </p>
                     <ul className="space-y-2">
                       {pkg.deliverables.map((d, idx) => (

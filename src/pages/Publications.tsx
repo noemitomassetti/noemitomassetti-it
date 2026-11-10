@@ -53,22 +53,72 @@ const COPY: Record<Language, {
   },
 };
 
+
+/** Pre-launch copy: no Amazon URL or sale claim until a verified listing exists. */
+const PRELAUNCH: Record<Language, {
+  status: string; headline: string; premise: string;
+  label: string; useCases: string[]; distinction: string;
+  details: string; notice: string;
+}> = {
+  it: {
+    status: "IN PREPARAZIONE · NON ANCORA IN VENDITA",
+    headline: "Business English in Practice",
+    premise: "L’inglese professionale, quando ti serve. Un prontuario bilingue per trovare rapidamente come scrivere un’email, rispondere a un cliente, gestire una telefonata o preparare un documento di lavoro.",
+    label: "Che cosa troverai",
+    useCases: ["103 situazioni di lavoro con esempi per email, chat e telefono", "41 schede operative con documenti e formulazioni da adattare", "Percorsi rapidi, glossari e spiegazioni in italiano", "Esercizi e controlli per comunicare con precisione, senza trasformare ipotesi in promesse"],
+    distinction: "Parti dal problema, scegli il canale, adatta il modello e controlla i dati prima dell’invio. Pensato per professionisti e freelance italofoni che lavorano in contesti internazionali.",
+    details: "Dalla collana Professional Languages in Practice, di Noemi Tomassetti, laureata in Mediazione Linguistica e con formazione specialistica in traduzione. Il libro nasce dall’esperienza nella comunicazione professionale e nel back office.",
+    notice: "Edizione in fase di revisione e collaudo. Prezzo, anteprima gratuita e collegamento Amazon saranno pubblicati soltanto dopo l’approvazione finale."
+  },
+  en: {
+    status: "IN PREPARATION · NOT YET FOR SALE",
+    headline: "Business English in Practice",
+    premise: "Practical professional English, when you need it. An Italian–English reference guide designed to help Italian-speaking professionals write emails, reply to clients, handle calls and prepare workplace documents.",
+    label: "What the guide includes",
+    useCases: ["103 workplace situations with email, chat and telephone examples", "41 practical templates and document guides to adapt", "Quick-reference routes, glossaries and explanations in Italian", "Exercises and checks to help avoid unsupported promises or claims"],
+    distinction: "Start with the situation, select the channel, adapt the wording and check the facts before sending. Written primarily for Italian-speaking professionals and freelancers.",
+    details: "Part of the Professional Languages in Practice collection, by Noemi Tomassetti, a graduate in Language Mediation with postgraduate training in specialist translation and experience in professional communications and back-office support.",
+    notice: "Currently undergoing editorial review and testing. A sample, price and Amazon purchase link will appear only after final approval."
+  },
+  fr: {
+    status: "EN PRÉPARATION · PAS ENCORE EN VENTE",
+    headline: "Business English in Practice",
+    premise: "L’anglais professionnel au moment où vous en avez besoin. Un guide pratique bilingue italien-anglais pour rédiger des courriels, répondre aux clients, gérer des appels et préparer des documents de travail.",
+    label: "Ce que contient le guide",
+    useCases: ["103 situations professionnelles avec modèles de courriels, de messages et d’appels", "41 fiches pratiques et modèles de documents à adapter", "Accès rapides, glossaires et explications en italien", "Exercices et vérifications pour communiquer avec précision"],
+    distinction: "Partez de la situation, choisissez le canal, adaptez le modèle et vérifiez les informations avant de l’envoyer. Le guide s’adresse avant tout aux professionnels italophones.",
+    details: "Un titre de la collection Professional Languages in Practice, signé Noemi Tomassetti, diplômée en médiation linguistique et formée à la traduction spécialisée, avec une expérience en communication professionnelle et back-office.",
+    notice: "Livre en cours de révision et de test. L’extrait, le prix et le lien d’achat Amazon seront communiqués après validation finale."
+  },
+  es: {
+    status: "EN PREPARACIÓN · TODAVÍA NO ESTÁ A LA VENTA",
+    headline: "Business English in Practice",
+    premise: "Inglés profesional cuando lo necesitas. Una guía práctica bilingüe italiano-inglés para escribir correos, responder a clientes, atender llamadas y preparar documentos de trabajo.",
+    label: "Qué incluye",
+    useCases: ["103 situaciones laborales con ejemplos para correo, chat y teléfono", "41 fichas prácticas con modelos y documentos adaptables", "Accesos rápidos, glosarios y explicaciones en italiano", "Ejercicios y comprobaciones para comunicarte con precisión"],
+    distinction: "Parte de una situación, elige el canal, adapta el modelo y comprueba los datos antes de enviarlo. Dirigido principalmente a profesionales y autónomos italohablantes.",
+    details: "De la colección Professional Languages in Practice, de Noemi Tomassetti, graduada en Mediación Lingüística y formada en traducción especializada, con experiencia en comunicación profesional y tareas de back office.",
+    notice: "Libro en revisión editorial y pruebas. El extracto, el precio y el enlace de compra de Amazon se publicarán tras la aprobación final."
+  },
+};
+
 export default function Publications() {
   const { pathname } = useLocation();
   const lang = getLanguageFromPath(pathname);
   const t = COPY[lang];
+  const p = PRELAUNCH[lang];
   const books = getPublishedBooks();
   useSEO({
     title: t.title,
     description: t.intro,
     pageKey: "publications",
     currentLang: lang,
-    noindex: books.length === 0,
+    noindex: false,
   });
 
   return (
     <Layout lang={lang}>
-      <main className="container max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20">
+      <div className="container max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 text-primary font-semibold uppercase tracking-wide text-xs mb-5">
             <BookOpen className="h-4 w-4" aria-hidden="true" /> {t.eyebrow}
@@ -76,6 +126,32 @@ export default function Publications() {
           <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-5">{t.heading}</h1>
           <p className="text-lg text-foreground/80 leading-relaxed">{t.intro}</p>
         </div>
+
+        {books.length === 0 && (
+          <section aria-labelledby="book-prelaunch" className="mt-10 rounded-2xl border border-primary/30 bg-card overflow-hidden">
+            <div className="grid lg:grid-cols-[minmax(210px,0.75fr)_minmax(0,1.75fr)]">
+              <div className="min-h-[280px] p-7 md:p-9 flex items-center justify-center bg-gradient-to-br from-[#163f47] via-[#1e555c] to-[#0b2935] text-white">
+                <div className="w-full max-w-[230px] aspect-[2/3] border border-[#e2afa0]/60 rounded-sm shadow-xl p-5 flex flex-col justify-between" aria-hidden="true">
+                  <span className="text-xs uppercase tracking-widest text-[#f3c7af]">Professional Languages in Practice</span>
+                  <strong className="text-3xl leading-tight">Business<br/>English<br/>in Practice</strong>
+                  <span className="text-xs text-[#f3c7af]">Noemi Tomassetti</span>
+                </div>
+              </div>
+              <div className="p-7 md:p-10">
+                <p className="text-xs font-bold uppercase tracking-wide text-primary mb-3">{p.status}</p>
+                <h2 id="book-prelaunch" className="text-2xl md:text-3xl font-bold mb-4">{p.headline}</h2>
+                <p className="text-foreground/85 leading-relaxed mb-6">{p.premise}</p>
+                <h3 className="font-semibold mb-3">{p.label}</h3>
+                <ul className="list-disc pl-5 space-y-2 text-foreground/80 mb-6">
+                  {p.useCases.map(item => <li key={item}>{item}</li>)}
+                </ul>
+                <p className="leading-relaxed text-foreground/80 mb-4">{p.distinction}</p>
+                <p className="text-sm leading-relaxed text-foreground/70 mb-5">{p.details}</p>
+                <p className="text-sm font-medium rounded-lg bg-muted p-4" role="status">{p.notice}</p>
+              </div>
+            </div>
+          </section>
+        )}
         <section aria-labelledby="publication-collection" className="mt-12 rounded-2xl border border-border bg-card p-6 md:p-9">
           <h2 id="publication-collection" className="text-2xl font-semibold text-primary mb-4">{t.collection}</h2>
           <p className="text-foreground/80 max-w-3xl">{t.collectionDesc}</p>
@@ -108,7 +184,7 @@ export default function Publications() {
         <div className="mt-12">
           <Link to={getLocalizedPath("services", lang)} className="text-primary font-semibold hover:underline">{t.back}</Link>
         </div>
-      </main>
+      </div>
     </Layout>
   );
 }

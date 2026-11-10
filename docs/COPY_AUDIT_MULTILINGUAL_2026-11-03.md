@@ -1,5 +1,8 @@
 # Revisione editoriale multilingue — Noemi Tomassetti / NoeTom
 
+> **Aggiornamento di stato del 4/11/2026 (successivo a questo audit):** la PR #1 è stata unita a `main` nel commit `5469bf8`, e il deployment Vercel ha avuto esito positivo. Le diciture seguenti «PR in bozza», «produzione invariata», «nessun merge» e «blocco attuale Vercel» descrivono un momento precedente e **non rappresentano più lo stato attuale**. La nuova revisione di qualità è nella [PR #2](https://github.com/noemitomassetti/noemitomassetti-it/pull/2), non ancora pubblicata. Rimangono da verificare il recapito email sul dominio, la conformità del piano di hosting all'uso commerciale e l'audit manuale completo.
+
+
 **Data:** 3 novembre 2026  
 **Ramo:** `chatgpt/site-release-audit-2026-10-29` (PR #1, **non pubblicata su main**).  
 **Destinatari:** professionisti, freelance e piccole attività in Italia; nella versione EN/FR/ES, soprattutto operatori esteri che lavorano con il mercato e con clienti italiani già acquisiti.
@@ -32,8 +35,8 @@
 
 - La **correttezza giuridica e fiscale** delle informative e delle clausole contrattuali richiede, ove necessario, verifica da parte dei professionisti competenti. L'editing non equivale a certificazione di conformità.
 - Non dichiarare **identità testuale** fra blog italiano e le tre versioni straniere; per una vera traduzione integrale serve un progetto editoriale specifico.
-- Confermare l'esito dei controlli automatici sull'**ultimo SHA** e verificare l'anteprima su Vercel prima del merge su `main`.
-- **LinkedIn:** il titolo precedente conteneva `IT ↔ EN/FR/ES`; adeguare sul profilo pubblico la dicitura relativa alle **traduzioni professionali EN/FR/ES → IT**, distinguendole dalle comunicazioni multilingue.
+- I controlli automatici sull'ultimo SHA della revisione sono superati; resta la verifica manuale dell'anteprima e l'approvazione esplicita prima di un eventuale merge su `main`.
+- **LinkedIn — controllo esterno ancora aperto:** verificare sul profilo pubblico che non sia rimasta la vecchia dicitura `IT ↔ EN/FR/ES` e che le traduzioni siano presentate come **EN/FR/ES → IT**, distinte dal supporto scritto multilingue ai clienti già acquisiti.
 - Il copy rispecchia l'offerta dichiarata; non costituisce verifica indipendente di risultati professionali, certificazioni o referenze non fornite.
 
 ## Regola di rilascio
