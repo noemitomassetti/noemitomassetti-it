@@ -5,6 +5,8 @@ import { useSEO } from "@/hooks/useSEO";
 import { BookingButton } from "@/components/BookingButton";
 import { ContactForm } from "@/components/ContactForm";
 import { PricingSection } from "@/components/PricingSection";
+import { SERVICE_DECISION_PATHS } from "@/lib/serviceDecisionPaths";
+import { getDeepPortfolioPath } from "@/lib/portfolioDeepCatalog";
 import {
   Language,
   getLanguageFromPath,
@@ -212,6 +214,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {s.categories.map((cat) => {
               const IconComponent = getServiceIcon(cat.id);
+              const decision = SERVICE_DECISION_PATHS[cat.id];
               const macroTags: Record<string, Record<Language, string>> = {
                 "virtual-assistance": { it: "Back office operativo", en: "Virtual assistance & back office", fr: "Secrétariat et back-office", es: "Secretaría y back office" },
                 "digital-support": { it: "Organizzazione digitale", en: "Digital organisation", fr: "Organisation numérique", es: "Organización digital" },
@@ -247,6 +250,11 @@ export default function ServicesPage() {
                       </p>
                     </div>
 
+                    {decision && (
+                      <p className="text-sm font-semibold text-foreground/90 bg-secondary/25 rounded-lg p-3">
+                        {decision.need[lang]}
+                      </p>
+                    )}
                     <p className="text-sm text-foreground/80 leading-relaxed">
                       {cat.description}
                     </p>
@@ -270,9 +278,20 @@ export default function ServicesPage() {
                         ))}
                       </ul>
                     </div>
+                    {decision && (
+                      <p className="text-xs sm:text-sm text-muted-foreground border-l-2 border-primary/40 pl-3">
+                        {decision.possibleOutcome[lang]}
+                      </p>
+                    )}
                   </div>
 
-                  <div className="pt-6 mt-4 border-t border-border/30">
+                  <div className="pt-6 mt-4 border-t border-border/30 space-y-3">
+                    {decision && (
+                      <Link className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" to={getDeepPortfolioPath(decision.dossierId, lang)}>
+                        {lang === "it" ? "Esamina un dossier dimostrativo" : lang === "fr" ? "Consulter un dossier fictif" : lang === "es" ? "Consultar un dossier demostrativo" : "Explore a fictional case dossier"}
+                        <ArrowRight aria-hidden="true" className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
                     <Button
                       type="button"
                       variant="ghost"
