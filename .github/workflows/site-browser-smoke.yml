@@ -91,6 +91,20 @@ jobs:
                   console.log('PASS localized key page '+route+' '+locale+' 390px');
                 }
               }
+              // Regression: the questionnaire must not claim to send mail automatically.
+              for (const item of [
+                {lang:'it',path:'/it/ricerca-professionisti',label:'Domanda 1 di 20'},
+                {lang:'en',path:'/professional-research',label:'Question 1 of 20'},
+                {lang:'fr',path:'/fr/recherche-professionnels',label:'Question 1 sur 20'},
+                {lang:'es',path:'/es/investigacion-profesionales',label:'Pregunta 1 de 20'}
+              ]) {
+                await page.goto('http://127.0.0.1:4173'+item.path,{waitUntil:'networkidle'});
+                if(!await page.getByText(item.label,{exact:true}).isVisible())
+                  throw Error('Unlocalized questionnaire question label '+item.path);
+                if(await page.locator('input[placeholder="Nome e Cognome"]').count())
+                  throw Error('Unlocalized questionnaire name placeholder '+item.path);
+                console.log('PASS questionnaire localized question label '+item.lang);
+              }
               for (const path of ['/publications','/it/libri','/fr/livres','/es/libros']) {
                 await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle'});
                 if (!(await page.locator('h1').innerText()).includes('404')) throw new Error('Unpublished book route must show 404: '+path);
