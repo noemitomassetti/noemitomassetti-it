@@ -227,6 +227,9 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
         score += kw.length >= 8 ? 3 : 1;
       }
     }
+    // Translating a website or an email is a translation enquiry, not a
+    // request for website development or inbox management.
+    if (key === 'translation' && /traduz|tradott|tradurr|translat|traduct|traduir|traducc|traducir/.test(normalized)) score += 5;
     if (score > maxScore) {
       maxScore = score;
       bestService = key;
