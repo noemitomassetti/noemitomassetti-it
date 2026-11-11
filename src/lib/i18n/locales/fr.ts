@@ -170,7 +170,7 @@ export const frLocale: TranslationDictionary = {
     tag: 'COMMUNICATION MULTILINGUE',
     title: 'Communiquer clairement avec vos interlocuteurs',
     description:
-      'Communiquer avec le public italien exige un vocabulaire précis, un registre adapté et des contenus fidèles à votre activité, au-delà d’une traduction littérale.',
+      'Une communication multilingue efficace repose sur une terminologie précise, un registre adapté et la compréhension du contexte de chaque interlocuteur, au-delà d’une simple traduction littérale.',
     points: [
       {
         title: 'Quatre langues de travail',
@@ -178,7 +178,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         title: 'Fidélité au contexte',
-        desc: 'Les subtilités professionnelles et les codes culturels sont respectés afin de préserver l’autorité et la crédibilité de votre image.',
+        desc: 'Je tiens compte des usages professionnels et du contexte culturel de chaque interlocuteur, pour préserver la clarté et la crédibilité des échanges.',
       },
       {
         title: 'Fluidité opérationnelle',
