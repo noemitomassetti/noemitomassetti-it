@@ -171,7 +171,7 @@ export const enLocale: TranslationDictionary = {
     tag: 'GLOBAL REACH',
     title: 'Communicate Clearly Across Languages',
     description:
-      'Communicating with Italian audiences takes more than literal translation: accurate terminology, suitable tone and local context all matter.',
+      'Clear multilingual communication depends on accurate terminology, an appropriate register and an understanding of each audience—not literal translation alone.',
     points: [
       {
         title: 'Languages for Professional Communication',
@@ -179,7 +179,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         title: 'Contextual Adaptation',
-        desc: 'I adapt terminology, tone and cultural references so Italian-language content sounds natural and appropriate to its audience.',
+        desc: 'I adapt terminology, register and cultural references for each agreed target audience, with particular care for Italian-market localisation.',
       },
       {
         title: 'Unified Multilingual Operations',
