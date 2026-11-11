@@ -259,6 +259,9 @@ describe('Concierge: bidirectional translation and conservative service routing'
     'Je cherche une traduction de l’italien vers le français',
     'Necesito traducir del italiano al español',
     'How much for translating Italian to English?',
+    'Puoi tradurre il mio sito web in inglese?',
+    'Can you translate customer emails into French?',
+    'Je souhaite traduire une page de site web en italien',
   ])('routes requested translations to the guided translation brief: %s',(query)=>{
     const result=recognizeIntent(query);
     expect(result.isScopeExcluded).toBe(false);
