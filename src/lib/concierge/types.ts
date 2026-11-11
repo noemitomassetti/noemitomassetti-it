@@ -66,6 +66,7 @@ export interface ConciergeAiRequest {
   conversationHistory: Array<{ role: 'user' | 'assistant'; content: string }>;
   lang: Language;
   currentService?: ServiceKey;
+  aiConsent?: boolean;
 }
 
 export interface ConciergeAiResponse {
