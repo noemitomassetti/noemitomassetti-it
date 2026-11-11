@@ -66,10 +66,10 @@ jobs:
               // Locale parity for all major marketing and contact routes, in a real mobile browser.
               // This supplements (rather than repeats) the exhaustive portfolio/document checks below.
               const localizedPages = {
-                en: ['/services','/about','/resources','/contact','/italian-localisation'],
-                it: ['/it/servizi','/it/chi-sono','/it/risorse','/it/contatti','/it/localizzazione-italiano'],
-                fr: ['/fr/services','/fr/a-propos','/fr/ressources','/fr/contact','/fr/localisation-italien'],
-                es: ['/es/servicios','/es/sobre-mi','/es/recursos','/es/contacto','/es/localizacion-italiano']
+                en: ['/services','/about','/resources','/contact','/italian-localisation','/professional-research'],
+                it: ['/it/servizi','/it/chi-sono','/it/risorse','/it/contatti','/it/localizzazione-italiano','/it/ricerca-professionisti'],
+                fr: ['/fr/services','/fr/a-propos','/fr/ressources','/fr/contact','/fr/localisation-italien','/fr/recherche-professionnels'],
+                es: ['/es/servicios','/es/sobre-mi','/es/recursos','/es/contacto','/es/localizacion-italiano','/es/investigacion-profesionales']
               };
               await page.setViewportSize({width:390,height:844});
               for(const [locale,routes] of Object.entries(localizedPages)) {
