@@ -12,8 +12,10 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:release": "node scripts/release-static-check.cjs && node scripts/site-adapter-runtime-checks.cjs && node scripts/release-html-coverage.cjs && node scripts/release-js-budget.cjs",
-    "preflight:offline": "node scripts/preflight-site.cjs"
+    "test:release": "node scripts/release-static-check.cjs && node scripts/site-adapter-runtime-checks.cjs && node scripts/release-html-coverage.cjs && node scripts/release-js-budget.cjs && npm run test:cloudflare",
+    "preflight:offline": "node scripts/preflight-site.cjs",
+    "build:cloudflare": "npm run build && node scripts/build-cloudflare-assets.cjs",
+    "test:cloudflare": "node scripts/build-cloudflare-assets.cjs && node scripts/check-cloudflare-config.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
