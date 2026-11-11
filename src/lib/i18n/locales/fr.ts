@@ -368,7 +368,7 @@ export const frLocale: TranslationDictionary = {
   },
   aboutPage: {
     title: 'À Propos — Noemi Tomassetti',
-    subtitle: 'Expérience professionnelle, solide formation linguistique et soin opérationnel.',
+    subtitle: 'Expérience professionnelle, solide formation linguistique et rigueur dans l’exécution.',
     storyTitle: 'Un engagement fondé sur la rigueur, le relationnel et le soin',
     storyParagraphs: [
       'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
@@ -421,7 +421,7 @@ export const frLocale: TranslationDictionary = {
     steps: [
       {
         num: '01',
-        title: 'Échange & Découverte',
+        title: 'Premier échange et découverte',
         desc: 'Un premier échange écrit pour comprendre vos priorités et les tâches que vous souhaitez déléguer.',
       },
       {
@@ -436,7 +436,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         num: '04',
-        title: 'Autonomie & Suivi régulier',
+        title: 'Autonomie et suivi régulier',
         desc: 'J’exécute les tâches en autonomie et vous transmets des points d’avancement réguliers pour vous laisser l’esprit libre.',
       },
     ],
@@ -488,9 +488,9 @@ export const frLocale: TranslationDictionary = {
   },
   resourcesPage: {
     tag: 'RESSOURCES & CONSEILS',
-    title: 'Guides et Réflexions Opérationnelles',
+    title: 'Guides et conseils pratiques',
     subtitle: 'Des clés concrètes pour déléguer, rayonner à l’international et optimiser votre organisation.',
-    categories: ['Tous', 'Organisation & Délégation', 'Communication & Multilingue', 'Présence Web & Digitale', 'Outils numériques et organisation'],
+    categories: ['Tous', 'Organisation et délégation', 'Communication multilingue', 'Présence en ligne', 'Outils numériques et organisation'],
     articles: [
       {
         id: 'r1',
@@ -498,7 +498,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Site web ou landing page ? Comment choisir la formule adaptée à votre activité',
         excerpt: 'Comparez les usages d’un site complet et d’une page ciblée selon les besoins de vos visiteurs italiens.',
         date: '31 août 2026',
-        category: 'Présence Web & Digitale',
+        category: 'Présence en ligne',
         readTime: '6 min de lecture',
       },
       {
@@ -516,7 +516,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Trois erreurs de communication multilingue à éviter pour le marché italien',
         excerpt: 'Pourquoi le contexte, le registre et la révision humaine sont essentiels pour communiquer avec un public italien.',
         date: 'Septembre 2026',
-        category: 'Communication & Multilingue',
+        category: 'Communication multilingue',
         readTime: '7 min de lecture',
       },
       {
@@ -525,7 +525,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Le guide pratique de la délégation pour solopreneurs : par où commencer ?',
         excerpt: 'Une méthode progressive pour identifier les tâches de back-office chronophages à transmettre en priorité.',
         date: 'Septembre 2026',
-        category: 'Organisation & Délégation',
+        category: 'Organisation et délégation',
         readTime: '8 min de lecture',
       },
     ],
@@ -535,11 +535,11 @@ export const frLocale: TranslationDictionary = {
       'Assistance virtuelle, secrétariat à distance, back-office, relation client écrite, révision de contenus et traduction professionnelle IT ↔ EN/FR/ES, avec localisation pour le marché italien lorsque nécessaire.',
     servicesTitle: 'Services',
     noetomTitle: 'NoeTom · en développement',
-    companyTitle: 'À Propos & Ressources',
-    legalTitle: 'Informations Légales',
+    companyTitle: 'À propos et ressources',
+    legalTitle: 'Informations légales',
     rights: 'Tous droits réservés.',
     disclaimer:
       "Secrétariat organisationnel, back-office opérationnel, suivi des clients, correspondance multilingue, traduction et contenus numériques. Je ne propose ni télémarketing, ni démarchage à froid, ni prospection ou acquisition de clients, ni comptabilité, facturation, gestion administrative ou services fiscaux.",
-    cookiePrefs: 'Préférences Cookies',
+    cookiePrefs: 'Préférences de cookies',
   },
 };
