@@ -1,4 +1,4 @@
-import type { Language } from './i18n/types';
+import type { Language } from './i18n/types.js';
 
 /**
  * Public professional service perimeter shared by the site and NoeTom intake.
