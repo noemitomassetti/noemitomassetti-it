@@ -15,7 +15,7 @@ import {readFileSync} from "node:fs";
 const languages=["it","en","fr","es"] as const;
 const locales={it:itLocale,en:enLocale,fr:frLocale,es:esLocale};
 const placeholder=/\blorem ipsum\b|\[insert here\]|\[da completare\]/i;
-const unfinishedLabel=/\b(?:TODO|TBD|FIXME)\b/;
+const unfinishedLabel=/(?:^|[\s"\x27(])(?:TODO|TBD|FIXME)(?=$|[\s"\x27.,;:!?])/;
 const nonBlank=(s:string,minimum=8)=>typeof s==="string"&&s.trim().length>=minimum&&!placeholder.test(s)&&!unfinishedLabel.test(s);
 const checkLocale=(field:Record<string,string>,minimum=8)=>{
   for(const lang of languages) expect(nonBlank(field[lang],minimum),`${lang}: ${String(field[lang]).slice(0,75)}`).toBe(true);
@@ -145,7 +145,7 @@ describe("Complete public-site content integrity — IT/EN/FR/ES",()=>{
     for(const file of files){
       const content=readFileSync(file,"utf8");
       expect(content,file).not.toMatch(/clienti già acquisiti|\bLorem ipsum\b/i);
-      expect(content,file).not.toMatch(/\bTODO\b/);
+      expect(unfinishedLabel.test(content),file).toBe(false);
       expect(content,file).not.toMatch(/I create websites and landing pages|Creo siti web e landing page/i);
     }
     expect(itLocale.nav.bookCall).toBe("Richiedi un preventivo");
