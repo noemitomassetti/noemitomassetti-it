@@ -638,7 +638,7 @@ export default function IndexPage() {
               : lang === "fr"
               ? "Tout ce qui doit être fait ne doit pas nécessairement être fait par vous."
               : lang === "es"
-              ? "No todo lo que tienes que hacer debe necesariamente ser hecho por ti."
+              ? "No tienes por qué hacerlo todo tú."
               : "Not everything that needs to get done has to be done by you."}
           </h2>
           <div className="text-base md:text-lg text-foreground/80 mb-6 leading-relaxed space-y-4">
