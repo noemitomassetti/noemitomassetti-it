@@ -13,7 +13,7 @@ const LEGAL_CONTENT = {
     title: "Informativa sulla Privacy",
     seoTitle: "Privacy Policy | Noemi Tomassetti Assistente Virtuale",
     seoDesc: "Informativa sulla privacy ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR). Scopri come vengono trattati i tuoi dati personali.",
-    subtitle: "Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) — Ultimo aggiornamento: 1 novembre 2026",
+    subtitle: "Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) — Ultimo aggiornamento: 11 novembre 2026",
     sections: {
       ownerTitle: "1. Titolare del Trattamento",
       ownerRole: "Virtual Assistant / Translator — Libera professionista",
@@ -62,6 +62,8 @@ const LEGAL_CONTENT = {
       contactEmailPrefix: "Per qualsiasi richiesta o per esercitare i tuoi diritti, puoi scrivere direttamente a:",
       securityTitle: "7. Sicurezza dei Dati e Segretezza Professionale",
       securityText: "Sono adottate misure di sicurezza proporzionate ai servizi effettivamente utilizzati. Le modalità di cifratura, accesso e conservazione dipendono dai singoli fornitori e vanno documentate e verificate.",
+      aiTitle: "8. Assistente generativo opzionale",
+      aiText: "Solo se scegli di attivare espressamente l'AI nel riquadro dell'assistente, il testo che invii e i turni della conversazione avviati dopo tale scelta vengono trasmessi dal sito a Google Gemini tramite una funzione server. La finalità è generare risposte informative sui servizi. L'uso è facoltativo: senza attivazione rimane disponibile l'assistente guidato. La chat non invia richieste di preventivo automaticamente. Non inserire dati sensibili, password o contenuti riservati. Per gli eventuali trattamenti, trasferimenti internazionali e periodi di conservazione presso Google si applicano le condizioni del servizio selezionato, che devono essere valutate prima dell'attivazione operativa.",
       cookieLinkText: "Per informazioni sull'utilizzo dei cookie tecnici e analitici, consulta la",
     },
   },
@@ -69,7 +71,7 @@ const LEGAL_CONTENT = {
     title: "Privacy Policy",
     seoTitle: "Privacy Policy | Noemi Tomassetti Virtual Assistant",
     seoDesc: "Privacy policy pursuant to Art. 13 of EU Regulation 2016/679 (GDPR). Discover how your personal data is collected and protected.",
-    subtitle: "Pursuant to Art. 13 of EU Regulation 2016/679 (GDPR) — Last updated: 1 November 2026",
+    subtitle: "Pursuant to Art. 13 of EU Regulation 2016/679 (GDPR) — Last updated: 11 November 2026",
     sections: {
       ownerTitle: "1. Data Controller",
       ownerRole: "Virtual Assistant & Specialist Translator — Sole Proprietor",
@@ -118,6 +120,8 @@ const LEGAL_CONTENT = {
       contactEmailPrefix: "To exercise your rights or ask questions, please contact:",
       securityTitle: "7. Data Security & Professional Discretion",
       securityText: "Technical and organisational safeguards depend on the systems and providers in use. Encryption, authentication and storage arrangements must be documented and verified for each relevant service.",
+      aiTitle: "8. Optional generative AI assistant",
+      aiText: "Only if you explicitly enable AI in the assistant, your messages and the conversation turns entered after opting in are sent through a server-side function to Google Gemini to generate information about the services. This feature is optional: the guided assistant remains available without it. Chat messages do not automatically submit a quotation enquiry. Do not provide passwords, sensitive personal data or confidential material. The provider's applicable terms govern its processing, any international transfers and retention periods; these arrangements must be reviewed before enabling the feature for visitors.",
       cookieLinkText: "For details regarding cookies and tracking preferences, please view the",
     },
   },
@@ -125,7 +129,7 @@ const LEGAL_CONTENT = {
     title: "Politique de Confidentialité",
     seoTitle: "Politique de Confidentialité | Noemi Tomassetti Assistante Virtuelle",
     seoDesc: "Politique de confidentialité conformément à l'art. 13 du Règlement UE 2016/679 (RGPD). Découvrez la protection de vos données.",
-    subtitle: "Conformément à l'art. 13 du Règlement UE 2016/679 (RGPD) — Dernière mise à jour : 1 novembre 2026",
+    subtitle: "Conformément à l'art. 13 du Règlement UE 2016/679 (RGPD) — Dernière mise à jour : 11 novembre 2026",
     sections: {
       ownerTitle: "1. Responsable du Traitement",
       ownerRole: "Assistante Virtuelle & Traductrice Spécialisée — Professionnelle Indépendante",
@@ -174,6 +178,8 @@ const LEGAL_CONTENT = {
       contactEmailPrefix: "Pour exercer vos droits ou pour toute question, écrivez à :",
       securityTitle: "7. Sécurité et Discrétion Professionnelle",
       securityText: "Des mesures adaptées sont mises en œuvre selon les outils et prestataires utilisés. Le chiffrement, les accès et la conservation doivent être vérifiés et documentés.",
+      aiTitle: "8. Assistant à IA générative facultatif",
+      aiText: "Uniquement si vous activez expressément l'IA dans l'assistant, vos messages et les échanges saisis après cette activation sont transmis à Google Gemini par une fonction côté serveur pour produire des réponses informatives sur les prestations. Cette option est facultative : le parcours guidé reste disponible. Aucun message de la conversation ne transmet automatiquement une demande de devis. Ne communiquez pas de mots de passe, de données sensibles ni de documents confidentiels. Les modalités de traitement, les éventuels transferts internationaux et les durées de conservation dépendent des conditions applicables du prestataire et doivent être vérifiés avant l'activation.",
       cookieLinkText: "Pour connaître notre gestion des traceurs, veuillez consulter notre",
     },
   },
@@ -181,7 +187,7 @@ const LEGAL_CONTENT = {
     title: "Política de Privacidad",
     seoTitle: "Política de Privacidad | Noemi Tomassetti Asistente Virtual",
     seoDesc: "Información sobre protección de datos conforme al art. 13 del Reglamento UE 2016/679 (RGPD). Conoce cómo cuidamos tus datos.",
-    subtitle: "Conforme al art. 13 del Reglamento UE 2016/679 (RGPD) — Última actualización: 1 de noviembre de 2026",
+    subtitle: "Conforme al art. 13 del Reglamento UE 2016/679 (RGPD) — Última actualización: 11 de noviembre de 2026",
     sections: {
       ownerTitle: "1. Responsable del Tratamiento",
       ownerRole: "Asistente Virtual & Traductora Especializada — Profesional Autónoma",
@@ -230,6 +236,8 @@ const LEGAL_CONTENT = {
       contactEmailPrefix: "Para cualquier consulta o para ejercer tus derechos, puedes dirigirte a:",
       securityTitle: "7. Seguridad de los Datos y Sigilo Profesional",
       securityText: "Se aplican medidas adecuadas a las herramientas y proveedores utilizados. El cifrado, el control de acceso y la conservación deben verificarse y documentarse.",
+      aiTitle: "8. Asistente opcional con IA generativa",
+      aiText: "Solo si activas expresamente la IA en el asistente, tus mensajes y los turnos de conversación introducidos después de esa elección se envían a Google Gemini mediante una función del servidor para generar respuestas informativas sobre los servicios. Es una función opcional: la asistencia guiada sigue disponible. Los mensajes no envían automáticamente solicitudes de presupuesto. No compartas contraseñas, datos sensibles ni documentos confidenciales. Las condiciones aplicables del proveedor rigen el tratamiento, las posibles transferencias internacionales y la conservación; deben revisarse antes de activar esta función para visitantes.",
       cookieLinkText: "Para más información sobre el uso de cookies y preferencias, consulta nuestra",
     },
   },
@@ -373,6 +381,12 @@ export default function PrivacyPolicy() {
             <p className="text-sm text-foreground/80 leading-relaxed">
               {t.sections.securityText}
             </p>
+          </section>
+
+          {/* AI feature: provider disclosure in the visitor's language. */}
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-4">{t.sections.aiTitle}</h2>
+            <p className="text-sm text-foreground/80 leading-relaxed">{t.sections.aiText}</p>
           </section>
 
           {/* Cookie Notice */}
