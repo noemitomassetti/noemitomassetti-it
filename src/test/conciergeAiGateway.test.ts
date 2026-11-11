@@ -68,6 +68,7 @@ describe('Server-only generative assistant gateway',()=>{
       expect((opts.headers as Record<string,string>)['x-goog-api-key']).toBe('fake-local-test-key');
       const body=JSON.parse(opts.body as string);
       expect(body.systemInstruction.parts[0].text).toContain('Noemi');
+      expect(JSON.stringify(body)).not.toContain('test@example.com');
       return new Response(JSON.stringify({candidates:[{content:{parts:[{text:'I can help prepare a tailored brief. What kind of support do you need?'}]}}]}),{status:200});
     });
     const res=await gateway.fetch(makeRequest(sample('Can you organise my existing customer email enquiries?')));
@@ -77,6 +78,22 @@ describe('Server-only generative assistant gateway',()=>{
     expect(JSON.stringify(data)).not.toContain('fake-local-test-key');
     expect(mock).toHaveBeenCalledTimes(1);
   });
+  it('redacts contact details before forwarding the message to the provider',async()=>{
+    process.env.GEMINI_API_KEY='fake-local-test-key';
+    process.env.AI_CONCIERGE_ENABLED='true';
+    vi.spyOn(globalThis,'fetch').mockImplementation(async (_url, options)=>{
+      const data=JSON.parse(String((options as RequestInit).body));
+      const sent=JSON.stringify(data.contents);
+      expect(sent).not.toContain('giulia@example.com');
+      expect(sent).not.toContain('+39 333 1234567');
+      expect(sent).toContain('[email omitted]');
+      expect(sent).toContain('[phone/number omitted]');
+      return new Response(JSON.stringify({candidates:[{content:{parts:[{text:'I can help with your written customer enquiries.'}]}}]}),{status:200});
+    });
+    const res=await gateway.fetch(makeRequest(sample('Email giulia@example.com, phone +39 333 1234567. Can you organise incoming enquiries?')));
+    expect(res.status).toBe(200);
+  });
+
   it('does not display generated numerical quotes or invented sites',async()=>{
     process.env.GEMINI_API_KEY='fake-local-test-key';
     process.env.AI_CONCIERGE_ENABLED='true';
