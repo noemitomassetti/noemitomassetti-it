@@ -46,11 +46,13 @@ function rateLimited(ip:string):boolean {
 }
 function checkOrigin(req:Request):boolean {
   const origin=req.headers.get('origin');
-  const host=req.headers.get('x-forwarded-host')||req.headers.get('host');
-  if(!origin||!host)return false;
+  if(!origin)return false;
   try {
-    const u=new URL(origin);
-    return u.protocol==='https:' && u.host.toLowerCase()===host.toLowerCase();
+    // The URL is supplied by the hosting runtime; Host headers may be absent
+    // on Workers Request objects (and are not a trustworthy CSRF authority).
+    const expected=new URL(req.url);
+    const submitted=new URL(origin);
+    return submitted.origin===expected.origin && submitted.protocol==='https:';
   } catch {return false;}
 }
 const SYSTEM = (lang:Language) => `You are "Assistente di Noemi", a LIMITED public-site virtual assistant. Reply idiomatically in ${LANG_NAMES[lang]} based on the visitor's chosen interface language; never switch just because the visitor included foreign text. Keep answers concise (2-5 sentences), warm and professional, no Markdown tables, no fabricated links. For prices, direct the visitor to the public tariff list or the deterministic calculator, never generate numeric prices. One relevant follow-up question maximum. You can explain services and collect a minimal brief; direct the user to the existing guided request form for any official request. Never imply that you are Noemi, an online human, or that a request was automatically sent.
