@@ -75,6 +75,9 @@ jobs:
                 const dismissCookie=page.getByRole('button',{name:/^(Rifiuta|Decline|Refuser|Rechazar)$/i}).first();
                 if (await dismissCookie.isVisible()) await dismissCookie.click();
                 await page.getByRole('button',{name:scenario.open}).click();
+                // Unconfigured OpenAI must not expose a disabled AI upsell to visitors.
+                if(await page.getByText(/AI non attiva|AI not configured|IA non configurée|IA sin configurar/i).count())
+                  throw Error('Unprofessional disabled AI notice visible on public chat '+scenario.lang);
                 await page.getByPlaceholder(scenario.placeholder).fill(scenario.query);
                 await page.getByRole('button',{name:scenario.send}).click();
                 if(!await page.getByText(scenario.expected,{exact:false}).first().isVisible())
