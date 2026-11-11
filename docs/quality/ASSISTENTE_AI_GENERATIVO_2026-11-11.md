@@ -1,33 +1,44 @@
-# Assistente di Noemi — modalità AI generativa (revisione privata)
+# Assistente di Noemi — integrazione OpenAI in anteprima privata
 
-**Stato:** implementato in anteprima. **NON attivare sul sito pubblico e NON eseguire il merge prima del consenso esplicito della titolare.**
+**Stato al 11 novembre 2026:** codice OpenAI predisposto e verificabile in anteprima; provider reale NON attivo in assenza di API key. Il sito pubblico non deve essere aggiornato senza l'OK esplicito dell'autrice.
 
-## Architettura
-- Interfaccia `DigitalConcierge` in IT, British EN, FR ed ES.
-- Il percorso guidato e il calcolo tariffario esistente restano deterministici.
-- Gateway server Vercel `/api/concierge/chat`, con API key solo in variabile server, mai in `VITE_*` né nel browser.
-- Provider predisposto: Google Gemini, API REST. Nessuna credenziale AI risultava configurata nel progetto durante questa revisione.
-- Il gateway risponde con `enabled: false` se manca la chiave o il flag; il browser conserva l'assistente guidato.
+## Struttura
 
-## Sicurezza e qualità applicate
-- Consenso esplicito nella chat prima di inoltrare un nuovo messaggio al provider; la cronologia precedente non viene inoltrata.
-- Informativa privacy aggiornata nelle quattro lingue, collegata all'interruttore nella chat.
-- Limiti di lunghezza su input e cronologia, timeout provider e fallback non generativo.
-- Controllo server del perimetro servizi; richieste escluse non vanno al modello.
-- Le risposte AI non possono accettare incarichi o inviare email, né modificare prezzi, ordini o altri dati.
-- Filtro prudenziale delle risposte: importi numerici, siti esterni e garanzie generati dall'AI provocano fallback.
-- Oscuramento preliminare di indirizzi email e numeri di telefono riconoscibili prima della richiesta al provider.
-- Rate limiting *best-effort in memoria dell'istanza*; non è globale. Prima dell'attivazione pubblica serve un controllo di quota/rate-limit condiviso o un equivalente verificato.
+- Interfaccia React multilingue IT, British EN, FR, ES; selezione volontaria dell'AI. Il percorso guidato e il calcolatore preventivi sono sempre disponibili.
+- Funzione server Vercel `/api/concierge/chat`, che chiama **OpenAI Responses API**. La chiave è esclusivamente una variabile d'ambiente privata server, mai nel browser né nel repository.
+- Modello predefinito `gpt-6-luna`, selezionato per messaggi informativi brevi e costi contenuti; configurabile tramite `OPENAI_MODEL` nel solo server.
+- Base informativa `src/lib/concierge/publicKnowledge.ts`, ricavata dai dati professionali pubblici approvati, dai servizi e dal listino pubblicato in `src/lib/pricingData.ts`. Nessuna connessione alla memoria personale ChatGPT o alle conversazioni private.
+- `store:false` per evitare la conservazione dello stato delle risposte nel servizio API, nei limiti della documentazione OpenAI; restano possibili log di monitoraggio degli abusi secondo le condizioni della piattaforma (normalmente fino a 30 giorni).
 
-## Configurazione richiesta esclusivamente in Vercel **Preview**
-1. Creare una chiave Google Gemini API secondo le condizioni del fornitore; non incollarla in chat, repository o file pubblici.
-2. Vercel → Project Settings → Environment Variables (Preview): aggiungere `GEMINI_API_KEY` come secret/sensitive, `AI_CONCIERGE_ENABLED=true` e, se serve, `GEMINI_MODEL=gemini-2.5-flash`.
-3. Verificare limiti di utilizzo e di spesa (nessun importo / tier viene garantito da questo codice).
-4. Verificare trattamento dati, obblighi GDPR, trasferimenti/retention del fornitore e informative *prima* di abilitare l'uso con persone reali.
-5. Eseguire deployment solo dell'anteprima e prove end-to-end: GET `/api/concierge/chat`, richiesta con consenso e risposta reale di Google; simulare 429, timeout, indisponibilità; verifica su IT/EN/FR/ES; confermare che nessun messaggio/chat viene inviato a Noemi senza modulo separato.
-6. Rivedere e approvare il sito personalmente. Solo dopo una distinta autorizzazione può avvenire la pubblicazione.
+## Garanzie tecniche verificabili
 
-## Limiti non nascosti
-- Nessun modello generativo può garantire infallibilità. È possibile dare risposte improprie; le risposte informative non sono vincolanti.
-- Le prove con provider simulato non dimostrano la disponibilità reale di Gemini.
-- La validazione del flusso sito→app per creare automaticamente un incarico è un test separato, non coperto dalla generazione delle risposte pubbliche.
+1. Consenso del visitatore prima di inviare qualsiasi messaggio all'API esterna; nessuna cronologia antecedente al consenso.
+2. Riconoscimento di esclusioni professionali server-side; invii e preventivi finali non dipendono dal modello.
+3. Lista di servizi e tariffe controllata e coerente con i contenuti del sito. Eventuali numeri di prezzo, promesse di risultato o link generati dal modello vengono bloccati e sostituiti da un percorso guidato.
+4. Oscuramento preliminare di email e numeri telefonici riconoscibili. **Non è anonimizzazione completa** e non si devono raccogliere dati sensibili nella chat.
+5. Limiti di lunghezza, timeout, massimo di token di output, controllo dell'origine e limitatore di richieste per istanza; ritorno all'assistente guidato se provider assente, scaduto o indisponibile.
+6. Test simulati di consenso, risposte, autorizzazione, privacy, quattro lingue, errori, rifiuti per servizi esclusi e protezioni commerciali.
+
+## Condizioni necessarie prima di attivare l'AI con i visitatori
+
+1. Aprire un progetto API OpenAI distinto dall'abbonamento ChatGPT e verificare la disponibilità del modello.
+2. Definire **un budget di spesa** accettabile ed eventuali notifiche e limitazioni nel pannello OpenAI, prima di abilitare la funzione pubblica. Verificare quota, costi, termini e tutela dei dati.
+3. Creare una chiave di progetto OpenAI in modo sicuro: non condividerla in chat, screenshot o repository.
+4. Nelle impostazioni **Vercel → progetto → Environment Variables → Preview**, inserire `OPENAI_API_KEY` come variabile sensibile e `AI_CONCIERGE_ENABLED=true`. Opzionale: `OPENAI_MODEL=gpt-6-luna`.
+5. Nuova anteprima di sviluppo. Verificare `GET /api/concierge/chat` (`enabled:true`) e una **conversazione reale** con consenso in IT/EN/FR/ES; testare 429, indisponibilità e provocazioni sulle istruzioni.
+6. Integrare rate limit condiviso e controllo di consumo a livello di servizio prima dell'attivazione su un sito pubblico. Il limitatore in memoria nel codice attuale non è globale e NON garantisce un tetto di spesa.
+7. Verificare prima della pubblicazione adempimenti privacy/GDPR, informativa e trattamento dati con il provider; controllare anche compatibilità dell'hosting Vercel con utilizzo professionale e piano scelto.
+8. Collaudare separatamente l'invio reale Web3Forms e il passaggio dei dati dall'email all'app NoeTom.
+
+## Precisazioni
+
+- Il codice **non** collega l'account ChatGPT Plus dell'autrice o la memoria di questa conversazione. È un assistente OpenAI personalizzato con sole informazioni professionali pubbliche.
+- La chat non invia messaggi ai clienti o alla titolare, non crea appuntamenti e non accetta incarichi automaticamente.
+- La qualità generativa non è certificabile come infallibile; il modello può commettere errori. Le verifiche simulate non sostituiscono un test reale con OpenAI.
+- `src/lib/concierge/publicKnowledge.ts` è un archivio di contenuti professionali di partenza, da aggiornare quando cambiano i servizi e i prezzi.
+- La sezione libri è nascosta finché non sarà pubblicata.
+- **Non eseguire merge su `main` o deployment produzione senza autorizzazione esplicita.**
+
+Fonti di riferimento: https://developers.openai.com/api/docs/models/gpt-6-luna ;
+https://platform.openai.com/pricing ;
+https://developers.openai.com/api/docs/guides/your-data .
