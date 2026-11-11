@@ -53,8 +53,9 @@ describe('OpenAI server-only generative assistant', () => {
   it('exposes availability without revealing the API key', async () => {
     enableTestProvider();
     const res = await gateway.fetch(new Request('https://preview.example/api/concierge/chat'));
-    expect(await res.json()).toMatchObject({enabled:true,mode:'generative',provider:'openai'});
-    expect(await res.text()).not.toContain('fake-local-openai-key');
+    const responseBody = await res.text();
+    expect(JSON.parse(responseBody)).toMatchObject({enabled:true,mode:'generative',provider:'openai'});
+    expect(responseBody).not.toContain('fake-local-openai-key');
   });
 
   it('blocks use of any external model without explicit visitor consent', async () => {
