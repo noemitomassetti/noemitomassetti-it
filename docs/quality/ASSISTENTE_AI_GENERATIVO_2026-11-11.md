@@ -27,7 +27,7 @@
 4. Nelle impostazioni **Vercel → progetto → Environment Variables → Preview**, inserire `OPENAI_API_KEY` come variabile sensibile e `AI_CONCIERGE_ENABLED=true`. Opzionale: `OPENAI_MODEL=gpt-6-luna`.
 5. Nuova anteprima di sviluppo. Verificare `GET /api/concierge/chat` (`enabled:true`) e una **conversazione reale** con consenso in IT/EN/FR/ES; testare 429, indisponibilità e provocazioni sulle istruzioni.
 6. Integrare rate limit condiviso e controllo di consumo a livello di servizio prima dell'attivazione su un sito pubblico. Il limitatore in memoria nel codice attuale non è globale e NON garantisce un tetto di spesa.
-7. Verificare prima della pubblicazione adempimenti privacy/GDPR, informativa e trattamento dati con il provider; controllare anche compatibilità dell'hosting Vercel con utilizzo professionale e piano scelto.
+7. Verificare prima della pubblicazione adempimenti privacy/GDPR, informativa e trattamento dati con il provider. **Il piano Vercel Hobby, secondo la documentazione ufficiale, è per uso personale non commerciale e non è appropriato per un sito di attività professionale.** Valutare hosting conforme prima di trasferire la nuova versione in produzione, senza cambiare piano o DNS senza approvazione.
 8. Collaudare separatamente l'invio reale Web3Forms e il passaggio dei dati dall'email all'app NoeTom.
 
 ## Precisazioni
@@ -42,3 +42,5 @@
 Fonti di riferimento: https://developers.openai.com/api/docs/models/gpt-6-luna ;
 https://platform.openai.com/pricing ;
 https://developers.openai.com/api/docs/guides/your-data .
+
+Fonte Vercel Hobby (uso non commerciale): https://vercel.com/docs/plans/hobby ; https://vercel.com/docs/limits/fair-use-guidelines .
