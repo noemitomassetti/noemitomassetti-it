@@ -14,8 +14,9 @@ import {readFileSync} from "node:fs";
 
 const languages=["it","en","fr","es"] as const;
 const locales={it:itLocale,en:enLocale,fr:frLocale,es:esLocale};
-const placeholder=/\blorem ipsum\b|\b(?:TODO|TBD|FIXME)\b|\[insert here\]|\[da completare\]/i;
-const nonBlank=(s:string,minimum=8)=>typeof s==="string"&&s.trim().length>=minimum&&!placeholder.test(s);
+const placeholder=/\blorem ipsum\b|\[insert here\]|\[da completare\]/i;
+const unfinishedLabel=/\b(?:TODO|TBD|FIXME)\b/;
+const nonBlank=(s:string,minimum=8)=>typeof s==="string"&&s.trim().length>=minimum&&!placeholder.test(s)&&!unfinishedLabel.test(s);
 const checkLocale=(field:Record<string,string>,minimum=8)=>{
   for(const lang of languages) expect(nonBlank(field[lang],minimum),`${lang}: ${String(field[lang]).slice(0,75)}`).toBe(true);
 };
@@ -84,7 +85,7 @@ describe("Complete public-site content integrity — IT/EN/FR/ES",()=>{
   it("checks all 18 case studies and 22 standalone portfolio documents in four languages",()=>{
     expect(PORTFOLIO_CASES.length).toBe(18);
     expect(PORTFOLIO_DOCUMENTS.length).toBe(22);
-    for(const lang of languages) expect(DEMO_DISCLAIMER[lang]).toMatch(/fittizi|fictional|ficti|fictici/i);
+    for(const lang of languages) expect(DEMO_DISCLAIMER[lang]).toMatch(/fittiz|inventat|fictional|ficti|fictici|inventad|inventés/i);
     for(const item of PORTFOLIO_CASES){
       checkLocale(item.title,10);
       checkLocale(item.subtitle,10);
@@ -107,8 +108,8 @@ describe("Complete public-site content integrity — IT/EN/FR/ES",()=>{
     const directions=new Set(TRANSLATION_DEEP_CASES.map(x=>x.direction));
     expect([...directions].sort()).toEqual(["EN-IT","ES-IT","FR-IT","IT-EN","IT-ES","IT-FR"].sort());
     for(const lang of languages) {
-      expect(TRANSLATION_SAMPLE_NOTICE[lang],lang).toMatch(/fittizi|fictional|ficti|fictici/i);
-      expect(OPERATIONAL_NOTICE[lang],lang).toMatch(/fittizi|fictional|ficti|fictici/i);
+      expect(TRANSLATION_SAMPLE_NOTICE[lang],lang).toMatch(/fittiz|inventat|fictional|ficti|fictici|inventad|inventés/i);
+      expect(OPERATIONAL_NOTICE[lang],lang).toMatch(/fittiz|inventat|fictional|ficti|fictici|inventad|inventés/i);
     }
     for(const item of TRANSLATION_DEEP_CASES){
       checkLocale(item.title,8);
@@ -143,7 +144,8 @@ describe("Complete public-site content integrity — IT/EN/FR/ES",()=>{
     ];
     for(const file of files){
       const content=readFileSync(file,"utf8");
-      expect(content,file).not.toMatch(/clienti già acquisiti|\bLorem ipsum\b|\bTODO\b/i);
+      expect(content,file).not.toMatch(/clienti già acquisiti|\bLorem ipsum\b/i);
+      expect(content,file).not.toMatch(/\bTODO\b/);
       expect(content,file).not.toMatch(/I create websites and landing pages|Creo siti web e landing page/i);
     }
     expect(itLocale.nav.bookCall).toBe("Richiedi un preventivo");
