@@ -796,8 +796,11 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
             <p className="text-muted-foreground">
               {!aiAvailable
                 ? ({it:"AI non attiva: l'assistente guidato resta disponibile.",en:"AI not configured: guided assistance remains available.",fr:"IA non configurée : le parcours guidé reste disponible.",es:"IA sin configurar: sigue disponible la asistencia guiada."} as const)[lang]
-                : ({it:"Attivando questa opzione, i messaggi della chat vengono elaborati da un fornitore AI esterno. Non inserire dati riservati o sensibili. Nessuna richiesta viene inviata a Noemi automaticamente.",en:"If enabled, chat messages are processed by an external AI provider. Do not enter confidential or sensitive information. Enquiries are never sent to Noemi automatically.",fr:"En activant cette option, vos messages sont traités par un fournisseur d'IA externe. Ne partagez aucune donnée sensible ou confidentielle. Les demandes ne sont pas transmises automatiquement à Noemi.",es:"Al activarla, los mensajes se procesan mediante un proveedor externo de IA. No compartas datos sensibles o confidenciales. No se envían solicitudes a Noemi automáticamente."} as const)[lang]}
+                : ({it:"Attivando questa opzione, i nuovi messaggi vengono elaborati da Google Gemini. Non inserire dati riservati o sensibili. Nessuna richiesta viene inviata a Noemi automaticamente.",en:"If enabled, new chat messages are processed by Google Gemini. Do not enter confidential or sensitive information. Enquiries are never sent to Noemi automatically.",fr:"En activant cette option, les nouveaux messages sont traités par Google Gemini. Ne partagez aucune donnée sensible ou confidentielle. Les demandes ne sont pas transmises automatiquement à Noemi.",es:"Al activarla, los nuevos mensajes se procesan mediante Google Gemini. No compartas datos sensibles o confidenciales. No se envían solicitudes a Noemi automáticamente."} as const)[lang]}
             </p>
+            <a href={getLocalizedPath("privacy",lang)} className="underline text-primary hover:opacity-80">
+              {({it:"Come vengono trattati i dati",en:"How your data is processed",fr:"Comment vos données sont traitées",es:"Cómo se tratan tus datos"} as const)[lang]}
+            </a>
             {aiBusy && <p role="status">{({it:"Sto preparando una risposta…",en:"Preparing a response…",fr:"Préparation de la réponse…",es:"Preparando una respuesta…"} as const)[lang]}</p>}
           </div>
 
