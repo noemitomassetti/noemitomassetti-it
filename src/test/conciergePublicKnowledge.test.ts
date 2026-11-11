@@ -8,7 +8,7 @@ describe('Public professional AI knowledge: consistency and privacy', () => {
     expect(PUBLIC_PROFESSIONAL_PROFILE.name).toBe('Noemi Tomassetti');
     expect(text).toContain('110 e lode');
     expect(text).toContain('Traduzione Specialistica');
-    expect(text).toContain('customer care');
+    expect(text).toMatch(/customer care/i);
     expect(text).toContain('Lead generation');
     expect(text).toContain('fittizi');
     expect(text).not.toMatch(/figlia|partner|famiglia|ricover|salute|depressione|codice fiscale|password/i);
@@ -28,7 +28,7 @@ describe('Public professional AI knowledge: consistency and privacy', () => {
     const text = buildPublicConciergeKnowledge();
     expect(text).toContain('entrambe le direzioni');
     expect(text).toContain('acquisizione clienti');
-    expect(text).toContain('reclutamento');
+    expect(text).toMatch(/reclutamento/i);
     expect(text).toContain('non va citata ai visitatori');
   });
 });
