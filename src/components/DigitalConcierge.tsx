@@ -662,7 +662,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
         });
         if (result.isAiGenerated && result.replyText) {
           aiHistoryRef.current = [...aiHistoryRef.current,
-            {role:"user",content:userText},{role:"assistant",content:result.replyText}].slice(-4);
+            {role:"user" as const,content:userText},{role:"assistant" as const,content:result.replyText}].slice(-4);
           setMessages(prev=>[...prev,{...botMsg,text:result.replyText}]);
         } else {
           setMessages(prev=>[...prev,botMsg]); // transparent, tested guided fallback
