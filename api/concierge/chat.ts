@@ -3,9 +3,9 @@
  * Credentials NEVER belong in the browser. No automatic emails or CRM writes.
  * Requires AI_CONCIERGE_ENABLED=true and OPENAI_API_KEY in Vercel Preview Environment Variables.
  */
-import { detectExcludedService, SCOPE_EXCLUDED_REPLY } from '../../src/lib/serviceScope';
-import type { Language } from '../../src/lib/i18n/types';
-import { buildPublicConciergeKnowledge, CONCIERGE_KNOWLEDGE_VERSION } from '../../src/lib/concierge/publicKnowledge';
+import { detectExcludedService, SCOPE_EXCLUDED_REPLY } from '../../src/lib/serviceScope.js';
+import type { Language } from '../../src/lib/i18n/types.js';
+import { buildPublicConciergeKnowledge, CONCIERGE_KNOWLEDGE_VERSION } from '../../src/lib/concierge/publicKnowledge.js';
 
 const json = (value: unknown, status = 200, extra: Record<string,string> = {}) =>
   new Response(JSON.stringify(value), {
