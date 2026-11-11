@@ -624,7 +624,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
       id: (Date.now() + 1).toString(),
       sender: "bot",
       text: intent.explanation[lang],
-      options: intent.serviceKey
+      options: intent.isScopeExcluded ? [] : intent.serviceKey
         ? [
             {
               label: labels.startIntakeBtn[lang],
@@ -725,7 +725,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
                     setEstimateQuantity(k === "hourly" ? "5" : "500");
                   }}>
                   <option value="hourly">{({it:"Supporto a ore",en:"Hourly support",fr:"Assistance horaire",es:"Asistencia por horas"} as const)[lang]}</option>
-                  <option value="translation">{({it:"Traduzione",en:"Translation",fr:"Traduction",es:"Traducción"} as const)[lang]}</option>
+                  <option value="translation">{({it:"Traduzione EN/FR/ES → IT",en:"EN/FR/ES → IT translation",fr:"Traduction EN/FR/ES → IT",es:"Traducción EN/FR/ES → IT"} as const)[lang]}</option>
                   <option value="localization">{({it:"Localizzazione testi",en:"Content localisation",fr:"Localisation de contenus",es:"Localización de contenidos"} as const)[lang]}</option>
                   <option value="specialist">{({it:"Traduzione specialistica",en:"Specialist translation",fr:"Traduction spécialisée",es:"Traducción especializada"} as const)[lang]}</option>
                   <option value="revision">{({it:"Revisione testi",en:"Text revision",fr:"Révision de textes",es:"Revisión de textos"} as const)[lang]}</option>
@@ -750,6 +750,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
                   className="rounded-md bg-primary text-primary-foreground px-3 py-2 w-full font-medium cursor-pointer">
                   {labels.quoteButton[lang]}
                 </button>
+                <p className="text-muted-foreground">{({it:"Per traduzioni IT → EN/FR/ES richiedi una valutazione personalizzata: la stima a parola mostrata è riferita alle condizioni indicate sul sito.",en:"For IT → EN/FR/ES translation, request an individual quote: the word-based estimate applies only to the stated service conditions.",fr:"Pour une traduction IT → EN/FR/ES, demandez un devis personnalisé : l’estimation au mot s’applique uniquement aux conditions indiquées sur le site.",es:"Para traducir IT → EN/FR/ES, solicita un presupuesto personalizado: la estimación por palabra solo se aplica a las condiciones indicadas en el sitio."} as const)[lang]}</p>
               </div>
             )}
           </div>
