@@ -1,82 +1,62 @@
-import { ConciergeAiRequest, ConciergeAiResponse } from './types';
+import type { ConciergeAiRequest, ConciergeAiResponse } from './types';
 
 /**
- * Technical Client-Side Adapter for NoeTom AI Concierge.
- *
- * SAFETY INVARIANTS:
- * 1. AI mode is STRICTLY DISABLED BY DEFAULT.
- * 2. NO API keys are stored in frontend code, VITE_* environment variables, or client bundles.
- * 3. NO direct browser calls to external AI providers (Gemini, OpenAI, Anthropic).
- * 4. Deterministic guided fallback is guaranteed without error popups or broken flows.
- *
- * FUTURE SERVER-SIDE BACKEND REQUIREMENTS:
- * When a dedicated backend proxy endpoint (e.g. `/api/concierge/chat`) is provisioned:
- * - Architecture: Node.js/Express or serverless cloud function acting as a secure gateway.
- * - Authentication: CSRF tokens, session integrity, or origin validation.
- * - Rate Limiting: Strict throttling (e.g., max 15 requests/minute per client IP).
- * - Consumption Controls: Strict token caps (e.g., max 500 input tokens, max 350 output tokens).
- * - System Grounding: Injected system instructions strictly bound to Noemi's official services,
- *   referencing `PRICING_DATA`, explicitly refusing legal/tax advice, and clarifying that final
- *   quotes require human review.
- * - Safety & Moderation: Input sanitization and prompt injection shields.
+ * The public site never calls a model provider directly.
+ * Requests go to a same-origin Vercel Function. Consent is required for each
+ * conversation before any visitor input may reach that function's AI provider.
  */
+const ENDPOINT='/api/concierge/chat';
 
-// Toggle flag: false by default. No simulated generation.
-const IS_AI_ENABLED = false;
-
-// Future secure proxy route (must run on backend, never directly to Gemini from client)
-const AI_PROXY_ENDPOINT = '/api/concierge/chat';
-
-/**
- * Checks whether the server-side AI concierge backend is currently enabled and configured.
- */
-export function isAiConciergeEnabled(): boolean {
-  return IS_AI_ENABLED;
+export function isAiConciergeEnabled():boolean {
+  // Client support exists, but activation is checked live on the server.
+  // This does NOT imply the model provider is configured.
+  return true;
 }
 
-/**
- * Queries the AI Concierge backend if enabled.
- * If disabled (the current safe production default), returns a structured fallback
- * instructing the component to use the deterministic guided path.
- */
-export async function queryAiConcierge(
-  request: ConciergeAiRequest
-): Promise<ConciergeAiResponse> {
-  if (!isAiConciergeEnabled()) {
-    return {
-      replyText: '',
-      isAiGenerated: false,
-      fallbackReason: 'AI_DISABLED_SAFE_MODE',
-    };
-  }
-
-  // Future implementation when server-side proxy is deployed:
+/** Check provider configuration without transmitting a visitor's messages. */
+export async function getAiConciergeAvailability():Promise<boolean>{
   try {
-    const response = await fetch(AI_PROXY_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(request),
-    });
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),3000);
+    try {
+      const response=await fetch(ENDPOINT,{method:'GET',credentials:'same-origin',cache:'no-store',signal:controller.signal});
+      if(!response.ok)return false;
+      const data=await response.json();
+      return data?.enabled===true && data?.requiresConsent===true;
+    }finally{clearTimeout(timeout);}
+  }catch{return false;}
+}
 
-    if (!response.ok) {
-      throw new Error(`AI Gateway error (HTTP ${response.status})`);
-    }
-
-    const data = await response.json();
-    return {
-      replyText: data.replyText || '',
-      suggestedService: data.suggestedService,
-      isAiGenerated: true,
-    };
-  } catch (error) {
-    console.warn('[NoeTom AI Adapter] Server gateway unavailable, falling back to deterministic mode:', error);
-    return {
-      replyText: '',
-      isAiGenerated: false,
-      fallbackReason: 'GATEWAY_UNAVAILABLE',
-    };
+/** Returns a safe fallback if consent, credentials, quota or connectivity is absent. */
+export async function queryAiConcierge(request:ConciergeAiRequest):Promise<ConciergeAiResponse>{
+  if(request.aiConsent!==true){
+    return {replyText:'',isAiGenerated:false,fallbackReason:'AI_CONSENT_REQUIRED'};
+  }
+  try {
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),12000);
+    try {
+      const response=await fetch(ENDPOINT,{
+        method:'POST',
+        headers:{'Content-Type':'application/json',Accept:'application/json'},
+        credentials:'same-origin',
+        body:JSON.stringify({
+          userMessage:request.userMessage.slice(0,950),
+          conversationHistory:request.conversationHistory.slice(-4).map(h=>({role:h.role,content:h.content.slice(0,550)})),
+          lang:request.lang,
+          currentService:request.currentService,
+          aiConsent:true,
+        }),
+        signal:controller.signal,
+      });
+      if(!response.ok)return {replyText:'',isAiGenerated:false,fallbackReason:'GATEWAY_UNAVAILABLE'};
+      const data=await response.json() as ConciergeAiResponse;
+      if(data.isAiGenerated!==true||typeof data.replyText!=='string'||!data.replyText.trim()){
+        return {replyText:'',isAiGenerated:false,fallbackReason:'AI_NOT_GENERATED'};
+      }
+      return {replyText:data.replyText.trim().slice(0,1800),isAiGenerated:true};
+    }finally{clearTimeout(timeout);}
+  }catch{
+    return {replyText:'',isAiGenerated:false,fallbackReason:'GATEWAY_UNAVAILABLE'};
   }
 }
