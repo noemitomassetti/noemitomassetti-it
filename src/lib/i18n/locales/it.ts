@@ -10,7 +10,7 @@ export const itLocale: TranslationDictionary = {
     servicesDesc: 'Segreteria, back office, assistenza scritta ai clienti, traduzioni professionali IT ↔ EN/FR/ES e localizzazione per il mercato italiano.',
     noetomTitle: 'NoeTom | Progetto operativo interno',
     noetomDesc: 'NoeTom è il mio sistema operativo interno in sviluppo, pensato per organizzare incarichi, scadenze e attività.',
-    aboutTitle: 'Chi Sono | Noemi Tomassetti',
+    aboutTitle: 'Chi sono | Noemi Tomassetti',
     aboutDesc: 'Oltre 20 anni di esperienza professionale in ambito organizzativo, linguistico, customer care e supporto back office. Laurea in Mediazione Linguistica 110 e lode.',
     resourcesTitle: 'Risorse e Articoli | Noemi Tomassetti',
     resourcesDesc: 'Approfondimenti e guide pratiche su delega, organizzazione del lavoro, comunicazione multilingue e strumenti digitali per professionisti.',
@@ -25,7 +25,7 @@ export const itLocale: TranslationDictionary = {
     home: 'Home',
     services: 'Servizi',
     noetom: 'NoeTom (progetto in sviluppo)',
-    about: 'Chi Sono',
+    about: 'Chi sono',
     resources: 'Risorse',
     contact: 'Contatti',
     bookCall: 'Richiedi un preventivo',
@@ -79,13 +79,13 @@ export const itLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'COSA FACCIO',
-    title: 'Aree di Supporto Operativo',
+    title: 'Aree di supporto operativo',
     subtitle: 'Queste sono alcune delle attività che posso svolgere. Ogni incarico comprende soltanto le prestazioni concordate nel preventivo, in base alle tue esigenze.',
     viewAllCta: 'Approfondisci tutti i servizi',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Segreteria Organizzativa & Back Office Operativo',
+        title: 'Segreteria organizzativa e back office operativo',
         subtitle: 'Ordine, continuità e reattività per la tua gestione quotidiana.',
         description:
           "Il supporto può comprendere l’organizzazione di email, agenda e scadenze, l’inserimento dati, la gestione di ordini e listini già approvati, la preparazione di preventivi secondo le tue indicazioni e le comunicazioni con i clienti. Le attività specifiche vengono concordate prima dell’avvio. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
@@ -117,7 +117,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         id: 'content-writing',
-        title: 'Scrittura & Revisione Testi',
+        title: 'Scrittura e revisione testi',
         subtitle: 'Testi chiari, professionali e orientati agli obiettivi.',
         description:
           'In base alle esigenze, posso redigere o revisionare testi per siti web, comunicazioni, newsletter e materiali informativi, anche a partire da bozze già disponibili o generate con strumenti di AI. Il tipo di intervento e i contenuti da consegnare vengono concordati.',
@@ -371,7 +371,7 @@ export const itLocale: TranslationDictionary = {
     ctaReadMore: 'Approfondisci il mio percorso',
   },
   aboutPage: {
-    title: 'Chi Sono — Noemi Tomassetti',
+    title: 'Chi sono — Noemi Tomassetti',
     subtitle: 'Esperienza professionale, solida formazione linguistica e cura operativa.',
     storyTitle: 'Un percorso fondato su precisione, relazione e cura',
     storyParagraphs: [
@@ -456,9 +456,9 @@ export const itLocale: TranslationDictionary = {
       company: 'Attività / Studio / Azienda',
       serviceNeeded: 'Area di supporto di tuo interesse *',
       serviceOptions: [
-        'Segreteria Organizzativa & Back Office Operativo',
+        'Segreteria organizzativa e back office operativo',
         'Traduzioni professionali IT ↔ EN/FR/ES e localizzazione dei contenuti',
-        'Scrittura & Revisione Testi',
+        'Scrittura e revisione testi',
         'Ricerche Informative a Supporto',
         'Supporto digitale e organizzazione degli strumenti',
         'Contenuti per siti web e landing page',
@@ -539,7 +539,7 @@ export const itLocale: TranslationDictionary = {
       'Segreteria organizzativa, back office operativo, assistenza ai clienti, comunicazioni professionali e traduzioni professionali IT ↔ EN/FR/ES per freelance, consulenti e piccole imprese.',
     servicesTitle: 'Servizi',
     noetomTitle: 'NoeTom · in sviluppo',
-    companyTitle: 'Chi Sono & Risorse',
+    companyTitle: 'Chi sono & Risorse',
     legalTitle: 'Note Legali',
     rights: 'Tutti i diritti riservati.',
     disclaimer:
