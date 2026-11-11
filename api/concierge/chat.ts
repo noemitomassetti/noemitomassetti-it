@@ -19,7 +19,12 @@ const json = (value: unknown, status = 200, extra: Record<string,string> = {}) =
 
 const langs = ['it','en','fr','es'] as const;
 const LANG_NAMES: Record<Language,string> = {it:'Italiano',en:'British English',fr:'Français',es:'Español'};
-const ENABLED = () => process.env.AI_CONCIERGE_ENABLED === 'true' && Boolean(process.env.OPENAI_API_KEY?.trim());
+export type ConciergeGatewayEnvironment = {
+  AI_CONCIERGE_ENABLED?: string;
+  OPENAI_API_KEY?: string;
+  OPENAI_MODEL?: string;
+};
+
 type History = {role:'user'|'assistant'; content:string};
 const MAX_BODY = 5000;
 const MAX_MESSAGE = 950;
@@ -67,7 +72,10 @@ function parseHistory(value:unknown):History[] {
   ).map(x=>({role:x.role,content:x.content.slice(0,550)}));
 }
 
-export default {
+/** Use the same validated gateway with either Vercel Node env or Cloudflare Worker bindings. */
+export function createConciergeGateway(env: ConciergeGatewayEnvironment) {
+  const ENABLED = () => env.AI_CONCIERGE_ENABLED === 'true' && Boolean(env.OPENAI_API_KEY?.trim());
+  return {
   async fetch(request:Request):Promise<Response>{
     if(request.method==='GET'){
       return json({enabled:ENABLED(), mode:ENABLED()?'generative':'guided', requiresConsent:true, provider:ENABLED()?'openai':null, knowledgeVersion:CONCIERGE_KNOWLEDGE_VERSION});
@@ -103,7 +111,7 @@ export default {
     const input = [...history.map(h=>({role:h.role==='assistant'?'assistant':'user',content:redactContactDetails(h.content)})),
       {role:'user',content:redactContactDetails(message.trim())}];
     // A low-cost model is appropriate for public FAQ and intake: no tools, no autonomous actions.
-    const model=process.env.OPENAI_MODEL||'gpt-6-luna';
+    const model=env.OPENAI_MODEL||'gpt-6-luna';
     if(!/^gpt-[a-z0-9.-]{3,60}$/.test(model))
       return json({error:'INVALID_MODEL_CONFIGURATION'},503);
     const controller=new AbortController();
@@ -111,7 +119,7 @@ export default {
     try {
       const provider=await fetch('https://api.openai.com/v1/responses',{
         method:'POST',
-        headers:{'Content-Type':'application/json',Authorization:'Bearer '+process.env.OPENAI_API_KEY!},
+        headers:{'Content-Type':'application/json',Authorization:'Bearer '+env.OPENAI_API_KEY!},
         body:JSON.stringify({
           model,
           instructions:SYSTEM(locale),
@@ -140,5 +148,13 @@ export default {
       return json({replyText:generated,isAiGenerated:true});
     }catch{return json({error:'AI_PROVIDER_UNAVAILABLE'},503);}
     finally{clearTimeout(timeout);}
+   },
+  };
+}
+
+/** Vercel entrypoint; process.env is read on invocation, not at module import time. */
+export default {
+  fetch(request: Request): Promise<Response> {
+    return createConciergeGateway(process.env).fetch(request);
   },
 };
