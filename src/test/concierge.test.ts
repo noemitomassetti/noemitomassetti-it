@@ -244,3 +244,40 @@ describe('Research service boundaries', () => {
     expect(recognizeIntent(query).isScopeExcluded).toBe(false);
   });
 });
+
+
+describe('Concierge: bidirectional translation and conservative service routing', () => {
+  it('offers all six translation directions with equivalent labels in four languages', () => {
+    const pairs = INTAKE_SCHEMAS.translation.questions.find(q=>q.id==='language_pair')!.choices!;
+    expect(pairs.map(p=>p.id)).toEqual(['en_to_it','fr_to_it','es_to_it','it_to_en','it_to_fr','it_to_es']);
+    for (const item of pairs) for(const lang of ['it','en','fr','es'] as const)
+      expect(item.label[lang].trim().length).toBeGreaterThan(8);
+  });
+  it.each([
+    'Vorrei una traduzione dall’italiano al francese con preventivo',
+    'Can you translate from Italian into English?',
+    'Je cherche une traduction de l’italien vers le français',
+    'Necesito traducir del italiano al español',
+    'How much for translating Italian to English?',
+  ])('routes requested translations to the guided translation brief: %s',(query)=>{
+    const result=recognizeIntent(query);
+    expect(result.isScopeExcluded).toBe(false);
+    expect(result.serviceKey).toBe('translation');
+  });
+  it.each([
+    'Gestore agenda e risposte email ai clienti',
+    'Can you proofread syntax in a customer email?',
+    'Richiedo un preventivo per la gestione ordini',
+    'Do you support an online catalogue for existing customers?',
+  ])('does not block legitimate work because of loose accounting substrings: %s',(query)=>{
+    expect(recognizeIntent(query).isScopeExcluded).toBe(false);
+  });
+  it.each([
+    'Puoi emettere fatture e fare la contabilità?',
+    'Could you handle tax returns and bookkeeping?',
+    'Busco captación de clientes',
+    'Je voudrais des rendez-vous de prospection',
+  ])('continues excluding out-of-scope assignments: %s',(query)=>{
+    expect(recognizeIntent(query).isScopeExcluded).toBe(true);
+  });
+});
