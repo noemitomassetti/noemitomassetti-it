@@ -368,11 +368,11 @@ export const esLocale: TranslationDictionary = {
   },
   aboutPage: {
     title: 'Sobre Mí — Noemi Tomassetti',
-    subtitle: 'Experiencia profesional, sólida formación lingüística y cuidado operativo.',
+    subtitle: 'Experiencia profesional, sólida formación lingüística y atención al detalle.',
     storyTitle: 'Una trayectoria asentada en la precisión, la cercanía y el compromiso',
     storyParagraphs: [
       'Mi carrera se ha desarrollado en torno a tres constantes: la vocación por los idiomas, el rigor organizativo y la satisfacción de ser un punto de apoyo fiable para los profesionales con quienes trabajo.',
-      'Mi trayectoria profesional supera los veinte años y comprende funciones diversas. He desarrollado competencias en atención al cliente, organización, back office y comunicación multilingüe. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y eliminar los roces operativos cotidianos.',
+      'Mi trayectoria profesional supera los veinte años y comprende funciones diversas. He desarrollado competencias en atención al cliente, organización, back office y comunicación multilingüe. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y reducir las dificultades del trabajo diario.',
       'Mi formación comprende una titulación universitaria italiana de primer ciclo en Mediación Lingüística de la Università degli Studi di Macerata (110/110 e lode, máxima distinción italiana) y un máster universitario italiano de primer nivel en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 horas, 60 CFU/créditos ECTS, prueba final superada). La formación incluyó textos literarios, jurídicos, económicos, tecnológicos y científicos. Evalúo los textos jurídicos caso por caso y no realizo traducciones juradas.',
       'Mi forma de trabajar se basa en tareas acordadas, archivos bien organizados, comunicaciones claras y actualizaciones periódicas.',
     ],
@@ -393,7 +393,7 @@ export const esLocale: TranslationDictionary = {
         detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1.500 horas · 60 CFU/créditos ECTS · prueba final superada. Ámbitos literario, jurídico, económico, tecnológico y científico.',
       },
       {
-        period: '2026 – Actualidad',
+        period: '2026 – actualidad',
         role: 'Asistencia virtual y traducción independiente',
         detail: 'Atención escrita a clientes, apoyo operativo y traducción en ambas direcciones entre el italiano y el inglés, francés y español.',
       },
@@ -490,7 +490,7 @@ export const esLocale: TranslationDictionary = {
     tag: 'RECURSOS Y CONSEJOS',
     title: 'Guías y consejos prácticos',
     subtitle: 'Consejos sobre organización, atención a clientes y comunicación en italiano para profesionales y pequeñas empresas.',
-    categories: ['Todos', 'Organización y Delegación', 'Comunicación y Multilingüe', 'Presencia Web y Digital', 'Herramientas digitales y organización'],
+    categories: ['Todos', 'Organización y Delegación', 'Comunicación multilingüe', 'Presencia en línea', 'Herramientas digitales y organización'],
     articles: [
       {
         id: 'r1',
@@ -498,7 +498,7 @@ export const esLocale: TranslationDictionary = {
         title: '¿Sitio web o landing page? Cómo saber qué necesita realmente tu actividad',
         excerpt: 'Compara la utilidad de una web completa y una página específica según las necesidades de tu público italiano.',
         date: '31 de agosto de 2026',
-        category: 'Presencia Web y Digital',
+        category: 'Presencia en línea',
         readTime: '6 min de lectura',
       },
       {
@@ -516,7 +516,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Tres errores de comunicación multilingüe al dirigirte al mercado italiano',
         excerpt: 'Por qué importan el contexto, la coherencia terminológica y la revisión profesional para comunicarte en italiano.',
         date: 'Septiembre de 2026',
-        category: 'Comunicación y Multilingüe',
+        category: 'Comunicación multilingüe',
         readTime: '7 min de lectura',
       },
       {
@@ -535,11 +535,11 @@ export const esLocale: TranslationDictionary = {
       'Asistencia virtual, secretaría, back office, atención escrita a clientes, revisión de contenidos y traducción profesional IT ↔ EN/FR/ES, con localización para el mercado italiano cuando corresponda.',
     servicesTitle: 'Servicios',
     noetomTitle: 'NoeTom · en desarrollo',
-    companyTitle: 'Sobre Mí & Recursos',
+    companyTitle: 'Sobre mí y recursos',
     legalTitle: 'Aviso Legal',
     rights: 'Todos los derechos reservados.',
     disclaimer:
       "Secretaría organizativa, back office operativo, atención a clientes, comunicación multilingüe, traducción y contenidos digitales. No ofrezco telemarketing, llamadas comerciales en frío, prospección o captación de clientes, búsqueda de contactos comerciales, contabilidad, facturación, gestión administrativa ni servicios fiscales.",
-    cookiePrefs: 'Preferencias de Cookies',
+    cookiePrefs: 'Preferencias de cookies',
   },
 };
