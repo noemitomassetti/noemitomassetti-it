@@ -152,4 +152,12 @@ describe("Complete public-site content integrity — IT/EN/FR/ES",()=>{
     expect(frLocale.nav.about).toBe("À propos");
     expect(esLocale.nav.about).toBe("Sobre mí");
   });
+  it("labels the short-fiction translation example accurately in document metadata",()=>{
+    const page=readFileSync("public/portfolio-documenti/doc-22-traduzione-letteraria-en-it.html","utf8");
+    expect(page).toContain("Traduzione letteraria EN → IT · Racconto originale");
+    expect(page).toContain("DOCUMENTO 22 · RACCONTO DIMOSTRATIVO");
+    expect(page).not.toMatch(/Saggio letterario/);
+    expect(page).toContain("Non si tratta di un romanzo pubblicato");
+  });
+
 });
