@@ -417,8 +417,8 @@ export const enLocale: TranslationDictionary = {
   },
   howWeWork: {
     tag: 'THE PROCESS',
-    title: 'How We Collaborate: Smooth & Frictionless',
-    subtitle: 'From initial introduction to seamless ongoing execution in four clear steps.',
+    title: 'How we work together',
+    subtitle: 'Four clear stages, from your first enquiry to ongoing support.',
     steps: [
       {
         num: '01',
@@ -432,12 +432,12 @@ export const enLocale: TranslationDictionary = {
       },
       {
         num: '03',
-        title: 'Seamless Onboarding',
+        title: 'Getting started',
         desc: 'We set up access, establish shared drives or task tracking, and run initial test tasks to align on tone and standards.',
       },
       {
         num: '04',
-        title: 'Autonomy & Ongoing Peace of Mind',
+        title: 'Independent work and regular updates',
         desc: 'I carry out the agreed tasks independently and provide progress updates at the frequency we have agreed.',
       },
     ],
