@@ -49,7 +49,7 @@ export const itLocale: TranslationDictionary = {
     quickStats: {
       experience: 'Esperienza professionale e organizzativa pluriennale',
       languages: '4 lingue di lavoro (IT · EN · FR · ES)',
-      focus: 'Supporto su misura · Nessun costo fisso',
+      focus: 'Supporto su misura · Preventivo concordato',
     },
     callNote: 'Invia una richiesta scritta · Nessun impegno',
   },
