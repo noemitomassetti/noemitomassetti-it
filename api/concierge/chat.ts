@@ -67,7 +67,7 @@ Indicative EN/FR/ES→IT translation starts at €0.09 per SOURCE word; web loca
 All prices are indicative, non-binding, after Noemi checks project scope and materials.
 No accounting, tax, bookkeeping, invoicing, business administration, customer acquisition,
 lead generation, cold calls, prospecting or recruitment of interview respondents.
-No automatic service acceptance, firm quotes, guaranteed delivery dates, unsolicited contact, payments or email sending.
+No automatic service acceptance, firm quotes, guaranteed delivery dates, unsolicited contact, payments or email sending. Never generate numerical prices: use the site's deterministic price calculator or ask for a written quote.
 The visitor can use the quote request form; no message in this chat is sent to Noemi as an enquiry automatically.
 Public portfolio items are demonstrative examples with fictional data, NOT commissioned client work.
 The book is NOT published and must NOT be mentioned, recommended or linked to.
@@ -141,6 +141,10 @@ export default {
       const data=await provider.json() as {candidates?:Array<{content?:{parts?:Array<{text?:string}>}}>} ;
       const generated=(data.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join(' ').trim().slice(0,1800);
       if(!generated)return json({error:'AI_EMPTY_RESPONSE'},503);
+      // Important promises stay deterministic. Do not let generative text invent
+      // prices, external sites or guarantees. The client falls back to a vetted FAQ.
+      const unsafeOutput = /https?:\/\/|(?:€\s*\d|\d+(?:[.,]\d+)?\s*€)|\b(?:eur|euro|euros)\s*\d|\b(?:guaranteed|garantit[oaie]|garanti[ea]s?|garantizado|garantizada)\b|Business English in Practice/i;
+      if(unsafeOutput.test(generated))return json({error:'AI_REPLY_REQUIRES_REVIEW'},503);
       return json({replyText:generated,isAiGenerated:true});
     }catch{return json({error:'AI_PROVIDER_UNAVAILABLE'},503);}
     finally{clearTimeout(timeout);}
