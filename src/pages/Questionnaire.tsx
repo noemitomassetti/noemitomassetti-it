@@ -271,8 +271,8 @@ export const QUESTIONS: Question[] = [
     type: "single",
     options: {
       it: ["Molto chiari, i clienti capiscono subito cosa offro", "Abbastanza tecnici, sento il bisogno di semplificarli", "Spesso prolissi o scritti in fretta, necessitano di revisione"],
-      en: ["Very clear, prospective clients get it right away", "Fairly technical, need simplification", "Often verbose or rushed, in need of professional editing"],
-      fr: ["Très limpides, les prospects comprennent immédiatement", "Assez techniques, mériteraient d'être vulgarisés", "Souvent trop longs ou rédigés à la va-vite"],
+      en: ["Very clear; customers immediately understand what I offer", "Fairly technical, need simplification", "Often verbose or rushed, in need of professional editing"],
+      fr: ["Très clairs : les clients comprennent immédiatement ce que je propose", "Assez techniques, mériteraient d'être vulgarisés", "Souvent trop longs ou rédigés à la va-vite"],
       es: ["Muy claros, los clientes comprenden mi valor al instante", "Demasiado técnicos, necesitan simplificación", "A menudo extensos o redactados con prisas"],
     },
   },
