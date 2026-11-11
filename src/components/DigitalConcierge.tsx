@@ -784,7 +784,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
 
           {/* AI requires explicit opt-in and a configured server-side provider.
                No user message is sent to an external model unless the visitor opts in. */}
-          <div className="border-b border-border/50 px-4 py-2 text-xs space-y-1">
+          {aiAvailable && <div className="border-b border-border/50 px-4 py-2 text-xs space-y-1">
             <label className="flex items-center gap-2 font-semibold cursor-pointer">
               <input type="checkbox" checked={aiAvailable && aiConsent}
                 disabled={!aiAvailable || aiBusy}
@@ -794,15 +794,13 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
               {({it:"Risposte generative con AI",en:"Generative AI responses",fr:"Réponses avec IA générative",es:"Respuestas con IA generativa"} as const)[lang]}
             </label>
             <p className="text-muted-foreground">
-              {!aiAvailable
-                ? ({it:"AI non attiva: l'assistente guidato resta disponibile.",en:"AI not configured: guided assistance remains available.",fr:"IA non configurée : le parcours guidé reste disponible.",es:"IA sin configurar: sigue disponible la asistencia guiada."} as const)[lang]
-                : ({it:"Attivando questa opzione, i nuovi messaggi vengono elaborati tramite le API OpenAI. Non inserire dati riservati o sensibili. Nessuna richiesta viene inviata a Noemi automaticamente.",en:"If enabled, new chat messages are processed by the OpenAI API. Do not enter confidential or sensitive information. Enquiries are never sent to Noemi automatically.",fr:"En activant cette option, les nouveaux messages sont traités par l’API OpenAI. Ne partagez aucune donnée sensible ou confidentielle. Les demandes ne sont pas transmises automatiquement à Noemi.",es:"Al activarla, los nuevos mensajes se procesan mediante la API de OpenAI. No compartas datos sensibles o confidenciales. No se envían solicitudes a Noemi automáticamente."} as const)[lang]}
+              {({it:"Attivando questa opzione, i nuovi messaggi vengono elaborati tramite le API OpenAI. Non inserire dati riservati o sensibili. Nessuna richiesta viene inviata a Noemi automaticamente.",en:"If enabled, new chat messages are processed by the OpenAI API. Do not enter confidential or sensitive information. Enquiries are never sent to Noemi automatically.",fr:"En activant cette option, les nouveaux messages sont traités par l’API OpenAI. Ne partagez aucune donnée sensible ou confidentielle. Les demandes ne sont pas transmises automatiquement à Noemi.",es:"Al activarla, los nuevos mensajes se procesan mediante la API de OpenAI. No compartas datos sensibles o confidenciales. No se envían solicitudes a Noemi automáticamente."} as const)[lang]}
             </p>
             <a href={getLocalizedPath("privacy",lang)} className="underline text-primary hover:opacity-80">
               {({it:"Come vengono trattati i dati",en:"How your data is processed",fr:"Comment vos données sont traitées",es:"Cómo se tratan tus datos"} as const)[lang]}
             </a>
             {aiBusy && <p role="status">{({it:"Sto preparando una risposta…",en:"Preparing a response…",fr:"Préparation de la réponse…",es:"Preparando una respuesta…"} as const)[lang]}</p>}
-          </div>
+          </div>}
 
           {/* Message stream */}
           <div className="flex-1 p-4 overflow-y-auto space-y-4 text-xs">
