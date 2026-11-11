@@ -63,6 +63,23 @@ jobs:
                 await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
                 console.log('PASS route '+path+' content chars='+text.length+' title='+await page.title());
               }
+              // Actual four-language concierge journey, not only intent unit tests.
+              // No customer message is transmitted: only local chat interaction.
+              for (const scenario of [
+                {lang:'it',path:'/it',open:'Assistente di Noemi · Risposta automatica',placeholder:'Scrivi un messaggio o rispondi qui...',send:'Invia messaggio',query:'Vorrei una traduzione dall’italiano al francese',expected:'Traduco tra italiano e inglese'},
+                {lang:'en',path:'/',open:'Noemi’s Assistant · Automated replies',placeholder:'Type a message or answer here...',send:'Send message',query:'Please translate from Italian into English',expected:'Translation is available between Italian'},
+                {lang:'fr',path:'/fr',open:'Assistant de Noemi · Réponses automatiques',placeholder:'Écrivez un message ou répondez ici...',send:'Envoyer le message',query:'Je voudrais traduire de l’italien vers le français',expected:'Traductions possibles entre l’italien'},
+                {lang:'es',path:'/es',open:'Asistente de Noemi · Respuestas automáticas',placeholder:'Escribe un mensaje o responde aquí...',send:'Enviar mensaje',query:'Necesito traducir del italiano al español',expected:'Traducción entre el italiano'}
+              ]) {
+                await page.goto('http://127.0.0.1:4173'+scenario.path,{waitUntil:'networkidle'});
+                await page.getByRole('button',{name:scenario.open}).click();
+                await page.getByPlaceholder(scenario.placeholder).fill(scenario.query);
+                await page.getByRole('button',{name:scenario.send}).click();
+                if(!await page.getByText(scenario.expected,{exact:false}).first().isVisible())
+                  throw Error('Concierge did not route bidirectional translation '+scenario.lang);
+                await page.getByRole('button',{name:scenario.lang==='it'?'Chiudi la chat':scenario.lang==='fr'?'Fermer la fenêtre':scenario.lang==='es'?'Cerrar el chat':'Close chat'}).click();
+                console.log('PASS multilingual concierge quote routing '+scenario.lang);
+              }
               // Locale parity for all major marketing and contact routes, in a real mobile browser.
               // This supplements (rather than repeats) the exhaustive portfolio/document checks below.
               const localizedPages = {
