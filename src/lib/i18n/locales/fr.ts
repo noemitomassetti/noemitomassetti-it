@@ -44,7 +44,7 @@ export const frLocale: TranslationDictionary = {
     callReassurance: 'Demande sans engagement',
     description:
       'Je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que dans le sens inverse. Je propose également un accompagnement organisationnel et la révision de contenus professionnels dans le cadre convenu.',
-    ctaServices: 'Explorer les Services',
+    ctaServices: 'Découvrir les services',
     ctaNoeTom: 'Découvrir NoeTom (en développement)',
     quickStats: {
       experience: 'Solide expérience professionnelle et opérationnelle',
@@ -55,7 +55,7 @@ export const frLocale: TranslationDictionary = {
   },
   trust: {
     tagline: 'SÉRÉNITÉ OPÉRATIONNELLE',
-    headline: 'Vous n’avez pas à porter seul l’ensemble de vos tâches quotidiennes.',
+    headline: 'Vous n’avez pas à tout gérer vous-même au quotidien.',
     paragraph:
       'Gérer une activité, c’est aussi consacrer du temps aux courriels, aux rendez-vous, aux demandes des clients et aux documents professionnels. Je vous apporte un soutien opérationnel structuré et discret, dans un cadre défini ensemble, pour vous aider à vous concentrer sur vos priorités.',
     pillars: [
@@ -93,7 +93,7 @@ export const frLocale: TranslationDictionary = {
         items: [
           'Tri et organisation des courriels professionnels',
           'Gestion d’agenda et coordination des rendez-vous',
-          'Service aux clients et communication professionnelle',
+          'Relation client et communication professionnelle',
           'Classement documentaire et archivage cloud',
           'Suivi des demandes de vos clients',
           'Suivi opérationnel des commandes, données et documents',
@@ -155,7 +155,7 @@ export const frLocale: TranslationDictionary = {
           'Le soutien peut comprendre le classement de documents partagés, le paramétrage simple d’outils numériques déjà choisis et la rédaction de procédures opérationnelles. Les accès, les outils et les tâches sont validés avant l’intervention.',
         iconName: 'Cpu',
         items: [
-          'Restructuration Google Workspace et espaces cloud',
+          'Organisation de Google Workspace et des dossiers partagés',
           'Paramétrage simple d’outils numériques convenus (agendas, formulaires)',
           'Soutien pratique aux outils bureautiques et en ligne',
           'Élaboration de procédures opérationnelles (SOP)',
