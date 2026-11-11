@@ -30,7 +30,7 @@ interface Question {
   options?: Record<Language, string[]>;
 }
 
-const QUESTIONS: Question[] = [
+export const QUESTIONS: Question[] = [
   // SECTION 1: Profilo e settore (Q1-Q4)
   {
     id: 1,
