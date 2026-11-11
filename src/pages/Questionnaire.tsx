@@ -505,20 +505,20 @@ export default function Questionnaire() {
     setErrorMessage("");
 
     try {
-      // Direct mailto compilation fallback or API POST
+      // Prepare an email draft in the visitor’s email client; no automatic submission.
       const summaryLines = QUESTIONS.map((q) => {
         const a = answers[q.id];
-        return `Q${q.id} [${q.question.it}]: ${Array.isArray(a) ? a.join(", ") : a || "N/A"}`;
+        return `Q${q.id} [${q.question[lang]}]: ${Array.isArray(a) ? a.join(", ") : a || "N/A"}`;
       }).join("\n");
 
       const mailtoLink = `mailto:info@noemitomassetti.it?subject=${encodeURIComponent(
-        `Risultati Questionario Operativo da ${userName || "Professionista"}`
+        `${lang === "it" ? "Risposte al questionario operativo" : lang === "fr" ? "Réponses au questionnaire professionnel" : lang === "es" ? "Respuestas al cuestionario profesional" : "Operational questionnaire responses"} - ${userName || "Cliente"}`
       )}&body=${encodeURIComponent(
-        `Nome: ${userName}\nEmail: ${userEmail}\n\nRISPOSTE AL QUESTIONARIO:\n\n${summaryLines}`
+        `${lang === "it" ? "Nome" : lang === "fr" ? "Nom" : lang === "es" ? "Nombre" : "Name"}: ${userName}\nEmail: ${userEmail}\n\n${lang === "it" ? "RISPOSTE AL QUESTIONARIO" : lang === "fr" ? "RÉPONSES AU QUESTIONNAIRE" : lang === "es" ? "RESPUESTAS AL CUESTIONARIO" : "QUESTIONNAIRE RESPONSES"}:\n\n${summaryLines}`
       )}`;
 
       window.location.href = mailtoLink;
-      sessionStorage.removeItem("noemi_questionnaire_draft");
+      // Do not erase a draft before the user actually sends the email.
     } catch (err) {
       setErrorMessage(
         lang === "it"
@@ -613,7 +613,7 @@ export default function Questionnaire() {
                   >
                     <div>
                       <span className="text-xs font-bold text-primary block mb-1">
-                        Domanda {q.id} di 20
+                        {lang === "it" ? `Domanda ${q.id} di 20` : lang === "fr" ? `Question ${q.id} sur 20` : lang === "es" ? `Pregunta ${q.id} de 20` : `Question ${q.id} of 20`}
                       </span>
                       <h3 className="text-lg font-bold text-foreground leading-snug">
                         {q.question[lang]}
@@ -696,7 +696,7 @@ export default function Questionnaire() {
                         placeholder={
                           lang === "it"
                             ? "Descrivi brevemente qui (es. un lancio programmato, una traduzione da consegnare, la sistemazione della casella email)..."
-                            : "Briefly describe here (e.g., an upcoming launch, a translation deadline, clearing inbox clutter)..."
+                            : lang === "fr" ? "Décrivez brièvement votre besoin (échéance, traduction ou gestion des courriels)…" : lang === "es" ? "Describe brevemente tu necesidad (plazo, traducción u organización del correo)..." : "Briefly describe your needs (e.g. a deadline, translation or inbox organisation)..."
                         }
                         className="text-xs sm:text-sm bg-background border-border/60"
                       />
@@ -750,10 +750,10 @@ export default function Questionnaire() {
               <div className="p-6 md:p-8 rounded-2xl border border-border/60 bg-secondary/30 space-y-6">
                 <div>
                   <h3 className="text-lg font-bold text-foreground">
-                    {lang === "it" ? "Invia le tue risposte a Noemi per un riscontro personalizzato" : lang === "fr" ? "Envoyer vos réponses à Noemi pour un retour personnalisé" : lang === "es" ? "Enviar tus respuestas a Noemi para una valoración personalizada" : "Send your responses to Noemi for tailored feedback"}
+                    {lang === "it" ? "Prepara un’email con le risposte per Noemi" : lang === "fr" ? "Préparez un e-mail contenant vos réponses pour Noemi" : lang === "es" ? "Prepara un correo con tus respuestas para Noemi" : "Prepare an email with your answers for Noemi"}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {lang === "it" ? "Riceverai una panoramica sintetica su come impostare la delega per la tua attività specifica, senza alcun impegno." : lang === "fr" ? "Je pourrai examiner vos besoins et vous proposer un premier retour sur les tâches qui correspondent à mes services, sans engagement." : lang === "es" ? "Podré revisar tus necesidades y orientarte sobre las tareas que encajan con mis servicios, sin compromiso." : "You will receive a tailored overview of delegation priorities for your business, with zero obligation."}
+                    {lang === "it" ? "Si aprirà il tuo programma di posta con le risposte compilate: controlla il messaggio e premi Invia. Nessuna email viene inviata automaticamente." : lang === "fr" ? "Votre messagerie s’ouvrira avec les réponses préremplies : vérifiez le message et envoyez-le. Aucun e-mail n’est envoyé automatiquement." : lang === "es" ? "Se abrirá tu correo con las respuestas preparadas: revisa el mensaje y pulsa Enviar. No se envía ningún correo automáticamente." : "Your email application will open with your answers: review the message and press Send. No email is sent automatically."}
                   </p>
                 </div>
 
@@ -774,7 +774,7 @@ export default function Questionnaire() {
                         type="text"
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
-                        placeholder="Nome e Cognome"
+                        placeholder={lang === "it" ? "Nome e cognome" : lang === "fr" ? "Prénom et nom" : lang === "es" ? "Nombre y apellidos" : "Full name"}
                         className="text-xs bg-background"
                         required
                       />
@@ -787,7 +787,7 @@ export default function Questionnaire() {
                         type="email"
                         value={userEmail}
                         onChange={(e) => setUserEmail(e.target.value)}
-                        placeholder="nome@studio.it"
+                        placeholder={lang === "it" ? "nome@esempio.it" : lang === "fr" ? "nom@exemple.fr" : lang === "es" ? "nombre@ejemplo.es" : "name@example.com"}
                         className="text-xs bg-background"
                         required
                       />
@@ -813,7 +813,7 @@ export default function Questionnaire() {
                       className="w-full sm:w-auto font-bold text-xs uppercase tracking-wider bg-primary text-primary-foreground shadow-md hover:scale-102 transition-all px-8 py-5"
                     >
                       <Send className="w-4 h-4 mr-2" />
-                      {lang === "it" ? "Invia le risposte a Noemi" : lang === "fr" ? "Envoyer les réponses à Noemi" : lang === "es" ? "Enviar respuestas a Noemi" : "Send responses to Noemi"}
+                      {lang === "it" ? "Prepara l’email con le risposte" : lang === "fr" ? "Préparer l’e-mail avec les réponses" : lang === "es" ? "Preparar el correo con las respuestas" : "Prepare email with responses"}
                     </Button>
 
                     <BookingButton
