@@ -201,20 +201,19 @@ describe('NoeTom AI Concierge 2.0 Test Suite', () => {
     });
   });
 
-  describe('5. Predisposizione AI sicura (Safe Mode Invariante)', () => {
-    it('la modalità AI è disabilitata per default (isAiConciergeEnabled = false)', () => {
-      expect(isAiConciergeEnabled()).toBe(false);
+  describe('5. Generative AI gateway: privacy and safe fallback', () => {
+    it('supports a private same-origin gateway but does not imply provider availability', () => {
+      expect(isAiConciergeEnabled()).toBe(true);
     });
 
-    it('queryAiConcierge non esegue chiamate di rete esterne e restituisce fallback Reason sicuro', async () => {
+    it('does not transmit visitor text without explicit AI consent', async () => {
       const res = await queryAiConcierge({
         userMessage: 'Test prompt',
         conversationHistory: [],
         lang: 'it',
       });
-
       expect(res.isAiGenerated).toBe(false);
-      expect(res.fallbackReason).toBe('AI_DISABLED_SAFE_MODE');
+      expect(res.fallbackReason).toBe('AI_CONSENT_REQUIRED');
       expect(res.replyText).toBe('');
     });
   });
