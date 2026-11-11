@@ -63,6 +63,34 @@ jobs:
                 await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
                 console.log('PASS route '+path+' content chars='+text.length+' title='+await page.title());
               }
+              // Locale parity for all major marketing and contact routes, in a real mobile browser.
+              // This supplements (rather than repeats) the exhaustive portfolio/document checks below.
+              const localizedPages = {
+                en: ['/services','/about','/resources','/contact','/italian-localisation'],
+                it: ['/it/servizi','/it/chi-sono','/it/risorse','/it/contatti','/it/localizzazione-italiano'],
+                fr: ['/fr/services','/fr/a-propos','/fr/ressources','/fr/contact','/fr/localisation-italien'],
+                es: ['/es/servicios','/es/sobre-mi','/es/recursos','/es/contacto','/es/localizacion-italiano']
+              };
+              await page.setViewportSize({width:390,height:844});
+              for(const [locale,routes] of Object.entries(localizedPages)) {
+                for(const route of routes) {
+                  const response=await page.goto('http://127.0.0.1:4173'+route,{waitUntil:'domcontentloaded',timeout:20000});
+                  if(!response || response.status()!==200) throw Error('Localized route inaccessible '+route);
+                  await page.locator('h1').first().waitFor({timeout:12000});
+                  const text=await page.locator('main').last().innerText();
+                  if(text.length<250) throw Error('Localized page unexpectedly empty '+route);
+                  const htmlLang=await page.locator('html').getAttribute('lang');
+                  if(htmlLang!==locale) throw Error('Wrong html lang '+route+': '+htmlLang);
+                  const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
+                  if(canonical!=='https://www.noemitomassetti.it'+route) throw Error('Wrong canonical '+route+': '+canonical);
+                  if(await page.locator('link[rel="alternate"][hreflang]').count()!==5) throw Error('Missing hreflang links '+route);
+                  if(await page.locator('a[href="/publications"],a[href="/it/libri"],a[href="/fr/livres"],a[href="/es/libros"]').count())
+                    throw Error('Unpublished book section linked on '+route);
+                  if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3))
+                    throw Error('Horizontal overflow '+route+' mobile');
+                  console.log('PASS localized key page '+route+' '+locale+' 390px');
+                }
+              }
               for (const path of ['/publications','/it/libri','/fr/livres','/es/libros']) {
                 await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle'});
                 if (!(await page.locator('h1').innerText()).includes('404')) throw new Error('Unpublished book route must show 404: '+path);
