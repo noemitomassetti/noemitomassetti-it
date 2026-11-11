@@ -316,7 +316,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     masterField: "tecnologico",
     title: {
       it: "Traduzione tecnologica e localizzazione software / UI (EN → IT)",
-      en: "Technological Translation & Software / UI Localization (EN → IT)",
+      en: "Technological Translation and Software/UI Localisation (EN → IT)",
       fr: "Traduction technologique et localisation de logiciels / UI (EN → IT)",
       es: "Traducción tecnológica y localización de software / UI (EN → IT)",
     },
@@ -328,7 +328,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     },
     brief: {
       it: "Dimostrazione della differenza cruciale tra traduzione tecnica descrittiva e localizzazione software orientata all'usabilità e ai vincoli di spazio.",
-      en: "Showcasing the critical distinction between technical documentation translation and space-constrained software UI localization.",
+      en: "Showcasing the critical distinction between technical documentation translation and space-constrained software UI localisation.",
       fr: "Démonstration de la distinction entre documentation technique et micro-textes d'interface soumis à des contraintes de pixels.",
       es: "Demostración de la diferencia entre traducción técnica de manuales y localización de botones y avisos de interfaz.",
     },
@@ -487,7 +487,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     category: "translation",
     title: {
       it: "Localizzazione UX e contenuti web (EN → IT)",
-      en: "UX & Web Copywriting Localization (EN → IT)",
+      en: "UX and Website Copy Localisation (EN → IT)",
       fr: "Localisation UX et contenus web (EN → IT)",
       es: "Localización UX y contenidos web (EN → IT)",
     },
@@ -517,7 +517,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     },
     approach: {
       it: "Riscrittura orientata all'utente: preferite spiegazioni sul beneficio ('Cosa puoi fare ora') rispetto a istruzioni tecniche.",
-      en: "Benefit-driven rewriting prioritizing clear user value over dry technical instructions.",
+      en: "Benefit-led rewriting prioritising clear user value over dry technical instructions.",
       fr: "Rédaction axée sur les bénéfices concrets plutôt que sur des consignes techniques rigides.",
       es: "Redacción orientada a los beneficios del usuario en lugar de meras instrucciones funcionales.",
     },
@@ -596,13 +596,13 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     },
     objective: {
       it: "Raccogliere, verificare e sintetizzare le informazioni pubbliche di 5 fornitori italiani ed europei in una matrice trasparente e subito utilizzabile.",
-      en: "Identify, verify, and summarize public offerings from 5 suppliers into an actionable, decision-ready comparison matrix.",
+      en: "Identify, verify and summarise public offerings from 5 suppliers into an actionable, decision-ready comparison matrix.",
       fr: "Recueillir et synthétiser les offres de 5 fournisseurs européens dans une matrice décisionnelle claire.",
       es: "Recopilar y sintetizar información pública de 5 proveedores en una matriz estructurada y transparente.",
     },
     approach: {
       it: "Analisi desk-research su siti ufficiali, listini pubblici, schede tecniche di prodotto, condizioni di reso e recensioni verificate.",
-      en: "Exhaustive desk research analyzing official websites, public price tiers, technical data sheets, and verified fulfillment times.",
+      en: "Exhaustive desk research analysing official websites, public price tiers, technical data sheets, and verified fulfilment times.",
       fr: "Recherche documentaire approfondie sur les catalogues officiels, fiches techniques et conditions de livraison.",
       es: "Investigación documental sobre sitios web oficiales, catálogos, fichas técnicas y condiciones de envío.",
     },
@@ -776,7 +776,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     },
     approach: {
       it: "Applicazione della metodologia 'Open Loops': classificazione per urgenza/importanza, risposte standard personalizzate e introduzione di buffer di 15 min tra call.",
-      en: "Implementation of the Open Loops framework: classification by priority, templated personalized replies, and 15-minute calendar buffers.",
+      en: "Implementation of the Open Loops framework: classification by priority, templated personalised replies, and 15-minute calendar buffers.",
       fr: "Mise en œuvre d'une méthode de tri rigoureuse, modèles de réponse types personnalisés et temps de pause entre rendez-vous.",
       es: "Aplicación de clasificación por prioridades, respuestas tipo personalizadas y descansos de 15 minutos entre videollamadas.",
     },
@@ -860,7 +860,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       ],
       en: [
         "Banned clichés such as 'synergy', '360-degree turnkey', and 'industry leading'.",
-        "Organized message into three intuitive sections: What we do, Who we serve, Why clients stay.",
+        "Organised the message into three clear sections: What we do, Who we serve, Why clients stay.",
         "Trimmed word count by 40% while doubling message retention and professional credibility.",
       ],
       fr: [
@@ -888,7 +888,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       localizedText: "Aiutiamo professionisti e piccole attività a organizzare meglio il lavoro quotidiano con procedure chiare, documenti ordinati e comunicazioni più semplici.",
       notes: {
         it: "Eliminato il burocratese vuoto. Il testo revisionato parla direttamente al lettore in prima persona plurale, definisce l'interlocutore e si concentra sul beneficio reale.",
-        en: "Replaces empty bureaucratic waffle with direct, human-centered professional prose emphasizing concrete operational benefits.",
+        en: "Replaces empty bureaucratic waffle with direct, human-centred professional prose emphasizing concrete operational benefits.",
         fr: "Substitution d'un style ampoulé par une communication directe, bienveillante et axée sur le résultat.",
         es: "Sustitución de una redacción farragosa por un texto claro, directo y centrado en las necesidades del cliente.",
       },
@@ -1774,7 +1774,7 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
     num: "01",
     title: {
       it: "Localizzazione Sito Interior Design",
-      en: "Interior Design Website Localization",
+      en: "Interior Design Website Localisation",
       fr: "Localisation Site Architecture d'Intérieur",
       es: "Localización Sitio Web Interiorismo",
     },
