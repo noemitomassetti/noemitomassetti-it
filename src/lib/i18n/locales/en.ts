@@ -44,7 +44,7 @@ export const enLocale: TranslationDictionary = {
     callReassurance: 'No-obligation enquiry',
     description:
       'I translate both from Italian into English, French and Spanish and from these languages into Italian. I also refine Italian-language content and support agreed written communication with customers in Italian, English, French and Spanish.',
-    ctaServices: 'Explore Services',
+    ctaServices: 'Explore services',
     ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
       experience: 'Experience across different professional roles',
@@ -94,7 +94,7 @@ export const enLocale: TranslationDictionary = {
         items: [
           'Email triage & structured inbox management',
           'Calendar and appointment coordination',
-          'Customer care & professional communication',
+          'Written customer care and professional communication',
           'Document organisation and cloud filing',
           'Support follow-ups for customers',
           'Data entry & back-office coordination',
