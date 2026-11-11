@@ -94,6 +94,8 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
   const [aiBusy, setAiBusy] = useState(false);
 
   const recognitionRef = useRef<BrowserSpeechRecognition | null>(null);
+  // Only turns created after opt-in may be shared with an external model.
+  const aiHistoryRef = useRef<Array<{role:"user"|"assistant"; content:string}>>([]);
   const navigate = useNavigate();
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -650,8 +652,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
 
     // Never send an excluded request or an intake workflow to an AI provider.
     if (aiAvailable && aiConsent && !intent.isScopeExcluded) {
-      const history = messages.filter(m => m.sender === "user" || m.sender === "bot")
-        .slice(-4).map(m => ({role:m.sender === "user" ? "user" as const : "assistant" as const,content:m.text}));
+      const history = aiHistoryRef.current.slice(-4);
       setMessages(prev => [...prev,userMsg]);
       setAiBusy(true);
       try {
@@ -660,11 +661,14 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
           currentService:intent.serviceKey,
         });
         if (result.isAiGenerated && result.replyText) {
+          aiHistoryRef.current = [...aiHistoryRef.current,
+            {role:"user",content:userText},{role:"assistant",content:result.replyText}].slice(-4);
           setMessages(prev=>[...prev,{...botMsg,text:result.replyText}]);
         } else {
           setMessages(prev=>[...prev,botMsg]); // transparent, tested guided fallback
           setAiAvailable(false);
           setAiConsent(false);
+          aiHistoryRef.current = [];
         }
       } finally {setAiBusy(false);}
       return;
@@ -784,7 +788,7 @@ export function DigitalConcierge({ lang }: { lang: Language }) {
             <label className="flex items-center gap-2 font-semibold cursor-pointer">
               <input type="checkbox" checked={aiAvailable && aiConsent}
                 disabled={!aiAvailable || aiBusy}
-                onChange={e=>setAiConsent(e.target.checked)}
+                onChange={e=>{aiHistoryRef.current=[];setAiConsent(e.target.checked);}}
                 aria-label={({it:"Attiva conversazione AI generativa",en:"Enable generative AI conversation",fr:"Activer la conversation avec l’IA générative",es:"Activar conversación con IA generativa"} as const)[lang]}
               />
               {({it:"Risposte generative con AI",en:"Generative AI responses",fr:"Réponses avec IA générative",es:"Respuestas con IA generativa"} as const)[lang]}
