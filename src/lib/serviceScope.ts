@@ -36,7 +36,7 @@ const accounting = [
   /emett(?:ere|i) fattur/, /predisposizione fattur/,
   /bookkeep/, /accounting services/, /manage (?:my |our )?invoic/,
   /issu(?:e|ing) invoic/, /invoic(?:ing|e generation)/,
-  /tax filing/, /tax returns?/, /tax administration/,
+  /tax filing/, /tax returns?/, /tax administration/, /fiscal (?:returns?|filings?|declarations?)/,
   /gestion (?:des )?factur/, /facturation/, /comptabilit/,
   /declarations? fiscales?/, /gestion (?:de )?factur/,
   /facturacion/, /contabilidad/, /declaracion(?:es)? fiscales?/,
