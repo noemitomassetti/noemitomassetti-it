@@ -1,4 +1,4 @@
-import { PRICING_DATA } from "../pricingData";
+import { PRICING_DATA } from "../pricingData.js";
 
 /**
  * PUBLIC APPROVED BUSINESS KNOWLEDGE ONLY.
