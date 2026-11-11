@@ -44,7 +44,7 @@ export const itLocale: TranslationDictionary = {
     callReassurance: 'Richiesta senza impegno',
     description:
       'Metto ordine nella gestione quotidiana del tuo lavoro, coordino le comunicazioni in quattro lingue e ti supporto nei processi operativi, per restituirti tempo ed efficacia.',
-    ctaServices: 'Scopri i Servizi',
+    ctaServices: 'Scopri i servizi',
     ctaNoeTom: 'Scopri NoeTom (in sviluppo)',
     quickStats: {
       experience: 'Esperienza professionale e organizzativa pluriennale',
@@ -55,7 +55,7 @@ export const itLocale: TranslationDictionary = {
   },
   trust: {
     tagline: 'CHIAREZZA OPERATIVA',
-    headline: 'Non tutto quello che devi fare deve necessariamente essere fatto da te.',
+    headline: 'Non devi occuparti personalmente di ogni attività.',
     paragraph:
       'Gestire un’attività significa dedicarsi al proprio lavoro, ma anche a email, appuntamenti, richieste dei clienti, documenti e comunicazioni che richiedono tempo e attenzione. Ti offro un supporto operativo organizzato, discreto e concordato sulle tue esigenze, per aiutarti a concentrarti sulle priorità.',
     pillars: [
