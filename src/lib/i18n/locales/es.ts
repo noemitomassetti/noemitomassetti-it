@@ -44,7 +44,7 @@ export const esLocale: TranslationDictionary = {
     callReassurance: 'Solicitud sin compromiso',
     description:
       'Traduzco del italiano al inglés, francés y español y también en sentido inverso. Además, reviso contenidos profesionales y presto apoyo organizativo dentro del alcance acordado.',
-    ctaServices: 'Explorar Servicios',
+    ctaServices: 'Descubrir los servicios',
     ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
       experience: 'Amplia trayectoria profesional y organizativa',
@@ -55,7 +55,7 @@ export const esLocale: TranslationDictionary = {
   },
   trust: {
     tagline: 'CLARIDAD OPERATIVA',
-    headline: 'No todo lo que tienes que hacer debes hacerlo tú en persona.',
+    headline: 'No tienes que encargarte personalmente de todas las tareas.',
     paragraph:
       'Gestionar una actividad profesional también implica atender correos, citas, consultas de clientes, documentos y otras tareas que requieren tiempo y atención. Te ofrezco apoyo operativo organizado y discreto, dentro de un marco de trabajo acordado, para que puedas centrarte en tus prioridades.',
     pillars: [
@@ -107,7 +107,7 @@ export const esLocale: TranslationDictionary = {
           "Traduzco del italiano al inglés, francés y español y de estos idiomas al italiano. Según las necesidades, el encargo puede comprender traducción, localización para el mercado italiano, revisión lingüística o apoyo a la correspondencia multilingüe. Los idiomas, los textos y los entregables se definen en el presupuesto.",
         iconName: 'Globe',
         items: [
-          'Localización al italiano de sitios web y páginas de venta',
+          'Localización al italiano de sitios web y páginas de destino',
           'Correspondencia profesional en IT, EN, FR y ES',
           'Traducción de propuestas y presentaciones entre IT y EN/FR/ES',
           'Traducción de materiales formativos entre IT y EN/FR/ES',
@@ -155,7 +155,7 @@ export const esLocale: TranslationDictionary = {
           'El apoyo puede incluir la organización de documentos compartidos, la configuración básica de herramientas digitales ya elegidas y la preparación de procedimientos operativos sencillos. Los accesos, las herramientas y las tareas se acuerdan antes de empezar.',
         iconName: 'Cpu',
         items: [
-          'Reorganización de Google Workspace y discos en la nube',
+          'Organización de Google Workspace y carpetas compartidas en la nube',
           'Configuración básica de herramientas acordadas (calendarios y formularios)',
           'Soporte práctico con herramientas digitales habituales',
           'Elaboración de manuales de procedimiento operativo (SOP)',
