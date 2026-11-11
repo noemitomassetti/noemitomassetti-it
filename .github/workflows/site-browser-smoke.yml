@@ -72,6 +72,8 @@ jobs:
                 {lang:'es',path:'/es',open:'Asistente de Noemi · Respuestas automáticas',placeholder:'Escribe un mensaje o responde aquí...',send:'Enviar mensaje',query:'Necesito traducir del italiano al español',expected:'Traducción entre el italiano'}
               ]) {
                 await page.goto('http://127.0.0.1:4173'+scenario.path,{waitUntil:'networkidle'});
+                const dismissCookie=page.getByRole('button',{name:/^(Rifiuta|Decline|Refuser|Rechazar)$/i}).first();
+                if (await dismissCookie.isVisible()) await dismissCookie.click();
                 await page.getByRole('button',{name:scenario.open}).click();
                 await page.getByPlaceholder(scenario.placeholder).fill(scenario.query);
                 await page.getByRole('button',{name:scenario.send}).click();
