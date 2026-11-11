@@ -170,7 +170,7 @@ export const esLocale: TranslationDictionary = {
     tag: 'COMUNICACIÓN MULTILINGÜE',
     title: 'Comunícate con claridad en varios idiomas',
     description:
-      'Para comunicarte con el público italiano necesitas información precisa, una terminología adecuada y un tono natural, no una traducción literal.',
+      'La comunicación multilingüe requiere terminología precisa, un tono adecuado y atención al contexto de cada destinatario, no solo traducciones literales.',
     points: [
       {
         title: 'Cuatro idiomas de trabajo',
@@ -178,7 +178,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         title: 'Respeto al contexto',
-        desc: 'Las expresiones idiomáticas y el tono de voz se adaptan a cada cultura para que tu propuesta transmita total confianza.',
+        desc: 'Adapto las expresiones y el tono al público destinatario, respetando el significado original y las indicaciones acordadas.',
       },
       {
         title: 'Operativa unificada',
