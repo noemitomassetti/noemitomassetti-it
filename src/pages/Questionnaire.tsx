@@ -165,7 +165,7 @@ export const QUESTIONS: Question[] = [
     type: "single",
     options: {
       it: ["Gestione appuntamenti e continui scambi per fissare date", "Organizzazione di file, documenti e informazioni", "Preparazione di preventivi e materiali introduttivi", "Ricerche e comparazione di fornitori/strumenti"],
-      en: ["Calendar ping-pong to schedule appointments", "Organising files, documents and information", "Drafting proposals and introductory decks", "Vendor and market research"],
+      en: ["Calendar ping-pong to schedule appointments", "Organising files, documents and information", "Drafting proposals and introductory decks", "Comparing suppliers and digital tools"],
       fr: ["Prise de rendez-vous et allers-retours d'agenda", "Classement de fichiers, documents et informations", "Préparation des devis et documents de présentation", "Recherche de prestataires et d'outils"],
       es: ["Cruces de correos para coordinar reuniones", "Organización de archivos, documentos e información", "Elaboración de presupuestos y propuestas", "Investigación de proveedores y herramientas"],
     },
@@ -358,9 +358,9 @@ export const QUESTIONS: Question[] = [
     type: "single",
     options: {
       it: ["Più tempo per i clienti e le attività principali", "Minore carico mentale e serenità a fine giornata", "Migliore immagine professionale e comunicativa", "Comunicazioni più chiare con clienti e partner già acquisiti"],
-      en: ["More time for high-value client work and billable hours", "Reduced mental fatigue and peace of mind", "Elevated professional brand image", "Clearer communication with existing Italian customers"],
-      fr: ["Plus de temps pour les clients et le cœur de métier", "Moins de charge mentale et plus de sérénité", "Une image professionnelle plus soignée", "Communiquer plus clairement avec les clients italiens existants"],
-      es: ["Más tiempo para mis clientes y actividades facturables", "Menor desgaste mental y tranquilidad al final del día", "Mejora de mi imagen corporativa y profesional", "Mejor comunicación con clientes italianos ya existentes"],
+      en: ["More time for clients and core work", "Reduced mental fatigue and peace of mind", "A clearer, more professional image", "Clearer communication with existing customers and partners"],
+      fr: ["Plus de temps pour les clients et le cœur de métier", "Moins de charge mentale et plus de sérénité", "Une image professionnelle plus soignée", "Des échanges plus clairs avec les clients et partenaires existants"],
+      es: ["Más tiempo para mis clientes y actividades principales", "Menor desgaste mental y tranquilidad al final del día", "Mejora de mi imagen corporativa y profesional", "Comunicación más clara con clientes y colaboradores actuales"],
     },
   },
   {
