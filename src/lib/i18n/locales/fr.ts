@@ -80,7 +80,7 @@ export const frLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'MON EXPERTISE',
     title: "Comment puis-je vous accompagner ?",
-    subtitle: "Je propose des prestations linguistiques et une assistance virtuelle opérationnelle. Chaque mission est définie selon les tâches, les documents et les livrables convenus ; tous les services ne sont pas automatiquement inclus.",
+    subtitle: "Je propose des prestations linguistiques et une assistance virtuelle opérationnelle. Chaque mission est définie selon les tâches, les documents et les livrables convenus ; tous les services ne sont pas automatiquement inclus. Le devis précise exactement les prestations incluses.",
     viewAllCta: 'Consulter le détail des services',
     categories: [
       {
