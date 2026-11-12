@@ -83,12 +83,15 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
   });
-  it("keeps the overview dossier count aligned with the public catalogue in all four languages", () => {
+  it("keeps the full searchable dossier catalogue while using task-first navigation in all four languages", () => {
+    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(26);
     const page = read("src/pages/Portfolio.tsx");
-    for (const label of ["26 dossier approfonditi", "26 detailed examples", "26 dossiers pratiques", "26 ejemplos detallados"]) {
+    for (const label of ["Traduzioni e attività operative", "Translations and operational tasks", "Traductions et tâches pratiques", "Traducciones y tareas prácticas"]) {
       expect(page).toContain(label);
     }
-    expect(page).not.toMatch(/27 dossier approfonditi|27 in-depth dossiers|27 dossiers détaillés|27 dosieres detallados/);
+    const showcase = read("src/components/PortfolioDeepShowcase.tsx");
+    expect(showcase).toContain("DEEP_PORTFOLIO_ITEMS.filter");
+    expect(showcase).toContain("{displayed.length} / {visible.length}");
   });
   it("has unique slugs and valid multilingual deep-dossier navigation",()=>{
     const slugs=DEEP_PORTFOLIO_ITEMS.map(x=>x.item.id);
