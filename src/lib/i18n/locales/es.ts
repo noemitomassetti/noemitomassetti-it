@@ -5,7 +5,7 @@ export const esLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: "Comunicación en italiano, traducción y asistencia virtual | Noemi Tomassetti",
-    homeDesc: "Traducción y localización para Italia, correos profesionales, atención escrita al cliente, secretaría, back office y contenidos web. Traducciones IT ↔ EN/FR/ES.",
+    homeDesc: "Traducción y localización para Italia, correos profesionales, atención al cliente por escrito, secretaría, back office y contenidos web. Traducciones IT ↔ EN/FR/ES.",
     servicesTitle: 'Comunicación en italiano, traducción y asistencia virtual | Noemi Tomassetti',
     servicesDesc: 'Traducción y localización para Italia, contenidos de sitios web y redes sociales, correos y comunicación con clientes italianos. También ofrezco todos mis servicios de asistencia virtual.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
@@ -104,7 +104,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Traducción IT ↔ EN/FR/ES y localización',
         subtitle: "El idioma y el tono adecuados para cada destinatario.",
         description:
-          "Traduzco tanto del italiano al inglés, francés y español como de estos idiomas al italiano, tras valorar cada texto. Para quienes se dirigen al mercado italiano, cuido especialmente la naturalidad, el tono y el contexto de la comunicación. Traducción, localización, revisión y correspondencia se detallan en el presupuesto.",
+          "Según el proyecto, traduzco del italiano al inglés, francés y español y de estos idiomas al italiano, tras valorar cada texto. Para quienes se dirigen al mercado italiano, cuido especialmente la naturalidad, el tono y el contexto de la comunicación. Traducción, localización, revisión y correspondencia se detallan en el presupuesto.",
         iconName: 'Globe',
         items: [
           'Localización al italiano de sitios web y páginas de destino',
@@ -136,7 +136,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Investigación documental y comparación de información',
         subtitle: "Información seleccionada y organizada para tus proyectos.",
         description:
-          "Recopilo información pública, comparo fuentes, herramientas y proveedores, y preparo síntesis para tareas operativas o proyectos ya definidos. No realizo búsquedas de clientes potenciales, listas de contactos comerciales ni actividades de captación.",
+          "Puedo recopilar información pública, comparar fuentes, herramientas y proveedores, y preparo síntesis para tareas operativas o proyectos ya definidos. No realizo búsquedas de clientes potenciales, listas de contactos comerciales ni actividades de captación.",
         iconName: 'Search',
         items: [
           'Comparación de competidores y precios públicos para proyectos existentes',
@@ -357,7 +357,7 @@ export const esLocale: TranslationDictionary = {
       "Soy asistente virtual multilingüe, con formación especializada en idiomas y más de veinte años de experiencia laboral en distintos ámbitos.",
       "Mi trayectoria incluye, entre otras actividades, atención al cliente, back office, gestión de pedidos, organización y apoyo operativo.",
       "Me gradué en Mediación Lingüística en la Università degli Studi di Macerata, con la máxima calificación italiana, 110 e lode, y continué mi formación con un máster en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona.",
-      "El italiano es mi lengua materna. También trabajo con inglés, francés y español, con traducciones entre el italiano y cada uno de estos idiomas, revisión lingüística y apoyo a la correspondencia multilingüe.",
+      "El italiano es mi lengua materna. Traduzco tanto del italiano al inglés, francés y español como de estos idiomas al italiano, y ofrezco revisión lingüística y apoyo a la correspondencia multilingüe.",
       "Actualmente ayudo a profesionales y pequeñas empresas a organizar su trabajo diario y su comunicación profesional, especialmente cuando se dirigen al mercado italiano.",
     ],
     credentials: [
