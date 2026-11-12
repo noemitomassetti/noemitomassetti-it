@@ -74,7 +74,7 @@ export default function Blog() {
           {posts.map((post,index) => (
             <Card key={post.id} className="flex flex-col h-full bg-card border-border/50 hover:border-primary/50 transition-colors overflow-hidden">
               <div className="h-48 w-full bg-muted overflow-hidden">
-                <img src={post.image} alt={post.alt || post.title} loading={index < 2 ? "eager" : "lazy"} width="600" height="300" className="w-full h-full object-contain bg-background" />
+                <img src={post.image} alt={post.alt || post.title} loading={index < 2 ? "eager" : "lazy"} width="600" height="300" className="w-full h-full object-cover bg-background" decoding="async" referrerPolicy="no-referrer" />
               </div>
               <CardHeader className="pt-4">
                 <div className="flex items-center justify-between mb-2 gap-2">
