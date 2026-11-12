@@ -5,7 +5,7 @@ export const esLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Traducción y comunicación en italiano para empresas | Noemi Tomassetti',
-    homeDesc: 'Comunica tus mensajes con naturalidad al público italiano: traducción, localización, contenido web y para redes sociales, correos y atención escrita al cliente. También ofrezco asistencia virtual.',
+    homeDesc: 'Comunica tus mensajes con naturalidad al público italiano: traducción, localización, contenido web y para redes sociales, correos y atención escrita al cliente. También ofrezco atención al cliente por escrito y asistencia virtual.',
     servicesTitle: 'Comunicación en italiano, traducción y asistencia virtual | Noemi Tomassetti',
     servicesDesc: 'Traducción y localización para Italia, contenidos de sitios web y redes sociales, correos y comunicación con clientes italianos. También ofrezco todos mis servicios de asistencia virtual.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
@@ -36,7 +36,7 @@ export const esLocale: TranslationDictionary = {
     badge: 'ASISTENTE VIRTUAL MULTILINGÜE',
     titleLine1: 'Comunicación en italiano, traducción y localización',
     titleHighlight: 'para llegar al público italiano',
-    subtitle: "Comunícate de forma natural con tus clientes italianos. Traduzco y adapto contenido web, páginas de destino, correos, boletines, redes sociales y otros textos profesionales. También puedes contar con mis servicios de secretaría y back office.",
+    subtitle: "Comunícate de forma natural con tus clientes italianos. Traduzco y adapto contenido web, páginas de destino, correos, boletines, redes sociales y otros textos profesionales. También puedes contar con mis servicios de atención al cliente, secretaría y back office.",
     headline: 'Las palabras adecuadas para comunicarte con Italia.',
     desc1: 'Soy hablante nativa de italiano, licenciada en Mediación Lingüística y formada en Traducción Especializada. Ayudo a profesionales de otros países a comunicarse con el público italiano de manera clara y adecuada.',
     desc2: 'Una página de destino en italiano, un correo para un cliente, una ficha de producto o una publicación en redes sociales requieren precisión y un tono natural. También ofrezco los mismos servicios de secretaría, back office y atención al cliente que a mis clientes italianos.',
@@ -80,7 +80,7 @@ export const esLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'QUÉ HAGO',
     title: 'Comunicación en italiano, traducción y asistencia virtual',
-    subtitle: 'Mi prioridad para clientes internacionales es la comunicación con el mercado italiano. La traducción y los contenidos ocupan un lugar destacado, sin excluir los demás servicios de asistencia virtual. Cada encargo se define por escrito.',
+    subtitle: 'Mi prioridad para clientes internacionales es la comunicación con el mercado italiano. La traducción y los contenidos ocupan un lugar destacado, sin excluir los demás servicios de asistencia virtual. Cada presupuesto especifica las tareas y los entregables acordados.',
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
