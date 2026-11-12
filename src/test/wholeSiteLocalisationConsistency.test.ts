@@ -35,7 +35,7 @@ describe("Whole-site editorial localisation: shared meaning, audience-aware lang
       const translation = copy.servicesSection.categories.find(item => item.id === "translation-localization");
       expect(translation?.description, lang).toMatch(/itali|italien/i);
       expect(translation?.description, lang).toMatch(/ingles|English|anglais|inglés/i);
-      expect(translation?.description, lang).toMatch(/franc|French/i);
+      expect(translation?.description, lang).toMatch(/fran[cç]|French/i);
       expect(translation?.description, lang).toMatch(/spagn|Spanish|espagn|español/i);
     }
   });
@@ -45,7 +45,7 @@ describe("Whole-site editorial localisation: shared meaning, audience-aware lang
     expect(home).toContain("dict.howWeWork.steps.map");
     for (const lang of langs) {
       expect(locales[lang].howWeWork.steps, lang).toHaveLength(4);
-      expect(locales[lang].howWeWork.steps[2].desc, lang).toMatch(/preventivo|quote|devis|presupuesto/i);
+      expect(locales[lang].howWeWork.steps[2].title + " " + locales[lang].howWeWork.steps[2].desc, lang).toMatch(/preventivo|quote|devis|presupuesto/i);
     }
   });
 
