@@ -74,15 +74,15 @@ const getTips = (lang: Language) => {
       return [
         "Cartographiez vos tâches récurrentes quotidiennes et leur durée",
         "Identifiez ce que vous pouvez déléguer avant d’atteindre la saturation",
-        "Structurez votre calendrier en conservant des marges de respiration",
+        "Prévoyez des marges entre les rendez-vous pour la préparation et les imprévus",
         "Centralisez vos échanges avec vos clients pour éviter la dispersion",
-        "Mettez en place un accueil client clair, simple et rassurant",
+        "Préparez un processus d'accueil clair pour vos clients",
       ];
     case "es":
       return [
         "Define las tareas recurrentes que realizas cada día y su tiempo estimado",
         "Identifica qué gestiones puedes delegar antes de sentir sobrecarga",
-        "Organiza tu agenda protegiendo márgenes de respiro entre reuniones",
+        "Deja tiempo entre reuniones para prepararte y atender imprevistos",
         "Centraliza las comunicaciones para no dispersar datos clave",
         "Diseña un protocolo de bienvenida claro y profesional para tus clientes",
       ];
@@ -90,8 +90,8 @@ const getTips = (lang: Language) => {
       return [
         "Map out your daily recurring tasks and quantify the hours spent",
         "Identify what can be safely delegated before burnout sets in",
-        "Protect calendar buffers between consecutive client appointments",
-        "Centralize communications so crucial details never slip away",
+        "Leave realistic gaps between appointments for preparation and unforeseen changes",
+        "Organise correspondence so important details are easier to find",
         "Prepare a clear welcome process for customers you already serve",
       ];
   }
@@ -169,12 +169,12 @@ export default function ResourcesPage() {
               </div>
               <p className="text-xs sm:text-sm text-muted-foreground mb-6 leading-relaxed">
                 {lang === "it"
-                  ? "Per lavorare in modo ordinato ed efficace, questi sono alcuni strumenti che utilizzo quotidianamente e che consiglio:"
+                  ? "Ecco alcuni strumenti che possono essere utili per organizzare appuntamenti, documenti e attività. La scelta dipende dalle esigenze e dalle funzioni disponibili."
                   : lang === "fr"
-                  ? "Pour travailler avec clarté et régularité, voici les outils que j'utilise et recommande :"
+                  ? "Voici quelques outils qui peuvent faciliter la gestion des rendez-vous, des documents et des tâches. Le choix dépend de vos besoins et des fonctionnalités proposées."
                   : lang === "es"
-                  ? "Para trabajar de forma metódica y eficaz, estas son las herramientas que empleo y sugiero:"
-                  : "To work in an orderly, efficient manner, here are core tools I rely on daily and recommend:"}
+                  ? "Estas herramientas pueden ayudarte a organizar citas, documentos y tareas. Conviene elegirlas según tus necesidades y las funciones disponibles."
+                  : "These are examples of tools that may help with appointments, files and everyday tasks. Choose them according to your needs and the features available."}
               </p>
               <ul className="space-y-3.5 mb-6">
                 {tools.map((tool, idx) => (
@@ -220,12 +220,12 @@ export default function ResourcesPage() {
                 </div>
                 <p className="text-xs sm:text-sm text-muted-foreground mb-6 leading-relaxed">
                   {lang === "it"
-                    ? "Piccoli cambiamenti strategici che generano un impatto immediato sulle tue giornate:"
+                    ? "Alcune abitudini pratiche da valutare per organizzare meglio il lavoro quotidiano:"
                     : lang === "fr"
-                    ? "Des ajustements concrets pour un impact immédiat sur votre sérénité au travail :"
+                    ? "Quelques habitudes pratiques pour mieux organiser votre travail au quotidien :"
                     : lang === "es"
-                    ? "Pequeños cambios estructurados que transforman de inmediato tu jornada laboral:"
-                    : "Small procedural shifts that create an immediate impact on your daily bandwidth:"}
+                    ? "Algunas prácticas sencillas que pueden ayudarte a organizar el trabajo diario:"
+                    : "A few practical habits that may make everyday work easier to organise:"}
                 </p>
                 <ul className="space-y-3 mb-6">
                   {tips.map((tip, idx) => (
@@ -257,21 +257,21 @@ export default function ResourcesPage() {
           <div className="text-center max-w-2xl mx-auto mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
               {lang === "it"
-                ? "Articoli e Approfondimenti"
+                ? "Articoli e approfondimenti"
                 : lang === "fr"
-                ? "Articles et Guides Pratiques"
+                ? "Articles et guides pratiques"
                 : lang === "es"
-                ? "Artículos y Guías Prácticas"
-                : "Articles & Practical Guides"}
+                ? "Artículos y guías prácticas"
+                : "Articles and practical guides"}
             </h2>
             <p className="text-sm text-muted-foreground">
               {lang === "it"
-                ? "Consulta le guide tematiche per approfondire strategie, delega e produttività."
+                ? "Leggi articoli pratici su organizzazione, comunicazione, delega e strumenti digitali."
                 : lang === "fr"
-                ? "Consultez nos articles thématiques pour optimiser vos méthodes de travail."
+                ? "Découvrez des articles pratiques sur l'organisation, la communication, la délégation et les outils numériques."
                 : lang === "es"
-                ? "Explora mis guías sobre organización, comunicación y trabajo con clientes italianos."
-                : "Explore actionable perspectives on delegation, systems, and time protection."}
+                ? "Encuentra artículos prácticos sobre organización, comunicación, delegación y herramientas digitales."
+                : "Read practical articles about organisation, communication, delegation and digital tools."}
             </p>
           </div>
 
