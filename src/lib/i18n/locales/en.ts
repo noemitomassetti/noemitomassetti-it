@@ -164,7 +164,7 @@ export const enLocale: TranslationDictionary = {
           'Basic digital assistance & setup support',
         ],
       },
-      { id: 'web-landing', title: 'Website & Landing Page Content', subtitle: "Clearer website copy for the audience you want to reach.", description: "For existing websites, I revise and organise copy, headings, FAQs and calls to action, and localise content for readers in Italy. This is an editorial service: website development, hosting and technical maintenance are excluded.", iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian-market localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
+      { id: 'web-landing', title: 'Website & Landing Page Content', subtitle: "Clearer website copy for the audience you want to reach.", description: "For existing websites, I can revise and organise copy, headings, FAQs and calls to action, and localise content for readers in Italy. This is an editorial service: website development, hosting and technical maintenance are excluded.", iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian-market localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
     ],
   },
   multilingualAdvantage: {
