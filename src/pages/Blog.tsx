@@ -11,26 +11,26 @@ import { Button } from "@/components/ui/button";
 const COPY: Record<Language, {title: string; heading: string; introduction: string; read: string}> = {
   it: {
     title: "Blog e approfondimenti | Noemi Tomassetti",
-    heading: "Blog e risorse professionali",
-    introduction: "Approfondimenti pratici su organizzazione, comunicazione, back office e traduzione. Gli articoli già pubblicati mantengono i loro indirizzi originali.",
+    heading: "Idee e strumenti per lavorare e comunicare meglio",
+    introduction: "Articoli su organizzazione del lavoro, comunicazione professionale, traduzione e strumenti digitali, con esempi e suggerimenti applicabili alle attività quotidiane.",
     read: "Leggi l’articolo"
   },
   en: {
     title: "Blog | Italian Translation and Operational Support | Noemi Tomassetti",
-    heading: "Articles for businesses working with Italy",
-    introduction: "Practical guidance on Italian-language communication, localisation and organised customer operations. These articles are editorially adapted for international readers.",
+    heading: "Practical ideas for working and communicating with Italy",
+    introduction: "Articles on Italian-language communication, localisation, customer correspondence and practical ways to organise work. The material is adapted for English-speaking readers.",
     read: "Read article"
   },
   fr: {
     title: "Blog | Traduction vers l’italien et soutien opérationnel | Noemi Tomassetti",
-    heading: "Articles pour les professionnels travaillant avec l’Italie",
-    introduction: "Des conseils concrets sur la communication avec les clients italiens, la localisation des contenus et l’organisation opérationnelle. Les articles sont adaptés aux lecteurs francophones.",
+    heading: "Des idées pratiques pour travailler et communiquer avec l’Italie",
+    introduction: "Des articles sur la communication en italien, la localisation de contenus, la correspondance professionnelle et l'organisation du travail, adaptés aux lecteurs francophones.",
     read: "Lire l’article"
   },
   es: {
     title: "Blog | Traducción al italiano y apoyo operativo | Noemi Tomassetti",
-    heading: "Artículos para profesionales que trabajan con Italia",
-    introduction: "Consejos prácticos sobre comunicación en italiano, localización de contenidos y organización del trabajo. Los artículos están adaptados para lectores hispanohablantes.",
+    heading: "Ideas prácticas para trabajar y comunicarte con Italia",
+    introduction: "Artículos sobre comunicación profesional en italiano, localización de contenidos, correspondencia con clientes y organización del trabajo, adaptados a lectores hispanohablantes.",
     read: "Leer el artículo"
   }
 };
