@@ -32,7 +32,7 @@ describe("Site copy editorial alignment", () => {
     expect(home).not.toContain("deliverable reali");
     const portfolio = source("src/pages/Portfolio.tsx");
     expect(portfolio).toMatch(/dimostrativ/i);
-    expect(portfolio).toMatch(/fictional data|dati fittizi|données fictives|datos ficticios/i);
+    expect(portfolio).toMatch(/inventati|invented|inventés|inventados/i);
   });
 
   it("describes the actual scope instead of offering administration and prospecting", () => {
