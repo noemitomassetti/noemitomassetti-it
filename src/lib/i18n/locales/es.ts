@@ -369,14 +369,14 @@ export const esLocale: TranslationDictionary = {
     ctaReadMore: 'Conoce mi trayectoria',
   },
   aboutPage: {
-    title: 'Sobre mí — Noemi Tomassetti',
-    subtitle: 'Experiencia profesional, sólida formación lingüística y atención al detalle.',
-    storyTitle: 'Una trayectoria asentada en la precisión, la cercanía y el compromiso',
+    title: "Trayectoria, formación lingüística y método de trabajo",
+    subtitle: "Experiencia en distintos ámbitos y formación especializada aplicada a tareas concretas.",
+    storyTitle: "Experiencia profesional adquirida en distintas funciones",
     storyParagraphs: [
-      'Mi carrera se ha desarrollado en torno a tres constantes: la vocación por los idiomas, el rigor organizativo y la satisfacción de ser un punto de apoyo fiable para los profesionales con quienes trabajo.',
-      'Mi trayectoria profesional supera los veinte años y comprende funciones diversas. He desarrollado competencias en atención al cliente, organización, back office y comunicación multilingüe. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y reducir las dificultades del trabajo diario.',
-      'Mi formación comprende una titulación universitaria italiana de primer ciclo en Mediación Lingüística de la Università degli Studi di Macerata (110/110 e lode, máxima distinción italiana) y un máster universitario italiano de primer nivel en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 horas, 60 CFU/créditos ECTS, prueba final superada). La formación incluyó textos literarios, jurídicos, económicos, tecnológicos y científicos. Evalúo los textos jurídicos caso por caso y no realizo traducciones juradas.',
-      'Mi forma de trabajar se basa en tareas acordadas, archivos bien organizados, comunicaciones claras y actualizaciones periódicas.',
+      "Cuento con más de veinte años de experiencia laboral en distintos ámbitos, entre ellos la atención al cliente, la gestión de pedidos, el back office y la organización.",
+      "Esta trayectoria me ha enseñado la importancia de contar con instrucciones claras, comunicaciones cuidadas y responsabilidades bien definidas. Cada colaboración comienza por entender tus necesidades y valorar las tareas que puedo asumir.",
+      "Estudié Mediación Lingüística en la Università degli Studi di Macerata (110/110 e lode, máxima distinción italiana) y continué mi formación con un máster en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 horas, 60 CFU/créditos ECTS). Evalúo los textos especializados caso por caso y no realizo traducciones juradas.",
+      "Actualmente colaboro a distancia con profesionales y pequeñas empresas en tareas operativas y de comunicación, especialmente cuando se dirigen al público italiano.",
     ],
     timeline: [
       {
@@ -402,51 +402,26 @@ export const esLocale: TranslationDictionary = {
     ],
     valuesTitle: 'Principios de mi forma de trabajar',
     values: [
-      {
-        title: 'Escuchar antes de proponer',
-        desc: 'Cada negocio tiene su ritmo propio. No impongo esquemas preconcebidos: comienzo siempre comprendiendo tu dinámica y tus puntos de fricción.',
-      },
-      {
-        title: 'La tecnología al servicio de las personas',
-        desc: 'Las herramientas digitales deben liberar tiempo para lo sustancial. La precisión técnica se acompaña siempre de un trato humano y cercano.',
-      },
-      {
-        title: 'Cumplimiento y transparencia',
-        desc: 'Acordamos plazos realistas, te aviso de cualquier imprevisto y reviso los detalles importantes antes de entregar el trabajo.',
-      },
+      { title: "Escucha y alcance definido", desc: "Antes de empezar, acordamos las tareas, los materiales necesarios y las decisiones que siguen siendo de tu competencia." },
+      { title: "Herramientas digitales prácticas", desc: "Utilizo herramientas adecuadas y procedimientos sencillos para organizar el trabajo sin sustituir las comprobaciones profesionales." },
+      { title: "Confidencialidad y seguimiento", desc: "Respeto el alcance acordado, trato los materiales con cuidado y comunico los asuntos que necesitan aclaración." },
     ],
   },
   howWeWork: {
-    tag: 'MÉTODO',
-    title: 'Empezar a colaborar es muy sencillo',
-    subtitle: 'Cuatro pasos claros para una coordinación eficaz desde el primer día.',
+    tag: "MÉTODO",
+    title: "Cómo empezar a colaborar",
+    subtitle: "Cuatro pasos, desde tu solicitud por escrito hasta el inicio del trabajo.",
     steps: [
-      {
-        num: '01',
-        title: 'Conversación inicial',
-        desc: 'Una primera conversación por escrito para entender tu actividad, tus retos y las tareas que quieres delegar.',
-      },
-      {
-        num: '02',
-        title: 'Acuerdo y prioridades',
-        desc: 'Definimos las tareas prioritarias a delegar y establecemos un marco de trabajo claro, con canales y plazos definidos.',
-      },
-      {
-        num: '03',
-        title: 'Puesta en marcha',
-        desc: 'Compartimos los accesos y carpetas de trabajo necesarios y realizamos las primeras gestiones para coordinar criterios.',
-      },
-      {
-        num: '04',
-        title: 'Autonomía y seguimiento',
-        desc: 'Ejecuto las tareas de forma independiente y te mantengo al tanto con informes periódicos para tu total tranquilidad.',
-      },
+      { num: "01", title: "Cuéntame qué necesitas", desc: "Envíame un mensaje desde el formulario o por correo, con las tareas solicitadas y los posibles plazos." },
+      { num: "02", title: "Reviso tu solicitud", desc: "Valoro la información disponible y te pido más datos cuando sea necesario." },
+      { num: "03", title: "Recibes un presupuesto escrito", desc: "Detallo las tareas, los plazos, el precio y las condiciones para que puedas decidir." },
+      { num: "04", title: "Empezamos a trabajar", desc: "Una vez aceptado el presupuesto y cumplidas las condiciones acordadas, comienzo las tareas previstas." },
     ],
   },
   contactSection: {
     tag: 'CONTACTO',
-    title: 'Hablemos de tus necesidades operativas',
-    subtitle: 'Describe tu solicitud en el formulario. Te responderé por escrito, sin necesidad de llamada previa.',
+    title: "Cuéntame qué necesitas",
+    subtitle: "¿Quieres delegar una tarea, traducir un texto o preparar una comunicación profesional? Escríbeme: no es obligatorio hacer una llamada.",
     form: {
       name: 'Nombre *',
       surname: 'Apellidos *',
@@ -465,7 +440,7 @@ export const esLocale: TranslationDictionary = {
       preferredLanguage: 'Idioma de comunicación preferido',
       message: 'Describe tu actividad y tus necesidades actuales *',
       gdpr: 'Confirmo que he leído la política de privacidad sobre el tratamiento de mis datos personales (RGPD).',
-      submit: 'Enviar mensaje',
+      submit: "Enviar solicitud",
       sending: 'Enviando mensaje...',
       successTitle: 'Solicitud aceptada por el servicio de envío',
       successDesc: 'El servicio de envío ha aceptado la solicitud; todavía no se ha confirmado su entrega final a mi buzón.',
