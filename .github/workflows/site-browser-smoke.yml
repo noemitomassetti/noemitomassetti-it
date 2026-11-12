@@ -292,8 +292,23 @@ jobs:
                   const heading=await page.locator('main h1').count();
                   if(heading!==1 || visible.length<700) throw Error('Reader missing content '+route);
                   if(await page.locator('html').getAttribute('lang')!==locale) throw Error('Reader lang incorrect '+route);
-                  if(await page.locator('main iframe[title]').count()!==1) throw Error('Accessible work-sample iframe missing '+route);
-                  const src=await page.locator('main iframe').getAttribute('src');
+                  // DOC 11 now presents the complete customer-care work in three accessible
+                  // articles rather than hiding or duplicating the email drafts inside an iframe.
+                  let src;
+                  if(id==='11') {
+                    if(await page.locator('main article').count()!==3)
+                      throw Error('Three full customer-care samples missing '+route);
+                    const content=await page.locator('main').last().innerText();
+                    for(const ticket of ['CC-101','CC-102','CC-103']) {
+                      if(!content.includes(ticket)) throw Error('Missing complete customer reply '+ticket+' '+route);
+                    }
+                    const workLink=page.locator('main a[href^="/portfolio-documenti/doc-11-"]');
+                    if(await workLink.count()!==1) throw Error('Original document link missing '+route);
+                    src=await workLink.getAttribute('href');
+                  } else {
+                    if(await page.locator('main iframe[title]').count()!==1) throw Error('Accessible work-sample iframe missing '+route);
+                    src=await page.locator('main iframe').getAttribute('src');
+                  }
                   if(!src?.startsWith('/portfolio-documenti/doc-'+id+'-')) throw Error('Incorrect original for '+route+': '+src);
                   if(!checkedOriginals.has(src)) {
                     const asset=await page.request.get('http://127.0.0.1:4173'+src);
