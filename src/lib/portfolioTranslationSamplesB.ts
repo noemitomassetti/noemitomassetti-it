@@ -214,8 +214,8 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
       "output": {
         "it": "Email ES → IT completa, utilizzabile come dimostrazione di comunicazione postvendita.",
         "en": "Complete Italian activation email example.",
-        "fr": "Courriel italien complet.",
-        "es": "Correo italiano completo."
+        "fr": "Courriel italien complet présentant les étapes d’activation et les limites des autorisations.",
+        "es": "Correo completo en italiano con instrucciones de activación y aclaraciones sobre los permisos."
       }
     }
 ];
