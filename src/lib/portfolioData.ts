@@ -1251,13 +1251,13 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
     "category": "backoffice",
     "title": {
       "it": "Assistenza clienti scritta: tre richieste in italiano",
-      "en": "Italian written customer care: three real-world scenarios",
+      "en": "Italian customer email drafts: three fictional cases",
       "fr": "Relation client écrite en italien : trois situations",
       "es": "Atención escrita en italiano: tres situaciones"
     },
     "subtitle": {
-      "it": "Classificazione delle richieste, bozze di risposta e casi da inoltrare",
-      "en": "Ticket triage, approved replies and escalation rules",
+      "it": "Tre email simulate, tre risposte complete e un registro delle attività",
+      "en": "Three complete Italian draft replies and a case log",
       "fr": "Tri des demandes, réponses et règles de validation",
       "es": "Clasificación, respuestas y criterios de escalado"
     },
@@ -1268,7 +1268,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Tienda online ficticia: consultas de clientes italianos sobre stock, pedidos y entregas."
     },
     "startingMaterial": {
-      "it": "Tre email simulate, catalogo approvato e procedura di rinvio delle domande non risolvibili.",
+      "it": "Tre richieste simulate e riferimenti di articolo e ordine; disponibilità e data di consegna non sono confermate.",
       "en": "Three synthetic customer messages, approved product details and escalation instructions.",
       "fr": "Trois e-mails fictifs, informations approuvées et consignes d’escalade.",
       "es": "Tres correos ficticios, información aprobada y reglas de consulta."
@@ -1308,105 +1308,105 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       ]
     },
     "deliverable": {
-      "it": "Registro delle richieste, modelli email e indicazioni sui casi da sottoporre al responsabile; documento 11.",
-      "en": "Italian ticket tracker, reply template and escalation matrix; sample document 11.",
-      "fr": "Tableau de tickets, réponse italienne et procédure d’escalade ; document 11.",
-      "es": "Registro de tickets, respuesta en italiano y criterios de escalado; documento 11."
+      "it": "Tre email complete da approvare, un registro con tre pratiche e le verifiche richieste; documento 11.",
+      "en": "Three full unsent Italian customer emails, case log and approval checklist; document 11.",
+      "fr": "Trois courriels italiens complets non envoyés, registre et vérifications ; document 11.",
+      "es": "Tres correos completos en italiano sin enviar, registro y controles; documento 11."
     },
     "tableData": {
       "headers": {
-        "it": [
-          "Ticket",
-          "Richiesta",
-          "Risposta operativa"
-        ],
-        "en": [
-          "Ticket",
-          "Customer question",
-          "Operational response"
-        ],
-        "fr": [
-          "Ticket",
-          "Demande",
-          "Réponse opérationnelle"
-        ],
-        "es": [
-          "Ticket",
-          "Consulta",
-          "Respuesta operativa"
-        ]
+            "it": [
+                  "Pratica",
+                  "Richiesta simulata",
+                  "Passaggio della risposta preparata"
+            ],
+            "en": [
+                  "Case",
+                  "Fictional customer enquiry",
+                  "Summary of the Italian draft reply"
+            ],
+            "fr": [
+                  "Dossier",
+                  "Demande fictive",
+                  "Résumé du courriel rédigé en italien"
+            ],
+            "es": [
+                  "Caso",
+                  "Consulta ficticia",
+                  "Resumen de la respuesta italiana"
+            ]
       },
       "rows": {
-        "it": [
-          [
-            "CC-101",
-            "Disponibilità prodotto",
-            "Controllare il catalogo approvato"
-          ],
-          [
-            "CC-102",
-            "Consegna non confermata",
-            "Richiedere conferma al referente"
-          ],
-          [
-            "CC-103",
-            "Informazioni di fatturazione",
-            "Inoltrare al reparto competente"
-          ]
-        ],
-        "en": [
-          [
-            "CC-101",
-            "Product availability",
-            "Check approved product list"
-          ],
-          [
-            "CC-102",
-            "Unconfirmed delivery",
-            "Request authorised status update"
-          ],
-          [
-            "CC-103",
-            "Invoicing question",
-            "Refer to responsible team"
-          ]
-        ],
-        "fr": [
-          [
-            "CC-101",
-            "Disponibilité du produit",
-            "Vérifier le catalogue validé"
-          ],
-          [
-            "CC-102",
-            "Livraison non confirmée",
-            "Consulter le responsable"
-          ],
-          [
-            "CC-103",
-            "Question de facturation",
-            "Transmettre au service compétent"
-          ]
-        ],
-        "es": [
-          [
-            "CC-101",
-            "Disponibilidad del producto",
-            "Consultar catálogo aprobado"
-          ],
-          [
-            "CC-102",
-            "Entrega sin confirmar",
-            "Solicitar estado autorizado"
-          ],
-          [
-            "CC-103",
-            "Pregunta sobre facturación",
-            "Derivar al equipo responsable"
-          ]
-        ]
+            "it": [
+                  [
+                        "CC-101",
+                        "Disponibilità del quaderno QA-120",
+                        "«Stiamo verificando sia la disponibilità sia la possibilità di ritirarlo in negozio.»"
+                  ],
+                  [
+                        "CC-102",
+                        "Consegna dell'ordine OR-204",
+                        "«Al momento non abbiamo una data di consegna confermata.»"
+                  ],
+                  [
+                        "CC-103",
+                        "Chiarimento su una fattura",
+                        "«La sua richiesta richiede una verifica da parte dell'ufficio competente.»"
+                  ]
+            ],
+            "en": [
+                  [
+                        "CC-101",
+                        "Stock and collection",
+                        "The reply explains that stock and collection options still need confirmation."
+                  ],
+                  [
+                        "CC-102",
+                        "Delivery date",
+                        "The reply does not invent a delivery date; an update requires verification."
+                  ],
+                  [
+                        "CC-103",
+                        "Invoice query",
+                        "The reply refers the question to authorised administrative staff."
+                  ]
+            ],
+            "fr": [
+                  [
+                        "CC-101",
+                        "Disponibilité et retrait",
+                        "La réponse indique que la disponibilité et le retrait doivent être confirmés."
+                  ],
+                  [
+                        "CC-102",
+                        "Date de livraison",
+                        "La réponse n'invente aucun délai et prévoit une vérification."
+                  ],
+                  [
+                        "CC-103",
+                        "Question sur une facture",
+                        "La réponse transmet la demande au service administratif compétent."
+                  ]
+            ],
+            "es": [
+                  [
+                        "CC-101",
+                        "Disponibilidad y recogida",
+                        "La respuesta indica que deben comprobarse la disponibilidad y la recogida."
+                  ],
+                  [
+                        "CC-102",
+                        "Fecha de entrega",
+                        "La respuesta no inventa fechas y exige una comprobación."
+                  ],
+                  [
+                        "CC-103",
+                        "Consulta sobre una factura",
+                        "La respuesta deriva la solicitud al departamento autorizado."
+                  ]
+            ]
       }
-    }
+}
   ,
     disclaimer: DEMO_DISCLAIMER
   },
