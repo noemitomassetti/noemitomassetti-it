@@ -26,10 +26,10 @@ export interface TranslationDeepCase {
 
 /** Demonstrations only: all companies, products, dates and correspondence are invented. */
 export const TRANSLATION_SAMPLE_NOTICE: Localised = {
-  it: "Esercizio professionale originale con brand, testi e dati fittizi: non è un incarico commissionato da un cliente né una testimonianza. Il confronto illustra scelte traduttive e non certifica una revisione esterna.",
-  en: "An original professional demonstration using fictional brands, texts and details: not a commissioned client project or testimonial. The comparison illustrates translation decisions; it does not certify external proofreading.",
-  fr: "Démonstration professionnelle originale à partir de marques, de textes et de données fictifs : ni mission réelle ni témoignage. La comparaison illustre les choix de traduction et n’atteste pas une révision externe.",
-  es: "Muestra profesional original con marcas, textos y datos ficticios: no es un encargo real ni un testimonio. La comparación explica decisiones traductoras y no acredita una revisión externa."
+  it: "Campione di traduzione originale preparato per questo portfolio, con testo di partenza, nomi e dati creati per l’esempio. Non proviene da un incarico commissionato. Le note illustrano le scelte linguistiche, senza attestare una revisione esterna.",
+  en: "An original translation sample created for this portfolio, using a source text, names and details written for the example. It is not a client commission. The notes explain translation decisions; they do not imply independent proofreading.",
+  fr: "Exemple de traduction original créé pour ce portfolio, à partir d’un texte source, de noms et de données inventés pour l’occasion. Il ne s’agit pas d’une commande de client. Les notes expliquent les choix linguistiques, sans attester une relecture indépendante.",
+  es: "Muestra de traducción original creada para este porfolio, con un texto de partida, nombres y datos inventados para el ejemplo. No procede de un encargo de un cliente. Las notas explican las decisiones lingüísticas, sin implicar una revisión externa."
 };
 
 export const DIRECTION_LABELS: Record<PublicTranslationDirection, string> = {
