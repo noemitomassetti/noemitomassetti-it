@@ -4,8 +4,8 @@ export const enLocale: TranslationDictionary = {
   lang: 'en',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Italian Translation & Localisation for International Businesses | Noemi Tomassetti',
-    homeDesc: 'Communicate naturally with your Italian audience: translation, localisation, website and social content, and customer correspondence. Written customer care, multilingual virtual assistance and back-office support are also available.',
+    homeTitle: "Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti",
+    homeDesc: "Italian-language communication and localisation for international professionals, plus written customer support, virtual assistance and back-office services. Translation IT ↔ EN/FR/ES.",
     servicesTitle: 'Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti',
     servicesDesc: 'Italian-market localisation, professional translation, website and landing-page copy, social content and customer emails. The full range of multilingual virtual-assistance and back-office services is also available.',
     noetomTitle: 'NoeTom | Internal operations project',
@@ -36,14 +36,14 @@ export const enLocale: TranslationDictionary = {
     badge: 'MULTILINGUAL VIRTUAL ASSISTANT',
     titleLine1: 'Italian-language communication, translation and localisation',
     titleHighlight: 'for businesses working with Italy',
-    subtitle: "Communicate clearly and naturally with customers in Italy. I translate, revise and adapt website and landing-page copy, emails, newsletters, social content and other business communications. Written customer care and my full range of virtual-assistance services are also available.",
-    headline: 'The right words for your Italian audience.',
-    desc1: 'As a native Italian speaker with specialist translation training, I help international professionals communicate appropriately with people in Italy—not simply translate words from one language to another.',
-    desc2: 'Whether you need an Italian landing page, carefully worded customer emails or consistent product information, I focus on clarity, tone and context. I also provide the same back-office, secretarial and customer-support services offered to my Italian clients.',
+    subtitle: "Italian translation and localisation, customer correspondence, website content and multilingual virtual assistance for professionals working with Italy.",
+    headline: "Natural, professional communication for your Italian audience",
+    desc1: "I help international professionals and small businesses communicate clearly in Italian, with the right tone, terminology and attention to professional context.",
+    desc2: "My work also covers agreed secretarial tasks, back-office activities, written customer support and professional translation between Italian and English, French or Spanish.",
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
-      'For international clients, I focus on communicating with Italy: translation and localisation into Italian, customer correspondence, websites, landing pages, newsletters and social content. I translate both from Italian into English, French and Spanish and from these languages into Italian. I also offer agreed operational support.',
+      "Italian-market communication and localisation, with practical operational support and a clearly agreed scope for each assignment.",
     ctaServices: 'Explore services',
     ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
@@ -55,9 +55,9 @@ export const enLocale: TranslationDictionary = {
   },
   trust: {
     tagline: 'OPERATIONAL CLARITY',
-    headline: 'You do not have to carry every operational burden alone.',
+    headline: "Practical support for the work that demands your attention",
     paragraph:
-      'Running an independent business means balancing your core work with email, scheduling, customer correspondence, documentation and international communication. I provide discreet, well-organised support for clearly agreed tasks, so you can focus on your clients and priorities.',
+      "Running a business involves more than your core work: emails, appointments, customer enquiries, documents and written communications all need attention. I can take on clearly defined parts of that workload, with responsibilities, timings and working arrangements agreed in advance.",
     pillars: [
       {
         title: 'Experienced and Independent',
@@ -79,17 +79,17 @@ export const enLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'WHAT I DO',
-    title: 'Italian Communication, Translation and Virtual Assistance',
+    title: "How I can help",
     subtitle:
-      'Italian-language communication is my main focus for international businesses. Translation, localisation and content editing come first, but you can also request any of my virtual-assistance services. Each written quote specifies the agreed tasks and deliverables.',
+      "I provide language services and practical virtual assistance. Each assignment is agreed around the tasks, material and deliverables actually required; the full list is not automatically included in any quote.",
     viewAllCta: 'View Full Service Details',
     categories: [
       {
         id: 'virtual-assistance',
         title: 'Virtual Secretarial Support & Operational Back Office',
-        subtitle: 'Reliable organisation, order handling and written customer support.',
+        subtitle: "Practical support with everyday secretarial and back-office tasks.",
         description:
-          "Depending on the brief, I can support inbox and calendar organisation, data entry, order updates, approved price lists, quotations based on your instructions and written customer communications. Specific tasks are agreed before work begins. No telemarketing, customer acquisition, bookkeeping, invoicing or business administration.",
+          "I can organise correspondence, calendars and documents, update records, handle operational orders and prepare quotes using approved information and instructions. Scope and approvals are agreed in advance. Accounting, invoicing, company administration and sales prospecting are excluded.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
@@ -103,9 +103,9 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'translation-localization',
         title: 'IT ↔ EN/FR/ES Translation and Italian Localisation',
-        subtitle: 'Professional translation between Italian and English, French and Spanish; Italian-market localisation is a core focus.',
+        subtitle: "The right language, tone and context for your audience.",
         description:
-          "I translate from Italian into English, French and Spanish and from each of these languages into Italian. Depending on the assignment, the work may involve translation, Italian-market localisation, linguistic revision or support with multilingual correspondence. Language pairs, source materials and deliverables are agreed in the written quote.",
+          "I translate between Italian and English, French or Spanish in both directions, assessing each text before accepting an assignment. For organisations communicating with Italy, I pay particular attention to natural Italian wording, appropriate tone and the intended readership. Translation, localisation, revision and correspondence are scoped separately in the quote.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
@@ -119,9 +119,9 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'content-writing',
         title: 'Professional Content Writing & Editing',
-        subtitle: 'Clear, appropriate wording for professional audiences.',
+        subtitle: "Clear, natural writing that fits your message.",
         description:
-          'I can write or edit website content, customer correspondence, newsletters and informational material, including existing or AI-assisted drafts. The brief determines the audience, language, editorial work and agreed deliverables.',
+          "I can draft or revise business correspondence, newsletters, service descriptions, articles and informational materials. My editorial work focuses on structure, clarity, tone and consistency, including the revision of existing or AI-generated drafts.",
         iconName: 'PenTool',
         items: [
           'Website and landing-page copy review',
@@ -135,9 +135,9 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'online-research',
         title: 'Informational Research Support',
-        subtitle: 'Structured intelligence to inform your strategic decisions.',
+        subtitle: "Useful information, carefully selected and organised.",
         description:
-          "Depending on the assignment, research may cover publicly available information, source checks, comparisons of suppliers or digital tools, and structured summaries for agreed projects. No sales-contact sourcing, customer acquisition or prospecting.",
+          "I gather publicly available information, compare sources, tools and suppliers, and prepare concise reports for established projects or operational needs. I do not source sales leads, compile prospect lists or carry out client-acquisition activity.",
         iconName: 'Search',
         items: [
           'Competitor and public pricing comparisons for existing projects',
@@ -151,9 +151,9 @@ export const enLocale: TranslationDictionary = {
       {
         id: 'digital-support',
         title: 'Digital Support',
-        subtitle: 'Practical organisation of everyday digital tools.',
+        subtitle: "Documents and everyday tools that are easier to use.",
         description:
-          'Support may include organising shared files, configuring selected everyday digital tools at a basic level and documenting straightforward workflows. Access permissions, tools and tasks are agreed in advance.',
+          "I can organise shared folders and digital records, help with basic settings in tools already in use and prepare straightforward operating procedures. Software development and specialist IT support are not included.",
         iconName: 'Cpu',
         items: [
           'Organising Google Workspace and shared cloud folders',
@@ -164,7 +164,7 @@ export const enLocale: TranslationDictionary = {
           'Basic digital assistance & setup support',
         ],
       },
-      { id: 'web-landing', title: 'Website & Landing Page Content', subtitle: 'Clearer online messaging and content structure.', description: 'For existing websites, the agreed editorial work may include copy review, language adaptation and the structure of headings, FAQs and page content. Website development, hosting and technical maintenance are outside this service.', iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian-market localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
+      { id: 'web-landing', title: 'Website & Landing Page Content', subtitle: "Clearer website copy for the audience you want to reach.", description: "For existing websites, I revise and organise copy, headings, FAQs and calls to action, and localise content for readers in Italy. This is an editorial service: website development, hosting and technical maintenance are excluded.", iconName: 'Layout', items: ['Homepage and service-page copy editing', 'Italian-market localisation of web content', 'Headings, FAQs and calls to action', 'Terminology and consistency checks', 'CMS-ready copy handover', 'Multilingual content revision support'] },
     ],
   },
   multilingualAdvantage: {
@@ -355,9 +355,11 @@ export const enLocale: TranslationDictionary = {
     title: 'Hello, I am Noemi Tomassetti.',
     lead: 'Virtual Assistant, translator, and operational support partner for professionals and small businesses.',
     bioParagraphs: [
-      'I bring more than twenty years of experience across customer care, back-office work and organisational support, together with a strong academic background in languages.',
-      'I hold a three-year degree in Language Mediation from the Università degli Studi di Macerata, awarded 110/110 e lode (highest honours in the Italian grading system). I subsequently completed an Italian first-level university master’s programme in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona (1,500 hours, 60 CFU/ECTS credits), passing the final assessment. The programme covered literary, legal, economic, technological and scientific texts.',
-      'Italian is my native language, and I provide professional multilingual support in four languages: Italian, English, French, and Spanish, ensuring precision, punctuality, and confidentiality.',
+      "I am a multilingual virtual assistant with specialist language training and over twenty years of professional experience across different roles and sectors.",
+      "My work experience includes customer service, back-office operations, order handling, organisation and practical operational support.",
+      "I hold a degree in Language Mediation from the Università degli Studi di Macerata, awarded 110 e lode (the highest Italian honours), and completed further studies in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona.",
+      "Italian is my native language. I also work with English, French and Spanish, offering translation in both directions between Italian and each of these languages, language revision and agreed multilingual correspondence.",
+      "Today I support professionals and small businesses with everyday operations and professional communication, particularly when they need to engage with people in Italy.",
     ],
     credentials: [
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
