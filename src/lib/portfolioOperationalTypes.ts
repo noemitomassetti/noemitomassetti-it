@@ -28,8 +28,8 @@ export interface OperationalDeepCase {
 
 /** Not a client testimonial or real project. No customer records are disclosed. */
 export const OPERATIONAL_NOTICE: Localised = {
-  it: "Caso dimostrativo originale con situazioni, aziende, corrispondenza e dati inventati: non documenta un incarico realmente svolto. I materiali dei clienti non vengono pubblicati senza autorizzazione; riservatezza e minimizzazione dei dati restano centrali nel lavoro.",
-  en: "An original fictional work sample, not a client commission or testimonial. Names, emails, orders and other details are invented. Client materials are not published without permission; confidentiality and data minimisation are essential.",
-  fr: "Exemple original fictif, et non mission client ou témoignage. Entreprises, messages et données sont inventés. Aucun document client n’est publié sans autorisation ; la confidentialité et la minimisation des données sont essentielles.",
-  es: "Ejemplo original ficticio, no un encargo real ni un testimonio. Empresas, correos y datos son inventados. Los materiales de clientes no se publican sin autorización; la confidencialidad y la minimización de datos son esenciales."
+  it: "Elaborato operativo originale preparato per il portfolio, con situazione, azienda e dati inventati per l’esempio. Non documenta un incarico commissionato. Mostra materiali e procedure utilizzabili come modello di lavoro.",
+  en: "An original operational work sample prepared for this portfolio. The scenario, company, messages and details are invented; it is not a client commission. The documents illustrate how the agreed work could be organised.",
+  fr: "Exemple de travail opérationnel original préparé pour ce portfolio. La situation, l’entreprise, les messages et les données sont inventés ; il ne s’agit pas d’une commande de client. Les documents montrent une méthode de travail possible.",
+  es: "Muestra original de trabajo operativo preparada para este porfolio. La situación, la empresa, los mensajes y los datos son inventados; no procede de un encargo de un cliente. Los documentos ilustran una forma de organizar el trabajo."
 };
