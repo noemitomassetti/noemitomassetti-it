@@ -81,7 +81,7 @@ export const enLocale: TranslationDictionary = {
     tag: 'WHAT I DO',
     title: "How I can help",
     subtitle:
-      "I provide language services and practical virtual assistance. Each assignment is agreed around the tasks, material and deliverables actually required; the full list is not automatically included in any quote.",
+      "I provide language services and practical virtual assistance. Each assignment is agreed around the tasks, material and deliverables actually required; the full list is not automatically included in any quote. The written quote specifies exactly what is included.",
     viewAllCta: 'View Full Service Details',
     categories: [
       {
