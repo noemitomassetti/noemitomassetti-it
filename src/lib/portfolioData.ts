@@ -62,7 +62,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Localización EN → IT: web de interiorismo"
     },
     "subtitle": {
-      "it": "Testi web, call to action e note traduttologiche per un pubblico italiano",
+      "it": "Titoli, descrizioni e inviti all’azione: esempi di adattamento per lettori italiani",
       "en": "Original English-to-Italian website copy samples with translation notes",
       "fr": "Exemples concrets de textes web anglais et de leur adaptation italienne",
       "es": "Ejemplos concretos de textos web en inglés adaptados al italiano"
@@ -74,7 +74,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Situación de trabajo: un estudio internacional de interiorismo necesita textos para clientes residentes en Italia."
     },
     "startingMaterial": {
-      "it": "Headline, presentazione del servizio e invito all’azione redatti originariamente in inglese.",
+      "it": "Titolo, descrizione del servizio e invito all’azione preparati in inglese per la simulazione.",
       "en": "An English headline, service introduction and call to action requiring Italian adaptation.",
       "fr": "Une accroche, une présentation de service et un appel à l’action rédigés en anglais.",
       "es": "Un titular, una presentación del servicio y una llamada a la acción escritos en inglés."
@@ -86,7 +86,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Crear un mensaje natural en italiano, fiel al contenido y sin promesas inventadas."
     },
     "approach": {
-      "it": "Analisi del testo sorgente; scelta terminologica nel settore arredo; adattamento di sintassi, tono e call to action; revisione finale.",
+      "it": "Analisi del testo originale, scelta della terminologia dell’arredamento e revisione di sintassi, tono e inviti all’azione.",
       "en": "Review source meaning, interior-design vocabulary, tone and calls to action; final language quality control.",
       "fr": "Analyse du sens, des termes de l’aménagement, du ton et de l’appel à l’action ; relecture finale.",
       "es": "Análisis del significado, la terminología, el tono y la llamada a la acción; revisión final."
@@ -95,7 +95,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "it": [
         "«Home» diventa «casa», non «alloggio», per mantenere il tono personale.",
         "«Designed around» si rende con «pensata per», eliminando la struttura inglese.",
-        "La call to action è «Richiedi informazioni», non una promessa commerciale non autorizzata."
+        "L’invito all’azione resta una richiesta di informazioni, senza aggiungere promesse assenti nel testo originale."
       ],
       "en": [
         "Use «casa» to preserve a warm, personal register.",
@@ -114,7 +114,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       ]
     },
     "deliverable": {
-      "it": "Mini-dossier EN → IT con headline, descrizione, CTA e note linguistiche. Esempio consultabile nel documento 01.",
+      "it": "Esempio EN → IT con titolo, descrizione, invito all’azione e note linguistiche; documento 01.",
       "en": "English-to-Italian copy deck with headline, introduction, CTA and review notes, illustrated in document 01.",
       "fr": "Mini-dossier EN → IT : accroche, description, appel à l’action et notes ; document 01.",
       "es": "Muestra EN → IT: titular, descripción, llamada a la acción y notas; documento 01."
@@ -149,19 +149,19 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Traducción especializada económica y comercial (EN → IT)",
     },
     subtitle: {
-      it: "Strategie di marketing digitale, metriche di performance e pricing models",
+      it: "Terminologia economico-commerciale, indicatori di risultato e modelli di prezzo",
       en: "Digital marketing strategies, performance metrics, and pricing models",
       fr: "Stratégies de marketing digital, métriques de performance et modèles de tarification",
       es: "Estrategias de marketing digital, métricas de rendimiento y modelos de precios",
     },
     brief: {
-      it: "Traduzione e adattamento in italiano di un manuale operativo sulle strategie di acquisizione clienti e modelli di revenue digitale.",
+      it: "Traduzione in italiano di un estratto dimostrativo che descrive indicatori commerciali e modelli di ricavo. L’esempio riguarda la terminologia, non un servizio di acquisizione clienti.",
       en: "Italian translation and terminology harmonization of a strategic manual on digital customer acquisition and revenue models.",
       fr: "Traduction en italien d'un guide opérationnel sur l'acquisition client et les modèles de revenus numériques.",
       es: "Traducción al italiano de un manual estratégico sobre adquisición de clientes y modelos de negocio digital.",
     },
     startingMaterial: {
-      it: "Testo di partenza in lingua inglese focalizzato su funnel di vendita, Customer Lifetime Value (LTV), Return on Ad Spend (ROAS) e retention.",
+      it: "Testo inglese creato per la simulazione, con riferimenti a percorsi di vendita, valore del cliente nel tempo (LTV), rendimento della spesa pubblicitaria (ROAS) e fidelizzazione.",
       en: "English source text focusing on conversion funnels, Customer Lifetime Value, ROAS, and cohort retention.",
       fr: "Texte source en anglais portant sur les tunnels de conversion, la valeur vie client (LTV) et la rétention.",
       es: "Texto de origen en inglés centrado en embudos de conversión, Customer Lifetime Value y retención de cohortes.",
@@ -173,15 +173,15 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Asegurar la precisión conceptual entre la terminología financiera anglosajona y su redacción en italiano.",
     },
     approach: {
-      it: "Costruzione di un glossario preventivo dei termini economici. Mantenimento delle sigle contabili ampiamente riconosciute con definizione al primo utilizzo.",
+      it: "Glossario dei termini economico-commerciali e controllo delle sigle del settore, spiegate quando necessario.",
       en: "Development of a preliminary economic termbase. Standard abbreviations preserved with context-appropriate glosses on first mention.",
       fr: "Établissement préalable d'un glossaire économique avec harmonisation des sigles financiers.",
       es: "Elaboración de un glosario económico previo y desambiguación de métricas comerciales clave.",
     },
     keyDecisions: {
       it: [
-        "Traduzione di 'Customer Acquisition Cost' come 'Costo di acquisizione clienti (CAC)' con esplicitazione della formula.",
-        "Scelta di 'Tasso di abbandono' per 'Churn rate' nel corpo descrittivo, lasciando la sigla tra parentesi per immediatezza professionale.",
+        "«Customer Acquisition Cost» diventa «costo di acquisizione del cliente (CAC)»: il termine viene spiegato nel contesto, senza offrire servizi di acquisizione.",
+        "«Churn rate» è spiegato come «tasso di abbandono»; la terminologia resta coerente nell’intero estratto.",
         "Distinzione fra 'revenue' (ricavi, oppure fatturato secondo il contesto) e 'profit' (utile); margine lordo, risultato operativo e utile netto richiedono rese distinte.",
       ],
       en: [
@@ -229,25 +229,25 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     category: "translation",
     masterField: "scientifico",
     title: {
-      it: "Traduzione scientifica: Comunicazione clinica e priorità del paziente (EN → IT)",
+      it: "Traduzione scientifica EN → IT: comunicazione tra professionisti sanitari e pazienti",
       en: "Scientific Translation: Clinical Communication & Patient Priorities (EN → IT)",
       fr: "Traduction scientifique : Communication clinique et priorités du patient (EN → IT)",
       es: "Traducción científica: Comunicación clínica y prioridades del paciente (EN → IT)",
     },
     subtitle: {
-      it: "Linee guida per la comunicazione sanitaria tra équipe medica, pazienti e caregiver",
+      it: "Estratto dimostrativo di comunicazione sanitaria, con attenzione a terminologia e chiarezza",
       en: "Healthcare communication guidelines for multidisciplinary clinical teams and caregivers",
       fr: "Guides de communication médicale pour équipes soignantes et proches aidants",
       es: "Pautas de comunicación sanitaria para equipos médicos, pacientes y cuidadores",
     },
     brief: {
-      it: "Adattamento divulgativo-clinico di protocolli di dialogo medico-paziente nell'ambito della gestione di patologie croniche multiple.",
+      it: "Traduzione di un testo dimostrativo in inglese sul dialogo tra professionisti sanitari e pazienti; non è un protocollo medico applicabile nella pratica.",
       en: "Clinical-educational translation of communication protocols for managing multiple chronic conditions.",
       fr: "Traduction de protocoles de dialogue médecin-patient dans le suivi des affections chroniques multiples.",
       es: "Traducción de protocolos de diálogo clínico en el abordaje de enfermedades crónicas múltiples.",
     },
     startingMaterial: {
-      it: "Linee guida in lingua inglese strutturate su domande aperte, ponderazione del rischio terapeutico e allineamento degli obiettivi di cura.",
+      it: "Brano inglese preparato per la simulazione, con domande aperte e riferimenti agli obiettivi di cura.",
       en: "English clinical source text outlining structured questioning, therapeutic risk weighting, and care goal alignment.",
       fr: "Texte clinique en anglais sur l'écoute active, l'évaluation des risques et la décision partagée.",
       es: "Pautas en inglés sobre escucha activa, balance de riesgos terapéuticos y objetivos de bienestar.",
@@ -259,7 +259,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Exactitud en la terminología médica y farmacológica junto con un lenguaje empático y transparente.",
     },
     approach: {
-      it: "Verifica terminologica incrociata su banche dati della farmacovigilanza e dell'Istituto Superiore di Sanità. Rigoroso controllo di unità di misura e negazioni.",
+      it: "Analisi della terminologia e controllo del significato di istruzioni, negazioni e riferimenti ai percorsi di cura. L’estratto non è stato validato per uso clinico.",
       en: "Cross-referencing against official pharmacovigilance databases and Italian healthcare glossaries. Strict check of dosage units and negations.",
       fr: "Validation terminologique sur les bases de données institutionnelles de santé publique et contrôle scrupuleux des dosages.",
       es: "Cotejo terminológico con fuentes médicas oficiales y comprobación exhaustiva de unidades de medida y condicionales.",
@@ -268,7 +268,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       it: [
         "Traduzione di 'Care goal alignment' come 'Condivisione e allineamento degli obiettivi di cura'.",
         "Controllo stringente delle negazioni ('non interrompere senza consulto medico') per escludere qualsiasi ambiguità prescrittiva.",
-        "Inserito disclaimer esplicito sulla natura dimostrativa e non prescrittiva della traduzione.",
+        "È chiarito che il testo è un esempio linguistico, privo di valore prescrittivo e non destinato all’uso medico.",
       ],
       en: [
         "Rendered 'care goal alignment' as a clear, shared clinical milestone rather than a bureaucratic formula.",
@@ -315,37 +315,37 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     category: "translation",
     masterField: "tecnologico",
     title: {
-      it: "Traduzione tecnologica e localizzazione software / UI (EN → IT)",
+      it: "Traduzione tecnica e testi per interfacce digitali (EN → IT)",
       en: "Technological Translation and Software/UI Localisation (EN → IT)",
       fr: "Traduction technologique et localisation de logiciels / UI (EN → IT)",
       es: "Traducción tecnológica y localización de software / UI (EN → IT)",
     },
     subtitle: {
-      it: "Documentazione API cloud e microcopy per interfaccia utente di un'applicazione web",
+      it: "Documentazione tecnica e brevi messaggi di un’interfaccia web",
       en: "Cloud API documentation and user interface microcopy for a web platform",
       fr: "Documentation d'API cloud et micro-textes d'interface utilisateur pour application web",
       es: "Documentación de API en la nube y microcopy de interfaz para plataforma web",
     },
     brief: {
-      it: "Dimostrazione della differenza cruciale tra traduzione tecnica descrittiva e localizzazione software orientata all'usabilità e ai vincoli di spazio.",
+      it: "Confronto tra traduzione della documentazione tecnica e adattamento di pulsanti e messaggi di un’interfaccia.",
       en: "Showcasing the critical distinction between technical documentation translation and space-constrained software UI localisation.",
       fr: "Démonstration de la distinction entre documentation technique et micro-textes d'interface soumis à des contraintes de pixels.",
       es: "Demostración de la diferencia entre traducción técnica de manuales y localización de botones y avisos de interfaz.",
     },
     startingMaterial: {
-      it: "Estratti di documentazione per sviluppatori (autenticazione OAuth e webhook) + stringhe UI di pulsanti, stati di caricamento e messaggi di errore.",
+      it: "Estratti inglesi di documentazione tecnica e testi brevi per pulsanti, caricamento e messaggi di errore.",
       en: "Excerpts from developer guides (OAuth and webhooks) coupled with UI strings (buttons, tooltips, validation errors).",
       fr: "Extraits de documentation technique (OAuth, webhooks) et chaînes d'interface (boutons, infobulles, erreurs).",
       es: "Fragmentos de documentación técnica de API y cadenas de texto de interfaz (botones, estados de error y avisos).",
     },
     objective: {
-      it: "Fornire istruzioni tecniche univoche per gli sviluppatori e testi brevi, immediati e grammaticalmente coerenti per l'utente finale.",
+      it: "Rendere chiari i passaggi tecnici e preparare testi brevi e coerenti per chi utilizza l’applicazione.",
       en: "Deliver unambiguous technical instructions for engineers and concise, intuitive microcopy that fits within tight UI containers.",
       fr: "Fournir des explications techniques sans équivoque pour les développeurs et des micro-textes clairs et concis.",
       es: "Ofrecer instrucciones técnicas exactas para desarrolladores y textos de interfaz breves y directos.",
     },
     approach: {
-      it: "Mantenimento dei parametri di codice (camelCase, variabili d'ambiente) invariati. Sintesi estrema per i pulsanti per evitare overflow su schermi mobile.",
+      it: "Conservazione dei nomi tecnici che non vanno tradotti; revisione delle etichette per mantenerle chiare e sufficientemente brevi.",
       en: "Code parameters, endpoints, and variables preserved verbatim. Radical brevity applied to UI buttons to prevent truncation on mobile viewports.",
       fr: "Préservation stricte des variables techniques et concision maximale pour les composants d'interface mobile.",
       es: "Conservación íntegra de parámetros y variables técnicas. Síntesis extrema en botones para evitar desbordamientos.",
@@ -354,7 +354,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       it: [
         "Differenziazione tra 'Deploy' (mantenuto nel gergo IT per sviluppatori) e 'Pubblica / Rilascia' (per utenti non tecnici).",
         "Resa di 'Discard unsaved changes?': 'Annullare le modifiche non salvate?' (stringa chiara in 37 caratteri).",
-        "Uniformazione dei verbi d'azione nei pulsanti all'infinito presente ('Salva', 'Invia', 'Elimina').",
+        "Uniformazione delle etichette dei pulsanti all’imperativo («Salva», «Invia», «Elimina»).",
       ],
       en: [
         "Contextual separation between developer-facing terms (deploy, webhook) and client-facing actions.",
@@ -401,7 +401,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     category: "translation",
     masterField: "giuridico",
     title: {
-      it: "Traduzione contrattuale: Accordo quadro di fornitura servizi (EN → IT)",
+      it: "Traduzione contrattuale EN → IT: clausole di un accordo di servizi",
       en: "Contractual Translation: Master Services Agreement Clauses (EN → IT)",
       fr: "Traduction contractuelle : Clauses de contrat cadre de prestations (EN → IT)",
       es: "Traducción contractual: Cláusulas de acuerdo marco de servicios (EN → IT)",
@@ -425,13 +425,13 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Contrato marco anglosajón con cláusulas de limitación de responsabilidad y ley aplicable.",
     },
     objective: {
-      it: "Mantenere inalterato il valore vincolante del testo senza creare false equivalenze tra istituti di common law e codice civile italiano.",
+      it: "Preservare il significato delle clausole e segnalare le espressioni che non hanno equivalenti diretti nel diritto italiano; il testo non sostituisce una verifica legale.",
       en: "Preserve the binding scope of obligations without fabricating false equivalences between common law and Italian civil law doctrines.",
       fr: "Transposer fidèlement les engagements juridiques sans déformer la portée des obligations.",
       es: "Reflejar fielmente la fuerza vinculante de las obligaciones sin generar falsas equivalencias doctrinales.",
     },
     approach: {
-      it: "Distinzione rigorosa tra doveri imperativi ('shall' = 'ha l'obbligo di / dovrà'), facoltà ('may' = 'ha la facoltà di / può') e condizioni essenziali. Nota informativa esplicita sui limiti del testo.",
+      it: "Analisi dell’uso di «shall» e «may», dei termini definiti e delle possibili ambiguità. Il documento è soltanto dimostrativo e non è una traduzione asseverata.",
       en: "Rigorous distinction between modal imperatives ('shall', 'may', 'must'). Clear notation explaining jurisdictional translation scope.",
       fr: "Rigueur terminologique absolue sur les obligations impératives et les facultés contractuelles.",
       es: "Tratamiento riguroso de las modalidades obligacionales ('deberá', 'podrá', 'está obligado a').",
@@ -439,7 +439,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     keyDecisions: {
       it: [
         "Traduzione di 'Indemnify and hold harmless' come 'manlevare e tenere indenne', formula consolidata nella prassi contrattuale italiana.",
-        "Mantenimento di 'Force Majeure' con esplicitazione delle cause tipizzate (eventi imprevedibili e straordinari al di fuori del controllo).",
+        "«Force majeure» viene esaminato in relazione alla clausola specifica, senza generalizzare gli effetti giuridici della formulazione.",
         "Inserimento del disclaimer professionale: Noemi non è traduttore giurato/asseverato; la traduzione contrattuale è a scopo di revisione e comprensione operativa.",
       ],
       en: [
@@ -486,37 +486,37 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 6,
     category: "translation",
     title: {
-      it: "Localizzazione UX e contenuti web (EN → IT)",
+      it: "Localizzazione EN → IT: testi di un percorso di registrazione",
       en: "UX and Website Copy Localisation (EN → IT)",
       fr: "Localisation UX et contenus web (EN → IT)",
       es: "Localización UX y contenidos web (EN → IT)",
     },
     subtitle: {
-      it: "Flusso di onboarding utente, form multi-step e messaggi di stato transazionali",
+      it: "Schermate di registrazione, moduli a più passaggi e messaggi di stato",
       en: "User onboarding flow, multi-step forms, and transactional status messages",
       fr: "Parcours d'accueil utilisateur, formulaires pas-à-pas et notifications d'état",
       es: "Flujo de registro y bienvenida, formularios por pasos y mensajes de estado",
     },
     brief: {
-      it: "Rendere un percorso di registrazione e primo utilizzo di un servizio digitale chiaro, rassicurante e piacevole per il pubblico italiano.",
+      it: "Rendere comprensibili in italiano le informazioni richieste durante la registrazione e il primo utilizzo di un servizio digitale.",
       en: "Refining a digital onboarding flow to make it intuitive, reassuring, and completely natural for Italian users.",
       fr: "Adapter un parcours d'onboarding digital pour le rendre fluide, clair et chaleureux pour le public italien.",
       es: "Adaptar los mensajes de bienvenida de una plataforma digital para mejorar su claridad para un público italiano.",
     },
     startingMaterial: {
-      it: "Flow di 4 schermate di onboarding in lingua inglese comprendente consensi opzionali, selezione preferenze e riepilogo account.",
+      it: "Quattro schermate dimostrative in inglese con preferenze, informazioni sul consenso e riepilogo dell’account.",
       en: "Four-step English onboarding flow including permissions, preferences configuration, and welcome prompt.",
       fr: "Parcours en quatre étapes en anglais avec sélection des préférences et confirmation.",
       es: "Flujo de cuatro pantallas en inglés que incluye permisos, preferencias y mensaje de bienvenida.",
     },
     objective: {
-      it: "Ridurre l'attrito cognitivo e i tassi di abbandono attraverso una microcopy sintetica, positiva e perfettamente contestualizzata.",
+      it: "Semplificare le istruzioni e mantenere coerenti etichette, messaggi e azioni, senza promettere risultati di conversione.",
       en: "Minimize cognitive friction and drop-off rates through concise, engaging, and context-aware microcopy.",
       fr: "Réduire les abandons d'inscription grâce à des micro-textes fluides, concis et rassurants.",
       es: "Disminuir la fricción del usuario mediante textos breves, amables y precisos.",
     },
     approach: {
-      it: "Riscrittura orientata all'utente: preferite spiegazioni sul beneficio ('Cosa puoi fare ora') rispetto a istruzioni tecniche.",
+      it: "Riscrittura delle istruzioni per renderle dirette, con verbi e terminologia uniformi tra le schermate.",
       en: "Benefit-led rewriting prioritising clear user value over dry technical instructions.",
       fr: "Rédaction axée sur les bénéfices concrets plutôt que sur des consignes techniques rigides.",
       es: "Redacción orientada a los beneficios del usuario en lugar de meras instrucciones funcionales.",
@@ -524,8 +524,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     keyDecisions: {
       it: [
         "Sostituzione di 'Get started' con 'Inizia ora' e di 'Skip for now' con 'Potrai farlo più tardi' per un tono più accogliente.",
-        "Esplicitazione dei vantaggi della privacy: 'I tuoi dati restano privati e non saranno mai condivisi con terze parti'.",
-        "Conformità con le linee guida WCAG su leggibilità ed etichette dei campi modulo.",
+        "Le informazioni sulla privacy devono corrispondere al trattamento dei dati realmente previsto; l’esempio non introduce garanzie non verificate.",
+        "Attenzione alla chiarezza delle etichette e dei messaggi; l’esempio non costituisce una certificazione di accessibilità.",
       ],
       en: [
         "Localized 'Get started' into encouraging Italian actions ('Inizia ora', 'Configura il tuo spazio').",
@@ -571,19 +571,19 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 7,
     category: "research",
     title: {
-      it: "Ricerca fornitori: Analisi comparativa per packaging ecologico e logistica",
+      it: "Ricerca informativa: confronto tra fornitori di imballaggi e servizi di spedizione",
       en: "Supplier Research: Comparative Benchmark for Eco-Packaging & Logistics",
       fr: "Recherche de fournisseurs : Analyse comparative d'emballages écologiques",
       es: "Investigación de proveedores: Análisis comparativo de embalaje ecológico",
     },
     subtitle: {
-      it: "Scouting, raccolta dati pubblici e sintesi decisionale per una piccola attività manifatturiera",
+      it: "Criteri di confronto, organizzazione dei dati e sintesi per una piccola attività",
       en: "Market scouting, public data gathering, and decision matrix for a boutique producer",
       fr: "Recherche de fournisseurs, collecte de données publiques et synthèse pour une marque artisanale",
       es: "Búsqueda, recopilación de datos y matriz comparativa para pequeña empresa",
     },
     brief: {
-      it: "Una piccola realtà artigianale italiana deve selezionare un nuovo fornitore di scatole in cartone riciclato certificato FSC e gestione spedizioni.",
+      it: "Una piccola attività immaginaria vuole confrontare alcune soluzioni di imballaggio e spedizione utilizzando criteri prestabiliti.",
       en: "An artisan Italian business needs to identify a certified FSC packaging supplier and reliable small-batch logistics partner.",
       fr: "Une petite entreprise artisanale doit identifier un fournisseur d'emballages en carton recyclé FSC et logistique.",
       es: "Un negocio artesanal necesita seleccionar un proveedor de envases de cartón reciclado FSC y envíos.",
@@ -595,22 +595,22 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Parámetros del cliente: precio objetivo por unidad, pedidos mínimos (MOQ), plazos y certificados.",
     },
     objective: {
-      it: "Raccogliere, verificare e sintetizzare le informazioni pubbliche di 5 fornitori italiani ed europei in una matrice trasparente e subito utilizzabile.",
+      it: "Mostrare come organizzare un confronto tra cinque fornitori immaginari, separando i dati da verificare dalle preferenze del committente.",
       en: "Identify, verify and summarise public offerings from 5 suppliers into an actionable, decision-ready comparison matrix.",
       fr: "Recueillir et synthétiser les offres de 5 fournisseurs européens dans une matrice décisionnelle claire.",
       es: "Recopilar y sintetizar información pública de 5 proveedores en una matriz estructurada y transparente.",
     },
     approach: {
-      it: "Analisi desk-research su siti ufficiali, listini pubblici, schede tecniche di prodotto, condizioni di reso e recensioni verificate.",
+      it: "L’esempio illustra quali fonti consultare e come annotare prezzo, quantitativi, certificazioni e condizioni. I fornitori e i dati riportati sono inventati.",
       en: "Exhaustive desk research analysing official websites, public price tiers, technical data sheets, and verified fulfilment times.",
       fr: "Recherche documentaire approfondie sur les catalogues officiels, fiches techniques et conditions de livraison.",
       es: "Investigación documental sobre sitios web oficiales, catálogos, fichas técnicas y condiciones de envío.",
     },
     keyDecisions: {
       it: [
-        "Creazione di criteri ponderati: Sostenibilità (FSC/riciclabilità), Costo unitario a scaglioni (100, 500, 1.000 pz), Tempi di produzione.",
-        "Evidenziati costi nascosti come spese di fustella una tantum e minimi di fatturazione non immediati sui siti.",
-        "Fornito riassunto esecutivo di 1 pagina con raccomandazione finale motivata per le 2 migliori opzioni.",
+        "Definiti criteri di confronto: caratteristiche ambientali dichiarate, costi per quantità e tempi indicati dai fornitori.",
+        "Nel modello vengono evidenziati i costi aggiuntivi da verificare, come attrezzaggio, trasporto e quantitativi minimi.",
+        "Preparata una sintesi dimostrativa che confronta le opzioni sulla base dei criteri assegnati; la scelta finale resta al committente.",
       ],
       en: [
         "Structured weighted criteria: ecological credentials, tiered pricing brackets (100, 500, 1000 units), lead times.",
@@ -673,37 +673,37 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 8,
     category: "research",
     title: {
-      it: "Ricerca competitor: Analisi di posizionamento sul mercato europeo",
+      it: "Ricerca informativa: confronto tra offerte e servizi di concorrenti",
       en: "Competitor Research: Positioning Analysis in European Markets",
       fr: "Veille concurrentielle : Analyse de positionnement sur le marché européen",
       es: "Investigación de competencia: Análisis de posicionamiento en el mercado europeo",
     },
     subtitle: {
-      it: "Studio comparativo su offerta, listini pubblici, canali e value proposition di 4 realtà",
+      it: "Servizi, prezzi pubblicati e modalità di presentazione: confronto dimostrativo",
       en: "Comparative study across public pricing, service models, and value propositions of 4 firms",
       fr: "Étude comparative sur les offres, tarifs publics et propositions de valeur de 4 acteurs",
       es: "Estudio comparativo sobre servicios, precios públicos y propuesta de valor de 4 negocios",
     },
     brief: {
-      it: "Consulente freelance italiano intenzionato a offrire servizi a clienti francofoni e anglofoni necessita di una mappatura dell'offerta concorrente.",
+      it: "Un consulente immaginario desidera organizzare informazioni pubbliche sull’offerta di quattro realtà simili alla propria.",
       en: "An independent Italian consultant expanding into French and English-speaking markets requires a clear competitive landscape mapping.",
       fr: "Un consultant indépendant italien souhaite cartographier l'offre concurrente sur les marchés francophones et anglophones.",
       es: "Un consultor independiente italiano necesita analizar el panorama competitivo antes de expandir sus servicios a otros países europeos.",
     },
     startingMaterial: {
-      it: "Informazioni pubbliche ricavate da siti web, pagine LinkedIn, cataloghi servizi e newsletter aperte di 4 competitor diretti in UK, Francia e Germania.",
+      it: "Schede fittizie ispirate ai tipi di informazioni normalmente disponibili nei siti aziendali: servizi, prezzi dichiarati, lingue e canali di comunicazione.",
       en: "Public data gathered from websites, LinkedIn company profiles, service decks, and open newsletters of 4 competitors.",
       fr: "Données publiques issues de sites web, profils LinkedIn et présentations publiques de 4 concurrents en France et en Europe.",
       es: "Información pública recopilada de páginas web, perfiles profesionales y boletines de 4 empresas competidoras.",
     },
     objective: {
-      it: "Individuare spazi di posizionamento non presidiati, fasce di prezzo medie e stili di comunicazione prevalenti senza fare speculazioni.",
+      it: "Mettere a confronto caratteristiche verificabili e organizzare osservazioni utili, senza presentare dati simulati come risultati di una ricerca reale.",
       en: "Identify underserved market niches, baseline pricing benchmarks, and dominant messaging angles based strictly on verified public facts.",
       fr: "Identifier les segments sous-exploités et les fourchettes tarifaires moyennes sans spéculation.",
       es: "Localizar oportunidades de diferenciación y rangos de tarifas basándose exclusivamente en hechos públicos comprobables.",
     },
     approach: {
-      it: "Netta separazione metodologica tra DATO DI FATTO verificabile (prezzo pubblicato, lingue supportate) e INTERPRETAZIONE strategica.",
+      it: "Separazione tra dati di partenza dello scenario, criteri di confronto e osservazioni interpretative.",
       en: "Methodological separation between verifiable empirical facts (published pricing, stated turnaround) and strategic interpretation.",
       fr: "Séparation rigoureuse entre faits vérifiables (tarifs affichés, services mentionnés) et analyse stratégique.",
       es: "Diferenciación metodológica estricta entre datos contrastables (precios visibles, idiomas) e interpretación analítica.",
@@ -711,8 +711,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     keyDecisions: {
       it: [
         "Esclusi loghi protetti da copyright; utilizzati descrittori neutri per la tutela della riservatezza dei marchi terzi.",
-        "Analizzati i modelli di tariffazione: pacchetti orari fissi vs formule a retainers mensili.",
-        "Evidenziata l'assenza di vero supporto multilingue integrato nella maggior parte dei competitor come vantaggio competitivo.",
+        "Confrontati, nell’esempio, pacchetti a ore e formule con compenso periodico.",
+        "Evidenziate le differenze tra le offerte simulate, senza trarre conclusioni sull’intero mercato reale.",
       ],
       en: [
         "Excluded proprietary third-party logos, utilizing neutral descriptive identifiers to uphold fair research practices.",
@@ -745,46 +745,46 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 9,
     category: "backoffice",
     title: {
-      it: "Back office e organizzazione operativa: Sistema per libero professionista",
+      it: "Back office: gestione di email, agenda e richieste di un professionista",
       en: "Back Office & Operational Management: Systems for Solo Professionals",
       fr: "Back-office et organisation opérationnelle : Système pour professionnel libéral",
       es: "Back office y organización operativa: Sistema para profesional independiente",
     },
     subtitle: {
-      it: "Triage casella email, gestione buffer in agenda e tracker follow-up clienti",
+      it: "Organizzazione della posta, appuntamenti e richieste dei clienti",
       en: "Inbox triage, appointment buffer scheduling, and systematic client follow-up tracker",
       fr: "Gestion de boîte de réception, planification d'agenda et suivi des relances clients",
       es: "Gestión de correo, tiempos de descanso en agenda y seguimiento de clientes",
     },
     brief: {
-      it: "Un consulente professionista sovraccarico dalla gestione quotidiana perde opportunità commerciali e fatica a tenere traccia delle scadenze.",
+      it: "Un consulente immaginario fatica a seguire email, appuntamenti e richieste già ricevute dai propri clienti.",
       en: "An overloaded independent consultant is losing potential engagements due to disorganized inbox triage and irregular follow-ups.",
       fr: "Un professionnel débordé par la gestion quotidienne perd des opportunités par manque de suivi et d'organisation.",
       es: "Un profesional autónomo saturado por tareas administrativas pierde oportunidades y control sobre los plazos de entrega.",
     },
     startingMaterial: {
-      it: "Scenario sintetico con 50 comunicazioni in entrata, richieste appuntamenti disordinate e 3 clienti in attesa di preventivo (Clienti Demo A, B, C).",
+      it: "Scenario inventato con messaggi in arrivo, appuntamenti da coordinare e tre richieste di preventivo da gestire secondo istruzioni fornite.",
       en: "Practice scenario with 50 sample client messages, irregular calendar requests, and pending quotes for Demo Clients A, B, and C.",
       fr: "Scénario synthétique de 50 messages entrants non traités, rendez-vous non confirmés et devis en attente.",
       es: "Escenario demostrativo con 50 correos sin clasificar, citas desorganizadas y presupuestos pendientes.",
     },
     objective: {
-      it: "Costruire un flusso operativo standard (SOP), liberare la casella di posta e strutturare un sistema di follow-up che non lasci cadere alcun contatto.",
+      it: "Preparare una procedura per classificare le email, gestire le richieste esistenti e controllare le risposte in attesa.",
       en: "Build standard operating procedures (SOPs), achieve zero-inbox clarity, and establish an unshakeable follow-up cadence.",
       fr: "Mettre en place une procédure claire (SOP), désengorger la boîte mail et structurer les relances.",
       es: "Crear un protocolo de trabajo operativo (SOP), despejar el correo y asegurar el seguimiento riguroso de cada cliente.",
     },
     approach: {
-      it: "Applicazione della metodologia 'Open Loops': classificazione per urgenza/importanza, risposte standard personalizzate e introduzione di buffer di 15 min tra call.",
+      it: "Suddivisione dei messaggi per priorità, bozze di risposta da approvare e intervalli realistici tra gli appuntamenti.",
       en: "Implementation of the Open Loops framework: classification by priority, templated personalised replies, and 15-minute calendar buffers.",
       fr: "Mise en œuvre d'une méthode de tri rigoureuse, modèles de réponse types personnalisés et temps de pause entre rendez-vous.",
       es: "Aplicación de clasificación por prioridades, respuestas tipo personalizadas y descansos de 15 minutos entre videollamadas.",
     },
     keyDecisions: {
       it: [
-        "Creata cartella 'In attesa di terzi': ogni richiesta sospesa ha una data limite di sollecito automatico dopo 48 ore.",
-        "Bloccati slot settimanali per lavoro profondo senza interruzioni di chiamate esterne.",
-        "Predisposto un tracker sintetico settimanale con riepilogo inviato ogni venerdì pomeriggio a Noemi / al professionista.",
+        "Le richieste in attesa di risposta sono annotate in un elenco con una data di verifica concordata, senza invii automatici non autorizzati.",
+        "Previsti periodi di lavoro senza appuntamenti, secondo le disponibilità indicate dal professionista.",
+        "Predisposto un riepilogo settimanale di attività e richieste in attesa, da condividere con il professionista secondo gli accordi.",
       ],
       en: [
         "Created a dedicated 'Waiting For' folder: pending client actions are flagged for automated check-in after 48 business hours.",
@@ -817,13 +817,13 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 10,
     category: "writing",
     title: {
-      it: "Scrittura e revisione testi: Confronto prima/dopo per presentazione aziendale",
+      it: "Revisione editoriale: prima e dopo di una presentazione aziendale",
       en: "Copywriting & Text Revision: Before/After Corporate Presentation",
       fr: "Rédaction et révision de textes : Comparatif avant/après pour présentation d'entreprise",
       es: "Redacción y corrección de estilo: Comparativa antes y después para presentación profesional",
     },
     subtitle: {
-      it: "Ristrutturazione stilistica, eliminazione del burocratese e valorizzazione della chiarezza",
+      it: "Riscrittura di un testo poco chiaro, con spiegazione delle scelte editoriali",
       en: "Stylistic overhaul, elimination of corporate fluff, and focus on human clarity",
       fr: "Refonte stylistique, suppression du jargon administratif et valorisation de la clarté",
       es: "Reestructuración estilística, eliminación de giros burocráticos y claridad en el mensaje",
@@ -841,13 +841,13 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Borrador inicial: 'Nuestra entidad se complace en implementar soluciones sinérgicas a 360 grados...'",
     },
     objective: {
-      it: "Trasformare il testo in una comunicazione autorevole, diretta e piacevole da leggere, mettendo in primo piano ciò che l'azienda fa concretamente.",
+      it: "Rendere il testo più chiaro e specifico, mantenendo soltanto le informazioni presenti nella bozza.",
       en: "Transform the copy into direct, credible, and engaging communication clearly stating what the company actually accomplishes.",
       fr: "Transformer le texte en une communication percutante, élégante et lisible, axée sur les compétences réelles.",
       es: "Convertir el texto en un mensaje convincente, cercano y profesional que explique con exactitud los servicios ofrecidos.",
     },
     approach: {
-      it: "Potatura degli aggettivi vuoti, ripristino della forma attiva con soggetti chiari, spezzatura delle subordinate complesse in frasi incisive.",
+      it: "Eliminazione di formule generiche, uso di verbi concreti e revisione delle frasi troppo lunghe.",
       en: "Elimination of hollow marketing adjectives, active voice restoration, and breaking tortuous clauses into punchy, memorable sentences.",
       fr: "Suppression des adjectifs superflus, retour à la voix active et découpage en phrases courtes et équilibrées.",
       es: "Supresión de adjetivos vacíos, adopción de voz activa y descomposición de oraciones complejas en ideas claras.",
@@ -855,8 +855,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     keyDecisions: {
       it: [
         "Banditi 'sinergia a 360 gradi', 'leader di settore' e 'prefiggersi lo scopo'.",
-        "Strutturata la comunicazione in 3 blocchi: Cosa facciamo, Per chi lavoriamo, Perché i clienti restano con noi.",
-        "Ridotto il conteggio parole del 40% aumentando l'efficacia persuasiva e la memorabilità.",
+        "La nuova struttura distingue servizi, destinatari e caratteristiche verificabili dell’attività.",
+        "Accorciato il testo ed eliminati passaggi ridondanti, senza attribuire risultati commerciali non misurati.",
       ],
       en: [
         "Banned clichés such as 'synergy', '360-degree turnkey', and 'industry leading'.",
@@ -902,19 +902,19 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     "order": 11,
     "category": "web",
     "title": {
-      "it": "Revisione dei contenuti di una landing page per il mercato italiano",
+      "it": "Localizzazione EN → IT: contenuti di una pagina di presentazione",
       "en": "Italian landing page: content review and localisation",
       "fr": "Page de destination italienne : révision et localisation éditoriale",
       "es": "Landing page en italiano: revisión y localización de contenidos"
     },
     "subtitle": {
-      "it": "Headline, servizi, FAQ e CTA: intervento linguistico e organizzazione dei testi, non sviluppo web",
+      "it": "Titoli, descrizioni, domande frequenti e inviti all’azione: solo intervento editoriale",
       "en": "Clear Italian headlines, FAQs and calls to action; editorial work, not website development",
       "fr": "Accroches, FAQ et appels à l’action en italien ; prestation éditoriale, sans développement web",
       "es": "Titulares, preguntas frecuentes y llamadas a la acción en italiano, sin desarrollo técnico"
     },
     "brief": {
-      "it": "Scenario di lavoro: un consulente internazionale ha una pagina in inglese e vuole renderne il messaggio comprensibile a visitatori italiani.",
+      "it": "Un consulente immaginario desidera adattare per i lettori italiani i testi di una pagina già disponibile in inglese.",
       "en": "Project scenario: an international consultant has an English landing page and wants to communicate clearly with Italian visitors.",
       "fr": "Contexte du projet : un consultant international souhaite adapter une page anglophone au public italien.",
       "es": "Situación de trabajo: un consultor internacional quiere adaptar una página en inglés a lectores italianos."
@@ -932,7 +932,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Crear textos en italiano claros, coherentes y fieles a la oferta real."
     },
     "approach": {
-      "it": "Inventario dei messaggi, gerarchia dei contenuti, localizzazione EN → IT, revisione di FAQ e CTA, consegna dei testi per il CMS.",
+      "it": "Analisi della struttura, localizzazione dei testi e revisione delle domande frequenti; consegna dei contenuti pronti per essere inseriti nel sito.",
       "en": "Audit source messages; organise copy hierarchy; localise EN → IT; review FAQs and CTAs; provide CMS-ready text.",
       "fr": "Recenser les messages, structurer les textes, localiser vers l’italien, réviser FAQ et appels à l’action.",
       "es": "Revisar los mensajes, estructurar los textos, localizar al italiano y entregar la versión preparada para CMS."
@@ -960,7 +960,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       ]
     },
     "deliverable": {
-      "it": "Kit di contenuti IT: titolo, sottotitolo, tre benefici, FAQ e CTA, con note per l’inserimento nel CMS.",
+      "it": "Testi in italiano per titolo, sottotitolo, descrizioni, FAQ e inviti all’azione, accompagnati da note editoriali.",
       "en": "Italian copy kit: headline, subheading, three benefits, FAQ and CTA, ready for client-side CMS integration.",
       "fr": "Kit éditorial italien : titre, sous-titre, bénéfices, FAQ, CTA et indications pour le CMS.",
       "es": "Kit editorial italiano: titular, subtítulo, beneficios, preguntas frecuentes, CTA y notas para CMS."
@@ -989,13 +989,13 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     category: "translation",
     masterField: "letterario",
     title: {
-      it: "Saggio di traduzione letteraria e narrativa: 'The Last Voice Note' (EN → IT)",
+      it: "Traduzione letteraria EN → IT: «The Last Voice Note»",
       en: "Literary & Narrative Translation Sample: 'The Last Voice Note' (EN → IT)",
       fr: "Échantillon de traduction littéraire et narrative : 'The Last Voice Note' (EN → IT)",
       es: "Muestra de traducción literaria y narrativa: 'The Last Voice Note' (EN → IT)",
     },
     subtitle: {
-      it: "Testo originale contemporaneo: studio di ritmo narrativo, sottotesto, resa del parlato e cadenza prosodica",
+      it: "Brano narrativo originale, traduzione italiana a fronte e note sulle scelte di stile",
       en: "Original contemporary narrative: study of rhythm, subtext, spoken dialogue, and prosodic cadence",
       fr: "Texte narratif contemporain original : étude du rythme, du non-dit, des dialogues et de la cadence",
       es: "Texto narrativo contemporáneo original: estudio de ritmo, subtexto, diálogo coloquial y musicalidad",
@@ -1007,19 +1007,19 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       es: "Traducción de un fragmento literario contemporáneo original sobre la memoria digital y la emoción contenida.",
     },
     startingMaterial: {
-      it: "Testo sorgente originale in lingua inglese creato appositamente per questo progetto dimostrativo. Nessun autore vivente o protetto da copyright imitato.",
+      it: "Brano originale in inglese preparato appositamente per questo esempio, senza riprendere opere di terzi.",
       en: "Original English narrative source written specifically for this demonstration portfolio. Free from external copyright restrictions.",
       fr: "Texte source original en anglais rédigé spécifiquement pour ce projet de démonstration.",
       es: "Texto fuente original en inglés creado exclusivamente para este proyecto demostrativo.",
     },
     objective: {
-      it: "Rendere la voce narrante in italiano con naturalezza e rispetto della cadenza interiore, evitando sia l'appiattimento sia il manierismo forzato.",
+      it: "Restituire in italiano il tono e il ritmo del brano, senza calchi né costruzioni artificiose.",
       en: "Render the narrator's interior voice into Italian with natural cadence and restraint, avoiding both flat literalism and overwrought poeticism.",
       fr: "Transposer la voix intérieure du narrateur avec délicatesse, sans lourdeur ni préciosité artificielle.",
       es: "Recrear la voz narrativa en italiano con musicalidad y sobriedad, eludiendo la literalidad estéril y la afectación.",
     },
     approach: {
-      it: "Analisi stilistica preliminare: studio delle pause, della punteggiatura e della tensione non detta. Traduzione basata sulla resa prosodica del respiro narrativo.",
+      it: "Confronto tra le due versioni, con attenzione a pause, tempi verbali, punteggiatura e scelte lessicali.",
       en: "Close reading analysis: mapping narrative pauses, punctuation weight, and emotional subtext. Translation shaped around natural breath rhythms.",
       fr: "Lecture attentive de la ponctuation, des silences et des non-dits pour restituer le souffle de la prose originale.",
       es: "Análisis pormenorizado del ritmo, las pausas y el subtexto emocional antes de abordar la traducción de cada párrafo.",
@@ -1028,7 +1028,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       it: [
         "Resa di 'voice note': conservato 'nota vocale' nel registro intimo per riflettere l'uso quotidiano autentico in italiano.",
         "Scelta di tempi verbali: alternanza studiata tra imperfetto narrativo e passato remoto per creare la giusta profondità temporale del ricordo.",
-        "Lavoro meticoloso sull'incipit per preservare la cadenza sussurrata del testo di partenza senza inversioni sintattiche forzate.",
+        "Revisione dell’incipit per preservare il ritmo del testo originale senza forzare la sintassi italiana.",
       ],
       en: [
         "Balanced contemporary spoken terms ('voice note' / 'nota vocale') against reflective narrative introspection.",
@@ -1088,7 +1088,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Localización FR → IT: ficha de producto para el hogar"
     },
     "subtitle": {
-      "it": "Descrizione, specifiche, microcopy e controllo terminologico",
+      "it": "Descrizione, caratteristiche e brevi testi di interfaccia, con controllo terminologico",
       "en": "Description, specifications and Italian customer-facing microcopy",
       "fr": "Description, caractéristiques et microtextes pour le marché italien",
       "es": "Descripción, especificaciones y microtextos para el público italiano"
@@ -1166,13 +1166,13 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
     "order": 14,
     "category": "translation",
     "title": {
-      "it": "Adattamento ES → IT: email a un cliente già acquisito",
+      "it": "Adattamento ES → IT: email a un cliente esistente",
       "en": "Spanish-to-Italian email for an existing customer",
       "fr": "Adaptation ES → IT : e-mail à un client existant",
       "es": "Adaptación ES → IT: correo a un cliente existente"
     },
     "subtitle": {
-      "it": "Una comunicazione professionale cortese, non un'attività di acquisizione clienti",
+      "it": "Una comunicazione di assistenza nel quadro di un rapporto già avviato",
       "en": "Professional customer correspondence, not prospecting",
       "fr": "Correspondance professionnelle, sans prospection commerciale",
       "es": "Correspondencia profesional sin captación de clientes"
@@ -1190,7 +1190,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Correo de seguimiento en español destinado a un cliente italiano."
     },
     "objective": {
-      "it": "Mantenere cortesia, chiarezza e neutralità, senza trasformare il follow-up in una sollecitazione commerciale aggressiva.",
+      "it": "Mantenere cortesia e chiarezza, evitando toni pressanti o richieste non previste nel messaggio originale.",
       "en": "Preserve a polite, neutral tone without turning support follow-up into cold outreach.",
       "fr": "Préserver un ton courtois, sans prospection ni insistance excessive.",
       "es": "Mantener un tono profesional y cercano sin presión comercial."
@@ -1205,7 +1205,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "it": [
         "«Nos ponemos en contacto» è reso con «Le scriviamo», senza preamboli superflui.",
         "Si mantiene il riferimento alla proposta già inviata.",
-        "Il testo non viene trasformato in una comunicazione di prospecting."
+        "Il messaggio rimane rivolto a un cliente già esistente: non è una comunicazione a freddo."
       ],
       "en": [
         "Prefer natural Italian «Le scriviamo» over a literal business calque.",
@@ -1250,13 +1250,13 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
     "order": 15,
     "category": "backoffice",
     "title": {
-      "it": "Customer care scritto: tre richieste in italiano",
+      "it": "Assistenza clienti scritta: tre richieste in italiano",
       "en": "Italian written customer care: three real-world scenarios",
       "fr": "Relation client écrite en italien : trois situations",
       "es": "Atención escrita en italiano: tres situaciones"
     },
     "subtitle": {
-      "it": "Classificazione dei ticket, risposte pronte e gestione delle eccezioni",
+      "it": "Classificazione delle richieste, bozze di risposta e casi da inoltrare",
       "en": "Ticket triage, approved replies and escalation rules",
       "fr": "Tri des demandes, réponses et règles de validation",
       "es": "Clasificación, respuestas y criterios de escalado"
@@ -1308,7 +1308,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       ]
     },
     "deliverable": {
-      "it": "Registro ticket, modello email italiano e regole di escalation; documento 11.",
+      "it": "Registro delle richieste, modelli email e indicazioni sui casi da sottoporre al responsabile; documento 11.",
       "en": "Italian ticket tracker, reply template and escalation matrix; sample document 11.",
       "fr": "Tableau de tickets, réponse italienne et procédure d’escalade ; document 11.",
       "es": "Registro de tickets, respuesta en italiano y criterios de escalado; documento 11."
@@ -1421,7 +1421,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Back office operativo: registro de pedidos y control de tarifas"
     },
     "subtitle": {
-      "it": "Dati sintetici, verifiche prima/dopo e registro delle anomalie",
+      "it": "Dati simulati, controlli e segnalazione delle anomalie",
       "en": "Synthetic order data, before/after checks and an exception log",
       "fr": "Données fictives, contrôles de cohérence et journal d’anomalies",
       "es": "Datos ficticios, controles de coherencia y registro de incidencias"
@@ -1626,7 +1626,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Aclarar el acceso y la comunicación, sin impartir clases."
     },
     "approach": {
-      "it": "Struttura moduli, naming file, bozza di benvenuto, FAQ basata sulle istruzioni fornite e flusso di escalation.",
+      "it": "Organizzazione dei moduli, regole per i nomi dei file, bozza di benvenuto e FAQ basate sulle indicazioni del formatore.",
       "en": "Structure files, draft Italian welcome copy, prepare approved FAQ and escalation rules.",
       "fr": "Classer les fichiers, rédiger l’accueil italien et préparer une FAQ validée.",
       "es": "Organizar archivos, redactar bienvenida en italiano y FAQ aprobadas."
@@ -1654,7 +1654,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       ]
     },
     "deliverable": {
-      "it": "Modello di email di benvenuto, check-list di accesso e procedura di supporto; documento 15.",
+      "it": "Email di benvenuto, lista di controllo degli accessi e procedura di supporto organizzativo; documento 15.",
       "en": "Welcome-email template, access checklist and support procedure; document 15.",
       "fr": "Modèle d’e-mail d’accueil et checklist ; document 15.",
       "es": "Correo de bienvenida y lista de control; documento 15."
@@ -1686,7 +1686,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Catálogos y fichas: revisión editorial en italiano"
     },
     "subtitle": {
-      "it": "Prima/dopo, uniformità terminologica, controllo informazioni approvate",
+      "it": "Confronto prima/dopo, terminologia uniforme e verifica delle informazioni approvate",
       "en": "Before/after product copy, terminology and approved information",
       "fr": "Avant/après, terminologie et informations vérifiées",
       "es": "Antes/después, terminología e información aprobada"
@@ -1738,7 +1738,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       ]
     },
     "deliverable": {
-      "it": "Scheda prodotto revisionata, glossario di stile e report delle incongruenze; documento 19.",
+      "it": "Scheda prodotto revisionata, indicazioni stilistiche e riepilogo delle incongruenze; documento 19.",
       "en": "Revised Italian listing, terminology sheet and discrepancy report; document 19.",
       "fr": "Fiche italienne révisée, glossaire et relevé des incohérences ; document 19.",
       "es": "Ficha italiana revisada, glosario y control de diferencias; documento 19."
