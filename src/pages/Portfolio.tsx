@@ -147,7 +147,7 @@ export default function Portfolio() {
       labels:{it:"Documenti in evidenza",en:"Featured samples",fr:"Exemples à la une",es:"Muestras destacadas"},
       details:{it:"Una selezione da leggere subito",en:"Start with a curated selection",fr:"Une première sélection à découvrir",es:"Una selección para empezar"} },
     { id:"portfolio-complete-dossiers", number:"02",
-      labels:{it:"26 dossier approfonditi",en:"26 detailed examples",fr:"26 dossiers pratiques",es:"26 exemples détaillés"},
+      labels:{it:"26 dossier approfonditi",en:"26 detailed examples",fr:"26 dossiers pratiques",es:"26 ejemplos detallados"},
       details:{it:"Traduzioni a fronte e processi operativi simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
     { id:"portfolio-legacy-cases", number:"03",
       labels:{it:"18 casi di metodo",en:"18 methodology cases",fr:"18 études méthodologiques",es:"18 casos metodológicos"},
@@ -233,7 +233,7 @@ export default function Portfolio() {
       <section aria-labelledby="tangible-work" className="scroll-mt-24 py-12 border-b border-border/40 bg-card/30">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <h2 id="tangible-work" className="text-2xl md:text-3xl font-bold text-primary mb-3">
-            {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Ejemplos concretos para consultar" : "Explore tangible work samples"}
+            {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Ejemplos concretos para consultar" : "Explore the sample documents"}
           </h2>
           <p className="text-foreground/75 mb-8 max-w-3xl">
             {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Tutti gli esempi sono dimostrativi e utilizzano dati fittizi."
