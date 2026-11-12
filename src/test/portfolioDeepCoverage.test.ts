@@ -85,7 +85,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
   });
   it("keeps the overview dossier count aligned with the public catalogue in all four languages", () => {
     const page = read("src/pages/Portfolio.tsx");
-    for (const label of ["26 dossier approfonditi", "26 in-depth dossiers", "26 dossiers détaillés", "26 dosieres detallados"]) {
+    for (const label of ["26 dossier approfonditi", "26 detailed examples", "26 dossiers pratiques", "26 ejemplos detallados"]) {
       expect(page).toContain(label);
     }
     expect(page).not.toMatch(/27 dossier approfonditi|27 in-depth dossiers|27 dossiers détaillés|27 dosieres detallados/);
@@ -152,7 +152,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
     for(const lang of LANGS) {
       expect(app).toContain('<Route path="'+getDeepPortfolioPath("placeholder",lang).replace("placeholder",":slug")+'" element={<PortfolioDeepCase />} />');
     }
-    expect(read("src/lib/portfolioOperationalTypes.ts")).toMatch(/non documenta un incarico realmente svolto/);
-    expect(read("src/lib/portfolioDeepTypes.ts")).toMatch(/non è un incarico commissionato/);
+    expect(read("src/lib/portfolioOperationalTypes.ts")).toMatch(/non documenta un incarico commissionato/i);
+    expect(read("src/lib/portfolioDeepTypes.ts")).toMatch(/non proviene da un incarico commissionato/i);
   });
 });
