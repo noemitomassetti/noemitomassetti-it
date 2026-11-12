@@ -165,12 +165,12 @@ export default function Portfolio() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
             <GraduationCap className="w-3.5 h-3.5" />
             {lang === "it"
-              ? "Portfolio professionale · Elaborati originali"
+              ? "Portfolio · Esempi originali"
               : lang === "fr"
-              ? "Portfolio professionnel · Travaux originaux"
+              ? "Portfolio · Exemples originaux"
               : lang === "es"
-              ? "Porfolio profesional · Muestras originales"
-              : "Professional Portfolio · Original Work Samples"}
+              ? "Porfolio · Muestras originales"
+              : "Portfolio · Original Work Samples"}
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4 md:mb-6">
@@ -185,23 +185,23 @@ export default function Portfolio() {
 
           <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed mb-5 md:mb-8 max-w-3xl">
             {lang === "it"
-              ? "Traduzioni a fronte, testi per siti e comunicazioni con i clienti, procedure e documenti: elaborati completi che permettono di valutare il mio approccio e la cura dei dettagli."
+              ? "Nel portfolio trovi traduzioni commentate, revisioni di testi, comunicazioni professionali, materiali di back office e ricerche informative. Puoi leggere gli elaborati e conoscere le scelte linguistiche e operative che li accompagnano."
               : lang === "fr"
-              ? "Traductions vers l’italien, contenus web adaptés, courriels professionnels et documents de suivi : des travaux complets pour découvrir ma méthode et les choix rédactionnels."
+              ? "Vous trouverez ici des traductions commentées, des révisions de textes, de la correspondance professionnelle, des documents de back-office et des recherches documentaires, accompagnés d'explications sur les choix effectués."
               : lang === "es"
-              ? "Traducciones al italiano, textos web adaptados, correos profesionales y documentos operativos: muestras completas que permiten conocer mi método y mis decisiones lingüísticas."
-              : "Explore Italian translation, website localisation and customer correspondence through complete, original work samples. You can also review back-office procedures, editorial work and the decisions behind each deliverable."}
+              ? "Aquí encontrarás traducciones comentadas, revisiones de textos, comunicaciones profesionales, documentos de back office e investigaciones informativas, con explicaciones sobre las decisiones tomadas."
+              : "Explore annotated translations, editorial revisions, professional correspondence, back-office documents and informational research, together with notes explaining the language and operational decisions behind each example."}
           </p>
 
           {/* Editorial provenance: factual, understated and consistent across locales. */}
           <p className="max-w-3xl text-xs sm:text-sm leading-relaxed text-muted-foreground mb-6">
             {lang === "it"
-              ? "Questi elaborati originali sono stati realizzati appositamente per il portfolio, partendo da situazioni professionali plausibili e utilizzando nomi e dati di fantasia. Non sono incarichi commissionati da clienti."
+              ? "Gli elaborati sono stati preparati appositamente per mostrare il mio metodo di lavoro. Sono esempi originali con scenari, nomi e dati inventati, non lavori commissionati da clienti reali."
               : lang === "en"
-              ? "These original samples were prepared specifically for this portfolio, using realistic working scenarios and invented names and details. They are not commissioned client projects."
+              ? "These original samples were prepared to illustrate my working approach. The scenarios, names and data are fictional; the work was not commissioned by actual clients."
               : lang === "fr"
-              ? "Ces travaux originaux ont été créés spécialement pour ce portfolio, à partir de situations professionnelles plausibles et de noms et données inventés. Ils ne correspondent pas à des commandes de clients."
-              : "Estas muestras originales se han preparado expresamente para este porfolio, a partir de situaciones profesionales verosímiles y con nombres y datos inventados. No son encargos realizados para clientes."}
+              ? "Ces exemples originaux ont été préparés pour illustrer ma méthode de travail. Les situations, les noms et les données sont fictifs ; il ne s'agit pas de missions commandées par de véritables clients."
+              : "Estas muestras originales se han preparado para mostrar mi forma de trabajar. Las situaciones, los nombres y los datos son ficticios; no se trata de encargos realizados para clientes reales."}
           </p>
           <nav aria-label={({it:"Percorsi di consultazione del portfolio",en:"Browse the portfolio",fr:"Explorer le portfolio",es:"Explorar el portfolio"} as const)[lang]}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
