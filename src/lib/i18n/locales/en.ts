@@ -370,14 +370,14 @@ export const enLocale: TranslationDictionary = {
     ctaReadMore: 'Read Full Background & Approach',
   },
   aboutPage: {
-    title: 'About Noemi Tomassetti',
-    subtitle: 'Professional experience, rigorous linguistic training, and operational care.',
-    storyTitle: 'A Career Built on Precision, Communication, and Care',
+    title: "Experience, language training and working approach",
+    subtitle: "A varied professional background and specialist language training, applied to practical work.",
+    storyTitle: "A professional background built across different roles",
     storyParagraphs: [
-      'My professional path has always developed around three constants: organisational clarity, linguistic precision, and genuine dedication to the people I work alongside.',
-      'My career spans more than two decades across different roles. I have developed skills in customer care, operational coordination, back office and multilingual communication. This journey taught me that operational excellence is not about rigid bureaucracy; it is about listening closely, simplifying workflows, and removing friction from daily business life.',
-      'My qualifications include a three-year degree in Language Mediation from the Università degli Studi di Macerata (110/110 e lode, the highest Italian honours) and an Italian first-level university master’s programme in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona (1,500 hours, 60 CFU/ECTS credits, final assessment passed). The programme covered literary, legal, economic, technological and scientific material. Legal texts are assessed case by case; I do not provide sworn or officially certified translations.',
-      'My approach is practical and transparent: clearly agreed tasks, well-organised files, consistent communication and regular progress updates.',
+      "I have over twenty years of professional experience across different workplaces and roles, including customer care, order handling, back-office work and organisation.",
+      "That experience has taught me the value of clear instructions, accurate correspondence and well-defined responsibilities. I begin each collaboration by understanding the work and assessing what I can realistically undertake.",
+      "I hold a degree in Language Mediation from the Università degli Studi di Macerata (110/110 e lode, the highest Italian honours) and a postgraduate qualification in Specialised Translation from the Scuola Superiore per Mediatori Linguistici di Ancona (1,500 hours, 60 CFU/ECTS credits). I assess specialist texts individually and do not offer sworn or certified translations.",
+      "Today I work remotely with professionals and small businesses, providing agreed language and operational support, particularly for communication with Italian audiences.",
     ],
     timeline: [
       {
@@ -403,51 +403,26 @@ export const enLocale: TranslationDictionary = {
     ],
     valuesTitle: 'Core Operational Principles',
     values: [
-      {
-        title: 'Listen Before Acting',
-        desc: 'Every business operates differently. There are no copy-paste templates; I start by understanding your daily rhythm and distinct friction points.',
-      },
-      {
-        title: 'Human Nuance, Amplified by Tech',
-        desc: 'Technology should serve human warmth, not replace it. Every communication, email, or translation maintains empathy and respect.',
-      },
-      {
-        title: 'Uncompromising Reliability',
-        desc: 'I agree realistic deadlines, flag risks promptly and verify important details before completing an agreed task.',
-      },
+      { title: "Listening and clear scope", desc: "Before work begins, we agree on the tasks, the material needed and which decisions remain yours." },
+      { title: "Practical digital tools", desc: "I use suitable tools and straightforward procedures to organise work and information without replacing professional checks." },
+      { title: "Confidentiality and updates", desc: "I work within the agreed scope, handle entrusted materials carefully and flag issues that need clarification." },
     ],
   },
   howWeWork: {
-    tag: 'THE PROCESS',
-    title: 'How we work together',
-    subtitle: 'Four clear stages, from your first enquiry to ongoing support.',
+    tag: "METHOD",
+    title: "How we can start working together",
+    subtitle: "Four clear stages, from your written enquiry to the agreed work.",
     steps: [
-      {
-        num: '01',
-        title: 'Listen & Discovery',
-        desc: 'A first written exchange to understand your projects, deadlines and the work you would like to delegate.',
-      },
-      {
-        num: '02',
-        title: 'Scope & Working Agreement',
-        desc: 'We define the specific responsibilities, communication channels, timelines, and whether you need project-based or ongoing support.',
-      },
-      {
-        num: '03',
-        title: 'Getting started',
-        desc: 'We set up access, establish shared drives or task tracking, and run initial test tasks to align on tone and standards.',
-      },
-      {
-        num: '04',
-        title: 'Independent work and regular updates',
-        desc: 'I carry out the agreed tasks independently and provide progress updates at the frequency we have agreed.',
-      },
+      { num: "01", title: "Describe what you need", desc: "Send an enquiry through the form or by email, outlining the work and any deadlines." },
+      { num: "02", title: "I review your request", desc: "I examine the available information and ask for further details if needed to define the assignment." },
+      { num: "03", title: "Receive a written quote", desc: "I set out the scope, timings, fees and working terms for your approval." },
+      { num: "04", title: "We get started", desc: "Once you accept the quote and the agreed conditions are met, I begin the assigned work." },
     ],
   },
   contactSection: {
     tag: 'GET IN TOUCH',
-    title: 'Tell Me About Your Project',
-    subtitle: 'Describe your project through the form. I will reply in writing; no introductory call is required.',
+    title: "Tell me what you need",
+    subtitle: "Need help with an operational task, translation or professional correspondence? Describe your project in writing; a phone call is not required.",
     form: {
       name: 'First Name *',
       surname: 'Last Name *',
@@ -466,7 +441,7 @@ export const enLocale: TranslationDictionary = {
       preferredLanguage: 'Preferred Communication Language',
       message: 'Describe your requirements or challenges *',
       gdpr: 'I confirm that I have read the Privacy Policy explaining how my personal data are processed.',
-      submit: 'Send Message',
+      submit: "Send enquiry",
       sending: 'Sending inquiry...',
       successTitle: 'Enquiry accepted by the forwarding service',
       successDesc: 'Thank you for reaching out. The email relay has accepted your request; final inbox delivery has not yet been confirmed.',
