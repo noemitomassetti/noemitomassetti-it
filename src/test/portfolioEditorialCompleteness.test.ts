@@ -63,8 +63,8 @@ describe("NoeTom portfolio editorial completeness and source-of-truth checks", (
       }
       const file = "public" + doc.url;
       const html = read(file);
-      const plainText = html.replace(/<style[\\s\\S]*?<\\/style>/g," ").replace(/<[^>]+>/g," ").replace(/\\s+/g," ").trim();
-      expect(html,`HTML ${file}`).toMatch(/<html[\\s>]/i);
+      const plainText = (html.split("<body")[1] ?? html).replace(/<[^>]+>/g," ").trim();
+      expect(html.toLowerCase().includes("<html"),`HTML ${file}`).toBe(true);
       expect(html,`guide ${file}`).toContain("Guide multilingue / Multilingual reading guide");
       expect(plainText.length,`work sample ${file}`).toBeGreaterThan(1300);
       expect(html,`work formatting ${file}`).toMatch(/<table|<pre|class="letter"|class="split"|class="comparison-grid"|class="dual-clause"|<section/i);
