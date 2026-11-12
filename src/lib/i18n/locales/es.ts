@@ -80,7 +80,7 @@ export const esLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'QUÉ HAGO',
     title: "Cómo puedo ayudarte",
-    subtitle: "Ofrezco servicios lingüísticos y de asistencia virtual. Cada encargo se define según las tareas, los materiales y las entregas acordadas; no todos los servicios están incluidos automáticamente.",
+    subtitle: "Ofrezco servicios lingüísticos y de asistencia virtual. Cada encargo se define según las tareas, los materiales y las entregas acordadas; no todos los servicios están incluidos automáticamente. El presupuesto detalla exactamente qué servicios están incluidos.",
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
