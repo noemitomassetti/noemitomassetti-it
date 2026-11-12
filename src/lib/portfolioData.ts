@@ -817,69 +817,223 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 8,
     category: "research",
     title: {
-      it: "Ricerca informativa: confronto tra offerte e servizi di concorrenti",
-      en: "Competitor Research: Positioning Analysis in European Markets",
-      fr: "Veille concurrentielle : Analyse de positionnement sur le marché européen",
-      es: "Investigación de competencia: Análisis de posicionamiento en el mercado europeo",
-    },
+      "it": "Ricerca informativa: confronto tra quattro offerte fittizie",
+      "en": "Desk research example: four fictional service profiles",
+      "fr": "Recherche documentaire : quatre offres fictives",
+      "es": "Investigación documental: cuatro ofertas ficticias"
+},
     subtitle: {
-      it: "Servizi, prezzi pubblicati e modalità di presentazione: confronto dimostrativo",
-      en: "Comparative study across public pricing, service models, and value propositions of 4 firms",
-      fr: "Étude comparative sur les offres, tarifs publics et propositions de valeur de 4 acteurs",
-      es: "Estudio comparativo sobre servicios, precios públicos y propuesta de valor de 4 negocios",
-    },
+      "it": "Tabella compilata su servizi, prezzi dichiarati, lingue e contatti",
+      "en": "A filled-in table comparing services, stated prices, languages and contact methods",
+      "fr": "Tableau comparatif des services, tarifs déclarés, langues et contacts",
+      "es": "Tabla comparativa de servicios, precios indicados, idiomas y contacto"
+},
     brief: {
-      it: "Un consulente immaginario desidera organizzare informazioni pubbliche sull’offerta di quattro realtà simili alla propria.",
-      en: "An independent Italian consultant expanding into French and English-speaking markets requires a clear competitive landscape mapping.",
-      fr: "Un consultant indépendant italien souhaite cartographier l'offre concurrente sur les marchés francophones et anglophones.",
-      es: "Un consultor independiente italiano necesita analizar el panorama competitivo antes de expandir sus servicios a otros países europeos.",
-    },
+      "it": "Un consulente immaginario vuole organizzare informazioni sull’offerta di quattro studi fittizi, senza svolgere attività di acquisizione clienti.",
+      "en": "A fictional consultant wants to organise a comparison of four imaginary professional practices, without looking for sales leads.",
+      "fr": "Un consultant fictif compare quatre cabinets imaginaires, sans rechercher de prospects.",
+      "es": "Un consultor ficticio compara cuatro despachos inventados sin buscar clientes potenciales."
+},
     startingMaterial: {
-      it: "Schede fittizie ispirate ai tipi di informazioni normalmente disponibili nei siti aziendali: servizi, prezzi dichiarati, lingue e canali di comunicazione.",
-      en: "Public data gathered from websites, LinkedIn company profiles, service decks, and open newsletters of 4 competitors.",
-      fr: "Données publiques issues de sites web, profils LinkedIn et présentations publiques de 4 concurrents en France et en Europe.",
-      es: "Información pública recopilada de páginas web, perfiles profesionales y boletines de 4 empresas competidoras.",
-    },
+      "it": "Quattro profili A–D interamente inventati; servizi, prezzi e modalità di contatto non provengono da fonti di mercato.",
+      "en": "Four invented A–D profiles; service, price and contact details are not sourced from actual firms.",
+      "fr": "Quatre profils A–D inventés ; les services et tarifs ne proviennent pas de sociétés réelles.",
+      "es": "Cuatro perfiles A–D inventados; los servicios y precios no proceden de empresas reales."
+},
     objective: {
-      it: "Mettere a confronto caratteristiche verificabili e organizzare osservazioni utili, senza presentare dati simulati come risultati di una ricerca reale.",
-      en: "Identify underserved market niches, baseline pricing benchmarks, and dominant messaging angles based strictly on verified public facts.",
-      fr: "Identifier les segments sous-exploités et les fourchettes tarifaires moyennes sans spéculation.",
-      es: "Localizar oportunidades de diferenciación y rangos de tarifas basándose exclusivamente en hechos públicos comprobables.",
-    },
+      "it": "Mostrare un confronto omogeneo, senza attribuire alle aziende reali dati o conclusioni ricavati da simulazioni.",
+      "en": "Show a fair comparison format without presenting mock data as evidence about a real market.",
+      "fr": "Montrer une méthode de comparaison sans confondre données fictives et informations vérifiées.",
+      "es": "Mostrar un método comparativo sin confundir datos ficticios con hechos de mercado."
+},
     approach: {
-      it: "Separazione tra dati di partenza dello scenario, criteri di confronto e osservazioni interpretative.",
-      en: "Methodological separation between verifiable empirical facts (published pricing, stated turnaround) and strategic interpretation.",
-      fr: "Séparation rigoureuse entre faits vérifiables (tarifs affichés, services mentionnés) et analyse stratégique.",
-      es: "Diferenciación metodológica estricta entre datos contrastables (precios visibles, idiomas) e interpretación analítica.",
-    },
+      "it": "Tabella con criteri comuni e nota sulle differenze tra osservazioni, informazioni mancanti e interpretazioni non giustificate.",
+      "en": "A table with consistent criteria and a note distinguishing observations from unsupported conclusions.",
+      "fr": "Tableau de critères comparables et notes distinguant observations et interprétations non fondées.",
+      "es": "Tabla con criterios comunes y notas que separan observaciones e inferencias no fundamentadas."
+},
     keyDecisions: {
-      it: [
-        "Esclusi loghi protetti da copyright; utilizzati descrittori neutri per la tutela della riservatezza dei marchi terzi.",
-        "Confrontati, nell’esempio, pacchetti a ore e formule con compenso periodico.",
-        "Evidenziate le differenze tra le offerte simulate, senza trarre conclusioni sull’intero mercato reale.",
+      "it": [
+            "I profili A–D sono identificati come immaginari, non aziende realmente analizzate.",
+            "Un prezzo non pubblicato non permette di presumere che sia alto.",
+            "Le lingue dichiarate non dimostrano da sole la qualità del servizio; la scelta resta al committente."
       ],
-      en: [
-        "Excluded proprietary third-party logos, utilizing neutral descriptive identifiers to uphold fair research practices.",
-        "Compared pricing models: hourly ad-hoc billing versus monthly recurring retainer retainers.",
-        "Highlighted the lack of authentic multilingual execution as a major market whitespace for the client.",
+      "en": [
+            "The A–D profiles are clearly fictional, not sampled real firms.",
+            "An unpublished price says nothing about actual affordability.",
+            "Listed languages alone do not demonstrate service quality or justify a ranking."
       ],
-      fr: [
-        "Exclusion des logos protégés et recours à des descriptions neutres et factuelles.",
-        "Comparaison des modèles économiques : tarification horaire contre forfaits mensuels récurrents.",
-        "Identification du déficit d'accompagnement réellement multilingue chez les concurrents.",
+      "fr": [
+            "Les profils A–D sont fictifs, non issus d’une enquête réelle.",
+            "Un tarif absent ne signifie pas qu’il soit élevé.",
+            "La liste de langues ne prouve pas la qualité d’un service."
       ],
-      es: [
-        "Exclusión de logotipos protegidos y adopción de nombres descriptivos neutros.",
-        "Comparativa de modelos de facturación: bolsa de horas frente a cuotas mensuales recurrentes.",
-        "Detección de una clara ventaja competitiva en la oferta de soporte multilingüe real.",
-      ],
-    },
+      "es": [
+            "Los perfiles A–D son ficticios, no empresas estudiadas.",
+            "No publicar un precio no significa que sea caro.",
+            "Indicar idiomas no demuestra por sí solo la calidad del servicio."
+      ]
+},
     deliverable: {
-      it: "Scheda dimostrativa di confronto tra concorrenti fittizi, criteri di posizionamento e osservazioni.",
-      en: "Short fictional competitor-comparison example with positioning criteria and editorial observations.",
-      fr: "Exemple synthétique de comparaison d’entreprises fictives et de critères de positionnement.",
-      es: "Ejemplo breve de comparación de competidores ficticios y criterios de posicionamiento.",
-    },
+      "it": "Quattro schede fittizie, tabella comparativa e sintesi dei limiti della ricerca; documento 08.",
+      "en": "Four fictional profiles, a completed comparison table and a caveats memo; document 08.",
+      "fr": "Quatre profils fictifs, tableau comparatif et note sur les limites ; document 08.",
+      "es": "Cuatro perfiles inventados, tabla comparativa y nota sobre las limitaciones; documento 08."
+},
+    tableData: {
+      "headers": {
+            "it": [
+                  "Studio fittizio",
+                  "Servizi",
+                  "Informazioni sui prezzi",
+                  "Contatto",
+                  "Lingue"
+            ],
+            "en": [
+                  "Fictional firm",
+                  "Services",
+                  "Price information",
+                  "Contact route",
+                  "Languages"
+            ],
+            "fr": [
+                  "Cabinet fictif",
+                  "Prestations",
+                  "Informations tarifaires",
+                  "Contact",
+                  "Langues"
+            ],
+            "es": [
+                  "Despacho ficticio",
+                  "Servicios",
+                  "Precios declarados",
+                  "Contacto",
+                  "Idiomas"
+            ]
+      },
+      "rows": {
+            "it": [
+                  [
+                        "A",
+                        "Consulenza; adempimenti",
+                        "Preventivo su richiesta",
+                        "Modulo",
+                        "IT"
+                  ],
+                  [
+                        "B",
+                        "Consulenza; formazione",
+                        "Prezzi non pubblicati",
+                        "Email",
+                        "IT, EN"
+                  ],
+                  [
+                        "C",
+                        "Gestione personale; informazioni",
+                        "Fasce per alcuni servizi",
+                        "Modulo",
+                        "IT"
+                  ],
+                  [
+                        "D",
+                        "Consulenza; supporto documenti",
+                        "Preventivo su richiesta",
+                        "Telefono, modulo",
+                        "IT, FR"
+                  ]
+            ],
+            "en": [
+                  [
+                        "A",
+                        "Consultancy; compliance",
+                        "Quote on request",
+                        "Form",
+                        "IT"
+                  ],
+                  [
+                        "B",
+                        "Consultancy; training",
+                        "Prices not listed",
+                        "Email",
+                        "IT, EN"
+                  ],
+                  [
+                        "C",
+                        "People services; information",
+                        "Some indicative price ranges",
+                        "Form",
+                        "IT"
+                  ],
+                  [
+                        "D",
+                        "Consultancy; document support",
+                        "Quote on request",
+                        "Phone, form",
+                        "IT, FR"
+                  ]
+            ],
+            "fr": [
+                  [
+                        "A",
+                        "Conseil ; formalités",
+                        "Devis sur demande",
+                        "Formulaire",
+                        "IT"
+                  ],
+                  [
+                        "B",
+                        "Conseil ; formation",
+                        "Tarifs non publiés",
+                        "Courriel",
+                        "IT, EN"
+                  ],
+                  [
+                        "C",
+                        "Personnel ; information",
+                        "Fourchettes indicatives",
+                        "Formulaire",
+                        "IT"
+                  ],
+                  [
+                        "D",
+                        "Conseil ; documents",
+                        "Devis sur demande",
+                        "Téléphone, formulaire",
+                        "IT, FR"
+                  ]
+            ],
+            "es": [
+                  [
+                        "A",
+                        "Asesoría; trámites",
+                        "Presupuesto a petición",
+                        "Formulario",
+                        "IT"
+                  ],
+                  [
+                        "B",
+                        "Asesoría; formación",
+                        "Precios no publicados",
+                        "Correo",
+                        "IT, EN"
+                  ],
+                  [
+                        "C",
+                        "Gestión de personal; información",
+                        "Algunas tarifas orientativas",
+                        "Formulario",
+                        "IT"
+                  ],
+                  [
+                        "D",
+                        "Asesoría; documentos",
+                        "Presupuesto a petición",
+                        "Teléfono, formulario",
+                        "IT, FR"
+                  ]
+            ]
+      }
+},
     disclaimer: DEMO_DISCLAIMER,
   },
 
