@@ -369,14 +369,14 @@ export const frLocale: TranslationDictionary = {
     ctaReadMore: 'En savoir plus sur mon approche',
   },
   aboutPage: {
-    title: 'À propos — Noemi Tomassetti',
-    subtitle: 'Expérience professionnelle, solide formation linguistique et rigueur dans l’exécution.',
-    storyTitle: 'Un engagement fondé sur la rigueur, le relationnel et le soin',
+    title: "Parcours, formation linguistique et méthode de travail",
+    subtitle: "Une expérience professionnelle variée et une formation linguistique appliquées à des besoins concrets.",
+    storyTitle: "Une expérience acquise dans des fonctions variées",
     storyParagraphs: [
-      'Mon parcours s’articule autour de trois piliers constants : la passion des langues vivantes, l’exigence organisationnelle et le plaisir d’apporter une aide concrète aux professionnels avec qui je collabore.',
-      'Mon parcours professionnel s’étend sur plus de deux décennies et comprend différentes expériences. J’y ai développé des compétences en relation client, organisation, back-office et communication multilingue. J’ai appris que la véritable efficacité ne provient pas de processus rigides, mais de la capacité d’écoute, de la simplification des démarches et de l’élimination des frictions quotidiennes.',
-      'Mon parcours universitaire comprend un diplôme italien de premier cycle en médiation linguistique de l’Università degli Studi di Macerata (110/110 e lode, distinction italienne maximale) et un master universitaire italien de premier niveau en traduction spécialisée à la Scuola Superiore per Mediatori Linguistici di Ancona (1 500 heures, 60 CFU/crédits ECTS, épreuve finale validée). La formation portait sur des textes littéraires, juridiques, économiques, technologiques et scientifiques. J’examine les textes juridiques au cas par cas et ne propose pas de traductions assermentées.',
-      'Mon approche est concrète : des tâches définies ensemble, des documents bien organisés et un suivi régulier des travaux confiés.',
+      "Je possède plus de vingt ans d'expérience professionnelle dans différents contextes, notamment dans la relation client, le suivi des commandes, le back-office et l'organisation.",
+      "Ce parcours m'a appris l'importance de consignes claires, de communications soignées et de responsabilités bien définies. Chaque collaboration commence par l'écoute de vos besoins et l'évaluation des tâches que je peux réellement prendre en charge.",
+      "J'ai obtenu un diplôme en médiation linguistique à l'Università degli Studi di Macerata (110/110 e lode, plus haute distinction italienne), puis suivi un master en traduction spécialisée à la Scuola Superiore per Mediatori Linguistici di Ancona (1 500 heures, 60 CFU/crédits ECTS). J'évalue les textes spécialisés au cas par cas et ne propose pas de traductions assermentées.",
+      "Aujourd'hui, j'accompagne à distance des professionnels et de petites structures dans leurs tâches opérationnelles et leur communication, notamment lorsqu'ils s'adressent à un public italien.",
     ],
     timeline: [
       {
@@ -402,51 +402,26 @@ export const frLocale: TranslationDictionary = {
     ],
     valuesTitle: 'Mes principes de collaboration',
     values: [
-      {
-        title: 'Écouter avant d’agir',
-        desc: 'Chaque activité est unique. Je commence toujours par cerner vos habitudes, vos contraintes et vos priorités avant de proposer un plan d’action.',
-      },
-      {
-        title: 'La technologie au service de l’humain',
-        desc: 'Les outils numériques doivent libérer du temps pour l’essentiel. La précision technique s’accompagne toujours de bienveillance et de tact.',
-      },
-      {
-        title: 'Fiabilité et engagement',
-        desc: 'Je définis des délais réalistes, communique rapidement tout imprévu et vérifie les points essentiels avant livraison.',
-      },
+      { title: "Écoute et cadre clair", desc: "Avant de commencer, nous précisons les tâches, les documents nécessaires et les décisions qui restent de votre ressort." },
+      { title: "Des outils numériques pratiques", desc: "J'utilise des outils adaptés et des procédures simples pour organiser le travail, sans remplacer les vérifications professionnelles." },
+      { title: "Confidentialité et suivi", desc: "Je respecte le périmètre convenu, traite les documents confiés avec soin et signale les points qui nécessitent des précisions." },
     ],
   },
   howWeWork: {
-    tag: 'MÉTHODE',
-    title: 'Collaborer en toute simplicité',
-    subtitle: 'Quatre étapes claires pour un accompagnement fluide dès le premier jour.',
+    tag: "MÉTHODE",
+    title: "Comment commencer à travailler ensemble",
+    subtitle: "Quatre étapes, de votre demande écrite au démarrage de la mission.",
     steps: [
-      {
-        num: '01',
-        title: 'Premier échange et découverte',
-        desc: 'Un premier échange écrit pour comprendre vos priorités et les tâches que vous souhaitez déléguer.',
-      },
-      {
-        num: '02',
-        title: 'Définition du cadre',
-        desc: 'Nous identifions les missions prioritaires à déléguer et établissons des modalités de travail transparentes et adaptées.',
-      },
-      {
-        num: '03',
-        title: 'Mise en place opérationnelle',
-        desc: 'Partage des accès et des dossiers nécessaires, puis premiers livrables pour caler le rythme et les standards de communication.',
-      },
-      {
-        num: '04',
-        title: 'Autonomie et suivi régulier',
-        desc: 'J’exécute les tâches en autonomie et vous transmets des points d’avancement réguliers pour vous laisser l’esprit libre.',
-      },
+      { num: "01", title: "Décrivez votre besoin", desc: "Envoyez votre demande par le formulaire ou par courriel, en précisant les tâches et les éventuels délais." },
+      { num: "02", title: "J'examine votre demande", desc: "J'étudie les informations disponibles et vous demande des précisions si nécessaire." },
+      { num: "03", title: "Recevez un devis écrit", desc: "Je précise les prestations, les délais, le tarif et les modalités pour votre accord." },
+      { num: "04", title: "Nous commençons", desc: "Après acceptation du devis et selon les conditions convenues, je commence les tâches prévues." },
     ],
   },
   contactSection: {
     tag: 'CONTACT',
-    title: 'Échangeons sur vos besoins opérationnels',
-    subtitle: 'Décrivez votre demande dans le formulaire. Je vous répondrai par écrit, sans appel préalable.',
+    title: "Décrivez-moi votre besoin",
+    subtitle: "Vous souhaitez déléguer une tâche, faire traduire un texte ou préparer une communication professionnelle ? Écrivez-moi : aucun appel téléphonique n'est obligatoire.",
     form: {
       name: 'Prénom *',
       surname: 'Nom *',
@@ -465,7 +440,7 @@ export const frLocale: TranslationDictionary = {
       preferredLanguage: 'Langue de communication préférée',
       message: 'Décrivez votre activité et vos besoins actuels *',
       gdpr: 'Je confirme avoir pris connaissance de la politique de confidentialité relative au traitement de mes données personnelles (RGPD).',
-      submit: 'Envoyer le message',
+      submit: "Envoyer la demande",
       sending: 'Envoi en cours...',
       successTitle: 'Demande acceptée par le service de transfert',
       successDesc: 'Le service d’envoi a accepté votre demande ; sa réception définitive dans ma messagerie reste à confirmer.',
