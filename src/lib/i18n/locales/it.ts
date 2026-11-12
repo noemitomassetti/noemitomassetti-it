@@ -80,7 +80,7 @@ export const itLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'COSA FACCIO',
     title: "Come posso aiutarti",
-    subtitle: "Offro servizi di assistenza virtuale, supporto operativo e linguistico. Ogni incarico viene definito in base alle attività richieste, ai materiali disponibili e alle modalità concordate.",
+    subtitle: "Offro servizi di assistenza virtuale, supporto operativo e linguistico. Ogni incarico viene definito in base alle attività richieste, ai materiali disponibili e alle modalità concordate. Il preventivo indica con precisione ciò che è incluso.",
     viewAllCta: 'Approfondisci tutti i servizi',
     categories: [
       {
