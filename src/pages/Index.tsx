@@ -141,7 +141,7 @@ export default function IndexPage() {
         lang === "it"
           ? "Avere un punto di riferimento"
           : lang === "fr"
-          ? "Avoir un repère de confiance"
+          ? "Un interlocuteur fiable"
           : lang === "es"
           ? "Contar con un punto de referencia"
           : "Have a reliable trusted partner",
@@ -171,9 +171,9 @@ export default function IndexPage() {
         lang === "it"
           ? "Un percorso professionale maturato attraverso attività organizzative, linguistiche e di supporto."
           : lang === "fr"
-          ? "Un parcours riche forgé dans l'organisation, le support opérationnel et les langues."
+          ? "Un parcours professionnel varié, comprenant des fonctions organisationnelles, opérationnelles et linguistiques."
           : lang === "es"
-          ? "Una trayectoria sólida en labores organizativas, lingüísticas y de soporte."
+          ? "Experiencia laboral en funciones organizativas, operativas y lingüísticas."
           : "A professional background spanning organisational, customer-facing and language-related roles.",
     },
     {
@@ -220,7 +220,7 @@ export default function IndexPage() {
         lang === "it"
           ? "Un approccio concreto"
           : lang === "fr"
-          ? "Une approche concrète"
+          ? "Une méthode concrète"
           : lang === "es"
           ? "Un enfoque práctico"
           : "A pragmatic approach",
@@ -228,7 +228,7 @@ export default function IndexPage() {
         lang === "it"
           ? "Organizzazione, precisione, attenzione alle comunicazioni e alle esigenze delle persone con cui lavoro."
           : lang === "fr"
-          ? "Rigueur, discrétion et écoute attentive pour s'adapter parfaitement à vos habitudes."
+          ? "Rigueur, discrétion et écoute attentive pour tenir compte de vos besoins et de vos habitudes."
           : lang === "es"
           ? "Organización, rigor y atención a los detalles y necesidades de cada persona."
           : "Precision, discretion, clear communication, and genuine care for your distinct workflows.",
@@ -269,10 +269,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Posso aiutarti nell'organizzazione di corsi ed eventi, nelle iscrizioni, nelle comunicazioni e nel rapporto con i partecipanti."
           : lang === "fr"
-          ? "Je vous accompagne dans la coordination des inscriptions, la préparation des supports et les relations participants."
+          ? "Je peux vous aider à organiser les inscriptions, préparer les supports et communiquer avec les participants."
           : lang === "es"
           ? "Te acompaño en la coordinación de cursos, inscripciones, avisos y atención a los participantes."
-          : "Assisting with course logistical coordination, registrations, student communications, and event logistics.",
+          : "I can support course administration, participant correspondence and the organisation of training materials, within the agreed scope.",
     },
     {
       icon: Clock,
@@ -280,10 +280,10 @@ export default function IndexPage() {
         lang === "it"
           ? "Piccole aziende e studi professionali"
           : lang === "fr"
-          ? "PME et cabinets d'expertise"
+          ? "Petites entreprises et cabinets professionnels"
           : lang === "es"
           ? "Pequeñas empresas y despachos"
-          : "Small Businesses & Boutiques",
+          : "Small businesses and professional practices",
       description:
         lang === "it"
           ? "Un supporto operativo per le attività di segreteria, organizzazione e back office che richiedono tempo e continuità."
@@ -297,7 +297,7 @@ export default function IndexPage() {
       icon: Globe,
       title:
         lang === "it"
-          ? "Professionisti che lavorano con l'estero"
+          ? "Professionisti che comunicano in più lingue"
           : lang === "fr"
           ? "Professionnels travaillant à l’international"
           : lang === "es"
@@ -305,7 +305,7 @@ export default function IndexPage() {
           : "Professionals Working Internationally",
       description:
         lang === "it"
-          ? "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Supporto inoltre le comunicazioni professionali con interlocutori internazionali."
+          ? "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano. Offro inoltre supporto alla corrispondenza professionale multilingue, secondo le attività concordate."
           : lang === "fr"
           ? "Je traduis dans les deux sens entre l’italien et l’anglais, le français et l’espagnol. J’accompagne également les échanges écrits convenus avec vos clients et interlocuteurs professionnels déjà acquis."
           : lang === "es"
@@ -314,84 +314,13 @@ export default function IndexPage() {
     },
   ];
 
-  const steps = [
-    {
-      number: "01",
-      title:
-        lang === "it"
-          ? "Invii una richiesta scritta"
-          : lang === "fr"
-          ? "Demande écrite"
-          : lang === "es"
-          ? "Solicitud por escrito"
-          : "Written enquiry",
-      description:
-        lang === "it"
-          ? "Raccontami le attività da delegare tramite il modulo: nessuna telefonata obbligatoria."
-          : lang === "fr"
-          ? "Décrivez les tâches à déléguer par écrit, sans appel préalable obligatoire."
-          : lang === "es"
-          ? "Explícame por escrito las tareas que quieres delegar, sin llamada obligatoria."
-          : "Describe the work you want to delegate in a written enquiry, without a mandatory call.",
-    },
-    {
-      number: "02",
-      title:
-        lang === "it"
-          ? "Individuiamo cosa delegare"
-          : lang === "fr"
-          ? "Cibler les tâches"
-          : lang === "es"
-          ? "Identificamos qué delegar"
-          : "Identify Scope",
-      description:
-        lang === "it"
-          ? "Partiamo dalle attività per cui potrei offrirti un supporto concreto."
-          : lang === "fr"
-          ? "Nous sélectionnons ensemble les missions précises pour lesquelles mon aide sera la plus efficace."
-          : lang === "es"
-          ? "Identificamos las tareas concretas en las que puedo ayudarte y acordamos prioridades y entregables."
-          : "We identify the specific tasks I can take on and agree clear priorities, responsibilities and deliverables.",
-    },
-    {
-      number: "03",
-      title:
-        lang === "it"
-          ? "Definiamo la collaborazione"
-          : lang === "fr"
-          ? "Modalités sur mesure"
-          : lang === "es"
-          ? "Fijamos la colaboración"
-          : "Set Collaboration",
-      description:
-        lang === "it"
-          ? "Stabiliamo attività, modalità e tempi di lavoro in base alle tue esigenze."
-          : lang === "fr"
-          ? "Nous convenons des modalités, du rythme et des canaux d'échange selon vos préférences."
-          : lang === "es"
-          ? "Establecemos tiempos, metodología y canales de trabajo adaptados a tus hábitos."
-          : "We agree on transparent deliverables, workflow rhythms, and communication preferences.",
-    },
-    {
-      number: "04",
-      title:
-        lang === "it"
-          ? "Iniziamo"
-          : lang === "fr"
-          ? "Démarrage serein"
-          : lang === "es"
-          ? "Comenzamos"
-          : "Get Started",
-      description:
-        lang === "it"
-          ? "Tu continui a concentrarti sulle tue priorità. Io mi occupo delle attività che abbiamo deciso di delegare."
-          : lang === "fr"
-          ? "Vous vous recentrez sur votre cœur de métier. Je prends en charge les tâches déléguées avec rigueur."
-          : lang === "es"
-          ? "Puedes centrarte en tus prioridades mientras gestiono las tareas acordadas y consulto contigo las decisiones que requieren tu aprobación."
-          : "You focus on your priorities while I manage the agreed tasks, keeping you informed and seeking approval where needed.",
-    },
-  ];
+  // One source of truth across the homepage and the dedicated service pages.
+  // This prevents a translation from omitting the written quote or changing the workflow.
+  const steps = dict.howWeWork.steps.map(step => ({
+    number: step.num,
+    title: step.title,
+    description: step.desc,
+  }));
 
   const blogPosts = getBlogPosts(lang).filter(post => post.published !== false).sort((a,b) => b.dateISO.localeCompare(a.dateISO)).slice(0, 3);
 
@@ -476,7 +405,7 @@ export default function IndexPage() {
           ? "Gérez-vous la comptabilité et la facturation ?"
           : lang === "es"
           ? "¿Te encargas de la contabilidad y facturación?"
-          : "Do you handle accounting and fiscal filings?",
+          : "Do you handle accounting or invoicing?",
       a:
         lang === "it"
           ? "No. Non offro servizi amministrativi, contabili, di fatturazione o fiscali. Posso invece organizzare documenti e informazioni relativi alle attività operative concordate."
