@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzioni IT ↔ EN/FR/ES e localizzazione',
         subtitle: "Comunicare nella lingua giusta, con attenzione al contesto e al destinatario.",
         description:
-          "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano, valutando ogni testo prima dell'incarico. Per chi lavora con l'Italia curo in particolare la naturalezza, il tono e il contesto delle comunicazioni destinate al pubblico italiano. Traduzione, localizzazione, revisione e corrispondenza vengono definite nel preventivo.",
+          "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano, valutando ogni testo prima dell'incarico. Per chi lavora con l'Italia curo in particolare la naturalezza, il tono e il contesto delle comunicazioni destinate al pubblico italiano. In base al progetto, traduzione, localizzazione, revisione e corrispondenza vengono definite nel preventivo.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti e landing page per il pubblico italiano',
@@ -136,7 +136,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Ricerche informative a supporto',
         subtitle: "Informazioni selezionate e organizzate per supportare le tue attività.",
         description:
-          "Raccolgo e organizzo informazioni pubbliche, confronto fonti, strumenti e fornitori e preparo schede comparative o sintesi per esigenze operative e progetti già definiti. Non svolgo ricerca di potenziali clienti, raccolta di contatti commerciali né attività di acquisizione.",
+          "Posso raccogliere e organizzare informazioni pubbliche, confrontare fonti, strumenti e fornitori e preparo schede comparative o sintesi per esigenze operative e progetti già definiti. Non svolgo ricerca di potenziali clienti, raccolta di contatti commerciali né attività di acquisizione.",
         iconName: 'Search',
         items: [
           'Analisi dei concorrenti e benchmark delle tariffe',
