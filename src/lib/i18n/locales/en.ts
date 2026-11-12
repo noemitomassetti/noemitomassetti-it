@@ -5,7 +5,7 @@ export const enLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Italian Translation & Localisation for International Businesses | Noemi Tomassetti',
-    homeDesc: 'Communicate naturally with your Italian audience: translation, localisation, website and social content, and customer correspondence. Multilingual virtual assistance and back-office support are also available.',
+    homeDesc: 'Communicate naturally with your Italian audience: translation, localisation, website and social content, and customer correspondence. Written customer care, multilingual virtual assistance and back-office support are also available.',
     servicesTitle: 'Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti',
     servicesDesc: 'Italian-market localisation, professional translation, website and landing-page copy, social content and customer emails. The full range of multilingual virtual-assistance and back-office services is also available.',
     noetomTitle: 'NoeTom | Internal operations project',
@@ -36,14 +36,14 @@ export const enLocale: TranslationDictionary = {
     badge: 'MULTILINGUAL VIRTUAL ASSISTANT',
     titleLine1: 'Italian-language communication, translation and localisation',
     titleHighlight: 'for businesses working with Italy',
-    subtitle: "Communicate clearly and naturally with customers in Italy. I translate, revise and adapt website and landing-page copy, emails, newsletters, social content and other business communications. My full virtual-assistance services are also available.",
+    subtitle: "Communicate clearly and naturally with customers in Italy. I translate, revise and adapt website and landing-page copy, emails, newsletters, social content and other business communications. Written customer care and my full range of virtual-assistance services are also available.",
     headline: 'The right words for your Italian audience.',
     desc1: 'As a native Italian speaker with specialist translation training, I help international professionals communicate appropriately with people in Italy—not simply translate words from one language to another.',
     desc2: 'Whether you need an Italian landing page, carefully worded customer emails or consistent product information, I focus on clarity, tone and context. I also provide the same back-office, secretarial and customer-support services offered to my Italian clients.',
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
-      'For international clients, I focus on communicating with Italy: translation and localisation into Italian, customer correspondence, websites, landing pages, newsletters and social content. I also translate from Italian into English, French and Spanish and offer agreed operational support.',
+      'For international clients, I focus on communicating with Italy: translation and localisation into Italian, customer correspondence, websites, landing pages, newsletters and social content. I translate both from Italian into English, French and Spanish and from these languages into Italian. I also offer agreed operational support.',
     ctaServices: 'Explore services',
     ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
