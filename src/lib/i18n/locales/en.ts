@@ -5,7 +5,7 @@ export const enLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: "Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti",
-    homeDesc: "Italian-language communication and localisation for international professionals, plus written customer support, virtual assistance and back-office services. Translation IT ↔ EN/FR/ES.",
+    homeDesc: "Italian-language communication and localisation for international professionals, plus written customer care, virtual assistance and back-office services. Translation IT ↔ EN/FR/ES.",
     servicesTitle: 'Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti',
     servicesDesc: 'Italian-market localisation, professional translation, website and landing-page copy, social content and customer emails. The full range of multilingual virtual-assistance and back-office services is also available.',
     noetomTitle: 'NoeTom | Internal operations project',
@@ -36,7 +36,7 @@ export const enLocale: TranslationDictionary = {
     badge: 'MULTILINGUAL VIRTUAL ASSISTANT',
     titleLine1: 'Italian-language communication, translation and localisation',
     titleHighlight: 'for businesses working with Italy',
-    subtitle: "Italian translation and localisation, customer correspondence, website content and multilingual virtual assistance for professionals working with Italy.",
+    subtitle: "Italian translation and localisation, customer correspondence, written customer care, website content and multilingual virtual assistance for professionals working with Italy.",
     headline: "Natural, professional communication for your Italian audience",
     desc1: "I help international professionals and small businesses communicate clearly in Italian, with the right tone, terminology and attention to professional context.",
     desc2: "My work also covers agreed secretarial tasks, back-office activities, written customer support and professional translation between Italian and English, French or Spanish.",
@@ -89,7 +89,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Virtual Secretarial Support & Operational Back Office',
         subtitle: "Practical support with everyday secretarial and back-office tasks.",
         description:
-          "I can organise correspondence, calendars and documents, update records, handle operational orders and prepare quotes using approved information and instructions. Scope and approvals are agreed in advance. Accounting, invoicing, company administration and sales prospecting are excluded.",
+          "I can organise correspondence, calendars and documents, update records, handle operational orders and prepare quotes using approved information and instructions. Scope and approvals are agreed in advance. Depending on the brief, I can assist with operational tasks, but I do not offer telemarketing, customer acquisition, bookkeeping, invoicing or company administration.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
@@ -105,7 +105,7 @@ export const enLocale: TranslationDictionary = {
         title: 'IT ↔ EN/FR/ES Translation and Italian Localisation',
         subtitle: "The right language, tone and context for your audience.",
         description:
-          "I translate between Italian and English, French or Spanish in both directions, assessing each text before accepting an assignment. For organisations communicating with Italy, I pay particular attention to natural Italian wording, appropriate tone and the intended readership. Translation, localisation, revision and correspondence are scoped separately in the quote.",
+          "I translate from Italian into English, French and Spanish and from these languages into Italian, assessing each text before accepting an assignment. For organisations communicating with Italy, I pay particular attention to natural Italian wording, appropriate tone and the intended readership. Translation, localisation, revision and correspondence are scoped separately in the quote.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
