@@ -5,7 +5,7 @@ export const itLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: "Noemi Tomassetti | Assistente virtuale multilingue, traduzioni e back office",
-    homeDesc: "Segreteria virtuale, back office, assistenza clienti, contenuti e traduzioni IT ↔ EN/FR/ES. Supporto per professionisti in Italia e per chi comunica con il mercato italiano.",
+    homeDesc: "Segreteria virtuale, back office, assistenza clienti, contenuti e traduzioni IT ↔ EN/FR/ES. Servizi da remoto per professionisti, consulenti e piccole attività.",
     servicesTitle: 'Servizi Professionali | Noemi Tomassetti',
     servicesDesc: 'Segreteria, back office, assistenza scritta ai clienti, traduzioni professionali IT ↔ EN/FR/ES e localizzazione per il mercato italiano.',
     noetomTitle: 'NoeTom | Progetto operativo interno',
@@ -39,7 +39,7 @@ export const itLocale: TranslationDictionary = {
     subtitle: "Segreteria virtuale, back office, assistenza clienti, comunicazioni, contenuti professionali e traduzioni IT ↔ EN/FR/ES.",
     headline: "Il supporto professionale per organizzare il lavoro e comunicare meglio",
     desc1: "Aiuto professionisti, consulenti e piccole attività a gestire le attività operative quotidiane, con un supporto flessibile e concordato in base alle esigenze.",
-    desc2: "Grazie alla mia formazione linguistica, affianco anche professionisti e aziende estere che hanno bisogno di comunicare in italiano con chiarezza, naturalezza e attenzione al contesto professionale.",
+    desc2: "Unisco l'esperienza organizzativa alla formazione linguistica per curare anche traduzioni, testi e comunicazioni professionali in italiano, inglese, francese e spagnolo.",
     ctaButton: 'RICHIEDI UN PREVENTIVO',
     callReassurance: 'Richiesta senza impegno',
     description:
@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzioni IT ↔ EN/FR/ES e localizzazione',
         subtitle: "Comunicare nella lingua giusta, con attenzione al contesto e al destinatario.",
         description:
-          "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano, valutando ogni testo prima dell'incarico. Per chi lavora con l'Italia curo in particolare la naturalezza, il tono e il contesto delle comunicazioni destinate al pubblico italiano. In base al progetto, traduzione, localizzazione, revisione e corrispondenza vengono definite nel preventivo.",
+          "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano, valutando ogni testo prima dell'incarico. Per le comunicazioni destinate a un pubblico italiano curo in particolare la naturalezza, il tono e l'adeguatezza al contesto professionale. In base al progetto, traduzione, localizzazione, revisione e corrispondenza vengono definite nel preventivo.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti e landing page per il pubblico italiano',
@@ -362,7 +362,7 @@ export const itLocale: TranslationDictionary = {
       "Nel corso della mia carriera mi sono occupata, tra le altre cose, di assistenza clienti, back office, gestione degli ordini, organizzazione e supporto operativo.",
       "Ho conseguito la laurea in Mediazione Linguistica presso l'Università degli Studi di Macerata, con votazione 110 e lode, e ho proseguito gli studi con un master in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona.",
       "L'italiano è la mia lingua madre. Lavoro anche con inglese, francese e spagnolo, offrendo traduzioni da e verso l'italiano, revisione linguistica e supporto alle comunicazioni multilingue.",
-      "Oggi affianco professionisti e piccole realtà nell'organizzazione del lavoro quotidiano e nella comunicazione professionale, anche con il mercato italiano.",
+      "Oggi affianco professionisti e piccole realtà nell'organizzazione del lavoro quotidiano e nella cura di testi e comunicazioni professionali.",
     ],
     credentials: [
       { title: 'Esperienza professionale ultraventennale', detail: 'Customer care, back office, organizzazione e supporto operativo' },
@@ -380,7 +380,7 @@ export const itLocale: TranslationDictionary = {
       "Ho maturato oltre vent'anni di esperienza lavorativa complessiva in contesti diversi, svolgendo anche attività di assistenza clienti, organizzazione, gestione ordini e back office.",
       "Questo percorso mi ha insegnato l'importanza di istruzioni chiare, comunicazioni accurate e attività ben definite. Ogni collaborazione parte dall'ascolto delle esigenze e dalla valutazione di ciò che posso effettivamente svolgere.",
       "Ho conseguito la laurea in Mediazione Linguistica presso l'Università degli Studi di Macerata (110/110 e lode) e un master in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 ore, 60 CFU). Valuto i testi specialistici caso per caso; non offro traduzioni giurate o asseverate.",
-      "Oggi lavoro da remoto con professionisti e piccole attività, offrendo un supporto organizzativo e linguistico concordato per iscritto, anche nelle comunicazioni destinate al mercato italiano.",
+      "Oggi lavoro da remoto con professionisti e piccole attività, offrendo un supporto organizzativo e linguistico definito in base alle esigenze e concordato per iscritto.",
     ],
     timeline: [
       {
