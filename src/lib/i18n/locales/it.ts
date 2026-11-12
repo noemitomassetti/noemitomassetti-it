@@ -88,7 +88,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Segreteria organizzativa e back office operativo',
         subtitle: "Un supporto pratico per le attività organizzative e operative quotidiane.",
         description:
-          "Posso aiutarti a gestire corrispondenza, agenda, documenti, inserimento dati, ordini e preventivi operativi sulla base di indicazioni e condizioni approvate. Attività e responsabilità vengono concordate prima dell'avvio. Sono esclusi contabilità, fatturazione, amministrazione aziendale e acquisizione commerciale.",
+          "Posso aiutarti a gestire corrispondenza, agenda, documenti, inserimento dati, ordini e preventivi operativi sulla base di indicazioni e condizioni approvate. Attività e responsabilità vengono concordate prima dell'avvio. Sono esclusi amministrazione aziendale, contabilità, fatturazione e acquisizione commerciale.",
         iconName: 'Mail',
         items: [
           'Gestione e organizzazione delle email',
@@ -104,7 +104,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Traduzioni IT ↔ EN/FR/ES e localizzazione',
         subtitle: "Comunicare nella lingua giusta, con attenzione al contesto e al destinatario.",
         description:
-          "Traduco dall'inglese, dal francese e dallo spagnolo verso l'italiano e dall'italiano verso queste tre lingue, valutando ogni testo prima dell'incarico. Per chi lavora con l'Italia curo in particolare la naturalezza, il tono e il contesto delle comunicazioni destinate al pubblico italiano. Traduzione, localizzazione, revisione e corrispondenza vengono definite nel preventivo.",
+          "Traduco dall’italiano verso l’inglese, il francese e lo spagnolo e da queste lingue verso l’italiano, valutando ogni testo prima dell'incarico. Per chi lavora con l'Italia curo in particolare la naturalezza, il tono e il contesto delle comunicazioni destinate al pubblico italiano. Traduzione, localizzazione, revisione e corrispondenza vengono definite nel preventivo.",
         iconName: 'Globe',
         items: [
           'Localizzazione di siti e landing page per il pubblico italiano',
