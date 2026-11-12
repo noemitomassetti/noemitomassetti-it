@@ -382,17 +382,17 @@ export default function Portfolio() {
   const contactPath = getLocalizedPath("contact", lang);
   const browseSections = [
     { id:"tangible-work", number:"01",
-      labels:{it:"Documenti in evidenza",en:"Featured samples",fr:"Exemples à la une",es:"Muestras destacadas"},
-      details:{it:"Una selezione da leggere subito",en:"Start with a curated selection",fr:"Une première sélection à découvrir",es:"Una selección para empezar"} },
+      labels:{it:"Lavori da leggere",en:"Open work samples",fr:"Consulter les exemples",es:"Leer las muestras de trabajo"},
+      details:{it:"Email, traduzioni e documenti concreti",en:"Emails, translations and documents",fr:"Courriels, traductions et documents",es:"Correos, traducciones y documentos"} },
     { id:"portfolio-complete-dossiers", number:"02",
-      labels:{it:"26 dossier approfonditi",en:"26 detailed examples",fr:"26 dossiers pratiques",es:"26 ejemplos detallados"},
-      details:{it:"Traduzioni a fronte e processi operativi simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
+      labels:{it:"Traduzioni e attività operative",en:"Translations and operational tasks",fr:"Traductions et tâches pratiques",es:"Traducciones y tareas prácticas"},
+      details:{it:"Elaborati completi, con ricerca per attività",en:"Search work samples by service",fr:"Recherchez des exemples par prestation",es:"Busca ejemplos por servicio"} },
     { id:"portfolio-legacy-cases", number:"03",
-      labels:{it:"18 casi di metodo",en:"18 methodology cases",fr:"18 études méthodologiques",es:"18 casos metodológicos"},
-      details:{it:"Scelte operative e revisioni commentate",en:"Decisions and editorial notes",fr:"Décisions et commentaires de révision",es:"Decisiones y notas de revisión"} },
+      labels:{it:"Altri esempi commentati",en:"Further annotated examples",fr:"Autres exemples commentés",es:"Más ejemplos comentados"},
+      details:{it:"Contesto, scelte e documenti collegati",en:"Context, decisions and linked documents",fr:"Contexte, choix et documents liés",es:"Contexto, decisiones y documentos relacionados"} },
     { id:"portfolio-document-library", number:"04",
-      labels:{it:"22 documenti consultabili",en:"22 sample documents",fr:"22 documents à consulter",es:"22 documentos de muestra"},
-      details:{it:"File di esempio con contesto multilingue",en:"Full examples with multilingual context",fr:"Documents et explications multilingues",es:"Documentos y explicaciones multilingües"} }
+      labels:{it:"Archivio completo dei documenti",en:"Complete document library",fr:"Bibliothèque des documents",es:"Archivo completo de documentos"},
+      details:{it:"Apri ogni elaborato nella sua versione integrale",en:"Open any complete sample document",fr:"Ouvrez les documents complets",es:"Abre cada documento completo"} }
   ] as const;
 
 
@@ -442,17 +442,7 @@ export default function Portfolio() {
               ? "Ces exemples originaux ont été préparés pour illustrer ma méthode de travail. Les situations, les noms et les données sont fictifs ; il ne s'agit pas de missions commandées par de véritables clients."
               : "Estas muestras originales se han preparado para mostrar mi forma de trabajar. Las situaciones, los nombres y los datos son ficticios; no se trata de encargos realizados para clientes reales."}
           </p>
-          <nav aria-label={({it:"Percorsi di consultazione del portfolio",en:"Browse the portfolio",fr:"Explorer le portfolio",es:"Explorar el portfolio"} as const)[lang]}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
-            {browseSections.map(section=>(
-              <a key={section.id} href={"#"+section.id}
-                className="group rounded-xl border border-border/70 bg-background/70 p-4 transition-colors hover:border-primary/70 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                <span className="block text-xs font-bold tracking-widest text-primary mb-2">{section.number}</span>
-                <span className="block font-semibold leading-snug text-foreground group-hover:text-primary">{section.labels[lang]}</span>
-                <span className="block text-xs leading-relaxed text-muted-foreground mt-2">{section.details[lang]}</span>
-              </a>
-            ))}
-          </nav>
+
         </div>
       </section>
 
@@ -488,6 +478,22 @@ export default function Portfolio() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-6 bg-secondary/10 border-b border-border/40" aria-label={({it:"Esplora gli altri esempi",en:"Browse more work samples",fr:"Découvrir d’autres exemples",es:"Explorar otras muestras"} as const)[lang]}>
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+          <nav aria-label={({it:"Percorsi di consultazione del portfolio",en:"Browse the portfolio",fr:"Explorer le portfolio",es:"Explorar el portfolio"} as const)[lang]}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
+            {browseSections.map(section=>(
+              <a key={section.id} href={"#"+section.id}
+                className="group rounded-xl border border-border/70 bg-background/70 p-4 transition-colors hover:border-primary/70 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <span className="block text-xs font-bold tracking-widest text-primary mb-2">{section.number}</span>
+                <span className="block font-semibold leading-snug text-foreground group-hover:text-primary">{section.labels[lang]}</span>
+                <span className="block text-xs leading-relaxed text-muted-foreground mt-2">{section.details[lang]}</span>
+              </a>
+            ))}
+          </nav>
         </div>
       </section>
 
