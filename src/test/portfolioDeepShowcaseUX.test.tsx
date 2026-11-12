@@ -72,7 +72,7 @@ describe("Deep portfolio user experience", () => {
   it("identifies demonstration work honestly and provides distinct link names", () => {
     mount("en");
     expect(screen.getByRole("heading", { name: /Italian translation, customer messages and practical work samples/ })).toBeInTheDocument();
-    expect(screen.getByText(/not excerpts from commissioned work/)).toBeInTheDocument();
+    expect(screen.getByText(/rather than commissioned client materials/)).toBeInTheDocument();
     const labels = screen.getAllByRole("link", { name: /Read the complete dossier:/ })
       .map(link => link.getAttribute("aria-label"));
     expect(labels).toHaveLength(8);
