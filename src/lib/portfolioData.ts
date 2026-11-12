@@ -68,10 +68,10 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Ejemplos concretos de textos web en inglés adaptados al italiano"
     },
     "brief": {
-      "it": "Scenario simulato: uno studio internazionale di interior design desidera presentare servizi di consulenza d’arredo a persone residenti in Italia.",
-      "en": "Fictional brief: an international interior-design studio needs clear Italian-language copy for customers based in Italy.",
-      "fr": "Scénario fictif : un studio international d’aménagement intérieur s’adresse à des clients résidant en Italie.",
-      "es": "Supuesto ficticio: un estudio internacional de interiorismo necesita textos para clientes residentes en Italia."
+      "it": "Scenario di lavoro: uno studio internazionale di interior design desidera presentare servizi di consulenza d’arredo a persone residenti in Italia.",
+      "en": "Project brief: an international interior-design studio needs clear Italian-language copy for customers based in Italy.",
+      "fr": "Contexte du projet : un studio international d’aménagement intérieur s’adresse à des clients résidant en Italie.",
+      "es": "Situación de trabajo: un estudio internacional de interiorismo necesita textos para clientes residentes en Italia."
     },
     "startingMaterial": {
       "it": "Headline, presentazione del servizio e invito all’azione redatti originariamente in inglese.",
@@ -764,7 +764,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     },
     startingMaterial: {
       it: "Scenario sintetico con 50 comunicazioni in entrata, richieste appuntamenti disordinate e 3 clienti in attesa di preventivo (Clienti Demo A, B, C).",
-      en: "Synthetic simulation with 50 unfiled client messages, irregular calendar requests, and pending quotes for Demo Clients A, B, and C.",
+      en: "Practice scenario with 50 sample client messages, irregular calendar requests, and pending quotes for Demo Clients A, B, and C.",
       fr: "Scénario synthétique de 50 messages entrants non traités, rendez-vous non confirmés et devis en attente.",
       es: "Escenario demostrativo con 50 correos sin clasificar, citas desorganizadas y presupuestos pendientes.",
     },
@@ -914,10 +914,10 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Titulares, preguntas frecuentes y llamadas a la acción en italiano, sin desarrollo técnico"
     },
     "brief": {
-      "it": "Scenario simulato: un consulente internazionale ha una pagina in inglese e vuole renderne il messaggio comprensibile a visitatori italiani.",
-      "en": "Fictional scenario: an international consultant has an English landing page and wants to communicate clearly with Italian visitors.",
-      "fr": "Scénario fictif : un consultant international souhaite adapter une page anglophone au public italien.",
-      "es": "Supuesto ficticio: un consultor internacional quiere adaptar una página en inglés a lectores italianos."
+      "it": "Scenario di lavoro: un consulente internazionale ha una pagina in inglese e vuole renderne il messaggio comprensibile a visitatori italiani.",
+      "en": "Project scenario: an international consultant has an English landing page and wants to communicate clearly with Italian visitors.",
+      "fr": "Contexte du projet : un consultant international souhaite adapter une page anglophone au public italien.",
+      "es": "Situación de trabajo: un consultor internacional quiere adaptar una página en inglés a lectores italianos."
     },
     "startingMaterial": {
       "it": "Una bozza in inglese contenente titolo, testo introduttivo, servizi, FAQ e invito a chiedere informazioni.",
@@ -1262,7 +1262,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Clasificación, respuestas y criterios de escalado"
     },
     "brief": {
-      "it": "Scenario simulato: un piccolo negozio online deve gestire richieste su disponibilità, ordini e tempi di consegna da clienti esistenti.",
+      "it": "Scenario di lavoro: un piccolo negozio online deve gestire richieste su disponibilità, ordini e tempi di consegna da clienti esistenti.",
       "en": "Fictional small online shop needs organised Italian replies to current customers about stock, orders and delivery.",
       "fr": "Boutique en ligne fictive : demandes de clients italiens sur stock, commandes et livraison.",
       "es": "Tienda online ficticia: consultas de clientes italianos sobre stock, pedidos y entregas."
