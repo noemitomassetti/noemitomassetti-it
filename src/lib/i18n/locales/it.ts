@@ -373,14 +373,14 @@ export const itLocale: TranslationDictionary = {
     ctaReadMore: 'Approfondisci il mio percorso',
   },
   aboutPage: {
-    title: 'Chi sono — Noemi Tomassetti',
-    subtitle: 'Esperienza professionale, solida formazione linguistica e cura operativa.',
-    storyTitle: 'Un percorso fondato su precisione, relazione e cura',
+    title: "Esperienza, formazione e metodo",
+    subtitle: "Un percorso professionale e linguistico al servizio di attività concrete.",
+    storyTitle: "Un'esperienza costruita in contesti professionali diversi",
     storyParagraphs: [
-      'La mia storia professionale si è sviluppata attorno a tre pilastri: la passione per le lingue, la precisione organizzativa e il piacere di essere un punto di riferimento affidabile per i professionisti con cui collaboro.',
-      'Ho maturato oltre vent’anni di esperienza professionale in diversi contesti lavorativi, sviluppando competenze in customer care, organizzazione, back office e comunicazione multilingue. Ho imparato che l’efficienza concreta non nasce da formule rigide, ma dalla capacità di ascoltare, semplificare i flussi e togliere gli attriti operativi quotidiani.',
-      'La mia formazione comprende la laurea triennale in Mediazione Linguistica presso l’Università degli Studi di Macerata (110/110 e lode) e il master universitario di primo livello in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 ore, 60 CFU, prova finale superata). Ho approfondito ambiti letterari, giuridici, economici, tecnologici e scientifici. Valuto i testi giuridici caso per caso e non offro traduzioni giurate o asseverate.',
-      'Lavoro con un approccio pratico: attività concordate, comunicazioni chiare, organizzazione dei materiali e aggiornamenti regolari.',
+      "Ho maturato oltre vent'anni di esperienza lavorativa complessiva in contesti diversi, svolgendo anche attività di assistenza clienti, organizzazione, gestione ordini e back office.",
+      "Questo percorso mi ha insegnato l'importanza di istruzioni chiare, comunicazioni accurate e attività ben definite. Ogni collaborazione parte dall'ascolto delle esigenze e dalla valutazione di ciò che posso effettivamente svolgere.",
+      "Ho conseguito la laurea in Mediazione Linguistica presso l'Università degli Studi di Macerata (110/110 e lode) e un master in Traduzione Specialistica presso la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 ore, 60 CFU). Valuto i testi specialistici caso per caso; non offro traduzioni giurate o asseverate.",
+      "Oggi lavoro da remoto con professionisti e piccole attività, offrendo un supporto organizzativo e linguistico concordato per iscritto, anche nelle comunicazioni destinate al mercato italiano.",
     ],
     timeline: [
       {
@@ -406,51 +406,26 @@ export const itLocale: TranslationDictionary = {
     ],
     valuesTitle: 'I principi del mio modo di lavorare',
     values: [
-      {
-        title: 'Prima l’ascolto, poi l’azione',
-        desc: 'Ogni attività è diversa. Non applico schemi rigidi: inizio sempre comprendendo le tue abitudini e i tuoi punti di attrito.',
-      },
-      {
-        title: 'La tecnologia a supporto della relazione',
-        desc: 'Gli strumenti digitali servono a liberare tempo per ciò che conta. La precisione tecnica convive sempre con il tatto e il calore umano.',
-      },
-      {
-        title: 'Affidabilità e trasparenza',
-        desc: 'Se prendo un impegno lo porto a termine nei tempi concordati. Puoi delegare sapendo che le tue attività sono in mani sicure.',
-      },
+      { title: "Ascolto e chiarezza", desc: "Prima di iniziare definiamo il lavoro da svolgere, i materiali necessari e le decisioni che rimangono di tua competenza." },
+      { title: "Strumenti al servizio del lavoro", desc: "Utilizzo strumenti digitali e procedure semplici per organizzare i materiali e facilitare la collaborazione, senza sostituire le verifiche professionali." },
+      { title: "Riservatezza e aggiornamenti", desc: "Lavoro entro il perimetro concordato, tratto con attenzione i materiali ricevuti e segnalo tempestivamente le questioni da chiarire." },
     ],
   },
   howWeWork: {
-    tag: 'METODO',
-    title: 'Iniziare a collaborare è semplice.',
-    subtitle: 'Quattro passaggi chiari per costruire un supporto efficace fin dal primo giorno.',
+    tag: "METODO",
+    title: "Come iniziare una collaborazione",
+    subtitle: "Quattro passaggi, dalla richiesta scritta all'avvio del lavoro.",
     steps: [
-      {
-        num: '01',
-        title: 'Ascolto e confronto',
-        desc: 'Un primo scambio scritto per comprendere la tua attività, le scadenze e le attività che vuoi delegare.',
-      },
-      {
-        num: '02',
-        title: 'Definizione degli obiettivi',
-        desc: 'Identifichiamo le attività da delegare subito e stabiliamo le modalità di lavoro, con orari e canali di comunicazione chiari.',
-      },
-      {
-        num: '03',
-        title: 'Avvio operativo',
-        desc: 'Condividiamo accessi, documenti o cartelle di lavoro e iniziamo con i primi compiti di allineamento reciproco.',
-      },
-      {
-        num: '04',
-        title: 'Autonomia e continuità',
-        desc: 'Gestisco le attività concordate con autonomia operativa, fornendoti aggiornamenti e sottoponendo a conferma le decisioni che lo richiedono.',
-      },
+      { num: "01", title: "Mi descrivi le tue esigenze", desc: "Compili il modulo o mi scrivi via email, indicando le attività richieste e le eventuali tempistiche." },
+      { num: "02", title: "Valuto la richiesta", desc: "Esamino il materiale disponibile e, se necessario, ti chiedo ulteriori informazioni per definire il lavoro." },
+      { num: "03", title: "Ricevi un preventivo", desc: "Ti propongo per iscritto le attività, i tempi, il compenso e le condizioni di collaborazione." },
+      { num: "04", title: "Iniziamo a lavorare", desc: "Dopo la tua accettazione e secondo le condizioni concordate, avviamo le attività previste." },
     ],
   },
   contactSection: {
     tag: 'CONTATTI',
-    title: 'Parliamo delle tue esigenze operative',
-    subtitle: 'Descrivi la tua richiesta nel modulo: ti risponderò per iscritto. Non è necessaria una chiamata conoscitiva.',
+    title: "Raccontami di cosa hai bisogno",
+    subtitle: "Hai un'attività da delegare, un testo da tradurre o una comunicazione da preparare? Descrivimi la richiesta: ti risponderò per iscritto, senza telefonata obbligatoria.",
     form: {
       name: 'Nome *',
       surname: 'Cognome *',
@@ -469,7 +444,7 @@ export const itLocale: TranslationDictionary = {
       preferredLanguage: 'Lingua preferita per le comunicazioni',
       message: 'Descrivi la tua attività e le tue esigenze *',
       gdpr: 'Confermo di aver letto l’informativa sul trattamento dei dati personali (GDPR).',
-      submit: 'Invia il messaggio',
+      submit: "Invia la richiesta",
       sending: 'Invio in corso...',
       successTitle: 'Richiesta accettata dal servizio di inoltro',
       successDesc: 'Grazie per avermi scritto. Il servizio di inoltro ha accettato la richiesta; il recapito finale deve ancora essere verificato.',
