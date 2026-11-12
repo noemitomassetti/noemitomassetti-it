@@ -43,10 +43,10 @@ export interface PortfolioCase {
 }
 
 export const DEMO_DISCLAIMER: Record<Language, string> = {
-  it: "Esempio dimostrativo originale, con dati fittizi: non è un incarico svolto per un cliente reale. Eventuali documenti dei clienti vengono pubblicati soltanto con autorizzazione.",
-  en: "Original fictional work sample, not a commissioned client project. Client documents are published only with permission.",
-  fr: "Exemple professionnel original à partir de données fictives, et non mission client réelle. Aucun document client n’est publié sans autorisation.",
-  es: "Muestra profesional original con datos ficticios, no un encargo real. Los documentos de clientes solo se publican con autorización.",
+  it: "Elaborato originale creato per questo portfolio. Scenario, nomi e dati sono inventati: non si tratta di un incarico commissionato da un cliente.",
+  en: "Original work sample created for this portfolio. The scenario, names and details are invented; it is not a commissioned client project.",
+  fr: "Travail original créé pour ce portfolio. Le scénario, les noms et les données sont inventés : il ne s’agit pas d’une commande de client.",
+  es: "Muestra original creada para este porfolio. El supuesto, los nombres y los datos son inventados; no es un encargo realizado para un cliente.",
 };
 
 export const PORTFOLIO_CASES: PortfolioCase[] = [
@@ -63,7 +63,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     },
     "subtitle": {
       "it": "Testi web, call to action e note traduttologiche per un pubblico italiano",
-      "en": "Original fictional source/target samples for Italian website copy",
+      "en": "Original English-to-Italian website copy samples with translation notes",
       "fr": "Exemples concrets de textes web anglais et de leur adaptation italienne",
       "es": "Ejemplos concretos de textos web en inglés adaptados al italiano"
     },
