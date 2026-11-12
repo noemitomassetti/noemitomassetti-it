@@ -36,7 +36,7 @@ export const esLocale: TranslationDictionary = {
     badge: 'ASISTENTE VIRTUAL MULTILINGÜE',
     titleLine1: 'Comunicación en italiano, traducción y localización',
     titleHighlight: 'para llegar al público italiano',
-    subtitle: "Traducción y adaptación de contenidos para Italia, correspondencia con clientes, textos web y asistencia virtual multilingüe.",
+    subtitle: "Traducción y adaptación de contenidos para Italia, correspondencia profesional, atención al cliente por escrito, textos web y asistencia virtual multilingüe.",
     headline: "Comunicación natural y profesional para el público italiano",
     desc1: "Ayudo a profesionales y pequeñas empresas a comunicarse con claridad en italiano, con el tono, la terminología y el contexto adecuados para sus destinatarios.",
     desc2: "También ofrezco, según lo acordado, servicios de secretaría, back office, atención escrita al cliente y traducción entre el italiano y el inglés, francés o español.",
@@ -88,7 +88,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Secretaría organizativa y back office operativo',
         subtitle: "Apoyo práctico para las tareas diarias de secretaría y back office.",
         description:
-          "Puedo organizar correos, agenda y documentos, actualizar datos, gestionar pedidos operativos y preparar presupuestos a partir de información e instrucciones aprobadas. Las tareas y autorizaciones se acuerdan por adelantado. Quedan excluidas la contabilidad, la facturación, la administración empresarial y la captación comercial.",
+          "Puedo organizar correos, agenda y documentos, actualizar datos, gestionar pedidos operativos y preparar presupuestos a partir de información e instrucciones aprobadas. Las tareas y autorizaciones se acuerdan por adelantado. Según el encargo, realizo únicamente las tareas acordadas. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
         iconName: 'Mail',
         items: [
           'Clasificación y organización del correo profesional',
@@ -104,7 +104,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Traducción IT ↔ EN/FR/ES y localización',
         subtitle: "El idioma y el tono adecuados para cada destinatario.",
         description:
-          "Traduzco entre el italiano y el inglés, francés o español en ambas direcciones, tras valorar cada texto. Para quienes se dirigen al mercado italiano, cuido especialmente la naturalidad, el tono y el contexto de la comunicación. Traducción, localización, revisión y correspondencia se detallan en el presupuesto.",
+          "Traduzco del italiano al inglés, francés y español y de estos idiomas al italiano, tras valorar cada texto. Para quienes se dirigen al mercado italiano, cuido especialmente la naturalidad, el tono y el contexto de la comunicación. Traducción, localización, revisión y correspondencia se detallan en el presupuesto.",
         iconName: 'Globe',
         items: [
           'Localización al italiano de sitios web y páginas de destino',
