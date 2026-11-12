@@ -3,7 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CookieBanner } from "@/components/CookieBanner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { getLanguageFromPath } from "./lib/i18n/routes";
 import { lazy, Suspense } from "react";
 
 const Index = lazy(() => import("./pages/Index"));
@@ -28,6 +29,18 @@ const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 
+const PageLoading = () => {
+  const { pathname } = useLocation();
+  const lang = getLanguageFromPath(pathname);
+  const message = {
+    it: "Caricamento della pagina…",
+    en: "Loading page…",
+    fr: "Chargement de la page…",
+    es: "Cargando la página…",
+  }[lang];
+  return <div role="status" className="min-h-[30vh] flex items-center justify-center text-foreground/70 text-sm">{message}</div>;
+};
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -36,7 +49,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Suspense fallback={<div role="status" className="min-h-[30vh] flex items-center justify-center text-foreground/70 text-sm">Caricamento pagina · Loading page…</div>}>
+        <Suspense fallback={<PageLoading />}>
           <Routes>
             {/* ── ENGLISH / INTERNATIONAL (DEFAULT) ── */}
             <Route path="/" element={<Index />} />
