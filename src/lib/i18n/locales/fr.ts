@@ -104,7 +104,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Traductions IT ↔ EN/FR/ES et localisation',
         subtitle: "La langue et le ton justes, adaptés à chaque destinataire.",
         description:
-          "Je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien, après examen de chaque texte. Pour les professionnels qui s'adressent au marché italien, j'accorde une attention particulière au naturel de la langue, au ton et au contexte. Traduction, localisation, révision et correspondance sont précisées dans le devis.",
+          "Selon le projet, je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien, après examen de chaque texte. Pour les professionnels qui s'adressent au marché italien, j'accorde une attention particulière au naturel de la langue, au ton et au contexte. Traduction, localisation, révision et correspondance sont précisées dans le devis.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et pages de destination en italien',
@@ -136,7 +136,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Recherche documentaire et comparaison d’informations',
         subtitle: "Des informations sélectionnées et organisées pour vos projets.",
         description:
-          "Je rassemble des informations publiques, compare sources, outils et fournisseurs, et prépare des synthèses destinées à des activités ou projets déjà définis. Je ne réalise ni recherche de prospects, ni constitution de listes commerciales, ni acquisition de clients.",
+          "Je peux rassembler des informations publiques, comparer sources, outils et fournisseurs, et prépare des synthèses destinées à des activités ou projets déjà définis. Je ne réalise ni recherche de prospects, ni constitution de listes commerciales, ni acquisition de clients.",
         iconName: 'Search',
         items: [
           'Comparaison documentée de concurrents et tarifs publics',
