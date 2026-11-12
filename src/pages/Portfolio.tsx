@@ -31,7 +31,6 @@ import {
   Scale,
   GraduationCap,
   Sparkles,
-  Info,
   Layers,
   ExternalLink,
 } from "lucide-react";
@@ -57,17 +56,17 @@ export default function Portfolio() {
 
   // SEO configuration
   const titles = {
-    it: "Esempi di Lavoro e Progetti Dimostrativi | Noemi Tomassetti",
-    en: "Italian Translation and Localisation Samples | Noemi Tomassetti",
-    fr: "Traduction et communication en italien : exemples | Noemi Tomassetti",
-    es: "Traducción y comunicación en italiano: muestras | Noemi Tomassetti",
+    it: "Portfolio | Esempi di lavoro | Noemi Tomassetti",
+    en: "Italian Translation and Localisation | Work Samples | Noemi Tomassetti",
+    fr: "Traduction et communication en italien | Exemples de travail | Noemi Tomassetti",
+    es: "Traducción y comunicación en italiano | Muestras de trabajo | Noemi Tomassetti",
   };
 
   const descriptions = {
-    it: "Portfolio approfondito: traduzioni professionali IT ↔ EN/FR/ES con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
-    en: "Realistic fictional work samples: Italian translation, website localisation, customer emails and Italian-market content, alongside multilingual virtual-assistance and back-office examples.",
-    fr: "Exemples fictifs et réalistes de traduction vers l’italien, localisation web, courriels clients et contenus pour le marché italien, avec des cas de secrétariat et de back-office.",
-    es: "Muestras ficticias y realistas de traducción al italiano, localización web, correos a clientes y contenidos para Italia, además de ejemplos de asistencia virtual y back office.",
+    it: "Campioni di traduzione IT ↔ EN/FR/ES, esempi di comunicazione professionale, localizzazione per l’Italia, segreteria, back office e contenuti digitali. Elaborati originali realizzati per il portfolio.",
+    en: "Original work samples created for this portfolio: Italian translation, website localisation, customer correspondence and content for Italy, alongside virtual-assistance and back-office examples.",
+    fr: "Exemples de travail créés pour ce portfolio : traductions vers l’italien, localisation web, courriels professionnels et contenus pour l’Italie, ainsi que secrétariat et back-office.",
+    es: "Muestras originales preparadas para este porfolio: traducción al italiano, localización web, correos profesionales y contenidos para Italia, además de secretaría y back office.",
   };
 
   useSEO({
@@ -166,12 +165,12 @@ export default function Portfolio() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
             <GraduationCap className="w-3.5 h-3.5" />
             {lang === "it"
-              ? "Portfolio Metodologico · Casi Dimostrativi"
+              ? "Portfolio professionale · Elaborati originali"
               : lang === "fr"
-              ? "Portfolio professionnel · Exemples fictifs"
+              ? "Portfolio professionnel · Travaux originaux"
               : lang === "es"
-              ? "Muestras profesionales · Casos ficticios"
-              : "Professional Portfolio · Fictional Work Samples"}
+              ? "Porfolio profesional · Muestras originales"
+              : "Professional Portfolio · Original Work Samples"}
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4 md:mb-6">
@@ -186,36 +185,24 @@ export default function Portfolio() {
 
           <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed mb-5 md:mb-8 max-w-3xl">
             {lang === "it"
-              ? "Esempi completi per conoscere il mio metodo di lavoro: testi e traduzioni a fronte, procedure, documenti e controlli di qualità, con situazioni realistiche."
+              ? "Traduzioni a fronte, testi per siti e comunicazioni con i clienti, procedure e documenti: elaborati completi che permettono di valutare il mio approccio e la cura dei dettagli."
               : lang === "fr"
-              ? "Traductions vers l’italien, adaptation de contenus web, courriels professionnels et exemples de suivi opérationnel : des situations fictives mais réalistes, avec les choix linguistiques expliqués."
+              ? "Traductions vers l’italien, contenus web adaptés, courriels professionnels et documents de suivi : des travaux complets pour découvrir ma méthode et les choix rédactionnels."
               : lang === "es"
-              ? "Traducciones al italiano, adaptación de contenidos web, correos profesionales y procedimientos de apoyo: situaciones ficticias pero realistas, con explicaciones sobre las decisiones de traducción."
-              : "Explore Italian translation, website localisation and customer communication through realistic fictional examples. You can also review back-office procedures, original writing and the quality checks behind each sample."}
+              ? "Traducciones al italiano, textos web adaptados, correos profesionales y documentos operativos: muestras completas que permiten conocer mi método y mis decisiones lingüísticas."
+              : "Explore Italian translation, website localisation and customer correspondence through complete, original work samples. You can also review back-office procedures, editorial work and the decisions behind each deliverable."}
           </p>
 
-          {/* DEMO TRANSPARENCY NOTICE */}
-          <div className="bg-background/80 backdrop-blur border border-primary/20 rounded-xl p-4 md:p-5 text-sm text-foreground/85 flex items-start gap-3.5 shadow-sm">
-            <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-            <div>
-              <span className="font-semibold text-foreground">
-                {lang === "it"
-                  ? "Trasparenza e Tutela della Riservatezza: "
-                  : lang === "fr"
-                  ? "Transparence et confidentialité : "
-                  : lang === "es"
-                  ? "Transparencia y confidencialidad: "
-                  : "About these fictional samples: "}
-              </span>
-              <span>{lang === "it"
-                  ? "Tutti i casi sono esempi indipendenti con dati fittizi, non incarichi commissionati né testimonianze. Le attività disponibili sono quelle indicate nella pagina Servizi."
-                  : lang === "fr"
-                  ? "Tous les cas sont des exemples indépendants utilisant des données fictives, et non des missions clients ou des témoignages. Seules les prestations décrites dans la page Services sont proposées."
-                  : lang === "es"
-                  ? "Todos los casos son ejemplos independientes con datos ficticios, no encargos reales ni testimonios. Los servicios disponibles son los descritos en la página Servicios."
-                  : "All cases are independent demonstrations using fictional data, not commissioned client projects or testimonials. The services available are those stated on the Services page."}</span>
-            </div>
-          </div>
+          {/* Editorial provenance: factual, understated and consistent across locales. */}
+          <p className="max-w-3xl text-xs sm:text-sm leading-relaxed text-muted-foreground mb-6">
+            {lang === "it"
+              ? "Questi elaborati originali sono stati realizzati appositamente per il portfolio, partendo da situazioni professionali plausibili e utilizzando nomi e dati di fantasia. Non sono incarichi commissionati da clienti."
+              : lang === "en"
+              ? "These original samples were prepared specifically for this portfolio, using realistic working scenarios and invented names and details. They are not commissioned client projects."
+              : lang === "fr"
+              ? "Ces travaux originaux ont été créés spécialement pour ce portfolio, à partir de situations professionnelles plausibles et de noms et données inventés. Ils ne correspondent pas à des commandes de clients."
+              : "Estas muestras originales se han preparado expresamente para este porfolio, a partir de situaciones profesionales verosímiles y con nombres y datos inventados. No son encargos realizados para clientes."}
+          </p>
           <nav aria-label={({it:"Percorsi di consultazione del portfolio",en:"Browse the portfolio",fr:"Explorer le portfolio",es:"Explorar el portfolio"} as const)[lang]}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
             {browseSections.map(section=>(
@@ -236,10 +223,10 @@ export default function Portfolio() {
             {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Ejemplos concretos para consultar" : "Explore the sample documents"}
           </h2>
           <p className="text-foreground/75 mb-8 max-w-3xl">
-            {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Tutti gli esempi sono dimostrativi e utilizzano dati fittizi."
+            {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Apri i documenti e valuta direttamente chiarezza, terminologia e organizzazione."
               : lang === "fr" ? "Traductions comparées, courriels, tableaux de suivi et procédures. Toutes les données sont fictives ; plusieurs documents sont rédigés en italien."
               : lang === "es" ? "Traducciones comparadas, correos, registros y procedimientos. Todos los datos son ficticios; varios documentos están escritos en italiano."
-              : "Source/target translations, customer emails, trackers and procedures. All examples use fictional data; some full documents are in Italian."}
+              : "Side-by-side translations, customer emails, trackers and procedures. Read the documents and evaluate the wording, including complete samples in Italian."}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {featured.map(doc => (
