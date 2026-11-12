@@ -224,8 +224,8 @@ export default function Portfolio() {
           </h2>
           <p className="text-foreground/75 mb-8 max-w-3xl">
             {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Apri i documenti e valuta direttamente chiarezza, terminologia e organizzazione."
-              : lang === "fr" ? "Traductions comparées, courriels, tableaux de suivi et procédures. Toutes les données sont fictives ; plusieurs documents sont rédigés en italien."
-              : lang === "es" ? "Traducciones comparadas, correos, registros y procedimientos. Todos los datos son ficticios; varios documentos están escritos en italiano."
+              : lang === "fr" ? "Traductions en regard, courriels, tableaux de suivi et procédures : consultez les documents et les choix de formulation, dont plusieurs exemples en italien."
+              : lang === "es" ? "Traducciones en paralelo, correos, registros y procedimientos: consulta los documentos y las decisiones lingüísticas, con varios ejemplos en italiano."
               : "Side-by-side translations, customer emails, trackers and procedures. Read the documents and evaluate the wording, including complete samples in Italian."}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
