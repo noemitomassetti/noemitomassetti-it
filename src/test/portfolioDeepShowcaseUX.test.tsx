@@ -71,7 +71,7 @@ describe("Deep portfolio user experience", () => {
 
   it("identifies demonstration work honestly and provides distinct link names", () => {
     mount("en");
-    expect(screen.getByRole("heading", { name: /See how I approach each service through detailed samples/ })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Italian translation, customer messages and practical work samples/ })).toBeInTheDocument();
     expect(screen.getByText(/not excerpts from commissioned work/)).toBeInTheDocument();
     const labels = screen.getAllByRole("link", { name: /Read the complete dossier:/ })
       .map(link => link.getAttribute("aria-label"));
