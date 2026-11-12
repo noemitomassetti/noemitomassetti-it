@@ -435,7 +435,7 @@ export default function IndexPage() {
     {
       q:
         lang === "it"
-          ? "Lavori anche con clienti internazionali?"
+          ? "Puoi aiutarmi con comunicazioni in più lingue?"
           : lang === "fr"
           ? "Travaillez-vous avec des clients internationaux ?"
           : lang === "es"
@@ -443,7 +443,7 @@ export default function IndexPage() {
           : "Are you available for international clients?",
       a:
         lang === "it"
-          ? "Sì. Lavoro da remoto con professionisti italiani e attività estere che hanno già clienti o progetti in Italia. Offro traduzioni professionali in entrambe le direzioni tra italiano, inglese, francese e spagnolo, localizzazione per il pubblico italiano e supporto scritto ai clienti in italiano, inglese, francese e spagnolo."
+          ? "Sì. Offro traduzioni da e verso l'italiano nelle combinazioni con inglese, francese e spagnolo, revisione linguistica e supporto alle comunicazioni scritte nelle lingue concordate."
           : lang === "fr"
           ? "Oui. Je travaille à distance avec des professionnels et de petites entreprises, en Italie comme à l'étranger. Je propose du secrétariat organisationnel, du back-office, un soutien écrit aux clients et des traductions dans les deux sens entre l’italien et l’anglais, le français et l’espagnol."
           : lang === "es"
@@ -1215,7 +1215,7 @@ export default function IndexPage() {
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
-                  ? "Sede a Castelfidardo (AN), supporto operativo da remoto in tutta Italia ed estero. Parli direttamente con Noemi, senza agenzie o intermediari."
+                  ? "Lavoro da remoto da Castelfidardo (AN). Parli direttamente con me, senza agenzie o intermediari."
                   : lang === "fr" ? "Installée à Castelfidardo (Italie), je travaille à distance avec des professionnels en Italie et à l’international, pour des missions de secrétariat, de back-office et de traduction. Vous échangez directement avec moi." : lang === "es" ? "Trabajo desde Castelfidardo (Italia) y colaboro a distancia con profesionales de Italia y del extranjero en tareas de secretaría, back office y traducción. Tratarás directamente conmigo." : "Based in Castelfidardo (Italy), I support professionals remotely in Italy and internationally. You work directly with me, without an agency intermediary."}
               </p>
             </div>
