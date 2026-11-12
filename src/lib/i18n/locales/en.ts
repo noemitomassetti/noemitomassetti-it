@@ -4,10 +4,10 @@ export const enLocale: TranslationDictionary = {
   lang: 'en',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Multilingual Virtual Assistant & Translator | Noemi Tomassetti',
-    homeDesc: 'Multilingual virtual assistance, secretarial and back-office support, customer care, professional communications, digital content and IT ↔ EN/FR/ES translation.',
-    servicesTitle: 'Virtual Assistance & Translation Services | Noemi Tomassetti',
-    servicesDesc: 'Multilingual virtual assistance, scheduling and email management, operational back office, written customer care, content editing and translation in both directions between Italian and English, French and Spanish.',
+    homeTitle: 'Italian Translation & Localisation for International Businesses | Noemi Tomassetti',
+    homeDesc: 'Communicate naturally with your Italian audience: translation, localisation, website and social content, and customer correspondence. Multilingual virtual assistance and back-office support are also available.',
+    servicesTitle: 'Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti',
+    servicesDesc: 'Italian-market localisation, professional translation, website and landing-page copy, social content and customer emails. The full range of multilingual virtual-assistance and back-office services is also available.',
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
     aboutTitle: 'About Noemi Tomassetti | Background & Philosophy',
@@ -34,22 +34,22 @@ export const enLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'MULTILINGUAL VIRTUAL ASSISTANT',
-    titleLine1: 'Virtual assistance, multilingual communication and translation',
-    titleHighlight: 'for your day-to-day business',
-    subtitle: "Virtual secretarial support, operational back office, customer care, professional communications, digital content and translation between Italian and English, French and Spanish.",
-    headline: 'Clearer communication. More organised daily operations.',
-    desc1: 'I draw on over twenty years of professional experience to help you manage your day-to-day work more effectively. I am a native Italian speaker trained in specialised translation.',
-    desc2: 'From email and scheduling to written customer care, translation and website content revision, I support agreed tasks for professionals and small businesses.',
+    titleLine1: 'Italian-language communication, translation and localisation',
+    titleHighlight: 'for businesses working with Italy',
+    subtitle: "Communicate clearly and naturally with customers in Italy. I translate, revise and adapt website and landing-page copy, emails, newsletters, social content and other business communications. My full virtual-assistance services are also available.",
+    headline: 'The right words for your Italian audience.',
+    desc1: 'As a native Italian speaker with specialist translation training, I help international professionals communicate appropriately with people in Italy—not simply translate words from one language to another.',
+    desc2: 'Whether you need an Italian landing page, carefully worded customer emails or consistent product information, I focus on clarity, tone and context. I also provide the same back-office, secretarial and customer-support services offered to my Italian clients.',
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
-      'I translate both from Italian into English, French and Spanish and from these languages into Italian. I also refine Italian-language content and support agreed written communication with customers in Italian, English, French and Spanish.',
+      'For international clients, I focus on communicating with Italy: translation and localisation into Italian, customer correspondence, websites, landing pages, newsletters and social content. I also translate from Italian into English, French and Spanish and offer agreed operational support.',
     ctaServices: 'Explore services',
     ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
       experience: 'Experience across different professional roles',
       languages: '4 Working Languages (EN · IT · FR · ES)',
-      focus: 'Tailored & flexible operational support',
+      focus: 'Communication with Italy · Practical support',
     },
     callNote: 'Send a written request · No obligation',
   },
@@ -79,9 +79,9 @@ export const enLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'WHAT I DO',
-    title: 'Virtual Assistance, Translation & Digital Content',
+    title: 'Italian Communication, Translation and Virtual Assistance',
     subtitle:
-      'These are examples of services I can provide, not an all-inclusive package. Each quote defines the agreed tasks, deliverables and working arrangements.',
+      'Italian-language communication is my main focus for international businesses. Translation, localisation and content editing come first, but you can also request any of my virtual-assistance services. Each assignment is agreed in writing.',
     viewAllCta: 'View Full Service Details',
     categories: [
       {
@@ -168,22 +168,22 @@ export const enLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'GLOBAL REACH',
-    title: 'Communicate Clearly Across Languages',
+    tag: 'WORKING WITH ITALY',
+    title: 'Communicate naturally with your Italian audience',
     description:
-      'Clear multilingual communication depends on accurate terminology, an appropriate register and an understanding of each audience—not literal translation alone.',
+      'An effective Italian message is about more than choosing the correct words. Terminology, formality, cultural context and the expectations of Italian readers all matter, whether you are writing to a customer or preparing a website.',
     points: [
       {
-        title: 'Languages for Professional Communication',
-        desc: 'Native Italian, advanced English and French, and upper-intermediate Spanish for agreed professional correspondence.',
+        title: 'Italian as my native language',
+        desc: 'I work between Italian and English, French or Spanish in both directions, with particular attention to natural Italian wording and communication with customers in Italy.',
       },
       {
-        title: 'Contextual Adaptation',
-        desc: 'I adapt terminology, register and cultural references for each agreed target audience, with particular care for Italian-market localisation.',
+        title: 'Appropriate tone and terminology',
+        desc: 'I adapt headings, calls to action, customer messages and professional texts to their Italian readership, without changing facts, prices or agreed commercial terms.',
       },
       {
-        title: 'Unified Multilingual Operations',
-        desc: 'From multilingual correspondence and content editing to written support for customers, I help keep communication clear, consistent and appropriate to its audience.',
+        title: 'Practical support beyond translation',
+        desc: 'Alongside translation and content work, I offer multilingual secretarial assistance, back-office support and written customer care under the same agreed scope as for Italian clients.',
       },
     ],
     badgeNote: 'Language Mediation degree (110/110 e lode) and Italian university Master’s qualification in Specialised Translation',
