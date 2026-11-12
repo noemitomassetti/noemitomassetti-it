@@ -728,11 +728,11 @@ export default function Portfolio() {
                         <div className="p-4 rounded-xl bg-secondary/40 border border-border/50">
                           <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
                             {lang === "it"
-                              ? "Risultato dimostrativo"
+                              ? "Elaborato finale"
                               : lang === "fr"
-                              ? "Livrable de démonstration"
+                              ? "Document final"
                               : lang === "es"
-                              ? "Entregable de muestra"
+                              ? "Documento final"
                               : "Sample Deliverable"}
                           </span>
                           <p className="text-foreground/90 leading-relaxed font-medium">
@@ -749,7 +749,7 @@ export default function Portfolio() {
                            className="flex items-center justify-between gap-3 p-4 rounded-xl border border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-semibold text-sm">
                           <span className="flex items-center gap-3">
                             <FileText className="w-5 h-5 shrink-0" aria-hidden="true" />
-                            {lang === "it" ? "Apri il lavoro dimostrativo" : lang === "fr" ? "Consulter le document" : lang === "es" ? "Ver documento de muestra" : "Open the work sample"}: {doc.title[lang]}
+                            {lang === "it" ? "Apri il documento" : lang === "fr" ? "Consulter le document" : lang === "es" ? "Ver documento de muestra" : "Open the work sample"}: {doc.title[lang]}
                           </span>
                           <ExternalLink className="w-4 h-4 shrink-0" aria-hidden="true" />
                         </a>
@@ -767,12 +767,12 @@ export default function Portfolio() {
                         className="text-primary hover:underline font-semibold flex items-center gap-1 whitespace-nowrap"
                       >
                         {lang === "it"
-                          ? "Richiedi un progetto simile"
+                          ? "Richiedi un preventivo"
                           : lang === "fr"
-                          ? "Demander un projet similaire"
+                          ? "Demander un devis"
                           : lang === "es"
-                          ? "Solicitar un proyecto similar"
-                          : "Request a similar project"}
+                          ? "Solicitar un presupuesto"
+                          : "Request a quote"}
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -792,20 +792,20 @@ export default function Portfolio() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
                 <FileText className="w-3.5 h-3.5" />
                 {lang === "it"
-                  ? "Documenti di lavoro dimostrativi"
+                  ? "Documenti ed elaborati"
                   : lang === "fr"
-                  ? "Documents de démonstration"
+                  ? "Documents et exemples de travail"
                   : lang === "es"
                   ? "Muestras de trabajo"
                   : "Independent Work Samples"}
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
                 {lang === "it"
-                  ? `${PORTFOLIO_DOCUMENTS.length} documenti dimostrativi da esplorare`
+                  ? `${PORTFOLIO_DOCUMENTS.length} elaborati da consultare`
                   : lang === "fr"
                   ? `${PORTFOLIO_DOCUMENTS.length} documents professionnels à découvrir`
                   : lang === "es"
-                  ? `${PORTFOLIO_DOCUMENTS.length} documentos de muestra para explorar`
+                  ? `${PORTFOLIO_DOCUMENTS.length} documentos de trabajo para consultar`
                   : `${PORTFOLIO_DOCUMENTS.length} professional work samples to explore`}
               </h2>
               <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-2xl">
