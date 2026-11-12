@@ -4,10 +4,10 @@ export const esLocale: TranslationDictionary = {
   lang: 'es',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
-    homeDesc: 'Asistencia virtual multilingüe, secretaría, back office, atención al cliente, comunicación profesional, contenidos digitales y traducción IT ↔ EN/FR/ES.',
-    servicesTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
-    servicesDesc: 'Asistencia virtual multilingüe, secretaría, back office, atención escrita a clientes, contenidos digitales y traducción IT ↔ EN/FR/ES.',
+    homeTitle: 'Traducción y comunicación en italiano para empresas | Noemi Tomassetti',
+    homeDesc: 'Comunica tus mensajes con naturalidad al público italiano: traducción, localización, contenido web y para redes sociales, correos y atención escrita al cliente. También ofrezco asistencia virtual.',
+    servicesTitle: 'Comunicación en italiano, traducción y asistencia virtual | Noemi Tomassetti',
+    servicesDesc: 'Traducción y localización para Italia, contenidos de sitios web y redes sociales, correos y comunicación con clientes italianos. También ofrezco todos mis servicios de asistencia virtual.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
     aboutTitle: 'Sobre mí | Noemi Tomassetti',
@@ -34,22 +34,22 @@ export const esLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'ASISTENTE VIRTUAL MULTILINGÜE',
-    titleLine1: 'Asistencia virtual, back office y traducción',
-    titleHighlight: 'para organizar mejor tu actividad',
-    subtitle: "Secretaría organizativa, back office, atención al cliente, comunicación profesional, contenidos digitales y traducción en ambas direcciones entre el italiano y el inglés, francés y español.",
-    headline: 'Comunicación clara y una actividad mejor organizada.',
-    desc1: 'Pongo a tu disposición más de veinte años de experiencia laboral para ayudarte a gestionar mejor tu trabajo diario. El italiano es mi lengua materna y tengo formación en traducción especializada.',
-    desc2: 'Desde la gestión del correo y la agenda hasta la atención escrita a clientes, la traducción y la revisión de contenidos web: apoyo adaptado a tu actividad.',
+    titleLine1: 'Comunicación en italiano, traducción y localización',
+    titleHighlight: 'para llegar al público italiano',
+    subtitle: "Comunícate de forma natural con tus clientes italianos. Traduzco y adapto contenido web, páginas de destino, correos, boletines, redes sociales y otros textos profesionales. También puedes contar con mis servicios de secretaría y back office.",
+    headline: 'Las palabras adecuadas para comunicarte con Italia.',
+    desc1: 'Soy hablante nativa de italiano, licenciada en Mediación Lingüística y formada en Traducción Especializada. Ayudo a profesionales de otros países a comunicarse con el público italiano de manera clara y adecuada.',
+    desc2: 'Una página de destino en italiano, un correo para un cliente, una ficha de producto o una publicación en redes sociales requieren precisión y un tono natural. También ofrezco los mismos servicios de secretaría, back office y atención al cliente que a mis clientes italianos.',
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
-      'Traduzco del italiano al inglés, francés y español y también en sentido inverso. Además, reviso contenidos profesionales y presto apoyo organizativo dentro del alcance acordado.',
+      'Para mis clientes internacionales, doy prioridad a la comunicación con Italia: traducción y localización al italiano, correos, sitios web, páginas de destino y contenidos para redes sociales. También traduzco del italiano al inglés, francés y español y presto asistencia operativa según lo acordado.',
     ctaServices: 'Descubrir los servicios',
     ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
       experience: 'Amplia trayectoria profesional y organizativa',
       languages: 'Italiano nativo · EN y FR avanzados · ES intermedio-alto',
-      focus: 'Soporte a medida y flexible',
+      focus: 'Comunicación con Italia · Apoyo operativo',
     },
     callNote: 'Solicitud por escrito · Sin compromiso',
   },
@@ -79,8 +79,8 @@ export const esLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'QUÉ HAGO',
-    title: 'Asistencia virtual y traducción profesional',
-    subtitle: 'Estos son ejemplos de servicios posibles, no un paquete que lo incluya todo. Cada presupuesto especifica las tareas y los entregables acordados.',
+    title: 'Comunicación en italiano, traducción y asistencia virtual',
+    subtitle: 'Mi prioridad para clientes internacionales es la comunicación con el mercado italiano. La traducción y los contenidos ocupan un lugar destacado, sin excluir los demás servicios de asistencia virtual. Cada encargo se define por escrito.',
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
@@ -167,22 +167,22 @@ export const esLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'COMUNICACIÓN MULTILINGÜE',
-    title: 'Comunícate con claridad en varios idiomas',
+    tag: 'COMUNICARSE CON ITALIA',
+    title: 'Mensajes naturales para el público italiano',
     description:
-      'La comunicación multilingüe requiere terminología precisa, un tono adecuado y atención al contexto de cada destinatario, no solo traducciones literales.',
+      'Un mensaje dirigido a Italia debe sonar natural, utilizar la terminología apropiada y tener en cuenta a quien lo recibe. Traducir palabra por palabra rara vez es suficiente.',
     points: [
       {
-        title: 'Cuatro idiomas de trabajo',
-        desc: 'Italiano nativo, inglés y francés avanzados y español intermedio-alto para las comunicaciones profesionales acordadas.',
+        title: 'Italiano como lengua materna',
+        desc: 'Traduzco entre el italiano y el español, inglés o francés en ambas direcciones, con especial atención a los textos dirigidos al público italiano.',
       },
       {
-        title: 'Respeto al contexto',
-        desc: 'Adapto las expresiones y el tono al público destinatario, respetando el significado original y las indicaciones acordadas.',
+        title: 'Un tono adecuado a cada situación',
+        desc: 'Cuido la terminología, los títulos, las llamadas a la acción y los correos para que resulten naturales al lector italiano, respetando siempre las condiciones comerciales acordadas.',
       },
       {
-        title: 'Operativa unificada',
-        desc: 'Desde los contenidos web hasta los mensajes para clientes, cuido la claridad, la coherencia terminológica y la adaptación al destinatario.',
+        title: 'Apoyo más allá de la traducción',
+        desc: 'También ofrezco secretaría, gestión de pedidos, back office y atención escrita al cliente para empresas internacionales, según las tareas acordadas.',
       },
     ],
     badgeNote: 'Formación universitaria: título italiano en Mediación Lingüística (110/110 e lode) y máster universitario en Traducción Especializada',
