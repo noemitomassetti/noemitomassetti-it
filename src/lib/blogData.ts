@@ -210,7 +210,7 @@ export const itPosts = [
   { 
     id: 3, 
     slug: "5-strumenti-gratuiti-utili-per-organizzare-meglio-il-lavoro-con-clienti-e-appuntamenti",
-    title: "Cinque strumenti digitali per gestire attività e appuntamenti", 
+    title: "5 strumenti digitali per gestire attività e appuntamenti", 
     excerpt: "Calendari, prenotazioni, documenti, riunioni e gestione delle attività: come valutare le funzionalità e i limiti dei diversi piani.", 
     date: "06 aprile 2026", 
     dateISO: "2026-04-06",
