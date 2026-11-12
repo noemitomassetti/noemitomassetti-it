@@ -36,6 +36,81 @@ import {
 } from "lucide-react";
 
 
+const PORTFOLIO_WORK_STEPS = [
+  {
+    "it": [
+      "Ascolto e inquadramento",
+      "Definisco la richiesta, i materiali disponibili e ciò che deve essere chiarito."
+    ],
+    "en": [
+      "Understand the brief",
+      "Establish the request, available material and points that need clarification."
+    ],
+    "fr": [
+      "Comprendre la demande",
+      "Je précise le besoin, les documents disponibles et les points à clarifier."
+    ],
+    "es": [
+      "Entender el encargo",
+      "Defino la solicitud, los materiales disponibles y las dudas por resolver."
+    ]
+  },
+  {
+    "it": [
+      "Preparazione del lavoro",
+      "Scrivo le risposte, organizzo i dati oppure traduco e revisiono i testi."
+    ],
+    "en": [
+      "Prepare the work",
+      "Draft replies, organise information or translate and revise texts."
+    ],
+    "fr": [
+      "Réaliser le travail",
+      "Je rédige les réponses, organise les données ou traduis et révise les textes."
+    ],
+    "es": [
+      "Preparar el trabajo",
+      "Redacto respuestas, organizo datos o traduzco y reviso textos."
+    ]
+  },
+  {
+    "it": [
+      "Controlli di qualità",
+      "Verifico lingua, completezza e coerenza; segnalo dati o autorizzazioni mancanti."
+    ],
+    "en": [
+      "Quality checks",
+      "Check language, completeness and consistency; flag missing facts or approvals."
+    ],
+    "fr": [
+      "Vérifier la qualité",
+      "Je contrôle la langue, la cohérence et les éléments qui nécessitent validation."
+    ],
+    "es": [
+      "Revisar la calidad",
+      "Compruebo lengua, integridad y coherencia; señalo datos pendientes."
+    ]
+  },
+  {
+    "it": [
+      "Consegna e approvazione",
+      "Presento l'elaborato e i punti da confermare prima di eventuali invii esterni."
+    ],
+    "en": [
+      "Handover and approval",
+      "Present the sample and identify what must be approved before external use."
+    ],
+    "fr": [
+      "Remise et validation",
+      "Je présente le document et les points à valider avant toute utilisation externe."
+    ],
+    "es": [
+      "Entrega y aprobación",
+      "Presento el documento y los puntos que deben aprobarse antes de su uso externo."
+    ]
+  }
+] as const;
+
 const PORTFOLIO_SERVICE_EXAMPLES = [
   {
     "it": [
@@ -385,11 +460,24 @@ export default function Portfolio() {
       <section aria-labelledby="portfolio-what-i-do" className="py-12 md:py-16 border-b border-border/40 bg-background">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <h2 id="portfolio-what-i-do" className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-            {({it:"Che cosa faccio, attraverso esempi di lavoro",en:"What I do, shown through real work samples",fr:"Mes prestations, illustrées par des exemples",es:"Qué hago: ejemplos de trabajo concretos"} as const)[lang]}
+            {({it:"Che cosa faccio, attraverso esempi di lavoro",en:"What I do, shown through original work samples",fr:"Mes prestations, illustrées par des exemples",es:"Qué hago: ejemplos de trabajo concretos"} as const)[lang]}
           </h2>
           <p className="text-foreground/80 leading-relaxed max-w-3xl mb-7">
             {({it:"Apri un esempio per leggere il materiale prodotto. In questo portfolio ogni scenario è inventato, ma i testi, i modelli e le traduzioni sono elaborati originali creati per mostrare il tipo di lavoro che posso svolgere.",en:"Open a sample to read the material itself. Every scenario is fictional, but the writing, templates and translations are original examples of the work I can provide.",fr:"Ouvrez un exemple pour consulter le document lui-même. Les situations sont fictives, mais les textes, modèles et traductions ont été créés pour illustrer concrètement mes prestations.",es:"Abre un ejemplo para leer el documento. Las situaciones son ficticias, pero los textos, modelos y traducciones son muestras originales del trabajo que puedo ofrecer."} as const)[lang]}
           </p>
+          <div className="rounded-xl border border-primary/25 bg-primary/5 p-5 mb-7">
+            <h3 className="font-bold mb-4">
+              {({it:"Come lavoro",en:"How I work",fr:"Ma méthode de travail",es:"Cómo trabajo"} as const)[lang]}
+            </h3>
+            <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+              {PORTFOLIO_WORK_STEPS.map((step,index) => (
+                <li key={index} className="leading-relaxed text-foreground/85">
+                  <strong className="block text-primary mb-1">{String(index+1).padStart(2,"0")} · {step[lang][0]}</strong>
+                  {step[lang][1]}
+                </li>
+              ))}
+            </ol>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {PORTFOLIO_SERVICE_EXAMPLES.map((item) => (
               <Link key={item.doc} to={getPortfolioDocumentPath(item.doc,lang)}
