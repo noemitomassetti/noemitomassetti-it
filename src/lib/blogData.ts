@@ -996,6 +996,7 @@ import { enBlogContent } from './blogLocalizedEn';
 import { frBlogContent } from './blogLocalizedFr';
 import { esBlogContent } from './blogLocalizedEs';
 import type { LocalizedBlogCopy } from './blogLocalizationTypes';
+import { BLOG_PHOTOGRAPHS } from './blogPhotography';
 
 const LOCALIZED_COPY: Record<'en' | 'fr' | 'es', Record<number, LocalizedBlogCopy>> = {
   en: enBlogContent,
@@ -1011,16 +1012,33 @@ export function getBlogPostPath(slug: string, lang: Language): string {
   return `${getBlogIndexPath(lang)}/${slug}`;
 }
 
-export const getAllBlogPosts = () => itPosts;
+/**
+ * Each article has exactly one authenticated photographic source (across all
+ * languages), with localized descriptive alt text and verifiable attribution.
+ */
+function withEditorialPhoto<T extends {id:number}>(post:T,lang:Language) {
+  const photo=BLOG_PHOTOGRAPHS[post.id];
+  if(!photo)throw new Error(`Missing verified photograph for blog article ${post.id}`);
+  return {
+    ...post,
+    image:photo.url,
+    alt:photo.alt[lang],
+    photoSource:photo.sourceUrl,
+    photoCredit:photo.photographer,
+    photoLicense:photo.license,
+  };
+}
+export const getAllBlogPosts = () => getBlogPosts('it');
 
 export function getBlogPosts(language: string = 'it') {
-  if (language !== 'en' && language !== 'fr' && language !== 'es') return itPosts;
+  if (language !== 'en' && language !== 'fr' && language !== 'es')
+    return itPosts.map(base=>withEditorialPhoto(base,'it'));
   const dictionary = LOCALIZED_COPY[language];
   return itPosts.map((base) => {
     const local = dictionary[base.id];
     // Never silently advertise Italian copy as translated content.
     if (!local) throw new Error(`Missing ${language} editorial adaptation for article ${base.id}`);
-    return { ...base, ...local, alt: local.title };
+    return withEditorialPhoto({ ...base, ...local },language);
   });
 }
 
