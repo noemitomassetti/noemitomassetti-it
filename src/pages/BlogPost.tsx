@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { BLOG_PHOTO_ATTRIBUTION_LABEL } from "@/lib/blogPhotography";
 import { useParams, useLocation, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -114,8 +115,11 @@ export default function BlogPost() {
           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-7">{visible.excerpt}</p>
           {copy.sample && <p className="text-xs text-muted-foreground mb-6">{copy.sample}</p>}
           <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-border/50 bg-muted/10">
-            <img src={visible.image} alt={visible.alt || visible.title} width="800" height="500" loading="eager" className="w-full max-h-[500px] h-auto object-contain" />
+            <img src={visible.image} alt={visible.alt || visible.title} width="800" height="500" loading="eager" decoding="async" referrerPolicy="no-referrer" className="w-full aspect-[8/5] object-cover" />
           </div>
+          <p className="text-xs text-muted-foreground mt-2 text-right">
+            {BLOG_PHOTO_ATTRIBUTION_LABEL[lang]}: <a href={visible.photoSource} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="underline underline-offset-2 hover:text-primary">{visible.photoCredit} · Unsplash</a>
+          </p>
         </header>
         <div className="prose prose-invert prose-lg max-w-none text-foreground/90 prose-headings:text-primary prose-strong:text-primary prose-a:text-primary prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6" dangerouslySetInnerHTML={{__html:visible.content}} />
         {visible.id===3 && <aside aria-label={FREE_PLAN_NOTICE[lang].title} className="mt-8 rounded-xl border border-border/70 bg-card px-5 py-5 text-sm leading-relaxed text-foreground/85">
