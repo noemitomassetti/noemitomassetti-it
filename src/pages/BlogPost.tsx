@@ -12,8 +12,8 @@ import type { Language } from "@/lib/i18n/types";
 const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; ctaBtn: string; authorBio: string; related: string; sample: string}> = {
   it: {
     back: "Torna al blog",
-    ctaTitle: "Hai bisogno di supporto per il tuo lavoro?",
-    ctaDesc: "Descrivimi la tua attività e le tue esigenze: valuteremo insieme le prestazioni più adatte.",
+    ctaTitle: "Hai un'attività da delegare o un testo da tradurre?",
+    ctaDesc: "Scrivimi spiegandomi di cosa hai bisogno. Valuterò la richiesta e, se rientra nei miei servizi, preparerò una proposta personalizzata.",
     ctaBtn: "Richiedi un preventivo",
     authorBio: "Assistente virtuale multilingue e traduttrice tra italiano e inglese, francese e spagnolo in entrambe le direzioni. Oltre vent'anni di esperienza professionale, laurea in Mediazione Linguistica e master in Traduzione Specialistica.",
     related: "Altri articoli",
@@ -21,8 +21,8 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   },
   en: {
     back: "Back to the blog",
-    ctaTitle: "Need natural Italian-language communication?",
-    ctaDesc: "Tell me about your translation, localisation or existing-customer communication needs for Italy.",
+    ctaTitle: "Need support with Italian-language communication?",
+    ctaDesc: "Tell me what you need translated, revised or communicated to an Italian audience. I will assess the request and propose an appropriate scope.",
     ctaBtn: "Request a quote",
     authorBio: "Native Italian speaker, trained translator and virtual assistant. My professional experience spans more than twenty years across different roles; I hold a degree in Language Mediation and an Italian university Master’s qualification in Specialised Translation.",
     related: "Related reading",
@@ -30,8 +30,8 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   },
   fr: {
     back: "Retour au blog",
-    ctaTitle: "Besoin de communiquer naturellement avec vos clients italiens ?",
-    ctaDesc: "Présentez vos besoins en traduction vers l’italien, localisation ou échanges avec vos clients existants.",
+    ctaTitle: "Vous souhaitez communiquer avec votre public italien ?",
+    ctaDesc: "Décrivez vos besoins en traduction, localisation ou communication professionnelle. J'examinerai votre demande et proposerai une prestation adaptée.",
     ctaBtn: "Demander un devis",
     authorBio: "Italienne de langue maternelle, traductrice formée à la traduction spécialisée et assistante virtuelle. Mon parcours professionnel dépasse vingt ans, dans des fonctions variées.",
     related: "À lire également",
@@ -39,8 +39,8 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   },
   es: {
     back: "Volver al blog",
-    ctaTitle: "¿Necesitas comunicarte de forma natural con clientes italianos?",
-    ctaDesc: "Cuéntame qué contenidos necesitas traducir al italiano o qué comunicaciones con clientes actuales deseas organizar.",
+    ctaTitle: "¿Necesitas apoyo para comunicarte con el público italiano?",
+    ctaDesc: "Cuéntame qué textos necesitas traducir, revisar o adaptar para Italia. Valoraremos el alcance del encargo antes de empezar.",
     ctaBtn: "Solicitar un presupuesto",
     authorBio: "Italiana de lengua materna, traductora con formación especializada y asistente virtual. Mi trayectoria profesional supera los veinte años en distintas funciones.",
     related: "Otros artículos",
