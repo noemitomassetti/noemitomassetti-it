@@ -85,7 +85,7 @@ describe("Complete public-site content integrity — IT/EN/FR/ES",()=>{
   it("checks all 18 case studies and 22 standalone portfolio documents in four languages",()=>{
     expect(PORTFOLIO_CASES.length).toBe(18);
     expect(PORTFOLIO_DOCUMENTS.length).toBe(22);
-    for(const lang of languages) expect(DEMO_DISCLAIMER[lang]).toMatch(/fittiz|inventat|fictional|ficti|fictici|inventad|inventés/i);
+    for(const lang of languages) expect(DEMO_DISCLAIMER[lang]).toMatch(/fittiz|inventat|invented|fictional|ficti|fictici|inventad|inventés/i);
     for(const item of PORTFOLIO_CASES){
       checkLocale(item.title,10);
       checkLocale(item.subtitle,10);
@@ -108,8 +108,8 @@ describe("Complete public-site content integrity — IT/EN/FR/ES",()=>{
     const directions=new Set(TRANSLATION_DEEP_CASES.map(x=>x.direction));
     expect([...directions].sort()).toEqual(["EN-IT","ES-IT","FR-IT","IT-EN","IT-ES","IT-FR"].sort());
     for(const lang of languages) {
-      expect(TRANSLATION_SAMPLE_NOTICE[lang],lang).toMatch(/fittiz|inventat|fictional|ficti|fictici|inventad|inventés/i);
-      expect(OPERATIONAL_NOTICE[lang],lang).toMatch(/fittiz|inventat|fictional|ficti|fictici|inventad|inventés/i);
+      expect(TRANSLATION_SAMPLE_NOTICE[lang],lang).toMatch(/fittiz|inventat|invented|fictional|ficti|fictici|inventad|inventés/i);
+      expect(OPERATIONAL_NOTICE[lang],lang).toMatch(/fittiz|inventat|invented|fictional|ficti|fictici|inventad|inventés/i);
     }
     for(const item of TRANSLATION_DEEP_CASES){
       checkLocale(item.title,8);
