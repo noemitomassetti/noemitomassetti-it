@@ -36,7 +36,7 @@ export const frLocale: TranslationDictionary = {
     badge: 'ASSISTANTE VIRTUELLE MULTILINGUE',
     titleLine1: 'Communication en italien, traduction et localisation',
     titleHighlight: 'pour travailler avec l’Italie',
-    subtitle: "Traduction et adaptation de contenus pour l'Italie, correspondance client, textes web et assistance virtuelle multilingue.",
+    subtitle: "Traduction et adaptation de contenus pour l'Italie, relation client écrite, correspondance professionnelle, textes web et assistance virtuelle multilingue.",
     headline: "Des messages naturels et professionnels pour votre public italien",
     desc1: "J'aide les professionnels et les petites entreprises à communiquer clairement en italien, avec le ton, la terminologie et les références adaptés à leur public.",
     desc2: "Je propose également, selon les besoins convenus, des prestations de secrétariat, de back-office, de relation client écrite et de traduction entre l'italien et l'anglais, le français ou l'espagnol.",
@@ -88,7 +88,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Secrétariat à distance et back-office opérationnel',
         subtitle: "Une aide pratique pour le secrétariat et le back-office au quotidien.",
         description:
-          "Je peux organiser les courriels, l'agenda et les documents, mettre à jour des données, suivre des commandes et préparer des devis à partir d'informations approuvées. Les tâches et validations sont convenues à l'avance. Sont exclus la comptabilité, la facturation, la gestion administrative de l'entreprise et la prospection commerciale.",
+          "Je peux organiser les courriels, l'agenda et les documents, mettre à jour des données, suivre des commandes et préparer des devis à partir d'informations approuvées. Les tâches et validations sont convenues à l'avance. Selon la mission, je prends en charge uniquement les tâches convenues. Pas de télémarketing, prospection, comptabilité, facturation ni gestion administrative.",
         iconName: 'Mail',
         items: [
           'Tri et organisation des courriels professionnels',
@@ -104,7 +104,7 @@ export const frLocale: TranslationDictionary = {
         title: 'Traductions IT ↔ EN/FR/ES et localisation',
         subtitle: "La langue et le ton justes, adaptés à chaque destinataire.",
         description:
-          "Je traduis entre l'italien et l'anglais, le français ou l'espagnol, dans les deux sens, après examen de chaque texte. Pour les professionnels qui s'adressent au marché italien, j'accorde une attention particulière au naturel de la langue, au ton et au contexte. Traduction, localisation, révision et correspondance sont précisées dans le devis.",
+          "Je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que de ces langues vers l’italien, après examen de chaque texte. Pour les professionnels qui s'adressent au marché italien, j'accorde une attention particulière au naturel de la langue, au ton et au contexte. Traduction, localisation, révision et correspondance sont précisées dans le devis.",
         iconName: 'Globe',
         items: [
           'Localisation de sites web et pages de destination en italien',
