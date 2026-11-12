@@ -36,6 +36,170 @@ import {
 } from "lucide-react";
 
 
+const PORTFOLIO_SERVICE_EXAMPLES = [
+  {
+    "it": [
+      "Assistenza clienti scritta",
+      "Tre richieste simulate, tre risposte email redatte integralmente e un registro con le verifiche da effettuare.",
+      "Leggi le tre risposte"
+    ],
+    "en": [
+      "Written customer care",
+      "Three fictional enquiries, three full Italian email drafts and a case log listing the necessary checks.",
+      "Read the three replies"
+    ],
+    "fr": [
+      "Relation client écrite",
+      "Trois demandes fictives, trois réponses complètes en italien et un tableau de suivi des vérifications.",
+      "Lire les trois réponses"
+    ],
+    "es": [
+      "Atención escrita al cliente",
+      "Tres consultas ficticias, tres respuestas completas en italiano y un registro de comprobaciones.",
+      "Leer las tres respuestas"
+    ],
+    "doc": "11"
+  },
+  {
+    "it": [
+      "Segreteria, email e agenda",
+      "Un piano settimanale, messaggi da classificare, appuntamenti da verificare e una bozza di conferma.",
+      "Vedi agenda e corrispondenza"
+    ],
+    "en": [
+      "Secretarial support, email and calendar",
+      "A sample weekly plan, messages to prioritise, appointments to check and a confirmation draft.",
+      "View calendar and correspondence"
+    ],
+    "fr": [
+      "Secrétariat, courriels et agenda",
+      "Planning hebdomadaire, courriels à classer, rendez-vous à confirmer et brouillon de réponse.",
+      "Voir l’agenda et les courriels"
+    ],
+    "es": [
+      "Secretaría, correo y agenda",
+      "Agenda semanal, correos clasificados, citas por confirmar y un borrador de respuesta.",
+      "Ver agenda y correos"
+    ],
+    "doc": "12"
+  },
+  {
+    "it": [
+      "Ordini e back office",
+      "Schede cliente di esempio, registro ordini, controllo del listino e anomalie da segnalare prima dell'approvazione.",
+      "Esamina il registro ordini"
+    ],
+    "en": [
+      "Orders and back-office operations",
+      "Sample customer records, order tracking, price-list checks and discrepancies to flag before approval.",
+      "Inspect the order register"
+    ],
+    "fr": [
+      "Commandes et back-office",
+      "Fiches clients fictives, suivi des commandes, contrôle des tarifs et écarts à faire valider.",
+      "Consulter le suivi des commandes"
+    ],
+    "es": [
+      "Pedidos y back office",
+      "Fichas de clientes ficticios, registro de pedidos, revisión de precios y diferencias pendientes de validación.",
+      "Consultar el registro de pedidos"
+    ],
+    "doc": "13"
+  },
+  {
+    "it": [
+      "Traduzioni e localizzazione",
+      "Un testo originale in francese, la versione italiana, un glossario e le scelte terminologiche spiegate.",
+      "Confronta le due versioni"
+    ],
+    "en": [
+      "Translation and localisation",
+      "A French source text, its Italian translation, a glossary and explanations of terminology choices.",
+      "Compare source and translation"
+    ],
+    "fr": [
+      "Traduction et localisation",
+      "Un texte original français, sa traduction italienne, un glossaire et les choix terminologiques expliqués.",
+      "Comparer les deux versions"
+    ],
+    "es": [
+      "Traducción y localización",
+      "Un texto original en francés, su traducción italiana, un glosario y explicaciones terminológicas.",
+      "Comparar ambas versiones"
+    ],
+    "doc": "17"
+  },
+  {
+    "it": [
+      "Scrittura e revisione testi",
+      "Una bozza iniziale, il testo revisionato e le correzioni spiegate, per capire come miglioro chiarezza e tono.",
+      "Guarda il prima e dopo"
+    ],
+    "en": [
+      "Writing and editorial revision",
+      "An original draft, the edited version and explanations of the changes to clarity and tone.",
+      "See the before-and-after"
+    ],
+    "fr": [
+      "Rédaction et révision",
+      "Un brouillon initial, le texte révisé et des explications sur les choix de clarté et de ton.",
+      "Voir l’avant et l’après"
+    ],
+    "es": [
+      "Redacción y revisión",
+      "Un borrador inicial, la versión revisada y comentarios sobre claridad y tono.",
+      "Ver el antes y el después"
+    ],
+    "doc": "10"
+  },
+  {
+    "it": [
+      "Ricerche e confronti informativi",
+      "Una tabella con criteri di confronto, dati dichiaratamente simulati e informazioni che richiederebbero verifica.",
+      "Apri la tabella comparativa"
+    ],
+    "en": [
+      "Information research and comparisons",
+      "A criteria-based comparison table, clearly fictional figures and outstanding checks.",
+      "Open the comparison table"
+    ],
+    "fr": [
+      "Recherche et comparatifs",
+      "Un tableau de critères, des données explicitement fictives et des vérifications à prévoir.",
+      "Ouvrir le tableau comparatif"
+    ],
+    "es": [
+      "Investigación y comparativas",
+      "Una tabla de criterios, datos expresamente ficticios y comprobaciones pendientes.",
+      "Abrir la tabla comparativa"
+    ],
+    "doc": "07"
+  },
+  {
+    "it": [
+      "Contenuti per siti web",
+      "Titoli, descrizioni, domande frequenti e inviti all'azione, dal testo inglese alla proposta italiana.",
+      "Leggi i testi prima e dopo"
+    ],
+    "en": [
+      "Website copy and localisation",
+      "Headings, descriptions, FAQs and calls to action, compared between English source and Italian version.",
+      "Read the original and adapted copy"
+    ],
+    "fr": [
+      "Contenus web et adaptation",
+      "Titres, descriptions, FAQ et appels à l’action : comparaison de l’anglais et de l’italien.",
+      "Voir les textes comparés"
+    ],
+    "es": [
+      "Textos web y adaptación",
+      "Títulos, descripciones, preguntas frecuentes y llamadas a la acción en inglés e italiano.",
+      "Ver los textos comparados"
+    ],
+    "doc": "21"
+  }
+] as const;
+
 export default function Portfolio() {
   const location = useLocation();
   const lang: Language = getLanguageFromPath(location.pathname);
@@ -185,12 +349,12 @@ export default function Portfolio() {
 
           <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed mb-5 md:mb-8 max-w-3xl">
             {lang === "it"
-              ? "Nel portfolio trovi traduzioni commentate, revisioni di testi, comunicazioni professionali, materiali di back office e ricerche informative. Puoi leggere gli elaborati e conoscere le scelte linguistiche e operative che li accompagnano."
+              ? "Qui puoi vedere che cosa preparo concretamente: risposte email complete, registri e documenti di back office, traduzioni a fronte, revisioni prima/dopo e ricerche comparative. Per ogni esempio trovi il risultato, le informazioni di partenza e le verifiche effettuate o previste."
               : lang === "fr"
-              ? "Vous trouverez ici des traductions commentées, des révisions de textes, de la correspondance professionnelle, des documents de back-office et des recherches documentaires, accompagnés d'explications sur les choix effectués."
+              ? "Découvrez ce que je prépare concrètement : réponses complètes à des courriels, tableaux de suivi et documents de back-office, traductions en regard, révisions avant/après et comparatifs documentaires. Chaque exemple présente le travail réalisé, les informations de départ et les vérifications effectuées ou prévues."
               : lang === "es"
-              ? "Aquí encontrarás traducciones comentadas, revisiones de textos, comunicaciones profesionales, documentos de back office e investigaciones informativas, con explicaciones sobre las decisiones tomadas."
-              : "Explore annotated translations, editorial revisions, professional correspondence, back-office documents and informational research, together with notes explaining the language and operational decisions behind each example."}
+              ? "Aquí puedes ver qué documentos preparo: respuestas completas a correos, registros de tareas y pedidos, traducciones en paralelo, revisiones antes/después y comparativas informativas. Cada ejemplo muestra el resultado, los datos de partida y las comprobaciones realizadas o previstas."
+              : "See the work I can produce: complete customer email drafts, back-office records, side-by-side translations, before-and-after edits and information comparisons. Each example presents the finished sample, its starting material and the checks completed or still required."}
           </p>
 
           {/* Editorial provenance: factual, understated and consistent across locales. */}
@@ -214,6 +378,28 @@ export default function Portfolio() {
               </a>
             ))}
           </nav>
+        </div>
+      </section>
+
+      {/* Tangible work and the services it demonstrates come before long methodology sections. */}
+      <section aria-labelledby="portfolio-what-i-do" className="py-12 md:py-16 border-b border-border/40 bg-background">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+          <h2 id="portfolio-what-i-do" className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+            {({it:"Che cosa faccio, attraverso esempi di lavoro",en:"What I do, shown through real work samples",fr:"Mes prestations, illustrées par des exemples",es:"Qué hago: ejemplos de trabajo concretos"} as const)[lang]}
+          </h2>
+          <p className="text-foreground/80 leading-relaxed max-w-3xl mb-7">
+            {({it:"Apri un esempio per leggere il materiale prodotto. In questo portfolio ogni scenario è inventato, ma i testi, i modelli e le traduzioni sono elaborati originali creati per mostrare il tipo di lavoro che posso svolgere.",en:"Open a sample to read the material itself. Every scenario is fictional, but the writing, templates and translations are original examples of the work I can provide.",fr:"Ouvrez un exemple pour consulter le document lui-même. Les situations sont fictives, mais les textes, modèles et traductions ont été créés pour illustrer concrètement mes prestations.",es:"Abre un ejemplo para leer el documento. Las situaciones son ficticias, pero los textos, modelos y traducciones son muestras originales del trabajo que puedo ofrecer."} as const)[lang]}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {PORTFOLIO_SERVICE_EXAMPLES.map((item) => (
+              <Link key={item.doc} to={getPortfolioDocumentPath(item.doc,lang)}
+                className="group block p-5 rounded-xl border border-border/70 bg-card hover:border-primary/60 hover:shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+                <h3 className="font-bold text-lg text-foreground group-hover:text-primary mb-2">{item[lang][0]}</h3>
+                <p className="text-sm leading-relaxed text-foreground/80 mb-3">{item[lang][1]}</p>
+                <span className="inline-flex gap-1 items-center text-sm font-semibold text-primary">{item[lang][2]}<ArrowRight className="w-4 h-4"/></span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
