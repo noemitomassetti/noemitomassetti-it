@@ -256,12 +256,12 @@ export default function Portfolio() {
             <h2 className="text-xl md:text-2xl font-bold text-foreground flex items-center justify-center md:justify-start gap-2">
               <Sparkles className="w-5 h-5 text-primary" />
               {lang === "it"
-                ? "La formazione specialistica mostrata attraverso il lavoro"
+                ? "La formazione specialistica illustrata attraverso esempi"
                 : lang === "fr"
                 ? "La formation universitaire spécialisée illustrée par la pratique"
                 : lang === "es"
                 ? "La formación universitaria especializada reflejada en la práctica"
-                : "Specialist University Training Demonstrated in Practice"}
+                : "Specialist language training illustrated through examples"}
             </h2>
             <p className="text-sm text-muted-foreground mt-2 max-w-3xl">
               {lang === "it"
@@ -442,12 +442,12 @@ export default function Portfolio() {
                         }`}
                       >
                         {lang === "it"
-                          ? "1. Inquadramento & Metodo"
+                          ? "1. Contesto e metodo"
                           : lang === "fr"
-                          ? "1. Cadrage & Méthode"
+                          ? "1. Contexte et méthode"
                           : lang === "es"
-                          ? "1. Contexto y Método"
-                          : "1. Brief & Methodology"}
+                          ? "1. Contexto y método"
+                          : "1. Brief and approach"}
                       </button>
 
                       {(caseItem.comparison || caseItem.tableData || caseItem.sampleText) && (
@@ -462,27 +462,27 @@ export default function Portfolio() {
                         >
                           {caseItem.comparison
                             ? lang === "it"
-                              ? "2. Confronto Sorgente / Target"
+                              ? "2. Testo originale e traduzione"
                               : lang === "fr"
-                              ? "2. Comparaison Source / Cible"
+                              ? "2. Texte source et traduction"
                               : lang === "es"
-                              ? "2. Comparación Origen / Destino"
-                              : "2. Source / Target Comparison"
+                              ? "2. Original y traducción"
+                              : "2. Source and translation"
                             : caseItem.tableData
                             ? lang === "it"
-                              ? "2. Matrice di Benchmark"
+                              ? "2. Tabella comparativa"
                               : lang === "fr"
-                              ? "2. Matrice d'Analyse Comparative"
+                              ? "2. Tableau comparatif"
                               : lang === "es"
-                              ? "2. Matriz de Benchmarking"
-                              : "2. Benchmark Matrix"
+                              ? "2. Tabla comparativa"
+                              : "2. Comparison table"
                             : lang === "it"
-                            ? "2. Testo Narrativo a Fronte"
+                            ? "2. Testo narrativo a fronte"
                             : lang === "fr"
-                            ? "2. Texte Littéraire Bilingue"
+                            ? "2. Texte littéraire bilingue"
                             : lang === "es"
-                            ? "2. Texto Literario en Paralelo"
-                            : "2. Dual-Language Literary Text"}
+                            ? "2. Texto literario bilingüe"
+                            : "2. Bilingual literary text"}
                         </button>
                       )}
 
@@ -496,12 +496,12 @@ export default function Portfolio() {
                         }`}
                       >
                         {lang === "it"
-                          ? "3. Decisioni Chiave & Deliverable"
+                          ? "3. Scelte e risultato"
                           : lang === "fr"
-                          ? "3. Décisions Clés & Livrable"
+                          ? "3. Choix et résultat"
                           : lang === "es"
-                          ? "3. Decisiones Clave y Entregable"
-                          : "3. Key Decisions & Deliverable"}
+                          ? "3. Decisiones y resultado"
+                          : "3. Key decisions and sample"}
                       </button>
                     </div>
 
@@ -512,24 +512,24 @@ export default function Portfolio() {
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Il Brief"
+                                ? "Contesto dell'esempio"
                                 : lang === "fr"
-                                ? "Le Brief"
+                                ? "Contexte de l’exemple"
                                 : lang === "es"
-                                ? "El Brief"
-                                : "The Brief"}
+                                ? "Contexto del ejemplo"
+                                : "Example brief"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.brief[lang]}</p>
                           </div>
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Materiale di Partenza"
+                                ? "Materiale di partenza"
                                 : lang === "fr"
-                                ? "Matériel de Départ"
+                                ? "Documents de départ"
                                 : lang === "es"
-                                ? "Material de Partida"
-                                : "Starting Material"}
+                                ? "Material de partida"
+                                : "Starting material"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.startingMaterial[lang]}</p>
                           </div>
@@ -539,24 +539,24 @@ export default function Portfolio() {
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Obiettivo Professionale"
+                                ? "Obiettivo"
                                 : lang === "fr"
-                                ? "Objectif Professionnel"
+                                ? "Objectif"
                                 : lang === "es"
-                                ? "Objetivo Profesional"
-                                : "Professional Objective"}
+                                ? "Objetivo"
+                                : "Objective"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.objective[lang]}</p>
                           </div>
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Approccio e Metodologia"
+                                ? "Metodo di lavoro"
                                 : lang === "fr"
-                                ? "Approche & Méthodologie"
+                                ? "Méthode de travail"
                                 : lang === "es"
-                                ? "Enfoque y Metodología"
-                                : "Approach & Methodology"}
+                                ? "Método de trabajo"
+                                : "Approach and method"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.approach[lang]}</p>
                           </div>
@@ -589,7 +589,7 @@ export default function Portfolio() {
                               <div className="p-4 rounded-xl bg-destructive/5 border border-destructive/20">
                                 <span className="text-[11px] font-bold uppercase tracking-wider text-destructive block mb-2">
                                   {lang === "it"
-                                    ? "Resa letterale volutamente non idiomatica (esempio)"
+                                    ? "Traduzione volutamente letterale (esempio dimostrativo)"
                                     : lang === "fr"
                                     ? "Version littérale volontairement maladroite (exemple)"
                                     : lang === "es"
@@ -604,12 +604,12 @@ export default function Portfolio() {
                               <div className="p-4 rounded-xl bg-primary/10 border border-primary/30">
                                 <span className="text-[11px] font-bold uppercase tracking-wider text-primary block mb-2">
                                   {lang === "it"
-                                    ? "Localizzazione Professionale"
+                                    ? "Versione adattata in italiano"
                                     : lang === "fr"
-                                    ? "Localisation Professionnelle"
+                                    ? "Version italienne adaptée"
                                     : lang === "es"
-                                    ? "Localización Profesional"
-                                    : "Professional Localisation"}{" "}
+                                    ? "Versión italiana adaptada"
+                                    : "Adapted Italian version"}{" "}
                                   ({caseItem.comparison.targetLang})
                                 </span>
                                 <p className="font-medium text-foreground leading-relaxed">
@@ -626,7 +626,7 @@ export default function Portfolio() {
                                   ? "Commentaire d'analyse : "
                                   : lang === "es"
                                   ? "Nota de análisis: "
-                                  : "Linguistic commentary: "}
+                                  : "Translation notes: "}
                               </span>
                               {caseItem.comparison.notes[lang]}
                             </div>
@@ -666,12 +666,12 @@ export default function Portfolio() {
                               <div className="p-5 rounded-xl bg-background border border-border/60">
                                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-2">
                                   {lang === "it"
-                                    ? "Testo Sorgente Originale (Inglese · Prosa Narrativa Contemporanea)"
+                                    ? "Testo originale (inglese · prosa contemporanea)"
                                     : lang === "fr"
-                                    ? "Texte Source Original (Anglais · Prose Contemporaine)"
+                                    ? "Texte original (anglais · prose contemporaine)"
                                     : lang === "es"
-                                    ? "Texto Origen Original (Inglés · Prosa Narrativa Contemporánea)"
-                                    : "English Original Source (Contemporary Literary Prose)"}
+                                    ? "Texto original (inglés · prosa contemporánea)"
+                                    : "Original English text (contemporary prose)"}
                                 </span>
                                 <div className="text-foreground/90 whitespace-pre-line font-serif text-sm leading-relaxed">
                                   {caseItem.sampleText.enSource}
@@ -681,9 +681,9 @@ export default function Portfolio() {
                               <div className="p-5 rounded-xl bg-primary/5 border border-primary/20">
                                 <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-2">
                                   {lang === "it"
-                                    ? "Resa Traduttiva di Noemi (Italiano · Resa Narrativa)"
+                                    ? "Traduzione proposta da Noemi (italiano)"
                                     : lang === "fr"
-                                    ? "Traduction Italienne de Noemi (Rendu Littéraire)"
+                                    ? "Traduction italienne proposée par Noemi"
                                     : lang === "es"
                                     ? "Traducción literaria al italiano — versión propuesta por Noemi"
                                     : "Italian Target Translation (Literary Rendering by Noemi)"}
@@ -708,12 +708,12 @@ export default function Portfolio() {
                         <div>
                           <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-3">
                             {lang === "it"
-                              ? "Decisioni Chiave Applicate"
+                              ? "Scelte principali e motivazioni"
                               : lang === "fr"
-                              ? "Décisions Stratégiques Appliquées"
+                              ? "Principaux choix et justification"
                               : lang === "es"
-                              ? "Decisiones Clave Aplicadas"
-                              : "Key Strategic Decisions"}
+                              ? "Principales decisiones y motivos"
+                              : "Key decisions and rationale"}
                           </span>
                           <ul className="space-y-2.5">
                             {caseItem.keyDecisions[lang].map((dec, dIdx) => (
@@ -905,7 +905,7 @@ export default function Portfolio() {
               className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-primary text-primary-foreground hover:scale-105 transition-all shadow-md"
             >
               {lang === "it"
-                ? "Raccontami di cosa hai bisogno"
+                ? "Descrivimi le tue esigenze"
                 : lang === "fr"
                 ? "Parlez-moi de votre besoin"
                 : lang === "es"
