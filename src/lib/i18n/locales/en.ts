@@ -89,7 +89,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Virtual Secretarial Support & Operational Back Office',
         subtitle: "Practical support with everyday secretarial and back-office tasks.",
         description:
-          "I can organise correspondence, calendars and documents, update records, handle operational orders and prepare quotes using approved information and instructions. Scope and approvals are agreed in advance. Depending on the brief, I can assist with operational tasks, but I do not offer telemarketing, customer acquisition, bookkeeping, invoicing or company administration.",
+          "I can organise correspondence, calendars and documents, update records, handle operational orders and prepare quotes using approved information and instructions. Scope and approvals are agreed in advance. Depending on the brief, I can assist with clearly agreed operational tasks. No telemarketing, customer acquisition, bookkeeping, invoicing or company administration services are provided.",
         iconName: 'Mail',
         items: [
           'Email triage & structured inbox management',
@@ -358,7 +358,7 @@ export const enLocale: TranslationDictionary = {
       "I am a multilingual virtual assistant with specialist language training and over twenty years of professional experience across different roles and sectors.",
       "My work experience includes customer service, back-office operations, order handling, organisation and practical operational support.",
       "I hold a degree in Language Mediation from the Università degli Studi di Macerata, awarded 110 e lode (the highest Italian honours), and completed further studies in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona.",
-      "Italian is my native language. I also work with English, French and Spanish, offering translation in both directions between Italian and each of these languages, language revision and agreed multilingual correspondence.",
+      "Italian is my native language. I also work with English, French and Spanish, I translate both from Italian into English, French and Spanish and from these languages into Italian, providing language revision and agreed multilingual correspondence.",
       "Today I support professionals and small businesses with everyday operations and professional communication, particularly when they need to engage with people in Italy.",
     ],
     credentials: [
