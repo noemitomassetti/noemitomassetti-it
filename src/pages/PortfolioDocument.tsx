@@ -7,13 +7,14 @@ import { getPortfolioDocumentPath } from "@/lib/portfolioDocumentPaths";
 import { DOCUMENT_GUIDES, DOCUMENT_CONTEXT, DOCUMENT_EXACT_EXCERPTS } from "@/lib/portfolioDocumentGuides";
 import { PORTFOLIO_CASES, PORTFOLIO_DOCUMENTS } from "@/lib/portfolioData";
 import type { Language } from "@/lib/i18n/types";
+import { CUSTOMER_CARE_SAMPLES, CUSTOMER_CARE_SAMPLE_NOTICE } from "@/lib/portfolioCustomerCareSample";
 
 const LANGS: Language[] = ["it", "en", "fr", "es"];
 const labels = {
-  it: {back:"Torna al portfolio", sample:"Esempio dimostrativo", focus:"Come leggere questo lavoro", brief:"Scenario simulato", material:"Materiale iniziale", goal:"Obiettivo", method:"Metodo", choices:"Scelte professionali", outcome:"Risultato dimostrativo", source:"Testo sorgente", target:"Testo in italiano", note:"Nota professionale", original:"Apri il documento integrale", preview:"Elaborato originale in italiano", table:"Dati dimostrativi", safety:"Progetto e dati interamente inventati: non è un incarico commissionato né una testimonianza.", notice:"Il lavoro originale è in italiano; le spiegazioni e le scelte professionali sono presentate in questa lingua.", missing:"Documento non disponibile"},
-  en: {back:"Back to work examples", sample:"Independent work sample", focus:"How to read this sample", brief:"Fictional scenario", material:"Starting material", goal:"Objective", method:"Approach", choices:"Editorial and operational choices", outcome:"Illustrative result", source:"Source text", target:"Italian target", note:"Professional commentary", original:"Open complete original document", preview:"Original work sample in Italian", table:"Illustrative data", safety:"All names and data are fictional: this is not a commissioned client project or a testimonial.", notice:"The original deliverable is in Italian, as intended for Italian customers; its context and professional decisions are explained here in English.", missing:"Sample not available"},
-  fr: {back:"Retour aux exemples", sample:"Exemple indépendant", focus:"Comment lire cet exemple", brief:"Scénario fictif", material:"Documents de départ", goal:"Objectif", method:"Méthode", choices:"Choix éditoriaux et opérationnels", outcome:"Résultat démonstratif", source:"Texte source", target:"Version italienne", note:"Commentaire professionnel", original:"Ouvrir le document original complet", preview:"Document original en italien", table:"Données fictives", safety:"Noms et données entièrement fictifs : il ne s’agit ni d’une mission client ni d’un témoignage.", notice:"Le livrable original est en italien, destiné au public italien ; son contexte et les choix professionnels sont expliqués ici en français.", missing:"Exemple indisponible"},
-  es: {back:"Volver a los ejemplos", sample:"Muestra independiente", focus:"Cómo interpretar esta muestra", brief:"Situación ficticia", material:"Material de partida", goal:"Objetivo", method:"Método", choices:"Decisiones editoriales y operativas", outcome:"Resultado demostrativo", source:"Texto original", target:"Versión italiana", note:"Comentario profesional", original:"Abrir el documento original completo", preview:"Documento original en italiano", table:"Datos ficticios", safety:"Todos los nombres y datos son ficticios: no es un encargo real ni un testimonio de un cliente.", notice:"El entregable original está en italiano, destinado al público italiano; su contexto y decisiones profesionales se explican aquí en español.", missing:"Muestra no disponible"},
+  it: {back:"Torna al portfolio", sample:"Esempio dimostrativo", focus:"Come leggere questo lavoro", brief:"Scenario simulato", material:"Materiale iniziale", goal:"Obiettivo", method:"Metodo", choices:"Scelte professionali", outcome:"Risultato dimostrativo", source:"Testo sorgente", target:"Testo in italiano", note:"Nota professionale", original:"Apri il documento integrale", preview:"Elaborato originale in italiano", table:"Dati dimostrativi", safety:"Progetto e dati interamente inventati: non è un incarico commissionato né una testimonianza.", notice:"Il lavoro originale è in italiano; le spiegazioni e le scelte professionali sono presentate in questa lingua.", workTitle:"Leggi il lavoro svolto", contextTitle:"Contesto, metodo e scelte", clientMessage:"Richiesta simulata", replyTitle:"Risposta professionale preparata", actionTitle:"Controlli e attività previsti", statusTitle:"Stato della bozza", sampleCaveat:"Le email sono state redatte per la simulazione e non sono state inviate.", open:"Apri il documento completo", original:"Documento integrale in italiano", preview:"Elaborato da consultare", notice:"Il documento allegato è in italiano, lingua del lavoro dimostrativo.", missing:"Documento non disponibile"},
+  en: {back:"Back to work examples", sample:"Independent work sample", focus:"How to read this sample", brief:"Fictional scenario", material:"Starting material", goal:"Objective", method:"Approach", choices:"Editorial and operational choices", outcome:"Illustrative result", source:"Source text", target:"Italian target", note:"Professional commentary", original:"Open complete original document", preview:"Original work sample in Italian", table:"Illustrative data", safety:"All names and data are fictional: this is not a commissioned client project or a testimonial.", notice:"The original deliverable is in Italian, as intended for Italian customers; its context and professional decisions are explained here in English.", workTitle:"Read the actual work sample", contextTitle:"Context, approach and decisions", clientMessage:"Fictional customer enquiry (Italian)", replyTitle:"Prepared customer reply (Italian)", actionTitle:"Operational checks and next steps", statusTitle:"Draft status", sampleCaveat:"These Italian messages were written for this demonstration; none was sent.", open:"Open the complete document", original:"Complete document in Italian", preview:"View the work sample", notice:"The work sample itself is in Italian; the explanatory sections are localised into English.", missing:"Sample not available"},
+  fr: {back:"Retour aux exemples", sample:"Exemple indépendant", focus:"Comment lire cet exemple", brief:"Scénario fictif", material:"Documents de départ", goal:"Objectif", method:"Méthode", choices:"Choix éditoriaux et opérationnels", outcome:"Résultat démonstratif", source:"Texte source", target:"Version italienne", note:"Commentaire professionnel", original:"Ouvrir le document original complet", preview:"Document original en italien", table:"Données fictives", safety:"Noms et données entièrement fictifs : il ne s’agit ni d’une mission client ni d’un témoignage.", notice:"Le livrable original est en italien, destiné au public italien ; son contexte et les choix professionnels sont expliqués ici en français.", workTitle:"Consultez le travail réalisé", contextTitle:"Contexte, méthode et choix", clientMessage:"Demande fictive d’un client (en italien)", replyTitle:"Réponse préparée (en italien)", actionTitle:"Vérifications et actions prévues", statusTitle:"État du brouillon", sampleCaveat:"Ces messages en italien ont été rédigés pour la démonstration et n’ont pas été envoyés.", open:"Ouvrir le document complet", original:"Document intégral en italien", preview:"Consulter l’exemple", notice:"Le document de travail est en italien ; les explications sont adaptées en français.", missing:"Exemple indisponible"},
+  es: {back:"Volver a los ejemplos", sample:"Muestra independiente", focus:"Cómo interpretar esta muestra", brief:"Situación ficticia", material:"Material de partida", goal:"Objetivo", method:"Método", choices:"Decisiones editoriales y operativas", outcome:"Resultado demostrativo", source:"Texto original", target:"Versión italiana", note:"Comentario profesional", original:"Abrir el documento original completo", preview:"Documento original en italiano", table:"Datos ficticios", safety:"Todos los nombres y datos son ficticios: no es un encargo real ni un testimonio de un cliente.", notice:"El entregable original está en italiano, destinado al público italiano; su contexto y decisiones profesionales se explican aquí en español.", workTitle:"Consulta el trabajo realizado", contextTitle:"Contexto, método y decisiones", clientMessage:"Consulta ficticia de un cliente (en italiano)", replyTitle:"Respuesta preparada (en italiano)", actionTitle:"Comprobaciones y siguientes pasos", statusTitle:"Estado del borrador", sampleCaveat:"Estos mensajes en italiano se redactaron como ejemplo y no se han enviado.", open:"Abrir el documento completo", original:"Documento completo en italiano", preview:"Consultar el trabajo", notice:"El documento de trabajo está en italiano; las explicaciones están adaptadas al español.", missing:"Muestra no disponible"},
 } satisfies Record<Language,Record<string,string>>;
 
 export default function PortfolioDocument() {
@@ -57,6 +58,53 @@ export default function PortfolioDocument() {
           className={"px-4 py-2 text-xs font-bold rounded-full border focus-visible:ring-2 focus-visible:ring-primary "+
             (l===lang ? "bg-primary text-primary-foreground border-primary":"border-border hover:border-primary")}>{l.toUpperCase()}</Link>)}
       </nav>
+      {/* Show the work product first, before discussing the process. */}
+      <section className="mt-10" aria-labelledby="portfolio-work-sample">
+        <h2 id="portfolio-work-sample" className="text-2xl md:text-3xl font-bold text-foreground mb-3">{t.workTitle}</h2>
+        {num === "11" ? (
+          <div className="space-y-6">
+            <p className="text-sm leading-relaxed text-foreground/80">{CUSTOMER_CARE_SAMPLE_NOTICE[lang]}</p>
+            {CUSTOMER_CARE_SAMPLES.map((item) => (
+              <article key={item.id} className="rounded-xl border border-border/70 bg-card overflow-hidden">
+                <div className="bg-secondary/40 px-5 py-4 border-b border-border/60">
+                  <h3 className="font-bold text-lg">{item.id} · {item.title}</h3>
+                </div>
+                <div className="p-5 md:p-6 space-y-5">
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wide text-muted-foreground mb-2">{t.clientMessage}</h4>
+                    <p className="text-sm leading-relaxed whitespace-pre-line">{item.request}</p>
+                  </div>
+                  <div className="border-l-4 border-primary bg-primary/5 rounded-r-lg p-4 md:p-5">
+                    <h4 className="text-xs font-bold uppercase tracking-wide text-primary mb-3">{t.replyTitle}</h4>
+                    <p className="text-sm font-semibold mb-3">{item.subject}</p>
+                    <p className="text-sm leading-relaxed whitespace-pre-line">{item.reply}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wide text-muted-foreground mb-2">{t.actionTitle}</h4>
+                    <p className="text-sm leading-relaxed">{item.note}</p>
+                    <p className="text-sm mt-3"><strong>{t.statusTitle}:</strong> {item.status}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+            <p className="text-sm text-muted-foreground">{t.sampleCaveat}</p>
+            <a href={doc.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-semibold underline">
+              <FileText size={17}/>{t.open}<ArrowUpRight size={17}/>
+            </a>
+          </div>
+        ) : (
+          <div>
+            <p className="text-sm text-muted-foreground mb-4">{t.notice}</p>
+            <div className="rounded-xl border border-border/70 overflow-hidden bg-white">
+              <iframe title={t.original+" · "+doc.title[lang]} src={doc.url} loading="lazy" className="block w-full h-[520px] md:h-[740px] bg-white"/>
+            </div>
+            <a href={doc.url} target="_blank" rel="noopener noreferrer" className="inline-flex gap-2 items-center mt-4 px-5 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm">
+              <FileText size={17}/>{t.open}<ArrowUpRight size={17}/>
+            </a>
+          </div>
+        )}
+      </section>
+      <h2 className="mt-14 mb-1 text-xl md:text-2xl font-bold text-foreground">{t.contextTitle}</h2>
       <section className="mt-12" aria-labelledby="portfolio-reading-guide">
         <h2 id="portfolio-reading-guide" className="text-2xl font-bold text-foreground mb-5">{t.focus}</h2>
         <div className="border border-border/70 bg-card rounded-xl p-5 md:p-7 text-foreground/90 leading-relaxed">{guide.focus[lang]}</div>
@@ -87,18 +135,6 @@ export default function PortfolioDocument() {
       </section>}
       <section aria-label={t.outcome} className="mt-10 rounded-xl border border-border/70 bg-secondary/30 p-6">
         <h2 className="text-xl font-bold mb-3">{t.outcome}</h2><p className="leading-relaxed">{custom?.deliverable??study.deliverable[lang]}</p>
-      </section>
-      <section className="mt-12" aria-labelledby="portfolio-original">
-        <div className="flex flex-wrap items-start justify-between gap-5 mb-5">
-          <div><h2 id="portfolio-original" className="text-2xl font-bold">{t.preview}</h2><p className="text-xs text-muted-foreground mt-2">{t.notice}</p></div>
-          <a href={doc.url} target="_blank" rel="noopener noreferrer" className="inline-flex gap-2 items-center px-5 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm">
-            <FileText size={17}/>{t.original}<ArrowUpRight size={17}/>
-          </a>
-        </div>
-        <div className="rounded-xl border border-border/70 overflow-hidden bg-white">
-          <iframe title={t.preview+" · "+doc.title[lang]} src={doc.url} loading="lazy" className="block w-full h-[560px] md:h-[760px] bg-white"/>
-        </div>
-        <p className="text-muted-foreground text-xs mt-4">{t.safety}</p>
       </section>
     </div>
   </Layout>;
