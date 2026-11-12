@@ -369,7 +369,7 @@ export const esLocale: TranslationDictionary = {
     ctaReadMore: 'Conoce mi trayectoria',
   },
   aboutPage: {
-    title: "Trayectoria, formación lingüística y método de trabajo",
+    title: "Trayectoria, formación lingüística y forma de trabajar",
     subtitle: "Experiencia en distintos ámbitos y formación especializada aplicada a tareas concretas.",
     storyTitle: "Experiencia profesional adquirida en distintas funciones",
     storyParagraphs: [
