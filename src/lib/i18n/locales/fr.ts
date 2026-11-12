@@ -5,7 +5,7 @@ export const frLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: 'Traduction et communication en italien pour les professionnels | Noemi Tomassetti',
-    homeDesc: 'Communiquez naturellement avec vos interlocuteurs italiens : traduction, localisation, contenus web et réseaux sociaux, courriels et relation client. Assistance virtuelle multilingue également disponible.',
+    homeDesc: 'Communiquez naturellement avec vos interlocuteurs italiens : traduction, localisation, contenus web et réseaux sociaux, courriels et relation client. Relation client écrite et assistance virtuelle multilingue également disponibles.',
     servicesTitle: 'Communication en italien, traduction et assistance virtuelle | Noemi Tomassetti',
     servicesDesc: 'Traduction et localisation pour le public italien, rédaction et révision de contenus web, courriels et réseaux sociaux, ainsi que l’ensemble des prestations d’assistance virtuelle multilingue.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
@@ -36,7 +36,7 @@ export const frLocale: TranslationDictionary = {
     badge: 'ASSISTANTE VIRTUELLE MULTILINGUE',
     titleLine1: 'Communication en italien, traduction et localisation',
     titleHighlight: 'pour travailler avec l’Italie',
-    subtitle: "Adressez-vous à vos interlocuteurs italiens avec des textes naturels et adaptés : sites web, pages de destination, courriels, lettres d’information, réseaux sociaux et communications professionnelles. Je propose aussi mes prestations de secrétariat et de back-office à distance.",
+    subtitle: "Adressez-vous à vos interlocuteurs italiens avec des textes naturels et adaptés : sites web, pages de destination, courriels, lettres d’information, réseaux sociaux et communications professionnelles. Je propose aussi mes prestations de relation client écrite, de secrétariat et de back-office à distance.",
     headline: 'Les mots justes pour communiquer avec l’Italie.',
     desc1: "De langue maternelle italienne, diplômée en médiation linguistique et formée à la traduction spécialisée, je vous aide à communiquer avec le public italien en tenant compte de la langue, du ton et du contexte.",
     desc2: 'Page de destination en italien, courriel destiné à un client, fiche produit ou publication sur les réseaux sociaux : je travaille la précision et la fluidité de vos messages. Tous mes autres services de secrétariat, back-office et relation client restent également accessibles.',
@@ -80,7 +80,7 @@ export const frLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'MON EXPERTISE',
     title: 'Communication en italien, traduction et assistance virtuelle',
-    subtitle: 'J’accompagne en priorité les professionnels qui souhaitent communiquer avec le marché italien. Traduction et contenus occupent une place centrale, sans exclure les autres prestations d’assistance virtuelle. Chaque mission fait l’objet d’un devis précis.',
+    subtitle: 'J’accompagne en priorité les professionnels qui souhaitent communiquer avec le marché italien. Traduction et contenus occupent une place centrale, sans exclure les autres prestations d’assistance virtuelle. Le devis précise les tâches et les livrables convenus pour chaque mission.',
     viewAllCta: 'Consulter le détail des services',
     categories: [
       {
