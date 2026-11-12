@@ -571,99 +571,243 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 7,
     category: "research",
     title: {
-      it: "Ricerca informativa: confronto tra fornitori di imballaggi e servizi di spedizione",
-      en: "Supplier Research: Comparative Benchmark for Eco-Packaging & Logistics",
-      fr: "Recherche de fournisseurs : Analyse comparative d'emballages écologiques",
-      es: "Investigación de proveedores: Análisis comparativo de embalaje ecológico",
-    },
+      "it": "Ricerca informativa: confronto tra quattro fornitori fittizi",
+      "en": "Illustrative research: four fictional packaging suppliers",
+      "fr": "Recherche documentaire : quatre fournisseurs fictifs",
+      "es": "Investigación informativa: cuatro proveedores ficticios"
+},
     subtitle: {
-      it: "Criteri di confronto, organizzazione dei dati e sintesi per una piccola attività",
-      en: "Market scouting, public data gathering, and decision matrix for a boutique producer",
-      fr: "Recherche de fournisseurs, collecte de données publiques et synthèse pour une marque artisanale",
-      es: "Búsqueda, recopilación de datos y matriz comparativa para pequeña empresa",
-    },
+      "it": "Tabella compilata, costi ipotetici e controlli prima della scelta",
+      "en": "Completed comparison, hypothetical prices and checks before deciding",
+      "fr": "Tableau comparatif, prix hypothétiques et vérifications nécessaires",
+      "es": "Tabla comparativa, precios simulados y comprobaciones pendientes"
+},
     brief: {
-      it: "Una piccola attività immaginaria vuole confrontare alcune soluzioni di imballaggio e spedizione utilizzando criteri prestabiliti.",
-      en: "An artisan Italian business needs to identify a certified FSC packaging supplier and reliable small-batch logistics partner.",
-      fr: "Une petite entreprise artisanale doit identifier un fournisseur d'emballages en carton recyclé FSC et logistique.",
-      es: "Un negocio artesanal necesita seleccionar un proveedor de envases de cartón reciclado FSC y envíos.",
-    },
+      "it": "Una piccola attività immaginaria deve confrontare quattro opzioni di imballaggio per un lotto di 500 pezzi, senza superare un budget indicativo di 450 €.",
+      "en": "A fictional small business compares four packaging options for a batch of 500 units and an indicative budget of €450.",
+      "fr": "Une petite entreprise fictive compare quatre solutions pour 500 emballages et un budget indicatif de 450 €.",
+      "es": "Una pequeña empresa ficticia compara cuatro opciones de embalaje para 500 unidades y un presupuesto orientativo de 450 €."
+},
     startingMaterial: {
-      it: "Parametri del cliente: budget massimo per pezzo, quantitativi minimi d'ordine (MOQ), tempi di consegna e certificazioni ecologiche richieste.",
-      en: "Client specifications: unit price targets, minimum order quantities (MOQ), turnaround times, and ecological certifications.",
-      fr: "Cahier des charges client : prix unitaire, quantités minimales (MOQ), délais et certifications.",
-      es: "Parámetros del cliente: precio objetivo por unidad, pedidos mínimos (MOQ), plazos y certificados.",
-    },
+      "it": "Quattro schede A–D, tutte inventate, con quantità minime, prezzi unitari, costi di spedizione e tempi ipotetici. Nessuna certificazione è verificata.",
+      "en": "Four wholly fictional A–D profiles with order quantities, unit prices, shipping and lead times. No certification is verified.",
+      "fr": "Quatre fiches A–D entièrement fictives indiquant quantités, prix, transport et délais. Aucune certification vérifiée.",
+      "es": "Cuatro perfiles A–D inventados con cantidades, precios, envío y plazos. Ninguna certificación verificada."
+},
     objective: {
-      it: "Mostrare come organizzare un confronto tra cinque fornitori immaginari, separando i dati da verificare dalle preferenze del committente.",
-      en: "Identify, verify and summarise public offerings from 5 suppliers into an actionable, decision-ready comparison matrix.",
-      fr: "Recueillir et synthétiser les offres de 5 fournisseurs européens dans une matrice décisionnelle claire.",
-      es: "Recopilar y sintetizar información pública de 5 proveedores en una matriz estructurada y transparente.",
-    },
+      "it": "Organizzare un confronto omogeneo e segnalare quali informazioni mancano prima di un acquisto reale.",
+      "en": "Provide a comparable summary and flag outstanding facts before any real purchase.",
+      "fr": "Présenter une comparaison homogène et les informations à confirmer avant un achat réel.",
+      "es": "Preparar una comparativa homogénea y señalar los datos pendientes antes de una compra real."
+},
     approach: {
-      it: "L’esempio illustra quali fonti consultare e come annotare prezzo, quantitativi, certificazioni e condizioni. I fornitori e i dati riportati sono inventati.",
-      en: "Exhaustive desk research analysing official websites, public price tiers, technical data sheets, and verified fulfilment times.",
-      fr: "Recherche documentaire approfondie sur les catalogues officiels, fiches techniques et conditions de livraison.",
-      es: "Investigación documental sobre sitios web oficiales, catálogos, fichas técnicas y condiciones de envío.",
-    },
+      "it": "Calcolo dei totali per 500 pezzi, distinzione delle quantità minime non comparabili e registro delle verifiche su preventivi, composizione e certificazioni.",
+      "en": "Calculate totals for 500 units, distinguish non-comparable minimum quantities and list quotations and materials still to verify.",
+      "fr": "Calculer les totaux pour 500 pièces, signaler les quantités non comparables et relever les vérifications nécessaires.",
+      "es": "Calcular totales para 500 unidades, indicar mínimos no comparables y registrar datos por comprobar."
+},
     keyDecisions: {
-      it: [
-        "Definiti criteri di confronto: caratteristiche ambientali dichiarate, costi per quantità e tempi indicati dai fornitori.",
-        "Nel modello vengono evidenziati i costi aggiuntivi da verificare, come attrezzaggio, trasporto e quantitativi minimi.",
-        "Preparata una sintesi dimostrativa che confronta le opzioni sulla base dei criteri assegnati; la scelta finale resta al committente.",
+      "it": [
+            "L'opzione B richiede 1.000 pezzi e non viene confrontata come se ne vendesse 500.",
+            "A e D hanno totali simulati vicini, ma tempi diversi; la scelta resta condizionata.",
+            "Le certificazioni ambientali non sono dichiarate come verificate."
       ],
-      en: [
-        "Structured weighted criteria: ecological credentials, tiered pricing brackets (100, 500, 1000 units), lead times.",
-        "Uncovered hidden costs such as initial die-cut setup fees and minimum order charges not highlighted on landing pages.",
-        "Produced a concise 1-page executive summary highlighting the top two actionable candidates.",
+      "en": [
+            "Option B requires 1,000 units and cannot be compared as a 500-unit order.",
+            "A and D have similar fictional totals but different lead times; no final choice is made.",
+            "Environmental certificates are not presented as verified."
       ],
-      fr: [
-        "Définition de critères objectifs : certifications écologiques, dégressivité des prix, délais de fabrication.",
-        "Mise en lumière des frais annexes (frais de calage/matrice, frais de port masqués).",
-        "Synthèse exécutive d'une page mettant en valeur les deux meilleures options.",
+      "fr": [
+            "B impose 1 000 pièces : comparaison impossible à quantité égale.",
+            "A et D ont des totaux fictifs proches mais des délais différents.",
+            "Aucune certification environnementale n’est présentée comme vérifiée."
       ],
-      es: [
-        "Establecimiento de criterios ponderados: sostenibilidad, precios por escala y tiempos de entrega.",
-        "Identificación de costes ocultos como costes de cliché inicial y mínimos de facturación.",
-        "Resumen ejecutivo de una página con la recomendación fundamentada de las dos mejores alternativas.",
-      ],
-    },
+      "es": [
+            "La opción B exige 1.000 unidades y no es comparable a 500.",
+            "A y D muestran totales ficticios parecidos, pero plazos distintos.",
+            "No se presentan certificaciones ambientales como verificadas."
+      ]
+},
     deliverable: {
-      it: "Tabella comparativa dimostrativa di fornitori fittizi, con criteri e sintesi delle informazioni.",
-      en: "Illustrative supplier comparison table using fictional data, criteria and a concise summary.",
-      fr: "Tableau comparatif de fournisseurs fictifs, critères et synthèse informative.",
-      es: "Tabla comparativa de proveedores ficticios, criterios y resumen informativo.",
-    },
+      "it": "Quattro profili simulati, tabella completa, calcoli per 500 pezzi, elenco delle verifiche e sintesi; documento 07.",
+      "en": "Four fictional supplier profiles, worked comparison, pending checks and memo; document 07.",
+      "fr": "Quatre profils fictifs, tableau comparatif, vérifications et synthèse ; document 07.",
+      "es": "Cuatro perfiles inventados, tabla con cálculos, verificaciones y síntesis; documento 07."
+},
     tableData: {
-      headers: {
-        it: ["Fornitore", "Certificazione", "MOQ Minimo", "Costo Unitario (500 pz)", "Tempi Consegna", "Valutazione"],
-        en: ["Supplier", "Certification", "Minimum MOQ", "Unit Cost (500 pcs)", "Lead Time", "Verdict"],
-        fr: ["Fournisseur", "Certification", "MOQ Minimum", "Coût Unitaire (500 pcs)", "Délai", "Évaluation"],
-        es: ["Proveedor", "Certificación", "MOQ Mínimo", "Coste Unitario (500 uds)", "Plazo Entrega", "Valoración"],
+      "headers": {
+            "it": [
+                  "Opzione",
+                  "MOQ",
+                  "Prezzo unitario",
+                  "Spedizione",
+                  "Totale 500 pz",
+                  "Tempo ipotetico"
+            ],
+            "en": [
+                  "Option",
+                  "MOQ",
+                  "Unit price",
+                  "Shipping",
+                  "500-unit total",
+                  "Indicative lead time"
+            ],
+            "fr": [
+                  "Option",
+                  "Minimum",
+                  "Prix unitaire",
+                  "Livraison",
+                  "Total 500 pièces",
+                  "Délai indicatif"
+            ],
+            "es": [
+                  "Opción",
+                  "Mínimo",
+                  "Precio unitario",
+                  "Envío",
+                  "Total 500 unidades",
+                  "Plazo orientativo"
+            ]
       },
-      rows: {
-        it: [
-          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 pz", "€ 1,15 / pz", "5-7 gg lavorativi", "Scelta Consigliata"],
-          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 pz", "€ 1,28 / pz", "10-12 gg", "Ottima qualità, tempi più lunghi"],
-          ["Cartotecnica Centro", "PEFC Certified", "1.000 pz", "€ 0,98 / pz", "15 gg", "MOQ troppo elevato per avvio"],
-        ],
-        en: [
-          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 pcs", "€ 1.15 / pc", "5-7 business days", "Recommended Pick"],
-          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 pcs", "€ 1.28 / pc", "10-12 days", "High quality, longer turnaround"],
-          ["Cartotecnica Centro", "PEFC Certified", "1,000 pcs", "€ 0.98 / pc", "15 days", "MOQ exceeds current volume"],
-        ],
-        fr: [
-          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 pcs", "1,15 € / pc", "5-7 jours ouvrés", "Option Recommandée"],
-          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 pcs", "1,28 € / pc", "10-12 jours", "Très bonne qualité, délais plus longs"],
-          ["Cartotecnica Centro", "PEFC Certified", "1.000 pcs", "0,98 € / pc", "15 jours", "Seuil de commande trop élevé"],
-        ],
-        es: [
-          ["EcoPack Italia (MI)", "FSC Recycled 100%", "250 uds", "1,15 € / ud", "5-7 días laborables", "Opción Recomendada"],
-          ["GreenBox Europe", "FSC Mix / Cradle2Cradle", "500 uds", "1,28 € / ud", "10-12 días", "Excelente calidad, mayor plazo"],
-          ["Cartotecnica Centro", "PEFC Certified", "1.000 uds", "0,98 € / ud", "15 días", "Volumen mínimo excesivo para inicio"],
-        ],
-      },
-    },
+      "rows": {
+            "it": [
+                  [
+                        "A",
+                        "500",
+                        "0,72 €",
+                        "45 €",
+                        "405 €",
+                        "15 gg lavorativi"
+                  ],
+                  [
+                        "B",
+                        "1.000",
+                        "0,54 €",
+                        "70 €",
+                        "Non confrontabile",
+                        "21 gg lavorativi"
+                  ],
+                  [
+                        "C",
+                        "250",
+                        "0,91 €",
+                        "26 €",
+                        "481 €",
+                        "12 gg lavorativi"
+                  ],
+                  [
+                        "D",
+                        "500",
+                        "0,64 €",
+                        "80 €",
+                        "400 €",
+                        "28 gg lavorativi"
+                  ]
+            ],
+            "en": [
+                  [
+                        "A",
+                        "500",
+                        "€0.72",
+                        "€45",
+                        "€405",
+                        "15 business days"
+                  ],
+                  [
+                        "B",
+                        "1,000",
+                        "€0.54",
+                        "€70",
+                        "Not comparable",
+                        "21 business days"
+                  ],
+                  [
+                        "C",
+                        "250",
+                        "€0.91",
+                        "€26",
+                        "€481",
+                        "12 business days"
+                  ],
+                  [
+                        "D",
+                        "500",
+                        "€0.64",
+                        "€80",
+                        "€400",
+                        "28 business days"
+                  ]
+            ],
+            "fr": [
+                  [
+                        "A",
+                        "500",
+                        "0,72 €",
+                        "45 €",
+                        "405 €",
+                        "15 jours ouvrés"
+                  ],
+                  [
+                        "B",
+                        "1 000",
+                        "0,54 €",
+                        "70 €",
+                        "Non comparable",
+                        "21 jours ouvrés"
+                  ],
+                  [
+                        "C",
+                        "250",
+                        "0,91 €",
+                        "26 €",
+                        "481 €",
+                        "12 jours ouvrés"
+                  ],
+                  [
+                        "D",
+                        "500",
+                        "0,64 €",
+                        "80 €",
+                        "400 €",
+                        "28 jours ouvrés"
+                  ]
+            ],
+            "es": [
+                  [
+                        "A",
+                        "500",
+                        "0,72 €",
+                        "45 €",
+                        "405 €",
+                        "15 días laborables"
+                  ],
+                  [
+                        "B",
+                        "1.000",
+                        "0,54 €",
+                        "70 €",
+                        "No comparable",
+                        "21 días laborables"
+                  ],
+                  [
+                        "C",
+                        "250",
+                        "0,91 €",
+                        "26 €",
+                        "481 €",
+                        "12 días laborables"
+                  ],
+                  [
+                        "D",
+                        "500",
+                        "0,64 €",
+                        "80 €",
+                        "400 €",
+                        "28 días laborables"
+                  ]
+            ]
+      }
+},
     disclaimer: DEMO_DISCLAIMER,
   },
 
