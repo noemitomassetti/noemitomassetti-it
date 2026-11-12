@@ -41,7 +41,7 @@ describe("Portfolio showcases tangible work before explaining methodology", () =
   it("has locally meaningful titles, descriptions and functional links for all 22 documents",()=>{
     expect(PORTFOLIO_DOCUMENTS).toHaveLength(22);
     for (const doc of PORTFOLIO_DOCUMENTS) {
-      expect(doc.url,doc.num).toMatch(/^\\/portfolio-documenti\\/doc-/);
+      expect(doc.url.startsWith("/portfolio-documenti/doc-"),doc.num).toBe(true);
       for(const lang of ["it","en","fr","es"] as const){
         expect(doc.title[lang].length,`${doc.num} ${lang}`).toBeGreaterThan(8);
         expect(doc.subtitle[lang].length,`${doc.num} ${lang}`).toBeGreaterThan(15);
