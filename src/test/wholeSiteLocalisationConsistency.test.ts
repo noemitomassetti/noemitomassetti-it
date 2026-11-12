@@ -76,4 +76,18 @@ describe("Whole-site editorial localisation: shared meaning, audience-aware lang
     expect(page).not.toContain("Decisioni Chiave & Deliverable");
     expect(page).not.toContain("Matrice di Benchmark");
   });
+
+  it("localises loading states and avoids unsupported daily-use claims in resources", () => {
+    const app = readFileSync("src/App.tsx", "utf8");
+    expect(app).toContain("fallback={<PageLoading />}");
+    for (const loading of [
+      "Caricamento della pagina…",
+      "Loading page…",
+      "Chargement de la page…",
+      "Cargando la página…",
+    ]) expect(app).toContain(loading);
+    const resources = readFileSync("src/pages/Resources.tsx", "utf8");
+    expect(resources).not.toMatch(/utilizzo quotidianamente|rely on daily/i);
+    expect(resources).toContain("La scelta dipende dalle esigenze");
+  });
 });
