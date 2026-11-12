@@ -4,10 +4,10 @@ export const frLocale: TranslationDictionary = {
   lang: 'fr',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Assistante virtuelle multilingue et traductrice | Noemi Tomassetti',
-    homeDesc: 'Assistance virtuelle multilingue, secrétariat à distance, back-office, relation client, communication professionnelle, contenus numériques et traduction IT ↔ EN/FR/ES.',
-    servicesTitle: 'Assistance virtuelle et traduction professionnelle | Noemi Tomassetti',
-    servicesDesc: 'Secrétariat à distance, back-office opérationnel, suivi écrit des clients, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.',
+    homeTitle: 'Traduction et communication en italien pour les professionnels | Noemi Tomassetti',
+    homeDesc: 'Communiquez naturellement avec vos interlocuteurs italiens : traduction, localisation, contenus web et réseaux sociaux, courriels et relation client. Assistance virtuelle multilingue également disponible.',
+    servicesTitle: 'Communication en italien, traduction et assistance virtuelle | Noemi Tomassetti',
+    servicesDesc: 'Traduction et localisation pour le public italien, rédaction et révision de contenus web, courriels et réseaux sociaux, ainsi que l’ensemble des prestations d’assistance virtuelle multilingue.',
     noetomTitle: 'NoeTom | Projet opérationnel interne',
     noetomDesc: 'NoeTom est le projet opérationnel interne de Noemi Tomassetti, actuellement en développement et en phase de test privé.',
     aboutTitle: 'À propos | Noemi Tomassetti',
@@ -34,22 +34,22 @@ export const frLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'ASSISTANTE VIRTUELLE MULTILINGUE',
-    titleLine1: 'Assistance virtuelle, back-office et traduction',
-    titleHighlight: 'pour accompagner votre activité',
-    subtitle: "Secrétariat à distance, back-office, relation client, communication professionnelle, contenus numériques et traduction dans les deux sens entre l’italien et l’anglais, le français et l’espagnol.",
-    headline: 'Des échanges plus clairs et un quotidien mieux organisé.',
-    desc1: "Je mets plus de vingt ans d’expérience professionnelle à votre service pour vous aider à mieux organiser votre travail au quotidien. L’italien est ma langue maternelle et je suis formée à la traduction spécialisée.",
-    desc2: 'Courriels, agenda, suivi des commandes, relation client, contenus web et traductions : des missions définies selon vos besoins.',
+    titleLine1: 'Communication en italien, traduction et localisation',
+    titleHighlight: 'pour travailler avec l’Italie',
+    subtitle: "Adressez-vous à vos interlocuteurs italiens avec des textes naturels et adaptés : sites web, pages de destination, courriels, lettres d’information, réseaux sociaux et communications professionnelles. Je propose aussi mes prestations de secrétariat et de back-office à distance.",
+    headline: 'Les mots justes pour communiquer avec l’Italie.',
+    desc1: "De langue maternelle italienne, diplômée en médiation linguistique et formée à la traduction spécialisée, je vous aide à communiquer avec le public italien en tenant compte de la langue, du ton et du contexte.",
+    desc2: 'Page de destination en italien, courriel destiné à un client, fiche produit ou publication sur les réseaux sociaux : je travaille la précision et la fluidité de vos messages. Tous mes autres services de secrétariat, back-office et relation client restent également accessibles.',
     ctaButton: 'DEMANDER UN DEVIS',
     callReassurance: 'Demande sans engagement',
     description:
-      'Je traduis de l’italien vers l’anglais, le français et l’espagnol, ainsi que dans le sens inverse. Je propose également un accompagnement organisationnel et la révision de contenus professionnels dans le cadre convenu.',
+      'Pour mes clients internationaux, je privilégie la communication avec l’Italie : traduction et localisation vers l’italien, courriels, sites web, pages de destination et contenus pour les réseaux sociaux. Je traduis également de l’italien vers le français, l’anglais et l’espagnol et propose des services d’assistance opérationnelle.',
     ctaServices: 'Découvrir les services',
     ctaNoeTom: 'Découvrir NoeTom (en développement)',
     quickStats: {
       experience: 'Solide expérience professionnelle et opérationnelle',
       languages: '4 langues de travail (FR · EN · IT · ES)',
-      focus: 'Accompagnement sur mesure et flexible',
+      focus: 'Communication avec l’Italie · Soutien opérationnel',
     },
     callNote: 'Demande par écrit · Sans engagement',
   },
@@ -79,8 +79,8 @@ export const frLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'MON EXPERTISE',
-    title: 'Assistance virtuelle, communication et traduction',
-    subtitle: 'Voici des exemples de prestations possibles, et non un ensemble de services automatiquement inclus. Chaque devis précise les tâches et livrables convenus.',
+    title: 'Communication en italien, traduction et assistance virtuelle',
+    subtitle: 'J’accompagne en priorité les professionnels qui souhaitent communiquer avec le marché italien. Traduction et contenus occupent une place centrale, sans exclure les autres prestations d’assistance virtuelle. Chaque mission fait l’objet d’un devis précis.',
     viewAllCta: 'Consulter le détail des services',
     categories: [
       {
@@ -167,22 +167,22 @@ export const frLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'COMMUNICATION MULTILINGUE',
-    title: 'Communiquer clairement avec vos interlocuteurs',
+    tag: 'COMMUNIQUER AVEC L’ITALIE',
+    title: 'Des messages naturels pour vos interlocuteurs italiens',
     description:
-      'Une communication multilingue efficace repose sur une terminologie précise, un registre adapté et la compréhension du contexte de chaque interlocuteur, au-delà d’une simple traduction littérale.',
+      'Un texte destiné au marché italien doit être juste dans ses termes, naturel dans ses formulations et adapté à son lecteur. Il ne suffit pas de remplacer des mots français par des mots italiens.',
     points: [
       {
-        title: 'Quatre langues de travail',
-        desc: 'Italien langue maternelle, français et anglais avancés, espagnol de niveau intermédiaire supérieur : une communication adaptée au périmètre convenu.',
+        title: 'L’italien, ma langue maternelle',
+        desc: 'Je traduis entre l’italien et le français, l’anglais ou l’espagnol dans les deux sens, avec une attention particulière aux messages destinés au public italien.',
       },
       {
-        title: 'Fidélité au contexte',
-        desc: 'Je tiens compte des usages professionnels et du contexte culturel de chaque interlocuteur, pour préserver la clarté et la crédibilité des échanges.',
+        title: 'Ton, registre et vocabulaire adaptés',
+        desc: 'J’adapte la terminologie, les titres, les appels à l’action et les courriels aux usages du public italien, sans modifier les informations commerciales validées.',
       },
       {
-        title: 'Fluidité opérationnelle',
-        desc: 'Des contenus professionnels aux échanges avec vos clients, je veille à la clarté du message, à la cohérence du vocabulaire et à l’adaptation au destinataire.',
+        title: 'Une assistance au-delà des textes',
+        desc: 'Secrétariat, suivi des commandes, back-office et relation client écrite : ces services restent disponibles pour les clients internationaux, selon le périmètre convenu.',
       },
     ],
     badgeNote: 'Formation linguistique : diplôme en médiation linguistique (110/110 e lode) et master universitaire en traduction spécialisée',
