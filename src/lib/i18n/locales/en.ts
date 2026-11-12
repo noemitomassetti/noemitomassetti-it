@@ -358,7 +358,7 @@ export const enLocale: TranslationDictionary = {
       "I am a multilingual virtual assistant with specialist language training and over twenty years of professional experience across different roles and sectors.",
       "My work experience includes customer service, back-office operations, order handling, organisation and practical operational support.",
       "I hold a degree in Language Mediation from the Università degli Studi di Macerata, awarded 110 e lode (the highest Italian honours), and completed further studies in Specialised Translation at the Scuola Superiore per Mediatori Linguistici di Ancona.",
-      "Italian is my native language. I also work with English, French and Spanish, I translate both from Italian into English, French and Spanish and from these languages into Italian, providing language revision and agreed multilingual correspondence.",
+      "Italian is my native language. I translate both from Italian into English, French and Spanish and from these languages into Italian. I also revise texts and provide agreed support with multilingual correspondence.",
       "Today I support professionals and small businesses with everyday operations and professional communication, particularly when they need to engage with people in Italy.",
     ],
     credentials: [
