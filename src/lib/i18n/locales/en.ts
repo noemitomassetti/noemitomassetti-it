@@ -81,7 +81,7 @@ export const enLocale: TranslationDictionary = {
     tag: 'WHAT I DO',
     title: 'Italian Communication, Translation and Virtual Assistance',
     subtitle:
-      'Italian-language communication is my main focus for international businesses. Translation, localisation and content editing come first, but you can also request any of my virtual-assistance services. Each assignment is agreed in writing.',
+      'Italian-language communication is my main focus for international businesses. Translation, localisation and content editing come first, but you can also request any of my virtual-assistance services. Each written quote specifies the agreed tasks and deliverables.',
     viewAllCta: 'View Full Service Details',
     categories: [
       {
