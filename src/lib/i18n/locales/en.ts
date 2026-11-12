@@ -105,7 +105,7 @@ export const enLocale: TranslationDictionary = {
         title: 'IT ↔ EN/FR/ES Translation and Italian Localisation',
         subtitle: "The right language, tone and context for your audience.",
         description:
-          "I translate from Italian into English, French and Spanish and from these languages into Italian, assessing each text before accepting an assignment. For organisations communicating with Italy, I pay particular attention to natural Italian wording, appropriate tone and the intended readership. Translation, localisation, revision and correspondence are scoped separately in the quote.",
+          "Depending on the project, I translate from Italian into English, French and Spanish and from these languages into Italian, assessing each text before accepting an assignment. For organisations communicating with Italy, I pay particular attention to natural Italian wording, appropriate tone and the intended readership. Translation, localisation, revision and correspondence are scoped separately in the quote.",
         iconName: 'Globe',
         items: [
           'Italian website and landing page localisation',
@@ -137,7 +137,7 @@ export const enLocale: TranslationDictionary = {
         title: 'Informational Research Support',
         subtitle: "Useful information, carefully selected and organised.",
         description:
-          "I gather publicly available information, compare sources, tools and suppliers, and prepare concise reports for established projects or operational needs. I do not source sales leads, compile prospect lists or carry out client-acquisition activity.",
+          "I can gather publicly available information, compare sources, tools and suppliers, and prepare concise reports for established projects or operational needs. I do not source sales leads, compile prospect lists or carry out client-acquisition activity.",
         iconName: 'Search',
         items: [
           'Competitor and public pricing comparisons for existing projects',
