@@ -1043,69 +1043,279 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     order: 9,
     category: "backoffice",
     title: {
-      it: "Back office: gestione di email, agenda e richieste di un professionista",
-      en: "Back Office & Operational Management: Systems for Solo Professionals",
-      fr: "Back-office et organisation opérationnelle : Système pour professionnel libéral",
-      es: "Back office y organización operativa: Sistema para profesional independiente",
-    },
+      "it": "Back office: gestione di sei email e delle attività collegate",
+      "en": "Back office: six emails, draft replies and a tracking log",
+      "fr": "Back-office : six courriels, réponses et registre",
+      "es": "Back office: seis correos, respuestas y registro"
+},
     subtitle: {
-      it: "Organizzazione della posta, appuntamenti e richieste dei clienti",
-      en: "Inbox triage, appointment buffer scheduling, and systematic client follow-up tracker",
-      fr: "Gestion de boîte de réception, planification d'agenda et suivi des relances clients",
-      es: "Gestión de correo, tiempos de descanso en agenda y seguimiento de clientes",
-    },
+      "it": "Registro compilato, due email scritte e riepilogo delle decisioni da prendere",
+      "en": "Completed case log, two drafted emails and a management summary",
+      "fr": "Tableau de suivi, deux courriels rédigés et synthèse des décisions",
+      "es": "Registro cumplimentado, dos correos redactados y resumen"
+},
     brief: {
-      it: "Un consulente immaginario fatica a seguire email, appuntamenti e richieste già ricevute dai propri clienti.",
-      en: "An overloaded independent consultant is losing potential engagements due to disorganized inbox triage and irregular follow-ups.",
-      fr: "Un professionnel débordé par la gestion quotidienne perd des opportunités par manque de suivi et d'organisation.",
-      es: "Un profesional autónomo saturado por tareas administrativas pierde oportunidades y control sobre los plazos de entrega.",
-    },
+      "it": "Un professionista immaginario deve classificare sei richieste ricevute e preparare le risposte che rientrano nelle istruzioni concordate.",
+      "en": "A fictional professional has six incoming emails to sort and needs draft replies for the cases within an agreed scope.",
+      "fr": "Un professionnel fictif doit classer six courriels et préparer des réponses dans le cadre convenu.",
+      "es": "Un profesional ficticio necesita clasificar seis correos y preparar respuestas dentro del alcance acordado."
+},
     startingMaterial: {
-      it: "Scenario inventato con messaggi in arrivo, appuntamenti da coordinare e tre richieste di preventivo da gestire secondo istruzioni fornite.",
-      en: "Practice scenario with 50 sample client messages, irregular calendar requests, and pending quotes for Demo Clients A, B, and C.",
-      fr: "Scénario synthétique de 50 messages entrants non traités, rendez-vous non confirmés et devis en attente.",
-      es: "Escenario demostrativo con 50 correos sin clasificar, citas desorganizadas y presupuestos pendientes.",
-    },
+      "it": "Sei comunicazioni simulate, una disponibilità dell'agenda da verificare e dati d'ordine non confermati.",
+      "en": "Six fictional messages, unverified calendar availability and unresolved order information.",
+      "fr": "Six messages inventés, disponibilités de calendrier et informations de commande non confirmées.",
+      "es": "Seis mensajes inventados, horarios y datos de pedido todavía sin verificar."
+},
     objective: {
-      it: "Preparare una procedura per classificare le email, gestire le richieste esistenti e controllare le risposte in attesa.",
-      en: "Build standard operating procedures (SOPs), achieve zero-inbox clarity, and establish an unshakeable follow-up cadence.",
-      fr: "Mettre en place une procédure claire (SOP), désengorger la boîte mail et structurer les relances.",
-      es: "Crear un protocolo de trabajo operativo (SOP), despejar el correo y asegurar el seguimiento riguroso de cada cliente.",
-    },
+      "it": "Mostrare la classificazione delle richieste, due risposte complete e un riepilogo senza invii o conferme non autorizzati.",
+      "en": "Show a complete tracking log, two full draft replies and decisions still needing approval.",
+      "fr": "Présenter le registre, deux réponses complètes et les décisions à faire valider.",
+      "es": "Mostrar el registro, dos borradores completos y las decisiones pendientes."
+},
     approach: {
-      it: "Suddivisione dei messaggi per priorità, bozze di risposta da approvare e intervalli realistici tra gli appuntamenti.",
-      en: "Implementation of the Open Loops framework: classification by priority, templated personalised replies, and 15-minute calendar buffers.",
-      fr: "Mise en œuvre d'une méthode de tri rigoureuse, modèles de réponse types personnalisés et temps de pause entre rendez-vous.",
-      es: "Aplicación de clasificación por prioridades, respuestas tipo personalizadas y descansos de 15 minutos entre videollamadas.",
-    },
+      "it": "Assegnazione di un codice a ogni richiesta, distinzione tra priorità e stato, stesura delle risposte e nota per il titolare.",
+      "en": "Assign case IDs, distinguish priority from status, draft messages and prepare the owner's summary.",
+      "fr": "Attribuer un identifiant, noter priorité et état, rédiger et résumer les points pour le responsable.",
+      "es": "Asignar códigos, separar prioridad y estado, redactar mensajes y resumir asuntos para el responsable."
+},
     keyDecisions: {
-      it: [
-        "Le richieste in attesa di risposta sono annotate in un elenco con una data di verifica concordata, senza invii automatici non autorizzati.",
-        "Previsti periodi di lavoro senza appuntamenti, secondo le disponibilità indicate dal professionista.",
-        "Predisposto un riepilogo settimanale di attività e richieste in attesa, da condividere con il professionista secondo gli accordi.",
+      "it": [
+            "Nessun appuntamento è confermato senza verifica dell'agenda.",
+            "I dati di ordini e fatture non sono interpretati dall'assistente.",
+            "Le bozze sono elaborate, ma non presentate come messaggi realmente inviati."
       ],
-      en: [
-        "Created a dedicated 'Waiting For' folder: pending client actions are flagged for automated check-in after 48 business hours.",
-        "Protected deep-work calendar blocks reserved strictly for deliverable creation without incoming interruptions.",
-        "Weekly status summary delivered every Friday afternoon tracking commitments, pending decisions, and next best actions.",
+      "en": [
+            "Do not confirm unverified appointments.",
+            "Order and invoice matters go to authorised staff.",
+            "Drafts are not described as emails that have already been sent."
       ],
-      fr: [
-        "Création d'un dossier 'En attente' avec rappel systématique sous 48 heures ouvrées.",
-        "Blocage de créneaux dédiés au travail de fond sans interruption téléphonique.",
-        "Synthèse hebdomadaire transmise chaque vendredi récapitulant les actions finalisées et les priorités de la semaine suivante.",
+      "fr": [
+            "Aucun rendez-vous n'est confirmé sans vérification.",
+            "Les questions de commande et facture sont transmises au responsable.",
+            "Les brouillons ne sont pas présentés comme des envois réels."
       ],
-      es: [
-        "Creación de una carpeta 'En espera': cada asunto pendiente cuenta con aviso de seguimiento a las 48 horas.",
-        "Bloqueo de franjas de concentración en la agenda sin citas externas.",
-        "Informe semanal de control entregado cada viernes con el estado de tareas y prioridades pendientes.",
-      ],
-    },
+      "es": [
+            "No se confirman citas sin comprobar el calendario.",
+            "Los datos de pedidos y facturas se derivan al responsable.",
+            "Los borradores no se presentan como correos enviados."
+      ]
+},
     deliverable: {
-      it: "Procedura dimostrativa di gestione email e organizzazione delle attività, con istruzioni e controlli di approvazione.",
-      en: "Illustrative email-triage and operational workflow procedure, with approval checkpoints.",
-      fr: "Procédure de tri des e-mails et d’organisation des tâches, avec validations prévues.",
-      es: "Procedimiento de correos y organización operativa, con controles de aprobación.",
-    },
+      "it": "Registro di sei messaggi, due bozze complete e riepilogo operativo del giorno; documento 09.",
+      "en": "Six-item log, two full draft emails and a daily operational summary; document 09.",
+      "fr": "Registre de six messages, deux courriels complets et synthèse quotidienne ; document 09.",
+      "es": "Registro de seis mensajes, dos correos completos y resumen diario; documento 09."
+},
+    tableData: {
+      "headers": {
+            "it": [
+                  "ID",
+                  "Richiesta",
+                  "Priorità",
+                  "Stato",
+                  "Prossimo passo"
+            ],
+            "en": [
+                  "ID",
+                  "Enquiry",
+                  "Priority",
+                  "Status",
+                  "Next step"
+            ],
+            "fr": [
+                  "ID",
+                  "Demande",
+                  "Priorité",
+                  "État",
+                  "Prochaine étape"
+            ],
+            "es": [
+                  "ID",
+                  "Solicitud",
+                  "Prioridad",
+                  "Estado",
+                  "Siguiente paso"
+            ]
+      },
+      "rows": {
+            "it": [
+                  [
+                        "EM-01",
+                        "Programma incontro",
+                        "Normale",
+                        "Bozza pronta",
+                        "Verificare allegato"
+                  ],
+                  [
+                        "EM-02",
+                        "Appuntamento",
+                        "Normale",
+                        "In verifica",
+                        "Controllare agenda"
+                  ],
+                  [
+                        "EM-03",
+                        "Ordine",
+                        "Alta",
+                        "Da sottoporre",
+                        "Chiedere conferma"
+                  ],
+                  [
+                        "EM-04",
+                        "Newsletter",
+                        "Bassa",
+                        "Da archiviare",
+                        "Applicare regole"
+                  ],
+                  [
+                        "EM-05",
+                        "Fattura",
+                        "Normale",
+                        "Da inoltrare",
+                        "Referente contabile"
+                  ],
+                  [
+                        "EM-06",
+                        "Ricezione documento",
+                        "Normale",
+                        "Bozza pronta",
+                        "Verificare file"
+                  ]
+            ],
+            "en": [
+                  [
+                        "EM-01",
+                        "Meeting programme",
+                        "Normal",
+                        "Draft ready",
+                        "Check attachment"
+                  ],
+                  [
+                        "EM-02",
+                        "Appointment",
+                        "Normal",
+                        "Checking",
+                        "Verify calendar"
+                  ],
+                  [
+                        "EM-03",
+                        "Order",
+                        "High",
+                        "Escalate",
+                        "Request update"
+                  ],
+                  [
+                        "EM-04",
+                        "Newsletter",
+                        "Low",
+                        "Archive pending",
+                        "Follow rules"
+                  ],
+                  [
+                        "EM-05",
+                        "Invoice",
+                        "Normal",
+                        "Refer",
+                        "Accounting contact"
+                  ],
+                  [
+                        "EM-06",
+                        "Document receipt",
+                        "Normal",
+                        "Draft ready",
+                        "Verify file"
+                  ]
+            ],
+            "fr": [
+                  [
+                        "EM-01",
+                        "Programme de réunion",
+                        "Normale",
+                        "Brouillon prêt",
+                        "Vérifier le fichier"
+                  ],
+                  [
+                        "EM-02",
+                        "Rendez-vous",
+                        "Normale",
+                        "À vérifier",
+                        "Contrôler l'agenda"
+                  ],
+                  [
+                        "EM-03",
+                        "Commande",
+                        "Haute",
+                        "À transmettre",
+                        "Demander confirmation"
+                  ],
+                  [
+                        "EM-04",
+                        "Newsletter",
+                        "Basse",
+                        "À archiver",
+                        "Suivre les règles"
+                  ],
+                  [
+                        "EM-05",
+                        "Facture",
+                        "Normale",
+                        "À transmettre",
+                        "Service comptable"
+                  ],
+                  [
+                        "EM-06",
+                        "Réception d’un document",
+                        "Normale",
+                        "Brouillon prêt",
+                        "Vérifier le document"
+                  ]
+            ],
+            "es": [
+                  [
+                        "EM-01",
+                        "Programa de reunión",
+                        "Normal",
+                        "Borrador listo",
+                        "Revisar adjunto"
+                  ],
+                  [
+                        "EM-02",
+                        "Cita",
+                        "Normal",
+                        "Por comprobar",
+                        "Revisar agenda"
+                  ],
+                  [
+                        "EM-03",
+                        "Pedido",
+                        "Alta",
+                        "Por derivar",
+                        "Pedir confirmación"
+                  ],
+                  [
+                        "EM-04",
+                        "Boletín",
+                        "Baja",
+                        "Por archivar",
+                        "Seguir normas"
+                  ],
+                  [
+                        "EM-05",
+                        "Factura",
+                        "Normal",
+                        "Por derivar",
+                        "Departamento contable"
+                  ],
+                  [
+                        "EM-06",
+                        "Recepción de documento",
+                        "Normal",
+                        "Borrador listo",
+                        "Verificar archivo"
+                  ]
+            ]
+      }
+},
     disclaimer: DEMO_DISCLAIMER,
   },
 
