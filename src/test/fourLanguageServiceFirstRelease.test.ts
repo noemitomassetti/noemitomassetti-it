@@ -92,6 +92,19 @@ describe("Release: Italian-market virtual assistance first, complete scope in It
       expect(read("public"+doc.url).length,doc.num).toBeGreaterThan(6500);
     }
   });
+
+  it("keeps all translated blog articles relevant to current and prospective Italian-market operations",()=>{
+    for(const lang of ["en","fr","es"] as const){
+      const posts=getBlogPosts(lang);
+      expect(posts,lang).toHaveLength(16);
+      for(const post of posts){
+        const introduction=post.content.split(/<h[23][^>]*>/i)[0];
+        expect(introduction,`${lang} post ${post.id}: Italian-market relevance`).toMatch(/itali/i);
+        expect(introduction,`${lang} post ${post.id}: preparation for the market`).toMatch(/prepar|before|avant|antes|envisag|expand|arriv|commenc|comenz|prévo|planning|orientar|lancement|launch/i);
+        expect(introduction.split("<p>").length,`${lang} post ${post.id}: meaningful local adaptation`).toBeGreaterThanOrEqual(3);
+      }
+    }
+  });
   it("provides developed original bilingual documents for DOC02–06, not only a one-paragraph excerpt",()=>{
     for(const [id,name] of [
       ["02","report-finanziario-commerciale"],
