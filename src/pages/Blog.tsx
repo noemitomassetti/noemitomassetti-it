@@ -16,21 +16,21 @@ const COPY: Record<Language, {title: string; heading: string; introduction: stri
     read: "Leggi l’articolo"
   },
   en: {
-    title: "Blog | Italian Translation and Operational Support | Noemi Tomassetti",
-    heading: "Practical ideas for working and communicating with Italy",
-    introduction: "Articles on Italian-language communication, localisation, customer correspondence and practical ways to organise work. The material is adapted for English-speaking readers.",
+    title: "Italian Virtual Assistant | Business Support & Communication Blog | Noemi Tomassetti",
+    heading: "Practical support for working and communicating with Italy",
+    introduction: "Guides to Italian-speaking virtual assistance, written customer care, email and back-office organisation, alongside translation and natural business communication with Italy. Written for English-speaking professionals.",
     read: "Read article"
   },
   fr: {
-    title: "Blog | Traduction vers l’italien et soutien opérationnel | Noemi Tomassetti",
-    heading: "Des idées pratiques pour travailler et communiquer avec l’Italie",
-    introduction: "Des articles sur la communication en italien, la localisation de contenus, la correspondance professionnelle et l'organisation du travail, adaptés aux lecteurs francophones.",
+    title: "Assistante virtuelle italophone | Blog et conseils | Noemi Tomassetti",
+    heading: "Mieux organiser votre travail avec l’Italie",
+    introduction: "Conseils pratiques sur l’assistance virtuelle en italien, les courriels, le back-office et le suivi écrit des clients, ainsi que la traduction et la communication professionnelle avec l’Italie.",
     read: "Lire l’article"
   },
   es: {
-    title: "Blog | Traducción al italiano y apoyo operativo | Noemi Tomassetti",
-    heading: "Ideas prácticas para trabajar y comunicarte con Italia",
-    introduction: "Artículos sobre comunicación profesional en italiano, localización de contenidos, correspondencia con clientes y organización del trabajo, adaptados a lectores hispanohablantes.",
+    title: "Asistencia virtual en italiano | Blog y recursos | Noemi Tomassetti",
+    heading: "Organiza mejor tu trabajo con Italia",
+    introduction: "Guías sobre asistencia virtual en italiano, gestión del correo, back office y atención escrita al cliente, además de traducción y comunicación profesional para trabajar con Italia.",
     read: "Leer el artículo"
   }
 };
