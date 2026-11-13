@@ -186,7 +186,7 @@ export const enLocale: TranslationDictionary = {
         desc: 'Alongside translation and content work, I offer multilingual secretarial assistance, back-office support and written customer care under the same agreed scope as for Italian clients.',
       },
     ],
-    badgeNote: 'Language Mediation degree (110/110 e lode) and Italian university Master’s qualification in Specialised Translation',
+    badgeNote: 'Language Mediation degree (110/110 e lode) and specialist translation training (60 CFU)',
   },
   productized: {
     tag: 'WAYS TO WORK TOGETHER', title: 'Focused services, tangible deliverables',
@@ -363,7 +363,7 @@ export const enLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: '20+ Years Professional Experience', detail: 'Customer care, back office, operations, and operational support' },
-      { title: 'Academic Qualifications', detail: 'Degree in Language Mediation (110/110 e lode, highest Italian honours) and Italian first-level university Master’s in Specialised Translation' },
+      { title: 'Academic Qualifications', detail: 'Degree in Language Mediation (110/110 e lode, highest Italian honours) and a specialist translation master programme (60 CFU)' },
       { title: 'Four Working Languages', detail: 'Native Italian, advanced English and French, upper-intermediate Spanish' },
       { title: 'Digital Organisation', detail: 'Cloud files, collaborative tools and clear operational procedures' },
     ],
@@ -392,7 +392,7 @@ export const enLocale: TranslationDictionary = {
       },
       {
         period: 'Postgraduate specialisation',
-        role: 'First-level University Master’s in Specialised Translation – English language',
+        role: 'Master programme in Specialised Translation (60 CFU) – English language',
         detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1,500 hours · 60 CFU/ECTS credits · final assessment passed. Literary, legal, economic, technological and scientific fields.',
       },
       {
