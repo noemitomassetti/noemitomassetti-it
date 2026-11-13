@@ -328,7 +328,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
       "es": "Unificar textos y señalar datos que deben aprobarse."
     },
     "inputs": {
-      "it": "Tre schede di prova, un listino simulato in sola lettura e nessun manuale tecnico verificato.",
+      "it": "Tre schede di prova, un listino dimostrativo in sola lettura e nessun manuale tecnico verificato.",
       "en": "Three example listings, read-only mock prices and no verified technical manual.",
       "fr": "Trois fiches illustratives et un tarif en lecture seule.",
       "es": "Tres fichas de ejemplo y tarifa en modo lectura."
@@ -382,7 +382,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Registre et guide de style",
           "es": "Incidencias y guía de estilo"
         },
-        "content": "REGISTRO DI QUALITÀ — CASO SIMULATO\nCAT-001 Sfera | materiali ambigui | priorità alta | referente: prodotto.\nCAT-001 Sfera | dimensioni senza unità | priorità alta | referente: prodotto.\nCAT-002 Nastro | colori «beige» e «sabbia» non collegati ai codici | priorità media | referente: commerciale.\nCAT-003 Linea | istruzioni di cura assenti | priorità media | referente: prodotto.\n\nGUIDA EDITORIALE DI CONSEGNA\n1. Titoli: nome prodotto e tipologia, senza superlativi non documentati.\n2. Misure: dichiarare sempre unità e ordine delle dimensioni.\n3. Materiali: utilizzare soltanto denominazioni approvate.\n4. Colori: mantenere il nome associato al codice commerciale.\n5. Cura: non introdurre informazioni non verificate istruzioni del produttore.\n6. Listini: correggere impaginazione e riferimenti, non prezzi.\nNessuna scheda con criticità aperte viene contrassegnata «pronta per pubblicazione».",
+        "content": "REGISTRO DI QUALITÀ — CASO dimostrativo\nCAT-001 Sfera | materiali ambigui | priorità alta | referente: prodotto.\nCAT-001 Sfera | dimensioni senza unità | priorità alta | referente: prodotto.\nCAT-002 Nastro | colori «beige» e «sabbia» non collegati ai codici | priorità media | referente: commerciale.\nCAT-003 Linea | istruzioni di cura assenti | priorità media | referente: prodotto.\n\nGUIDA EDITORIALE DI CONSEGNA\n1. Titoli: nome prodotto e tipologia, senza superlativi non documentati.\n2. Misure: dichiarare sempre unità e ordine delle dimensioni.\n3. Materiali: utilizzare soltanto denominazioni approvate.\n4. Colori: mantenere il nome associato al codice commerciale.\n5. Cura: non introdurre informazioni non verificate istruzioni del produttore.\n6. Listini: correggere impaginazione e riferimenti, non prezzi.\nNessuna scheda con criticità aperte viene contrassegnata «pronta per pubblicazione».",
         "explanation": {
           "it": "Il registro permette al cliente di autorizzare ogni dato prima della consegna definitiva.",
           "en": "Issues are assigned for owner verification before publication.",
@@ -511,7 +511,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     "artifacts": [
       {
         "title": {
-          "it": "Registro operativo simulato",
+          "it": "Registro operativo dimostrativo",
           "en": "Illustrative request tracker",
           "fr": "Registre de démonstration",
           "es": "Registro de muestra"
