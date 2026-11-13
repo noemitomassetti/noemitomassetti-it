@@ -463,9 +463,9 @@ export const OPERATIONAL_SAMPLES_F: OperationalDeepCase[] = [
     },
     "objective": {
       "it": "Produrre una pagina informativa credibile e completa, senza promettere risultati di vendita, tradurre meccanicamente o presentare servizi fuori perimetro.",
-      "en": "Write credible complete sections across four languages without invented sales claims or mechanically translated copy.",
+      "en": "Write credible complete sections across four languages without unsupported sales claims or mechanically translated copy.",
       "fr": "Rédiger des sections complètes sans promesses marketing non justifiées.",
-      "es": "Redactar secciones completas sin promesas comerciales inventadas."
+      "es": "Redactar secciones completas sin afirmaciones comerciales no verificadas."
     },
     "inputs": {
       "it": "Brief editoriale originale: servizio di organizzazione dei documenti digitali; pubblico di freelance e piccole imprese che lavorano con l'Italia; nessun marchio reale.",
