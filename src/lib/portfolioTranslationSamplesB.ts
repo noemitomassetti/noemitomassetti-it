@@ -19,9 +19,9 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
     },
     "context": {
       "it": "Un servizio immaginario SaaS con clienti in Italia vuole chiarire quando viene registrata una richiesta, come funzionano le notifiche e quali dati non inviare.",
-      "en": "A fictional SaaS provider adapts support FAQs for existing Italian users, with clear privacy and access instructions.",
-      "fr": "Un prestataire SaaS fictif adapte sa FAQ pour ses clients italiens existants.",
-      "es": "Un proveedor SaaS ficticio adapta sus preguntas frecuentes para Italia."
+      "en": "An illustrative SaaS provider adapts support FAQs for existing Italian users, with clear privacy and access instructions.",
+      "fr": "Un prestataire SaaS illustratif adapte sa FAQ pour ses clients italiens existants.",
+      "es": "Un proveedor SaaS de ejemplo adapta sus preguntas frecuentes para Italia."
     },
     "source": [
       "How do I know my request has been received? When you submit the support form, a confirmation screen displays a reference number. Keep that number for future enquiries. The confirmation means that the form has been recorded; it does not mean that a support specialist has reviewed it.",
@@ -95,9 +95,9 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
     },
     "context": {
       "it": "Un ente formativo francese immaginario comunica a professionisti italiani contenuto, durata, condizioni di partecipazione e limiti degli attestati.",
-      "en": "A fictional French training provider needs Italian information on course duration, enrolment and certificates.",
-      "fr": "Un organisme fictif de formation explique en italien les conditions d’un atelier professionnel.",
-      "es": "Una entidad ficticia francesa explica condiciones de un curso en italiano."
+      "en": "An illustrative French training provider needs Italian information on course duration, enrolment and certificates.",
+      "fr": "Un organisme illustratif de formation explique en italien les conditions d’un atelier professionnel.",
+      "es": "Una entidad de ejemplo francesa explica condiciones de un curso en italiano."
     },
     "source": [
       "Atelier : organiser les échanges écrits avec les clients existants. Cette formation à distance s’adresse aux indépendants et aux petites équipes souhaitant améliorer leur organisation quotidienne. Elle présente des méthodes de classement des demandes, de préparation des réponses et de suivi des décisions en attente.",
@@ -171,9 +171,9 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
     },
     "context": {
       "it": "Una società immaginaria spagnola presenta ai suoi clienti italiani già acquisiti i passaggi per accedere a un portale, distinguendo attivazione e conferma delle autorizzazioni.",
-      "en": "A fictional Spanish provider explains access activation to existing Italian clients, without promising permissions before verification.",
-      "fr": "Un prestataire espagnol fictif explique l’activation à ses clients italiens existants.",
-      "es": "Una empresa ficticia española explica cómo acceder a su portal a clientes italianos actuales."
+      "en": "An illustrative Spanish provider explains access activation to existing Italian clients, without promising permissions before verification.",
+      "fr": "Un prestataire espagnol illustratif explique l’activation à ses clients italiens existants.",
+      "es": "Una empresa de ejemplo española explica cómo acceder a su portal a clientes italianos actuales."
     },
     "source": [
       "Asunto: pasos para activar el acceso a su espacio de clientes. Buenos días: le confirmamos que hemos recibido la solicitud de acceso asociada a su empresa. Antes de habilitar las funciones compartidas, nuestro equipo debe comprobar qué usuarios figuran como autorizados por el responsable de la cuenta.",
