@@ -115,22 +115,22 @@ const PORTFOLIO_SERVICE_EXAMPLES = [
   {
     "it": [
       "Assistenza clienti scritta",
-      "Tre richieste simulate, tre risposte email redatte integralmente e un registro con le verifiche da effettuare.",
+      "Tre richieste dei clienti, tre risposte email scritte integralmente e un registro dei controlli.",
       "Leggi le tre risposte"
     ],
     "en": [
       "Written customer care",
-      "Three fictional enquiries, three full Italian email drafts and a case log listing the necessary checks.",
+      "Three customer enquiries, three full Italian replies and a case log with the necessary checks.",
       "Read the three replies"
     ],
     "fr": [
       "Relation client écrite",
-      "Trois demandes fictives, trois réponses complètes en italien et un tableau de suivi des vérifications.",
+      "Trois demandes, trois réponses complètes en italien et un registre des vérifications.",
       "Lire les trois réponses"
     ],
     "es": [
       "Atención escrita al cliente",
-      "Tres consultas ficticias, tres respuestas completas en italiano y un registro de comprobaciones.",
+      "Tres consultas, tres respuestas completas en italiano y un registro de comprobaciones.",
       "Leer las tres respuestas"
     ],
     "doc": "11"
@@ -171,12 +171,12 @@ const PORTFOLIO_SERVICE_EXAMPLES = [
     ],
     "fr": [
       "Commandes et back-office",
-      "Fiches clients fictives, suivi des commandes, contrôle des tarifs et écarts à faire valider.",
+      "Fiches de suivi, contrôle des commandes et tarifs, anomalies à faire valider.",
       "Consulter le suivi des commandes"
     ],
     "es": [
       "Pedidos y back office",
-      "Fichas de clientes ficticios, registro de pedidos, revisión de precios y diferencias pendientes de validación.",
+      "Fichas de seguimiento, registro de pedidos, control de precios y discrepancias por validar.",
       "Consultar el registro de pedidos"
     ],
     "doc": "13"
@@ -230,22 +230,22 @@ const PORTFOLIO_SERVICE_EXAMPLES = [
   {
     "it": [
       "Ricerche e confronti informativi",
-      "Una tabella con criteri di confronto, dati dichiaratamente simulati e informazioni che richiederebbero verifica.",
+      "Una tabella con criteri di confronto, valori di esempio e dati da verificare prima di prendere decisioni.",
       "Apri la tabella comparativa"
     ],
     "en": [
       "Information research and comparisons",
-      "A criteria-based comparison table, clearly fictional figures and outstanding checks.",
+      "A criteria-based comparison table with example figures and checks required before any decision.",
       "Open the comparison table"
     ],
     "fr": [
       "Recherche et comparatifs",
-      "Un tableau de critères, des données explicitement fictives et des vérifications à prévoir.",
+      "Un tableau de critères, de valeurs d'exemple et de contrôles nécessaires.",
       "Ouvrir le tableau comparatif"
     ],
     "es": [
       "Investigación y comparativas",
-      "Una tabla de criterios, datos expresamente ficticios y comprobaciones pendientes.",
+      "Una tabla de criterios, valores de ejemplo y verificaciones pendientes.",
       "Abrir la tabla comparativa"
     ],
     "doc": "07"
@@ -303,9 +303,9 @@ export default function Portfolio() {
 
   const descriptions = {
     it: "Campioni di traduzione IT ↔ EN/FR/ES, esempi di comunicazione professionale, localizzazione per l’Italia, segreteria, back office e contenuti digitali. Elaborati originali realizzati per il portfolio.",
-    en: "Original fictional work samples: Italian-speaking customer email drafts, back-office records, appointment coordination, complete document examples, translation and localisation for work with Italy.",
-    fr: "Exemples originaux et fictifs : courriels rédigés en italien, documents de back-office, organisation de rendez-vous, traductions et adaptation de contenus pour travailler avec l’Italie.",
-    es: "Muestras originales y ficticias: respuestas escritas en italiano, registros de back office, coordinación de citas, traducciones y adaptación de contenidos para trabajar con Italia.",
+    en: "Original work samples: written customer support, operational back-office records, calendar coordination, content, translation and localisation for professionals working with Italy.",
+    fr: "Travaux originaux : relation client écrite, dossiers de back-office, agenda, contenus professionnels, traduction et localisation pour travailler avec l'Italie.",
+    es: "Trabajos originales: atención escrita, registros de back office, agenda, contenidos profesionales, traducción y localización para trabajar con Italia.",
   };
 
   useSEO({
@@ -435,12 +435,12 @@ export default function Portfolio() {
           {/* Editorial provenance: factual, understated and consistent across locales. */}
           <p className="max-w-3xl text-xs sm:text-sm leading-relaxed text-muted-foreground mb-6">
             {lang === "it"
-              ? "Gli elaborati sono stati preparati appositamente per mostrare il mio metodo di lavoro. Sono esempi originali con scenari, nomi e dati inventati, non lavori commissionati da clienti reali."
+              ? "La raccolta presenta elaborati originali realizzati per illustrare il mio metodo di lavoro. Non si tratta di incarichi commissionati né di documenti provenienti da clienti reali."
               : lang === "en"
-              ? "These original samples were prepared to illustrate my working approach. The scenarios, names and data are fictional; the work was not commissioned by actual clients."
+              ? "This collection presents original work produced to illustrate my professional approach. It does not contain commissioned client work or real customer records."
               : lang === "fr"
-              ? "Ces exemples originaux ont été préparés pour illustrer ma méthode de travail. Les situations, les noms et les données sont fictifs ; il ne s'agit pas de missions commandées par de véritables clients."
-              : "Estas muestras originales se han preparado para mostrar mi forma de trabajar. Las situaciones, los nombres y los datos son ficticios; no se trata de encargos realizados para clientes reales."}
+              ? "Ces travaux originaux ont été préparés pour présenter ma méthode professionnelle, hors commande client et sans documents provenant de véritables dossiers."
+              : "Estos trabajos originales se han preparado para mostrar mi método profesional. No son encargos de clientes ni documentos procedentes de expedientes reales."}
           </p>
 
         </div>
@@ -453,7 +453,7 @@ export default function Portfolio() {
             {({it:"Che cosa faccio, attraverso esempi di lavoro",en:"What I do, shown through original work samples",fr:"Mes prestations, illustrées par des exemples",es:"Qué hago: ejemplos de trabajo concretos"} as const)[lang]}
           </h2>
           <p className="text-foreground/80 leading-relaxed max-w-3xl mb-7">
-            {({it:"Apri un esempio per leggere il materiale prodotto. In questo portfolio ogni scenario è inventato, ma i testi, i modelli e le traduzioni sono elaborati originali creati per mostrare il tipo di lavoro che posso svolgere.",en:"Open a sample to read the material itself. Every scenario is fictional, but the writing, templates and translations are original examples of the work I can provide.",fr:"Ouvrez un exemple pour consulter le document lui-même. Les situations sont fictives, mais les textes, modèles et traductions ont été créés pour illustrer concrètement mes prestations.",es:"Abre un ejemplo para leer el documento. Las situaciones son ficticias, pero los textos, modelos y traducciones son muestras originales del trabajo que puedo ofrecer."} as const)[lang]}
+            {({it:"Seleziona il servizio che ti interessa e consulta i documenti: testi completi, registri, procedure, traduzioni a fronte e controlli. Ogni dossier spiega contesto, metodo ed elaborati prodotti.",en:"Choose the service you need and read the actual documents: complete correspondence, registers, procedures, side-by-side translations and quality checks. Each dossier explains the work and its context.",fr:"Choisissez la prestation souhaitée et consultez les dossiers complets : courriels, registres, procédures, traductions en regard et contrôles. Chaque exemple présente son contexte et sa méthode.",es:"Elige un servicio y consulta documentos completos: correos, registros, procedimientos, traducciones en paralelo y controles. Cada dossier presenta el contexto y el método."} as const)[lang]}
           </p>
           <div className="rounded-xl border border-primary/25 bg-primary/5 p-5 mb-7">
             <h3 className="font-bold mb-4">
@@ -547,9 +547,9 @@ export default function Portfolio() {
               {lang === "it"
                 ? "Master in Traduzione Specialistica (1.500 ore, 60 CFU). Cinque ambiti applicativi illustrati attraverso esempi dimostrativi, non altrettante qualifiche autonome:"
                 : lang === "fr"
-                ? "Master en traduction spécialisée (1 500 heures, 60 ECTS). Cinq domaines d'application illustrés par des exemples fictifs, non cinq qualifications distinctes :"
+                ? "Master en traduction spécialisée (1 500 heures, 60 ECTS). Cinq domaines d'application illustrés par des exemples originaux, et non cinq diplômes distincts :"
                 : lang === "es"
-                ? "Máster en traducción especializada (1.500 horas, 60 ECTS). Cinco ámbitos de aplicación ilustrados con ejemplos ficticios, no cinco titulaciones diferentes:"
+                ? "Máster en traducción especializada (1.500 horas, 60 ECTS). Cinco ámbitos de aplicación ilustrados con ejemplos originales, no cinco titulaciones diferentes:"
                 : "Postgraduate training in Specialist Translation (1,500 hours, 60 ECTS). Five illustrative application fields, not five separate qualifications:"}
             </p>
           </div>
@@ -1038,10 +1038,7 @@ export default function Portfolio() {
 
                     {/* Disclaimer Footer inside case */}
                     <div className="pt-4 border-t border-border/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <Scale className="w-3.5 h-3.5 text-primary" />
-                        <span>{caseItem.disclaimer[lang]}</span>
-                      </div>
+
                       <Link
                         to={contactPath}
                         className="text-primary hover:underline font-semibold flex items-center gap-1 whitespace-nowrap"
@@ -1141,21 +1138,7 @@ export default function Portfolio() {
                 </div>
               </a>
             ))}
-          </div>
-
-          <div className="mt-8 p-4 rounded-xl bg-secondary/30 border border-border/40 text-xs text-muted-foreground flex items-center gap-2.5">
-            <Scale className="w-4 h-4 text-primary shrink-0" />
-            <span>
-              {lang === "it"
-                ? "Tutti i documenti sopra indicati sono stati redatti con dati sintetici e a scopo puramente metodologico per mostrare la cura analitica e la precisione di Noemi Tomassetti."
-                : lang === "fr"
-                ? "Tous les documents présentés ci-dessus comportent des données synthétiques à vocation purement méthodologique pour illustrer la rigueur de Noemi Tomassetti."
-                : lang === "es"
-                ? "Estos documentos son ejemplos originales creados para el portfolio con situaciones, nombres y datos ficticios. No proceden de encargos realizados para clientes."
-                : "All documents above are produced with synthetic data for independent methodological demonstration to illustrate the analytical rigor of Noemi Tomassetti."}
-            </span>
-          </div>
-        </div>
+          </div>        </div>
       </section>
 
       {/* ── CALL TO ACTION FOOTER ── */}
