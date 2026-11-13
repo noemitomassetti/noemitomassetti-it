@@ -36,7 +36,7 @@ export const esLocale: TranslationDictionary = {
     badge: 'ASISTENTE VIRTUAL MULTILINGÜE',
     titleLine1: 'Asistencia virtual en italiano y back office',
     titleHighlight: 'para trabajar con Italia',
-    subtitle: "Asistencia virtual en italiano para correo, agenda, secretaría, back office y atención escrita al cliente, con traducción y adaptación de contenidos para Italia.",
+    subtitle: "Asistencia virtual en italiano para correo, agenda, secretaría, back office y atención al cliente por escrito, con traducción y adaptación de contenidos para Italia.",
     headline: "Tu asistente virtual en italiano para el trabajo diario",
     desc1: "Ayudo a profesionales y pequeñas empresas a organizar las tareas relacionadas con Italia: correos en italiano, citas, documentos y consultas de clientes actuales.",
     desc2: "Además de la asistencia virtual, redacto y reviso textos profesionales y traduzco entre el italiano y el inglés, francés o español en ambas direcciones. Definimos las tareas antes de comenzar.",
