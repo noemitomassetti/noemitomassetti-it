@@ -7,13 +7,15 @@ import { OPERATIONAL_SAMPLES_A } from "./portfolioOperationalSamplesA";
 import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
 import { OPERATIONAL_SAMPLES_D } from "./portfolioOperationalSamplesD";
+import { OPERATIONAL_SAMPLES_E } from "./portfolioOperationalSamplesE";
+import { OPERATIONAL_SAMPLES_F } from "./portfolioOperationalSamplesF";
 import type { TranslationDeepCase } from "./portfolioDeepTypes";
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
 /** Fictional professional samples cover all six IT ↔ EN/FR/ES translation directions. */
 
 export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B, ...TRANSLATION_SAMPLES_REVERSE, ...TRANSLATION_SAMPLES_SPECIALIST];
-export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D];
+export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D, ...OPERATIONAL_SAMPLES_E, ...OPERATIONAL_SAMPLES_F];
 export type DeepPortfolioItem =
   | { kind: "translation"; item: TranslationDeepCase }
   | { kind: "operations"; item: OperationalDeepCase };
