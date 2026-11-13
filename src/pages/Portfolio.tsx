@@ -296,16 +296,16 @@ export default function Portfolio() {
   // SEO configuration
   const titles = {
     it: "Portfolio | Esempi di lavoro | Noemi Tomassetti",
-    en: "Italian Translation and Localisation | Work Samples | Noemi Tomassetti",
-    fr: "Traduction et communication en italien | Exemples de travail | Noemi Tomassetti",
-    es: "Traducción y comunicación en italiano | Muestras de trabajo | Noemi Tomassetti",
+    en: "Italian Virtual Assistance & Back-Office Work Samples | Noemi Tomassetti",
+    fr: "Assistance virtuelle en italien | Exemples de travail | Noemi Tomassetti",
+    es: "Asistencia virtual en italiano | Muestras de trabajo | Noemi Tomassetti",
   };
 
   const descriptions = {
     it: "Campioni di traduzione IT ↔ EN/FR/ES, esempi di comunicazione professionale, localizzazione per l’Italia, segreteria, back office e contenuti digitali. Elaborati originali realizzati per il portfolio.",
-    en: "Original work samples created for this portfolio: Italian translation, website localisation, customer correspondence and content for Italy, alongside virtual-assistance and back-office examples.",
-    fr: "Exemples de travail créés pour ce portfolio : traductions vers l’italien, localisation web, courriels professionnels et contenus pour l’Italie, ainsi que secrétariat et back-office.",
-    es: "Muestras originales preparadas para este porfolio: traducción al italiano, localización web, correos profesionales y contenidos para Italia, además de secretaría y back office.",
+    en: "Original fictional work samples: Italian-speaking customer email drafts, back-office records, appointment coordination, complete document examples, translation and localisation for work with Italy.",
+    fr: "Exemples originaux et fictifs : courriels rédigés en italien, documents de back-office, organisation de rendez-vous, traductions et adaptation de contenus pour travailler avec l’Italie.",
+    es: "Muestras originales y ficticias: respuestas escritas en italiano, registros de back office, coordinación de citas, traducciones y adaptación de contenidos para trabajar con Italia.",
   };
 
   useSEO({
