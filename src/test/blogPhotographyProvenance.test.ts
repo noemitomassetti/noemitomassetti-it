@@ -5,11 +5,11 @@ import {readFileSync} from "node:fs";
 const LANGUAGES=["it","en","fr","es"] as const;
 
 describe("Authentic and distinct blog photography",()=>{
- it("associates all 14 articles with distinct photographed assets, not anonymous illustration providers",()=>{
+ it("associates all 16 articles with distinct photographed assets, not anonymous illustration providers",()=>{
    const shots=Object.entries(BLOG_PHOTOGRAPHS);
-   expect(shots).toHaveLength(14);
+   expect(shots).toHaveLength(16);
    const images=shots.map(([_,photo])=>new URL(photo.url).pathname);
-   expect(new Set(images).size).toBe(14);
+   expect(new Set(images).size).toBe(16);
    for(const [id,photo] of shots){
      expect(Number(id)).toBeGreaterThan(0);
      const url=new URL(photo.url),source=new URL(photo.sourceUrl);
@@ -26,7 +26,7 @@ describe("Authentic and distinct blog photography",()=>{
  it("preserves the same original photograph but has correctly localized alt text in all languages",()=>{
    for(const lang of LANGUAGES){
      const posts=getBlogPosts(lang);
-     expect(posts).toHaveLength(14);
+     expect(posts).toHaveLength(16);
      expect(new Set(posts.map(post=>post.image)).size).toBe(posts.length);
      for(const post of posts){
        const photo=BLOG_PHOTOGRAPHS[post.id];
