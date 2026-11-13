@@ -116,11 +116,6 @@ export const BLOG_PHOTOGRAPHS: Readonly<Record<number,BlogPhotograph>> = {
     alt: {it:"Lucchetto sul computer come simbolo di protezione degli accessi",en:"Padlock on a computer keyboard illustrating access protection",fr:"Cadenas sur un clavier d'ordinateur illustrant la protection des accès",es:"Candado sobre un teclado de ordenador como símbolo de seguridad"},
     license: "Unsplash License",
   },
-};
-
-export const BLOG_PHOTO_ATTRIBUTION_LABEL:Record<Language,string>={
-  it:"Fotografia",en:"Photograph",fr:"Photographie",es:"Fotografía",
-
   15: {
     url: "https://images.unsplash.com/photo-1743796055651-41c743ff2465?auto=format&fit=crop&w=1200&q=75",
     photographer: "MJ Duford",
@@ -135,4 +130,9 @@ export const BLOG_PHOTO_ATTRIBUTION_LABEL:Record<Language,string>={
     alt: {it:"Persona che controlla documenti su una cartellina accanto al computer",en:"Person checking information on a clipboard beside a laptop",fr:"Personne vérifiant des documents sur un porte-bloc à côté d'un ordinateur",es:"Persona revisando documentos en una carpeta junto a un portátil"},
     license: "Unsplash License",
   },
+};
+
+export const BLOG_PHOTO_ATTRIBUTION_LABEL:Record<Language,string>={
+  it:"Fotografia",en:"Photograph",fr:"Photographie",es:"Fotografía",
+
 };
