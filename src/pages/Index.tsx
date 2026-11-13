@@ -455,35 +455,36 @@ export default function IndexPage() {
 
   return (
     <Layout lang={lang}>
-      {/* ── SECTION 1: HERO (EXACT MATCH TO LIVE WEBSITE) ── */}
+      {/* Service-led hero: retain the original palette and portrait, but put work first on small screens. */}
       <section
         id="home"
-        className="relative flex flex-col md:flex-row md:items-center overflow-hidden min-h-[100svh] md:min-h-[600px] lg:min-h-[750px] bg-transparent"
+        className="relative isolate flex flex-col md:flex-row md:items-center overflow-hidden md:min-h-[620px] lg:min-h-[750px] bg-background border-b border-primary/15"
       >
-        {/* Right authentic photograph with live site mask & scale */}
-        <div className="relative md:absolute md:inset-0 w-full md:h-full z-0 flex justify-center md:justify-end animate-in fade-in duration-1000">
+        {/* Authentic photograph remains prominent, but does not precede the service message on mobile. */}
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none z-0 opacity-40" style={{ backgroundImage: "linear-gradient(rgba(229,192,161,0.075) 1px, transparent 1px), linear-gradient(90deg, rgba(229,192,161,0.075) 1px, transparent 1px)", backgroundSize: "36px 36px", maskImage: "linear-gradient(to right, transparent 12%, black 95%)" }} />
+        <div className="relative order-2 md:order-none md:absolute md:inset-0 w-full h-[320px] sm:h-[390px] md:h-full z-0 flex justify-center md:justify-end overflow-hidden">
           <img
             src="/noemi-tomassetti.png"
-            alt="Noemi Tomassetti Assistente Virtuale"
+            alt={lang === "it" ? "Noemi Tomassetti, assistente virtuale multilingue" : lang === "fr" ? "Portrait de Noemi Tomassetti, assistante virtuelle italophone" : lang === "es" ? "Retrato de Noemi Tomassetti, asistente virtual en italiano" : "Portrait of Noemi Tomassetti, Italian-speaking virtual assistant"}
             width="800"
             height="1200"
             loading="eager"
-            className="w-full md:w-[60%] lg:w-[50%] xl:w-[45%] h-auto md:h-full object-cover object-[center_12%] md:object-[center_18%] scale-105 md:scale-110 origin-top [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_100%)]"
+            className="w-full h-full md:w-[48%] lg:w-[43%] xl:w-[40%] object-cover object-[center_14%] md:object-[center_18%] [mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_22%,black_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_72%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_22%,black_100%)]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent z-10 md:w-[60%] hidden md:block pointer-events-none" />
         </div>
 
         {/* Left Hero typography and CTA */}
-        <div className="container relative z-10 px-4 md:px-6 pb-12 pt-4 md:pt-0 flex flex-col justify-center -mt-16 md:mt-0">
-          <div className="max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <div className="container relative order-1 md:order-none z-10 px-4 md:px-6 pb-8 pt-10 sm:pt-14 md:py-16 flex flex-col justify-center">
+          <div className="max-w-2xl md:max-w-[57%] xl:max-w-[56%] animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h1 className="sr-only">
               {lang === "it"
                 ? "Noemi Tomassetti - Assistente Virtuale per professionisti, consulenti e piccole attività. Segreteria, organizzazione, comunicazione multilingue, traduzione e contenuti per siti web."
                 : lang === "fr"
-                ? "Noemi Tomassetti - Assistante virtuelle multilingue et traductrice pour professionnels et petites entreprises. Secrétariat, back-office, relation client écrite et traduction IT ↔ EN/FR/ES."
+                ? "Noemi Tomassetti - Assistante virtuelle italophone pour les professionnels travaillant avec l’Italie : secrétariat, back-office, relation client écrite et traduction IT ↔ EN/FR/ES."
                 : lang === "es"
-                ? "Noemi Tomassetti - Asistente virtual para profesionales y pequeñas empresas. Traducción profesional IT ↔ EN/FR/ES, localización de contenidos y asistencia virtual operativa."
-                : "Noemi Tomassetti - Multilingual Virtual Assistant and Translator. Organisational secretarial work, operational back office, written customer care, digital content and professional translation IT ↔ EN/FR/ES."}
+                ? "Noemi Tomassetti - Asistente virtual en italiano para profesionales y empresas que trabajan con Italia: secretaría, back office, atención escrita al cliente y traducción IT ↔ EN/FR/ES."
+                : "Noemi Tomassetti - Italian-speaking Virtual Assistant for business with Italy: secretarial support, back office, written customer care and translation IT ↔ EN/FR/ES."}
             </h1>
 
             {/* SVG Logo: Noemi Tomassetti / VIRTUAL ASSISTANT */}
@@ -543,6 +544,16 @@ export default function IndexPage() {
                     "Dalla gestione di email e appuntamenti alla comunicazione con i clienti, dalla traduzione alla revisione dei contenuti web: un supporto professionale e flessibile, costruito sulle tue esigenze."}
                 </p>
               </div>
+            </div>
+
+            <div aria-label={lang === "it" ? "Servizi principali" : lang === "fr" ? "Services principaux" : lang === "es" ? "Servicios principales" : "Core services"} className="flex flex-wrap gap-2 mb-7">
+              {(lang === "it" ? ["Segreteria", "Back office", "Assistenza clienti", "Traduzioni"]
+                : lang === "fr" ? ["Secrétariat en italien", "Back-office", "Relation client écrite", "Traduction"]
+                : lang === "es" ? ["Secretaría en italiano", "Back office", "Atención escrita", "Traducción"]
+                : ["Italian-speaking support", "Back office", "Written customer care", "Translation"]
+              ).map((service) => (
+                <span key={service} className="rounded-full border border-primary/25 bg-primary/5 px-3 py-1.5 text-xs font-medium tracking-wide text-primary">{service}</span>
+              ))}
             </div>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
