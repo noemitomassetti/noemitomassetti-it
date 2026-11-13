@@ -4,14 +4,14 @@ export const esLocale: TranslationDictionary = {
   lang: 'es',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: "Comunicación en italiano, traducción y asistencia virtual | Noemi Tomassetti",
-    homeDesc: "Traducción y localización para Italia, correos profesionales, atención al cliente por escrito, secretaría, back office y contenidos web. Traducciones IT ↔ EN/FR/ES.",
-    servicesTitle: 'Comunicación en italiano, traducción y asistencia virtual | Noemi Tomassetti',
-    servicesDesc: 'Traducción y localización para Italia, contenidos de sitios web y redes sociales, correos y comunicación con clientes italianos. También ofrezco todos mis servicios de asistencia virtual.',
+    homeTitle: "Asistente virtual en italiano y back office | Noemi Tomassetti",
+    homeDesc: "Asistencia virtual en italiano para trabajar con Italia: correo, agenda, back office y atención escrita a clientes existentes, además de traducción y localización IT ↔ EN/FR/ES.",
+    servicesTitle: 'Asistencia virtual en italiano y comunicación profesional | Noemi Tomassetti',
+    servicesDesc: 'Asistencia virtual en italiano para empresas que trabajan con Italia: gestión del correo, agenda, pedidos, back office y atención escrita al cliente, además de traducción y revisión de textos.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
     aboutTitle: 'Sobre mí | Noemi Tomassetti',
-    aboutDesc: 'Más de 20 años de experiencia profesional en organización, idiomas, atención al cliente y back office. Titulada en Mediación Lingüística con 110/110 e lode (distinción italiana).',
+    aboutDesc: 'Más de veinte años de experiencia laboral en distintas funciones, como atención al cliente y organización, junto con formación lingüística especializada.',
     resourcesTitle: 'Recursos y artículos | Noemi Tomassetti',
     resourcesDesc: 'Perspectivas prácticas sobre delegación, comunicación multilingüe, claridad operativa y productividad con IA para profesionales independientes.',
     contactTitle: 'Contacto y Presupuestos | Noemi Tomassetti',
@@ -34,16 +34,16 @@ export const esLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'ASISTENTE VIRTUAL MULTILINGÜE',
-    titleLine1: 'Comunicación en italiano, traducción y localización',
-    titleHighlight: 'para llegar al público italiano',
-    subtitle: "Traducción y adaptación de contenidos para Italia, correspondencia profesional, atención al cliente por escrito, textos web y asistencia virtual multilingüe.",
-    headline: "Comunicación natural y profesional para el público italiano",
-    desc1: "Ayudo a profesionales y pequeñas empresas a comunicarse con claridad en italiano, con el tono, la terminología y el contexto adecuados para sus destinatarios.",
-    desc2: "También ofrezco, según lo acordado, servicios de secretaría, back office, atención escrita al cliente y traducción entre el italiano y el inglés, francés o español.",
+    titleLine1: 'Asistencia virtual en italiano y back office',
+    titleHighlight: 'para trabajar con Italia',
+    subtitle: "Asistencia virtual en italiano para correo, agenda, secretaría, back office y atención escrita al cliente, con traducción y adaptación de contenidos para Italia.",
+    headline: "Tu asistente virtual en italiano para el trabajo diario",
+    desc1: "Ayudo a profesionales y pequeñas empresas a organizar las tareas relacionadas con Italia: correos en italiano, citas, documentos y consultas de clientes actuales.",
+    desc2: "Además de la asistencia virtual, redacto y reviso textos profesionales y traduzco entre el italiano y el inglés, francés o español en ambas direcciones. Definimos las tareas antes de comenzar.",
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
-      "Comunicación destinada al mercado italiano y localización, con apoyo operativo y un alcance definido antes de cada encargo.",
+      "Asistencia virtual en italiano, atención al cliente por escrito y back office, con servicios lingüísticos complementarios y condiciones acordadas por escrito.",
     ctaServices: 'Descubrir los servicios',
     ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
@@ -80,7 +80,7 @@ export const esLocale: TranslationDictionary = {
   servicesSection: {
     tag: 'QUÉ HAGO',
     title: "Cómo puedo ayudarte",
-    subtitle: "Ofrezco servicios lingüísticos y de asistencia virtual. Cada encargo se define según las tareas, los materiales y las entregas acordadas; no todos los servicios están incluidos automáticamente. El presupuesto detalla exactamente qué servicios están incluidos.",
+    subtitle: "Mi servicio principal es la asistencia virtual en italiano para actividades relacionadas con Italia: secretaría, back office, correo y atención escrita al cliente. También ofrezco traducción, localización y revisión de textos. Cada presupuesto detalla las tareas y los materiales acordados.",
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
