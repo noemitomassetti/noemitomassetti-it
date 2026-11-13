@@ -65,14 +65,25 @@ describe("Release: Italian-market virtual assistance first, complete scope in It
     expect(article).toMatch(/assistante virtuelle italophone/i);
     expect(article).toMatch(/asistente virtual/i);
   });
-  it("preserves all 14 blog posts and original document assets in every interface language",()=>{
+  it("preserves all 16 blog posts and original document assets in every interface language",()=>{
     for (const lang of langs) {
       const posts=getBlogPosts(lang);
-      expect(posts,lang).toHaveLength(14);
-      expect(new Set(posts.map(p=>p.id)).size,lang).toBe(14);
+      expect(posts,lang).toHaveLength(16);
+      expect(new Set(posts.map(p=>p.id)).size,lang).toBe(16);
       for(const post of posts){
         expect(post.content.length,`${lang} post ${post.id}`).toBeGreaterThan(1700);
         expect(post.title.length,`${lang} post ${post.id}`).toBeGreaterThan(12);
+      }
+    }
+    const fortnightly=[
+      [12,"2026-09-14"],[13,"2026-09-28"],[14,"2026-10-12"],
+      [15,"2026-10-26"],[16,"2026-11-09"],
+    ] as const;
+    for(const lang of langs){
+      const posts=getBlogPosts(lang);
+      for(const [id,date] of fortnightly){
+        expect(posts.find(p=>p.id===id)?.dateISO,`${lang} blog post ${id}`).toBe(date);
+        expect(new Date(date+"T12:00:00Z").getUTCDay()).toBe(1);
       }
     }
     expect(PORTFOLIO_DOCUMENTS).toHaveLength(22);
