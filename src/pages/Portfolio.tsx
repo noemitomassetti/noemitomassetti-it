@@ -318,10 +318,10 @@ export default function Portfolio() {
 
   const categories: { id: PortfolioCategory; label: Record<Language, string>; shortLabel: Record<Language, string>; icon: React.ReactNode }[] = [
     { id: "all", label: { it: "Tutti i progetti", en: "All examples", fr: "Tous les exemples", es: "Todas las muestras" }, shortLabel: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
-    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, shortLabel: { it: "Traduzioni", en: "Translation", fr: "Traduction", es: "Traducción" }, icon: <Globe className="w-3.5 h-3.5" /> },
+    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y localización" }, shortLabel: { it: "Traduzioni", en: "Translation", fr: "Traduction", es: "Traducción" }, icon: <Globe className="w-3.5 h-3.5" /> },
     { id: "research", label: { it: "Ricerche informative & confronti", en: "Informational research & comparisons", fr: "Recherche documentaire et comparaisons", es: "Investigación informativa y comparativas" }, shortLabel: { it: "Ricerche", en: "Research", fr: "Recherche", es: "Investigación" }, icon: <Search className="w-3.5 h-3.5" /> },
     { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Secretarial support & operational back office", fr: "Secrétariat, relation client et back-office", es: "Secretaría, atención al cliente y back office" }, shortLabel: { it: "Back office", en: "Back office", fr: "Back-office", es: "Back office" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
-    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, shortLabel: { it: "Revisione", en: "Writing", fr: "Révision", es: "Redacción" }, icon: <PenTool className="w-3.5 h-3.5" /> },
+    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y revisión" }, shortLabel: { it: "Revisione", en: "Writing", fr: "Révision", es: "Redacción" }, icon: <PenTool className="w-3.5 h-3.5" /> },
     { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus web et pages de destination", es: "Contenidos web y páginas de destino" }, shortLabel: { it: "Contenuti web", en: "Web copy", fr: "Contenus web", es: "Contenidos web" }, icon: <Layers className="w-3.5 h-3.5" /> },
   ];
 
@@ -408,7 +408,7 @@ export default function Portfolio() {
               : lang === "fr"
               ? "Portfolio · Exemples originaux"
               : lang === "es"
-              ? "Porfolio · Muestras originales"
+              ? "Portfolio · Muestras originales"
               : "Portfolio · Original Work Samples"}
           </div>
 
@@ -500,12 +500,12 @@ export default function Portfolio() {
       <section aria-labelledby="tangible-work" className="scroll-mt-24 py-12 border-b border-border/40 bg-card/30">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <h2 id="tangible-work" className="text-2xl md:text-3xl font-bold text-primary mb-3">
-            {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Ejemplos concretos para consultar" : "Explore the sample documents"}
+            {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Consulta ejemplos de trabajo completos" : "Explore the sample documents"}
           </h2>
           <p className="text-foreground/75 mb-8 max-w-3xl">
             {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Apri i documenti e valuta direttamente chiarezza, terminologia e organizzazione."
               : lang === "fr" ? "Traductions en regard, courriels, tableaux de suivi et procédures : consultez les documents et les choix de formulation, dont plusieurs exemples en italien."
-              : lang === "es" ? "Traducciones en paralelo, correos, registros y procedimientos: consulta los documentos y las decisiones lingüísticas, con varios ejemplos en italiano."
+              : lang === "es" ? "Traducciones comparadas, correos, registros y procedimientos: consulta los documentos completos y las decisiones lingüísticas, incluidos varios ejemplos en italiano."
               : "Side-by-side translations, customer emails, trackers and procedures. Read the documents and evaluate the wording, including complete samples in Italian."}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -857,7 +857,7 @@ export default function Portfolio() {
                                     : lang === "fr"
                                     ? "Texte Source"
                                     : lang === "es"
-                                    ? "Texto Origen"
+                                    ? "Texto original"
                                     : "Original Source"}{" "}
                                   ({caseItem.comparison.sourceLang})
                                 </span>
@@ -1151,7 +1151,7 @@ export default function Portfolio() {
                 : lang === "fr"
                 ? "Tous les documents présentés ci-dessus comportent des données synthétiques à vocation purement méthodologique pour illustrer la rigueur de Noemi Tomassetti."
                 : lang === "es"
-                ? "Todos los documentos presentados contienen datos sintéticos con fines exclusivamente metodológicos para mostrar el rigor analítico de Noemi Tomassetti."
+                ? "Estos documentos son ejemplos originales creados para el portfolio con situaciones, nombres y datos ficticios. No proceden de encargos realizados para clientes."
                 : "All documents above are produced with synthetic data for independent methodological demonstration to illustrate the analytical rigor of Noemi Tomassetti."}
             </span>
           </div>
