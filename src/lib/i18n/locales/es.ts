@@ -5,9 +5,9 @@ export const esLocale: TranslationDictionary = {
   meta: {
     siteName: 'Noemi Tomassetti',
     homeTitle: "Asistente virtual en italiano y back office | Noemi Tomassetti",
-    homeDesc: "Asistencia virtual en italiano para trabajar con Italia: correo, agenda, back office y atención escrita a clientes existentes, además de traducción y localización IT ↔ EN/FR/ES.",
+    homeDesc: "Asistencia virtual en italiano para trabajar con Italia: correo, agenda, back office y atención al cliente por escrito, además de traducción y localización IT ↔ EN/FR/ES.",
     servicesTitle: 'Asistencia virtual en italiano y comunicación profesional | Noemi Tomassetti',
-    servicesDesc: 'Asistencia virtual en italiano para empresas que trabajan con Italia: gestión del correo, agenda, pedidos, back office y atención escrita al cliente, además de traducción y revisión de textos.',
+    servicesDesc: 'Asistencia virtual en italiano para empresas que trabajan con Italia: gestión del correo, agenda, pedidos, back office y atención al cliente por escrito, además de traducción y revisión de textos.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
     aboutTitle: 'Sobre mí | Noemi Tomassetti',
