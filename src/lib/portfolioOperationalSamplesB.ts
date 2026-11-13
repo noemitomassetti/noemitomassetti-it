@@ -99,12 +99,28 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Matrice de décision et validations",
           "es": "Matriz de decisión y aprobaciones"
         },
-        "content": "ESEMPIO DIMOSTRATIVO — DATI INTERAMENTE INVENTATI\nObiettivo: scegliere un sistema di gestione richieste per clienti già acquisiti; nessuna ricerca contatti commerciali.\nCriteri e pesi approvati nel brief: controllo accessi 30%; esportazione dati 25%; accessibilità 20%; semplicità d'uso 15%; costo dichiarato 10%.\nSoluzione A (fittizia): 4/5, 5/5, 3/5, 4/5, 3/5 → 3,95/5.\nSoluzione B (fittizia): 5/5, 3/5, 4/5, 3/5, 4/5 → 3,95/5.\nParità: non scegliere automaticamente. Richiedere al responsabile una prova documentata su esportazione e accessibilità.\nStato: IN ATTESA DI VALIDAZIONE — nessun acquisto, nessun accesso o contratto attivato.\nCampi da compilare prima della decisione: fonte ufficiale per ogni criterio, data di verifica, limiti del piano, responsabile, approvazione scritta.\nNota: punteggi e soluzioni sono inventati per illustrare la procedura; non sono recensioni di software reali.",
+        "content": "MATRICE DECISIONALE — SOLUZIONI E DATI INVENTATI\nCriteri di riferimento, coerenti con il brief: ruoli e permessi 30%; esportazione dei dati 25%; interfaccia italiana 20%; facilità d'uso 15%; trasparenza dei costi 10%. Totale 100%.\nSoluzione A: ruoli dichiarati, esportazione CSV e interfaccia italiana indicate nello scenario; costo non verificato. Richiede conferma sulla configurazione dei permessi e sulla completezza dell'esportazione.\nSoluzione B: ruoli ed esportazione non verificati; italiano non disponibile nello scenario; costo non verificato. Il requisito linguistico risulta mancante.\nSoluzione C: ruoli dichiarati, esportazione JSON e interfaccia italiana parziale; costi non verificati. Necessario un controllo della copertura linguistica e dell'esportazione.\nNon vengono attribuiti punteggi numerici non documentati: i dati sono fittizi e mancano le informazioni necessarie per applicare una valutazione ponderata.\nCampi indispensabili in un'analisi reale: link alla fonte ufficiale, data di consultazione, criterio verificato, limitazioni del piano, persona responsabile e autorizzazione.\nStato: in attesa di verifica e approvazione. Nessun acquisto, contratto, accesso a sistemi o contatto commerciale è stato effettuato.",
         "explanation": {
           "it": "Il confronto distingue dati verificati, valutazioni interne e decisione riservata al cliente, senza trasformarsi in acquisizione di contatti.",
           "en": "The matrix separates verifiable facts, fictional scoring and the client's final approval; it is not a prospecting exercise.",
           "fr": "La matrice sépare faits vérifiables, notes fictives et décision du client, sans démarche de prospection.",
           "es": "La matriz distingue los hechos verificables, las puntuaciones ficticias y la aprobación del cliente, sin prospección comercial."
+        }
+      },
+      {
+        "title": {
+          "it": "Relazione finale sulla selezione di uno strumento: verifiche aperte",
+          "en": "Complete software assessment memo and outstanding checks",
+          "fr": "Note de comparaison et vérifications à effectuer",
+          "es": "Informe comparativo y verificaciones pendientes"
+        },
+        "language": "it",
+        "content": "MEMO COMPARATIVO — TRE SOLUZIONI SOFTWARE INTERAMENTE FITTIZIE\nDestinatario: responsabile di una piccola attività immaginaria con clienti italiani già acquisiti.\nOggetto: gestione delle richieste postvendita; esclusa la ricerca di nuovi clienti.\n\nREQUISITI CONCORDABILI\n1. Permessi: almeno due livelli di autorizzazione verificabili.\n2. Esportazione dei dati: formato leggibile, con verifica delle condizioni d'uso.\n3. Interfaccia italiana: traduzione effettivamente presente e comprensibile.\n4. Semplicità: utilizzo compatibile con le procedure del team.\n5. Costi: prezzo totale, limiti di piano e condizioni da verificare.\nPesi di riferimento per un eventuale confronto documentato: 30%, 25%, 20%, 15%, 10%. I pesi non autorizzano a inventare voti in assenza di evidenze.\n\nSCHEDA A — FONTE INVENTATA\nDati dichiarati nello scenario: ruoli disponibili, esportazione CSV, interfaccia italiana; costo sconosciuto.\nValutazione descrittiva: potrebbe soddisfare i requisiti iniziali, ma occorre verificare se i permessi siano configurabili, se l'esportazione includa tutti i campi necessari e quali siano i limiti della versione prevista. Nessuna prova è stata effettuata.\n\nSCHEDA B — FONTE INVENTATA\nDati dichiarati: permessi ed esportazione non ancora verificati, interfaccia italiana non disponibile, prezzo sconosciuto.\nValutazione descrittiva: non soddisfa il requisito linguistico indicato nello scenario. Senza documentazione non è appropriato attribuire un voto o considerarla idonea.\n\nSCHEDA C — FONTE INVENTATA\nDati dichiarati: ruoli disponibili, esportazione JSON, localizzazione italiana parziale, prezzo sconosciuto.\nValutazione descrittiva: necessita di verifica sull'effettiva copertura linguistica e sulla facilità di utilizzo del formato esportato. Non è stata testata.\n\nNOTA AL RESPONSABILE — VERSIONE PRONTA PER LA REVISIONE\nBuongiorno,\nho organizzato le informazioni di prova relative alle tre opzioni A, B e C in base ai criteri concordabili per il progetto. La matrice evidenzia informazioni mancanti su costi, limiti d'uso ed esportazione. Non ho assegnato punteggi di qualità o raccomandato un acquisto, perché le informazioni non sono state verificate su documenti ufficiali o mediante una prova autorizzata.\nPer procedere chiederei di definire quali requisiti siano indispensabili e di autorizzare la consultazione delle fonti pubbliche pertinenti. Il confronto definitivo dovrebbe riportare, per ogni dato, URL, data, eventuali limitazioni e osservazioni da controllare.\nIl presente esempio non contiene recensioni di strumenti reali, non prevede contratti e non comporta attività di acquisizione clienti.\nCordiali saluti,\nSupporto alla ricerca informativa\n\nSTATO: memo dimostrativo completato; selezione e acquisto non effettuati.",
+        "explanation": {
+          "it": "Sintesi professionale di tre soluzioni inventate, senza punteggi arbitrari né acquisti o prove realmente effettuati.",
+          "en": "Professional comparison of three fictional tools, without invented verified ratings or purchases.",
+          "fr": "Comparaison de trois outils fictifs, sans notes présentées comme vérifiées.",
+          "es": "Comparación de tres herramientas ficticias sin puntuaciones verificadas ni compras."
         }
       }
     ],
@@ -232,12 +248,28 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Fiche éditoriale prête pour le CMS",
           "es": "Ficha editorial lista para el CMS"
         },
-        "content": "ESEMPIO DIMOSTRATIVO — SCHEDA REDAZIONALE PER SITO ESISTENTE\nPagina: Servizio di assistenza scritta ai clienti già acquisiti.\nTitolo SEO proposto: Assistenza clienti via email | Servizi e modalità operative\nMeta description proposta: Scopri come richiedere assistenza scritta per ordini già effettuati, quali informazioni preparare e quando riceverai un aggiornamento.\nH1: Assistenza scritta per i tuoi ordini\nTesto introduttivo: Hai già effettuato un ordine e desideri ricevere informazioni? Scrivici indicando il codice ordine e la tua richiesta. Verificheremo i dati disponibili e ti risponderemo secondo le tempistiche comunicate.\nFAQ: Posso modificare un ordine già confermato? Ogni richiesta viene verificata in base allo stato dell'ordine; nessuna modifica è garantita senza conferma.\nCTA: Invia una richiesta di assistenza\nControlli: un solo H1, nessuna promessa di risposta immediata, terminologia coerente, linguaggio semplice, testi dei pulsanti descrittivi.\nConsegna: contenuti testuali per un CMS già esistente; installazione, codice, SEO tecnico e pubblicazione non inclusi.",
+        "content": "ESEMPIO DIMOSTRATIVO — SCHEDA REDAZIONALE PER SITO ESISTENTE\nPagina: Servizio di assistenza scritta ai clienti già acquisiti.\nTitolo SEO proposto: Assistenza clienti via email | Servizi e modalità operative\nMeta description proposta: Scopri come richiedere assistenza scritta per ordini già effettuati, quali informazioni preparare e come vengono gestite le richieste.\nH1: Assistenza scritta per i tuoi ordini\nTesto introduttivo: Hai già effettuato un ordine e desideri ricevere informazioni? Scrivici indicando il codice ordine e la tua richiesta. Verificheremo i dati disponibili e ti forniremo un aggiornamento sulla base delle informazioni verificate.\nFAQ: Posso modificare un ordine già confermato? Ogni richiesta viene verificata in base allo stato dell'ordine; nessuna modifica è garantita senza conferma.\nCTA: Invia una richiesta di assistenza\nControlli: un solo H1, nessuna promessa di risposta immediata, terminologia coerente, linguaggio semplice, testi dei pulsanti descrittivi.\nConsegna: contenuti testuali per un CMS già esistente; installazione, codice, SEO tecnico e pubblicazione non inclusi.",
         "explanation": {
           "it": "Non soltanto una riscrittura: il cliente vede titolo, metadati, H1, FAQ, CTA e controlli editoriali, con confini tecnici dichiarati.",
           "en": "A practical deliverable: title, metadata, H1, FAQ, CTA and editorial checks, with technical development clearly excluded.",
           "fr": "Un livrable concret : titre, métadonnées, H1, FAQ, appel à l'action et contrôles rédactionnels, hors développement technique.",
           "es": "Un entregable práctico con título, metadatos, H1, FAQ, CTA y controles editoriales; no incluye desarrollo técnico."
+        }
+      },
+      {
+        "title": {
+          "it": "Pagina servizi completa: prima, dopo e controllo di pubblicazione",
+          "en": "Complete revised website copy and release notes",
+          "fr": "Page de services révisée et contrôles de publication",
+          "es": "Página de servicios revisada y controles de publicación"
+        },
+        "language": "it",
+        "content": "TESTI EDITORIALI COMPLETI — PAGINA SERVIZI DI UN'AZIENDA IMMAGINARIA\nLavoro originale di revisione e riscrittura, senza sviluppo di siti o campagne di acquisizione.\n\nH1: Assistenza scritta per i tuoi ordini\nIntroduzione: Hai già effettuato un ordine e desideri sapere a che punto è una richiesta? Puoi scriverci indicando il riferimento dell'ordine e spiegando brevemente di che cosa hai bisogno. Verificheremo le informazioni disponibili prima di preparare una risposta.\n\nH2: Per quali richieste possiamo aiutarti\n• Informazioni sullo stato di un ordine già effettuato, da verificare con il referente competente.\n• Chiarimenti sui documenti e sulle comunicazioni che hai ricevuto.\n• Segnalazioni relative ad articoli, disponibilità o modalità di consegna, da esaminare secondo le condizioni applicabili.\n• Richieste che necessitano di essere inoltrate alla persona autorizzata.\nNon confermiamo automaticamente modifiche, rimborsi o tempi di consegna senza verifiche.\n\nH2: Come inviare una richiesta\n1. Indica il numero d'ordine, se disponibile e pertinente.\n2. Descrivi il problema in modo chiaro; non inviare password o dati di pagamento.\n3. Invia il messaggio attraverso il canale di contatto ufficiale.\n4. Attendi il riscontro sullo stato della richiesta o sulle informazioni ancora necessarie.\n\nH2: Domande frequenti\nD: Posso chiedere un aggiornamento sulla consegna?\nR: Sì, se hai già effettuato un ordine. La data può essere comunicata soltanto dopo averne verificato lo stato.\nD: Posso modificare l'indirizzo di spedizione?\nR: Puoi inviare una richiesta. L'eventuale modifica dipende dallo stato dell'ordine e dall'autorizzazione del referente.\nD: Devo comunicare la password del mio account?\nR: No, non inviarla mai nel modulo.\nD: La conferma di invio del modulo significa che la richiesta è risolta?\nR: No. Indica soltanto che il messaggio è stato ricevuto dal sistema, se il servizio lo conferma.\n\nPulsante principale: Invia una richiesta di assistenza.\nTitolo SEO proposto: Assistenza per gli ordini | Informazioni e richieste\nDescrizione SEO proposta: Scopri come inviare una richiesta di assistenza relativa a ordini già effettuati e quali informazioni preparare.\n\nNOTA DI CONSEGNA\nLa versione iniziale conteneva affermazioni come «leader» e «risolviamo ogni problema subito», non supportate dal brief. La versione proposta elimina tali promesse e descrive l'attività senza inventare tempi o funzionalità del modulo. Prima della pubblicazione vanno confermati canale di contatto, condizioni del servizio e trattamento dei dati. La realizzazione tecnica, i test del modulo e la pubblicazione restano esclusi.",
+        "explanation": {
+          "it": "Il testo editoriale finito, con FAQ, microtesti e informazioni da confermare prima dell'inserimento nel sito.",
+          "en": "Complete revised copy, FAQs and checks before publication in an existing site.",
+          "fr": "Textes de la page, FAQ et vérifications avant intégration.",
+          "es": "Textos completos, preguntas frecuentes y comprobaciones previas."
         }
       }
     ],
@@ -372,6 +404,22 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Le contrôle rapproche références, dimensions et tarifs déjà validés ; les décisions commerciales restent au client.",
           "es": "Se cotejan códigos, medidas y precios ya aprobados, sin tomar decisiones comerciales por cuenta del cliente."
         }
+      },
+      {
+        "title": {
+          "it": "Schede catalogo e relazione di controllo — consegna dimostrativa",
+          "en": "Product copy and discrepancy report — complete sample",
+          "fr": "Fiches produit et relevé des écarts — exemple",
+          "es": "Fichas de producto e informe de incidencias"
+        },
+        "language": "it",
+        "content": "PACCHETTO EDITORIALE DEL MINI-CATALOGO — DATI INVENTATI\nVersione dimostrativa 1.2. Non sono state apportate modifiche a un catalogo reale o a prezzi approvati.\n\nSCHEDA ART-041 — PORTADOCUMENTI LINEA\nTitolo approvabile: Portadocumenti Linea in feltro riciclato.\nDescrizione: Portadocumenti da scrivania per raccogliere fogli e appunti. Il formato indicato nella scheda di prova è di 32 × 24 cm; il materiale dichiarato è feltro riciclato.\nInformazioni da verificare prima della pubblicazione: disponibilità, colori, modalità di pulizia, eventuali certificazioni.\nPrezzo nel listino dimostrativo: 18,50 €, da sottoporre alla consueta approvazione.\nPulsante proposto: Scopri le caratteristiche.\n\nSCHEDA ART-042 — CUSTODIA NOTE\nTitolo approvabile: Custodia Note in tessuto.\nDescrizione: Custodia per piccoli documenti e appunti, con dimensioni indicate nella bozza pari a 18 × 12 cm. Ulteriori caratteristiche, chiusura e colori non sono specificati: non vanno aggiunti.\nPrezzo: il listino di prova indica 12,00 €, mentre la bozza web riporta 21,00 €. Blocco di pubblicazione fino alla conferma del referente.\nPulsante proposto: Richiedi informazioni.\n\nSCHEDA ART-043 — VASSOIO PIANO\nTitolo provvisorio: Vassoio Piano.\nDescrizione: elemento da appoggio descritto nella scheda iniziale con dimensioni 25 × 15 cm. Nella bozza di catalogo compare invece 25 × 51 cm. Poiché le fonti non coincidono, la misura non deve essere presentata come definitiva.\nMateriale, colori e manutenzione: dati da richiedere.\nStato: testo editoriale sospeso fino alla verifica tecnica.\n\nEMAIL DI CONSEGNA — BOZZA NON INVIATA\nOggetto: Mini-catalogo ART-041, ART-042 e ART-043 — revisione e dati da confermare\nBuongiorno,\nho predisposto le bozze delle tre schede prodotto, uniformando la struttura di titoli e descrizioni. Per ART-041 ho mantenuto soltanto materiale e dimensioni indicati nella fonte. Per ART-042 ho rilevato una differenza tra listino e bozza del sito; non ho scelto autonomamente il prezzo. Per ART-043 segnalo la necessità di verificare le dimensioni prima di procedere.\nPropongo di approvare le informazioni tecniche mancanti e il listino di riferimento prima della pubblicazione. Le versioni precedenti devono rimanere disponibili per il controllo.\nCordiali saluti,\nSupporto editoriale\n\nREGISTRO ERRORI: ART-041 — caratteristiche da integrare; ART-042 — prezzo difforme; ART-043 — misura discordante. Nessun importo è stato cambiato unilateralmente.",
+        "explanation": {
+          "it": "Tre schede revisionate, verifica delle informazioni mancanti e comunicazione completa al referente.",
+          "en": "Three edited product descriptions, missing facts and a complete handover.",
+          "fr": "Trois fiches revues, données à confirmer et note au responsable.",
+          "es": "Tres fichas revisadas, datos pendientes y comunicación al responsable."
+        }
       }
     ],
     "qualityChecks": [
@@ -504,6 +552,22 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "en": "A reusable handover template covering least-privilege access, approval, change logging and rollback without implying software development.",
           "fr": "Un modèle réutilisable de gestion des droits, validations et suivi des modifications, sans prestation de développement logiciel.",
           "es": "Una plantilla reutilizable sobre permisos mínimos, autorizaciones, registro de cambios y recuperación, sin desarrollo de software."
+        }
+      },
+      {
+        "title": {
+          "it": "Registro richieste e autorizzazioni: esempio completo",
+          "en": "Complete request log and approval handover",
+          "fr": "Registre des demandes et validations",
+          "es": "Registro completo de solicitudes y autorizaciones"
+        },
+        "language": "it",
+        "content": "PROCESSO OPERATIVO DIMOSTRATIVO — NESSUNA AUTOMAZIONE REALE ATTIVATA\nContesto: tre richieste da clienti già esistenti, ricevute idealmente tramite email o modulo. Il compito è organizzare le informazioni senza effettuare invii, modifiche o accessi non autorizzati.\n\nREGISTRO COMPLETO DELLE TRE PRATICHE\nREQ-041 | Cliente di prova C-010 | Richiesta: aggiornamento file condiviso | Stato: IN VERIFICA | Fonte: cartella dimostrativa progetto Delta | Verifica: individuare versione autorizzata | Decisione: responsabile.\nREQ-042 | Cliente di prova C-014 | Richiesta: spostare un appuntamento | Stato: IN ATTESA | Fonte: agenda di esempio | Verifica: disponibilità del referente | Decisione: titolare.\nREQ-043 | Cliente di prova C-021 | Richiesta: chiarimento su ordine esistente | Stato: BOZZA PRONTA | Fonte: numero d'ordine fornito nella simulazione | Verifica: stato dell'ordine | Decisione: servizio competente.\n\nEMAIL REQ-041 — BOZZA\nOggetto: Aggiornamento del documento condiviso — verifica della versione\nBuongiorno,\nabbiamo preso nota della richiesta di aggiornamento del file relativo al progetto Delta. Prima di sostituire il documento disponibile nella cartella condivisa dobbiamo verificare quale versione sia stata approvata e chi sia autorizzato a modificarla.\nLe confermeremo il passaggio successivo dopo la verifica con il referente. Per il momento non abbiamo effettuato modifiche ai file.\nCordiali saluti,\nSegreteria organizzativa\n\nEMAIL REQ-042 — BOZZA\nOggetto: Riprogrammazione appuntamento — disponibilità da verificare\nBuongiorno,\nabbiamo ricevuto la richiesta di spostare l'appuntamento. Stiamo controllando con il responsabile quali fasce orarie siano disponibili. Nessun incontro è stato ancora modificato o confermato.\nSe desidera, può indicarci le sue preferenze e le confronteremo con l'agenda prima di proporre una nuova data.\nCordiali saluti,\nSegreteria organizzativa\n\nREPORT AL TITOLARE\nHo classificato tre richieste dimostrative. La prima richiede il controllo del file approvato; la seconda necessita di verifica dell'agenda; la terza comprende una bozza di comunicazione relativa a un ordine, da approvare prima dell'invio. Non ho creato automazioni, non ho cambiato permessi, non ho cancellato file e non ho segnato come chiusa alcuna pratica.\nPer proseguire chiedo la conferma dei referenti, delle autorizzazioni e delle fonti da utilizzare. Il registro potrà essere aggiornato solo dopo aver verificato le attività realmente compiute nello scenario.\nSTATO: procedimento definito, bozze pronte, esecuzione esterna non effettuata.",
+        "explanation": {
+          "it": "Dalla richiesta al riepilogo, con tre pratiche e bozze operative da approvare.",
+          "en": "Three cases tracked from receipt to approval-ready drafts.",
+          "fr": "Trois demandes suivies avec réponses et contrôles.",
+          "es": "Tres casos con borradores, estados y autorizaciones."
         }
       }
     ],
