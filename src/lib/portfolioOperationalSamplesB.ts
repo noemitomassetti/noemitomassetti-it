@@ -1,6 +1,6 @@
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
-/** Original fictional work samples. No client data or commissioned work is disclosed. */
+/** Original illustrative work samples. No client data or commissioned work is disclosed. */
 export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
   {
     "id": "research-existing-italian-customers",
@@ -19,9 +19,9 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Una piccola azienda europea immaginaria con clienti italiani già acquisiti deve valutare strumenti per organizzare le richieste di assistenza; non cerca lead o contatti di vendita.",
-      "en": "A fictional EU microbusiness serving existing Italian customers needs a support-workflow comparison, not sales leads.",
-      "fr": "Une petite entreprise européenne fictive compare des outils de suivi des clients italiens existants, sans prospection.",
-      "es": "Una microempresa europea ficticia compara herramientas para atender clientes italianos actuales, sin captación."
+      "en": "An illustrative EU microbusiness serving existing Italian customers needs a support-workflow comparison, not sales leads.",
+      "fr": "Une petite entreprise européenne illustrative compare des outils de suivi des clients italiens existants, sans prospection.",
+      "es": "Una microempresa europea de ejemplo compara herramientas para atender clientes italianos actuales, sin captación."
     },
     "objective": {
       "it": "Proporre un confronto verificabile di funzionalità, costi e requisiti, senza inventare fonti, listini aggiornati o certificazioni.",
@@ -30,9 +30,9 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
       "es": "Comparar criterios sin inventar precios ni fuentes verificadas."
     },
     "inputs": {
-      "it": "Tre soluzioni chiamate A, B e C, tutte fittizie; requisiti di prova: permessi, esportazione, italiano, semplicità e prezzi.",
-      "en": "Three entirely fictional product profiles; criteria: roles, export, Italian UI, complexity and pricing.",
-      "fr": "Trois outils fictifs et des critères explicites.",
+      "it": "Tre soluzioni chiamate A, B e C, tutte dimostrative; requisiti di prova: permessi, esportazione, italiano, semplicità e prezzi.",
+      "en": "Three entirely illustrative product profiles; criteria: roles, export, Italian UI, complexity and pricing.",
+      "fr": "Trois outils illustratifs et des critères explicites.",
       "es": "Tres herramientas inventadas y criterios explícitos."
     },
     "workflow": [
@@ -84,7 +84,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Tableau et note de vérification",
           "es": "Matriz e informe"
         },
-        "content": "MATRICE DIMOSTRATIVA — NESSUNA AZIENDA REALE\nSoluzione A (inventata) | Ruoli: sì | Export: CSV | Italiano: sì | Prezzo: DA VERIFICARE.\nSoluzione B (inventata) | Ruoli: da verificare | Export: da verificare | Italiano: no | Prezzo: DA VERIFICARE.\nSoluzione C (inventata) | Ruoli: sì | Export: JSON | Italiano: parziale | Prezzo: DA VERIFICARE.\nNOTA AL RESPONSABILE: il profilo fittizio A sembra soddisfare i requisiti minimi, ma non è possibile consigliarlo sul mercato reale senza documenti verificati, prova autorizzata e condizioni economiche effettive.\nVERIFICHE NECESSARIE: eventuali costi aggiuntivi, revoca degli accessi, accessibilità, politiche di conservazione, esportazione completa e disponibilità della lingua italiana.\nCONSEGNA REALE PREVISTA: matrice con URL e date consultazione, sintesi delle differenze, rischi e aspetti irrisolti.",
+        "content": "MATRICE DIMOSTRATIVA — NESSUNA AZIENDA REALE\nSoluzione A (inventata) | Ruoli: sì | Export: CSV | Italiano: sì | Prezzo: DA VERIFICARE.\nSoluzione B (inventata) | Ruoli: da verificare | Export: da verificare | Italiano: no | Prezzo: DA VERIFICARE.\nSoluzione C (inventata) | Ruoli: sì | Export: JSON | Italiano: parziale | Prezzo: DA VERIFICARE.\nNOTA AL RESPONSABILE: il profilo dimostrativo A sembra soddisfare i requisiti minimi, ma non è possibile consigliarlo sul mercato reale senza documenti verificati, prova autorizzata e condizioni economiche effettive.\nVERIFICHE NECESSARIE: eventuali costi aggiuntivi, revoca degli accessi, accessibilità, politiche di conservazione, esportazione completa e disponibilità della lingua italiana.\nCONSEGNA REALE PREVISTA: matrice con URL e date consultazione, sintesi delle differenze, rischi e aspetti irrisolti.",
         "explanation": {
           "it": "Le lacune restano visibili: non si inventano giudizi o prezzi verificati.",
           "en": "Unknowns remain visible; the matrix does not invent live prices.",
@@ -99,12 +99,12 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Matrice de décision et validations",
           "es": "Matriz de decisión y aprobaciones"
         },
-        "content": "MATRICE DECISIONALE — SOLUZIONI E DATI INVENTATI\nCriteri di riferimento, coerenti con il brief: ruoli e permessi 30%; esportazione dei dati 25%; interfaccia italiana 20%; facilità d'uso 15%; trasparenza dei costi 10%. Totale 100%.\nSoluzione A: ruoli dichiarati, esportazione CSV e interfaccia italiana indicate nello scenario; costo non verificato. Richiede conferma sulla configurazione dei permessi e sulla completezza dell'esportazione.\nSoluzione B: ruoli ed esportazione non verificati; italiano non disponibile nello scenario; costo non verificato. Il requisito linguistico risulta mancante.\nSoluzione C: ruoli dichiarati, esportazione JSON e interfaccia italiana parziale; costi non verificati. Necessario un controllo della copertura linguistica e dell'esportazione.\nNon vengono attribuiti punteggi numerici non documentati: i dati sono fittizi e mancano le informazioni necessarie per applicare una valutazione ponderata.\nCampi indispensabili in un'analisi reale: link alla fonte ufficiale, data di consultazione, criterio verificato, limitazioni del piano, persona responsabile e autorizzazione.\nStato: in attesa di verifica e approvazione. Nessun acquisto, contratto, accesso a sistemi o contatto commerciale è stato effettuato.",
+        "content": "MATRICE DECISIONALE — SOLUZIONI E DATI INVENTATI\nCriteri di riferimento, coerenti con il brief: ruoli e permessi 30%; esportazione dei dati 25%; interfaccia italiana 20%; facilità d'uso 15%; trasparenza dei costi 10%. Totale 100%.\nSoluzione A: ruoli dichiarati, esportazione CSV e interfaccia italiana indicate nello scenario; costo non verificato. Richiede conferma sulla configurazione dei permessi e sulla completezza dell'esportazione.\nSoluzione B: ruoli ed esportazione non verificati; italiano non disponibile nello scenario; costo non verificato. Il requisito linguistico risulta mancante.\nSoluzione C: ruoli dichiarati, esportazione JSON e interfaccia italiana parziale; costi non verificati. Necessario un controllo della copertura linguistica e dell'esportazione.\nNon vengono attribuiti punteggi numerici non documentati: i dati sono dimostrativi e mancano le informazioni necessarie per applicare una valutazione ponderata.\nCampi indispensabili in un'analisi reale: link alla fonte ufficiale, data di consultazione, criterio verificato, limitazioni del piano, persona responsabile e autorizzazione.\nStato: in attesa di verifica e approvazione. Nessun acquisto, contratto, accesso a sistemi o contatto commerciale è stato effettuato.",
         "explanation": {
           "it": "Il confronto distingue dati verificati, valutazioni interne e decisione riservata al cliente, senza trasformarsi in acquisizione di contatti.",
-          "en": "The matrix separates verifiable facts, fictional scoring and the client's final approval; it is not a prospecting exercise.",
-          "fr": "La matrice sépare faits vérifiables, notes fictives et décision du client, sans démarche de prospection.",
-          "es": "La matriz distingue los hechos verificables, las puntuaciones ficticias y la aprobación del cliente, sin prospección comercial."
+          "en": "The matrix separates verifiable facts, illustrative scoring and the client's final approval; it is not a prospecting exercise.",
+          "fr": "La matrice sépare faits vérifiables, notes illustratives et décision du client, sans démarche de prospection.",
+          "es": "La matriz distingue los hechos verificables, las puntuaciones de ejemplo y la aprobación del cliente, sin prospección comercial."
         }
       },
       {
@@ -118,18 +118,18 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
         "content": "MEMO COMPARATIVO — TRE SOLUZIONI SOFTWARE INTERAMENTE FITTIZIE\nDestinatario: responsabile di una piccola attività immaginaria con clienti italiani già acquisiti.\nOggetto: gestione delle richieste postvendita; esclusa la ricerca di nuovi clienti.\n\nREQUISITI CONCORDABILI\n1. Permessi: almeno due livelli di autorizzazione verificabili.\n2. Esportazione dei dati: formato leggibile, con verifica delle condizioni d'uso.\n3. Interfaccia italiana: traduzione effettivamente presente e comprensibile.\n4. Semplicità: utilizzo compatibile con le procedure del team.\n5. Costi: prezzo totale, limiti di piano e condizioni da verificare.\nPesi di riferimento per un eventuale confronto documentato: 30%, 25%, 20%, 15%, 10%. I pesi non autorizzano a inventare voti in assenza di evidenze.\n\nSCHEDA A — FONTE INVENTATA\nDati dichiarati nello scenario: ruoli disponibili, esportazione CSV, interfaccia italiana; costo sconosciuto.\nValutazione descrittiva: potrebbe soddisfare i requisiti iniziali, ma occorre verificare se i permessi siano configurabili, se l'esportazione includa tutti i campi necessari e quali siano i limiti della versione prevista. Nessuna prova è stata effettuata.\n\nSCHEDA B — FONTE INVENTATA\nDati dichiarati: permessi ed esportazione non ancora verificati, interfaccia italiana non disponibile, prezzo sconosciuto.\nValutazione descrittiva: non soddisfa il requisito linguistico indicato nello scenario. Senza documentazione non è appropriato attribuire un voto o considerarla idonea.\n\nSCHEDA C — FONTE INVENTATA\nDati dichiarati: ruoli disponibili, esportazione JSON, localizzazione italiana parziale, prezzo sconosciuto.\nValutazione descrittiva: necessita di verifica sull'effettiva copertura linguistica e sulla facilità di utilizzo del formato esportato. Non è stata testata.\n\nNOTA AL RESPONSABILE — VERSIONE PRONTA PER LA REVISIONE\nBuongiorno,\nho organizzato le informazioni di prova relative alle tre opzioni A, B e C in base ai criteri concordabili per il progetto. La matrice evidenzia informazioni mancanti su costi, limiti d'uso ed esportazione. Non ho assegnato punteggi di qualità o raccomandato un acquisto, perché le informazioni non sono state verificate su documenti ufficiali o mediante una prova autorizzata.\nPer procedere chiederei di definire quali requisiti siano indispensabili e di autorizzare la consultazione delle fonti pubbliche pertinenti. Il confronto definitivo dovrebbe riportare, per ogni dato, URL, data, eventuali limitazioni e osservazioni da controllare.\nIl presente esempio non contiene recensioni di strumenti reali, non prevede contratti e non comporta attività di acquisizione clienti.\nCordiali saluti,\nSupporto alla ricerca informativa\n\nSTATO: memo dimostrativo completato; selezione e acquisto non effettuati.",
         "explanation": {
           "it": "Sintesi professionale di tre soluzioni inventate, senza punteggi arbitrari né acquisti o prove realmente effettuati.",
-          "en": "Professional comparison of three fictional tools, without invented verified ratings or purchases.",
-          "fr": "Comparaison de trois outils fictifs, sans notes présentées comme vérifiées.",
-          "es": "Comparación de tres herramientas ficticias sin puntuaciones verificadas ni compras."
+          "en": "Professional comparison of three illustrative tools, without invented verified ratings or purchases.",
+          "fr": "Comparaison de trois outils illustratifs, sans notes présentées comme vérifiées.",
+          "es": "Comparación de tres herramientas de ejemplo sin puntuaciones verificadas ni compras."
         }
       }
     ],
     "qualityChecks": [
       {
         "it": "Pesi sommati e nessuna fonte inventata attribuita a imprese reali.",
-        "en": "Weights sum to 100%; no fictional claims about real vendors.",
+        "en": "Weights sum to 100%; no illustrative claims about real vendors.",
         "fr": "Pondérations à 100 %, sans fausses sources.",
-        "es": "Pesos al 100 %, sin fuentes ficticias como reales."
+        "es": "Pesos al 100 %, sin fuentes de ejemplo como reales."
       },
       {
         "it": "Nessuna attività assimilabile a lead generation.",
@@ -168,9 +168,9 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Una microimpresa immaginaria con clienti già acquisiti ha una pagina servizi con promesse vaghe e nessuna spiegazione delle richieste gestibili.",
-      "en": "A fictional microbusiness has vague service copy and no useful information about supporting existing customers.",
-      "fr": "Une microentreprise fictive utilise une présentation imprécise pour ses clients existants.",
-      "es": "Una microempresa ficticia tiene mensajes vagos sobre la atención a sus clientes actuales."
+      "en": "An illustrative microbusiness has vague service copy and no useful information about supporting existing customers.",
+      "fr": "Une microentreprise illustrative utilise une présentation imprécise pour ses clients existants.",
+      "es": "Una microempresa de ejemplo tiene mensajes vagos sobre la atención a sus clientes actuales."
     },
     "objective": {
       "it": "Riscrivere la pagina in modo chiaro e utile, con destinatari, limiti, modalità, FAQ e richiesta di contatto, senza inventare tempi garantiti.",
@@ -180,9 +180,9 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Bozza inventata: «Siamo leader, rispondiamo sempre immediatamente e risolviamo ogni problema». Nel brief non ci sono prove del primato né tempi di risposta garantiti.",
-      "en": "Fictional original claims to be a market leader and always reply instantly, without supporting evidence.",
-      "fr": "Texte fictif promettant une réponse immédiate sans preuve.",
-      "es": "Borrador ficticio que promete atención inmediata sin confirmación."
+      "en": "Illustrative original claims to be a market leader and always reply instantly, without supporting evidence.",
+      "fr": "Texte illustratif promettant une réponse immédiate sans preuve.",
+      "es": "Borrador de ejemplo que promete atención inmediata sin confirmación."
     },
     "workflow": [
       {
@@ -316,10 +316,10 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
       "es": "Revisión de catálogos y fichas"
     },
     "scenario": {
-      "it": "Un produttore artigiano fittizio presenta tre schede con dimensioni incomplete, materiali ambigui e denominazioni incoerenti dei colori.",
-      "en": "A fictional craft maker has three product sheets with ambiguous materials, dimensions and finishes.",
-      "fr": "Un producteur fictif a des fiches produits aux caractéristiques ambiguës.",
-      "es": "Un fabricante ficticio tiene tres fichas con materiales, dimensiones y variantes de color ambiguas."
+      "it": "Un produttore artigiano dimostrativo presenta tre schede con dimensioni incomplete, materiali ambigui e denominazioni incoerenti dei colori.",
+      "en": "An illustrative craft maker has three product sheets with ambiguous materials, dimensions and finishes.",
+      "fr": "Un producteur illustratif a des fiches produits aux caractéristiques ambiguës.",
+      "es": "Un fabricante de ejemplo tiene tres fichas con materiales, dimensiones y variantes de color ambiguas."
     },
     "objective": {
       "it": "Rendere i contenuti coerenti e segnalare le informazioni tecniche da approvare, senza modificare autonomamente prezzi o caratteristiche.",
@@ -330,8 +330,8 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     "inputs": {
       "it": "Tre schede di prova, un listino simulato in sola lettura e nessun manuale tecnico verificato.",
       "en": "Three invented listings, read-only mock prices and no verified technical manual.",
-      "fr": "Trois fiches fictives et un tarif en lecture seule.",
-      "es": "Tres fichas ficticias y tarifa en modo lectura."
+      "fr": "Trois fiches illustratives et un tarif en lecture seule.",
+      "es": "Tres fichas de ejemplo y tarifa en modo lectura."
     },
     "workflow": [
       {
@@ -466,9 +466,9 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Una professionista immaginaria con clienti già acquisiti riceve richieste da email e moduli, ma non dispone di un registro condiviso e teme di confondere bozze e messaggi inviati.",
-      "en": "A fictional solo professional receives messages through forms and email and needs a simple tracker with approval rules.",
-      "fr": "Une professionnelle fictive souhaite centraliser les demandes de ses clients existants.",
-      "es": "Una profesional ficticia necesita un registro para correos y formularios."
+      "en": "An illustrative solo professional receives messages through forms and email and needs a simple tracker with approval rules.",
+      "fr": "Une professionnelle illustrative souhaite centraliser les demandes de ses clients existants.",
+      "es": "Una profesional de ejemplo necesita un registro para correos y formularios."
     },
     "objective": {
       "it": "Definire un processo leggero e verificabile: ogni richiesta ha un ID, un responsabile, uno stato e un passo successivo.",
@@ -478,8 +478,8 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Tre richieste inventate, un modulo di esempio e regole ipotetiche di approvazione delle comunicazioni.",
-      "en": "Three fictional enquiries and a sample form, with illustrative approval rules.",
-      "fr": "Trois demandes fictives et des règles de validation.",
+      "en": "Three illustrative enquiries and a sample form, with illustrative approval rules.",
+      "fr": "Trois demandes illustratives et des règles de validation.",
       "es": "Tres solicitudes inventadas y reglas de aprobación."
     },
     "workflow": [
