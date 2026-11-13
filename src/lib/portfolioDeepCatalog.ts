@@ -5,6 +5,8 @@ import { TRANSLATION_SAMPLES_REVERSE } from "./portfolioTranslationSamplesRevers
 import { TRANSLATION_SAMPLES_SPECIALIST } from "./portfolioTranslationSamplesSpecialist";
 import { TRANSLATION_SAMPLES_EXPANSION_A } from "./portfolioTranslationSamplesExpansionA";
 import { TRANSLATION_SAMPLES_EXPANSION_B } from "./portfolioTranslationSamplesExpansionB";
+import { TRANSLATION_SAMPLES_EXPANSION_C } from "./portfolioTranslationSamplesExpansionC";
+import { TRANSLATION_SAMPLES_EXPANSION_D } from "./portfolioTranslationSamplesExpansionD";
 import { OPERATIONAL_SAMPLES_A } from "./portfolioOperationalSamplesA";
 import { OPERATIONAL_SAMPLES_B } from "./portfolioOperationalSamplesB";
 import { OPERATIONAL_SAMPLES_C } from "./portfolioOperationalSamplesC";
@@ -21,7 +23,7 @@ import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
 /** illustrative professional samples cover all six IT ↔ EN/FR/ES translation directions. */
 
-export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B, ...TRANSLATION_SAMPLES_REVERSE, ...TRANSLATION_SAMPLES_SPECIALIST, ...TRANSLATION_SAMPLES_EXPANSION_A, ...TRANSLATION_SAMPLES_EXPANSION_B];
+export const TRANSLATION_DEEP_CASES: TranslationDeepCase[] = [...TRANSLATION_SAMPLES_A, ...TRANSLATION_SAMPLES_B, ...TRANSLATION_SAMPLES_REVERSE, ...TRANSLATION_SAMPLES_SPECIALIST, ...TRANSLATION_SAMPLES_EXPANSION_A, ...TRANSLATION_SAMPLES_EXPANSION_B, ...TRANSLATION_SAMPLES_EXPANSION_C, ...TRANSLATION_SAMPLES_EXPANSION_D];
 export const OPERATIONAL_DEEP_CASES: OperationalDeepCase[] = [...OPERATIONAL_SAMPLES_A, ...OPERATIONAL_SAMPLES_B, ...OPERATIONAL_SAMPLES_C, ...OPERATIONAL_SAMPLES_D, ...OPERATIONAL_SAMPLES_E, ...OPERATIONAL_SAMPLES_F, ...OPERATIONAL_SAMPLES_G, ...OPERATIONAL_SAMPLES_H, ...OPERATIONAL_SAMPLES_I, ...OPERATIONAL_SAMPLES_J, ...OPERATIONAL_SAMPLES_K];
 export type DeepPortfolioItem =
   | { kind: "translation"; item: TranslationDeepCase }
