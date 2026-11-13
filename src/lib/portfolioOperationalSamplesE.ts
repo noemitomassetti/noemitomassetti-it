@@ -365,7 +365,7 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
         "content": "Oggetto: Aggiornamento sulla richiesta relativa all'ordine PS-310\n\nGentile Cliente,\n\nla ringraziamo per averci scritto e comprendiamo l'importanza di ricevere un aggiornamento preciso sul suo ordine.\n\nDalle informazioni attualmente disponibili risultano preparati due dei tre articoli previsti. La disponibilità del terzo articolo e le eventuali possibilità di spedizione separata devono ancora essere confermate dal referente competente.\n\nPer questo motivo non le indichiamo una data di consegna che, al momento, non possiamo garantire. Abbiamo registrato la sua richiesta e predisposto la verifica delle opzioni disponibili.\n\nLe comunicheremo le informazioni confermate non appena il referente avrà completato il controllo. Non modificheremo le modalità dell'ordine senza l'autorizzazione prevista.\n\nLa ringraziamo per la pazienza.\n\nCordiali saluti,\nServizio assistenza clienti\n\nSTATO: bozza da approvare, non inviata. Controllo aperto con logistica; evitare formule come «consegna assicurata».",
         "explanation": {
           "it": "Una risposta completa, senza promesse di disponibilità o spedizione.",
-          "en": "Full written response with no invented shipping assurance.",
+          "en": "Full written response with no unverified shipping assurance.",
           "fr": "Réponse intégrale sans promesse de livraison non validée.",
           "es": "Respuesta completa sin promesas de envío."
         }
@@ -675,7 +675,7 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
           "it": "Email completa in inglese britannico con indicazioni concrete, senza link di prova fuorvianti.",
           "en": "Full British English email without fabricated session links.",
           "fr": "Courriel complet en anglais britannique, sans lien trompeur.",
-          "es": "Correo completo en inglés británico, sin enlaces ficticios."
+          "es": "Correo completo en inglés británico, sin enlaces ilustrativos."
         }
       },
       {
@@ -713,10 +713,10 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
     ],
     "qualityChecks": [
       {
-        "it": "Le comunicazioni non inventano orari o collegamenti.",
-        "en": "No invented joining links or times.",
+        "it": "Le comunicazioni non aggiungono orari o collegamenti senza conferma.",
+        "en": "No unverified joining links or times.",
         "fr": "Aucun horaire ni lien inventé.",
-        "es": "Sin horarios ni enlaces inventados."
+        "es": "sin horarios ni enlaces sin confirmar."
       },
       {
         "it": "La gestione riguarda solo persone già iscritte.",
