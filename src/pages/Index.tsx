@@ -1092,11 +1092,11 @@ export default function IndexPage() {
                 <GraduationCap className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-foreground text-base">
-                {lang === "it" ? "Formazione Specialistica" : lang === "fr" ? "Une formation universitaire spécialisée" : lang === "es" ? "Formación universitaria especializada" : "Specialist Academic Rigor"}
+                {lang === "it" ? "Formazione Specialistica" : lang === "fr" ? "Une formation linguistique spécialisée" : lang === "es" ? "Formación lingüística especializada" : "Specialist Language Training"}
               </h3>
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
-                  ? "Laurea in Mediazione Linguistica (110 e lode) e Master Universitario di I livello in Traduzione Specialistica (1.500 ore, 60 CFU), con approfondimenti in ambito letterario, giuridico, economico, tecnologico e scientifico." : lang === "fr" ? "Diplôme en médiation linguistique (110/110 e lode, mention italienne) et master universitaire en traduction spécialisée (1 500 heures, 60 ECTS), couvrant cinq domaines de spécialisation." : lang === "es" ? "Título universitario italiano en Mediación Lingüística (110/110 e lode) y máster universitario italiano de primer nivel en Traducción Especializada (1.500 horas, 60 créditos ECTS)." : "Degree in Language Mediation (110/110 e lode, Italian honours) and a postgraduate master’s in Specialist Translation covering five fields."}
+                  ? "Laurea in Mediazione Linguistica (110 e lode) e master in Traduzione Specialistica (1.500 ore, 60 CFU), con approfondimenti in ambito letterario, giuridico, economico, tecnologico e scientifico." : lang === "fr" ? "Diplôme en médiation linguistique (110/110 e lode, mention italienne) et formation de master en traduction spécialisée (1 500 heures, 60 CFU), abordant plusieurs domaines de spécialité." : lang === "es" ? "Título italiano en Mediación Lingüística (110/110 e lode) y máster en Traducción Especializada (1.500 horas, 60 CFU)." : "Degree in Language Mediation (110/110 e lode, Italian honours) and a specialist translation master programme (1,500 hours, 60 CFU)."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
