@@ -136,7 +136,7 @@ export const itLocale: TranslationDictionary = {
         title: 'Ricerche informative a supporto',
         subtitle: "Informazioni selezionate e organizzate per supportare le tue attività.",
         description:
-          "Posso raccogliere e organizzare informazioni pubbliche, confrontare fonti, strumenti e fornitori e preparo schede comparative o sintesi per esigenze operative e progetti già definiti. Non svolgo ricerca di potenziali clienti, raccolta di contatti commerciali né attività di acquisizione.",
+          "Posso raccogliere e organizzare informazioni pubbliche, confrontare fonti, strumenti e fornitori e preparare schede comparative o sintesi per esigenze operative e progetti già definiti. Non svolgo ricerca di potenziali clienti, raccolta di contatti commerciali né attività di acquisizione.",
         iconName: 'Search',
         items: [
           'Analisi dei concorrenti e benchmark delle tariffe',
@@ -167,10 +167,10 @@ export const itLocale: TranslationDictionary = {
     ],
   },
   multilingualAdvantage: {
-    tag: 'COMUNICAZIONE SENZA FRONTIERE',
-    title: 'Comunicare con clienti e partner internazionali',
+    tag: 'COMUNICAZIONE MULTILINGUE',
+    title: 'Comunicazioni professionali in quattro lingue',
     description:
-      'Lavorare con l’estero richiede sensibilità culturale, terminologia appropriata e comunicazioni chiare con gli interlocutori.',
+      'Email, documenti e testi professionali richiedono attenzione alla terminologia, al tono e al destinatario. Posso aiutarti a curarli in italiano, inglese, francese e spagnolo, secondo le esigenze dell’incarico.',
     points: [
       {
         title: 'Quattro lingue operative',
@@ -366,7 +366,7 @@ export const itLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: 'Esperienza professionale ultraventennale', detail: 'Customer care, back office, organizzazione e supporto operativo' },
-      { title: 'Formazione accademica d’eccellenza', detail: 'Laurea in Mediazione Linguistica (110 e lode) & Master Universitario in Traduzione Specialistica' },
+      { title: 'Formazione accademica d’eccellenza', detail: 'Laurea in Mediazione Linguistica (110 e lode) e formazione specialistica in Traduzione (60 CFU)' },
       { title: 'Quattro lingue di lavoro', detail: 'Italiano madrelingua, inglese e francese avanzati, spagnolo intermedio-alto' },
       { title: 'Organizzazione digitale', detail: 'Archivi condivisi, strumenti di collaborazione e procedure operative' },
     ],
