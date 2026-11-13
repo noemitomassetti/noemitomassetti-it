@@ -32,6 +32,9 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
   const t=text[lang];
   const visible=useMemo(()=>{
     const needle=normalise(query);
+    // A query consisting solely of a translation direction is a filter intent,
+    // not a loose text match against unrelated dossier notes or filenames.
+    const directionQuery=DIRECTIONS.find(direction=>normalise(direction)===needle);
     return DEEP_PORTFOLIO_ITEMS.filter(entry=>{
       const filterMatches=filter==="all"
         || (filter==="translation" || filter==="operations" ? entry.kind===filter
@@ -40,6 +43,7 @@ export function PortfolioDeepShowcase({lang}:{lang:Language}) {
             : entry.kind==="translation" && entry.item.direction===filter);
       if(!filterMatches) return false;
       if(!needle) return true;
+      if(directionQuery) return entry.kind==="translation" && entry.item.direction===directionQuery;
       const searchable=entry.kind==="translation"
         ? [entry.item.id,entry.item.title[lang],entry.item.context[lang],entry.item.domain[lang],entry.item.direction,
             entry.item.method[lang],entry.item.review[lang],entry.item.output[lang],
