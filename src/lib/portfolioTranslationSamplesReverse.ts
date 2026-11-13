@@ -1,6 +1,6 @@
 import type { TranslationDeepCase } from "./portfolioDeepTypes";
 
-/** Original fictional demonstrations; not commissioned client work. */
+/** Original illustrative demonstrations; not commissioned client work. */
 export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
   {
     "id": "it-en-order-status-message",
@@ -18,10 +18,10 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
       "es": "Actualización de pedido: italiano a inglés"
     },
     "context": {
-      "it": "Scenario fittizio: un fornitore italiano informa un cliente già acquisito su una spedizione parziale, senza promettere una data di consegna.",
-      "en": "Fictional brief: an Italian supplier explains a partial shipment to an existing customer without promising a delivery date.",
-      "fr": "Scénario fictif : un fournisseur italien annonce un envoi partiel sans promettre de date de livraison.",
-      "es": "Caso ficticio: un proveedor italiano comunica un envío parcial sin prometer una fecha de entrega."
+      "it": "Scenario dimostrativo: un fornitore italiano informa un cliente già acquisito su una spedizione parziale, senza promettere una data di consegna.",
+      "en": "Illustrative brief: an Italian supplier explains a partial shipment to an existing customer without promising a delivery date.",
+      "fr": "Scénario illustratif : un fournisseur italien annonce un envoi partiel sans promettre de date de livraison.",
+      "es": "Caso de ejemplo: un proveedor italiano comunica un envío parcial sin prometer una fecha de entrega."
     },
     "source": [
       "Oggetto: aggiornamento ordine IT-482. Gentile cliente, confermiamo che due dei tre articoli ordinati sono pronti per la spedizione. Il terzo articolo è ancora in attesa di riassortimento.",
@@ -94,10 +94,10 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
       "es": "Información sobre un curso: italiano a francés"
     },
     "context": {
-      "it": "Scenario fittizio: comunicazione informativa rivolta a partecipanti già iscritti a un laboratorio professionale.",
-      "en": "Fictional brief: information for participants already registered for a professional workshop.",
-      "fr": "Scénario fictif : informations destinées aux personnes déjà inscrites à un atelier professionnel.",
-      "es": "Caso ficticio: información para participantes ya inscritos en un taller profesional."
+      "it": "Scenario dimostrativo: comunicazione informativa rivolta a partecipanti già iscritti a un laboratorio professionale.",
+      "en": "Illustrative brief: information for participants already registered for a professional workshop.",
+      "fr": "Scénario illustratif : informations destinées aux personnes déjà inscrites à un atelier professionnel.",
+      "es": "Caso de ejemplo: información para participantes ya inscritos en un taller profesional."
     },
     "source": [
       "Gentile partecipante, il laboratorio «Comunicare con chiarezza» si terrà giovedì 26 novembre, dalle 9:30 alle 12:30, in modalità online. Riceverà il collegamento il giorno precedente.",
@@ -170,10 +170,10 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
       "es": "Ficha de producto: italiano a español"
     },
     "context": {
-      "it": "Scenario fittizio: adattamento in spagnolo di una scheda per un accessorio da scrivania, mantenendo dati e limitazioni.",
-      "en": "Fictional brief: Spanish product copy for a desk accessory, preserving specifications and limitations.",
-      "fr": "Scénario fictif : adaptation d'une fiche produit en espagnol, sans modifier les caractéristiques.",
-      "es": "Caso ficticio: adaptación al español de una ficha de producto sin alterar los datos."
+      "it": "Scenario dimostrativo: adattamento in spagnolo di una scheda per un accessorio da scrivania, mantenendo dati e limitazioni.",
+      "en": "Illustrative brief: Spanish product copy for a desk accessory, preserving specifications and limitations.",
+      "fr": "Scénario illustratif : adaptation d'une fiche produit en espagnol, sans modifier les caractéristiques.",
+      "es": "Caso de ejemplo: adaptación al español de una ficha de producto sin alterar los datos."
     },
     "source": [
       "Portadocumenti Linea — un accessorio essenziale per tenere in ordine fogli e appunti sulla scrivania. Realizzato in feltro riciclato, è disponibile nei colori grigio e verde.",
@@ -186,7 +186,7 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
       "Portadocumentos Linea: un accesorio práctico para mantener ordenados los papeles y las notas en el escritorio. Fabricado con fieltro reciclado, está disponible en gris y verde.",
       "Dimensiones: 32 × 24 cm. Limpiar con un paño seco. No lavar a máquina ni exponer a fuentes directas de calor. Las ligeras variaciones de color se deben al material.",
       "La disponibilidad puede cambiar antes de que se confirme el pedido. Para consultar cualquier cuestión sobre productos ya adquiridos, póngase en contacto con atención al cliente e indique el número de pedido. Este artículo no admite personalización.",
-      "Preguntas frecuentes sobre el producto ficticio. ¿Se puede lavar el portadocumentos a máquina? No. Las instrucciones de la ficha indican únicamente que debe limpiarse con un paño seco. ¿Está disponible en otros colores? La ficha solo menciona gris y verde; no se han confirmado otras variantes. ¿Se puede pedir una versión personalizada? No, este artículo no admite personalización. Antes de publicar otras características, es necesario disponer de una ficha técnica aprobada.",
+      "Preguntas frecuentes sobre el producto de ejemplo. ¿Se puede lavar el portadocumentos a máquina? No. Las instrucciones de la ficha indican únicamente que debe limpiarse con un paño seco. ¿Está disponible en otros colores? La ficha solo menciona gris y verde; no se han confirmado otras variantes. ¿Se puede pedir una versión personalizada? No, este artículo no admite personalización. Antes de publicar otras características, es necesario disponer de una ficha técnica aprobada.",
       "Texto adicional de atención posventa. Si ya ha pedido el portadocumentos Linea y necesita información sobre su solicitud, póngase en contacto con atención al cliente e indique el número de pedido y una breve descripción del problema. No envíe contraseñas ni datos de pago. La disponibilidad y los posibles plazos de expedición deben comprobarse en el sistema del vendedor antes de responder. Este texto no confirma compras, entregas ni reembolsos que no hayan sido autorizados."
     ],
     "terminology": [
