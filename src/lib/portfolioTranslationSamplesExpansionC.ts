@@ -250,7 +250,7 @@ export const TRANSLATION_SAMPLES_EXPANSION_C: TranslationDeepCase[] = [
     "review": {
       "it": "Verificati i passaggi su ordine, appuntamenti, documento e chiusura della pratica; nessuna promessa non contenuta nel testo sorgente.",
       "en": "Check the operational sequence and preserve approval requirements.",
-      "fr": "Contrôle des étapes et validations.",
+      "fr": "Vérification de chaque étape de la demande, des validations nécessaires et des informations communiquées au client.",
       "es": "Verificación del proceso y de las autorizaciones."
     },
     "output": {
