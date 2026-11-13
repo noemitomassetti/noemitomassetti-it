@@ -609,7 +609,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     keyDecisions: {
       "it": [
             "L'opzione B richiede 1.000 pezzi e non viene confrontata come se ne vendesse 500.",
-            "A e D hanno totali simulati vicini, ma tempi diversi; la scelta resta condizionata.",
+            "A e D hanno totali dimostrativi vicini, ma tempi diversi; la scelta resta condizionata.",
             "Le certificazioni ambientali non sono dichiarate come verificate."
       ],
       "en": [
@@ -629,7 +629,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       ]
 },
     deliverable: {
-      "it": "Quattro profili simulati, tabella completa, calcoli per 500 pezzi, elenco delle verifiche e sintesi; documento 07.",
+      "it": "Quattro profili dimostrativi, tabella completa, calcoli per 500 pezzi, elenco delle verifiche e sintesi; documento 07.",
       "en": "Four illustrative supplier profiles, worked comparison, pending checks and memo; document 07.",
       "fr": "Quatre profils illustratifs, tableau comparatif, vérifications et synthèse ; document 07.",
       "es": "Cuatro perfiles de ejemplo, tabla con cálculos, verificaciones y síntesis; documento 07."
@@ -1061,7 +1061,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Un profesional de ejemplo necesita clasificar seis correos y preparar respuestas dentro del alcance acordado."
 },
     startingMaterial: {
-      "it": "Sei comunicazioni simulate, una disponibilità dell'agenda da verificare e dati d'ordine non confermati.",
+      "it": "Sei comunicazioni dimostrative, una disponibilità dell'agenda da verificare e dati d'ordine non confermati.",
       "en": "Six illustrative messages, unverified calendar availability and unresolved order information.",
       "fr": "Six messages présentés en exemple, disponibilités de calendrier et informations de commande non confirmées.",
       "es": "Seis mensajes de ejemplo, horarios y datos de pedido todavía sin verificar."
@@ -1764,7 +1764,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Atención escrita en italiano: tres situaciones"
     },
     "subtitle": {
-      "it": "Tre email simulate, tre risposte complete e un registro delle attività",
+      "it": "Tre email dimostrative, tre risposte complete e un registro delle attività",
       "en": "Three complete Italian draft replies and a case log",
       "fr": "Tri des demandes, réponses et règles de validation",
       "es": "Clasificación, respuestas y criterios de escalado"
@@ -1776,7 +1776,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Tienda online de ejemplo: consultas de clientes italianos sobre stock, pedidos y entregas."
     },
     "startingMaterial": {
-      "it": "Tre richieste simulate e riferimenti di articolo e ordine; disponibilità e data di consegna non sono confermate.",
+      "it": "Tre richieste dimostrative e riferimenti di articolo e ordine; disponibilità e data di consegna non sono confermate.",
       "en": "Three synthetic customer messages, approved product details and escalation instructions.",
       "fr": "Trois e-mails illustratifs, informations approuvées et consignes d’escalade.",
       "es": "Tres correos de ejemplo, información aprobada y reglas de consulta."
@@ -1825,7 +1825,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "headers": {
             "it": [
                   "Pratica",
-                  "Richiesta simulata",
+                  "Richiesta dimostrativa",
                   "Passaggio della risposta preparata"
             ],
             "en": [
@@ -1929,7 +1929,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "es": "Back office operativo: registro de pedidos y control de tarifas"
     },
     "subtitle": {
-      "it": "Dati simulati, controlli e segnalazione delle anomalie",
+      "it": "Dati dimostrativi, controlli e segnalazione delle anomalie",
       "en": "Synthetic order data, before/after checks and an exception log",
       "fr": "Données illustratives, contrôles de cohérence et journal d’anomalies",
       "es": "Datos de ejemplo, controles de coherencia y registro de incidencias"
