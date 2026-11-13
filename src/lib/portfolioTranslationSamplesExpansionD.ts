@@ -250,8 +250,8 @@ export const TRANSLATION_SAMPLES_EXPANSION_D: TranslationDeepCase[] = [
     "review": {
       "it": "Controllo grammaticale, terminologico, coerenza dei pronomi e assenza di servizi non offerti.",
       "en": "Check grammar, register, consistency and scope of services.",
-      "fr": "Vérification du registre et des limites.",
-      "es": "Revisión de estilo, términos y alcance. "
+      "fr": "Vérification approfondie du registre, de la terminologie et des limites du service dans la version espagnole.",
+      "es": "Revisión de estilo, terminología, coherencia editorial y alcance profesional de todo el documento."
     },
     "output": {
       "it": "Pagina italiana integrale, versione spagnola completa e note di traduzione.",
