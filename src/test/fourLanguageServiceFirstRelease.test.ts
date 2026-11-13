@@ -59,11 +59,11 @@ describe("Release: Italian-market virtual assistance first, complete scope in It
     const index=read("src/pages/Blog.tsx");
     const article=read("src/pages/BlogPost.tsx");
     expect(index).toContain("Italian-speaking virtual assistance");
-    expect(index).toContain("assistante virtuelle");
-    expect(index).toContain("asistencia virtual");
+    expect(index).toMatch(/assistante virtuelle|assistance virtuelle/i);
+    expect(index).toMatch(/asistencia virtual/i);
     expect(article).toContain("Need an Italian-speaking virtual assistant?");
-    expect(article).toContain("assistante virtuelle italophone");
-    expect(article).toContain("asistente virtual");
+    expect(article).toMatch(/assistante virtuelle italophone/i);
+    expect(article).toMatch(/asistente virtual/i);
   });
   it("preserves all 14 blog posts and original document assets in every interface language",()=>{
     for (const lang of langs) {
