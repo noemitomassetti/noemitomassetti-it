@@ -395,7 +395,7 @@ export const itLocale: TranslationDictionary = {
       },
       {
         period: 'Specializzazione post-laurea',
-        role: 'Master Universitario di I livello in Traduzione Specialistica – lingua inglese',
+        role: 'Master in Traduzione Specialistica (60 CFU) – lingua inglese',
         detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1.500 ore · 60 CFU · prova finale superata. Ambiti: letterario, giuridico, economico, tecnologico e scientifico.',
       },
       {
