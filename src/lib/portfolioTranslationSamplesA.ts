@@ -21,7 +21,7 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
       "it": "Una piattaforma immaginaria di gestione progetti deve adattare in italiano tre schermate di onboarding, spiegando autorizzazioni, notifiche e assistenza senza promesse non verificate.",
       "en": "An illustrative project platform needs three onboarding screens in Italian: roles, notifications and support, without unsupported product claims.",
       "fr": "Une plateforme illustrative veut adapter trois écrans en italien : autorisations, notifications et aide, sans ajouter de fonctionnalités.",
-      "es": "Una plataforma de ejemplo necesita tres pantallas en italiano sobre permisos, notificaciones y ayuda, sin inventar funciones."
+      "es": "Una plataforma de ejemplo necesita tres pantallas en italiano sobre permisos, notificaciones y ayuda, sin añadir datos sin confirmar funciones."
     },
     "source": [
       "Welcome to Northline Workspace. Start by choosing which projects you want to see on your home screen. You can change your selection at any time. This choice only affects your own view: it does not change the projects your colleagues are allowed to access.",
@@ -105,9 +105,9 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
     },
     "context": {
       "it": "Un marchio dimostrativo francese vuole descrivere per i clienti italiani materiale, finitura, manutenzione e disponibilità di un vaso; senza inventare certificazioni o garanzie.",
-      "en": "An illustrative French brand needs Italian product copy covering materials, care and availability without inventing certifications.",
-      "fr": "Une marque française illustrative prépare une fiche italienne décrivant matières, entretien et disponibilité, sans labels inventés.",
-      "es": "Una marca francesa de ejemplo necesita una ficha italiana de materiales, cuidado y disponibilidad, sin certificaciones inventadas."
+      "en": "An illustrative French brand needs Italian product copy covering materials, care and availability without adding unsupported information certifications.",
+      "fr": "Une marque française illustrative prépare une fiche italienne décrivant matières, entretien et disponibilité, sans labels préparés pour cet exemple.",
+      "es": "Una marca francesa de ejemplo necesita una ficha italiana de materiales, cuidado y disponibilidad, sin certificaciones de ejemplo."
     },
     "source": [
       "Vase Sillage — une présence discrète, façonnée à la main. Chaque vase est réalisé dans notre atelier en grès, puis recouvert d’un émail mat qui laisse apparaître de légères variations de teinte. Ces nuances font partie du procédé artisanal et ne constituent pas des défauts.",
@@ -149,8 +149,8 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
         "target": "piccole serie",
         "explanation": {
           "it": "Non si aggiunge una promessa di esclusività o numerazione.",
-          "en": "No invented numbered-edition or exclusivity promise.",
-          "fr": "Aucune exclusivité inventée.",
+          "en": "No example numbered-edition or exclusivity promise.",
+          "fr": "Aucune exclusivité préparée pour cet exemple.",
           "es": "No se inventa una edición limitada numerada."
         }
       }
@@ -249,7 +249,7 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
     },
     "review": {
       "it": "Controllati ordine ES-2148, stato degli articoli, distinzione spedizione/consegna, assenza di rimborsi non previsti.",
-      "en": "Checked order reference, status, dispatch/delivery distinction and no invented refunds.",
+      "en": "Checked order reference, status, dispatch/delivery distinction and no example refunds.",
       "fr": "Contrôle de la référence, du statut et de l’absence de promesses.",
       "es": "Se verifica referencia, estado, diferencia envío/entrega y ausencia de promesas."
     },
