@@ -2,10 +2,7 @@ import type { Language } from "./i18n/types";
 
 /**
  * Curated editorial photography for every blog article, shared across four
- * languages. Sources checked on Unsplash in November 2026: individual
- * photographer pages expressly mark each as "Free to use under the Unsplash
- * License". Photographic provenance is linked for review; never treat
- * anonymous AI illustrations or unlicensed image-search previews as assets.
+ * languages. Each source and image must be checked before the release.\n * November 2026 editorial replacements were individually checked on Unsplash\n * and labelled "Free to use under the Unsplash License". Existing images\n * retain source links for independent verification and visual review.
  *
  * The source ID + CDN image URL are recorded together for a verifiable audit.
  * Image requests are to Unsplash's public image CDN, not an OpenAI generator.
@@ -33,10 +30,10 @@ export const BLOG_PHOTOGRAPHS: Readonly<Record<number,BlogPhotograph>> = {
     license: "Unsplash License",
   },
   3: {
-    url: "https://images.unsplash.com/photo-1665627394712-382cf226826d?auto=format&fit=crop&w=1200&q=75",
-    photographer: "Bimbingan Islam",
-    sourceUrl: "https://unsplash.com/photos/TILwnyF2xcw",
-    alt: {it:"Postazione di lavoro con computer, smartphone e quaderno",en:"Desk with laptop, smartphone and notebook",fr:"Bureau équipé d'un ordinateur portable, d'un téléphone et d'un carnet",es:"Mesa de trabajo con portátil, teléfono y cuaderno"},
+    url: "https://images.unsplash.com/photo-1740220501390-90302389b06a?auto=format&fit=crop&w=1200&q=75",
+    photographer: "Jakub Żerdzicki",
+    sourceUrl: "https://unsplash.com/photos/a-person-using-a-cell-phone-while-sitting-in-front-of-a-laptop-zqdB9BVHp5s",
+    alt: {it:"Persona che consulta lo smartphone davanti a un computer portatile",en:"Person using a smartphone beside an open laptop",fr:"Personne consultant son téléphone devant un ordinateur portable",es:"Persona que consulta el móvil junto a un ordenador portátil"},
     license: "Unsplash License",
   },
   4: {
@@ -50,7 +47,7 @@ export const BLOG_PHOTOGRAPHS: Readonly<Record<number,BlogPhotograph>> = {
     url: "https://images.unsplash.com/photo-1588912914017-923900a34710?auto=format&fit=crop&w=1200&q=75",
     photographer: "Lewis Keegan",
     sourceUrl: "https://unsplash.com/photos/oB2aEeE8s4A",
-    alt: {it:"Libri e dizionario aperti su una scrivania di studio",en:"Dictionary and study books on a wooden desk",fr:"Dictionnaire et manuels sur une table d'étude",es:"Diccionario y libros de consulta sobre una mesa"},
+    alt: {it:"Persona che consulta un libro tenendo una penna in mano",en:"Person consulting a book while holding a pen",fr:"Personne consultant un livre avec un stylo à la main",es:"Persona que consulta un libro con un bolígrafo en la mano"},
     license: "Unsplash License",
   },
   6: {
@@ -61,17 +58,17 @@ export const BLOG_PHOTOGRAPHS: Readonly<Record<number,BlogPhotograph>> = {
     license: "Unsplash License",
   },
   7: {
-    url: "https://images.unsplash.com/photo-1741795843783-e6fc4c27386b?auto=format&fit=crop&w=1200&q=75",
-    photographer: "My Spain Visa",
-    sourceUrl: "https://unsplash.com/photos/4NkooaqwutU",
-    alt: {it:"Computer, passaporto e documenti di viaggio pronti per la partenza",en:"Laptop, passport and travel documents prepared for a trip",fr:"Ordinateur, passeport et documents prêts pour le départ",es:"Ordenador, pasaporte y documentos preparados para el viaje"},
+    url: "https://images.unsplash.com/photo-1758876017768-458c975e92ed?auto=format&fit=crop&w=1200&q=75",
+    photographer: "Vitaly Gariev",
+    sourceUrl: "https://unsplash.com/photos/woman-working-at-a-desk-with-laptop-and-notebook-N3BArCmKE9o",
+    alt: {it:"Professionista che pianifica il lavoro al computer prendendo appunti",en:"Professional planning work at a laptop and taking notes",fr:"Professionnelle organisant son travail sur ordinateur et prenant des notes",es:"Profesional que organiza su trabajo con el portátil y toma notas"},
     license: "Unsplash License",
   },
   8: {
-    url: "https://images.unsplash.com/photo-1675151638827-c0795a301e68?auto=format&fit=crop&w=1200&q=75",
-    photographer: "Pew Nguyen",
-    sourceUrl: "https://unsplash.com/photos/wRjgYHdVMx8",
-    alt: {it:"Postazione informatica con cuffie per la comunicazione con i clienti",en:"Computer workstation with headphones for customer communication",fr:"Poste informatique avec casque pour les échanges avec les clients",es:"Puesto informático con auriculares para la atención al cliente"},
+    url: "https://images.unsplash.com/photo-1736667245201-2eea25a07f55?auto=format&fit=crop&w=1200&q=75",
+    photographer: "Jakub Żerdzicki",
+    sourceUrl: "https://unsplash.com/photos/a-person-typing-on-a-laptop-on-a-desk-a1MHEv62kdo",
+    alt: {it:"Persona che scrive al computer durante il lavoro d'ufficio",en:"Person typing on a laptop in an office workspace",fr:"Personne saisissant un texte sur un ordinateur portable au bureau",es:"Persona escribiendo en un portátil en su puesto de trabajo"},
     license: "Unsplash License",
   },
   9: {
@@ -96,17 +93,17 @@ export const BLOG_PHOTOGRAPHS: Readonly<Record<number,BlogPhotograph>> = {
     license: "Unsplash License",
   },
   12: {
-    url: "https://images.unsplash.com/photo-1764096535068-0e9f652e03f6?auto=format&fit=crop&w=1200&q=75",
-    photographer: "Yen Vu",
-    sourceUrl: "https://unsplash.com/photos/07d1RdYYRjM",
-    alt: {it:"Libri di metodologia, appunti e materiali di ricerca su una scrivania",en:"Research methodology books and handwritten notes on a desk",fr:"Livres de méthodologie et notes de recherche sur un bureau",es:"Libros de metodología y notas de investigación sobre una mesa"},
+    url: "https://images.unsplash.com/photo-1758876020290-8b5e2a326a97?auto=format&fit=crop&w=1200&q=75",
+    photographer: "Vitaly Gariev",
+    sourceUrl: "https://unsplash.com/photos/man-with-beard-working-on-laptop-and-clipboard-DJzvXcGT5ds",
+    alt: {it:"Professionista che consulta il computer e prende appunti su una cartellina",en:"Professional reviewing information on a laptop and taking notes on a clipboard",fr:"Professionnel consultant son ordinateur et prenant des notes sur un porte-bloc",es:"Profesional que consulta información en el portátil y toma notas en una carpeta"},
     license: "Unsplash License",
   },
   13: {
-    url: "https://images.unsplash.com/photo-1583521214690-73421a1829a9?auto=format&fit=crop&w=1200&q=75",
-    photographer: "Wesley Tingey",
-    sourceUrl: "https://unsplash.com/photos/snNHKZ-mGfE",
-    alt: {it:"Fascicoli cartacei ordinati in pile per la documentazione di procedure",en:"Stacks of paper files for documenting working procedures",fr:"Dossiers empilés pour documenter des procédures opérationnelles",es:"Carpetas y documentos apilados para organizar procedimientos"},
+    url: "https://images.unsplash.com/photo-1768055104910-8c8d213835fb?auto=format&fit=crop&w=1200&q=75",
+    photographer: "Jakub Żerdzicki",
+    sourceUrl: "https://unsplash.com/photos/hand-writing-a-checklist-in-a-notebook-TB7aNN4blTQ",
+    alt: {it:"Mano che completa una lista di controllo scritta su un quaderno",en:"Hand marking tasks on a written checklist in a notebook",fr:"Main cochant les étapes d'une liste de contrôle dans un carnet",es:"Mano que marca las tareas de una lista de control en un cuaderno"},
     license: "Unsplash License",
   },
   14: {
