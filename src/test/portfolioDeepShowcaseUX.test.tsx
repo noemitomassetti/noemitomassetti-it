@@ -48,7 +48,7 @@ describe("Deep portfolio user experience", () => {
   it("searches complete source and target passages and flexible language-direction notation", () => {
     mount();
     const search = screen.getByRole("searchbox", { name: "Cerca nei dossier" });
-    fireEvent.change(search, { target: { value: "riassortimento" } });
+    fireEvent.change(search, { target: { value: "IT-482" } });
     expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
     expect(screen.getByRole("link", { name: /Aggiornamento ordine: italiano → inglese/ })).toBeInTheDocument();
     fireEvent.change(search, { target: { value: "IT → EN" } });
