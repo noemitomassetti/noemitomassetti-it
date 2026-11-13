@@ -54,7 +54,7 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
         "explanation": {
           "it": "Non implica una data di disponibilità già confermata.",
           "en": "No unconfirmed restock date is implied.",
-          "fr": "Aucune date de réapprovisionnement n'est inventée.",
+          "fr": "Aucune date de réapprovisionnement n'est préparée pour cet exemple.",
           "es": "No se inventa una fecha de reposición."
         }
       }
@@ -143,7 +143,7 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
     },
     "review": {
       "it": "Verificati date, orari, scadenza della risposta e assenza di garanzie aggiunte.",
-      "en": "Dates, times, reply deadline and absence of invented guarantees checked.",
+      "en": "Dates, times, reply deadline and absence of example guarantees checked.",
       "fr": "Vérification des dates, horaires et engagements.",
       "es": "Revisión de fechas, horarios y compromisos."
     },
@@ -195,8 +195,8 @@ export const TRANSLATION_SAMPLES_REVERSE: TranslationDeepCase[] = [
         "target": "fieltro reciclado",
         "explanation": {
           "it": "Il materiale è mantenuto senza aggiungere certificazioni ambientali.",
-          "en": "Preserves material without inventing environmental certifications.",
-          "fr": "Matériau conservé sans certification inventée.",
+          "en": "Preserves material without adding unsupported information environmental certifications.",
+          "fr": "Matériau conservé sans certification préparée pour cet exemple.",
           "es": "Se mantiene el material sin añadir certificaciones."
         }
       },
