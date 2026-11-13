@@ -43,10 +43,10 @@ export interface PortfolioCase {
 }
 
 export const DEMO_DISCLAIMER: Record<Language, string> = {
-  it: "Elaborato originale creato per questo portfolio. Scenario, nomi e dati sono inventati: non si tratta di un incarico commissionato da un cliente.",
-  en: "Original work sample created for this portfolio. The scenario, names and details are invented; it is not a commissioned client project.",
-  fr: "Travail original créé pour ce portfolio. Le scénario, les noms et les données sont inventés : il ne s’agit pas d’une commande de client.",
-  es: "Muestra original creada para este porfolio. El supuesto, los nombres y los datos son inventados; no es un encargo realizado para un cliente.",
+  it: "Elaborato originale per il portfolio, non tratto da un incarico commissionato.",
+  en: "Original portfolio work, not a commissioned client project.",
+  fr: "Travail original du portfolio, hors commande client.",
+  es: "Trabajo original para el portfolio, no procedente de un encargo."
 };
 
 export const PORTFOLIO_CASES: PortfolioCase[] = [
@@ -2288,13 +2288,13 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "02",
     title: { it: "Estratto economico-commerciale: traduzione EN → IT", en: "Commercial report excerpt: EN → IT translation", fr: "Extrait de rapport économique : traduction EN → IT", es: "Extracto económico-comercial: traducción EN → IT" },
-    subtitle: { it: "Testo originale, traduzione e glossario; valori interamente inventati", en: "Original text, translated excerpt and glossary; all figures fictional", fr: "Texte original, traduction et glossaire ; chiffres entièrement fictifs", es: "Texto original, traducción y glosario; cifras totalmente ficticias" },
+    subtitle: { it: "Testo originale, traduzione e glossario; valori di esempio, non dati di mercato verificati", en: "Original text, translated excerpt and glossary; example figures, not live market data", fr: "Texte original, traduction et glossaire ; valeurs d'exemple, hors données de marché", es: "Texto original, traducción y glosario; cifras de ejemplo, no datos de mercado" },
     category: "translation",
     url: "/portfolio-documenti/doc-02-report-finanziario-commerciale.html",
   },
   {
     num: "03",
-    title: { it: "Estratto clinico simulato: traduzione EN → IT", en: "Fictional clinical excerpt: EN → IT translation", fr: "Extrait clinique fictif : traduction EN → IT", es: "Fragmento clínico ficticio: traducción EN → IT" },
+    title: { it: "Estratto clinico per esempio linguistico: traduzione EN → IT", en: "Clinical-language sample: EN → IT translation", fr: "Extrait clinique à usage linguistique : traduction EN → IT", es: "Fragmento clínico para ejercicio lingüístico: traducción EN → IT" },
     subtitle: { it: "Esempio bilingue e terminologico, non destinato all'uso clinico", en: "Bilingual linguistic sample, not for clinical use", fr: "Exemple bilingue et terminologique, sans usage clinique", es: "Ejemplo bilingüe y terminológico, no apto para uso clínico" },
     category: "translation",
     url: "/portfolio-documenti/doc-03-abstract-clinico-farmacologico.html",
@@ -2323,21 +2323,21 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "07",
     title: { it: "Confronto fornitori: tabella e sintesi dimostrativa", en: "Supplier comparison: illustrative table and summary", fr: "Comparaison de fournisseurs : tableau et synthèse fictifs", es: "Comparación de proveedores: tabla y síntesis ficticias" },
-    subtitle: { it: "Quattro opzioni inventate, calcoli, criteri e dati da verificare prima della scelta", en: "Four fictional options, calculations, criteria and checks", fr: "Quatre options fictives, calculs, critères et vérifications", es: "Cuatro opciones ficticias, cálculos, criterios y comprobaciones" },
+    subtitle: { it: "Quattro opzioni di esempio, calcoli, criteri e dati da verificare prima della scelta", en: "Four sample options, calculations, criteria and checks", fr: "Quatre options d'exemple, calculs, critères et vérifications", es: "Cuatro opciones de ejemplo, cálculos, criterios y comprobaciones" },
     category: "research",
     url: "/portfolio-documenti/doc-07-benchmark-fornitori-logistica.html",
   },
   {
     num: "08",
     title: { it: "Confronto tra offerte professionali: ricerca informativa", en: "Comparing service offers: informational research", fr: "Comparaison d'offres de services : recherche documentaire", es: "Comparación de servicios: investigación informativa" },
-    subtitle: { it: "Quattro profili immaginari e una tabella compilata, senza dati di mercato reali", en: "Four fictional profiles and a completed table, not real market data", fr: "Quatre profils fictifs et un tableau rempli, sans données réelles", es: "Cuatro perfiles ficticios y una tabla cumplimentada, sin datos reales" },
+    subtitle: { it: "Quattro profili di esempio e una tabella compilata, senza presentarla come una ricerca di mercato reale", en: "Four illustrative profiles and a completed table, not verified market research", fr: "Quatre profils d'exemple et un tableau rempli, sans données de marché vérifiées", es: "Cuatro perfiles de ejemplo y una tabla completa, sin datos de mercado verificados" },
     category: "research",
     url: "/portfolio-documenti/doc-08-analisi-competitiva-benchmark.html",
   },
   {
     num: "09",
     title: { it: "Posta elettronica: registro e procedura operativa", en: "Email handling: tracking log and operating procedure", fr: "Gestion des courriels : registre et procédure", es: "Gestión del correo: registro y procedimiento" },
-    subtitle: { it: "Sei email simulate, due risposte complete e un riepilogo per il responsabile", en: "Six sample emails, two complete draft replies and a management summary", fr: "Six courriels fictifs, deux réponses rédigées et un bilan", es: "Seis correos ficticios, dos respuestas completas y un resumen" },
+    subtitle: { it: "Sei richieste email di esempio, due risposte complete e un riepilogo per il responsabile", en: "Six sample emails, two complete draft replies and a management summary", fr: "Six courriels d'exemple, deux réponses rédigées et un bilan", es: "Seis correos de ejemplo, dos respuestas completas y un resumen" },
     category: "backoffice",
     url: "/portfolio-documenti/doc-09-procedura-operativa-backoffice.html",
   },
@@ -2352,14 +2352,14 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "11",
     title: { it: "Assistenza clienti: tre email e tre risposte complete", en: "Written customer support: three enquiries and full draft replies", fr: "Relation client écrite : trois demandes et réponses complètes", es: "Atención escrita al cliente: tres consultas y respuestas completas" },
-    subtitle: { it: "Richieste simulate, risposte professionali scritte per esteso e registro di lavorazione", en: "Fictional enquiries, three complete Italian draft replies and a case log", fr: "Demandes fictives, trois réponses rédigées en italien et tableau de suivi", es: "Consultas ficticias, tres respuestas completas en italiano y registro de seguimiento" },
+    subtitle: { it: "Richieste dei clienti, risposte professionali integrali e registro di lavorazione", en: "Three complete Italian draft replies and an operational case log", fr: "Trois demandes, trois réponses complètes en italien et un tableau de suivi", es: "Tres consultas, tres respuestas completas en italiano y registro de seguimiento" },
     category: "backoffice",
     url: "/portfolio-documenti/doc-11-customer-care-email.html",
   },
   {
     num: "12",
     title: { it: "Gestione email e agenda: esempio settimanale", en: "Managing email and appointments: a weekly sample", fr: "Gestion des courriels et de l’agenda : exemple hebdomadaire", es: "Gestión del correo y la agenda: ejemplo semanal" },
-    subtitle: { it: "Piano settimanale, priorità e bozza di conferma su dati inventati", en: "Illustrative weekly schedule, priority list and appointment confirmation draft", fr: "Planning hebdomadaire, priorités et brouillon de confirmation fictifs", es: "Agenda semanal, prioridades y borrador de confirmación ficticios" },
+    subtitle: { it: "Piano settimanale, priorità e bozza di conferma con dati da verificare", en: "Illustrative weekly schedule, priority list and appointment confirmation draft", fr: "Planning hebdomadaire, priorités et projet de confirmation", es: "Agenda semanal, prioridades y borrador de confirmación" },
     category: "backoffice",
     url: "/portfolio-documenti/doc-12-gestione-email-agenda.html",
   },
@@ -2394,7 +2394,7 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "17",
     title: { it: "Scheda prodotto FR → IT: originale e traduzione", en: "Product description FR → IT: source and translation", fr: "Fiche produit FR → IT : original et traduction", es: "Ficha de producto FR → IT: original y traducción" },
-    subtitle: { it: "Descrizione completa, specifiche, avvertenza e glossario per un prodotto inventato", en: "Full description, specifications, warning and glossary for a fictional product", fr: "Description, caractéristiques, avertissement et glossaire fictifs", es: "Descripción, especificaciones, advertencia y glosario ficticios" },
+    subtitle: { it: "Descrizione completa, specifiche, avvertenza e glossario per un prodotto di esempio", en: "Full description, specifications, warning and glossary for a sample product", fr: "Description, caractéristiques, avertissement et glossaire", es: "Descripción, especificaciones, advertencia y glosario" },
     category: "translation",
     url: "/portfolio-documenti/doc-17-fr-it-scheda-prodotto.html",
   },
@@ -2408,14 +2408,14 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "19",
     title: { it: "Revisione di catalogo: scheda e controllo listino", en: "Catalogue editing: product copy and price-list checks", fr: "Révision de catalogue : fiche et contrôle des prix", es: "Revisión de catálogo: ficha y control de precios" },
-    subtitle: { it: "Scheda prima/dopo, prezzi simulati, incongruenze e registro delle modifiche", en: "Before-and-after product copy, fictional prices and changes log", fr: "Fiche avant/après, prix fictifs et relevé des corrections", es: "Ficha antes/después, precios ficticios y registro de correcciones" },
+    subtitle: { it: "Scheda prima/dopo, valori di esempio, incongruenze e registro delle modifiche", en: "Before-and-after product copy, sample prices and changes log", fr: "Fiche avant/après, valeurs d'exemple et relevé des corrections", es: "Ficha antes/después, valores de ejemplo y registro de correcciones" },
     category: "writing",
     url: "/portfolio-documenti/doc-19-contenuti-cataloghi-listini.html",
   },
   {
     num: "20",
     title: { it: "Dal contatto al preventivo: un esempio del mio metodo", en: "From enquiry to quote: an example of my process", fr: "De la demande au devis : un exemple de ma méthode", es: "De la consulta al presupuesto: ejemplo de mi proceso" },
-    subtitle: { it: "Richiesta simulata, proposta scritta, approvazioni e registro ore dei miei servizi", en: "Fictional enquiry, written proposal, approvals and time log for my own services", fr: "Demande fictive, proposition écrite, validations et relevé d’heures de mes services", es: "Consulta ficticia, propuesta escrita, autorizaciones y registro de horas de mis servicios" },
+    subtitle: { it: "Richiesta di esempio, proposta scritta, approvazioni e registro ore dei servizi", en: "Example enquiry, written proposal, approvals and service time log", fr: "Demande d'exemple, proposition écrite, validations et relevé d'heures", es: "Consulta de ejemplo, propuesta escrita, autorizaciones y registro de horas" },
     category: "backoffice",
     url: "/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html",
   },
