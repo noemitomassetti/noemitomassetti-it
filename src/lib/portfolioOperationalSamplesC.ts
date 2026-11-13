@@ -111,6 +111,22 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
           "fr": "La checklist distingue préparation et validation.",
           "es": "Separa borrador y presupuesto aprobado."
         }
+      },
+      {
+        "title": {
+          "it": "Preventivo operativo completo: bozza, controlli e consegna",
+          "en": "Complete operational quote: draft, checks and handover",
+          "fr": "Devis opérationnel : projet, contrôles et remise",
+          "es": "Presupuesto operativo: borrador, controles y entrega"
+        },
+        "language": "it",
+        "content": "BOZZA DI PREVENTIVO COMMERCIALE PREV-027 — SCENARIO INTERAMENTE INVENTATO\nAttività simulata: preparazione di un prospetto su indicazioni di un titolare; nessun documento inviato a un cliente reale.\nFonte di riferimento: listino di prova L-2026-11 v02. Destinatario: cliente già esistente C-027.\n\nELENCO DELLE RIGHE RICHIESTE\nCON-101 | Contenitore A | Quantità 4 | Prezzo unitario da listino: 32,50 € | Totale 130,00 €.\nPAN-205 | Pannello B | Quantità 3 | Prezzo unitario da listino: 45,00 € | Totale 135,00 €.\nSomma delle due righe: 265,00 €.\nLa somma è un valore operativo di prova: non comprende eventuali costi di trasporto, imposte, sconti o altre condizioni non comunicate. Non va interpretata come importo definitivo.\n\nMODELLO DI TESTO DA ALLEGARE ALLA PROPOSTA, PREVIA APPROVAZIONE\nOggetto: Riepilogo dei materiali richiesti — riferimento PREV-027\nGentile cliente,\nabbiamo predisposto il riepilogo preliminare dei materiali richiesti, sulla base delle quantità indicate e del listino di riferimento.\nContenitore A, codice CON-101: quattro unità da 32,50 €, per un importo di 130,00 €.\nPannello B, codice PAN-205: tre unità da 45,00 €, per un importo di 135,00 €.\nLa somma parziale delle righe è di 265,00 €. Prima di poterle inviare un preventivo definitivo dobbiamo confermare con il referente competente le condizioni di trasporto, gli eventuali oneri applicabili e la validità della proposta.\nLe daremo indicazioni aggiornate dopo tali verifiche.\nCordiali saluti,\nUfficio commerciale\n\nREGISTRO DEI CONTROLLI\nC-01: codici CON-101 e PAN-205 presenti nel listino ipotetico — verificato.\nC-02: quantità 4 e 3 riportate dalla richiesta — verificato.\nC-03: somme 130,00 € e 135,00 € e totale parziale 265,00 € — ricontrollati.\nC-04: validità del listino e condizioni di pagamento — decisione riservata al titolare.\nC-05: imposte, trasporto, sconti e scadenza della proposta — dati non forniti.\nC-06: autorizzazione all'invio — non presente.\n\nNOTA AL REFERENTE\nBuongiorno,\nho preparato la bozza PREV-027 e ne ho verificato i calcoli sui dati fittizi ricevuti. Prima dell'invio chiedo conferma della versione applicabile del listino e delle condizioni ancora mancanti. Non ho modificato i prezzi, applicato sconti o generato fatture. La pratica rimane «bozza in attesa di approvazione».\nCordiali saluti,\nBack office\n\nRISULTATO: prospetto compilato, bozza completa, sei controlli documentati. Nessuna offerta vincolante e nessuna attività fiscale.",
+        "explanation": {
+          "it": "Prospetto dettagliato per un cliente esistente, senza definizione autonoma di prezzi o condizioni.",
+          "en": "A complete draft based solely on an approved price list, with unresolved commercial terms flagged.",
+          "fr": "Projet établi sur tarif validé, avec conditions commerciales à confirmer.",
+          "es": "Presupuesto basado en una tarifa aprobada, con condiciones por confirmar."
+        }
       }
     ],
     "qualityChecks": [
@@ -249,6 +265,22 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
           "en": "Shows how an overseas client can understand Italian support progress.",
           "fr": "Une synthèse permet au donneur d’ordre étranger de suivre le service italien.",
           "es": "El responsable extranjero puede seguir el servicio en italiano."
+        }
+      },
+      {
+        "title": {
+          "it": "Pacchetto postvendita in italiano e rapporto bilingue",
+          "en": "Complete Italian after-sales reply pack with bilingual handover",
+          "fr": "Réponses après-vente en italien et compte rendu bilingue",
+          "es": "Respuestas posventa en italiano e informe bilingüe"
+        },
+        "language": "it",
+        "content": "PACCHETTO ASSISTENZA POSTVENDITA — SCENARIO INVENTATO\nMarchio europeo fittizio con clienti italiani già acquisiti. Tre pratiche: INT-651 (finitura da verificare), INT-642 (modifica indirizzo), INT-630 (segnalazione su articolo). Nessun cliente reale è stato contattato.\n\nEMAIL IT-001 — INFORMAZIONI SULLA DISPONIBILITÀ\nOggetto: Aggiornamento sulla richiesta relativa all'ordine INT-651\nGentile cliente,\ngrazie per averci scritto. Abbiamo preso nota della richiesta relativa alla finitura scelta per l'ordine INT-651.\nLa disponibilità deve ancora essere verificata con il referente competente. Non possiamo quindi confermare una data di spedizione o un'alternativa prima di aver ricevuto indicazioni attendibili.\nLe comunicheremo un aggiornamento non appena potremo farlo sulla base di informazioni verificate.\nCordiali saluti,\nServizio clienti\n\nEMAIL IT-002 — RICHIESTA DI MODIFICA DELL'INDIRIZZO\nOggetto: Verifica della richiesta di modifica — ordine INT-642\nGentile cliente,\nabbiamo registrato la sua richiesta di modifica dell'indirizzo associato all'ordine INT-642.\nPer verificare se la variazione sia ancora possibile dobbiamo controllare lo stato della spedizione e le procedure autorizzate. Al momento nessuna modifica è stata effettuata.\nLa invitiamo a non inviare dati di pagamento. Le forniremo le istruzioni necessarie dopo aver consultato il referente competente.\nCordiali saluti,\nServizio clienti\n\nEMAIL IT-003 — SEGNALAZIONE DI UN ARTICOLO\nOggetto: Segnalazione ricevuta — ordine INT-630\nGentile cliente,\nci dispiace apprendere che l'articolo ricevuto non corrisponda alle sue aspettative. Abbiamo registrato la segnalazione e la sottoporremo al reparto competente.\nPer esaminare la richiesta potrebbero essere utili alcune informazioni sul problema e, se necessario, una fotografia dell'articolo. Le indicheremo esclusivamente ciò che serve dopo la verifica della procedura applicabile.\nNon possiamo confermare sostituzioni o rimborsi prima dell'esame del caso.\nCordiali saluti,\nServizio clienti\n\nINTERNAL HANDOVER — ENGLISH VERSION\nSubject: Italian after-sales enquiries — three open cases\nThree fictional existing-customer enquiries have been classified and drafted in Italian. INT-651 requires confirmation of the requested finish and dispatch status. INT-642 requires an authorised check before changing an address. INT-630 requires the responsible team to review the complaint and the applicable procedure. No reply was sent, no order was amended and no refund was promised. The drafts are ready for approval; please confirm the authorised next steps before they are used.\n\nNOTA FINALE\nLe tre email mantengono lo stesso registro di cortesia, distinguono dati disponibili da informazioni da verificare e non prevedono attività di acquisizione clienti. Il rapporto inglese è rivolto al responsabile immaginario e non attribuisce risultati reali.",
+        "explanation": {
+          "it": "Tre risposte complete per clienti già esistenti e aggiornamento al responsabile, senza promesse o attività commerciali a freddo.",
+          "en": "Three complete Italian drafts for existing customers and an English-language manager update.",
+          "fr": "Trois réponses italiennes et synthèse au responsable, sans prospection.",
+          "es": "Tres respuestas italianas y resumen al responsable, sin captación."
         }
       }
     ],
