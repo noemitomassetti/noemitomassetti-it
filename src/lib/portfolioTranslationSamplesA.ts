@@ -19,9 +19,9 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
     },
     "context": {
       "it": "Una piattaforma immaginaria di gestione progetti deve adattare in italiano tre schermate di onboarding, spiegando autorizzazioni, notifiche e assistenza senza promesse non verificate.",
-      "en": "A fictional project platform needs three onboarding screens in Italian: roles, notifications and support, without unsupported product claims.",
-      "fr": "Une plateforme fictive veut adapter trois écrans en italien : autorisations, notifications et aide, sans ajouter de fonctionnalités.",
-      "es": "Una plataforma ficticia necesita tres pantallas en italiano sobre permisos, notificaciones y ayuda, sin inventar funciones."
+      "en": "An illustrative project platform needs three onboarding screens in Italian: roles, notifications and support, without unsupported product claims.",
+      "fr": "Une plateforme illustrative veut adapter trois écrans en italien : autorisations, notifications et aide, sans ajouter de fonctionnalités.",
+      "es": "Una plataforma de ejemplo necesita tres pantallas en italiano sobre permisos, notificaciones y ayuda, sin inventar funciones."
     },
     "source": [
       "Welcome to Northline Workspace. Start by choosing which projects you want to see on your home screen. You can change your selection at any time. This choice only affects your own view: it does not change the projects your colleagues are allowed to access.",
@@ -104,10 +104,10 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
       "es": "Cerámica artesanal: francés a italiano"
     },
     "context": {
-      "it": "Un marchio fittizio francese vuole descrivere per i clienti italiani materiale, finitura, manutenzione e disponibilità di un vaso; senza inventare certificazioni o garanzie.",
-      "en": "A fictional French brand needs Italian product copy covering materials, care and availability without inventing certifications.",
-      "fr": "Une marque française fictive prépare une fiche italienne décrivant matières, entretien et disponibilité, sans labels inventés.",
-      "es": "Una marca francesa ficticia necesita una ficha italiana de materiales, cuidado y disponibilidad, sin certificaciones inventadas."
+      "it": "Un marchio dimostrativo francese vuole descrivere per i clienti italiani materiale, finitura, manutenzione e disponibilità di un vaso; senza inventare certificazioni o garanzie.",
+      "en": "An illustrative French brand needs Italian product copy covering materials, care and availability without inventing certifications.",
+      "fr": "Une marque française illustrative prépare une fiche italienne décrivant matières, entretien et disponibilité, sans labels inventés.",
+      "es": "Una marca francesa de ejemplo necesita una ficha italiana de materiales, cuidado y disponibilidad, sin certificaciones inventadas."
     },
     "source": [
       "Vase Sillage — une présence discrète, façonnée à la main. Chaque vase est réalisé dans notre atelier en grès, puis recouvert d’un émail mat qui laisse apparaître de légères variations de teinte. Ces nuances font partie du procédé artisanal et ne constituent pas des défauts.",
@@ -191,9 +191,9 @@ export const TRANSLATION_SAMPLES_A: TranslationDeepCase[] = [
     },
     "context": {
       "it": "Un fornitore immaginario comunica a un cliente italiano già acquisito un aggiornamento sulla disponibilità, senza confondere data di spedizione e consegna.",
-      "en": "A fictional supplier informs an existing Italian customer about stock and shipping without promising delivery timing.",
-      "fr": "Un fournisseur fictif informe un client italien existant sans confondre expédition et livraison.",
-      "es": "Un proveedor ficticio informa a un cliente italiano actual, sin confundir envío y entrega."
+      "en": "An illustrative supplier informs an existing Italian customer about stock and shipping without promising delivery timing.",
+      "fr": "Un fournisseur illustratif informe un client italien existant sans confondre expédition et livraison.",
+      "es": "Un proveedor de ejemplo informa a un cliente italiano actual, sin confundir envío y entrega."
     },
     "source": [
       "Asunto: actualización de su pedido ES-2148. Buenos días, Lucía: gracias por su mensaje. Hemos revisado su pedido y le confirmamos que el acabado roble claro sigue pendiente de una nueva remesa del fabricante. El resto de los artículos está preparado, pero todavía no se ha enviado.",
