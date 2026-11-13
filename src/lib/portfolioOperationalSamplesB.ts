@@ -25,15 +25,15 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "objective": {
       "it": "Proporre un confronto verificabile di funzionalità, costi e requisiti, senza inventare fonti, listini aggiornati o certificazioni.",
-      "en": "Create a reproducible comparison with explicit unknowns and no invented vendor facts.",
+      "en": "Create a reproducible comparison with explicit unknowns and no example vendor facts.",
       "fr": "Comparer les critères de façon transparente, sans inventer des prix ou des sources.",
-      "es": "Comparar criterios sin inventar precios ni fuentes verificadas."
+      "es": "Comparar criterios sin añadir datos sin confirmar precios ni fuentes verificadas."
     },
     "inputs": {
       "it": "Tre soluzioni chiamate A, B e C, tutte dimostrative; requisiti di prova: permessi, esportazione, italiano, semplicità e prezzi.",
       "en": "Three entirely illustrative product profiles; criteria: roles, export, Italian UI, complexity and pricing.",
       "fr": "Trois outils illustratifs et des critères explicites.",
-      "es": "Tres herramientas inventadas y criterios explícitos."
+      "es": "Tres herramientas de ejemplo y criterios explícitos."
     },
     "workflow": [
       {
@@ -49,7 +49,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
         "es": "Separar hechos, dudas e hipótesis."
       },
       {
-        "it": "Organizzare una matrice che non trasformi le lacune in punteggi inventati.",
+        "it": "Organizzare una matrice che non trasformi le lacune in punteggi di esempio.",
         "en": "Use a matrix that preserves unknowns instead of guessed scores.",
         "fr": "Afficher les informations manquantes.",
         "es": "Mostrar los datos pendientes."
@@ -69,7 +69,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Cahier des critères",
           "es": "Brief de investigación"
         },
-        "content": "RICERCA INFORMATIVA — SCENARIO INTERAMENTE FITTIZIO\nScopo: scegliere uno strumento per tracciare le richieste postvendita di clienti italiani già acquisiti.\nPesi concordabili: ruoli/permessi 30%; esportazione dati 25%; interfaccia italiana 20%; facilità d'uso 15%; costi trasparenti 10%. Totale 100%.\nRequisiti minimi: almeno due livelli di accesso; registrazione stato e responsabile; esportazione dati in formato leggibile.\nFonti da consultare in un incarico reale: documentazione ufficiale del fornitore, listini pubblici datati, pagine sulle autorizzazioni e condizioni di conservazione dei dati.\nEscluso: ricerca di nuovi potenziali clienti, raccolta di contatti commerciali o attività di outreach.\nQuesto testo dimostra il metodo, non dichiara che le fonti siano già state consultate.",
+        "content": "RICERCA INFORMATIVA — SCENARIO INTERAMENTE dimostrativo\nScopo: scegliere uno strumento per tracciare le richieste postvendita di clienti italiani già acquisiti.\nPesi concordabili: ruoli/permessi 30%; esportazione dati 25%; interfaccia italiana 20%; facilità d'uso 15%; costi trasparenti 10%. Totale 100%.\nRequisiti minimi: almeno due livelli di accesso; registrazione stato e responsabile; esportazione dati in formato leggibile.\nFonti da consultare in un incarico reale: documentazione ufficiale del fornitore, listini pubblici datati, pagine sulle autorizzazioni e condizioni di conservazione dei dati.\nEscluso: ricerca di nuovi potenziali clienti, raccolta di contatti commerciali o attività di outreach.\nQuesto testo dimostra il metodo, non dichiara che le fonti siano già state consultate.",
         "explanation": {
           "it": "I criteri precedono il confronto, evitando valutazioni arbitrarie.",
           "en": "Criteria are set before comparing products, reducing subjective rankings.",
@@ -84,7 +84,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Tableau et note de vérification",
           "es": "Matriz e informe"
         },
-        "content": "MATRICE DIMOSTRATIVA — NESSUNA AZIENDA REALE\nSoluzione A (inventata) | Ruoli: sì | Export: CSV | Italiano: sì | Prezzo: DA VERIFICARE.\nSoluzione B (inventata) | Ruoli: da verificare | Export: da verificare | Italiano: no | Prezzo: DA VERIFICARE.\nSoluzione C (inventata) | Ruoli: sì | Export: JSON | Italiano: parziale | Prezzo: DA VERIFICARE.\nNOTA AL RESPONSABILE: il profilo dimostrativo A sembra soddisfare i requisiti minimi, ma non è possibile consigliarlo sul mercato reale senza documenti verificati, prova autorizzata e condizioni economiche effettive.\nVERIFICHE NECESSARIE: eventuali costi aggiuntivi, revoca degli accessi, accessibilità, politiche di conservazione, esportazione completa e disponibilità della lingua italiana.\nCONSEGNA REALE PREVISTA: matrice con URL e date consultazione, sintesi delle differenze, rischi e aspetti irrisolti.",
+        "content": "MATRICE DIMOSTRATIVA — NESSUNA AZIENDA REALE\nSoluzione A (di esempio) | Ruoli: sì | Export: CSV | Italiano: sì | Prezzo: DA VERIFICARE.\nSoluzione B (di esempio) | Ruoli: da verificare | Export: da verificare | Italiano: no | Prezzo: DA VERIFICARE.\nSoluzione C (di esempio) | Ruoli: sì | Export: JSON | Italiano: parziale | Prezzo: DA VERIFICARE.\nNOTA AL RESPONSABILE: il profilo dimostrativo A sembra soddisfare i requisiti minimi, ma non è possibile consigliarlo sul mercato reale senza documenti verificati, prova autorizzata e condizioni economiche effettive.\nVERIFICHE NECESSARIE: eventuali costi aggiuntivi, revoca degli accessi, accessibilità, politiche di conservazione, esportazione completa e disponibilità della lingua italiana.\nCONSEGNA REALE PREVISTA: matrice con URL e date consultazione, sintesi delle differenze, rischi e aspetti irrisolti.",
         "explanation": {
           "it": "Le lacune restano visibili: non si inventano giudizi o prezzi verificati.",
           "en": "Unknowns remain visible; the matrix does not invent live prices.",
@@ -99,7 +99,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Matrice de décision et validations",
           "es": "Matriz de decisión y aprobaciones"
         },
-        "content": "MATRICE DECISIONALE — SOLUZIONI E DATI INVENTATI\nCriteri di riferimento, coerenti con il brief: ruoli e permessi 30%; esportazione dei dati 25%; interfaccia italiana 20%; facilità d'uso 15%; trasparenza dei costi 10%. Totale 100%.\nSoluzione A: ruoli dichiarati, esportazione CSV e interfaccia italiana indicate nello scenario; costo non verificato. Richiede conferma sulla configurazione dei permessi e sulla completezza dell'esportazione.\nSoluzione B: ruoli ed esportazione non verificati; italiano non disponibile nello scenario; costo non verificato. Il requisito linguistico risulta mancante.\nSoluzione C: ruoli dichiarati, esportazione JSON e interfaccia italiana parziale; costi non verificati. Necessario un controllo della copertura linguistica e dell'esportazione.\nNon vengono attribuiti punteggi numerici non documentati: i dati sono dimostrativi e mancano le informazioni necessarie per applicare una valutazione ponderata.\nCampi indispensabili in un'analisi reale: link alla fonte ufficiale, data di consultazione, criterio verificato, limitazioni del piano, persona responsabile e autorizzazione.\nStato: in attesa di verifica e approvazione. Nessun acquisto, contratto, accesso a sistemi o contatto commerciale è stato effettuato.",
+        "content": "MATRICE DECISIONALE — SOLUZIONI E DATI DI ESEMPIO\nCriteri di riferimento, coerenti con il brief: ruoli e permessi 30%; esportazione dei dati 25%; interfaccia italiana 20%; facilità d'uso 15%; trasparenza dei costi 10%. Totale 100%.\nSoluzione A: ruoli dichiarati, esportazione CSV e interfaccia italiana indicate nello scenario; costo non verificato. Richiede conferma sulla configurazione dei permessi e sulla completezza dell'esportazione.\nSoluzione B: ruoli ed esportazione non verificati; italiano non disponibile nello scenario; costo non verificato. Il requisito linguistico risulta mancante.\nSoluzione C: ruoli dichiarati, esportazione JSON e interfaccia italiana parziale; costi non verificati. Necessario un controllo della copertura linguistica e dell'esportazione.\nNon vengono attribuiti punteggi numerici non documentati: i dati sono dimostrativi e mancano le informazioni necessarie per applicare una valutazione ponderata.\nCampi indispensabili in un'analisi reale: link alla fonte ufficiale, data di consultazione, criterio verificato, limitazioni del piano, persona responsabile e autorizzazione.\nStato: in attesa di verifica e approvazione. Nessun acquisto, contratto, accesso a sistemi o contatto commerciale è stato effettuato.",
         "explanation": {
           "it": "Il confronto distingue dati verificati, valutazioni interne e decisione riservata al cliente, senza trasformarsi in acquisizione di contatti.",
           "en": "The matrix separates verifiable facts, illustrative scoring and the client's final approval; it is not a prospecting exercise.",
@@ -115,10 +115,10 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "es": "Informe comparativo y verificaciones pendientes"
         },
         "language": "it",
-        "content": "MEMO COMPARATIVO — TRE SOLUZIONI SOFTWARE INTERAMENTE FITTIZIE\nDestinatario: responsabile di una piccola attività immaginaria con clienti italiani già acquisiti.\nOggetto: gestione delle richieste postvendita; esclusa la ricerca di nuovi clienti.\n\nREQUISITI CONCORDABILI\n1. Permessi: almeno due livelli di autorizzazione verificabili.\n2. Esportazione dei dati: formato leggibile, con verifica delle condizioni d'uso.\n3. Interfaccia italiana: traduzione effettivamente presente e comprensibile.\n4. Semplicità: utilizzo compatibile con le procedure del team.\n5. Costi: prezzo totale, limiti di piano e condizioni da verificare.\nPesi di riferimento per un eventuale confronto documentato: 30%, 25%, 20%, 15%, 10%. I pesi non autorizzano a inventare voti in assenza di evidenze.\n\nSCHEDA A — FONTE INVENTATA\nDati dichiarati nello scenario: ruoli disponibili, esportazione CSV, interfaccia italiana; costo sconosciuto.\nValutazione descrittiva: potrebbe soddisfare i requisiti iniziali, ma occorre verificare se i permessi siano configurabili, se l'esportazione includa tutti i campi necessari e quali siano i limiti della versione prevista. Nessuna prova è stata effettuata.\n\nSCHEDA B — FONTE INVENTATA\nDati dichiarati: permessi ed esportazione non ancora verificati, interfaccia italiana non disponibile, prezzo sconosciuto.\nValutazione descrittiva: non soddisfa il requisito linguistico indicato nello scenario. Senza documentazione non è appropriato attribuire un voto o considerarla idonea.\n\nSCHEDA C — FONTE INVENTATA\nDati dichiarati: ruoli disponibili, esportazione JSON, localizzazione italiana parziale, prezzo sconosciuto.\nValutazione descrittiva: necessita di verifica sull'effettiva copertura linguistica e sulla facilità di utilizzo del formato esportato. Non è stata testata.\n\nNOTA AL RESPONSABILE — VERSIONE PRONTA PER LA REVISIONE\nBuongiorno,\nho organizzato le informazioni di prova relative alle tre opzioni A, B e C in base ai criteri concordabili per il progetto. La matrice evidenzia informazioni mancanti su costi, limiti d'uso ed esportazione. Non ho assegnato punteggi di qualità o raccomandato un acquisto, perché le informazioni non sono state verificate su documenti ufficiali o mediante una prova autorizzata.\nPer procedere chiederei di definire quali requisiti siano indispensabili e di autorizzare la consultazione delle fonti pubbliche pertinenti. Il confronto definitivo dovrebbe riportare, per ogni dato, URL, data, eventuali limitazioni e osservazioni da controllare.\nIl presente esempio non contiene recensioni di strumenti reali, non prevede contratti e non comporta attività di acquisizione clienti.\nCordiali saluti,\nSupporto alla ricerca informativa\n\nSTATO: memo dimostrativo completato; selezione e acquisto non effettuati.",
+        "content": "MEMO COMPARATIVO — TRE SOLUZIONI SOFTWARE INTERAMENTE dimostrative\nDestinatario: responsabile di una piccola attività immaginaria con clienti italiani già acquisiti.\nOggetto: gestione delle richieste postvendita; esclusa la ricerca di nuovi clienti.\n\nREQUISITI CONCORDABILI\n1. Permessi: almeno due livelli di autorizzazione verificabili.\n2. Esportazione dei dati: formato leggibile, con verifica delle condizioni d'uso.\n3. Interfaccia italiana: traduzione effettivamente presente e comprensibile.\n4. Semplicità: utilizzo compatibile con le procedure del team.\n5. Costi: prezzo totale, limiti di piano e condizioni da verificare.\nPesi di riferimento per un eventuale confronto documentato: 30%, 25%, 20%, 15%, 10%. I pesi non autorizzano a inventare voti in assenza di evidenze.\n\nSCHEDA A — FONTE di esempio\nDati dichiarati nello scenario: ruoli disponibili, esportazione CSV, interfaccia italiana; costo sconosciuto.\nValutazione descrittiva: potrebbe soddisfare i requisiti iniziali, ma occorre verificare se i permessi siano configurabili, se l'esportazione includa tutti i campi necessari e quali siano i limiti della versione prevista. Nessuna prova è stata effettuata.\n\nSCHEDA B — FONTE di esempio\nDati dichiarati: permessi ed esportazione non ancora verificati, interfaccia italiana non disponibile, prezzo sconosciuto.\nValutazione descrittiva: non soddisfa il requisito linguistico indicato nello scenario. Senza documentazione non è appropriato attribuire un voto o considerarla idonea.\n\nSCHEDA C — FONTE di esempio\nDati dichiarati: ruoli disponibili, esportazione JSON, localizzazione italiana parziale, prezzo sconosciuto.\nValutazione descrittiva: necessita di verifica sull'effettiva copertura linguistica e sulla facilità di utilizzo del formato esportato. Non è stata testata.\n\nNOTA AL RESPONSABILE — VERSIONE PRONTA PER LA REVISIONE\nBuongiorno,\nho organizzato le informazioni di prova relative alle tre opzioni A, B e C in base ai criteri concordabili per il progetto. La matrice evidenzia informazioni mancanti su costi, limiti d'uso ed esportazione. Non ho assegnato punteggi di qualità o raccomandato un acquisto, perché le informazioni non sono state verificate su documenti ufficiali o mediante una prova autorizzata.\nPer procedere chiederei di definire quali requisiti siano indispensabili e di autorizzare la consultazione delle fonti pubbliche pertinenti. Il confronto definitivo dovrebbe riportare, per ogni dato, URL, data, eventuali limitazioni e osservazioni da controllare.\nIl presente esempio non contiene recensioni di strumenti reali, non prevede contratti e non comporta attività di acquisizione clienti.\nCordiali saluti,\nSupporto alla ricerca informativa\n\nSTATO: memo dimostrativo completato; selezione e acquisto non effettuati.",
         "explanation": {
-          "it": "Sintesi professionale di tre soluzioni inventate, senza punteggi arbitrari né acquisti o prove realmente effettuati.",
-          "en": "Professional comparison of three illustrative tools, without invented verified ratings or purchases.",
+          "it": "Sintesi professionale di tre soluzioni di esempio, senza punteggi arbitrari né acquisti o prove realmente effettuati.",
+          "en": "Professional comparison of three illustrative tools, without example verified ratings or purchases.",
           "fr": "Comparaison de trois outils illustratifs, sans notes présentées comme vérifiées.",
           "es": "Comparación de tres herramientas de ejemplo sin puntuaciones verificadas ni compras."
         }
@@ -126,7 +126,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     ],
     "qualityChecks": [
       {
-        "it": "Pesi sommati e nessuna fonte inventata attribuita a imprese reali.",
+        "it": "Pesi sommati e nessuna fonte di esempio attribuita a imprese reali.",
         "en": "Weights sum to 100%; no illustrative claims about real vendors.",
         "fr": "Pondérations à 100 %, sans fausses sources.",
         "es": "Pesos al 100 %, sin fuentes de ejemplo como reales."
@@ -174,12 +174,12 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "objective": {
       "it": "Riscrivere la pagina in modo chiaro e utile, con destinatari, limiti, modalità, FAQ e richiesta di contatto, senza inventare tempi garantiti.",
-      "en": "Deliver accurate CMS-ready copy, FAQs and next steps without invented service promises.",
+      "en": "Deliver accurate CMS-ready copy, FAQs and next steps without example service promises.",
       "fr": "Créer des textes fiables pour CMS, FAQ et prise de contact.",
       "es": "Crear textos claros listos para CMS, preguntas y contacto."
     },
     "inputs": {
-      "it": "Bozza inventata: «Siamo leader, rispondiamo sempre immediatamente e risolviamo ogni problema». Nel brief non ci sono prove del primato né tempi di risposta garantiti.",
+      "it": "Bozza di esempio: «Siamo leader, rispondiamo sempre immediatamente e risolviamo ogni problema». Nel brief non ci sono prove del primato né tempi di risposta garantiti.",
       "en": "Illustrative original claims to be a market leader and always reply instantly, without supporting evidence.",
       "fr": "Texte illustratif promettant une réponse immédiate sans preuve.",
       "es": "Borrador de ejemplo que promete atención inmediata sin confirmación."
@@ -218,12 +218,12 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Avant/après : présentation",
           "es": "Antes/después: presentación"
         },
-        "content": "VERSIONE INIZIALE — TESTO FITTIZIO\nH1: Soluzioni complete per ogni esigenza\nTesto: Siamo leader del settore e rispondiamo sempre in tempo reale. Ogni problema sarà risolto subito.\nPulsante: Scopri di più\n\nVERSIONE REVISIONATA — ESEMPIO EDITORIALE\nH1: Informazioni e assistenza scritta per i tuoi ordini in corso\nSottotitolo: Hai un ordine già effettuato e vuoi verificare un documento, una disponibilità o lo stato della tua richiesta? Scrivici: raccogliamo le informazioni necessarie e le verifichiamo con il referente competente.\nH2: Che cosa possiamo verificare\n• Stato delle richieste associate a ordini esistenti.\n• Documenti e informazioni già disponibili.\n• Segnalazioni da inoltrare al reparto competente.\nH2: Come funziona\n1. Invia il riferimento dell'ordine, senza dati bancari o credenziali.\n2. Verifichiamo la richiesta ed eventuali informazioni mancanti.\n3. Ti comunichiamo un aggiornamento attendibile oppure il prossimo passo.\nPulsante: Invia una richiesta di assistenza.\nNota editoriale: non promettere tempi di risposta senza accordo e dati verificati.",
+        "content": "VERSIONE INIZIALE — TESTO dimostrativo\nH1: Soluzioni complete per ogni esigenza\nTesto: Siamo leader del settore e rispondiamo sempre in tempo reale. Ogni problema sarà risolto subito.\nPulsante: Scopri di più\n\nVERSIONE REVISIONATA — ESEMPIO EDITORIALE\nH1: Informazioni e assistenza scritta per i tuoi ordini in corso\nSottotitolo: Hai un ordine già effettuato e vuoi verificare un documento, una disponibilità o lo stato della tua richiesta? Scrivici: raccogliamo le informazioni necessarie e le verifichiamo con il referente competente.\nH2: Che cosa possiamo verificare\n• Stato delle richieste associate a ordini esistenti.\n• Documenti e informazioni già disponibili.\n• Segnalazioni da inoltrare al reparto competente.\nH2: Come funziona\n1. Invia il riferimento dell'ordine, senza dati bancari o credenziali.\n2. Verifichiamo la richiesta ed eventuali informazioni mancanti.\n3. Ti comunichiamo un aggiornamento attendibile oppure il prossimo passo.\nPulsante: Invia una richiesta di assistenza.\nNota editoriale: non promettere tempi di risposta senza accordo e dati verificati.",
         "explanation": {
           "it": "Il testo rivisto chiarisce il valore concreto senza promettere risultati non documentati.",
           "en": "The revision explains the process without fabricating outcomes.",
-          "fr": "La version révisée explique les étapes sans promesses inventées.",
-          "es": "La versión revisada concreta el proceso sin promesas inventadas."
+          "fr": "La version révisée explique les étapes sans promesses présentées en exemple.",
+          "es": "La versión revisada concreta el proceso sin promesas de ejemplo."
         }
       },
       {
@@ -329,7 +329,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Tre schede di prova, un listino simulato in sola lettura e nessun manuale tecnico verificato.",
-      "en": "Three invented listings, read-only mock prices and no verified technical manual.",
+      "en": "Three example listings, read-only mock prices and no verified technical manual.",
       "fr": "Trois fiches illustratives et un tarif en lecture seule.",
       "es": "Tres fichas de ejemplo y tarifa en modo lectura."
     },
@@ -367,10 +367,10 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Fiche avant/après",
           "es": "Ficha antes/después"
         },
-        "content": "TESTO INIZIALE FITTIZIO\nLampada Sfera. Legno e forse ceramica. Dimensione 35x18. Pulire normalmente. Disponibile in tanti colori.\n\nTESTO REVISIONATO, NON ANCORA APPROVATO\nLampada da tavolo Sfera\nDescrizione: complemento d'arredo dalle linee essenziali, pensato per ambienti domestici contemporanei.\nMateriali: DA CONFERMARE. La bozza indica «legno e forse ceramica», ma non permette di attribuire materiali alle singole parti.\nDimensioni: 35 × 18 — UNITÀ E ORIENTAMENTO DA CONFERMARE (altezza, larghezza, diametro).\nManutenzione: ISTRUZIONI DEL PRODUTTORE DA RICHIEDERE. Non pubblicare «pulire normalmente».\nVarianti: DA VERIFICARE SUL CATALOGO APPROVATO.\nSTATO: revisione stilistica completata; scheda sospesa fino alla conferma di materiali, misure e istruzioni.",
+        "content": "TESTO INIZIALE dimostrativo\nLampada Sfera. Legno e forse ceramica. Dimensione 35x18. Pulire normalmente. Disponibile in tanti colori.\n\nTESTO REVISIONATO, NON ANCORA APPROVATO\nLampada da tavolo Sfera\nDescrizione: complemento d'arredo dalle linee essenziali, pensato per ambienti domestici contemporanei.\nMateriali: DA CONFERMARE. La bozza indica «legno e forse ceramica», ma non permette di attribuire materiali alle singole parti.\nDimensioni: 35 × 18 — UNITÀ E ORIENTAMENTO DA CONFERMARE (altezza, larghezza, diametro).\nManutenzione: ISTRUZIONI DEL PRODUTTORE DA RICHIEDERE. Non pubblicare «pulire normalmente».\nVarianti: DA VERIFICARE SUL CATALOGO APPROVATO.\nSTATO: revisione stilistica completata; scheda sospesa fino alla conferma di materiali, misure e istruzioni.",
         "explanation": {
           "it": "Si migliora la leggibilità senza trasformare dati dubbi in caratteristiche certe.",
-          "en": "No unsupported dimensions, materials or care advice are invented.",
+          "en": "No unsupported dimensions, materials or care advice are example.",
           "fr": "Les caractéristiques incertaines restent signalées.",
           "es": "Los materiales y medidas dudosos siguen pendientes."
         }
@@ -382,7 +382,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Registre et guide de style",
           "es": "Incidencias y guía de estilo"
         },
-        "content": "REGISTRO DI QUALITÀ — CASO SIMULATO\nCAT-001 Sfera | materiali ambigui | priorità alta | referente: prodotto.\nCAT-001 Sfera | dimensioni senza unità | priorità alta | referente: prodotto.\nCAT-002 Nastro | colori «beige» e «sabbia» non collegati ai codici | priorità media | referente: commerciale.\nCAT-003 Linea | istruzioni di cura assenti | priorità media | referente: prodotto.\n\nGUIDA EDITORIALE DI CONSEGNA\n1. Titoli: nome prodotto e tipologia, senza superlativi non documentati.\n2. Misure: dichiarare sempre unità e ordine delle dimensioni.\n3. Materiali: utilizzare soltanto denominazioni approvate.\n4. Colori: mantenere il nome associato al codice commerciale.\n5. Cura: non inventare istruzioni del produttore.\n6. Listini: correggere impaginazione e riferimenti, non prezzi.\nNessuna scheda con criticità aperte viene contrassegnata «pronta per pubblicazione».",
+        "content": "REGISTRO DI QUALITÀ — CASO SIMULATO\nCAT-001 Sfera | materiali ambigui | priorità alta | referente: prodotto.\nCAT-001 Sfera | dimensioni senza unità | priorità alta | referente: prodotto.\nCAT-002 Nastro | colori «beige» e «sabbia» non collegati ai codici | priorità media | referente: commerciale.\nCAT-003 Linea | istruzioni di cura assenti | priorità media | referente: prodotto.\n\nGUIDA EDITORIALE DI CONSEGNA\n1. Titoli: nome prodotto e tipologia, senza superlativi non documentati.\n2. Misure: dichiarare sempre unità e ordine delle dimensioni.\n3. Materiali: utilizzare soltanto denominazioni approvate.\n4. Colori: mantenere il nome associato al codice commerciale.\n5. Cura: non introdurre informazioni non verificate istruzioni del produttore.\n6. Listini: correggere impaginazione e riferimenti, non prezzi.\nNessuna scheda con criticità aperte viene contrassegnata «pronta per pubblicazione».",
         "explanation": {
           "it": "Il registro permette al cliente di autorizzare ogni dato prima della consegna definitiva.",
           "en": "Issues are assigned for owner verification before publication.",
@@ -397,7 +397,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "fr": "Extrait de contrôle croisé : fiches et tarifs",
           "es": "Extracto de cotejo: fichas y lista de precios"
         },
-        "content": "ESEMPIO DIMOSTRATIVO — CATALOGO E LISTINO CON DATI INVENTATI\nRiferimento: revisione editoriale v1.2, non aggiornamento contabile.\nART-041 | Portadocumenti Linea | Scheda: feltro riciclato, 32 × 24 cm | Listino approvato: €18,50 | Stato: COERENTE.\nART-042 | Custodia Note | Scheda: tessuto, 18 × 12 cm | Listino approvato: €12,00 | Bozza catalogo: €21,00 | Stato: DISALLINEAMENTO DA CORREGGERE SU APPROVAZIONE.\nART-043 | Vassoio Piano | Scheda: 25 × 15 cm | Bozza: 25 × 51 cm | Stato: DIMENSIONE DA VERIFICARE SULLA FONTE ORIGINALE.\nRegistro correzioni: [A01] prezzo ART-042, fonte listino cliente, in attesa di conferma; [A02] dimensione ART-043, fonte scheda tecnica, non modificare autonomamente.\nNota di consegna: evidenziare modifiche approvate, conservare una copia precedente e trasmettere le richieste irrisolte al referente.\nEsclusioni: nessuna definizione autonoma dei prezzi, nessuna fatturazione, nessuna pubblicazione o modifica senza autorizzazione.",
+        "content": "ESEMPIO DIMOSTRATIVO — CATALOGO E LISTINO CON DATI DI ESEMPIO\nRiferimento: revisione editoriale v1.2, non aggiornamento contabile.\nART-041 | Portadocumenti Linea | Scheda: feltro riciclato, 32 × 24 cm | Listino approvato: €18,50 | Stato: COERENTE.\nART-042 | Custodia Note | Scheda: tessuto, 18 × 12 cm | Listino approvato: €12,00 | Bozza catalogo: €21,00 | Stato: DISALLINEAMENTO DA CORREGGERE SU APPROVAZIONE.\nART-043 | Vassoio Piano | Scheda: 25 × 15 cm | Bozza: 25 × 51 cm | Stato: DIMENSIONE DA VERIFICARE SULLA FONTE ORIGINALE.\nRegistro correzioni: [A01] prezzo ART-042, fonte listino cliente, in attesa di conferma; [A02] dimensione ART-043, fonte scheda tecnica, non modificare autonomamente.\nNota di consegna: evidenziare modifiche approvate, conservare una copia precedente e trasmettere le richieste irrisolte al referente.\nEsclusioni: nessuna definizione autonoma dei prezzi, nessuna fatturazione, nessuna pubblicazione o modifica senza autorizzazione.",
         "explanation": {
           "it": "La tabella mostra il controllo di codici, unità di misura e prezzi già approvati, distinguendo le anomalie dalle modifiche autorizzate.",
           "en": "Demonstrates matching item codes, dimensions and approved price-list information, while leaving business decisions to the client.",
@@ -413,7 +413,7 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
           "es": "Fichas de producto e informe de incidencias"
         },
         "language": "it",
-        "content": "PACCHETTO EDITORIALE DEL MINI-CATALOGO — DATI INVENTATI\nVersione dimostrativa 1.2. Non sono state apportate modifiche a un catalogo reale o a prezzi approvati.\n\nSCHEDA ART-041 — PORTADOCUMENTI LINEA\nTitolo approvabile: Portadocumenti Linea in feltro riciclato.\nDescrizione: Portadocumenti da scrivania per raccogliere fogli e appunti. Il formato indicato nella scheda di prova è di 32 × 24 cm; il materiale dichiarato è feltro riciclato.\nInformazioni da verificare prima della pubblicazione: disponibilità, colori, modalità di pulizia, eventuali certificazioni.\nPrezzo nel listino dimostrativo: 18,50 €, da sottoporre alla consueta approvazione.\nPulsante proposto: Scopri le caratteristiche.\n\nSCHEDA ART-042 — CUSTODIA NOTE\nTitolo approvabile: Custodia Note in tessuto.\nDescrizione: Custodia per piccoli documenti e appunti, con dimensioni indicate nella bozza pari a 18 × 12 cm. Ulteriori caratteristiche, chiusura e colori non sono specificati: non vanno aggiunti.\nPrezzo: il listino di prova indica 12,00 €, mentre la bozza web riporta 21,00 €. Blocco di pubblicazione fino alla conferma del referente.\nPulsante proposto: Richiedi informazioni.\n\nSCHEDA ART-043 — VASSOIO PIANO\nTitolo provvisorio: Vassoio Piano.\nDescrizione: elemento da appoggio descritto nella scheda iniziale con dimensioni 25 × 15 cm. Nella bozza di catalogo compare invece 25 × 51 cm. Poiché le fonti non coincidono, la misura non deve essere presentata come definitiva.\nMateriale, colori e manutenzione: dati da richiedere.\nStato: testo editoriale sospeso fino alla verifica tecnica.\n\nEMAIL DI CONSEGNA — BOZZA NON INVIATA\nOggetto: Mini-catalogo ART-041, ART-042 e ART-043 — revisione e dati da confermare\nBuongiorno,\nho predisposto le bozze delle tre schede prodotto, uniformando la struttura di titoli e descrizioni. Per ART-041 ho mantenuto soltanto materiale e dimensioni indicati nella fonte. Per ART-042 ho rilevato una differenza tra listino e bozza del sito; non ho scelto autonomamente il prezzo. Per ART-043 segnalo la necessità di verificare le dimensioni prima di procedere.\nPropongo di approvare le informazioni tecniche mancanti e il listino di riferimento prima della pubblicazione. Le versioni precedenti devono rimanere disponibili per il controllo.\nCordiali saluti,\nSupporto editoriale\n\nREGISTRO ERRORI: ART-041 — caratteristiche da integrare; ART-042 — prezzo difforme; ART-043 — misura discordante. Nessun importo è stato cambiato unilateralmente.",
+        "content": "PACCHETTO EDITORIALE DEL MINI-CATALOGO — DATI DI ESEMPIO\nVersione dimostrativa 1.2. Non sono state apportate modifiche a un catalogo reale o a prezzi approvati.\n\nSCHEDA ART-041 — PORTADOCUMENTI LINEA\nTitolo approvabile: Portadocumenti Linea in feltro riciclato.\nDescrizione: Portadocumenti da scrivania per raccogliere fogli e appunti. Il formato indicato nella scheda di prova è di 32 × 24 cm; il materiale dichiarato è feltro riciclato.\nInformazioni da verificare prima della pubblicazione: disponibilità, colori, modalità di pulizia, eventuali certificazioni.\nPrezzo nel listino dimostrativo: 18,50 €, da sottoporre alla consueta approvazione.\nPulsante proposto: Scopri le caratteristiche.\n\nSCHEDA ART-042 — CUSTODIA NOTE\nTitolo approvabile: Custodia Note in tessuto.\nDescrizione: Custodia per piccoli documenti e appunti, con dimensioni indicate nella bozza pari a 18 × 12 cm. Ulteriori caratteristiche, chiusura e colori non sono specificati: non vanno aggiunti.\nPrezzo: il listino di prova indica 12,00 €, mentre la bozza web riporta 21,00 €. Blocco di pubblicazione fino alla conferma del referente.\nPulsante proposto: Richiedi informazioni.\n\nSCHEDA ART-043 — VASSOIO PIANO\nTitolo provvisorio: Vassoio Piano.\nDescrizione: elemento da appoggio descritto nella scheda iniziale con dimensioni 25 × 15 cm. Nella bozza di catalogo compare invece 25 × 51 cm. Poiché le fonti non coincidono, la misura non deve essere presentata come definitiva.\nMateriale, colori e manutenzione: dati da richiedere.\nStato: testo editoriale sospeso fino alla verifica tecnica.\n\nEMAIL DI CONSEGNA — BOZZA NON INVIATA\nOggetto: Mini-catalogo ART-041, ART-042 e ART-043 — revisione e dati da confermare\nBuongiorno,\nho predisposto le bozze delle tre schede prodotto, uniformando la struttura di titoli e descrizioni. Per ART-041 ho mantenuto soltanto materiale e dimensioni indicati nella fonte. Per ART-042 ho rilevato una differenza tra listino e bozza del sito; non ho scelto autonomamente il prezzo. Per ART-043 segnalo la necessità di verificare le dimensioni prima di procedere.\nPropongo di approvare le informazioni tecniche mancanti e il listino di riferimento prima della pubblicazione. Le versioni precedenti devono rimanere disponibili per il controllo.\nCordiali saluti,\nSupporto editoriale\n\nREGISTRO ERRORI: ART-041 — caratteristiche da integrare; ART-042 — prezzo difforme; ART-043 — misura discordante. Nessun importo è stato cambiato unilateralmente.",
         "explanation": {
           "it": "Tre schede revisionate, verifica delle informazioni mancanti e comunicazione completa al referente.",
           "en": "Three edited product descriptions, missing facts and a complete handover.",
@@ -477,10 +477,10 @@ export const OPERATIONAL_SAMPLES_B: OperationalDeepCase[] = [
       "es": "Crear un flujo sencillo, sin software a medida."
     },
     "inputs": {
-      "it": "Tre richieste inventate, un modulo di esempio e regole ipotetiche di approvazione delle comunicazioni.",
+      "it": "Tre richieste di esempio, un modulo di esempio e regole ipotetiche di approvazione delle comunicazioni.",
       "en": "Three illustrative enquiries and a sample form, with illustrative approval rules.",
       "fr": "Trois demandes illustratives et des règles de validation.",
-      "es": "Tres solicitudes inventadas y reglas de aprobación."
+      "es": "Tres solicitudes de ejemplo y reglas de aprobación."
     },
     "workflow": [
       {
