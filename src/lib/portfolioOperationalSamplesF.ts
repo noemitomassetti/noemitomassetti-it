@@ -121,7 +121,7 @@ export const OPERATIONAL_SAMPLES_F: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Sono indicati i passaggi da approvare, senza attribuire al progetto risultati commerciali non documentati.",
         "en": "Approval points are visible; no unsupported performance claims are made.",
@@ -267,7 +267,7 @@ export const OPERATIONAL_SAMPLES_F: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Sono indicati i passaggi da approvare, senza attribuire al progetto risultati commerciali non documentati.",
         "en": "Approval points are visible; no unsupported performance claims are made.",
@@ -413,7 +413,7 @@ export const OPERATIONAL_SAMPLES_F: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Sono indicati i passaggi da approvare, senza attribuire al progetto risultati commerciali non documentati.",
         "en": "Approval points are visible; no unsupported performance claims are made.",
@@ -559,7 +559,7 @@ export const OPERATIONAL_SAMPLES_F: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Sono indicati i passaggi da approvare, senza attribuire al progetto risultati commerciali non documentati.",
         "en": "Approval points are visible; no unsupported performance claims are made.",
@@ -705,7 +705,7 @@ export const OPERATIONAL_SAMPLES_F: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Sono indicati i passaggi da approvare, senza attribuire al progetto risultati commerciali non documentati.",
         "en": "Approval points are visible; no unsupported performance claims are made.",
