@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PortfolioDeepShowcase } from "@/components/PortfolioDeepShowcase";
+import { PortfolioServiceIndex } from "@/components/PortfolioServiceIndex";
 import { PortfolioServiceLibrary } from "@/components/PortfolioServiceLibrary";
 import { useSEO } from "@/hooks/useSEO";
 import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
@@ -529,6 +530,7 @@ export default function Portfolio() {
       </section>
 
       <PortfolioServiceLibrary lang={lang} />
+      <PortfolioServiceIndex lang={lang} />
       <PortfolioDeepShowcase lang={lang} />
 
       {/* ── THE 5 MASTER TRAINING FIELDS SHOWCASE ── */}
