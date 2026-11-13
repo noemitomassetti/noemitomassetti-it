@@ -974,6 +974,83 @@ export const itPosts = [
       
       <p>Se vuoi strutturare la tua organizzazione operativa in modo sicuro, professionale e trasparente, <a href="/it/contatti#contact-section" class="text-primary font-bold hover:underline">scrivimi per una valutazione e un preventivo</a>: analizzeremo le tue esigenze di sicurezza e imposteremo insieme un metodo di lavoro a prova di rischio.</p>
     `
+  },
+  {
+    id: 15,
+    slug: "richieste-clienti-italiani-risposte-scritte",
+    title: "Richieste dei clienti italiani: dal messaggio alla risposta approvata",
+    excerpt: "Un metodo concreto per seguire le richieste dei clienti già acquisiti, preparare risposte in italiano e sapere quando serve un'autorizzazione.",
+    date: "26 ottobre 2026",
+    dateISO: "2026-10-26",
+    category: "Assistenza clienti e Comunicazione",
+    image: "https://images.unsplash.com/photo-1743796055651-41c743ff2465?auto=format&fit=crop&w=1200&q=75",
+    alt: "Persona che prepara una risposta scritta accanto al computer",
+    content: `
+      <p>Quando un cliente scrive per avere aggiornamenti su una consegna, chiarire una condizione già concordata o spostare un appuntamento, la qualità del servizio dipende anche da come viene gestito il messaggio. Una risposta rapida ma imprecisa può creare più lavoro di una risposta preparata con metodo.</p>
+      <p>Per un professionista che lavora con clienti in Italia, il problema non è soltanto tradurre correttamente. Occorre riconoscere il tipo di richiesta, recuperare l'informazione approvata e usare un italiano naturale, con il registro adatto al destinatario.</p>
+      <h2>1. Classificare la richiesta prima di rispondere</h2>
+      <p>Un primo controllo permette di distinguere le comunicazioni ordinarie dai casi che richiedono una decisione. Le richieste più comuni possono riguardare appuntamenti, documentazione, stato di un ordine, informazioni su servizi già acquistati o chiarimenti su messaggi precedenti.</p>
+      <p>Un registro operativo essenziale può includere: riferimento della richiesta, data di arrivo, cliente, argomento, informazione da verificare, persona responsabile, stato della risposta e data del prossimo controllo. Non è necessario un software complesso: conta che le informazioni siano reperibili e aggiornate.</p>
+      <h2>2. Separare fatti verificati, bozze e decisioni</h2>
+      <p>Prima di scrivere, occorre sapere da dove proviene ogni dato. Una data di consegna non ancora confermata, per esempio, non va presentata come definitiva. Lo stesso vale per prezzi, modifiche contrattuali, condizioni commerciali ed eccezioni alla procedura.</p>
+      <ul>
+        <li><strong>Informazioni confermate:</strong> possono essere utilizzate secondo le istruzioni ricevute.</li>
+        <li><strong>Informazioni da controllare:</strong> vanno segnalate al referente e non devono diventare promesse al cliente.</li>
+        <li><strong>Decisioni riservate al titolare:</strong> richiedono un'approvazione esplicita prima dell'invio.</li>
+      </ul>
+      <h2>3. Scrivere in italiano con chiarezza e misura</h2>
+      <p>Una buona risposta professionale indica il motivo del messaggio, ciò che si sa davvero e il passo successivo. È preferibile una frase diretta a formule eccessivamente solenni o tradotte alla lettera da un'altra lingua. Il tono, naturalmente, dipende dal rapporto con il cliente e dal settore.</p>
+      <p><strong>Esempio dimostrativo:</strong> un cliente italiano chiede quando riceverà la documentazione necessaria per avviare un servizio. La data non è stata ancora approvata dal referente. Una possibile bozza è:</p>
+      <blockquote><p>Buongiorno, grazie per il messaggio. Abbiamo preso in carico la sua richiesta e stiamo verificando la disponibilità della documentazione. Le invieremo un aggiornamento non appena avremo ricevuto conferma dal referente. Cordiali saluti.</p></blockquote>
+      <p>Questo testo è un esempio originale creato per illustrare un metodo di lavoro: non è una comunicazione inviata a un cliente reale. Prima di utilizzarlo occorre verificare che rispecchi le procedure e la voce dell'azienda.</p>
+      <h2>4. Registrare il seguito della comunicazione</h2>
+      <p>Il lavoro non termina quando la bozza è pronta. Bisogna indicare chi deve approvarla, se è stata inviata, quale risposta si attende e quando ricontrollare. Una voce di registro potrebbe essere: «IT-021 · documentazione del servizio · conferma interna in attesa · bozza preparata · invio non autorizzato».</p>
+      <p>Un controllo conclusivo evita i problemi più comuni: destinatario sbagliato, allegato mancante, promessa non approvata, duplicazione di un messaggio o richiesta lasciata senza seguito.</p>
+      <h2>Che cosa può delegare un'azienda</h2>
+      <p>Un'assistente virtuale che lavora in italiano può organizzare la casella di posta concordata, classificare richieste di clienti esistenti, preparare risposte, aggiornare registri e segnalare ciò che necessita di una decisione. Non deve invece inventare condizioni, negoziare senza mandato o occuparsi di acquisizione di nuovi clienti.</p>
+      <p>Se lavori con interlocutori italiani, possiamo definire un incarico circoscritto: tipologie di messaggi, strumenti autorizzati, modelli, controlli, tempi e responsabili. <a href="/it/contatti#contact-section">Richiedi un preventivo</a> per il supporto scritto e operativo di cui hai bisogno.</p>
+    `,
+  },
+  {
+    id: 16,
+    slug: "ordini-listini-preventivi-controlli-operativi",
+    title: "Ordini, listini e preventivi: organizzare i dati senza equivoci",
+    excerpt: "Come preparare documenti operativi coerenti, controllare versioni e informazioni approvate e gestire i passaggi che richiedono una conferma.",
+    date: "9 novembre 2026",
+    dateISO: "2026-11-09",
+    category: "Back office e Organizzazione",
+    image: "https://images.unsplash.com/photo-1762341112870-1eb70d45b23e?auto=format&fit=crop&w=1200&q=75",
+    alt: "Persona che controlla documenti e appunti su una scrivania",
+    content: `
+      <p>Un listino aggiornato, una richiesta d'ordine o una bozza di preventivo possono sembrare documenti semplici. Eppure, quando i dati sono distribuiti fra email, file e annotazioni, basta utilizzare una versione superata per creare un'informazione incoerente.</p>
+      <p>Il back office operativo aiuta a mantenere ordinati questi passaggi. Non significa occuparsi di contabilità o fatturazione: si tratta di lavorare su informazioni e documenti relativi ad attività commerciali già avviate, seguendo condizioni e istruzioni approvate dal responsabile.</p>
+      <h2>Partire da un'unica fonte di informazioni approvate</h2>
+      <p>Prima di preparare un documento, è utile identificare il file di riferimento e la persona che può confermarne il contenuto. Prezzi, disponibilità, specifiche del servizio, tempi e condizioni devono provenire da fonti riconoscibili, non da ricordi o conversazioni isolate.</p>
+      <ul>
+        <li><strong>Listino di riferimento:</strong> nome del file, versione, data dell'ultimo aggiornamento e approvazione.</li>
+        <li><strong>Richiesta ricevuta:</strong> identificativo, cliente già acquisito, oggetto e informazioni necessarie.</li>
+        <li><strong>Documento di lavoro:</strong> bozza distinta dalla versione approvata e da quella effettivamente inviata.</li>
+        <li><strong>Controlli:</strong> campi mancanti, incongruenze e domande da sottoporre al referente.</li>
+      </ul>
+      <h2>Un piccolo flusso di lavoro in cinque passaggi</h2>
+      <ol>
+        <li><strong>Ricezione.</strong> Registrare la richiesta e collegarla ai documenti autorizzati.</li>
+        <li><strong>Verifica.</strong> Controllare descrizioni, quantità, codici, riferimenti e versione del listino.</li>
+        <li><strong>Preparazione.</strong> Compilare una bozza con dati già confermati, indicando chiaramente ciò che manca.</li>
+        <li><strong>Approvazione.</strong> Inoltrare al referente le decisioni commerciali, le variazioni e le eccezioni.</li>
+        <li><strong>Tracciamento.</strong> Conservare la versione autorizzata e annotare l'eventuale invio o seguito.</li>
+      </ol>
+      <p>Questo flusso non stabilisce automaticamente quale sistema usare. Per alcune attività è sufficiente un foglio di calcolo ben strutturato; per altre è più adatto il gestionale già in uso. L'importante è evitare di mantenere più archivi indipendenti e non sincronizzati.</p>
+      <h2>Esempio operativo: una richiesta da un cliente italiano</h2>
+      <p>Immaginiamo che un cliente già acquisito chieda una proposta per un servizio aggiuntivo. Nelle email precedenti compare un prezzo, ma nel listino aggiornato è indicata una diversa tariffa. L'assistente non sceglie autonomamente quale applicare: registra l'incongruenza, collega le due fonti e prepara una richiesta di chiarimento.</p>
+      <p><strong>Nota interna dimostrativa:</strong> «RIF-042 · richiesta ricevuta il 9/11 · descrizione verificata · tariffa da confermare fra listino v3 e precedente comunicazione · bozza non inviata · referente avvisato».</p>
+      <p>È un caso interamente fittizio, pensato per mostrare il contenuto di un possibile registro operativo. Non è un progetto svolto per un cliente reale.</p>
+      <h2>Quando la comunicazione è in più lingue</h2>
+      <p>Se la richiesta proviene da un'azienda estera che lavora con l'Italia, oltre al controllo dei dati serve attenzione alla terminologia. Lo stesso servizio deve avere una descrizione coerente nel listino, nella proposta e nel messaggio al cliente. Tradurre letteralmente espressioni commerciali può produrre ambiguità: occorre usare il lessico adatto al settore e al destinatario italiano.</p>
+      <h2>Che cosa rientra nel supporto operativo</h2>
+      <p>Posso aiutare a organizzare dati e documenti, aggiornare registri e listini secondo istruzioni approvate, preparare bozze operative di ordini e preventivi e curare la corrispondenza con clienti già acquisiti. Rimangono esclusi contabilità, fatturazione, consulenza fiscale, negoziazioni non autorizzate e ricerca di potenziali clienti.</p>
+      <p>Prima di iniziare definiamo quali informazioni posso consultare, quali modelli utilizzare, quali documenti preparare e quali decisioni devono restare a te. <a href="/it/contatti#contact-section">Richiedi un preventivo</a> per un supporto di back office commisurato alle tue esigenze.</p>
+    `,
   }
 ];
 
