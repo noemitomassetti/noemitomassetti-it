@@ -3,7 +3,7 @@ import { getDeepPortfolioItem, getDeepPortfolioPath } from "@/lib/portfolioDeepC
 import type { Language } from "@/lib/i18n/types";
 
 /** A service-led route into complete dossiers: each professional service has multiple examples. */
-const GROUPS = [
+export const PORTFOLIO_SERVICE_GROUPS = [
   {
     "label": {
       "it": "Email e segreteria",
@@ -209,7 +209,7 @@ export function PortfolioServiceIndex({lang}:{lang:Language}) {
      <p className="text-foreground/80 leading-relaxed max-w-3xl mb-3">{copy.description}</p>
      <p className="text-sm text-muted-foreground max-w-3xl mb-8">{copy.note}</p>
      <div className="grid md:grid-cols-2 gap-4">
-       {GROUPS.map((group,index)=>{
+       {PORTFOLIO_SERVICE_GROUPS.map((group,index)=>{
           const entries=group.ids.map(id=>getDeepPortfolioItem(id)).filter((v):v is NonNullable<typeof v>=>Boolean(v));
           return <details key={index} className="group rounded-xl border border-border/70 bg-card p-5 open:border-primary/40">
              <summary className="cursor-pointer list-none flex items-start justify-between gap-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary rounded">
