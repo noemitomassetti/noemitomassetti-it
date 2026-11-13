@@ -22,7 +22,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   en: {
     back: "Back to the blog",
     ctaTitle: "Need an Italian-speaking virtual assistant?",
-    ctaDesc: "I can support Italian-language customer correspondence, email, calendar and back-office tasks for your work with Italy. Translation and content revision are also available. Tell me what you need and I will review the brief before preparing a quote.",
+    ctaDesc: "Whether you already work with Italy or are preparing to do so, I can help organise Italian-language email, calendar and back-office tasks, set up approved customer communication templates and support written enquiries from existing customers. Translation and localisation are available as complementary services. Tell me what you need for a tailored quote.",
     ctaBtn: "Request a quote",
     authorBio: "Italian-speaking virtual assistant with professional experience across customer care, back office and organisational roles. A native Italian speaker, with a Language Mediation degree (110 e lode) and specialist training in translation.",
     related: "Related reading",
@@ -31,7 +31,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   fr: {
     back: "Retour au blog",
     ctaTitle: "Vous recherchez une assistante virtuelle italophone ?",
-    ctaDesc: "Je peux vous aider à organiser vos courriels, rendez-vous et tâches de back-office en italien, ainsi que les échanges écrits avec vos clients en Italie. Traduction et révision de contenus sont également possibles, selon le devis.",
+    ctaDesc: "Que vous travailliez déjà avec l’Italie ou prépariez votre activité sur le marché italien, je peux vous accompagner dans l’organisation des courriels, de l’agenda et du back-office en italien, ainsi que dans la préparation de modèles de communication et le suivi écrit des clients existants. Traduction et localisation sont proposées en complément, selon le devis.",
     ctaBtn: "Demander un devis",
     authorBio: "Assistante virtuelle italophone, je m’appuie sur une expérience professionnelle variée en relation client, back-office et organisation, ainsi que sur une formation spécialisée en langues et en traduction.",
     related: "À lire également",
@@ -40,7 +40,7 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   es: {
     back: "Volver al blog",
     ctaTitle: "¿Buscas una asistente virtual que trabaje en italiano?",
-    ctaDesc: "Puedo ayudarte con correos en italiano, agenda, back office y atención escrita a clientes relacionados con Italia. También ofrezco traducción y revisión de textos. Cuéntame qué tareas necesitas delegar.",
+    ctaDesc: "Tanto si ya trabajas con Italia como si te preparas para entrar en el mercado italiano, puedo ayudarte a organizar el correo, la agenda y el back office en italiano, preparar modelos de comunicación y atender por escrito las consultas de clientes actuales. La traducción y la localización son servicios complementarios. Cuéntame qué necesitas delegar.",
     ctaBtn: "Solicitar un presupuesto",
     authorBio: "Asistente virtual de lengua materna italiana, con experiencia profesional en atención al cliente, back office y organización, además de formación especializada en idiomas y traducción.",
     related: "Otros artículos",
