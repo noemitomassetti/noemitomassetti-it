@@ -1234,7 +1234,7 @@ export default function IndexPage() {
             <p className="text-base md:text-lg text-foreground/80">
               {lang === "it"
                 ? "Approfondimenti, consigli pratici e strumenti per organizzare il tuo lavoro, comunicare meglio e gestire la tua attività."
-                : lang === "fr" ? "Découvrez des articles en français sur la communication multilingue, la traduction et l’organisation professionnelle." : lang === "es" ? "Descubre artículos en español sobre comunicación multilingüe, traducción y organización del trabajo." : "Explore articles adapted into English on Italian-market communication, translation and practical organisation."}
+                : lang === "fr" ? "Découvrez des conseils sur l’assistance virtuelle, le back-office et les échanges en italien pour les professionnels qui travaillent déjà avec l’Italie ou préparent leur arrivée sur ce marché. La traduction complète cet accompagnement." : lang === "es" ? "Descubre consejos sobre asistencia virtual, back office y comunicación en italiano para profesionales que ya trabajan con Italia o se preparan para entrar en este mercado. La traducción complementa este apoyo." : "Explore practical guides to Italian-speaking virtual assistance, back-office support and clear communication for businesses already working with Italy or preparing to enter the market. Translation is part of the wider support available."}
             </p>
           </div>
 
