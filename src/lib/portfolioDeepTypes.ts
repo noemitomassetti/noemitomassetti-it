@@ -24,12 +24,12 @@ export interface TranslationDeepCase {
   output: Localised;
 }
 
-/** Demonstrations only: all companies, products, dates and correspondence are invented. */
+/** Original source-and-target translation work; not commissioned client projects. */
 export const TRANSLATION_SAMPLE_NOTICE: Localised = {
-  it: "Campione di traduzione originale preparato per questo portfolio, con testo di partenza originale, nomi e dati inventati per l’esempio. Non proviene da un incarico commissionato. Le note illustrano le scelte linguistiche, senza attestare una revisione esterna.",
-  en: "An original translation sample created for this portfolio, using an original source text and invented names and details. It is not a client commission. The notes explain translation decisions; they do not imply independent proofreading.",
-  fr: "Exemple de traduction original créé pour ce portfolio, à partir d’un texte source, de noms et de données inventés pour l’occasion. Il ne s’agit pas d’une commande de client. Les notes expliquent les choix linguistiques, sans attester une relecture indépendante.",
-  es: "Muestra de traducción original creada para este porfolio, con un texto de partida, nombres y datos inventados para el ejemplo. No procede de un encargo de un cliente. Las notas explican las decisiones lingüísticas, sin implicar una revisión externa."
+  it: "Traduzione originale preparata per questo portfolio, non tratta da un incarico commissionato. I testi di partenza sono originali; le note illustrano le scelte linguistiche senza attestare revisioni esterne.",
+  en: "Original translation prepared for this portfolio, not a client commission. The source material is original; the notes explain translation decisions without implying independent proofreading.",
+  fr: "Traduction originale préparée pour ce portfolio, hors commande client. Le texte source est original ; les commentaires présentent les choix linguistiques sans prétendre à une relecture externe.",
+  es: "Traducción original preparada para este portfolio, no procedente de un encargo. El texto de partida es original y las notas explican las decisiones lingüísticas sin atribuir una revisión externa."
 };
 
 export const DIRECTION_LABELS: Record<PublicTranslationDirection, string> = {
