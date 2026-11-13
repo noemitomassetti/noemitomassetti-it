@@ -362,7 +362,7 @@ export const esLocale: TranslationDictionary = {
     ],
     credentials: [
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
-      { title: 'Formación académica especializada', detail: 'Grado italiano en Mediación Lingüística (110/110 e lode, máxima distinción italiana) y máster universitario italiano de primer nivel en Traducción Especializada' },
+      { title: 'Formación académica especializada', detail: 'Título italiano en Mediación Lingüística (110/110 e lode, máxima distinción italiana) y máster en Traducción Especializada (60 CFU)' },
       { title: 'Cuatro idiomas de trabajo', detail: 'Italiano nativo, inglés y francés avanzados, español intermedio-alto' },
       { title: 'Organización digital', detail: 'Archivos en la nube, herramientas colaborativas y procedimientos operativos' },
     ],
@@ -391,7 +391,7 @@ export const esLocale: TranslationDictionary = {
       },
       {
         period: 'Especialización universitaria',
-        role: 'máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa',
+        role: 'Máster en Traducción Especializada (60 CFU) – inglés',
         detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1.500 horas · 60 CFU/créditos ECTS · prueba final superada. Ámbitos literario, jurídico, económico, tecnológico y científico.',
       },
       {
