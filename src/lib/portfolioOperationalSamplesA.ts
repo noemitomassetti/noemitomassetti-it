@@ -640,7 +640,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       "es": "Organizar sin impartir clases ni captar participantes."
     },
     "inputs": {
-      "it": "Evento simulato: 12 novembre, ore 17:00–18:30, fuso Europe/Rome; iscritti dimostrativi già confermati e link dimostrativo non attivo.",
+      "it": "Evento dimostrativo: 12 novembre, ore 17:00–18:30, fuso Europe/Rome; iscritti dimostrativi già confermati e link dimostrativo non attivo.",
       "en": "Illustrative event 12 November 17:00–18:30 Europe/Rome; existing synthetic registrants and a placeholder meeting link.",
       "fr": "Événement illustratif le 12 novembre, 17 h–18 h 30, Europe/Rome ; inscrits illustratifs.",
       "es": "Evento de ejemplo el 12 de noviembre, 17:00–18:30, Europe/Rome; inscritos de ejemplo."
