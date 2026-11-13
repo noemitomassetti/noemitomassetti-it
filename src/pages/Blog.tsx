@@ -17,20 +17,20 @@ const COPY: Record<Language, {title: string; heading: string; introduction: stri
   },
   en: {
     title: "Italian Virtual Assistant | Business Support & Communication Blog | Noemi Tomassetti",
-    heading: "Practical support for working and communicating with Italy",
-    introduction: "Guides to Italian-speaking virtual assistance, written customer care, email and back-office organisation, alongside translation and natural business communication with Italy. Written for English-speaking professionals.",
+    heading: "Virtual assistance for working with the Italian market",
+    introduction: "Practical guides for professionals and small businesses already working with Italy or preparing to enter the Italian market. Explore Italian-speaking virtual assistance, email and back-office organisation, written customer care and the preparation of Italian-language communications. Translation and localisation support these services.",
     read: "Read article"
   },
   fr: {
     title: "Assistante virtuelle italophone | Blog et conseils | Noemi Tomassetti",
-    heading: "Mieux organiser votre travail avec l’Italie",
-    introduction: "Conseils pratiques sur l’assistance virtuelle en italien, les courriels, le back-office et le suivi écrit des clients, ainsi que la traduction et la communication professionnelle avec l’Italie.",
+    heading: "Assistance virtuelle pour vos activités avec le marché italien",
+    introduction: "Des conseils destinés aux indépendants et petites entreprises qui travaillent déjà avec l’Italie ou préparent leur arrivée sur le marché italien. Découvrez comment organiser le secrétariat à distance, le back-office, les courriels et les échanges écrits en italien. Traduction et localisation viennent compléter cet accompagnement opérationnel.",
     read: "Lire l’article"
   },
   es: {
     title: "Asistencia virtual en italiano | Blog y recursos | Noemi Tomassetti",
-    heading: "Organiza mejor tu trabajo con Italia",
-    introduction: "Guías sobre asistencia virtual en italiano, gestión del correo, back office y atención escrita al cliente, además de traducción y comunicación profesional para trabajar con Italia.",
+    heading: "Asistencia virtual para trabajar con el mercado italiano",
+    introduction: "Guías para profesionales y pequeñas empresas que ya trabajan con Italia o se preparan para entrar en el mercado italiano. Aprende a organizar la secretaría a distancia, el correo, el back office y las comunicaciones escritas en italiano. La traducción y la localización complementan este apoyo operativo.",
     read: "Leer el artículo"
   }
 };
