@@ -107,7 +107,7 @@ export const TRANSLATION_SAMPLES_EXPANSION_B: TranslationDeepCase[] = [
       "it": "Una scheda prodotto originale per un accessorio da scrivania deve essere tradotta per il mercato italiano, mantenendo specifiche e limitazioni senza introdurre qualità non documentate.",
       "en": "A complete original product listing for the Italian market, with factual specifications and no unsupported claims.",
       "fr": "Traduction d'une fiche produit complète en italien, sans arguments publicitaires inventés.",
-      "es": "Adaptación italiana de una ficha completa sin promesas inventadas."
+      "es": "Adaptación italiana de una ficha completa sin promesas no verificadas."
     },
     "source": [
       "FICHE PRODUIT — ORGANISEUR DE BUREAU MODULAIRE\n\nUn espace de travail plus facile à organiser. Cet organiseur de bureau est composé de trois compartiments séparables, destinés à accueillir des carnets, des stylos et de petits accessoires courants. Son format compact convient à une table de travail de taille réduite, à condition de disposer d'une surface stable et plane.",
