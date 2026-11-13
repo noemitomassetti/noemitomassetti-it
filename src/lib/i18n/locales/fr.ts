@@ -185,7 +185,7 @@ export const frLocale: TranslationDictionary = {
         desc: 'Secrétariat, suivi des commandes, back-office et relation client écrite : ces services restent disponibles pour les clients internationaux, selon le périmètre convenu.',
       },
     ],
-    badgeNote: 'Formation linguistique : diplôme en médiation linguistique (110/110 e lode) et master universitaire en traduction spécialisée',
+    badgeNote: 'Formation linguistique : diplôme en médiation linguistique (110/110 e lode) et master en traduction spécialisée (60 CFU)',
   },
   productized: {
     tag: 'FORMULES DE COLLABORATION', title: 'Des missions ciblées, des livrables concrets',
@@ -391,7 +391,7 @@ export const frLocale: TranslationDictionary = {
       },
       {
         period: 'Spécialisation universitaire',
-        role: 'Master Universitaire de Ier niveau en Traduction Spécialisée – langue anglaise',
+        role: 'Master en traduction spécialisée (60 CFU) – langue anglaise',
         detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1 500 heures · 60 CFU/crédits ECTS · épreuve finale validée. Domaines littéraire, juridique, économique, technologique et scientifique.',
       },
       {
