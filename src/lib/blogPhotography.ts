@@ -120,4 +120,19 @@ export const BLOG_PHOTOGRAPHS: Readonly<Record<number,BlogPhotograph>> = {
 
 export const BLOG_PHOTO_ATTRIBUTION_LABEL:Record<Language,string>={
   it:"Fotografia",en:"Photograph",fr:"Photographie",es:"Fotografía",
+
+  15: {
+    url: "https://images.unsplash.com/photo-1743796055651-41c743ff2465?auto=format&fit=crop&w=1200&q=75",
+    photographer: "MJ Duford",
+    sourceUrl: "https://unsplash.com/photos/person-is-working-on-a-laptop-and-writing-in-a-notebook-45u1mboQtQE",
+    alt: {it:"Persona che scrive su un quaderno accanto alla tastiera del computer",en:"Person writing notes in a notebook beside a laptop keyboard",fr:"Personne prenant des notes dans un carnet à côté d'un ordinateur",es:"Persona escribiendo notas en un cuaderno junto a un ordenador portátil"},
+    license: "Unsplash License",
+  },
+  16: {
+    url: "https://images.unsplash.com/photo-1762341112870-1eb70d45b23e?auto=format&fit=crop&w=1200&q=75",
+    photographer: "Zulfugar Karimov",
+    sourceUrl: "https://unsplash.com/photos/person-writing-on-clipboard-at-desk-with-laptop-Y2NR5WmOPDA",
+    alt: {it:"Persona che controlla documenti su una cartellina accanto al computer",en:"Person checking information on a clipboard beside a laptop",fr:"Personne vérifiant des documents sur un porte-bloc à côté d'un ordinateur",es:"Persona revisando documentos en una carpeta junto a un portátil"},
+    license: "Unsplash License",
+  },
 };
