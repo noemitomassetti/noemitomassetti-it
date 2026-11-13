@@ -14,7 +14,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "inbox-calendar-triage",
       "email-inbox-italy-routing",
-      "existing-customer-multilingual-email-pack"
+      "existing-customer-multilingual-email-pack",
+      "inbox-handover-cover-full"
     ]
   },
   {
@@ -27,7 +28,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "calendar-conflict-timezone-confirmations",
       "inbox-calendar-triage",
-      "multilingual-course-secretariat-schedule"
+      "multilingual-course-secretariat-schedule",
+      "diary-conflict-multilingual-rebooking"
     ]
   },
   {
@@ -41,7 +43,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "customer-care-escalations",
       "international-client-italian-aftercare",
       "italian-customer-service-multilingual-followup",
-      "existing-customer-multilingual-email-pack"
+      "existing-customer-multilingual-email-pack",
+      "written-customer-complaint-four-language-response"
     ]
   },
   {
@@ -54,7 +57,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "order-entry-price-list",
       "customer-record-data-entry-audit",
-      "approved-quotes-order-variations"
+      "approved-quotes-order-variations",
+      "orders-multi-item-exception-control"
     ]
   },
   {
@@ -67,7 +71,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "commercial-quote-from-approved-pricelist",
       "approved-quotes-order-variations",
-      "order-entry-price-list"
+      "order-entry-price-list",
+      "orders-multi-item-exception-control"
     ]
   },
   {
@@ -80,7 +85,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "customer-record-data-entry-audit",
       "order-entry-price-list",
-      "information-research-verifiable-source-matrix"
+      "information-research-verifiable-source-matrix",
+      "orders-multi-item-exception-control"
     ]
   },
   {
@@ -93,7 +99,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "shared-drive-version-control",
       "digital-archive-duplicates-access-matrix",
-      "digital-tools-request-workflow"
+      "digital-tools-request-workflow",
+      "shared-drive-handover-client-documents"
     ]
   },
   {
@@ -106,7 +113,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "online-course-secretariat",
       "multilingual-course-secretariat-schedule",
-      "course-information-source-audit"
+      "course-information-source-audit",
+      "course-participant-support-complete-pack"
     ]
   },
   {
@@ -132,7 +140,9 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "digital-tools-request-workflow",
       "inbox-calendar-triage",
-      "shared-drive-version-control"
+      "shared-drive-version-control",
+      "inbox-handover-cover-full",
+      "shared-drive-handover-client-documents"
     ]
   },
   {
