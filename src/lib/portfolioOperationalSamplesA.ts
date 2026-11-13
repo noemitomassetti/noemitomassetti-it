@@ -257,6 +257,22 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Réponse empathique, collecte limitée et aucun remplacement promis.",
           "es": "Respuesta empática, datos mínimos y sin prometer sustitución."
         }
+      },
+      {
+        "title": {
+          "it": "Registro completo di gestione e comunicazioni di verifica",
+          "en": "Complete support log and follow-up communications",
+          "fr": "Registre de suivi et communications de vérification",
+          "es": "Registro de seguimiento y comunicaciones de comprobación"
+        },
+        "language": "it",
+        "content": "ESEMPIO OPERATIVO ORIGINALE — DATI INTERAMENTE INVENTATI\nScenario: negozio online immaginario, richieste di tre clienti già esistenti. Nessuna email è stata inviata; i dati su stock, resi e rimborsi non sono confermati.\n\nREGISTRO DELLE PRATICHE\nCC-201 | Disponibilità finitura sabbia | Priorità media | Referente: magazzino | Stato: VERIFICA IN CORSO | Prossimo passo: richiedere conferma della giacenza.\nCC-202 | Informazioni sul reso | Priorità media | Referente: assistenza/resi | Stato: IN ATTESA DI RIFERIMENTI | Prossimo passo: verificare identificativo dell'ordine e condizioni approvate.\nCC-203 | Articolo arrivato danneggiato | Priorità alta | Referente: responsabile assistenza | Stato: DA VALUTARE | Prossimo passo: raccogliere esclusivamente le immagini necessarie e richiedere istruzioni.\n\nEMAIL AGGIUNTIVA — CC-202, BOZZA DA APPROVARE\nOggetto: La sua richiesta di reso — informazioni necessarie\nGentile cliente,\ngrazie per averci contattato. Abbiamo registrato la sua richiesta relativa all'articolo acquistato. Per verificare la pratica avremmo bisogno del riferimento dell'ordine e di una breve descrizione della situazione.\nUna volta ricevute queste informazioni, potremo sottoporle al reparto competente e fornirle indicazioni basate sulle condizioni applicabili. Al momento non possiamo confermare l'accettazione del reso, la modalità di restituzione o un eventuale rimborso.\nLa invitiamo a non inviare dati di pagamento o documenti personali non richiesti.\nCordiali saluti,\nServizio clienti\n\nNOTA INTERNA PER CC-203\nSegnalazione: prodotto potenzialmente danneggiato alla consegna. Non suggerire che il danno sia stato causato dal trasporto prima dell'esame. Non chiedere fotografie contenenti informazioni personali non necessarie. Annotare la priorità e il responsabile; preparare un messaggio che riconosca la segnalazione e indichi la verifica successiva, senza promettere sostituzioni o rimborsi.\n\nRIEPILOGO AL RESPONSABILE — BOZZA NON INVIATA\nOggetto: Tre richieste clienti in lavorazione — quadro delle verifiche\nBuongiorno,\nho classificato tre richieste ricevute nello scenario dimostrativo e predisposto le risposte scritte. CC-201 richiede un controllo della disponibilità; CC-202 necessita del riferimento d'ordine e della verifica delle condizioni di reso; CC-203 richiede una valutazione prioritaria da parte del responsabile. Nessuna risposta è stata spedita e nessun ordine, rimborso o dato contabile è stato modificato.\nLe bozze sono pronte per il controllo. Prima dell'invio occorre validare le informazioni di stock, le procedure applicabili e le autorizzazioni previste.\nCordiali saluti,\nSegreteria assistenza clienti\n\nESITO: tre ticket descritti e tracciati; quattro bozze/esempi di comunicazione disponibili nell'intero dossier; decisioni economiche e amministrative riservate ai referenti competenti.",
+        "explanation": {
+          "it": "Registro unico con tre ticket, bozze complete, decisioni riservate e nota di consegna al responsabile.",
+          "en": "One consolidated case log, with written replies, escalation rules and a complete handover note.",
+          "fr": "Registre des demandes, réponses rédigées et note de transmission au responsable.",
+          "es": "Registro de consultas, respuestas redactadas y entrega al responsable."
+        }
       }
     ],
     "qualityChecks": [
@@ -395,6 +411,22 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "en": "The handover makes verified facts, outstanding exceptions and decision authority explicit.",
           "fr": "La note précise les vérifications, les points ouverts et l’autorisation nécessaire.",
           "es": "La nota distingue datos verificados, pendientes y autorización."
+        }
+      },
+      {
+        "title": {
+          "it": "Riepilogo ordine e verifica anomalie: rapporto completo",
+          "en": "Full order and pricing discrepancy report",
+          "fr": "Compte rendu des commandes et écarts tarifaires",
+          "es": "Informe completo de pedidos y diferencias de precios"
+        },
+        "language": "it",
+        "content": "RAPPORTO ORDINE ORD-058 — ESEMPIO ORIGINALE, NESSUN ORDINE REALE\nListino di prova L-2026-11, v03. Cliente C-058 già esistente nello scenario. Il listino e i codici sono tutti inventati.\n\nDATI REGISTRATI\nRiga 1 | AR-101 | Quantità 2 | Prezzo approvato nello scenario: 22,50 € | 2 × 22,50 = 45,00 € | Codice e quantità coerenti.\nRiga 2 | AR-205 | Quantità 1 | Prezzo approvato nello scenario: 68,00 € | 1 × 68,00 = 68,00 € | Codice e quantità coerenti.\nRiga 3 | AR-3?0 | Quantità da verificare | Prezzo: non applicabile | Non calcolata | Codice incompleto, riga sospesa.\nSomma delle sole righe verificate: 113,00 €, prima di eventuali trasporto, imposte e condizioni non note. Il valore non equivale a un totale d'ordine definitivo.\n\nCONTROLLO DELLE ANOMALIE\nA-01, priorità alta: codice AR-3?0 incompleto, nessuna sostituzione automatica con AR-310.\nA-02, priorità alta: quantità della terza riga non confermata; nessun calcolo consentito.\nA-03, priorità media: trasporto e termini di consegna assenti dalla richiesta.\nA-04, priorità media: verificare che la versione del listino utilizzata sia quella autorizzata per la pratica.\nA-05, priorità alta: l'approvazione commerciale dell'ordine non risulta presente.\n\nEMAIL DI CHIARIMENTO — BOZZA INTERNA NON INVIATA\nOggetto: ORD-058 — verifica di un codice e delle condizioni\nBuongiorno,\ndurante il controllo della richiesta ORD-058 abbiamo rilevato che la terza riga riporta un codice incompleto («AR-3?0») e non consente di associare con certezza l'articolo al listino di riferimento.\nLe prime due righe sono coerenti con il listino dimostrativo L-2026-11 v03 e presentano una somma parziale di 113,00 €, esclusi gli elementi non ancora definiti.\nPrima di proseguire avremmo bisogno di confermare il codice corretto, la quantità della terza riga e le condizioni di consegna applicabili. Nessun prezzo è stato modificato e nessun ordine è stato confermato.\nCordiali saluti,\nBack office\n\nNOTA DI CONSEGNA AL RESPONSABILE\nHo predisposto il prospetto delle righe verificabili e l'elenco delle questioni aperte. Chiedo l'approvazione della richiesta di chiarimento prima dell'invio. Il registro rimane nello stato «in verifica». Non vengono emessi documenti fiscali, effettuati ordini o negoziate condizioni economiche.\n\nESITO: tabella controllata, calcoli espliciti, anomalie classificate e messaggi di lavoro pronti per la supervisione.",
+        "explanation": {
+          "it": "Registro delle righe, controllo aritmetico, richiesta di chiarimento e report da consegnare al referente.",
+          "en": "Order-line checks, calculations, clarification request and a handover report.",
+          "fr": "Contrôle des lignes, calculs, question à clarifier et rapport au responsable.",
+          "es": "Comprobación de líneas, cálculos, aclaraciones e informe para el responsable."
         }
       }
     ],
@@ -535,6 +567,22 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "La procédure rend le classement durable et vérifiable.",
           "es": "El procedimiento permite mantener el orden de forma continua."
         }
+      },
+      {
+        "title": {
+          "it": "Inventario documentale e verbale di riordino",
+          "en": "Document inventory and reorganisation handover",
+          "fr": "Inventaire documentaire et compte rendu de classement",
+          "es": "Inventario de documentos e informe de reorganización"
+        },
+        "language": "it",
+        "content": "ARCHIVIO DIGITALE DIMOSTRATIVO — NON CONNESSO A UN ACCOUNT REALE\nLo scenario ipotizza 42 file di prova. L'estratto seguente mostra dieci registrazioni complete con origine, collocazione e stato. Nessun file reale è stato trasferito o eliminato.\n\nINVENTARIO E PROPOSTA DI RINOMINA\n01 | preventivo ultimo.pdf → 2026-11-03_alpha_preventivo_v01.pdf | 01_RICHIESTE | Verificare approvazione.\n02 | preventivo ultimo2.pdf → 2026-11-05_alpha_preventivo_v02.pdf | 01_RICHIESTE | Bozza successiva, non approvata.\n03 | catalogo finale.docx → 2026-11-04_alpha_catalogo_v01.docx | 02_MATERIALI | Versione da controllare.\n04 | catalogo finale_ok.docx → 2026-11-06_alpha_catalogo_v02.docx | 02_MATERIALI | Confermare lo stato di approvazione.\n05 | logo grande.png → 2026-11-01_alpha_logo_originale.png | 02_MATERIALI | Originale da conservare.\n06 | logo sito.png → 2026-11-02_alpha_logo_web_v01.png | 03_LAVORAZIONE | Derivato.\n07 | mail cliente.txt → 2026-11-07_alpha_nota_corrispondenza_v01.txt | 01_RICHIESTE | Accesso limitato.\n08 | faq aggiornata.docx → 2026-11-08_alpha_faq_v02.docx | 03_LAVORAZIONE | In revisione.\n09 | report-v1.pdf → 2026-11-09_alpha_report_v01.pdf | 04_APPROVAZIONI | Da approvare.\n10 | consegna.pdf → 2026-11-10_alpha_consegna_v01.pdf | 05_CONSEGNE | Non inviata.\n\nREGISTRO DELLE ANOMALIE\nD-01: due file chiamati «ultimo» non indicano quale sia quello approvato.\nD-02: «finale_ok» non vale come conferma documentata del titolare.\nD-03: il logo originale deve rimanere distinto dal file modificato per il web.\nD-04: la cartella delle consegne contiene un file che, nella simulazione, non risulta ancora inviato.\nD-05: il documento di corrispondenza richiede permessi limitati.\n\nEMAIL DI CONSEGNA — BOZZA DIMOSTRATIVA\nOggetto: Proposta di riordino dell'archivio — versioni e permessi\nBuongiorno,\nho predisposto una classificazione per tipologia e stato dei documenti del progetto Alpha, con una convenzione uniforme per i nomi dei file. La proposta distingue i file originali dalle copie di lavoro e dalle versioni da sottoporre ad approvazione.\nPrima di applicare qualunque modifica all'archivio è necessario confermare quale preventivo sia valido, se i testi del catalogo siano stati approvati e a chi debba essere consentito l'accesso alle comunicazioni del cliente. Il file collocato in «consegne» resta contrassegnato come non inviato.\nNon ho eliminato documenti, modificato autorizzazioni né condiviso materiale con terzi.\nCordiali saluti,\nSegreteria organizzativa\n\nCONSEGNA: inventario, proposta di struttura cartelle, registro anomalie e modello di comunicazione. La verifica dell'effettiva configurazione dei permessi spetta al responsabile autorizzato.",
+        "explanation": {
+          "it": "Esempio concreto di registrazione delle versioni, collocazione dei file e richieste di approvazione.",
+          "en": "Concrete example of version tracking, file placement and approvals.",
+          "fr": "Suivi des versions, classement et validations nécessaires.",
+          "es": "Control de versiones, clasificación y aprobaciones necesarias."
+        }
       }
     ],
     "qualityChecks": [
@@ -673,6 +721,22 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "en": "Separates logistics from teaching and adds approval gates.",
           "fr": "Distingue logistique et pédagogie avec étapes de validation.",
           "es": "Distingue coordinación y docencia con controles antes de enviar."
+        }
+      },
+      {
+        "title": {
+          "it": "Registro iscritti e comunicazioni: pacchetto operativo",
+          "en": "Participant log and complete course correspondence",
+          "fr": "Suivi des inscrits et communications complètes",
+          "es": "Registro de inscritos y comunicaciones completas"
+        },
+        "language": "it",
+        "content": "PACCHETTO DI SEGRETERIA PER WEBINAR — SCENARIO INVENTATO\nEvento di prova: «Comunicazioni professionali più chiare», 12 novembre, ore 17:00–18:30 (Europe/Rome). Nessun webinar reale è stato programmato, nessuna iscrizione acquisita e nessuna email inviata.\n\nREGISTRO DI CINQUE PARTECIPANTI GIÀ ISCRITTI\nP-01 | Iscrizione fittizia registrata | Istruzioni da verificare | Nessuna segnalazione.\nP-02 | Iscrizione fittizia registrata | Chiede conferma dell'orario | Bozza pronta.\nP-03 | Iscrizione fittizia registrata | Non trova il collegamento | Chiedere al referente il link approvato.\nP-04 | Iscrizione fittizia registrata | Chiede materiali successivi | Autorizzazione da verificare.\nP-05 | Iscrizione fittizia registrata | Domanda sui contenuti | Inoltro alla formatrice.\n\nEMAIL COMPLETA — CHIARIMENTO ORARIO\nOggetto: Orario del webinar — richiesta ricevuta\nBuongiorno,\ngrazie per il suo messaggio. Nel programma dimostrativo l'incontro è previsto per il 12 novembre dalle 17:00 alle 18:30, ora italiana. Prima di inviare una conferma definitiva dobbiamo verificare con l'organizzatrice che data, orario e istruzioni di accesso siano quelli aggiornati.\nLe daremo riscontro dopo tale verifica. Se ha ricevuto comunicazioni diverse, può indicarcelo rispondendo a questa email.\nCordiali saluti,\nSegreteria organizzativa\n\nEMAIL COMPLETA — RICHIESTA DI MATERIALI\nOggetto: Materiali del webinar — informazioni disponibili\nBuongiorno,\nabbiamo registrato la sua richiesta relativa ai materiali dell'incontro. Stiamo verificando con l'organizzatrice quali documenti possano essere distribuiti ai partecipanti e attraverso quale canale.\nNon possiamo confermare la disponibilità di una registrazione o di altri materiali finché non riceviamo le indicazioni approvate. Non è necessario inviare ulteriori dati personali.\nCordiali saluti,\nSegreteria organizzativa\n\nMEMO ALLA FORMATRICE\nHo organizzato cinque registrazioni di prova. Sono aperte tre verifiche: conferma dell'orario per P-02, disponibilità del collegamento per P-03 e autorizzazione dei materiali per P-04. La domanda didattica di P-05 richiede una risposta da parte sua. Le due email sono pronte per l'approvazione; non sono state spedite.\nPrima dell'evento: verificare elenco iscritti, fuso orario, link, eventuali accessibilità e materiali consentiti. Dopo l'evento: condividere esclusivamente le risorse approvate e registrare le richieste residue.\nNon è stata svolta attività didattica, promozionale o di reclutamento.",
+        "explanation": {
+          "it": "Tracciamento organizzativo dei partecipanti già iscritti, bozze email e relazione per la formatrice.",
+          "en": "Organisation for existing registrants, complete email drafts and a trainer handover.",
+          "fr": "Organisation des personnes inscrites, courriels et compte rendu à la formatrice.",
+          "es": "Organización de inscritos, borradores y entrega al formador."
         }
       }
     ],
