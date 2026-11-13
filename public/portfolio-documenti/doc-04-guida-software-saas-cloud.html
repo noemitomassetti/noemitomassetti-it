@@ -145,14 +145,21 @@
       .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
       .actions, .btn { display: none; }
     }
-  </style>
+  
+    /* Wide source/target tables remain readable on narrow screens without resizing the whole page. */
+    @media (max-width: 640px) {
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .comparison-grid, .dual-clause { grid-template-columns: minmax(0, 1fr); }
+      .card-block, .dual-clause > div { min-width: 0; }
+    }
+</style>
 </head>
 <body>
 <nav aria-label="Guide multilingue / Multilingual reading guide" style="padding:12px 16px;text-align:center;background:#103c35;color:#fff;font:600 14px/1.7 system-ui,sans-serif"><span style="margin-right:12px">Lettura guidata · Reading guide · Guide de lecture · Guía:</span> <a lang="it" href="/it/esempi-di-lavoro/esempio/04" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">IT</a> <a lang="en" href="/work-examples/sample/04" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">EN</a> <a lang="fr" href="/fr/exemples-de-projets/exemple/04" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">FR</a> <a lang="es" href="/es/ejemplos-de-trabajo/ejemplo/04" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">ES</a></nav>
   <div class="container">
     <div class="badge">Esempio di Lavoro Dimostrativo · 04</div>
-    <h1>Guida Utente e Stringhe UI: Localizzazione Piattaforma SaaS Cloud</h1>
-    <div class="subtitle">Adattamento tecnologico EN → IT con gestione vincoli di layout e placeholder di variabili</div>
+    <h1>Testi per software: microtesti e guida dimostrativa EN → IT</h1>
+    <div class="subtitle">Pulsanti, messaggi di sistema e un paragrafo di guida: esempi di traduzione e localizzazione, non sviluppo software</div>
 
     <div class="disclaimer">
       <strong>Nota di Trasparenza e Tutela della Riservatezza:</strong>
@@ -162,11 +169,11 @@
     <div class="meta-box">
       <div>
         <strong>Ambito Disciplinare</strong>
-        Tecnologico & Software Localization (Master)
+        Traduzione specialistica di testi tecnologici
       </div>
       <div>
         <strong>Formato File</strong>
-        JSON / PO / Guida Markdown
+        Estratti di testi e stringhe, non file tecnici implementati
       </div>
       <div>
         <strong>Vincoli Operativi</strong>
@@ -174,11 +181,11 @@
       </div>
       <div>
         <strong>Localizzatrice</strong>
-        Noemi Tomassetti · Traduttrice Tecnologica
+        Noemi Tomassetti · Esempio di traduzione specialistica
       </div>
     </div>
 
-    <h2>1. Matrice di Localizzazione Stringhe UI (JSON)</h2>
+    <h2>1. Esempi di localizzazione di stringhe</h2>
     <table>
       <thead>
         <tr>
@@ -216,15 +223,60 @@
       </tbody>
     </table>
 
-    <h2>2. Estratto Guida Utente: Configurazione Single Sign-On (SSO)</h2>
-    <div style="background: var(--bg); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px; font-size: 0.9rem;">
-      <h3 style="margin-top: 0; color: var(--primary);">Passo 3: Assegnazione dei ruoli e provisioning Just-In-Time (JIT)</h3>
-      <p>
-        Una volta configurato il provider di identità (IdP) conforme allo standard SAML 2.0, abilitare l'opzione <em>«Attiva provisioning automatico utenti»</em>. I nuovi collaboratori che accedono con il dominio aziendale verificato riceveranno automaticamente il ruolo predefinito di <strong>Membro Standard</strong>, salvo diversa regola di mappatura impostata nel pannello di sicurezza.
-      </p>
+    <h2>2. Guida utente: originale inglese e proposta italiana</h2>
+    <p>La funzione descritta è predisposta per l'esempio per questa simulazione; non sono state configurate piattaforme né verificati permessi di accesso reali.</p>
+    <div class="comparison-grid">
+      <div class="card-block"><strong>Original EN — Step 3: Assign roles and enable just-in-time provisioning</strong><p>After configuring a SAML 2.0-compatible identity provider (IdP), enable the option labelled “Automatically provision users”. Team members who sign in using the verified company domain will receive the default Member role, unless a different role-mapping rule has been configured in the security settings. Review the assigned role before granting access to shared projects.</p></div>
+      <div class="card-block"><strong>Traduzione IT — Passaggio 3: assegnazione dei ruoli e creazione automatica degli utenti</strong><p>Dopo aver configurato un provider di identità (IdP) compatibile con SAML 2.0, attiva l'opzione «Crea automaticamente gli utenti». I collaboratori che accedono con il dominio aziendale verificato ricevono il ruolo predefinito di Membro, salvo diversa regola di assegnazione definita nelle impostazioni di sicurezza. Controlla il ruolo assegnato prima di autorizzare l'accesso ai progetti condivisi.</p></div>
     </div>
-
-    <div class="actions">
+    <h2>3. Controlli editoriali dell'estratto</h2><ul><li>Conservati i riferimenti tecnici a IdP e SAML 2.0.</li><li>La procedura non presuppone di aver testato il prodotto o configurato un account reale.</li><li>Le etichette di interfaccia devono corrispondere ai nomi effettivi delle funzioni prima di essere utilizzate nella documentazione di un software.</li></ul>
+<section aria-label="Matrice estesa della localizzazione"><h2>4. Matrice estesa: dieci ulteriori stringhe EN → IT</h2><p>Le etichette appartengono a un'applicazione interamente immaginaria. I segnaposto fra parentesi graffe devono mantenere lo stesso nome nell'originale e nella traduzione; il loro comportamento andrebbe verificato nel prodotto prima di utilizzare i testi.</p><table><thead><tr><th>Chiave</th><th>English · Fonte</th><th>Italiano · Proposta</th></tr></thead><tbody>
+<tr><td>btn_save_changes</td><td>Save changes</td><td>Salva le modifiche</td></tr>
+<tr><td>btn_cancel</td><td>Cancel</td><td>Annulla</td></tr>
+<tr><td>msg_unsaved_changes</td><td>You have unsaved changes. Leave without saving?</td><td>Hai modifiche non salvate. Vuoi uscire senza salvarle?</td></tr>
+<tr><td>msg_upload_progress</td><td>Uploading {count} of {total} files…</td><td>Caricamento di {count} file su {total}…</td></tr>
+<tr><td>msg_upload_complete</td><td>{count} files uploaded successfully.</td><td>Caricamento completato: {count} file.</td></tr>
+<tr><td>msg_permission_denied</td><td>You do not have permission to view this folder.</td><td>Non hai i permessi per visualizzare questa cartella.</td></tr>
+<tr><td>msg_session_expired</td><td>Your session has expired. Sign in again to continue.</td><td>La sessione è scaduta. Accedi di nuovo per continuare.</td></tr>
+<tr><td>label_last_updated</td><td>Last updated {date}</td><td>Ultimo aggiornamento: {date}</td></tr>
+<tr><td>msg_connection_lost</td><td>Connection lost. Check your internet connection and try again.</td><td>Connessione interrotta. Controlla la connessione Internet e riprova.</td></tr>
+<tr><td>confirm_delete</td><td>Delete {name}? This action cannot be undone.</td><td>Eliminare {name}? L'operazione non può essere annullata.</td></tr>
+</tbody></table></section>
+<section><h2>5. Guida utente bilingue: percorso completo di prova</h2><div class="comparison-grid"><div class="card-block"><strong>English · Original instructions</strong><p><strong>Before you begin.</strong> Make sure that you have been assigned a role with the appropriate permissions. The names shown below refer to an illustrative interface and may not match the labels of any real software.</p><p><strong>Step 1 — Open the workspace.</strong> Sign in using the access method provided by your organisation. Choose the workspace you have been authorised to use. If you cannot see it, do not request another user's credentials; contact the administrator.</p><p><strong>Step 2 — Review folder access.</strong> Open the folder list and check the access indicator beside each project. Users with the Member role can see only the folders enabled for them. If you need additional access, submit a request to the administrator rather than changing permission settings yourself.</p><p><strong>Step 3 — Upload a document.</strong> Select the destination folder, choose Upload and select the relevant file. Wait for the confirmation message before closing the window. If the connection is interrupted, check whether the file is already present before trying again.</p><p><strong>Step 4 — Check the version.</strong> Open the file details and compare the name, date and version label with the approved project register. Avoid replacing an approved file with an unreviewed draft.</p><p><strong>Step 5 — Request approval.</strong> Choose the authorised reviewer and send the review request only if you have permission to do so. Do not treat the document as approved until that reviewer has confirmed the decision.</p></div><div class="card-block"><strong>Italiano · Traduzione e localizzazione</strong><p><strong>Prima di iniziare.</strong> Verifica che ti sia stato assegnato un ruolo con i permessi necessari. I nomi delle funzioni citate di seguito appartengono a un'interfaccia immaginaria e potrebbero non corrispondere a quelli di alcun software reale.</p><p><strong>Passaggio 1 — Apri lo spazio di lavoro.</strong> Accedi con la modalità prevista dalla tua organizzazione. Seleziona lo spazio di lavoro per cui hai ricevuto l'autorizzazione. Se non lo trovi, non chiedere le credenziali di un'altra persona: contatta l'amministratore.</p><p><strong>Passaggio 2 — Controlla l'accesso alle cartelle.</strong> Apri l'elenco delle cartelle e verifica l'indicazione dei permessi accanto a ciascun progetto. Gli utenti con ruolo Membro vedono soltanto le cartelle abilitate. Se hai bisogno di ulteriori autorizzazioni, invia una richiesta all'amministratore senza modificare autonomamente le impostazioni.</p><p><strong>Passaggio 3 — Carica un documento.</strong> Seleziona la cartella di destinazione, scegli «Carica» e indica il file pertinente. Prima di chiudere la finestra, attendi il messaggio di conferma. Se la connessione si interrompe, verifica se il file è già presente prima di ripetere l'operazione.</p><p><strong>Passaggio 4 — Controlla la versione.</strong> Apri i dettagli del file e confronta nome, data e versione con il registro del progetto approvato. Evita di sostituire un documento approvato con una bozza non revisionata.</p><p><strong>Passaggio 5 — Richiedi l'approvazione.</strong> Seleziona la persona autorizzata alla revisione e invia la richiesta soltanto se disponi dei permessi previsti. Il documento non deve essere considerato approvato finché il revisore non ha confermato la decisione.</p></div></div></section>
+<section><h2>6. Registro editoriale e verifiche necessarie</h2><table><thead><tr><th>Ambito</th><th>Decisione linguistica</th><th>Verifica contestuale</th></tr></thead><tbody><tr><td>Pulsanti e stati</td><td>«Carica» per l'azione, «Caricamento» per l'avanzamento</td><td>Confrontare con i comandi effettivamente presenti</td></tr><tr><td>Permessi</td><td>Distinguere «visualizzare», «modificare», «approvare»</td><td>Verificare la definizione reale dei ruoli</td></tr><tr><td>Segnaposto</td><td>Conservare {count}, {total}, {date} e {name}</td><td>Testare la sostituzione delle variabili</td></tr><tr><td>Conferma invio</td><td>Separare stato di avanzamento ed esito finale</td><td>Mostrare il successo solo dopo conferma tecnica</td></tr><tr><td>Eliminazione</td><td>Segnalare la possibile irreversibilità</td><td>Verificare che l'operazione sia davvero irreversibile</td></tr></tbody></table><p><strong>Elaborato prodotto:</strong> quattordici stringhe bilingui, istruzioni utente bilingui in cinque passaggi e registro delle scelte. Si tratta di contenuto editoriale: nessuna funzionalità software è stata sviluppata, configurata o collaudata.</p></section>
+    <h2>4. Guida utente completa: gestione delle richieste di accesso</h2><p><strong>Scenario:</strong> «CloudSync Enterprise» è un'applicazione dimostrativa. Le istruzioni sono un esercizio di localizzazione della documentazione; non sono state verificate su un software reale e non devono essere eseguite come procedura di sicurezza.</p>
+<div class="comparison-grid"><div class="card-block"><strong>Source guide · English (UK)</strong>
+<p><strong>Before you begin.</strong> Ask the account administrator to confirm which team members need access to a shared project. Make sure that the identity provider and the list of available roles have already been configured by the authorised technical team. Do not request passwords from other users.</p>
+<p><strong>Step 1 — Review the request.</strong> Open the access-request list and select the entry you need to examine. Check the project name, the requested role and the reason for access. If any information is missing, mark the request as pending clarification rather than approving it.</p>
+<p><strong>Step 2 — Check the proposed permissions.</strong> Compare the requested role with the permissions described in the administrator's approved role matrix. A project editor may be able to modify shared files, while a viewer may only read them. Do not treat this example as a complete security policy.</p>
+<p><strong>Step 3 — Submit for approval.</strong> When the request is complete, send it to the authorised administrator for review. The request remains pending until the administrator has approved or declined it. Preparing a request is not the same as granting access.</p>
+<p><strong>Step 4 — Read the confirmation.</strong> If the system reports that the approval has been recorded, check that the request identifier and project name are correct. If the status remains pending, do not tell the user that access has been granted.</p>
+<p><strong>Step 5 — Resolve an error.</strong> If the request cannot be saved, keep the displayed error message and the request identifier. Try again only when the approved procedure allows it; otherwise contact the authorised support contact. Never include passwords or security tokens in a support email.</p>
+<p><strong>After the request.</strong> Record the outcome in the activity log and retain only the information needed for the agreed operational purpose. Where applicable, the technical team should review access permissions periodically.</p>
+</div><div class="card-block"><strong>Guida localizzata · Italiano</strong>
+<p><strong>Prima di iniziare.</strong> Chiedi all'amministratore dell'account di confermare quali collaboratori devono accedere al progetto condiviso. Verifica che il provider di identità e l'elenco dei ruoli siano già stati configurati dal personale tecnico autorizzato. Non richiedere le password degli altri utenti.</p>
+<p><strong>Passaggio 1 — Esamina la richiesta.</strong> Apri l'elenco delle richieste di accesso e seleziona quella da verificare. Controlla il nome del progetto, il ruolo richiesto e la motivazione. Se mancano informazioni, imposta lo stato «In attesa di chiarimenti», senza approvare la richiesta.</p>
+<p><strong>Passaggio 2 — Verifica i permessi proposti.</strong> Confronta il ruolo richiesto con quelli indicati nella matrice di autorizzazioni approvata dall'amministratore. Un collaboratore con ruolo di modifica potrebbe intervenire sui file condivisi, mentre chi dispone di permessi di sola lettura può consultarli. Questo esempio non sostituisce una procedura di sicurezza completa.</p>
+<p><strong>Passaggio 3 — Richiedi l'approvazione.</strong> Quando la richiesta è completa, inoltrala all'amministratore autorizzato. Lo stato rimane «In attesa» finché il responsabile non l'approva o la rifiuta. Preparare una richiesta non equivale a concedere un accesso.</p>
+<p><strong>Passaggio 4 — Controlla la conferma.</strong> Se il sistema segnala che l'approvazione è stata registrata, verifica il codice della richiesta e il nome del progetto. Se lo stato è ancora «In attesa», non comunicare all'utente che l'accesso è stato autorizzato.</p>
+<p><strong>Passaggio 5 — Gestisci un errore.</strong> Se non è possibile salvare la richiesta, annota il messaggio di errore visualizzato e il relativo codice. Ripeti l'operazione soltanto se previsto dalla procedura approvata; in caso contrario contatta l'assistenza autorizzata. Non inserire password o codici di sicurezza nei messaggi di supporto.</p>
+<p><strong>Dopo la richiesta.</strong> Registra l'esito nel registro attività e conserva soltanto le informazioni necessarie allo scopo operativo concordato. Dove previsto, il personale tecnico dovrà riesaminare periodicamente le autorizzazioni di accesso.</p>
+</div></div>
+<h2>5. Catalogo delle stringhe di interfaccia — versione ampliata</h2>
+<table><thead><tr><th>Chiave</th><th>Original English</th><th>Italiano proposto</th><th>Nota editoriale</th></tr></thead><tbody>
+<tr><td>request_access</td><td>Request access</td><td>Richiedi accesso</td><td>Azione, non conferma</td></tr>
+<tr><td>request_saved</td><td>Request saved</td><td>Richiesta salvata</td><td>Solo dopo risposta positiva</td></tr>
+<tr><td>approval_pending</td><td>Pending approval</td><td>In attesa di approvazione</td><td>Non indica accesso concesso</td></tr>
+<tr><td>request_declined</td><td>Request declined</td><td>Richiesta rifiutata</td><td>Stato distinto da errore tecnico</td></tr>
+<tr><td>missing_role</td><td>Choose a role before continuing.</td><td>Seleziona un ruolo prima di continuare.</td><td>Istruzione esplicita</td></tr>
+<tr><td>missing_reason</td><td>Explain why access is needed.</td><td>Indica perché è necessario l'accesso.</td><td>Nessun contenuto predisposto per l'esempio</td></tr>
+<tr><td>save_failed</td><td>We couldn't save your request. Try again.</td><td>Non è stato possibile salvare la richiesta. Riprova.</td><td>Evita false conferme</td></tr>
+<tr><td>contact_admin</td><td>Contact your account administrator.</td><td>Contatta l'amministratore dell'account.</td><td>Destinatario chiaro</td></tr>
+<tr><td>view_only</td><td>View only</td><td>Sola lettura</td><td>Denominazione coerente</td></tr>
+<tr><td>edit_access</td><td>Can edit project files</td><td>Può modificare i file del progetto</td><td>Permesso descrittivo</td></tr>
+</tbody></table>
+<h2>6. Scheda finale di consegna e verifiche</h2><p><strong>Materiali prodotti:</strong> guida integrale in inglese e italiano, dieci messaggi di interfaccia aggiuntivi, quattro stringhe tecniche iniziali e controlli terminologici. <strong>Prima dell'uso reale:</strong> confrontare le etichette con il prodotto effettivo, verificare le procedure con il personale tecnico, testare le variabili e i limiti grafici. <strong>Servizio rappresentato:</strong> traduzione e localizzazione di contenuti, non configurazione di sistemi di identità, sviluppo software o amministrazione informatica.</p>
+<div class="actions">
       <a href="/it/esempi-di-lavoro" class="btn btn-secondary">← Torna agli Esempi di Lavoro</a>
       <button onclick="window.print()" class="btn">Stampa / Salva in PDF</button>
     </div>

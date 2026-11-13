@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PortfolioDeepShowcase } from "@/components/PortfolioDeepShowcase";
+import { PortfolioServiceIndex } from "@/components/PortfolioServiceIndex";
+import { PortfolioServiceLibrary } from "@/components/PortfolioServiceLibrary";
 import { useSEO } from "@/hooks/useSEO";
 import { getLanguageFromPath, getLocalizedPath } from "@/lib/i18n/routes";
 import { getPortfolioDocumentPath } from "@/lib/portfolioDocumentPaths";
@@ -31,11 +33,249 @@ import {
   Scale,
   GraduationCap,
   Sparkles,
-  Info,
   Layers,
   ExternalLink,
 } from "lucide-react";
 
+
+const PORTFOLIO_WORK_STEPS = [
+  {
+    "it": [
+      "Ascolto e inquadramento",
+      "Definisco la richiesta, i materiali disponibili e ciò che deve essere chiarito."
+    ],
+    "en": [
+      "Understand the brief",
+      "Establish the request, available material and points that need clarification."
+    ],
+    "fr": [
+      "Comprendre la demande",
+      "Je précise le besoin, les documents disponibles et les points à clarifier."
+    ],
+    "es": [
+      "Entender el encargo",
+      "Defino la solicitud, los materiales disponibles y las dudas por resolver."
+    ]
+  },
+  {
+    "it": [
+      "Preparazione del lavoro",
+      "Scrivo le risposte, organizzo i dati oppure traduco e revisiono i testi."
+    ],
+    "en": [
+      "Prepare the work",
+      "Draft replies, organise information or translate and revise texts."
+    ],
+    "fr": [
+      "Réaliser le travail",
+      "Je rédige les réponses, organise les données ou traduis et révise les textes."
+    ],
+    "es": [
+      "Preparar el trabajo",
+      "Redacto respuestas, organizo datos o traduzco y reviso textos."
+    ]
+  },
+  {
+    "it": [
+      "Controlli di qualità",
+      "Verifico lingua, completezza e coerenza; segnalo dati o autorizzazioni mancanti."
+    ],
+    "en": [
+      "Quality checks",
+      "Check language, completeness and consistency; flag missing facts or approvals."
+    ],
+    "fr": [
+      "Vérifier la qualité",
+      "Je contrôle la langue, la cohérence et les éléments qui nécessitent validation."
+    ],
+    "es": [
+      "Revisar la calidad",
+      "Compruebo lengua, integridad y coherencia; señalo datos pendientes."
+    ]
+  },
+  {
+    "it": [
+      "Consegna e approvazione",
+      "Presento l'elaborato e i punti da confermare prima di eventuali invii esterni."
+    ],
+    "en": [
+      "Handover and approval",
+      "Present the sample and identify what must be approved before external use."
+    ],
+    "fr": [
+      "Remise et validation",
+      "Je présente le document et les points à valider avant toute utilisation externe."
+    ],
+    "es": [
+      "Entrega y aprobación",
+      "Presento el documento y los puntos que deben aprobarse antes de su uso externo."
+    ]
+  }
+] as const;
+
+const PORTFOLIO_SERVICE_EXAMPLES = [
+  {
+    "it": [
+      "Assistenza clienti scritta",
+      "Tre richieste dei clienti, tre risposte email scritte integralmente e un registro dei controlli.",
+      "Leggi le tre risposte"
+    ],
+    "en": [
+      "Written customer care",
+      "Three customer enquiries, three full Italian replies and a case log with the necessary checks.",
+      "Read the three replies"
+    ],
+    "fr": [
+      "Relation client écrite",
+      "Trois demandes, trois réponses complètes en italien et un registre des vérifications.",
+      "Lire les trois réponses"
+    ],
+    "es": [
+      "Atención escrita al cliente",
+      "Tres consultas, tres respuestas completas en italiano y un registro de comprobaciones.",
+      "Leer las tres respuestas"
+    ],
+    "doc": "11"
+  },
+  {
+    "it": [
+      "Segreteria, email e agenda",
+      "Un piano settimanale, messaggi da classificare, appuntamenti da verificare e una bozza di conferma.",
+      "Vedi agenda e corrispondenza"
+    ],
+    "en": [
+      "Secretarial support, email and calendar",
+      "A sample weekly plan, messages to prioritise, appointments to check and a confirmation draft.",
+      "View calendar and correspondence"
+    ],
+    "fr": [
+      "Secrétariat, courriels et agenda",
+      "Planning hebdomadaire, courriels à classer, rendez-vous à confirmer et brouillon de réponse.",
+      "Voir l’agenda et les courriels"
+    ],
+    "es": [
+      "Secretaría, correo y agenda",
+      "Agenda semanal, correos clasificados, citas por confirmar y un borrador de respuesta.",
+      "Ver agenda y correos"
+    ],
+    "doc": "12"
+  },
+  {
+    "it": [
+      "Ordini e back office",
+      "Schede cliente di esempio, registro ordini, controllo del listino e anomalie da segnalare prima dell'approvazione.",
+      "Esamina il registro ordini"
+    ],
+    "en": [
+      "Orders and back-office operations",
+      "Sample customer records, order tracking, price-list checks and discrepancies to flag before approval.",
+      "Inspect the order register"
+    ],
+    "fr": [
+      "Commandes et back-office",
+      "Fiches de suivi, contrôle des commandes et tarifs, anomalies à faire valider.",
+      "Consulter le suivi des commandes"
+    ],
+    "es": [
+      "Pedidos y back office",
+      "Fichas de seguimiento, registro de pedidos, control de precios y discrepancias por validar.",
+      "Consultar el registro de pedidos"
+    ],
+    "doc": "13"
+  },
+  {
+    "it": [
+      "Traduzioni e localizzazione",
+      "Un testo originale in francese, la versione italiana, un glossario e le scelte terminologiche spiegate.",
+      "Confronta le due versioni"
+    ],
+    "en": [
+      "Translation and localisation",
+      "A French source text, its Italian translation, a glossary and explanations of terminology choices.",
+      "Compare source and translation"
+    ],
+    "fr": [
+      "Traduction et localisation",
+      "Un texte original français, sa traduction italienne, un glossaire et les choix terminologiques expliqués.",
+      "Comparer les deux versions"
+    ],
+    "es": [
+      "Traducción y localización",
+      "Un texto original en francés, su traducción italiana, un glosario y explicaciones terminológicas.",
+      "Comparar ambas versiones"
+    ],
+    "doc": "17"
+  },
+  {
+    "it": [
+      "Scrittura e revisione testi",
+      "Una bozza iniziale, il testo revisionato e le correzioni spiegate, per capire come miglioro chiarezza e tono.",
+      "Guarda il prima e dopo"
+    ],
+    "en": [
+      "Writing and editorial revision",
+      "An original draft, the edited version and explanations of the changes to clarity and tone.",
+      "See the before-and-after"
+    ],
+    "fr": [
+      "Rédaction et révision",
+      "Un brouillon initial, le texte révisé et des explications sur les choix de clarté et de ton.",
+      "Voir l’avant et l’après"
+    ],
+    "es": [
+      "Redacción y revisión",
+      "Un borrador inicial, la versión revisada y comentarios sobre claridad y tono.",
+      "Ver el antes y el después"
+    ],
+    "doc": "10"
+  },
+  {
+    "it": [
+      "Ricerche e confronti informativi",
+      "Una tabella con criteri di confronto, valori di esempio e dati da verificare prima di prendere decisioni.",
+      "Apri la tabella comparativa"
+    ],
+    "en": [
+      "Information research and comparisons",
+      "A criteria-based comparison table with example figures and checks required before any decision.",
+      "Open the comparison table"
+    ],
+    "fr": [
+      "Recherche et comparatifs",
+      "Un tableau de critères, de valeurs d'exemple et de contrôles nécessaires.",
+      "Ouvrir le tableau comparatif"
+    ],
+    "es": [
+      "Investigación y comparativas",
+      "Una tabla de criterios, valores de ejemplo y verificaciones pendientes.",
+      "Abrir la tabla comparativa"
+    ],
+    "doc": "07"
+  },
+  {
+    "it": [
+      "Contenuti per siti web",
+      "Titoli, descrizioni, domande frequenti e inviti all'azione, dal testo inglese alla proposta italiana.",
+      "Leggi i testi prima e dopo"
+    ],
+    "en": [
+      "Website copy and localisation",
+      "Headings, descriptions, FAQs and calls to action, compared between English source and Italian version.",
+      "Read the original and adapted copy"
+    ],
+    "fr": [
+      "Contenus web et adaptation",
+      "Titres, descriptions, FAQ et appels à l’action : comparaison de l’anglais et de l’italien.",
+      "Voir les textes comparés"
+    ],
+    "es": [
+      "Textos web y adaptación",
+      "Títulos, descripciones, preguntas frecuentes y llamadas a la acción en inglés e italiano.",
+      "Ver los textos comparados"
+    ],
+    "doc": "21"
+  }
+] as const;
 
 export default function Portfolio() {
   const location = useLocation();
@@ -57,17 +297,17 @@ export default function Portfolio() {
 
   // SEO configuration
   const titles = {
-    it: "Esempi di Lavoro e Progetti Dimostrativi | Noemi Tomassetti",
-    en: "Work Examples & Demonstration Cases | Noemi Tomassetti",
-    fr: "Exemples de Projets et Études de Cas | Noemi Tomassetti",
-    es: "Ejemplos de Trabajo y Casos Prácticos | Noemi Tomassetti",
+    it: "Portfolio | Esempi di lavoro | Noemi Tomassetti",
+    en: "Italian Virtual Assistance & Back-Office Work Samples | Noemi Tomassetti",
+    fr: "Assistance virtuelle en italien | Exemples de travail | Noemi Tomassetti",
+    es: "Asistencia virtual en italiano | Muestras de trabajo | Noemi Tomassetti",
   };
 
   const descriptions = {
-    it: "Portfolio approfondito: traduzioni professionali IT ↔ EN/FR/ES con testi a fronte, assistenza virtuale, customer care, back office, ricerche, revisioni e contenuti web. Casi dimostrativi.",
-    en: "Detailed IT ↔ EN/FR/ES translation samples, parallel texts, written customer support, operational back office, desk research and website copy. Original fictional dossiers.",
-    fr: "Portfolio détaillé : traductions professionnelles IT ↔ EN/FR/ES, textes comparés, relation client, back-office, recherche documentaire et contenus web. Exemples fictifs.",
-    es: "Portfolio detallado: traducciones profesionales IT ↔ EN/FR/ES, textos paralelos, atención al cliente, back office, investigación y textos web. Ejemplos ficticios.",
+    it: "Campioni di traduzione IT ↔ EN/FR/ES, esempi di comunicazione professionale, localizzazione per l’Italia, segreteria, back office e contenuti digitali. Elaborati originali realizzati per il portfolio.",
+    en: "Original work samples: written customer support, operational back-office records, calendar coordination, content, translation and localisation for professionals working with Italy.",
+    fr: "Travaux originaux : relation client écrite, dossiers de back-office, agenda, contenus professionnels, traduction et localisation pour travailler avec l'Italie.",
+    es: "Trabajos originales: atención escrita, registros de back office, agenda, contenidos profesionales, traducción y localización para trabajar con Italia.",
   };
 
   useSEO({
@@ -79,12 +319,12 @@ export default function Portfolio() {
   });
 
   const categories: { id: PortfolioCategory; label: Record<Language, string>; shortLabel: Record<Language, string>; icon: React.ReactNode }[] = [
-    { id: "all", label: { it: "Tutti i progetti", en: "All Projects", fr: "Tous les projets", es: "Todos los proyectos" }, shortLabel: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
-    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y Localización" }, shortLabel: { it: "Traduzioni", en: "Translation", fr: "Traduction", es: "Traducción" }, icon: <Globe className="w-3.5 h-3.5" /> },
+    { id: "all", label: { it: "Tutti i progetti", en: "All examples", fr: "Tous les exemples", es: "Todas las muestras" }, shortLabel: { it: "Tutti", en: "All", fr: "Tous", es: "Todos" }, icon: <SlidersHorizontal className="w-3.5 h-3.5" /> },
+    { id: "translation", label: { it: "Traduzione & Localizzazione", en: "Translation & Localisation", fr: "Traduction & Localisation", es: "Traducción y localización" }, shortLabel: { it: "Traduzioni", en: "Translation", fr: "Traduction", es: "Traducción" }, icon: <Globe className="w-3.5 h-3.5" /> },
     { id: "research", label: { it: "Ricerche informative & confronti", en: "Informational research & comparisons", fr: "Recherche documentaire et comparaisons", es: "Investigación informativa y comparativas" }, shortLabel: { it: "Ricerche", en: "Research", fr: "Recherche", es: "Investigación" }, icon: <Search className="w-3.5 h-3.5" /> },
-    { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Customer support & operational back office", fr: "Relation client et back-office opérationnel", es: "Atención al cliente y back office operativo" }, shortLabel: { it: "Back office", en: "Back office", fr: "Back-office", es: "Back office" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
-    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y Corrección" }, shortLabel: { it: "Revisione", en: "Writing", fr: "Révision", es: "Redacción" }, icon: <PenTool className="w-3.5 h-3.5" /> },
-    { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus Web & Pages de Destination", es: "Contenidos Web y Landing Pages" }, shortLabel: { it: "Contenuti web", en: "Web copy", fr: "Contenus web", es: "Contenidos web" }, icon: <Layers className="w-3.5 h-3.5" /> },
+    { id: "backoffice", label: { it: "Segreteria & Back Office Operativo", en: "Secretarial support & operational back office", fr: "Secrétariat, relation client et back-office", es: "Secretaría, atención al cliente y back office" }, shortLabel: { it: "Back office", en: "Back office", fr: "Back-office", es: "Back office" }, icon: <Briefcase className="w-3.5 h-3.5" /> },
+    { id: "writing", label: { it: "Scrittura & Revisione", en: "Writing & Revision", fr: "Rédaction & Révision", es: "Redacción y revisión" }, shortLabel: { it: "Revisione", en: "Writing", fr: "Révision", es: "Redacción" }, icon: <PenTool className="w-3.5 h-3.5" /> },
+    { id: "web", label: { it: "Contenuti per Siti & Landing Page", en: "Website & Landing Page Copy", fr: "Contenus web et pages de destination", es: "Contenidos web y páginas de destino" }, shortLabel: { it: "Contenuti web", en: "Web copy", fr: "Contenus web", es: "Contenidos web" }, icon: <Layers className="w-3.5 h-3.5" /> },
   ];
 
 
@@ -144,17 +384,17 @@ export default function Portfolio() {
   const contactPath = getLocalizedPath("contact", lang);
   const browseSections = [
     { id:"tangible-work", number:"01",
-      labels:{it:"Documenti in evidenza",en:"Featured samples",fr:"Exemples à la une",es:"Muestras destacadas"},
-      details:{it:"Una selezione da leggere subito",en:"Start with a curated selection",fr:"Une première sélection à découvrir",es:"Una selección para empezar"} },
+      labels:{it:"Lavori da leggere",en:"Open work samples",fr:"Consulter les exemples",es:"Leer las muestras de trabajo"},
+      details:{it:"Email, traduzioni e documenti concreti",en:"Emails, translations and documents",fr:"Courriels, traductions et documents",es:"Correos, traducciones y documentos"} },
     { id:"portfolio-complete-dossiers", number:"02",
-      labels:{it:"26 dossier approfonditi",en:"26 in-depth dossiers",fr:"26 dossiers détaillés",es:"26 dosieres detallados"},
-      details:{it:"Traduzioni a fronte e processi operativi simulati",en:"Parallel translations and complete workflows",fr:"Traductions en regard et méthodes détaillées",es:"Traducciones en paralelo y procesos completos"} },
+      labels:{it:"Traduzioni e attività operative",en:"Translations and operational tasks",fr:"Traductions et tâches pratiques",es:"Traducciones y tareas prácticas"},
+      details:{it:"Elaborati completi, con ricerca per attività",en:"Search work samples by service",fr:"Recherchez des exemples par prestation",es:"Busca ejemplos por servicio"} },
     { id:"portfolio-legacy-cases", number:"03",
-      labels:{it:"18 casi di metodo",en:"18 methodology cases",fr:"18 études méthodologiques",es:"18 casos metodológicos"},
-      details:{it:"Scelte operative e revisioni commentate",en:"Decisions and editorial notes",fr:"Décisions et commentaires de révision",es:"Decisiones y notas de revisión"} },
+      labels:{it:"Altri esempi commentati",en:"Further annotated examples",fr:"Autres exemples commentés",es:"Más ejemplos comentados"},
+      details:{it:"Contesto, scelte e documenti collegati",en:"Context, decisions and linked documents",fr:"Contexte, choix et documents liés",es:"Contexto, decisiones y documentos relacionados"} },
     { id:"portfolio-document-library", number:"04",
-      labels:{it:"22 documenti consultabili",en:"22 sample documents",fr:"22 documents à consulter",es:"22 documentos de muestra"},
-      details:{it:"File di esempio con contesto multilingue",en:"Full examples with multilingual context",fr:"Documents et explications multilingues",es:"Documentos y explicaciones multilingües"} }
+      labels:{it:"Archivio completo dei documenti",en:"Complete document library",fr:"Bibliothèque des documents",es:"Archivo completo de documentos"},
+      details:{it:"Apri ogni elaborato nella sua versione integrale",en:"Open any complete sample document",fr:"Ouvrez les documents complets",es:"Abre cada documento completo"} }
   ] as const;
 
 
@@ -166,56 +406,85 @@ export default function Portfolio() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
             <GraduationCap className="w-3.5 h-3.5" />
             {lang === "it"
-              ? "Portfolio Metodologico · Casi Dimostrativi"
+              ? "Portfolio · Esempi originali"
               : lang === "fr"
-              ? "Portfolio Méthodologique · Cas Démonstratifs"
+              ? "Portfolio · Exemples originaux"
               : lang === "es"
-              ? "Muestras de Trabajo · Casos Prácticos"
-              : "Methodological Portfolio · Demonstration Cases"}
+              ? "Portfolio · Muestras originales"
+              : "Portfolio · Original Work Samples"}
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4 md:mb-6">
             {lang === "it"
               ? "Esempi di lavoro"
               : lang === "fr"
-              ? "Exemples de projets"
+              ? "Exemples de travail"
               : lang === "es"
-              ? "Ejemplos de trabajo"
+              ? "Muestras de trabajo"
               : "Work Examples"}
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-foreground/80 leading-relaxed mb-5 md:mb-8 max-w-3xl">
             {lang === "it"
-              ? "Esempi completi per conoscere il mio metodo di lavoro: testi e traduzioni a fronte, procedure, documenti e controlli di qualità, con situazioni realistiche."
+              ? "Qui puoi vedere che cosa preparo concretamente: risposte email complete, registri e documenti di back office, traduzioni a fronte, revisioni prima/dopo e ricerche comparative. Per ogni esempio trovi il risultato, le informazioni di partenza e le verifiche effettuate o previste."
               : lang === "fr"
-              ? "Des exemples complets pour découvrir ma méthode : traductions en regard, procédures, documents et contrôles, dans des situations plausibles."
+              ? "Découvrez ce que je prépare concrètement : réponses complètes à des courriels, tableaux de suivi et documents de back-office, traductions en regard, révisions avant/après et comparatifs documentaires. Chaque exemple présente le travail réalisé, les informations de départ et les vérifications effectuées ou prévues."
               : lang === "es"
-              ? "Ejemplos completos que muestran mi método: traducciones en paralelo, procedimientos, documentos y controles con situaciones verosímiles."
-              : "Detailed work examples showing the process behind each service: parallel translations, complete documents, procedures and quality checks built around plausible scenarios."}
+              ? "Aquí puedes ver qué documentos preparo: respuestas completas a correos, registros de tareas y pedidos, traducciones en paralelo, revisiones antes/después y comparativas informativas. Cada ejemplo muestra el resultado, los datos de partida y las comprobaciones realizadas o previstas."
+              : "See the work I can produce: complete customer email drafts, back-office records, side-by-side translations, before-and-after edits and information comparisons. Each example presents the finished sample, its starting material and the checks completed or still required."}
           </p>
 
-          {/* DEMO TRANSPARENCY NOTICE */}
-          <div className="bg-background/80 backdrop-blur border border-primary/20 rounded-xl p-4 md:p-5 text-sm text-foreground/85 flex items-start gap-3.5 shadow-sm">
-            <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-            <div>
-              <span className="font-semibold text-foreground">
-                {lang === "it"
-                  ? "Trasparenza e Tutela della Riservatezza: "
-                  : lang === "fr"
-                  ? "Transparence et Confidentialité : "
-                  : lang === "es"
-                  ? "Transparencia y Confidencialidad: "
-                  : "Transparency & Client Confidentiality: "}
-              </span>
-              <span>{lang === "it"
-                  ? "Tutti i casi sono esempi indipendenti con dati fittizi, non incarichi commissionati né testimonianze. Le attività disponibili sono quelle indicate nella pagina Servizi."
-                  : lang === "fr"
-                  ? "Tous les cas sont des exemples indépendants utilisant des données fictives, et non des missions clients ou des témoignages. Seules les prestations décrites dans la page Services sont proposées."
-                  : lang === "es"
-                  ? "Todos los casos son ejemplos independientes con datos ficticios, no encargos reales ni testimonios. Los servicios disponibles son los descritos en la página Servicios."
-                  : "All cases are independent demonstrations using fictional data, not commissioned client projects or testimonials. The services available are those stated on the Services page."}</span>
-            </div>
+          {/* Editorial provenance: factual, understated and consistent across locales. */}
+          <p className="max-w-3xl text-xs sm:text-sm leading-relaxed text-muted-foreground mb-6">
+            {lang === "it"
+              ? "La raccolta presenta elaborati originali realizzati per illustrare il mio metodo di lavoro. Non si tratta di incarichi commissionati né di documenti provenienti da clienti reali."
+              : lang === "en"
+              ? "This collection presents original work produced to illustrate my professional approach. It does not contain commissioned client work or real customer records."
+              : lang === "fr"
+              ? "Ces travaux originaux ont été préparés pour présenter ma méthode professionnelle, hors commande client et sans documents provenant de véritables dossiers."
+              : "Estos trabajos originales se han preparado para mostrar mi método profesional. No son encargos de clientes ni documentos procedentes de expedientes reales."}
+          </p>
+
+        </div>
+      </section>
+
+      {/* Tangible work and the services it demonstrates come before long methodology sections. */}
+      <section aria-labelledby="portfolio-what-i-do" className="py-12 md:py-16 border-b border-border/40 bg-background">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+          <h2 id="portfolio-what-i-do" className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+            {({it:"Che cosa faccio, attraverso esempi di lavoro",en:"What I do, shown through original work samples",fr:"Mes prestations, illustrées par des exemples",es:"Qué hago: ejemplos de trabajo concretos"} as const)[lang]}
+          </h2>
+          <p className="text-foreground/80 leading-relaxed max-w-3xl mb-7">
+            {({it:"Seleziona il servizio che ti interessa e consulta i documenti: testi completi, registri, procedure, traduzioni a fronte e controlli. Ogni dossier spiega contesto, metodo ed elaborati prodotti.",en:"Choose the service you need and read the actual documents: complete correspondence, registers, procedures, side-by-side translations and quality checks. Each dossier explains the work and its context.",fr:"Choisissez la prestation souhaitée et consultez les dossiers complets : courriels, registres, procédures, traductions en regard et contrôles. Chaque exemple présente son contexte et sa méthode.",es:"Elige un servicio y consulta documentos completos: correos, registros, procedimientos, traducciones en paralelo y controles. Cada dossier presenta el contexto y el método."} as const)[lang]}
+          </p>
+          <div className="rounded-xl border border-primary/25 bg-primary/5 p-5 mb-7">
+            <h3 className="font-bold mb-4">
+              {({it:"Come lavoro",en:"How I work",fr:"Ma méthode de travail",es:"Cómo trabajo"} as const)[lang]}
+            </h3>
+            <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+              {PORTFOLIO_WORK_STEPS.map((step,index) => (
+                <li key={index} className="leading-relaxed text-foreground/85">
+                  <strong className="block text-primary mb-1">{String(index+1).padStart(2,"0")} · {step[lang][0]}</strong>
+                  {step[lang][1]}
+                </li>
+              ))}
+            </ol>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {PORTFOLIO_SERVICE_EXAMPLES.map((item) => (
+              <Link key={item.doc} to={getPortfolioDocumentPath(item.doc,lang)}
+                className="group block p-5 rounded-xl border border-border/70 bg-card hover:border-primary/60 hover:shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+                <h3 className="font-bold text-lg text-foreground group-hover:text-primary mb-2">{item[lang][0]}</h3>
+                <p className="text-sm leading-relaxed text-foreground/80 mb-3">{item[lang][1]}</p>
+                <span className="inline-flex gap-1 items-center text-sm font-semibold text-primary">{item[lang][2]}<ArrowRight className="w-4 h-4"/></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-6 bg-secondary/10 border-b border-border/40" aria-label={({it:"Esplora gli altri esempi",en:"Browse more work samples",fr:"Découvrir d’autres exemples",es:"Explorar otras muestras"} as const)[lang]}>
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <nav aria-label={({it:"Percorsi di consultazione del portfolio",en:"Browse the portfolio",fr:"Explorer le portfolio",es:"Explorar el portfolio"} as const)[lang]}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
             {browseSections.map(section=>(
@@ -233,13 +502,13 @@ export default function Portfolio() {
       <section aria-labelledby="tangible-work" className="scroll-mt-24 py-12 border-b border-border/40 bg-card/30">
         <div className="container px-4 md:px-6 max-w-5xl mx-auto">
           <h2 id="tangible-work" className="text-2xl md:text-3xl font-bold text-primary mb-3">
-            {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Ejemplos concretos para consultar" : "Explore tangible work samples"}
+            {lang === "it" ? "Esempi concreti da consultare" : lang === "fr" ? "Exemples concrets à consulter" : lang === "es" ? "Consulta ejemplos de trabajo completos" : "Explore the sample documents"}
           </h2>
           <p className="text-foreground/75 mb-8 max-w-3xl">
-            {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Tutti gli esempi sono dimostrativi e utilizzano dati fittizi."
-              : lang === "fr" ? "Traductions comparées, courriels, tableaux de suivi et procédures. Toutes les données sont fictives ; plusieurs documents sont rédigés en italien."
-              : lang === "es" ? "Traducciones comparadas, correos, registros y procedimientos. Todos los datos son ficticios; varios documentos están escritos en italiano."
-              : "Source/target translations, customer emails, trackers and procedures. All examples use fictional data; some full documents are in Italian."}
+            {lang === "it" ? "Email, registri operativi, traduzioni a fronte, schede prodotto e procedure. Apri i documenti e valuta direttamente chiarezza, terminologia e organizzazione."
+              : lang === "fr" ? "Traductions en regard, courriels, tableaux de suivi et procédures : consultez les documents et les choix de formulation, dont plusieurs exemples en italien."
+              : lang === "es" ? "Traducciones comparadas, correos, registros y procedimientos: consulta los documentos completos y las decisiones lingüísticas, incluidos varios ejemplos en italiano."
+              : "Side-by-side translations, customer emails, trackers and procedures. Read the documents and evaluate the wording, including complete samples in Italian."}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {featured.map(doc => (
@@ -260,6 +529,8 @@ export default function Portfolio() {
         </div>
       </section>
 
+      <PortfolioServiceLibrary lang={lang} />
+      <PortfolioServiceIndex lang={lang} />
       <PortfolioDeepShowcase lang={lang} />
 
       {/* ── THE 5 MASTER TRAINING FIELDS SHOWCASE ── */}
@@ -269,20 +540,20 @@ export default function Portfolio() {
             <h2 className="text-xl md:text-2xl font-bold text-foreground flex items-center justify-center md:justify-start gap-2">
               <Sparkles className="w-5 h-5 text-primary" />
               {lang === "it"
-                ? "La formazione specialistica mostrata attraverso il lavoro"
+                ? "La formazione specialistica illustrata attraverso esempi"
                 : lang === "fr"
                 ? "La formation universitaire spécialisée illustrée par la pratique"
                 : lang === "es"
                 ? "La formación universitaria especializada reflejada en la práctica"
-                : "Specialist University Training Demonstrated in Practice"}
+                : "Specialist language training illustrated through examples"}
             </h2>
             <p className="text-sm text-muted-foreground mt-2 max-w-3xl">
               {lang === "it"
                 ? "Master in Traduzione Specialistica (1.500 ore, 60 CFU). Cinque ambiti applicativi illustrati attraverso esempi dimostrativi, non altrettante qualifiche autonome:"
                 : lang === "fr"
-                ? "Master en traduction spécialisée (1 500 heures, 60 ECTS). Cinq domaines d'application illustrés par des exemples fictifs, non cinq qualifications distinctes :"
+                ? "Master en traduction spécialisée (1 500 heures, 60 ECTS). Cinq domaines d'application illustrés par des exemples originaux, et non cinq diplômes distincts :"
                 : lang === "es"
-                ? "Máster en traducción especializada (1.500 horas, 60 ECTS). Cinco ámbitos de aplicación ilustrados con ejemplos ficticios, no cinco titulaciones diferentes:"
+                ? "Máster en traducción especializada (1.500 horas, 60 ECTS). Cinco ámbitos de aplicación ilustrados con ejemplos originales, no cinco titulaciones diferentes:"
                 : "Postgraduate training in Specialist Translation (1,500 hours, 60 ECTS). Five illustrative application fields, not five separate qualifications:"}
             </p>
           </div>
@@ -455,12 +726,12 @@ export default function Portfolio() {
                         }`}
                       >
                         {lang === "it"
-                          ? "1. Inquadramento & Metodo"
+                          ? "1. Contesto e metodo"
                           : lang === "fr"
-                          ? "1. Cadrage & Méthode"
+                          ? "1. Contexte et méthode"
                           : lang === "es"
-                          ? "1. Contexto y Método"
-                          : "1. Brief & Methodology"}
+                          ? "1. Contexto y método"
+                          : "1. Brief and approach"}
                       </button>
 
                       {(caseItem.comparison || caseItem.tableData || caseItem.sampleText) && (
@@ -475,27 +746,27 @@ export default function Portfolio() {
                         >
                           {caseItem.comparison
                             ? lang === "it"
-                              ? "2. Confronto Sorgente / Target"
+                              ? "2. Testo originale e traduzione"
                               : lang === "fr"
-                              ? "2. Comparaison Source / Cible"
+                              ? "2. Texte source et traduction"
                               : lang === "es"
-                              ? "2. Comparación Origen / Destino"
-                              : "2. Source / Target Comparison"
+                              ? "2. Original y traducción"
+                              : "2. Source and translation"
                             : caseItem.tableData
                             ? lang === "it"
-                              ? "2. Matrice di Benchmark"
+                              ? "2. Tabella comparativa"
                               : lang === "fr"
-                              ? "2. Matrice d'Analyse Comparative"
+                              ? "2. Tableau comparatif"
                               : lang === "es"
-                              ? "2. Matriz de Benchmarking"
-                              : "2. Benchmark Matrix"
+                              ? "2. Tabla comparativa"
+                              : "2. Comparison table"
                             : lang === "it"
-                            ? "2. Testo Narrativo a Fronte"
+                            ? "2. Testo narrativo a fronte"
                             : lang === "fr"
-                            ? "2. Texte Littéraire Bilingue"
+                            ? "2. Texte littéraire bilingue"
                             : lang === "es"
-                            ? "2. Texto Literario en Paralelo"
-                            : "2. Dual-Language Literary Text"}
+                            ? "2. Texto literario bilingüe"
+                            : "2. Bilingual literary text"}
                         </button>
                       )}
 
@@ -509,12 +780,12 @@ export default function Portfolio() {
                         }`}
                       >
                         {lang === "it"
-                          ? "3. Decisioni Chiave & Deliverable"
+                          ? "3. Scelte e risultato"
                           : lang === "fr"
-                          ? "3. Décisions Clés & Livrable"
+                          ? "3. Choix et résultat"
                           : lang === "es"
-                          ? "3. Decisiones Clave y Entregable"
-                          : "3. Key Decisions & Deliverable"}
+                          ? "3. Decisiones y resultado"
+                          : "3. Key decisions and sample"}
                       </button>
                     </div>
 
@@ -525,24 +796,24 @@ export default function Portfolio() {
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Il Brief"
+                                ? "Contesto dell'esempio"
                                 : lang === "fr"
-                                ? "Le Brief"
+                                ? "Contexte de l’exemple"
                                 : lang === "es"
-                                ? "El Brief"
-                                : "The Brief"}
+                                ? "Contexto del ejemplo"
+                                : "Example brief"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.brief[lang]}</p>
                           </div>
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Materiale di Partenza"
+                                ? "Materiale di partenza"
                                 : lang === "fr"
-                                ? "Matériel de Départ"
+                                ? "Documents de départ"
                                 : lang === "es"
-                                ? "Material de Partida"
-                                : "Starting Material"}
+                                ? "Material de partida"
+                                : "Starting material"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.startingMaterial[lang]}</p>
                           </div>
@@ -552,24 +823,24 @@ export default function Portfolio() {
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Obiettivo Professionale"
+                                ? "Obiettivo"
                                 : lang === "fr"
-                                ? "Objectif Professionnel"
+                                ? "Objectif"
                                 : lang === "es"
-                                ? "Objetivo Profesional"
-                                : "Professional Objective"}
+                                ? "Objetivo"
+                                : "Objective"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.objective[lang]}</p>
                           </div>
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-1">
                               {lang === "it"
-                                ? "Approccio e Metodologia"
+                                ? "Metodo di lavoro"
                                 : lang === "fr"
-                                ? "Approche & Méthodologie"
+                                ? "Méthode de travail"
                                 : lang === "es"
-                                ? "Enfoque y Metodología"
-                                : "Approach & Methodology"}
+                                ? "Método de trabajo"
+                                : "Approach and method"}
                             </span>
                             <p className="text-foreground/90 leading-relaxed">{caseItem.approach[lang]}</p>
                           </div>
@@ -590,7 +861,7 @@ export default function Portfolio() {
                                     : lang === "fr"
                                     ? "Texte Source"
                                     : lang === "es"
-                                    ? "Texto Origen"
+                                    ? "Texto original"
                                     : "Original Source"}{" "}
                                   ({caseItem.comparison.sourceLang})
                                 </span>
@@ -602,7 +873,7 @@ export default function Portfolio() {
                               <div className="p-4 rounded-xl bg-destructive/5 border border-destructive/20">
                                 <span className="text-[11px] font-bold uppercase tracking-wider text-destructive block mb-2">
                                   {lang === "it"
-                                    ? "Resa letterale volutamente non idiomatica (esempio)"
+                                    ? "Traduzione volutamente letterale (esempio dimostrativo)"
                                     : lang === "fr"
                                     ? "Version littérale volontairement maladroite (exemple)"
                                     : lang === "es"
@@ -617,12 +888,12 @@ export default function Portfolio() {
                               <div className="p-4 rounded-xl bg-primary/10 border border-primary/30">
                                 <span className="text-[11px] font-bold uppercase tracking-wider text-primary block mb-2">
                                   {lang === "it"
-                                    ? "Localizzazione Professionale"
+                                    ? "Versione adattata in italiano"
                                     : lang === "fr"
-                                    ? "Localisation Professionnelle"
+                                    ? "Version italienne adaptée"
                                     : lang === "es"
-                                    ? "Localización Profesional"
-                                    : "Professional Localisation"}{" "}
+                                    ? "Versión italiana adaptada"
+                                    : "Adapted Italian version"}{" "}
                                   ({caseItem.comparison.targetLang})
                                 </span>
                                 <p className="font-medium text-foreground leading-relaxed">
@@ -639,7 +910,7 @@ export default function Portfolio() {
                                   ? "Commentaire d'analyse : "
                                   : lang === "es"
                                   ? "Nota de análisis: "
-                                  : "Linguistic commentary: "}
+                                  : "Translation notes: "}
                               </span>
                               {caseItem.comparison.notes[lang]}
                             </div>
@@ -679,12 +950,12 @@ export default function Portfolio() {
                               <div className="p-5 rounded-xl bg-background border border-border/60">
                                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-2">
                                   {lang === "it"
-                                    ? "Testo Sorgente Originale (Inglese · Prosa Narrativa Contemporanea)"
+                                    ? "Testo originale (inglese · prosa contemporanea)"
                                     : lang === "fr"
-                                    ? "Texte Source Original (Anglais · Prose Contemporaine)"
+                                    ? "Texte original (anglais · prose contemporaine)"
                                     : lang === "es"
-                                    ? "Texto Origen Original (Inglés · Prosa Narrativa Contemporánea)"
-                                    : "English Original Source (Contemporary Literary Prose)"}
+                                    ? "Texto original (inglés · prosa contemporánea)"
+                                    : "Original English text (contemporary prose)"}
                                 </span>
                                 <div className="text-foreground/90 whitespace-pre-line font-serif text-sm leading-relaxed">
                                   {caseItem.sampleText.enSource}
@@ -694,9 +965,9 @@ export default function Portfolio() {
                               <div className="p-5 rounded-xl bg-primary/5 border border-primary/20">
                                 <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-2">
                                   {lang === "it"
-                                    ? "Resa Traduttiva di Noemi (Italiano · Resa Narrativa)"
+                                    ? "Traduzione proposta da Noemi (italiano)"
                                     : lang === "fr"
-                                    ? "Traduction Italienne de Noemi (Rendu Littéraire)"
+                                    ? "Traduction italienne proposée par Noemi"
                                     : lang === "es"
                                     ? "Traducción literaria al italiano — versión propuesta por Noemi"
                                     : "Italian Target Translation (Literary Rendering by Noemi)"}
@@ -721,12 +992,12 @@ export default function Portfolio() {
                         <div>
                           <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-3">
                             {lang === "it"
-                              ? "Decisioni Chiave Applicate"
+                              ? "Scelte principali e motivazioni"
                               : lang === "fr"
-                              ? "Décisions Stratégiques Appliquées"
+                              ? "Principaux choix et justification"
                               : lang === "es"
-                              ? "Decisiones Clave Aplicadas"
-                              : "Key Strategic Decisions"}
+                              ? "Principales decisiones y motivos"
+                              : "Key decisions and rationale"}
                           </span>
                           <ul className="space-y-2.5">
                             {caseItem.keyDecisions[lang].map((dec, dIdx) => (
@@ -741,11 +1012,11 @@ export default function Portfolio() {
                         <div className="p-4 rounded-xl bg-secondary/40 border border-border/50">
                           <span className="text-xs font-bold uppercase tracking-wider text-primary block mb-1">
                             {lang === "it"
-                              ? "Risultato dimostrativo"
+                              ? "Elaborato finale"
                               : lang === "fr"
-                              ? "Livrable de démonstration"
+                              ? "Document final"
                               : lang === "es"
-                              ? "Entregable de muestra"
+                              ? "Documento final"
                               : "Sample Deliverable"}
                           </span>
                           <p className="text-foreground/90 leading-relaxed font-medium">
@@ -762,7 +1033,7 @@ export default function Portfolio() {
                            className="flex items-center justify-between gap-3 p-4 rounded-xl border border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-semibold text-sm">
                           <span className="flex items-center gap-3">
                             <FileText className="w-5 h-5 shrink-0" aria-hidden="true" />
-                            {lang === "it" ? "Apri il lavoro dimostrativo" : lang === "fr" ? "Consulter le document" : lang === "es" ? "Ver documento de muestra" : "Open the work sample"}: {doc.title[lang]}
+                            {lang === "it" ? "Apri il documento" : lang === "fr" ? "Consulter le document" : lang === "es" ? "Ver documento de muestra" : "Open the work sample"}: {doc.title[lang]}
                           </span>
                           <ExternalLink className="w-4 h-4 shrink-0" aria-hidden="true" />
                         </a>
@@ -771,21 +1042,18 @@ export default function Portfolio() {
 
                     {/* Disclaimer Footer inside case */}
                     <div className="pt-4 border-t border-border/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <Scale className="w-3.5 h-3.5 text-primary" />
-                        <span>{caseItem.disclaimer[lang]}</span>
-                      </div>
+
                       <Link
                         to={contactPath}
                         className="text-primary hover:underline font-semibold flex items-center gap-1 whitespace-nowrap"
                       >
                         {lang === "it"
-                          ? "Richiedi un progetto simile"
+                          ? "Richiedi un preventivo"
                           : lang === "fr"
-                          ? "Demander un projet similaire"
+                          ? "Demander un devis"
                           : lang === "es"
-                          ? "Solicitar un proyecto similar"
-                          : "Request a similar project"}
+                          ? "Solicitar un presupuesto"
+                          : "Request a quote"}
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -805,20 +1073,20 @@ export default function Portfolio() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
                 <FileText className="w-3.5 h-3.5" />
                 {lang === "it"
-                  ? "Documenti di lavoro dimostrativi"
+                  ? "Documenti ed elaborati"
                   : lang === "fr"
-                  ? "Documents de démonstration"
+                  ? "Documents et exemples de travail"
                   : lang === "es"
                   ? "Muestras de trabajo"
                   : "Independent Work Samples"}
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
                 {lang === "it"
-                  ? `${PORTFOLIO_DOCUMENTS.length} documenti dimostrativi da esplorare`
+                  ? `${PORTFOLIO_DOCUMENTS.length} elaborati da consultare`
                   : lang === "fr"
                   ? `${PORTFOLIO_DOCUMENTS.length} documents professionnels à découvrir`
                   : lang === "es"
-                  ? `${PORTFOLIO_DOCUMENTS.length} documentos de muestra para explorar`
+                  ? `${PORTFOLIO_DOCUMENTS.length} documentos de trabajo para consultar`
                   : `${PORTFOLIO_DOCUMENTS.length} professional work samples to explore`}
               </h2>
               <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-2xl">
@@ -874,21 +1142,7 @@ export default function Portfolio() {
                 </div>
               </a>
             ))}
-          </div>
-
-          <div className="mt-8 p-4 rounded-xl bg-secondary/30 border border-border/40 text-xs text-muted-foreground flex items-center gap-2.5">
-            <Scale className="w-4 h-4 text-primary shrink-0" />
-            <span>
-              {lang === "it"
-                ? "Tutti i documenti sopra indicati sono stati redatti con dati sintetici e a scopo puramente metodologico per mostrare la cura analitica e la precisione di Noemi Tomassetti."
-                : lang === "fr"
-                ? "Tous les documents présentés ci-dessus comportent des données synthétiques à vocation purement méthodologique pour illustrer la rigueur de Noemi Tomassetti."
-                : lang === "es"
-                ? "Todos los documentos presentados contienen datos sintéticos con fines exclusivamente metodológicos para mostrar el rigor analítico de Noemi Tomassetti."
-                : "All documents above are produced with synthetic data for independent methodological demonstration to illustrate the analytical rigor of Noemi Tomassetti."}
-            </span>
-          </div>
-        </div>
+          </div>        </div>
       </section>
 
       {/* ── CALL TO ACTION FOOTER ── */}
@@ -918,7 +1172,7 @@ export default function Portfolio() {
               className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-primary text-primary-foreground hover:scale-105 transition-all shadow-md"
             >
               {lang === "it"
-                ? "Raccontami di cosa hai bisogno"
+                ? "Descrivimi le tue esigenze"
                 : lang === "fr"
                 ? "Parlez-moi de votre besoin"
                 : lang === "es"

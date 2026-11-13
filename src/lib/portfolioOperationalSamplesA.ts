@@ -1,6 +1,6 @@
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
-/** Every scenario, name, email and document is invented for demonstration. */
+/** Every scenario, name, email and document is example for demonstration. */
 export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
   {
     "id": "inbox-calendar-triage",
@@ -19,21 +19,21 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Una consulente immaginaria riceve 27 email di clienti già acquisiti in tre giorni, ha due appuntamenti provvisori e deve predisporre un quadro attendibile delle priorità.",
-      "en": "A fictional consultant has 27 emails from existing customers, two tentative appointments and no clear way to track priorities.",
-      "fr": "Une consultante fictive reçoit 27 e-mails de clients existants et doit clarifier deux rendez-vous provisoires.",
-      "es": "Una consultora ficticia recibe 27 correos de clientes actuales y necesita organizar dos citas provisionales."
+      "en": "An illustrative consultant has 27 emails from existing customers, two tentative appointments and no clear way to track priorities.",
+      "fr": "Une consultante illustrative reçoit 27 e-mails de clients existants et doit clarifier deux rendez-vous provisoires.",
+      "es": "Una consultora de ejemplo recibe 27 correos de clientes actuales y necesita organizar dos citas provisionales."
     },
     "objective": {
-      "it": "Separare richieste urgenti, attività rinviabili e messaggi informativi; predisporre risposte autorizzabili e un'agenda senza prenotazioni inventate.",
+      "it": "Separare richieste urgenti, attività rinviabili e messaggi informativi; predisporre risposte autorizzabili e un'agenda senza prenotazioni di esempio.",
       "en": "Triage requests, prepare drafts for approval and avoid treating tentative meetings as confirmed.",
       "fr": "Classer les demandes, préparer les brouillons et éviter les confirmations non autorisées.",
       "es": "Clasificar solicitudes, preparar respuestas y no confirmar citas no autorizadas."
     },
     "inputs": {
-      "it": "27 messaggi di prova, disponibilità settimanali inventate, policy ipotetica di risposta entro due giorni lavorativi e una casella condivisa.",
-      "en": "27 synthetic messages, illustrative availability windows and a fictional two-business-day response policy.",
-      "fr": "27 messages fictifs, créneaux inventés et règle illustrative de réponse sous deux jours ouvrables.",
-      "es": "27 mensajes ficticios, disponibilidad inventada y una norma de respuesta de dos días laborables."
+      "it": "27 messaggi di prova, disponibilità settimanali di esempio, policy ipotetica di risposta entro due giorni lavorativi e una casella condivisa.",
+      "en": "27 synthetic messages, illustrative availability windows and an illustrative two-business-day response policy.",
+      "fr": "27 messages illustratifs, créneaux présentés en exemple et règle illustrative de réponse sous deux jours ouvrables.",
+      "es": "27 mensajes de ejemplo, disponibilidad de ejemplo y una norma de respuesta de dos días laborables."
     },
     "workflow": [
       {
@@ -75,7 +75,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Registre de suivi",
           "es": "Registro de solicitudes"
         },
-        "content": "REGISTRO EMAIL — SETTIMANA DIMOSTRATIVA\nID E-014 | Cliente esistente, pratica Alpha | Richiesta: conferma ricezione file | Priorità: media | Stato: bozza pronta | Responsabile: assistente | Prossimo passo: approvazione risposta, mercoledì.\nID E-015 | Cliente esistente, pratica Beta | Richiesta: anticipare appuntamento | Priorità: alta | Stato: in attesa verifica agenda | Responsabile: titolare | Prossimo passo: verificare disponibilità prima di proporre alternative.\nID E-016 | Collaboratore già incaricato | Richiesta: versione corretta del documento | Priorità: media | Stato: in lavorazione | Responsabile: assistente | Prossimo passo: confrontare versione 03 con versione approvata.\nRegole: «chiuso» soltanto quando la risposta è inviata e registrata; «in attesa» quando manca una decisione; dati personali limitati agli elementi necessari.",
+        "content": "REGISTRO EMAIL — SETTIMANA DIMOSTRATIVA (TUTTI I 27 MESSAGGI, DATI DI ESEMPIO)\nID | Categoria | Oggetto sintetico | Priorità | Stato | Prossimo passo\nE-01 | RISPOSTA | Conferma ricezione allegato | media | Bozza predisposta | Verificare i file ricevuti e approvare conferma\nE-02 | RISPOSTA | Richiesta aggiornamento tempi progetto | alta | Bozza predisposta | Convalidare le date prima della risposta\nE-03 | RISPOSTA | Informazioni su documento consegnato | media | Bozza predisposta | Citare solo versione già approvata\nE-04 | RISPOSTA | Richiesta chiarimento istruzioni | media | Bozza predisposta | Controllare procedura autorizzata\nE-05 | RISPOSTA | Domanda su prossimi passaggi | media | Bozza predisposta | Confermare prossima attività con titolare\nE-06 | RISPOSTA | Richiesta materiale informativo esistente | bassa | Bozza predisposta | Verificare autorizzazione alla condivisione\nE-07 | RISPOSTA | Correzione recapito su pratica attiva | alta | Bozza predisposta | Verificare dato nel registro del cliente\nE-08 | RISPOSTA | Aggiornamento ordine già registrato | alta | Bozza predisposta | Controllare stato confermato dell'ordine\nE-09 | RISPOSTA | Richiesta copia ultima revisione | media | Bozza predisposta | Confrontare revisioni prima della risposta\nE-10 | RISPOSTA | Domanda su modalità di consegna | media | Bozza predisposta | Convalidare canale e autorizzazioni\nE-11 | RISPOSTA | Verifica ricezione note editoriali | bassa | Bozza predisposta | Confrontare note con versione corrente\nE-12 | INFORMATIVA | Circolare operativa interna | bassa | Classificata | Archiviare nella cartella autorizzata\nE-13 | INFORMATIVA | Aggiornamento disponibilità già condiviso | bassa | Classificata | Annotare senza impegnare agenda\nE-14 | RISPOSTA | Conferma ricezione file pratica Alpha | media | Bozza pronta E-014 | Sottoporre la risposta all'approvazione\nE-15 | APPUNTAMENTO | Anticipo incontro pratica Beta | alta | Verifica agenda E-015 | Controllare disponibilità prima di proporre alternative\nE-16 | INFORMATIVA | Versione corretta documento di progetto | media | Verifica versione E-016 | Confrontare versione 03 e approvata\nE-17 | INFORMATIVA | Nota informativa sul catalogo | bassa | Classificata | Archiviare versione e data\nE-18 | INFORMATIVA | Promemoria riunione già confermata | bassa | Classificata | Allineare alla voce esistente, senza duplicare\nE-19 | INFORMATIVA | Comunicazione calendario festività | bassa | Classificata | Annotare vincoli informativi\nE-20 | INFORMATIVA | Conferma ricezione materiale da collaboratore | bassa | Classificata | Archiviare ricevuta nel fascicolo\nE-21 | INFORMATIVA | Avviso di aggiornamento policy interna | media | Classificata | Richiedere versione ufficiale, se necessaria\nE-22 | APPUNTAMENTO | Richiesta incontro online | media | Proposta da verificare | Controllare finestra e referente\nE-23 | APPUNTAMENTO | Spostamento colloquio operativo | media | Proposta da verificare | Attendere conferma esplicita\nE-24 | APPUNTAMENTO | Richiesta disponibilità per revisione | bassa | Proposta da verificare | Verificare calendario prima di rispondere\nE-25 | DECISIONE TITOLARE | Eccezione alle condizioni concordate | alta | Escalation | Richiedere decisione formale\nE-26 | DECISIONE TITOLARE | Richiesta accesso a file riservato | alta | Escalation | Non condividere senza autorizzazione\nE-27 | DECISIONE TITOLARE | Richiesta modifica ambito incarico | alta | Escalation | Valutare perimetro e nuovo preventivo\nTOTALI: 12 richieste di risposta, 8 messaggi informativi, 4 richieste di appuntamento, 3 decisioni riservate = 27.\nLe 12 risposte sono bozze da approvare, non invii eseguiti. Nessun appuntamento è confermato in questo esempio.\nREGOLA OPERATIVA: stato «chiuso» solo dopo invio o conferma effettivi; niente accessi o modifiche non autorizzati.",
         "explanation": {
           "it": "Un registro leggibile sostituisce i promemoria sparsi: ID, stato e azione successiva rendono verificabile ogni richiesta.",
           "en": "A usable log shows the status and next action for each request without relying on scattered reminders.",
@@ -90,7 +90,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Courriel de proposition de rendez-vous",
           "es": "Correo de propuesta de cita"
         },
-        "content": "Oggetto: proposta di nuovo orario per il confronto sul progetto Beta\nBuongiorno,\nabbiamo ricevuto la richiesta di anticipare l'incontro. Prima di confermare una modifica, stiamo verificando le disponibilità aggiornate. Le proporremo eventuali alternative non appena avremo un riscontro attendibile; nel frattempo, l'appuntamento concordato in precedenza resta invariato.\nPer evitare fraintendimenti, nessuno spostamento sarà effettuato senza la sua conferma. Grazie per la collaborazione.\nCordiali saluti,\nSegreteria organizzativa — Studio dimostrativo\nNOTA INTERNA: messaggio da approvare; non inviare prima del controllo dell'agenda.",
+        "content": "Oggetto: proposta di nuovo orario per il confronto sul progetto Beta\nBuongiorno,\nabbiamo ricevuto la richiesta di anticipare l'incontro. Prima di confermare una modifica, stiamo verificando le disponibilità aggiornate. Le proporremo eventuali alternative non appena avremo un riscontro attendibile; nel frattempo, l'appuntamento concordato in precedenza resta invariato.\nPer evitare fraintendimenti, nessuno spostamento sarà effettuato senza la sua conferma. Grazie per la collaborazione.\nCordiali saluti,\nSegreteria organizzativa — Studio utilizzato nell’esempio\nNOTA INTERNA: messaggio da approvare; non inviare prima del controllo dell'agenda.",
         "explanation": {
           "it": "La bozza non promette una disponibilità non verificata e conserva l’appuntamento già concordato.",
           "en": "The draft avoids offering unverified times and preserves the existing appointment.",
@@ -164,9 +164,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un negozio immaginario riceve richieste di assistenza su disponibilità, reso e articolo danneggiato. L’assistente deve rispondere nei limiti delle procedure, senza inventare diritti o rimborsi.",
-      "en": "A fictional shop receives availability, return and damage enquiries from existing customers; replies must follow approved policies.",
-      "fr": "Une boutique fictive traite trois demandes de clients existants en respectant les procédures.",
-      "es": "Una tienda ficticia atiende tres consultas sin inventar derechos ni reembolsos."
+      "en": "An illustrative shop receives availability, return and damage enquiries from existing customers; replies must follow approved policies.",
+      "fr": "Une boutique illustrative traite trois demandes de clients existants en respectant les procédures.",
+      "es": "Una tienda de ejemplo atiende tres consultas sin añadir datos sin confirmar derechos ni reembolsos."
     },
     "objective": {
       "it": "Preparare risposte empatiche e operative, assegnare correttamente i casi delicati e mantenere una traccia delle verifiche.",
@@ -175,10 +175,10 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       "es": "Redactar respuestas útiles, escalar decisiones sensibles y registrar cada caso."
     },
     "inputs": {
-      "it": "Tre ticket fittizi, estratto delle condizioni commerciali non completo, stato degli ordini non verificato e matrice di autorizzazioni esemplificativa.",
-      "en": "Three fictional tickets, incomplete terms, unverified stock/order states and an illustrative approval matrix.",
-      "fr": "Trois tickets fictifs, conditions incomplètes et matrice d’autorisations.",
-      "es": "Tres tickets ficticios, condiciones incompletas y matriz de autorizaciones."
+      "it": "Tre ticket dimostrativi, estratto delle condizioni commerciali non completo, stato degli ordini non verificato e matrice di autorizzazioni esemplificativa.",
+      "en": "Three illustrative tickets, incomplete terms, unverified stock/order states and an illustrative approval matrix.",
+      "fr": "Trois tickets illustratifs, conditions incomplètes et matrice d’autorisations.",
+      "es": "Tres tickets de ejemplo, condiciones incompletas y matriz de autorizaciones."
     },
     "workflow": [
       {
@@ -189,9 +189,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       },
       {
         "it": "Consultare la procedura approvata, senza interpretare autonomamente regole di rimborso.",
-        "en": "Check approved procedures; do not invent refund rules.",
+        "en": "Check approved procedures; do not claim unverified refund rules.",
         "fr": "Consulter la procédure validée, sans inventer les remboursements.",
-        "es": "Consultar normas aprobadas, sin inventar reembolsos."
+        "es": "Consultar normas aprobadas, sin añadir datos sin confirmar reembolsos."
       },
       {
         "it": "Preparare una risposta con un solo prossimo passo e un termine soltanto se confermato.",
@@ -220,12 +220,12 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Ticket 1 : disponibilité",
           "es": "Ticket 1: disponibilidad"
         },
-        "content": "ID CC-101 | Oggetto: disponibilità della finitura sabbia\nOggetto email: richiesta ricevuta — finitura sabbia\nBuongiorno,\ngrazie per averci contattato in merito al suo ordine. Stiamo verificando la disponibilità della finitura richiesta e non vogliamo comunicarle un dato non ancora confermato. La aggiorneremo via email quando il magazzino avrà fornito un riscontro attendibile.\nNel frattempo, non è necessario che effettui un nuovo ordine. Se desidera modificare la richiesta, può rispondere direttamente a questo messaggio.\nCordiali saluti, Servizio clienti.\nREGISTRO: stato «verifica magazzino»; nessuna data promessa; bozza da approvare.",
+        "content": "ID CC-201 | Oggetto: disponibilità della finitura sabbia\nOggetto email: richiesta ricevuta — finitura sabbia\nBuongiorno,\ngrazie per averci contattato in merito al suo ordine. Stiamo verificando la disponibilità della finitura richiesta e non vogliamo comunicarle un dato non ancora confermato. La aggiorneremo via email quando il magazzino avrà fornito un riscontro attendibile.\nNel frattempo, non è necessario che effettui un nuovo ordine. Se desidera modificare la richiesta, può rispondere direttamente a questo messaggio.\nCordiali saluti, Servizio clienti.\nREGISTRO: stato «verifica magazzino»; nessuna data promessa; bozza da approvare.",
         "explanation": {
-          "it": "Risposta informativa: evita una disponibilità inventata e indica il canale di aggiornamento.",
-          "en": "A status reply without inventing stock availability or a date.",
+          "it": "Risposta informativa: evita una disponibilità di esempio e indica il canale di aggiornamento.",
+          "en": "A status reply without adding unsupported information stock availability or a date.",
           "fr": "Réponse sans inventer de stock ni de date.",
-          "es": "Respuesta sin inventar existencias ni fecha."
+          "es": "Respuesta sin añadir datos sin confirmar existencias ni fecha."
         }
       },
       {
@@ -235,7 +235,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Ticket 2 : retour produit",
           "es": "Ticket 2: solicitud de devolución"
         },
-        "content": "ID CC-102 | Oggetto: richiesta informazioni su reso\nOggetto email: verifica della sua richiesta di reso\nBuongiorno,\nabbiamo ricevuto la richiesta relativa all'articolo indicato. Per fornirle istruzioni corrette dobbiamo prima verificare la data dell'acquisto e le condizioni applicabili all'ordine. La invitiamo quindi a rispondere indicando il riferimento dell'ordine, senza inviare documenti di pagamento o dati bancari.\nDopo la verifica le comunicheremo la procedura prevista per il suo caso. Questa risposta non costituisce ancora accettazione del reso o conferma di un rimborso.\nCordiali saluti, Servizio clienti.\nREGISTRO: stato «attesa riferimento ordine», assegnazione al referente autorizzato per le decisioni.",
+        "content": "ID CC-202 | Oggetto: richiesta informazioni su reso\nOggetto email: verifica della sua richiesta di reso\nBuongiorno,\nabbiamo ricevuto la richiesta relativa all'articolo indicato. Per fornirle istruzioni corrette dobbiamo prima verificare la data dell'acquisto e le condizioni applicabili all'ordine. La invitiamo quindi a rispondere indicando il riferimento dell'ordine, senza inviare documenti di pagamento o dati bancari.\nDopo la verifica le comunicheremo la procedura prevista per il suo caso. Questa risposta non costituisce ancora accettazione del reso o conferma di un rimborso.\nCordiali saluti, Servizio clienti.\nREGISTRO: stato «attesa riferimento ordine», assegnazione al referente autorizzato per le decisioni.",
         "explanation": {
           "it": "Separazione netta fra presa in carico e approvazione di un reso, che resta di competenza del committente.",
           "en": "Clearly distinguishes acknowledgement from approval of a return.",
@@ -250,12 +250,28 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Ticket 3 : article endommagé",
           "es": "Ticket 3: artículo dañado"
         },
-        "content": "ID CC-103 | Oggetto: segnalazione di articolo danneggiato\nOggetto email: segnalazione ricevuta — verifica in corso\nBuongiorno,\nci dispiace che l'articolo sia arrivato nelle condizioni descritte. Abbiamo registrato la segnalazione e la stiamo inoltrando al referente incaricato della verifica. Per agevolare il controllo, se possibile, può rispondere con una fotografia del danno e il numero d'ordine; non servono ulteriori dati personali.\nNon appena avremo verificato la situazione e le opzioni previste dalle condizioni di acquisto, le invieremo le indicazioni successive. La ringraziamo per la collaborazione.\nREGISTRO: priorità alta; richiesta immagini limitata allo stretto necessario; escalation al responsabile.",
+        "content": "ID CC-203 | Oggetto: segnalazione di articolo danneggiato\nOggetto email: segnalazione ricevuta — verifica in corso\nBuongiorno,\nci dispiace che l'articolo sia arrivato nelle condizioni descritte. Abbiamo registrato la segnalazione e la stiamo inoltrando al referente incaricato della verifica. Per agevolare il controllo, se possibile, può rispondere con una fotografia del danno e il numero d'ordine; non servono ulteriori dati personali.\nNon appena avremo verificato la situazione e le opzioni previste dalle condizioni di acquisto, le invieremo le indicazioni successive. La ringraziamo per la collaborazione.\nREGISTRO: priorità alta; richiesta immagini limitata allo stretto necessario; escalation al responsabile.",
         "explanation": {
           "it": "La risposta mostra empatia, raccoglie solo elementi necessari e non promette una sostituzione anticipata.",
           "en": "The reply is empathetic, minimises data collection and avoids promising an unapproved replacement.",
           "fr": "Réponse empathique, collecte limitée et aucun remplacement promis.",
           "es": "Respuesta empática, datos mínimos y sin prometer sustitución."
+        }
+      },
+      {
+        "title": {
+          "it": "Registro completo di gestione e comunicazioni di verifica",
+          "en": "Complete support log and follow-up communications",
+          "fr": "Registre de suivi et communications de vérification",
+          "es": "Registro de seguimiento y comunicaciones de comprobación"
+        },
+        "language": "it",
+        "content": "ESEMPIO OPERATIVO ORIGINALE — DATI DI ESEMPIO\nScenario: negozio online immaginario, richieste di tre clienti già esistenti. Nessuna email è stata inviata; i dati su stock, resi e rimborsi non sono confermati.\n\nREGISTRO DELLE PRATICHE\nCC-201 | Disponibilità finitura sabbia | Priorità media | Referente: magazzino | Stato: VERIFICA IN CORSO | Prossimo passo: richiedere conferma della giacenza.\nCC-202 | Informazioni sul reso | Priorità media | Referente: assistenza/resi | Stato: IN ATTESA DI RIFERIMENTI | Prossimo passo: verificare identificativo dell'ordine e condizioni approvate.\nCC-203 | Articolo arrivato danneggiato | Priorità alta | Referente: responsabile assistenza | Stato: DA VALUTARE | Prossimo passo: raccogliere esclusivamente le immagini necessarie e richiedere istruzioni.\n\nEMAIL AGGIUNTIVA — CC-202, BOZZA DA APPROVARE\nOggetto: La sua richiesta di reso — informazioni necessarie\nGentile cliente,\ngrazie per averci contattato. Abbiamo registrato la sua richiesta relativa all'articolo acquistato. Per verificare la pratica avremmo bisogno del riferimento dell'ordine e di una breve descrizione della situazione.\nUna volta ricevute queste informazioni, potremo sottoporle al reparto competente e fornirle indicazioni basate sulle condizioni applicabili. Al momento non possiamo confermare l'accettazione del reso, la modalità di restituzione o un eventuale rimborso.\nLa invitiamo a non inviare dati di pagamento o documenti personali non richiesti.\nCordiali saluti,\nServizio clienti\n\nNOTA INTERNA PER CC-203\nSegnalazione: prodotto potenzialmente danneggiato alla consegna. Non suggerire che il danno sia stato causato dal trasporto prima dell'esame. Non chiedere fotografie contenenti informazioni personali non necessarie. Annotare la priorità e il responsabile; preparare un messaggio che riconosca la segnalazione e indichi la verifica successiva, senza promettere sostituzioni o rimborsi.\n\nRIEPILOGO AL RESPONSABILE — BOZZA NON INVIATA\nOggetto: Tre richieste clienti in lavorazione — quadro delle verifiche\nBuongiorno,\nho classificato tre richieste ricevute nello scenario dimostrativo e predisposto le risposte scritte. CC-201 richiede un controllo della disponibilità; CC-202 necessita del riferimento d'ordine e della verifica delle condizioni di reso; CC-203 richiede una valutazione prioritaria da parte del responsabile. Nessuna risposta è stata spedita e nessun ordine, rimborso o dato contabile è stato modificato.\nLe bozze sono pronte per il controllo. Prima dell'invio occorre validare le informazioni di stock, le procedure applicabili e le autorizzazioni previste.\nCordiali saluti,\nSegreteria assistenza clienti\n\nESITO: tre ticket descritti e tracciati; quattro bozze/esempi di comunicazione disponibili nell'intero dossier; decisioni economiche e amministrative riservate ai referenti competenti.",
+        "explanation": {
+          "it": "Registro unico con tre ticket, bozze complete, decisioni riservate e nota di consegna al responsabile.",
+          "en": "One consolidated case log, with written replies, escalation rules and a complete handover note.",
+          "fr": "Registre des demandes, réponses rédigées et note de transmission au responsable.",
+          "es": "Registro de consultas, respuestas redactadas y entrega al responsable."
         }
       }
     ],
@@ -264,7 +280,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
         "it": "Nessuna risposta contiene rimborsi o date non autorizzati.",
         "en": "No unsupported refunds or delivery dates.",
         "fr": "Aucun remboursement ou délai inventé.",
-        "es": "Sin reembolsos ni fechas inventadas."
+        "es": "Sin reembolsos ni fechas de ejemplo."
       },
       {
         "it": "Ogni ticket distingue stato, responsabile e documenti necessari.",
@@ -303,9 +319,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un distributore immaginario deve registrare un ordine per un cliente già acquisito usando un listino approvato, senza sostituirsi al commerciale nelle decisioni su prezzi o conferme.",
-      "en": "A fictional distributor needs an existing-customer order recorded against an approved price list without independent price decisions.",
-      "fr": "Un distributeur fictif doit vérifier une commande déjà reçue selon les tarifs approuvés.",
-      "es": "Un distribuidor ficticio debe registrar un pedido existente sin decidir precios."
+      "en": "An illustrative distributor needs an existing-customer order recorded against an approved price list without independent price decisions.",
+      "fr": "Un distributeur illustratif doit vérifier une commande déjà reçue selon les tarifs approuvés.",
+      "es": "Un distribuidor de ejemplo debe registrar un pedido existente sin decidir precios."
     },
     "objective": {
       "it": "Individuare codici errati, controllare moltiplicazioni e mantenere lo stato «da validare» fino alla conferma autorizzata.",
@@ -315,9 +331,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Listino dimostrativo: AR-101 €22,50; AR-205 €68,00; AR-310 €14,00. Ordine di prova: 2 × AR-101; 1 × AR-205; una riga con codice incompleto.",
-      "en": "Fictional catalogue: AR-101 €22.50, AR-205 €68.00, AR-310 €14.00; sample order with an incomplete code.",
-      "fr": "Tarifs fictifs : AR-101 22,50 €, AR-205 68 €, AR-310 14 € ; une ligne incomplète.",
-      "es": "Tarifas ficticias y un pedido con una referencia incompleta."
+      "en": "Illustrative catalogue: AR-101 €22.50, AR-205 €68.00, AR-310 €14.00; sample order with an incomplete code.",
+      "fr": "Tarifs illustratifs : AR-101 22,50 €, AR-205 68 €, AR-310 14 € ; une ligne incomplète.",
+      "es": "Tarifas de ejemplo y un pedido con una referencia incompleta."
     },
     "workflow": [
       {
@@ -336,7 +352,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
         "it": "Calcolo dei totali di riga, separati da imposte e trasporto non noti.",
         "en": "Calculate line totals separately from unknown taxes and transport.",
         "fr": "Calculer les lignes sans inventer frais et taxes.",
-        "es": "Calcular importes sin inventar impuestos y portes."
+        "es": "Calcular importes sin añadir datos sin confirmar impuestos y portes."
       },
       {
         "it": "Segnalazione dell’anomalia per correzione del cliente o referente autorizzato.",
@@ -396,6 +412,22 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "La note précise les vérifications, les points ouverts et l’autorisation nécessaire.",
           "es": "La nota distingue datos verificados, pendientes y autorización."
         }
+      },
+      {
+        "title": {
+          "it": "Riepilogo ordine e verifica anomalie: rapporto completo",
+          "en": "Full order and pricing discrepancy report",
+          "fr": "Compte rendu des commandes et écarts tarifaires",
+          "es": "Informe completo de pedidos y diferencias de precios"
+        },
+        "language": "it",
+        "content": "RAPPORTO ORDINE ORD-058 — ESEMPIO ORIGINALE, NESSUN ORDINE REALE\nListino di prova L-2026-11, v03. Cliente C-058 già esistente nello scenario. Il listino e i codici sono tutti di esempio.\n\nDATI REGISTRATI\nRiga 1 | AR-101 | Quantità 2 | Prezzo approvato nello scenario: 22,50 € | 2 × 22,50 = 45,00 € | Codice e quantità coerenti.\nRiga 2 | AR-205 | Quantità 1 | Prezzo approvato nello scenario: 68,00 € | 1 × 68,00 = 68,00 € | Codice e quantità coerenti.\nRiga 3 | AR-3?0 | Quantità da verificare | Prezzo: non applicabile | Non calcolata | Codice incompleto, riga sospesa.\nSomma delle sole righe verificate: 113,00 €, prima di eventuali trasporto, imposte e condizioni non note. Il valore non equivale a un totale d'ordine definitivo.\n\nCONTROLLO DELLE ANOMALIE\nA-01, priorità alta: codice AR-3?0 incompleto, nessuna sostituzione automatica con AR-310.\nA-02, priorità alta: quantità della terza riga non confermata; nessun calcolo consentito.\nA-03, priorità media: trasporto e termini di consegna assenti dalla richiesta.\nA-04, priorità media: verificare che la versione del listino utilizzata sia quella autorizzata per la pratica.\nA-05, priorità alta: l'approvazione commerciale dell'ordine non risulta presente.\n\nEMAIL DI CHIARIMENTO — BOZZA INTERNA NON INVIATA\nOggetto: ORD-058 — verifica di un codice e delle condizioni\nBuongiorno,\ndurante il controllo della richiesta ORD-058 abbiamo rilevato che la terza riga riporta un codice incompleto («AR-3?0») e non consente di associare con certezza l'articolo al listino di riferimento.\nLe prime due righe sono coerenti con il listino dimostrativo L-2026-11 v03 e presentano una somma parziale di 113,00 €, esclusi gli elementi non ancora definiti.\nPrima di proseguire avremmo bisogno di confermare il codice corretto, la quantità della terza riga e le condizioni di consegna applicabili. Nessun prezzo è stato modificato e nessun ordine è stato confermato.\nCordiali saluti,\nBack office\n\nNOTA DI CONSEGNA AL RESPONSABILE\nHo predisposto il prospetto delle righe verificabili e l'elenco delle questioni aperte. Chiedo l'approvazione della richiesta di chiarimento prima dell'invio. Il registro rimane nello stato «in verifica». Non vengono emessi documenti fiscali, effettuati ordini o negoziate condizioni economiche.\n\nESITO: tabella controllata, calcoli espliciti, anomalie classificate e messaggi di lavoro pronti per la supervisione.",
+        "explanation": {
+          "it": "Registro delle righe, controllo aritmetico, richiesta di chiarimento e report da consegnare al referente.",
+          "en": "Order-line checks, calculations, clarification request and a handover report.",
+          "fr": "Contrôle des lignes, calculs, question à clarifier et rapport au responsable.",
+          "es": "Comprobación de líneas, cálculos, aclaraciones e informe para el responsable."
+        }
       }
     ],
     "qualityChecks": [
@@ -441,10 +473,10 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       "es": "Organización de archivos y Drive"
     },
     "scenario": {
-      "it": "Uno studio professionale inventato conserva presentazioni, cataloghi e comunicazioni in cartelle con nomi incoerenti e versioni duplicate.",
-      "en": "A fictional professional studio has inconsistent folder names and duplicate versions of catalogues, communications and presentations.",
-      "fr": "Un cabinet fictif retrouve difficilement ses documents, avec doublons et versions incertaines.",
-      "es": "Un despacho ficticio tiene carpetas desordenadas y documentos duplicados."
+      "it": "Uno studio professionale di esempio conserva presentazioni, cataloghi e comunicazioni in cartelle con nomi incoerenti e versioni duplicate.",
+      "en": "An illustrative professional studio has inconsistent folder names and duplicate versions of catalogues, communications and presentations.",
+      "fr": "Un cabinet illustratif retrouve difficilement ses documents, avec doublons et versions incertaines.",
+      "es": "Un despacho de ejemplo tiene carpetas desordenadas y documentos duplicados."
     },
     "objective": {
       "it": "Definire una struttura semplice per i materiali operativi e ridurre il rischio di usare file non approvati, senza richiedere accesso a dati non necessari.",
@@ -454,9 +486,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Cartelle di prova con 42 file sintetici, cinque tipologie documentali e tre ruoli: titolare, collaboratore, revisore esterno.",
-      "en": "42 entirely synthetic files, five document groups and three fictional access roles.",
-      "fr": "42 fichiers fictifs, cinq types de documents et trois rôles d’accès.",
-      "es": "42 archivos ficticios, cinco grupos y tres roles."
+      "en": "42 entirely synthetic files, five document groups and three illustrative access roles.",
+      "fr": "42 fichiers illustratifs, cinq types de documents et trois rôles d’accès.",
+      "es": "42 archivos de ejemplo, cinco grupos y tres roles."
     },
     "workflow": [
       {
@@ -535,6 +567,22 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "La procédure rend le classement durable et vérifiable.",
           "es": "El procedimiento permite mantener el orden de forma continua."
         }
+      },
+      {
+        "title": {
+          "it": "Inventario documentale e verbale di riordino",
+          "en": "Document inventory and reorganisation handover",
+          "fr": "Inventaire documentaire et compte rendu de classement",
+          "es": "Inventario de documentos e informe de reorganización"
+        },
+        "language": "it",
+        "content": "ARCHIVIO DIGITALE DIMOSTRATIVO — NON CONNESSO A UN ACCOUNT REALE\nLo scenario ipotizza 42 file di prova. L'estratto seguente mostra dieci registrazioni complete con origine, collocazione e stato. Nessun file reale è stato trasferito o eliminato.\n\nINVENTARIO E PROPOSTA DI RINOMINA\n01 | preventivo ultimo.pdf → 2026-11-03_alpha_preventivo_v01.pdf | 01_RICHIESTE | Verificare approvazione.\n02 | preventivo ultimo2.pdf → 2026-11-05_alpha_preventivo_v02.pdf | 01_RICHIESTE | Bozza successiva, non approvata.\n03 | catalogo finale.docx → 2026-11-04_alpha_catalogo_v01.docx | 02_MATERIALI | Versione da controllare.\n04 | catalogo finale_ok.docx → 2026-11-06_alpha_catalogo_v02.docx | 02_MATERIALI | Confermare lo stato di approvazione.\n05 | logo grande.png → 2026-11-01_alpha_logo_originale.png | 02_MATERIALI | Originale da conservare.\n06 | logo sito.png → 2026-11-02_alpha_logo_web_v01.png | 03_LAVORAZIONE | Derivato.\n07 | mail cliente.txt → 2026-11-07_alpha_nota_corrispondenza_v01.txt | 01_RICHIESTE | Accesso limitato.\n08 | faq aggiornata.docx → 2026-11-08_alpha_faq_v02.docx | 03_LAVORAZIONE | In revisione.\n09 | report-v1.pdf → 2026-11-09_alpha_report_v01.pdf | 04_APPROVAZIONI | Da approvare.\n10 | consegna.pdf → 2026-11-10_alpha_consegna_v01.pdf | 05_CONSEGNE | Non inviata.\n\nREGISTRO DELLE ANOMALIE\nD-01: due file chiamati «ultimo» non indicano quale sia quello approvato.\nD-02: «finale_ok» non vale come conferma documentata del titolare.\nD-03: il logo originale deve rimanere distinto dal file modificato per il web.\nD-04: la cartella delle consegne contiene un file che, nella simulazione, non risulta ancora inviato.\nD-05: il documento di corrispondenza richiede permessi limitati.\n\nEMAIL DI CONSEGNA — BOZZA DIMOSTRATIVA\nOggetto: Proposta di riordino dell'archivio — versioni e permessi\nBuongiorno,\nho predisposto una classificazione per tipologia e stato dei documenti del progetto Alpha, con una convenzione uniforme per i nomi dei file. La proposta distingue i file originali dalle copie di lavoro e dalle versioni da sottoporre ad approvazione.\nPrima di applicare qualunque modifica all'archivio è necessario confermare quale preventivo sia valido, se i testi del catalogo siano stati approvati e a chi debba essere consentito l'accesso alle comunicazioni del cliente. Il file collocato in «consegne» resta contrassegnato come non inviato.\nNon ho eliminato documenti, modificato autorizzazioni né condiviso materiale con terzi.\nCordiali saluti,\nSegreteria organizzativa\n\nCONSEGNA: inventario, proposta di struttura cartelle, registro anomalie e modello di comunicazione. La verifica dell'effettiva configurazione dei permessi spetta al responsabile autorizzato.",
+        "explanation": {
+          "it": "Esempio concreto di registrazione delle versioni, collocazione dei file e richieste di approvazione.",
+          "en": "Concrete example of version tracking, file placement and approvals.",
+          "fr": "Suivi des versions, classement et validations nécessaires.",
+          "es": "Control de versiones, clasificación y aprobaciones necesarias."
+        }
       }
     ],
     "qualityChecks": [
@@ -581,9 +629,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Una formatrice immaginaria deve organizzare un webinar per partecipanti già iscritti: inviti, link, materiali, domande frequenti e follow-up informativo.",
-      "en": "A fictional trainer needs operational assistance for a webinar with already registered participants, not marketing or recruitment.",
-      "fr": "Une formatrice fictive prépare un webinaire pour des participants déjà inscrits, sans recrutement.",
-      "es": "Una formadora ficticia organiza un webinar para inscritos existentes, sin captación."
+      "en": "An illustrative trainer needs operational assistance for a webinar with already registered participants, not marketing or recruitment.",
+      "fr": "Une formatrice illustrative prépare un webinaire pour des participants déjà inscrits, sans recrutement.",
+      "es": "Una formadora de ejemplo organiza un webinar para inscritos existentes, sin captación."
     },
     "objective": {
       "it": "Consegne corrette, comunicazioni puntuali e informazioni coerenti, senza assumere il ruolo di docente o reclutare partecipanti.",
@@ -592,10 +640,10 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       "es": "Organizar sin impartir clases ni captar participantes."
     },
     "inputs": {
-      "it": "Evento simulato: 12 novembre, ore 17:00–18:30, fuso Europe/Rome; iscritti fittizi già confermati e link dimostrativo non attivo.",
-      "en": "Fictional event 12 November 17:00–18:30 Europe/Rome; existing synthetic registrants and a placeholder meeting link.",
-      "fr": "Événement fictif le 12 novembre, 17 h–18 h 30, Europe/Rome ; inscrits fictifs.",
-      "es": "Evento ficticio el 12 de noviembre, 17:00–18:30, Europe/Rome; inscritos inventados."
+      "it": "Evento dimostrativo: 12 novembre, ore 17:00–18:30, fuso Europe/Rome; iscritti dimostrativi già confermati e link dimostrativo non attivo.",
+      "en": "Illustrative event 12 November 17:00–18:30 Europe/Rome; existing synthetic registrants and a placeholder meeting link.",
+      "fr": "Événement illustratif le 12 novembre, 17 h–18 h 30, Europe/Rome ; inscrits illustratifs.",
+      "es": "Evento de ejemplo el 12 de noviembre, 17:00–18:30, Europe/Rome; inscritos de ejemplo."
     },
     "workflow": [
       {
@@ -624,8 +672,8 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       },
       {
         "it": "Predisporre email successiva con materiali approvati, senza promesse di attestati.",
-        "en": "Draft approved-material follow-up without invented certificates.",
-        "fr": "Préparer le suivi sans attestation inventée.",
+        "en": "Draft approved-material follow-up without example certificates.",
+        "fr": "Préparer le suivi sans attestation créée pour cet exemple.",
         "es": "Preparar seguimiento sin prometer certificados."
       }
     ],
@@ -652,7 +700,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "FAQ pratique des participants",
           "es": "Preguntas frecuentes de asistencia"
         },
-        "content": "FAQ ORGANIZZATIVA — VERSIONE DI PROVA\nA che ora inizia? Il webinar inizia alle 17:00, ora italiana, e termina alle 18:30.\nDove trovo il link? Il collegamento viene comunicato via email dopo la verifica da parte dell'organizzazione; non utilizzare link ricevuti da fonti non autorizzate.\nDevo installare un programma? Attendi le istruzioni tecniche ufficiali: non sono specificati software o requisiti inventati.\nRiceverò un attestato? L'organizzazione non ne ha previsto il rilascio in questa simulazione.\nPosso ottenere i materiali? I file eventualmente disponibili saranno indicati dall'organizzazione dopo l'approvazione della formatrice.\nA chi scrivo se ho difficoltà? Rispondi alla comunicazione di servizio, senza includere password.",
+        "content": "FAQ ORGANIZZATIVA — VERSIONE DI PROVA\nA che ora inizia? Il webinar inizia alle 17:00, ora italiana, e termina alle 18:30.\nDove trovo il link? Il collegamento viene comunicato via email dopo la verifica da parte dell'organizzazione; non utilizzare link ricevuti da fonti non autorizzate.\nDevo installare un programma? Attendi le istruzioni tecniche ufficiali: non sono specificati software o requisiti di esempio.\nRiceverò un attestato? L'organizzazione non ne ha previsto il rilascio in questa simulazione.\nPosso ottenere i materiali? I file eventualmente disponibili saranno indicati dall'organizzazione dopo l'approvazione della formatrice.\nA chi scrivo se ho difficoltà? Rispondi alla comunicazione di servizio, senza includere password.",
         "explanation": {
           "it": "La FAQ mantiene soltanto informazioni confermate e segnala chiaramente ciò che dipende dall’organizzazione.",
           "en": "The FAQ distinguishes confirmed details from items requiring the organiser's approval.",
@@ -674,6 +722,22 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Distingue logistique et pédagogie avec étapes de validation.",
           "es": "Distingue coordinación y docencia con controles antes de enviar."
         }
+      },
+      {
+        "title": {
+          "it": "Registro iscritti e comunicazioni: pacchetto operativo",
+          "en": "Participant log and complete course correspondence",
+          "fr": "Suivi des inscrits et communications complètes",
+          "es": "Registro de inscritos y comunicaciones completas"
+        },
+        "language": "it",
+        "content": "PACCHETTO DI SEGRETERIA PER WEBINAR — CASO DIMOSTRATIVO\nEvento di prova: «Comunicazioni professionali più chiare», 12 novembre, ore 17:00–18:30 (Europe/Rome). Nessun webinar reale è stato programmato, nessuna iscrizione acquisita e nessuna email inviata.\n\nREGISTRO DI CINQUE PARTECIPANTI GIÀ ISCRITTI\nP-01 | Iscrizione dimostrativa registrata | Istruzioni da verificare | Nessuna segnalazione.\nP-02 | Iscrizione dimostrativa registrata | Chiede conferma dell'orario | Bozza pronta.\nP-03 | Iscrizione dimostrativa registrata | Non trova il collegamento | Chiedere al referente il link approvato.\nP-04 | Iscrizione dimostrativa registrata | Chiede materiali successivi | Autorizzazione da verificare.\nP-05 | Iscrizione dimostrativa registrata | Domanda sui contenuti | Inoltro alla formatrice.\n\nEMAIL COMPLETA — CHIARIMENTO ORARIO\nOggetto: Orario del webinar — richiesta ricevuta\nBuongiorno,\ngrazie per il suo messaggio. Nel programma dimostrativo l'incontro è previsto per il 12 novembre dalle 17:00 alle 18:30, ora italiana. Prima di inviare una conferma definitiva dobbiamo verificare con l'organizzatrice che data, orario e istruzioni di accesso siano quelli aggiornati.\nLe daremo riscontro dopo tale verifica. Se ha ricevuto comunicazioni diverse, può indicarcelo rispondendo a questa email.\nCordiali saluti,\nSegreteria organizzativa\n\nEMAIL COMPLETA — RICHIESTA DI MATERIALI\nOggetto: Materiali del webinar — informazioni disponibili\nBuongiorno,\nabbiamo registrato la sua richiesta relativa ai materiali dell'incontro. Stiamo verificando con l'organizzatrice quali documenti possano essere distribuiti ai partecipanti e attraverso quale canale.\nNon possiamo confermare la disponibilità di una registrazione o di altri materiali finché non riceviamo le indicazioni approvate. Non è necessario inviare ulteriori dati personali.\nCordiali saluti,\nSegreteria organizzativa\n\nMEMO ALLA FORMATRICE\nHo organizzato cinque registrazioni di prova. Sono aperte tre verifiche: conferma dell'orario per P-02, disponibilità del collegamento per P-03 e autorizzazione dei materiali per P-04. La domanda didattica di P-05 richiede una risposta da parte sua. Le due email sono pronte per l'approvazione; non sono state spedite.\nPrima dell'evento: verificare elenco iscritti, fuso orario, link, eventuali accessibilità e materiali consentiti. Dopo l'evento: condividere esclusivamente le risorse approvate e registrare le richieste residue.\nNon è stata svolta attività didattica, promozionale o di reclutamento.",
+        "explanation": {
+          "it": "Tracciamento organizzativo dei partecipanti già iscritti, bozze email e relazione per la formatrice.",
+          "en": "Organisation for existing registrants, complete email drafts and a trainer handover.",
+          "fr": "Organisation des personnes inscrites, courriels et compte rendu à la formatrice.",
+          "es": "Organización de inscritos, borradores y entrega al formador."
+        }
       }
     ],
     "qualityChecks": [
@@ -684,10 +748,10 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
         "es": "Horario, duración, zona horaria y enlace verificados."
       },
       {
-        "it": "Nessuna raccolta di iscritti nuovi, attestati o crediti inventati.",
-        "en": "No recruitment or invented certificates.",
-        "fr": "Pas de recrutement ni certification inventée.",
-        "es": "Sin captación ni certificados inventados."
+        "it": "Nessuna raccolta di iscritti nuovi, attestati o crediti di esempio.",
+        "en": "No recruitment or example certificates.",
+        "fr": "Pas de recrutement ni certification créée pour cet exemple.",
+        "es": "Sin captación ni certificados de ejemplo."
       }
     ],
     "limits": {

@@ -146,14 +146,21 @@
       .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
       .actions, .btn { display: none; }
     }
-  </style>
+  
+    /* Wide source/target tables remain readable on narrow screens without resizing the whole page. */
+    @media (max-width: 640px) {
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .comparison-grid, .dual-clause { grid-template-columns: minmax(0, 1fr); }
+      .card-block, .dual-clause > div { min-width: 0; }
+    }
+</style>
 </head>
 <body>
 <nav aria-label="Guide multilingue / Multilingual reading guide" style="padding:12px 16px;text-align:center;background:#103c35;color:#fff;font:600 14px/1.7 system-ui,sans-serif"><span style="margin-right:12px">Lettura guidata · Reading guide · Guide de lecture · Guía:</span> <a lang="it" href="/it/esempi-di-lavoro/esempio/05" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">IT</a> <a lang="en" href="/work-examples/sample/05" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">EN</a> <a lang="fr" href="/fr/exemples-de-projets/exemple/05" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">FR</a> <a lang="es" href="/es/ejemplos-de-trabajo/ejemplo/05" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">ES</a></nav>
   <div class="container">
     <div class="badge">Esempio di Lavoro Dimostrativo · 05</div>
-    <h1>Accordo di Riservatezza Bilaterale (NDA): Testo a Fronte con Note di Diritto Comparato</h1>
-    <div class="subtitle">Adattamento giuridico EN → IT con analisi delle formule di stile contrattuali</div>
+    <h1>Due clausole di riservatezza: traduzione EN → IT</h1>
+    <div class="subtitle">Due clausole originali create per la simulazione, tradotte a fronte e commentate sul piano linguistico</div>
 
     <div class="disclaimer">
       <strong>Nota di Trasparenza e Tutela della Riservatezza:</strong>
@@ -171,10 +178,10 @@
       </div>
       <div>
         <strong>Ordinamenti Comparati</strong>
-        Common Law (Inghilterra e Galles) vs Civil Law (Italia)
+        Differenze di formulazione da valutare senza consulenza legale
       </div>
       <div>
-        <strong>Traduttrice Giuridica</strong>
+        <strong>Esempio di traduzione giuridica</strong>
         Noemi Tomassetti · Traduttrice Specializzata
       </div>
     </div>
@@ -182,11 +189,11 @@
     <h2>1. Clausola 1: Definizione di Informazioni Riservate (Confidential Information)</h2>
     <div class="dual-clause">
       <div>
-        <strong>Testo Inglese (Common Law Form)</strong>
+        <strong>Testo originale inglese (simulazione)</strong>
         <p>«For the purposes of this Agreement, "Confidential Information" shall mean all technical, commercial, or operational information disclosed directly or indirectly by either party to the other, whether marked proprietary or reasonably understood to be confidential by its nature.»</p>
       </div>
       <div>
-        <strong>Resa Italiana (Civil Law Form)</strong>
+        <strong>Traduzione italiana proposta</strong>
         <p>«Ai fini del presente Accordo, per "Informazioni Riservate" si intende qualsiasi informazione tecnica, commerciale od operativa divulgata direttamente o indirettamente da una parte all'altra, sia essa contrassegnata come riservata o qualificabile come tale in base alla sua natura.»</p>
       </div>
     </div>
@@ -206,7 +213,36 @@
       </div>
     </div>
 
-    <div class="actions">
+<section aria-label="Ulteriori clausole bilingui"><h2>3. Clausole aggiuntive: traduzione contrattuale completa a fronte</h2><p><strong>Avvertenza editoriale e professionale.</strong> Queste clausole sono state create unicamente come materiale linguistico. Non formano un contratto da sottoscrivere, non sono state validate in alcun ordinamento e non costituiscono consulenza legale. Qualsiasi utilizzo reale richiederebbe una verifica specifica da parte di un professionista abilitato.</p>
+<div class="dual-clause"><div><strong>English · Clause 3 — Permitted purpose</strong><p>The receiving party may use Confidential Information solely to assess the potential collaboration described in this illustrative scenario. No right to reproduce, distribute or use that information for any other purpose is granted by this illustrative agreement.</p></div><div><strong>Italiano · Clausola 3 — Finalità consentita</strong><p>La parte ricevente può utilizzare le Informazioni Riservate esclusivamente per valutare la possibile collaborazione descritta nello scenario immaginario. Il presente accordo illustrativo non attribuisce alcun diritto di riprodurre, distribuire o utilizzare tali informazioni per finalità diverse.</p></div></div>
+<div class="dual-clause"><div><strong>English · Clause 4 — Authorised personnel</strong><p>The receiving party shall limit access to Confidential Information to personnel who need the information for the permitted purpose and who are subject to appropriate confidentiality obligations. The receiving party shall follow the access restrictions specified for the illustrative project.</p></div><div><strong>Italiano · Clausola 4 — Personale autorizzato</strong><p>La parte ricevente limita l'accesso alle Informazioni Riservate al personale che ne abbia necessità per la finalità consentita e che sia soggetto ad adeguati obblighi di riservatezza. La parte ricevente rispetta le limitazioni di accesso previste per il progetto immaginario.</p></div></div>
+<div class="dual-clause"><div><strong>English · Clause 5 — Return or deletion</strong><p>Upon receiving a written request from the disclosing party, the receiving party shall return or delete the Confidential Information within the period expressly agreed by the parties, except where retention is required by applicable law. The parties must define the practical method of return or deletion before using this provision in any real agreement.</p></div><div><strong>Italiano · Clausola 5 — Restituzione o eliminazione</strong><p>Su richiesta scritta della parte divulgante, la parte ricevente restituisce o elimina le Informazioni Riservate entro il termine espressamente concordato fra le parti, fatti salvi gli eventuali obblighi di conservazione previsti dalla normativa applicabile. Prima di utilizzare la disposizione in un accordo reale occorre definire concretamente le modalità di restituzione o eliminazione.</p></div></div>
+<div class="dual-clause"><div><strong>English · Clause 6 — No licence</strong><p>Disclosure of Confidential Information does not, by itself, grant the receiving party any licence or ownership interest in intellectual property belonging to the disclosing party. Any separate authorisation must be documented independently.</p></div><div><strong>Italiano · Clausola 6 — Assenza di licenza</strong><p>La comunicazione di Informazioni Riservate non attribuisce, di per sé, alla parte ricevente alcuna licenza o diritto di proprietà sui diritti di proprietà intellettuale spettanti alla parte divulgante. Ogni diversa autorizzazione deve essere documentata separatamente.</p></div></div></section>
+<section><h2>4. Glossario e coerenza del testo bilingue</h2><table><thead><tr><th>Espressione inglese</th><th>Soluzione italiana nel campione</th><th>Controllo linguistico</th></tr></thead><tbody>
+<tr><td>Receiving party / Disclosing party</td><td>Parte ricevente / Parte divulgante</td><td>Designazioni coerenti fra le clausole; confermare le definizioni nel testo originale</td></tr>
+<tr><td>Confidential Information</td><td>Informazioni Riservate</td><td>Maiuscole mantenute per richiamare un termine definito</td></tr>
+<tr><td>Permitted purpose</td><td>Finalità consentita</td><td>Riferimento interno uniforme; la finalità non viene ampliata</td></tr>
+<tr><td>Shall limit / Shall follow</td><td>Limita / Rispetta</td><td>Presente indicativo normativo, da valutare alla luce del documento completo</td></tr>
+<tr><td>Except where retention is required</td><td>Fatti salvi gli obblighi di conservazione</td><td>Eccezione preservata, senza specificare norme non presenti nella fonte</td></tr>
+<tr><td>No licence</td><td>Assenza di licenza</td><td>Non introdurre un trasferimento di diritti non previsto</td></tr>
+</tbody></table></section>
+<section><h2>5. Nota di revisione e consegna</h2><p><strong>Materiale originale prodotto:</strong> sei clausole dimostrative in inglese, traduzione italiana a fronte, glossario dei termini ricorrenti e osservazioni sulla resa dei verbi modali e delle eccezioni. Sono stati mantenuti gli stessi nomi per le parti e lo stesso termine definito in tutte le clausole. <strong>Restano fuori dal perimetro:</strong> interpretazione delle norme, validazione della clausola, pareri legali e traduzioni giurate o asseverate. Il documento dimostra competenze di traduzione e revisione linguistica, non la validità giuridica di un accordo.</p></section>
+    <h2>3. Clausola 3 — Uso consentito delle informazioni</h2><div class="dual-clause"><div><strong>English · Original illustrative clause</strong><p>«The Receiving Party may use Confidential Information solely to evaluate the proposed collaboration described by the parties in writing. The Receiving Party shall not use such information for any unrelated purpose without the Disclosing Party's prior written authorisation.»</p></div><div><strong>Italiano · Traduzione proposta</strong><p>«La Parte Ricevente può utilizzare le Informazioni Riservate esclusivamente per valutare la collaborazione proposta, come descritta per iscritto dalle parti. La Parte Ricevente non può utilizzare tali informazioni per finalità estranee senza la preventiva autorizzazione scritta della Parte Divulgante.»</p></div></div><div class="note-box"><strong>Nota:</strong> la distinzione tra utilizzo consentito e utilizzo non autorizzato viene mantenuta in due frasi. «Prior written authorisation» diventa «preventiva autorizzazione scritta» senza introdurre procedure di consenso non previste.</div>
+<h2>4. Clausola 4 — Persone autorizzate ad accedere</h2><div class="dual-clause"><div><strong>English · Original illustrative clause</strong><p>«The Receiving Party may disclose Confidential Information only to its personnel and professional advisers who need to know it for the Permitted Purpose and who are bound by confidentiality obligations. The Receiving Party remains responsible for informing those persons of the confidential nature of the materials.»</p></div><div><strong>Italiano · Traduzione proposta</strong><p>«La Parte Ricevente può comunicare le Informazioni Riservate esclusivamente al proprio personale e ai consulenti professionali che debbano conoscerle per la Finalità Consentita e siano soggetti a obblighi di riservatezza. La Parte Ricevente rimane responsabile di informare tali persone della natura riservata dei materiali.»</p></div></div><div class="note-box"><strong>Nota:</strong> «need to know» è reso in modo descrittivo, evitando un calco. La definizione di «Permitted Purpose» richiederebbe una verifica di coerenza con la clausola definitoria del documento completo.</div>
+<h2>5. Clausola 5 — Restituzione dei materiali</h2><div class="dual-clause"><div><strong>English · Original illustrative clause</strong><p>«Upon receiving a written request from the Disclosing Party, the Receiving Party shall return or delete the Confidential Information in its possession, except to the extent that retention is required by applicable law. Any permitted retained copy remains subject to the confidentiality obligations set out in this Agreement.»</p></div><div><strong>Italiano · Traduzione proposta</strong><p>«Su richiesta scritta della Parte Divulgante, la Parte Ricevente deve restituire o cancellare le Informazioni Riservate in suo possesso, salvo nella misura in cui la conservazione sia richiesta dalla normativa applicabile. Ogni copia legittimamente conservata rimane soggetta agli obblighi di riservatezza previsti dal presente Accordo.»</p></div></div><div class="note-box"><strong>Nota:</strong> «return or delete» conserva la natura alternativa delle due azioni. Non sono stati aggiunti termini di conservazione o cancellazione non indicati nell'originale.</div>
+<h2>6. Clausola 6 — Durata degli obblighi</h2><div class="dual-clause"><div><strong>English · Original illustrative clause</strong><p>«The confidentiality obligations shall apply during the evaluation period and for two years after its end, unless the parties agree otherwise in writing. This provision does not determine the legal treatment of information that qualifies for protection under other applicable rules.»</p></div><div><strong>Italiano · Traduzione proposta</strong><p>«Gli obblighi di riservatezza si applicano durante il periodo di valutazione e per i due anni successivi alla sua conclusione, salvo diverso accordo scritto tra le parti. La presente disposizione non determina il regime giuridico delle informazioni che beneficino di tutela in base ad altre norme applicabili.»</p></div></div><div class="note-box"><strong>Nota:</strong> la durata «two years» resta «due anni»; la traduzione non valuta la validità o l'opponibilità della clausola.</div>
+<h2>7. Clausola 7 — Modifiche e comunicazioni</h2><div class="dual-clause"><div><strong>English · Original illustrative clause</strong><p>«Any amendment to this Agreement must be recorded in writing and accepted by both parties. Notices concerning Confidential Information shall be addressed to the contacts designated by the parties for that purpose.»</p></div><div><strong>Italiano · Traduzione proposta</strong><p>«Qualsiasi modifica del presente Accordo deve risultare da un documento scritto ed essere accettata da entrambe le parti. Le comunicazioni relative alle Informazioni Riservate devono essere indirizzate ai referenti designati dalle parti a tale scopo.»</p></div></div><div class="note-box"><strong>Nota:</strong> «notices» è reso come «comunicazioni», adeguato al contesto di questa bozza dimostrativa; l'efficacia delle notifiche richiede una valutazione legale distinta dalla traduzione.</div>
+<h2>8. Registro di controllo della terminologia EN → IT</h2><table><thead><tr><th>Termine originale</th><th>Termine adottato</th><th>Controllo editoriale</th></tr></thead><tbody>
+<tr><td>Disclosing Party</td><td>Parte Divulgante</td><td>Mai alternato con «parte cedente»</td></tr>
+<tr><td>Receiving Party</td><td>Parte Ricevente</td><td>Terminologia uniforme</td></tr>
+<tr><td>Confidential Information</td><td>Informazioni Riservate</td><td>Mai sostituito con «dati sensibili»</td></tr>
+<tr><td>Permitted Purpose</td><td>Finalità Consentita</td><td>Definizione da verificare nel testo complessivo</td></tr>
+<tr><td>prior written authorisation</td><td>preventiva autorizzazione scritta</td><td>Preservato il requisito temporale</td></tr>
+<tr><td>return or delete</td><td>restituire o cancellare</td><td>Alternativa conservata</td></tr>
+<tr><td>applicable law</td><td>normativa applicabile</td><td>Nessuna giurisdizione predisposta per l'esempio</td></tr>
+</tbody></table>
+<h2>9. Nota di consegna del saggio di traduzione</h2><p><strong>Output prodotto:</strong> sette clausole originali create per la simulazione, sette traduzioni italiane e commenti sulle scelte linguistiche, con glossario. Le clausole non costituiscono un contratto completo pronto per la firma: mancano volutamente identificazione delle parti, legge applicabile, verifiche normative e numerosi elementi da definire da parte di un professionista legale. Il portfolio dimostra soltanto competenze linguistiche; non offre consulenza giuridica, redazione legale per conto del cliente o traduzione asseverata.</p>
+<div class="actions">
       <a href="/it/esempi-di-lavoro" class="btn btn-secondary">← Torna agli Esempi di Lavoro</a>
       <button onclick="window.print()" class="btn">Stampa / Salva in PDF</button>
     </div>

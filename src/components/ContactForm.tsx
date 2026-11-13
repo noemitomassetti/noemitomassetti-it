@@ -116,8 +116,8 @@ export function ContactForm({ lang: explicitLang, selectedService, initialMessag
     message: formData.messaggio.trim(),
     reference: idempotencyKey,
   };
-  const manualRequestText = getManualContactPlainText(manualDraft);
-  const manualEmailLink = getManualContactMailto(manualDraft);
+  const manualRequestText = getManualContactPlainText(manualDraft, lang);
+  const manualEmailLink = getManualContactMailto(manualDraft, lang);
 
   const copyRequest = async () => {
     try {

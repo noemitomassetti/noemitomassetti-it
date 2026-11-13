@@ -81,9 +81,9 @@ describe("Public profile, website and portfolio: one commercial perimeter",()=>{
       expect(operations.filter(x=>x.category===category).length,category).toBeGreaterThanOrEqual(2);
     }
     const intl=operations.find(x=>x.id==="existing-customer-multilingual-email-pack");
-    expect(intl?.artifacts.map(x=>x.language)).toEqual(["en","fr","es"]);
+    expect(intl?.artifacts.map(x=>x.language)).toEqual(["en","fr","es","it"]);
     const disclaimer=read("src/lib/portfolioDeepTypes.ts");
-    expect(disclaimer).toContain("non è un incarico commissionato");
+    expect(disclaimer).toMatch(/non proviene da un incarico commissionato/i);
   });
   it("keeps non-service internal products and old marketing claims out of social metadata",()=>{
     const html=read("index.html");

@@ -1,5 +1,5 @@
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
-/** Independent fictional work samples, not client deliverables. */
+/** Independent illustrative work samples, not client deliverables. */
 export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
   {
     "id": "commercial-quote-from-approved-pricelist",
@@ -18,20 +18,20 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Uno studio di forniture per ufficio immaginario riceve da un cliente già acquisito una richiesta di prezzo per materiali di allestimento. Le tariffe sono decise dal titolare: l’assistente prepara soltanto la bozza e segnala quanto manca.",
-      "en": "A fictional office-supply business receives a quotation request from an existing customer. The owner sets prices; the assistant prepares only an approval-ready draft.",
-      "fr": "Une entreprise fictive reçoit une demande de devis d’un client existant. La responsable valide prix et conditions.",
-      "es": "Una empresa ficticia recibe una solicitud de presupuesto de un cliente actual. La responsable aprueba precios y condiciones."
+      "en": "An illustrative office-supply business receives a quotation request from an existing customer. The owner sets prices; the assistant prepares only an approval-ready draft.",
+      "fr": "Une entreprise illustrative reçoit une demande de devis d’un client existant. La responsable valide prix et conditions.",
+      "es": "Una empresa de ejemplo recibe una solicitud de presupuesto de un cliente actual. La responsable aprueba precios y condiciones."
     },
     "objective": {
       "it": "Produrre una bozza chiara, matematicamente corretta e tracciabile senza definire sconti, imposte, trasporto o condizioni non autorizzate.",
-      "en": "Prepare an arithmetically correct draft without inventing discounts, taxes, shipping or terms.",
+      "en": "Prepare an arithmetically correct draft without adding unsupported information discounts, taxes, shipping or terms.",
       "fr": "Préparer un brouillon fiable, sans inventer les frais ni les conditions.",
-      "es": "Preparar un borrador correcto sin inventar descuentos ni condiciones."
+      "es": "Preparar un borrador correcto sin añadir datos sin confirmar descuentos ni condiciones."
     },
     "inputs": {
       "it": "Listino approvato di esempio: contenitore A €32,50; pannello B €45,00. Cliente chiede quattro A e tre B. Trasporto e condizioni fiscali non comunicati.",
       "en": "Approved sample prices: A €32.50, B €45.00; customer wants four A and three B. Shipping and tax treatment unknown.",
-      "fr": "Tarifs fictifs validés : A 32,50 €, B 45 €. Quatre A et trois B ; frais et taxes inconnus.",
+      "fr": "Tarifs illustratifs validés : A 32,50 €, B 45 €. Quatre A et trois B ; frais et taxes inconnus.",
       "es": "Tarifa aprobada de ejemplo: A 32,50 € y B 45 €; cuatro A y tres B; envío e impuestos pendientes."
     },
     "workflow": [
@@ -48,7 +48,7 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
         "es": "Calcular importes y subtotal provisional."
       },
       {
-        "it": "Predisporre bozza con chiarimenti, evitando prezzi inventati.",
+        "it": "Predisporre bozza con chiarimenti, evitando prezzi di esempio.",
         "en": "Prepare a draft that flags unknown conditions.",
         "fr": "Préparer un brouillon avec points ouverts.",
         "es": "Preparar borrador con datos pendientes."
@@ -74,7 +74,7 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
           "fr": "Tableau de calcul",
           "es": "Cálculo comprobado"
         },
-        "content": "RICHIESTA CLIENTE ESISTENTE — RIF. PREV-027\nListino di riferimento L-2026-11 v02 — DATI INTERAMENTE INVENTATI\nArticolo A, codice CON-101: 4 × €32,50 = €130,00.\nArticolo B, codice PAN-205: 3 × €45,00 = €135,00.\nSOMMA ARITMETICA DELLE RIGHE: €265,00.\nDA DEFINIRE CON IL TITOLARE: eventuali spese di trasporto, trattamento fiscale, termini di consegna, validità dell'offerta, sconti eventualmente autorizzati.\nSTATO: BOZZA INTERNA NON INVIABILE. La somma non rappresenta un totale definitivo da pagare. Nessun prezzo viene cambiato dall'assistente.",
+        "content": "RICHIESTA CLIENTE ESISTENTE — RIF. PREV-027\nListino di riferimento L-2026-11 v02 — DATI DI ESEMPIO\nArticolo A, codice CON-101: 4 × €32,50 = €130,00.\nArticolo B, codice PAN-205: 3 × €45,00 = €135,00.\nSOMMA ARITMETICA DELLE RIGHE: €265,00.\nDA DEFINIRE CON IL TITOLARE: eventuali spese di trasporto, trattamento fiscale, termini di consegna, validità dell'offerta, sconti eventualmente autorizzati.\nSTATO: BOZZA INTERNA NON INVIABILE. La somma non rappresenta un totale definitivo da pagare. Nessun prezzo viene cambiato dall'assistente.",
         "explanation": {
           "it": "Il calcolo è verificabile e il totale resta provvisorio finché mancano condizioni essenziali.",
           "en": "Arithmetic is transparent; the figure is not presented as a final payable quote.",
@@ -111,14 +111,30 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
           "fr": "La checklist distingue préparation et validation.",
           "es": "Separa borrador y presupuesto aprobado."
         }
+      },
+      {
+        "title": {
+          "it": "Preventivo operativo completo: bozza, controlli e consegna",
+          "en": "Complete operational quote: draft, checks and handover",
+          "fr": "Devis opérationnel : projet, contrôles et remise",
+          "es": "Presupuesto operativo: borrador, controles y entrega"
+        },
+        "language": "it",
+        "content": "BOZZA DI PREVENTIVO COMMERCIALE PREV-027 — CASO DIMOSTRATIVO\nAttività dimostrativa: preparazione di un prospetto su indicazioni di un titolare; nessun documento inviato a un cliente reale.\nFonte di riferimento: listino di prova L-2026-11 v02. Destinatario: cliente già esistente C-027.\n\nELENCO DELLE RIGHE RICHIESTE\nCON-101 | Contenitore A | Quantità 4 | Prezzo unitario da listino: 32,50 € | Totale 130,00 €.\nPAN-205 | Pannello B | Quantità 3 | Prezzo unitario da listino: 45,00 € | Totale 135,00 €.\nSomma delle due righe: 265,00 €.\nLa somma è un valore operativo di prova: non comprende eventuali costi di trasporto, imposte, sconti o altre condizioni non comunicate. Non va interpretata come importo definitivo.\n\nMODELLO DI TESTO DA ALLEGARE ALLA PROPOSTA, PREVIA APPROVAZIONE\nOggetto: Riepilogo dei materiali richiesti — riferimento PREV-027\nGentile cliente,\nabbiamo predisposto il riepilogo preliminare dei materiali richiesti, sulla base delle quantità indicate e del listino di riferimento.\nContenitore A, codice CON-101: quattro unità da 32,50 €, per un importo di 130,00 €.\nPannello B, codice PAN-205: tre unità da 45,00 €, per un importo di 135,00 €.\nLa somma parziale delle righe è di 265,00 €. Prima di poterle inviare un preventivo definitivo dobbiamo confermare con il referente competente le condizioni di trasporto, gli eventuali oneri applicabili e la validità della proposta.\nLe daremo indicazioni aggiornate dopo tali verifiche.\nCordiali saluti,\nUfficio commerciale\n\nREGISTRO DEI CONTROLLI\nC-01: codici CON-101 e PAN-205 presenti nel listino ipotetico — verificato.\nC-02: quantità 4 e 3 riportate dalla richiesta — verificato.\nC-03: somme 130,00 € e 135,00 € e totale parziale 265,00 € — ricontrollati.\nC-04: validità del listino e condizioni di pagamento — decisione riservata al titolare.\nC-05: imposte, trasporto, sconti e scadenza della proposta — dati non forniti.\nC-06: autorizzazione all'invio — non presente.\n\nNOTA AL REFERENTE\nBuongiorno,\nho preparato la bozza PREV-027 e ne ho verificato i calcoli sui dati dimostrativi ricevuti. Prima dell'invio chiedo conferma della versione applicabile del listino e delle condizioni ancora mancanti. Non ho modificato i prezzi, applicato sconti o generato fatture. La pratica rimane «bozza in attesa di approvazione».\nCordiali saluti,\nBack office\n\nRISULTATO: prospetto compilato, bozza completa, sei controlli documentati. Nessuna offerta vincolante e nessuna attività fiscale.",
+        "explanation": {
+          "it": "Prospetto dettagliato per un cliente esistente, senza definizione autonoma di prezzi o condizioni.",
+          "en": "A complete draft based solely on an approved price list, with unresolved commercial terms flagged.",
+          "fr": "Projet établi sur tarif validé, avec conditions commerciales à confirmer.",
+          "es": "Presupuesto basado en una tarifa aprobada, con condiciones por confirmar."
+        }
       }
     ],
     "qualityChecks": [
       {
-        "it": "4 × 32,50 = 130; 3 × 45 = 135; totale 265; nessun onere inventato.",
-        "en": "Arithmetic verified; no invented tax or shipping.",
+        "it": "4 × 32,50 = 130; 3 × 45 = 135; totale 265; nessun onere di esempio.",
+        "en": "Arithmetic verified; no example tax or shipping.",
         "fr": "Calcul exact, pas de frais ajoutés.",
-        "es": "Cálculo exacto, sin gastos inventados."
+        "es": "Cálculo exacto, sin gastos de ejemplo."
       },
       {
         "it": "Autorizzazione commerciale necessaria prima dell'invio.",
@@ -157,9 +173,9 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un piccolo marchio europeo immaginario che vende già a clienti in Italia ha bisogno di risposte italiane affidabili per domande sui propri ordini. Il servizio comprende smistamento, verifica informazioni e risposte approvate, non campagne di acquisizione.",
-      "en": "A fictional European brand with established Italian customers needs accurate written replies about existing orders, without prospecting or sales outreach.",
-      "fr": "Une marque européenne fictive ayant déjà des clients italiens souhaite des réponses fiables sur les commandes existantes, sans prospection.",
-      "es": "Una marca europea ficticia con clientes italianos actuales necesita respuestas escritas fiables, sin captación."
+      "en": "An illustrative European brand with established Italian customers needs accurate written replies about existing orders, without prospecting or sales outreach.",
+      "fr": "Une marque européenne illustrative ayant déjà des clients italiens souhaite des réponses fiables sur les commandes existantes, sans prospection.",
+      "es": "Una marca europea de ejemplo con clientes italianos actuales necesita respuestas escritas fiables, sin captación."
     },
     "objective": {
       "it": "Offrire un punto di contatto italiano ordinato e cortese, mantenendo tutte le decisioni commerciali e contrattuali presso il committente.",
@@ -168,10 +184,10 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
       "es": "Ofrecer respuestas claras sin decidir condiciones comerciales."
     },
     "inputs": {
-      "it": "Tre richieste fittizie di clienti già acquisiti; un codice ordine di esempio, informazioni di disponibilità non confermate e una procedura per escalation.",
-      "en": "Three invented existing-customer enquiries, mock order codes and a basic escalation policy.",
-      "fr": "Trois demandes fictives de clients existants et des procédures de suivi.",
-      "es": "Tres solicitudes inventadas de clientes actuales y reglas de seguimiento."
+      "it": "Tre richieste dimostrative di clienti già acquisiti; un codice ordine di esempio, informazioni di disponibilità non confermate e una procedura per escalation.",
+      "en": "Three example existing-customer enquiries, mock order codes and a basic escalation policy.",
+      "fr": "Trois demandes illustratives de clients existants et des procédures de suivi.",
+      "es": "Tres solicitudes de ejemplo de clientes actuales y reglas de seguimiento."
     },
     "workflow": [
       {
@@ -215,10 +231,10 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
         },
         "content": "Oggetto: aggiornamento sulla richiesta relativa all'ordine INT-651\nBuongiorno,\ngrazie per averci scritto. Abbiamo ricevuto la sua richiesta relativa alla finitura richiesta per l'ordine INT-651 e stiamo verificando la disponibilità aggiornata con il nostro referente interno.\nAl momento non disponiamo ancora di una data di spedizione confermata. Preferiamo darle una risposta attendibile dopo il controllo, anziché comunicare una stima che potrebbe cambiare.\nLe scriveremo non appena avremo informazioni verificate. Se nel frattempo desidera segnalare un'esigenza legata alle tempistiche, può rispondere a questo messaggio: la inoltreremo al responsabile incaricato, senza modificare l'ordine senza autorizzazione.\nCi scusiamo per il disagio e la ringraziamo per la comprensione.\nCordiali saluti,\nServizio clienti in italiano — marchio dimostrativo\nNOTA: bozza di esempio, non inviata a persone reali.",
         "explanation": {
-          "it": "Tono professionale, nessuna data inventata e decisioni riservate al titolare.",
-          "en": "Natural Italian, no invented dispatch date and clear escalation.",
+          "it": "Tono professionale, nessuna data di esempio e decisioni riservate al titolare.",
+          "en": "Natural Italian, no example dispatch date and clear escalation.",
           "fr": "Italien naturel, sans délai inventé.",
-          "es": "Italiano natural, sin fechas inventadas."
+          "es": "Italiano natural, sin fechas de ejemplo."
         }
       },
       {
@@ -249,6 +265,22 @@ export const OPERATIONAL_SAMPLES_C: OperationalDeepCase[] = [
           "en": "Shows how an overseas client can understand Italian support progress.",
           "fr": "Une synthèse permet au donneur d’ordre étranger de suivre le service italien.",
           "es": "El responsable extranjero puede seguir el servicio en italiano."
+        }
+      },
+      {
+        "title": {
+          "it": "Pacchetto postvendita in italiano e rapporto bilingue",
+          "en": "Complete Italian after-sales reply pack with bilingual handover",
+          "fr": "Réponses après-vente en italien et compte rendu bilingue",
+          "es": "Respuestas posventa en italiano e informe bilingüe"
+        },
+        "language": "it",
+        "content": "PACCHETTO ASSISTENZA POSTVENDITA — CASO DIMOSTRATIVO\nMarchio europeo dimostrativo con clienti italiani già acquisiti. Tre pratiche: INT-651 (finitura da verificare), INT-642 (modifica indirizzo), INT-630 (segnalazione su articolo). Nessun cliente reale è stato contattato.\n\nEMAIL IT-001 — INFORMAZIONI SULLA DISPONIBILITÀ\nOggetto: Aggiornamento sulla richiesta relativa all'ordine INT-651\nGentile cliente,\ngrazie per averci scritto. Abbiamo preso nota della richiesta relativa alla finitura scelta per l'ordine INT-651.\nLa disponibilità deve ancora essere verificata con il referente competente. Non possiamo quindi confermare una data di spedizione o un'alternativa prima di aver ricevuto indicazioni attendibili.\nLe comunicheremo un aggiornamento non appena potremo farlo sulla base di informazioni verificate.\nCordiali saluti,\nServizio clienti\n\nEMAIL IT-002 — RICHIESTA DI MODIFICA DELL'INDIRIZZO\nOggetto: Verifica della richiesta di modifica — ordine INT-642\nGentile cliente,\nabbiamo registrato la sua richiesta di modifica dell'indirizzo associato all'ordine INT-642.\nPer verificare se la variazione sia ancora possibile dobbiamo controllare lo stato della spedizione e le procedure autorizzate. Al momento nessuna modifica è stata effettuata.\nLa invitiamo a non inviare dati di pagamento. Le forniremo le istruzioni necessarie dopo aver consultato il referente competente.\nCordiali saluti,\nServizio clienti\n\nEMAIL IT-003 — SEGNALAZIONE DI UN ARTICOLO\nOggetto: Segnalazione ricevuta — ordine INT-630\nGentile cliente,\nci dispiace apprendere che l'articolo ricevuto non corrisponda alle sue aspettative. Abbiamo registrato la segnalazione e la sottoporremo al reparto competente.\nPer esaminare la richiesta potrebbero essere utili alcune informazioni sul problema e, se necessario, una fotografia dell'articolo. Le indicheremo esclusivamente ciò che serve dopo la verifica della procedura applicabile.\nNon possiamo confermare sostituzioni o rimborsi prima dell'esame del caso.\nCordiali saluti,\nServizio clienti\n\nINTERNAL HANDOVER — ENGLISH VERSION\nSubject: Italian after-sales enquiries — three open cases\nThree illustrative existing-customer enquiries have been classified and drafted in Italian. INT-651 requires confirmation of the requested finish and dispatch status. INT-642 requires an authorised check before changing an address. INT-630 requires the responsible team to review the complaint and the applicable procedure. No reply was sent, no order was amended and no refund was promised. The drafts are ready for approval; please confirm the authorised next steps before they are used.\n\nNOTA FINALE\nLe tre email mantengono lo stesso registro di cortesia, distinguono dati disponibili da informazioni da verificare e non prevedono attività di acquisizione clienti. Il rapporto inglese è rivolto al responsabile immaginario e non attribuisce risultati reali.",
+        "explanation": {
+          "it": "Tre risposte complete per clienti già esistenti e aggiornamento al responsabile, senza promesse o attività commerciali a freddo.",
+          "en": "Three complete Italian drafts for existing customers and an English-language manager update.",
+          "fr": "Trois réponses italiennes et synthèse au responsable, sans prospection.",
+          "es": "Tres respuestas italianas y resumen al responsable, sin captación."
         }
       }
     ],

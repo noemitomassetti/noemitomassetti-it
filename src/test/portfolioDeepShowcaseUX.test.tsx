@@ -48,7 +48,7 @@ describe("Deep portfolio user experience", () => {
   it("searches complete source and target passages and flexible language-direction notation", () => {
     mount();
     const search = screen.getByRole("searchbox", { name: "Cerca nei dossier" });
-    fireEvent.change(search, { target: { value: "riassortimento" } });
+    fireEvent.change(search, { target: { value: "IT-482" } });
     expect(screen.getByRole("status")).toHaveTextContent("1 / 1");
     expect(screen.getByRole("link", { name: /Aggiornamento ordine: italiano → inglese/ })).toBeInTheDocument();
     fireEvent.change(search, { target: { value: "IT → EN" } });
@@ -71,8 +71,8 @@ describe("Deep portfolio user experience", () => {
 
   it("identifies demonstration work honestly and provides distinct link names", () => {
     mount("en");
-    expect(screen.getByRole("heading", { name: /See how I approach each service through detailed samples/ })).toBeInTheDocument();
-    expect(screen.getByText(/not excerpts from commissioned work/)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Italian translation, customer messages and practical work samples/ })).toBeInTheDocument();
+    expect(screen.getByText(/rather than commissioned client materials/)).toBeInTheDocument();
     const labels = screen.getAllByRole("link", { name: /Read the complete dossier:/ })
       .map(link => link.getAttribute("aria-label"));
     expect(labels).toHaveLength(8);

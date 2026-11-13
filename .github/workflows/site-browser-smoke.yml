@@ -55,20 +55,82 @@ jobs:
                 const text = await page.locator('body').innerText();
                 if (text.length < 150) throw new Error('Too little rendered text for '+path+': '+text.length);
                 if (['/', '/it', '/fr', '/es'].includes(path)) {
-                  if (await page.locator('a[href="/publications"],a[href="/it/libri"],a[href="/fr/livres"],a[href="/es/libros"]').count() === 0)
-                    throw new Error('Pre-launch books section is not discoverable at '+path);
-                  console.log('PASS book pre-launch section linked on '+path);
+                  if (await page.locator('a[href="/publications"],a[href="/it/libri"],a[href="/fr/livres"],a[href="/es/libros"]').count() > 0)
+                    throw new Error('Unpublished books are linked at '+path);
+                  console.log('PASS unpublished book section hidden on '+path);
                 }
                 const safe = path.replace(/[^a-z0-9]/gi,'_')||'home';
                 await page.screenshot({path:'/tmp/noemi-smoke/'+safe+'.png',fullPage:true});
                 console.log('PASS route '+path+' content chars='+text.length+' title='+await page.title());
               }
+              // Actual four-language concierge journey, not only intent unit tests.
+              // No customer message is transmitted: only local chat interaction.
+              for (const scenario of [
+                {lang:'it',path:'/it',open:'Assistente di Noemi · Risposta automatica',placeholder:'Scrivi un messaggio o rispondi qui...',send:'Invia messaggio',query:'Vorrei una traduzione dall’italiano al francese',expected:'Traduco tra italiano e inglese'},
+                {lang:'en',path:'/',open:'Noemi’s Assistant · Automated replies',placeholder:'Type a message or answer here...',send:'Send message',query:'Please translate from Italian into English',expected:'Translation is available between Italian'},
+                {lang:'fr',path:'/fr',open:'Assistant de Noemi · Réponses automatiques',placeholder:'Écrivez un message ou répondez ici...',send:'Envoyer le message',query:'Je voudrais traduire de l’italien vers le français',expected:'Traductions possibles entre l’italien'},
+                {lang:'es',path:'/es',open:'Asistente de Noemi · Respuestas automáticas',placeholder:'Escribe un mensaje o responde aquí...',send:'Enviar mensaje',query:'Necesito traducir del italiano al español',expected:'Traducción entre el italiano'}
+              ]) {
+                await page.goto('http://127.0.0.1:4173'+scenario.path,{waitUntil:'networkidle'});
+                const dismissCookie=page.getByRole('button',{name:/^(Rifiuta|Decline|Refuser|Rechazar)$/i}).first();
+                if (await dismissCookie.isVisible()) await dismissCookie.click();
+                await page.getByRole('button',{name:scenario.open}).click();
+                // Unconfigured OpenAI must not expose a disabled AI upsell to visitors.
+                if(await page.getByText(/AI non attiva|AI not configured|IA non configurée|IA sin configurar/i).count())
+                  throw Error('Unprofessional disabled AI notice visible on public chat '+scenario.lang);
+                await page.getByPlaceholder(scenario.placeholder).fill(scenario.query);
+                await page.getByRole('button',{name:scenario.send}).click();
+                if(!await page.getByText(scenario.expected,{exact:false}).first().isVisible())
+                  throw Error('Concierge did not route bidirectional translation '+scenario.lang);
+                await page.getByRole('button',{name:scenario.lang==='it'?'Chiudi la chat':scenario.lang==='fr'?'Fermer la fenêtre':scenario.lang==='es'?'Cerrar el chat':'Close chat'}).click();
+                console.log('PASS multilingual concierge quote routing '+scenario.lang);
+              }
+              // Locale parity for all major marketing and contact routes, in a real mobile browser.
+              // This supplements (rather than repeats) the exhaustive portfolio/document checks below.
+              const localizedPages = {
+                en: ['/services','/about','/resources','/contact','/italian-localisation','/professional-research'],
+                it: ['/it/servizi','/it/chi-sono','/it/risorse','/it/contatti','/it/localizzazione-italiano','/it/ricerca-professionisti'],
+                fr: ['/fr/services','/fr/a-propos','/fr/ressources','/fr/contact','/fr/localisation-italien','/fr/recherche-professionnels'],
+                es: ['/es/servicios','/es/sobre-mi','/es/recursos','/es/contacto','/es/localizacion-italiano','/es/investigacion-profesionales']
+              };
+              await page.setViewportSize({width:390,height:844});
+              for(const [locale,routes] of Object.entries(localizedPages)) {
+                for(const route of routes) {
+                  const response=await page.goto('http://127.0.0.1:4173'+route,{waitUntil:'domcontentloaded',timeout:20000});
+                  if(!response || response.status()!==200) throw Error('Localized route inaccessible '+route);
+                  await page.locator('h1').first().waitFor({timeout:12000});
+                  const text=await page.locator('main').last().innerText();
+                  if(text.length<250) throw Error('Localized page unexpectedly empty '+route);
+                  const htmlLang=await page.locator('html').getAttribute('lang');
+                  if(htmlLang!==locale) throw Error('Wrong html lang '+route+': '+htmlLang);
+                  const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
+                  if(canonical!=='https://www.noemitomassetti.it'+route) throw Error('Wrong canonical '+route+': '+canonical);
+                  if(await page.locator('link[rel="alternate"][hreflang]').count()!==5) throw Error('Missing hreflang links '+route);
+                  if(await page.locator('a[href="/publications"],a[href="/it/libri"],a[href="/fr/livres"],a[href="/es/libros"]').count())
+                    throw Error('Unpublished book section linked on '+route);
+                  if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3))
+                    throw Error('Horizontal overflow '+route+' mobile');
+                  console.log('PASS localized key page '+route+' '+locale+' 390px');
+                }
+              }
+              // Regression: the questionnaire must not claim to send mail automatically.
+              for (const item of [
+                {lang:'it',path:'/it/ricerca-professionisti',label:'Domanda 1 di 20'},
+                {lang:'en',path:'/professional-research',label:'Question 1 of 20'},
+                {lang:'fr',path:'/fr/recherche-professionnels',label:'Question 1 sur 20'},
+                {lang:'es',path:'/es/investigacion-profesionales',label:'Pregunta 1 de 20'}
+              ]) {
+                await page.goto('http://127.0.0.1:4173'+item.path,{waitUntil:'networkidle'});
+                if(!await page.getByText(item.label,{exact:true}).isVisible())
+                  throw Error('Unlocalized questionnaire question label '+item.path);
+                if(await page.locator('input[placeholder="Nome e Cognome"]').count())
+                  throw Error('Unlocalized questionnaire name placeholder '+item.path);
+                console.log('PASS questionnaire localized question label '+item.lang);
+              }
               for (const path of ['/publications','/it/libri','/fr/livres','/es/libros']) {
                 await page.goto('http://127.0.0.1:4173'+path,{waitUntil:'networkidle'});
-                const body = await page.locator('body').innerText();
-                if (!body.includes('Business English in Practice')) throw new Error('Book pre-launch page missing: '+path);
-                if (await page.locator('a[href*="amazon."]').count() > 0) throw new Error('Unpublished book has purchase link: '+path);
-                console.log('PASS book pre-launch visible without purchase link '+path);
+                if (!(await page.locator('h1').innerText()).includes('404')) throw new Error('Unpublished book route must show 404: '+path);
+                console.log('PASS unpublished book page hidden '+path);
               }
               for (const path of ['/portfolio-documenti/doc-01-localizzazione-interior-design.html','/portfolio-documenti/doc-20-richiesta-preventivo-workflow.html']) {
                 const response = await page.request.get('http://127.0.0.1:4173'+path);
@@ -230,8 +292,23 @@ jobs:
                   const heading=await page.locator('main h1').count();
                   if(heading!==1 || visible.length<700) throw Error('Reader missing content '+route);
                   if(await page.locator('html').getAttribute('lang')!==locale) throw Error('Reader lang incorrect '+route);
-                  if(await page.locator('main iframe[title]').count()!==1) throw Error('Accessible work-sample iframe missing '+route);
-                  const src=await page.locator('main iframe').getAttribute('src');
+                  // DOC 11 now presents the complete customer-care work in three accessible
+                  // articles rather than hiding or duplicating the email drafts inside an iframe.
+                  let src;
+                  if(id==='11') {
+                    if(await page.locator('main article').count()!==3)
+                      throw Error('Three full customer-care samples missing '+route);
+                    const content=await page.locator('main').last().innerText();
+                    for(const ticket of ['CC-101','CC-102','CC-103']) {
+                      if(!content.includes(ticket)) throw Error('Missing complete customer reply '+ticket+' '+route);
+                    }
+                    const workLink=page.locator('main a[href^="/portfolio-documenti/doc-11-"]');
+                    if(await workLink.count()!==1) throw Error('Original document link missing '+route);
+                    src=await workLink.getAttribute('href');
+                  } else {
+                    if(await page.locator('main iframe[title]').count()!==1) throw Error('Accessible work-sample iframe missing '+route);
+                    src=await page.locator('main iframe').getAttribute('src');
+                  }
                   if(!src?.startsWith('/portfolio-documenti/doc-'+id+'-')) throw Error('Incorrect original for '+route+': '+src);
                   if(!checkedOriginals.has(src)) {
                     const asset=await page.request.get('http://127.0.0.1:4173'+src);

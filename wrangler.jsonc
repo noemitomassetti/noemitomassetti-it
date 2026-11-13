@@ -1,0 +1,15 @@
+{
+  // Draft configuration only. Do not deploy or attach the domain before Noemi approves.
+  "name": "noetom-private-preview",
+  "main": "./cloudflare/worker.ts",
+  "compatibility_date": "2026-11-11",
+  "workers_dev": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // Existing SEO HTML is generated in /path/index.html but canonicals omit '/'.
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  }
+}

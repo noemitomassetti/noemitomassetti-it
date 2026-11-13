@@ -34,7 +34,8 @@ for(const file of sources) {
     if (!name.startsWith('@/') && !name.startsWith('./') && !name.startsWith('../'))continue;
     imports++;
     const stem=name.startsWith('@/')?path.join(root,'src',name.slice(2)):path.resolve(path.dirname(file),name);
-    const candidates=[stem,stem+'.tsx',stem+'.ts',stem+'.jsx',stem+'.js',stem+'.json',stem+'.css',path.join(stem,'index.ts'),path.join(stem,'index.tsx')];
+    // TypeScript NodeNext imports use a .js runtime specifier while their source is .ts.
+    const candidates=[stem,stem+'.tsx',stem+'.ts',stem+'.jsx',stem+'.js',stem+'.json',stem+'.css',path.join(stem,'index.ts'),path.join(stem,'index.tsx'),...(name.endsWith('.js')?[stem.slice(0,-3)+'.ts',stem.slice(0,-3)+'.tsx']:[])];
     if(!candidates.some(exists)) failures.push(`Missing module ${path.relative(root,file)}: ${name}`);
   }
 }

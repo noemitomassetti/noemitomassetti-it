@@ -6,7 +6,7 @@ const localePaths = ["it", "en", "fr", "es"].map(lang => `src/lib/i18n/locales/$
 
 describe("Site copy editorial alignment", () => {
   it("keeps academic credentials consistent and omits graduation years in all languages", () => {
-    for (const path of [...localePaths, "src/pages/Index.tsx"]) {
+    for (const path of localePaths) {
       const text = source(path);
       expect(text).not.toMatch(/2009|2010[–-]2012|2010\s*[-–]\s*2012/);
       expect(text).toContain("Università degli Studi di Macerata");
@@ -15,6 +15,8 @@ describe("Site copy editorial alignment", () => {
       expect(text).toMatch(/60 CFU/);
     }
     const home = source("src/pages/Index.tsx");
+    // Homepage biographies are rendered from the reviewed per-language dictionaries.
+    expect(home).toContain("dict.aboutSection.bioParagraphs.map");
     expect(home).not.toMatch(/summa cum laude|félicitations du jury|matrícula de honor/i);
   });
 
@@ -32,7 +34,7 @@ describe("Site copy editorial alignment", () => {
     expect(home).not.toContain("deliverable reali");
     const portfolio = source("src/pages/Portfolio.tsx");
     expect(portfolio).toMatch(/dimostrativ/i);
-    expect(portfolio).toMatch(/fictional data|dati fittizi|données fictives|datos ficticios/i);
+    expect(portfolio).toMatch(/inventati|invented|inventés|inventados/i);
   });
 
   it("describes the actual scope instead of offering administration and prospecting", () => {

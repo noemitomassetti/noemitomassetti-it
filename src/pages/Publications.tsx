@@ -65,7 +65,7 @@ const PRELAUNCH: Record<Language, {
     headline: "Business English in Practice",
     premise: "L’inglese professionale, quando ti serve. Un prontuario bilingue per trovare rapidamente come scrivere un’email, rispondere a un cliente, gestire una telefonata o preparare un documento di lavoro.",
     label: "Che cosa troverai",
-    useCases: ["103 situazioni di lavoro con esempi per email, chat e telefono", "41 schede operative con documenti e formulazioni da adattare", "Percorsi rapidi, glossari e spiegazioni in italiano", "Esercizi e controlli per comunicare con precisione, senza trasformare ipotesi in promesse"],
+    useCases: ["Situazioni professionali con esempi per email, chat e telefono", "Schede operative con documenti e formulazioni da adattare", "Percorsi rapidi, glossari e spiegazioni in italiano", "Esercizi e controlli per comunicare con precisione, senza trasformare ipotesi in promesse"],
     distinction: "Parti dal problema, scegli il canale, adatta il modello e controlla i dati prima dell’invio. Pensato per professionisti e freelance italofoni che lavorano in contesti internazionali.",
     details: "Dalla collana Professional Languages in Practice, di Noemi Tomassetti, laureata in Mediazione Linguistica e con formazione specialistica in traduzione. Il libro nasce dall’esperienza nella comunicazione professionale e nel back office.",
     notice: "Edizione in fase di revisione e collaudo. Prezzo, anteprima gratuita e collegamento Amazon saranno pubblicati soltanto dopo l’approvazione finale."
@@ -75,7 +75,7 @@ const PRELAUNCH: Record<Language, {
     headline: "Business English in Practice",
     premise: "Practical professional English, when you need it. An Italian–English reference guide designed to help Italian-speaking professionals write emails, reply to clients, handle calls and prepare workplace documents.",
     label: "What the guide includes",
-    useCases: ["103 workplace situations with email, chat and telephone examples", "41 practical templates and document guides to adapt", "Quick-reference routes, glossaries and explanations in Italian", "Exercises and checks to help avoid unsupported promises or claims"],
+    useCases: ["Workplace situations with email, chat and telephone examples", "Practical templates and document guides to adapt", "Quick-reference routes, glossaries and explanations in Italian", "Exercises and checks to help avoid unsupported promises or claims"],
     distinction: "Start with the situation, select the channel, adapt the wording and check the facts before sending. Written primarily for Italian-speaking professionals and freelancers.",
     details: "Part of the Professional Languages in Practice collection, by Noemi Tomassetti, a graduate in Language Mediation with postgraduate training in specialist translation and experience in professional communications and back-office support.",
     notice: "Currently undergoing editorial review and testing. A sample, price and Amazon purchase link will appear only after final approval."
@@ -85,7 +85,7 @@ const PRELAUNCH: Record<Language, {
     headline: "Business English in Practice",
     premise: "L’anglais professionnel au moment où vous en avez besoin. Un guide pratique bilingue italien-anglais pour rédiger des courriels, répondre aux clients, gérer des appels et préparer des documents de travail.",
     label: "Ce que contient le guide",
-    useCases: ["103 situations professionnelles avec modèles de courriels, de messages et d’appels", "41 fiches pratiques et modèles de documents à adapter", "Accès rapides, glossaires et explications en italien", "Exercices et vérifications pour communiquer avec précision"],
+    useCases: ["Situations professionnelles avec modèles de courriels, de messages et d’appels", "Fiches pratiques et modèles de documents à adapter", "Accès rapides, glossaires et explications en italien", "Exercices et vérifications pour communiquer avec précision"],
     distinction: "Partez de la situation, choisissez le canal, adaptez le modèle et vérifiez les informations avant de l’envoyer. Le guide s’adresse avant tout aux professionnels italophones.",
     details: "Un titre de la collection Professional Languages in Practice, signé Noemi Tomassetti, diplômée en médiation linguistique et formée à la traduction spécialisée, avec une expérience en communication professionnelle et back-office.",
     notice: "Livre en cours de révision et de test. L’extrait, le prix et le lien d’achat Amazon seront communiqués après validation finale."
@@ -95,7 +95,7 @@ const PRELAUNCH: Record<Language, {
     headline: "Business English in Practice",
     premise: "Inglés profesional cuando lo necesitas. Una guía práctica bilingüe italiano-inglés para escribir correos, responder a clientes, atender llamadas y preparar documentos de trabajo.",
     label: "Qué incluye",
-    useCases: ["103 situaciones laborales con ejemplos para correo, chat y teléfono", "41 fichas prácticas con modelos y documentos adaptables", "Accesos rápidos, glosarios y explicaciones en italiano", "Ejercicios y comprobaciones para comunicarte con precisión"],
+    useCases: ["Situaciones laborales con ejemplos para correo, chat y teléfono", "Fichas prácticas con modelos y documentos adaptables", "Accesos rápidos, glosarios y explicaciones en italiano", "Ejercicios y comprobaciones para comunicarte con precisión"],
     distinction: "Parte de una situación, elige el canal, adapta el modelo y comprueba los datos antes de enviarlo. Dirigido principalmente a profesionales y autónomos italohablantes.",
     details: "De la colección Professional Languages in Practice, de Noemi Tomassetti, graduada en Mediación Lingüística y formada en traducción especializada, con experiencia en comunicación profesional y tareas de back office.",
     notice: "Libro en revisión editorial y pruebas. El extracto, el precio y el enlace de compra de Amazon se publicarán tras la aprobación final."

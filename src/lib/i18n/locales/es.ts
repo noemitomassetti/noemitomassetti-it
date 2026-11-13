@@ -4,28 +4,28 @@ export const esLocale: TranslationDictionary = {
   lang: 'es',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
-    homeDesc: 'Asistencia virtual multilingüe, secretaría, back office, atención al cliente, comunicación profesional, contenidos digitales y traducción IT ↔ EN/FR/ES.',
-    servicesTitle: 'Asistente virtual multilingüe y traductora | Noemi Tomassetti',
-    servicesDesc: 'Asistencia virtual multilingüe, secretaría, back office, atención escrita a clientes, contenidos digitales y traducción IT ↔ EN/FR/ES.',
+    homeTitle: "Asistente virtual en italiano y back office | Noemi Tomassetti",
+    homeDesc: "Asistencia virtual en italiano para trabajar con Italia: correo, agenda, back office y atención al cliente por escrito, además de traducción y localización IT ↔ EN/FR/ES.",
+    servicesTitle: 'Asistencia virtual en italiano y comunicación profesional | Noemi Tomassetti',
+    servicesDesc: 'Asistencia virtual en italiano para empresas que trabajan con Italia: gestión del correo, agenda, pedidos, back office y atención al cliente por escrito, además de traducción y revisión de textos.',
     noetomTitle: 'NoeTom | Proyecto operativo interno',
     noetomDesc: 'NoeTom es el proyecto operativo interno de Noemi Tomassetti, actualmente en desarrollo y en pruebas privadas.',
-    aboutTitle: 'Sobre Mí | Noemi Tomassetti',
-    aboutDesc: 'Más de 20 años de experiencia profesional en organización, idiomas, atención al cliente y back office. Titulada en Mediación Lingüística con 110/110 e lode (distinción italiana).',
-    resourcesTitle: 'Recursos y Artículos | Noemi Tomassetti',
+    aboutTitle: 'Sobre mí | Noemi Tomassetti',
+    aboutDesc: 'Más de veinte años de experiencia laboral en distintas funciones, como atención al cliente y organización, junto con formación lingüística especializada.',
+    resourcesTitle: 'Recursos y artículos | Noemi Tomassetti',
     resourcesDesc: 'Perspectivas prácticas sobre delegación, comunicación multilingüe, claridad operativa y productividad con IA para profesionales independientes.',
-    contactTitle: 'Contacto y Presupuestos | Noemi Tomassetti',
+    contactTitle: 'Contacto y presupuestos | Noemi Tomassetti',
     contactDesc: 'Descríbeme tus necesidades por escrito y solicita un presupuesto personalizado, sin llamadas obligatorias.',
-    privacyTitle: 'Política de Privacidad | Noemi Tomassetti',
+    privacyTitle: 'Política de privacidad | Noemi Tomassetti',
     privacyDesc: 'Tratamiento de datos personales de conformidad con el Reglamento General de Protección de Datos de la UE (RGPD 2016/679).',
-    cookieTitle: 'Política de Cookies | Noemi Tomassetti',
+    cookieTitle: 'Política de cookies | Noemi Tomassetti',
     cookieDesc: 'Información sobre cookies, análisis de visitas y opciones de consentimiento.',
   },
   nav: {
     home: 'Inicio',
     services: 'Servicios',
     noetom: 'NoeTom (proyecto en desarrollo)',
-    about: 'Sobre Mí',
+    about: 'Sobre mí',
     resources: 'Recursos',
     contact: 'Contacto',
     bookCall: 'Solicitar un presupuesto',
@@ -34,30 +34,30 @@ export const esLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'ASISTENTE VIRTUAL MULTILINGÜE',
-    titleLine1: 'Asistencia virtual, back office y traducción',
-    titleHighlight: 'para organizar mejor tu actividad',
-    subtitle: "Secretaría organizativa, back office, atención al cliente, comunicación profesional, contenidos digitales y traducción en ambas direcciones entre el italiano y el inglés, francés y español.",
-    headline: 'Comunicación clara y una actividad mejor organizada.',
-    desc1: 'Pongo a tu disposición más de veinte años de experiencia laboral para ayudarte a gestionar mejor tu trabajo diario. El italiano es mi lengua materna y tengo formación en traducción especializada.',
-    desc2: 'Desde la gestión del correo y la agenda hasta la atención escrita a clientes, la traducción y la revisión de contenidos web: apoyo adaptado a tu actividad.',
+    titleLine1: 'Asistencia virtual en italiano y back office',
+    titleHighlight: 'para trabajar con Italia',
+    subtitle: "Asistencia virtual en italiano para correo, agenda, secretaría, back office y atención al cliente por escrito, con traducción y adaptación de contenidos para Italia.",
+    headline: "Tu asistente virtual para trabajar con Italia",
+    desc1: "Ayudo a profesionales y pequeñas empresas a organizar las tareas relacionadas con Italia: correos en italiano, citas, documentos y consultas de clientes actuales.",
+    desc2: "Además de la asistencia virtual, redacto y reviso textos profesionales y traduzco entre el italiano y el inglés, francés o español en ambas direcciones. Definimos las tareas antes de comenzar.",
     ctaButton: 'SOLICITAR UN PRESUPUESTO',
     callReassurance: 'Solicitud sin compromiso',
     description:
-      'Traduzco del italiano al inglés, francés y español y también en sentido inverso. Además, reviso contenidos profesionales y presto apoyo organizativo dentro del alcance acordado.',
-    ctaServices: 'Explorar Servicios',
+      "Asistencia virtual en italiano, atención al cliente por escrito y back office, con servicios lingüísticos complementarios y condiciones acordadas por escrito.",
+    ctaServices: 'Descubrir los servicios',
     ctaNoeTom: 'Conocer NoeTom (en desarrollo)',
     quickStats: {
       experience: 'Amplia trayectoria profesional y organizativa',
       languages: 'Italiano nativo · EN y FR avanzados · ES intermedio-alto',
-      focus: 'Soporte a medida y flexible',
+      focus: 'Comunicación con Italia · Apoyo operativo',
     },
     callNote: 'Solicitud por escrito · Sin compromiso',
   },
   trust: {
     tagline: 'CLARIDAD OPERATIVA',
-    headline: 'No todo lo que tienes que hacer debes hacerlo tú en persona.',
+    headline: "Apoyo práctico para las tareas que requieren tiempo y atención",
     paragraph:
-      'Gestionar una actividad profesional también implica atender correos, citas, consultas de clientes, documentos y otras tareas que requieren tiempo y atención. Te ofrezco apoyo operativo organizado y discreto, dentro de un marco de trabajo acordado, para que puedas centrarte en tus prioridades.',
+      "Llevar un negocio implica mucho más que tu actividad principal: correos, citas, consultas de clientes, documentos y comunicaciones requieren atención. Puedo encargarme de una parte de ese trabajo, con tareas, plazos y condiciones acordados de antemano.",
     pillars: [
       {
         title: 'Autonomía y experiencia',
@@ -79,35 +79,35 @@ export const esLocale: TranslationDictionary = {
   },
   servicesSection: {
     tag: 'QUÉ HAGO',
-    title: 'Asistencia virtual y traducción profesional',
-    subtitle: 'Estos son ejemplos de servicios posibles, no un paquete que lo incluya todo. Cada presupuesto especifica las tareas y los entregables acordados.',
+    title: "Cómo puedo ayudarte",
+    subtitle: "Mi servicio principal es la asistencia virtual en italiano para actividades relacionadas con Italia: secretaría, back office, correo y atención escrita al cliente. También ofrezco traducción, localización y revisión de textos. Cada presupuesto detalla las tareas y los materiales acordados.",
     viewAllCta: 'Ver todos los servicios',
     categories: [
       {
         id: 'virtual-assistance',
-        title: 'Secretaría organizativa y back office operativo',
-        subtitle: 'Organización profesional, pedidos y atención escrita a clientes.',
+        title: 'Secretaría a distancia y apoyo operativo de back office',
+        subtitle: "Apoyo práctico para las tareas diarias de secretaría y back office.",
         description:
-          "Según el encargo, puedo organizar el correo y la agenda, introducir datos, hacer seguimiento de pedidos, actualizar listas de precios ya aprobadas, preparar presupuestos según tus instrucciones y gestionar comunicaciones escritas con clientes. Las tareas se concretan antes de empezar. No ofrezco telemarketing, prospección, contabilidad, facturación ni gestión administrativa.",
+          "Puedo organizar el correo, la agenda y los documentos, actualizar datos, hacer el seguimiento operativo de pedidos y preparar borradores de presupuestos con información previamente aprobada. Antes de empezar acordamos las tareas y las decisiones que requieren tu autorización. No realizo telemarketing ni prospección comercial, ni me encargo de la contabilidad, la facturación o los trámites fiscales.",
         iconName: 'Mail',
         items: [
           'Clasificación y organización del correo profesional',
           'Gestión de agenda y coordinación de citas',
           'Atención a clientes y comunicación profesional',
-          'Organización documental y estructura en la nube',
+          'Organización de documentos y archivos compartidos en la nube',
           'Seguimiento de solicitudes de clientes',
-          'Seguimiento operativo de clientes y pedidos',
+          'Actualización de datos y seguimiento de pedidos',
         ],
       },
       {
         id: 'translation-localization',
         title: 'Traducción IT ↔ EN/FR/ES y localización',
-        subtitle: 'Traducción profesional en ambas direcciones entre el italiano y el inglés, francés y español, y localización para el mercado italiano.',
+        subtitle: "El idioma y el tono adecuados para cada destinatario.",
         description:
-          "Traduzco del italiano al inglés, francés y español y de estos idiomas al italiano. Según las necesidades, el encargo puede comprender traducción, localización para el mercado italiano, revisión lingüística o apoyo a la correspondencia multilingüe. Los idiomas, los textos y los entregables se definen en el presupuesto.",
+          "Según el proyecto, traduzco del italiano al inglés, francés y español y de estos idiomas al italiano, tras valorar cada texto. Para quienes se dirigen al mercado italiano, cuido especialmente la naturalidad, el tono y el contexto de la comunicación. Traducción, localización, revisión y correspondencia se detallan en el presupuesto.",
         iconName: 'Globe',
         items: [
-          'Localización al italiano de sitios web y páginas de venta',
+          'Localización al italiano de sitios web y páginas de destino',
           'Correspondencia profesional en IT, EN, FR y ES',
           'Traducción de propuestas y presentaciones entre IT y EN/FR/ES',
           'Traducción de materiales formativos entre IT y EN/FR/ES',
@@ -118,9 +118,9 @@ export const esLocale: TranslationDictionary = {
       {
         id: 'content-writing',
         title: 'Redacción y revisión de contenidos profesionales',
-        subtitle: 'Mensajes claros, persuasivos y alineados con tu público.',
+        subtitle: "Textos claros, naturales y fieles a tu mensaje.",
         description:
-          'Según el proyecto, puedo redactar o revisar páginas web, comunicaciones con clientes, boletines y otros contenidos profesionales, incluidos borradores existentes o elaborados con ayuda de IA. El tipo de intervención y los entregables se acuerdan previamente.',
+          "Puedo redactar o revisar comunicaciones profesionales, boletines, presentaciones de servicios, artículos y materiales informativos. Trabajo la estructura, la claridad, el tono y la coherencia, también a partir de borradores existentes o generados con IA.",
         iconName: 'PenTool',
         items: [
           'Revisión de textos web y páginas de destino',
@@ -134,9 +134,9 @@ export const esLocale: TranslationDictionary = {
       {
         id: 'online-research',
         title: 'Investigación documental y comparación de información',
-        subtitle: 'Información contrastada para respaldar tus decisiones de negocio.',
+        subtitle: "Información seleccionada y organizada para tus proyectos.",
         description:
-          "Según el encargo, las investigaciones pueden incluir la consulta de información pública, la verificación de fuentes, la comparación de proveedores o herramientas digitales y la elaboración de informes para proyectos ya definidos. Sin búsqueda de contactos comerciales, captación de clientes ni prospección.",
+          "Recopilo información pública, comparo fuentes, herramientas y proveedores, y preparo informes breves o síntesis para tareas operativas y proyectos ya definidos. No busco clientes potenciales, no elaboro listas de contactos comerciales ni realizo actividades de captación.",
         iconName: 'Search',
         items: [
           'Comparación de competidores y precios públicos para proyectos existentes',
@@ -150,39 +150,39 @@ export const esLocale: TranslationDictionary = {
       {
         id: 'digital-support',
         title: 'Organización y herramientas digitales',
-        subtitle: 'Optimización de tus herramientas y procedimientos de trabajo.',
+        subtitle: "Documentos y herramientas de trabajo más fáciles de utilizar.",
         description:
-          'El apoyo puede incluir la organización de documentos compartidos, la configuración básica de herramientas digitales ya elegidas y la preparación de procedimientos operativos sencillos. Los accesos, las herramientas y las tareas se acuerdan antes de empezar.',
+          "Puedo organizar carpetas y archivos digitales, ayudar a configurar funciones básicas de herramientas ya utilizadas y preparar procedimientos sencillos. No ofrezco desarrollo de software ni asistencia informática especializada.",
         iconName: 'Cpu',
         items: [
-          'Reorganización de Google Workspace y discos en la nube',
+          'Organización de Google Workspace y carpetas compartidas en la nube',
           'Configuración básica de herramientas acordadas (calendarios y formularios)',
-          'Soporte práctico con herramientas digitales habituales',
-          'Elaboración de manuales de procedimiento operativo (SOP)',
+          'Apoyo práctico con herramientas digitales habituales',
+          'Elaboración de procedimientos operativos sencillos (SOP)',
           'Organización de las comunicaciones con clientes',
           'Soporte operativo y configuraciones básicas',
         ],
       },
-      { id: 'web-landing', title: 'Contenidos para webs y páginas de destino', subtitle: 'Mensajes web más claros y bien organizados.', description: 'Para webs existentes, puedo revisar textos, adaptarlos lingüísticamente u organizar títulos, preguntas frecuentes y contenidos, según lo acordado. El desarrollo técnico, el alojamiento y el mantenimiento web quedan fuera de este servicio editorial.', iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización de contenido web para el mercado italiano', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
+      { id: 'web-landing', title: 'Contenidos para webs y páginas de destino', subtitle: "Textos web más claros y adaptados a tus destinatarios.", description: "Para sitios web existentes, puedo revisar y estructurar textos, títulos, preguntas frecuentes y llamadas a la acción, o localizar contenidos para el mercado italiano. Es un servicio editorial: no incluye desarrollo técnico, alojamiento ni mantenimiento del sitio.", iconName: 'Layout', items: ['Revisión de textos de páginas principales', 'Localización de contenido web para el mercado italiano', 'Títulos, preguntas frecuentes y llamadas a la acción', 'Coherencia terminológica', 'Entrega de textos listos para CMS', 'Revisión de contenidos multilingües'] },
     ],
   },
   multilingualAdvantage: {
-    tag: 'COMUNICACIÓN MULTILINGÜE',
-    title: 'Comunícate con claridad en varios idiomas',
+    tag: 'COMUNICARSE CON ITALIA',
+    title: 'Mensajes naturales para el público italiano',
     description:
-      'Para comunicarte con el público italiano necesitas información precisa, una terminología adecuada y un tono natural, no una traducción literal.',
+      'Un mensaje dirigido al mercado italiano debe sonar natural, utilizar la terminología adecuada y tener en cuenta a su destinatario. Traducir palabra por palabra no suele ser suficiente.',
     points: [
       {
-        title: 'Cuatro idiomas de trabajo',
-        desc: 'Italiano nativo, inglés y francés avanzados y español intermedio-alto para las comunicaciones profesionales acordadas.',
+        title: 'Italiano como lengua materna',
+        desc: 'Traduzco del italiano al español, al inglés y al francés, y de estas lenguas al italiano, prestando especial atención a los textos dirigidos al público italiano.',
       },
       {
-        title: 'Respeto al contexto',
-        desc: 'Las expresiones idiomáticas y el tono de voz se adaptan a cada cultura para que tu propuesta transmita total confianza.',
+        title: 'Un tono adecuado a cada situación',
+        desc: 'Cuido la terminología, los títulos, las llamadas a la acción y los correos para que resulten naturales al lector italiano, respetando siempre las condiciones comerciales acordadas.',
       },
       {
-        title: 'Operativa unificada',
-        desc: 'Desde los contenidos web hasta los mensajes para clientes, cuido la claridad, la coherencia terminológica y la adaptación al destinatario.',
+        title: 'Apoyo operativo más allá de la traducción',
+        desc: 'También ofrezco secretaría, gestión de pedidos, back office y atención escrita al cliente para empresas internacionales, según las tareas acordadas.',
       },
     ],
     badgeNote: 'Formación universitaria: título italiano en Mediación Lingüística (110/110 e lode) y máster universitario en Traducción Especializada',
@@ -193,8 +193,8 @@ export const esLocale: TranslationDictionary = {
     packages: [
       {id: 'p1', title: 'Back office organizado', badge: 'Secretaría operativa', description: 'Apoyo práctico para organizar tareas habituales, correos y documentos.',
        deliverables: ['Análisis de tareas delegables', 'Organización acordada de correos, archivos y procesos', 'Resumen de actividades y prioridades'], turnaround: 'Por acordar'},
-      {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: "Atención escrita a los clientes, actualizaciones de pedidos y seguimientos de asistencia conforme a los procedimientos acordados.",
-       deliverables: ['Plantillas de respuesta y preguntas frecuentes', 'Gestión acordada de consultas escritas', 'Registro de seguimientos y actividades'], turnaround: 'Por acordar'},
+      {id: 'p2', title: 'Atención escrita al cliente', badge: 'Comunicaciones profesionales', description: "Atención escrita a clientes existentes, información sobre el estado de sus pedidos y seguimiento de las consultas, según los procedimientos acordados.",
+       deliverables: ['Plantillas de respuesta y preguntas frecuentes', 'Gestión acordada de consultas escritas', 'Registro de consultas y actuaciones realizadas'], turnaround: 'Por acordar'},
       {id: 'p3', title: 'Traducción IT ↔ EN/FR/ES y localización para el mercado italiano', badge: 'IT · EN · FR · ES', description: 'Traducción profesional entre el italiano y el inglés, francés y español, localización para Italia y correspondencia multilingüe acordada con clientes.',
        deliverables: ['Análisis de textos, público y terminología', 'Traducción IT ↔ EN/FR/ES o localización del contenido acordado para el mercado italiano', 'Revisión final y notas lingüísticas'], turnaround: 'Según volumen'},
       {id: 'p4', title: 'Revisión de contenido existente', badge: 'Claridad y coherencia', description: 'Revisión cuidadosa de materiales profesionales y multilingües existentes.',
@@ -218,7 +218,7 @@ export const esLocale: TranslationDictionary = {
       'Revisión de prioridades al finalizar la jornada: en desarrollo',
     ],
     ctaDiscover: 'Descubrir NoeTom',
-    ctaWaitlist: 'Lista Informativa',
+    ctaWaitlist: 'Recibir novedades',
   },
   noetomPage: {
     hero: {
@@ -233,7 +233,7 @@ export const esLocale: TranslationDictionary = {
       ctaJoin: 'Recibir actualizaciones sobre el desarrollo',
     },
     whatItIsNot: {
-      title: 'Qué es NoeTom — Y qué NO es',
+      title: 'Qué es NoeTom y qué no es',
       subtitle:
         'NoeTom nació de una necesidad real, prescindiendo deliberadamente de la complejidad excesiva del software convencional.',
       items: [
@@ -272,7 +272,7 @@ export const esLocale: TranslationDictionary = {
         },
         {
           id: 'client-memory',
-          name: 'Memoria de Clientes',
+          name: 'Contexto de los clientes',
           tagline: 'Contexto de relación siempre a mano',
           description:
             'Se prevé organizar notas autorizadas de proyectos, preferencias y acuerdos.',
@@ -280,7 +280,7 @@ export const esLocale: TranslationDictionary = {
         },
         {
           id: 'open-loops',
-          name: 'Asuntos Abiertos & Bloqueos',
+          name: 'Asuntos pendientes y bloqueos',
           tagline: 'Cabos sueltos bajo control',
           description:
             'Se plantea destacar las tareas pendientes de documentos o aprobaciones.',
@@ -288,7 +288,7 @@ export const esLocale: TranslationDictionary = {
         },
         {
           id: 'i-promised',
-          name: 'Registro «He Prometido»',
+          name: 'Registro de compromisos',
           tagline: 'Método y compromiso',
           description:
             'La función prevista ayuda a registrar compromisos anotados y sus plazos.',
@@ -296,7 +296,7 @@ export const esLocale: TranslationDictionary = {
         },
         {
           id: 'smart-followup',
-          name: 'Seguimientos Inteligentes',
+          name: 'Seguimiento y recordatorios',
           tagline: 'Recordatorios amables y profesionales',
           description:
             'Se prevé la creación de borradores multilingües, sujetos a revisión humana.',
@@ -313,7 +313,7 @@ export const esLocale: TranslationDictionary = {
         {
           id: 'what-am-i-missing',
           name: '«¿Qué se me está pasando?»',
-          tagline: 'Punto de tranquilidad diaria',
+          tagline: 'Revisión de fin de jornada',
           description:
             'Se plantea un resumen diario para revisar tareas, plazos y compromisos.',
           status: 'preview',
@@ -335,7 +335,7 @@ export const esLocale: TranslationDictionary = {
       title: 'Lista informativa sobre NoeTom',
       subtitle:
         'NoeTom es un sistema desarrollado por Noemi para su propia productividad y actualmente en fase de pruebas privadas. Deja tus datos si deseas recibir novedades sobre el proyecto.',
-      nameLabel: 'Nombre y Apellidos *',
+      nameLabel: 'Nombre y apellidos *',
       emailLabel: 'Correo electrónico profesional *',
       professionLabel: 'Tu actividad / profesión *',
       painPointLabel: '¿Cuál es tu principal dificultad operativa en este momento?',
@@ -352,99 +352,76 @@ export const esLocale: TranslationDictionary = {
   aboutSection: {
     tag: 'SOBRE MÍ',
     title: 'Hola, soy Noemi Tomassetti.',
-    lead: 'Asistente Virtual, traductora y soporte operativo para profesionales y empresas.',
+    lead: 'Asistente virtual multilingüe y apoyo operativo para profesionales y pequeñas empresas que trabajan con Italia.',
     bioParagraphs: [
-      'Pongo a tu disposición más de veinte años de experiencia profesional adquirida en atención al cliente, back office, organización y soporte operativo, junto con una sólida formación lingüística.',
-      'Obtuve la titulación universitaria italiana de primer ciclo (Laurea triennale) en Mediación Lingüística en la Università degli Studi di Macerata, con una calificación de 110/110 e lode (máxima distinción italiana). Después cursé un máster universitario italiano de primer nivel en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 horas, 60 CFU/créditos ECTS) y superé la prueba final. La formación abarcó textos literarios, jurídicos, económicos, tecnológicos y científicos.',
-      'El italiano es mi lengua materna; presto apoyo a las comunicaciones profesionales en cuatro idiomas: italiano, inglés, francés y español, con atención al rigor lingüístico, los plazos acordados y la confidencialidad.',
+      "Soy asistente virtual multilingüe, con formación especializada en idiomas y más de veinte años de experiencia laboral en distintos ámbitos.",
+      "Mi trayectoria incluye, entre otras actividades, atención al cliente, back office, gestión de pedidos, organización y apoyo operativo.",
+      "Me gradué en Mediación Lingüística en la Università degli Studi di Macerata, con la máxima calificación italiana, 110 e lode, y continué mi formación con un máster en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona.",
+      "El italiano es mi lengua materna. Traduzco tanto del italiano al inglés, francés y español como de estos idiomas al italiano, y ofrezco revisión lingüística y apoyo a la correspondencia multilingüe.",
+      "Actualmente ayudo a profesionales y pequeñas empresas a organizar su trabajo diario y su comunicación profesional, especialmente cuando se dirigen al mercado italiano.",
     ],
     credentials: [
       { title: 'Más de 20 años de experiencia', detail: 'Atención al cliente, back office, organización y soporte operativo' },
-      { title: 'Formación académica especializada', detail: 'Grado italiano en Mediación Lingüística (110/110 e lode, máxima distinción italiana) y máster universitario italiano de primer nivel en Traducción Especializada' },
+      { title: 'Formación académica especializada', detail: 'Título italiano en Mediación Lingüística (110/110 e lode, máxima distinción italiana) y máster en Traducción Especializada (60 CFU)' },
       { title: 'Cuatro idiomas de trabajo', detail: 'Italiano nativo, inglés y francés avanzados, español intermedio-alto' },
       { title: 'Organización digital', detail: 'Archivos en la nube, herramientas colaborativas y procedimientos operativos' },
     ],
     ctaReadMore: 'Conoce mi trayectoria',
   },
   aboutPage: {
-    title: 'Sobre Mí — Noemi Tomassetti',
-    subtitle: 'Experiencia profesional, sólida formación lingüística y cuidado operativo.',
-    storyTitle: 'Una trayectoria asentada en la precisión, la cercanía y el compromiso',
+    title: "Trayectoria, formación lingüística y forma de trabajar",
+    subtitle: "Experiencia en distintos ámbitos y formación especializada aplicada a tareas concretas.",
+    storyTitle: "Experiencia profesional adquirida en distintas funciones",
     storyParagraphs: [
-      'Mi carrera se ha desarrollado en torno a tres constantes: la vocación por los idiomas, el rigor organizativo y la satisfacción de ser un punto de apoyo fiable para los profesionales con quienes trabajo.',
-      'Mi trayectoria profesional supera los veinte años y comprende funciones diversas. He desarrollado competencias en atención al cliente, organización, back office y comunicación multilingüe. He comprobado que la auténtica eficacia no nace de esquemas rígidos, sino de saber escuchar, simplificar los procedimientos y eliminar los roces operativos cotidianos.',
-      'Mi formación comprende una titulación universitaria italiana de primer ciclo en Mediación Lingüística de la Università degli Studi di Macerata (110/110 e lode, máxima distinción italiana) y un máster universitario italiano de primer nivel en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 horas, 60 CFU/créditos ECTS, prueba final superada). La formación incluyó textos literarios, jurídicos, económicos, tecnológicos y científicos. Evalúo los textos jurídicos caso por caso y no realizo traducciones juradas.',
-      'Mi forma de trabajar se basa en tareas acordadas, archivos bien organizados, comunicaciones claras y actualizaciones periódicas.',
+      "Cuento con más de veinte años de experiencia laboral en distintos ámbitos, entre ellos la atención al cliente, la gestión de pedidos, el back office y la organización.",
+      "Esta trayectoria me ha enseñado la importancia de contar con instrucciones claras, comunicaciones cuidadas y responsabilidades bien definidas. Cada colaboración comienza por entender tus necesidades y valorar las tareas que puedo asumir.",
+      "Obtuve mi título en Mediación Lingüística en la Università degli Studi di Macerata (110/110 e lode, máxima distinción italiana) y cursé un máster de especialización en Traducción Especializada en la Scuola Superiore per Mediatori Linguistici di Ancona (1.500 horas, 60 CFU). Valoro los textos especializados caso por caso y no realizo traducciones juradas.",
+      "Actualmente colaboro a distancia con profesionales y pequeñas empresas en tareas operativas y de comunicación, especialmente cuando se dirigen al público italiano.",
     ],
     timeline: [
       {
         period: 'Más de 20 años de experiencia',
         role: 'Atención al cliente, back office y soporte operativo',
-        detail: 'Gestión organizativa, atención a clientes, correspondencia y asistencia operativa a profesionales y pequeñas actividades.',
+        detail: 'Organización de tareas, atención a clientes, correspondencia y apoyo operativo en distintos entornos profesionales.',
       },
       {
         period: 'Estudios universitarios',
-        role: 'Grado en Mediación Lingüística',
+        role: 'Título universitario en Mediación Lingüística',
         detail: 'Università degli Studi di Macerata · 110/110 e lode (máxima distinción italiana).',
       },
       {
         period: 'Especialización universitaria',
-        role: 'máster universitario italiano de primer nivel en Traducción Especializada – lengua inglesa',
+        role: 'Máster de especialización en Traducción Especializada (60 CFU) – inglés',
         detail: 'Scuola Superiore per Mediatori Linguistici di Ancona · 1.500 horas · 60 CFU/créditos ECTS · prueba final superada. Ámbitos literario, jurídico, económico, tecnológico y científico.',
       },
       {
-        period: '2026 – Actualidad',
-        role: 'Asistencia virtual y traducción independiente',
+        period: '2026 – actualidad',
+        role: 'Asistente virtual y traductora independiente',
         detail: 'Atención escrita a clientes, apoyo operativo y traducción en ambas direcciones entre el italiano y el inglés, francés y español.',
       },
     ],
     valuesTitle: 'Principios de mi forma de trabajar',
     values: [
-      {
-        title: 'Escuchar antes de proponer',
-        desc: 'Cada negocio tiene su ritmo propio. No impongo esquemas preconcebidos: comienzo siempre comprendiendo tu dinámica y tus puntos de fricción.',
-      },
-      {
-        title: 'La tecnología al servicio de las personas',
-        desc: 'Las herramientas digitales deben liberar tiempo para lo sustancial. La precisión técnica se acompaña siempre de un trato humano y cercano.',
-      },
-      {
-        title: 'Cumplimiento y transparencia',
-        desc: 'Acordamos plazos realistas, te aviso de cualquier imprevisto y reviso los detalles importantes antes de entregar el trabajo.',
-      },
+      { title: "Escucha y alcance definido", desc: "Antes de empezar, acordamos las tareas, los materiales necesarios y las decisiones que siguen siendo de tu competencia." },
+      { title: "Herramientas digitales prácticas", desc: "Utilizo herramientas adecuadas y procedimientos sencillos para organizar el trabajo sin sustituir las comprobaciones profesionales." },
+      { title: "Confidencialidad y seguimiento", desc: "Respeto el alcance acordado, trato los materiales con cuidado y comunico los asuntos que necesitan aclaración." },
     ],
   },
   howWeWork: {
-    tag: 'MÉTODO',
-    title: 'Empezar a colaborar es muy sencillo',
-    subtitle: 'Cuatro pasos claros para una coordinación eficaz desde el primer día.',
+    tag: "MÉTODO",
+    title: "Cómo empezar a colaborar",
+    subtitle: "Cuatro pasos, desde tu solicitud por escrito hasta el inicio del trabajo.",
     steps: [
-      {
-        num: '01',
-        title: 'Conversación inicial',
-        desc: 'Una primera conversación por escrito para entender tu actividad, tus retos y las tareas que quieres delegar.',
-      },
-      {
-        num: '02',
-        title: 'Acuerdo y prioridades',
-        desc: 'Definimos las tareas prioritarias a delegar y establecemos un marco de trabajo claro, con canales y plazos definidos.',
-      },
-      {
-        num: '03',
-        title: 'Puesta en marcha',
-        desc: 'Compartimos los accesos y carpetas de trabajo necesarios y realizamos las primeras gestiones para coordinar criterios.',
-      },
-      {
-        num: '04',
-        title: 'Autonomía y seguimiento',
-        desc: 'Ejecuto las tareas de forma independiente y te mantengo al tanto con informes periódicos para tu total tranquilidad.',
-      },
+      { num: "01", title: "Cuéntame qué necesitas", desc: "Envíame un mensaje desde el formulario o por correo, con las tareas solicitadas y los posibles plazos." },
+      { num: "02", title: "Reviso tu solicitud", desc: "Valoro la información disponible y te pido más datos cuando sea necesario." },
+      { num: "03", title: "Recibes un presupuesto escrito", desc: "Detallo las tareas, los plazos, el precio y las condiciones para que puedas decidir." },
+      { num: "04", title: "Empezamos a trabajar", desc: "Una vez aceptado el presupuesto y cumplidas las condiciones acordadas, comienzo las tareas previstas." },
     ],
   },
   contactSection: {
     tag: 'CONTACTO',
-    title: 'Hablemos de tus necesidades operativas',
-    subtitle: 'Describe tu solicitud en el formulario. Te responderé por escrito, sin necesidad de llamada previa.',
+    title: "Cuéntame qué necesitas",
+    subtitle: "¿Quieres delegar una tarea, traducir un texto o preparar una comunicación profesional? Escríbeme: no es obligatorio hacer una llamada.",
     form: {
       name: 'Nombre *',
       surname: 'Apellidos *',
@@ -463,7 +440,7 @@ export const esLocale: TranslationDictionary = {
       preferredLanguage: 'Idioma de comunicación preferido',
       message: 'Describe tu actividad y tus necesidades actuales *',
       gdpr: 'Confirmo que he leído la política de privacidad sobre el tratamiento de mis datos personales (RGPD).',
-      submit: 'Enviar mensaje',
+      submit: "Enviar solicitud",
       sending: 'Enviando mensaje...',
       successTitle: 'Solicitud aceptada por el servicio de envío',
       successDesc: 'El servicio de envío ha aceptado la solicitud; todavía no se ha confirmado su entrega final a mi buzón.',
@@ -490,7 +467,7 @@ export const esLocale: TranslationDictionary = {
     tag: 'RECURSOS Y CONSEJOS',
     title: 'Guías y consejos prácticos',
     subtitle: 'Consejos sobre organización, atención a clientes y comunicación en italiano para profesionales y pequeñas empresas.',
-    categories: ['Todos', 'Organización y Delegación', 'Comunicación y Multilingüe', 'Presencia Web y Digital', 'Herramientas digitales y organización'],
+    categories: ['Todos', 'Organización y delegación', 'Comunicación multilingüe', 'Presencia en línea', 'Herramientas digitales y organización'],
     articles: [
       {
         id: 'r1',
@@ -498,7 +475,7 @@ export const esLocale: TranslationDictionary = {
         title: '¿Sitio web o landing page? Cómo saber qué necesita realmente tu actividad',
         excerpt: 'Compara la utilidad de una web completa y una página específica según las necesidades de tu público italiano.',
         date: '31 de agosto de 2026',
-        category: 'Presencia Web y Digital',
+        category: 'Presencia en línea',
         readTime: '6 min de lectura',
       },
       {
@@ -516,7 +493,7 @@ export const esLocale: TranslationDictionary = {
         title: 'Tres errores de comunicación multilingüe al dirigirte al mercado italiano',
         excerpt: 'Por qué importan el contexto, la coherencia terminológica y la revisión profesional para comunicarte en italiano.',
         date: 'Septiembre de 2026',
-        category: 'Comunicación y Multilingüe',
+        category: 'Comunicación multilingüe',
         readTime: '7 min de lectura',
       },
       {
@@ -535,11 +512,11 @@ export const esLocale: TranslationDictionary = {
       'Asistencia virtual, secretaría, back office, atención escrita a clientes, revisión de contenidos y traducción profesional IT ↔ EN/FR/ES, con localización para el mercado italiano cuando corresponda.',
     servicesTitle: 'Servicios',
     noetomTitle: 'NoeTom · en desarrollo',
-    companyTitle: 'Sobre Mí & Recursos',
-    legalTitle: 'Aviso Legal',
+    companyTitle: 'Sobre mí y recursos',
+    legalTitle: 'Información legal',
     rights: 'Todos los derechos reservados.',
     disclaimer:
       "Secretaría organizativa, back office operativo, atención a clientes, comunicación multilingüe, traducción y contenidos digitales. No ofrezco telemarketing, llamadas comerciales en frío, prospección o captación de clientes, búsqueda de contactos comerciales, contabilidad, facturación, gestión administrativa ni servicios fiscales.",
-    cookiePrefs: 'Preferencias de Cookies',
+    cookiePrefs: 'Preferencias de cookies',
   },
 };

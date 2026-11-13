@@ -23,6 +23,7 @@ describe("Portfolio document previews and clickjacking safety", () => {
     }
     const preview = readFileSync("src/pages/PortfolioDocument.tsx", "utf8");
     expect(preview).toContain("src={doc.url}");
-    expect(preview).toContain("title={t.preview");
+    expect(preview).toContain("title={t.original");
+    expect(preview).toContain('id="portfolio-work-sample"');
   });
 });

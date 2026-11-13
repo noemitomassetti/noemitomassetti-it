@@ -138,83 +138,84 @@
       .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
       .actions, .btn { display: none; }
     }
-  </style>
+  
+    /* Wide source/target tables remain readable on narrow screens without resizing the whole page. */
+    @media (max-width: 640px) {
+      table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .comparison-grid, .dual-clause { grid-template-columns: minmax(0, 1fr); }
+      .card-block, .dual-clause > div { min-width: 0; }
+    }
+</style>
 </head>
 <body>
 <nav aria-label="Guide multilingue / Multilingual reading guide" style="padding:12px 16px;text-align:center;background:#103c35;color:#fff;font:600 14px/1.7 system-ui,sans-serif"><span style="margin-right:12px">Lettura guidata · Reading guide · Guide de lecture · Guía:</span> <a lang="it" href="/it/esempi-di-lavoro/esempio/06" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">IT</a> <a lang="en" href="/work-examples/sample/06" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">EN</a> <a lang="fr" href="/fr/exemples-de-projets/exemple/06" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">FR</a> <a lang="es" href="/es/ejemplos-de-trabajo/ejemplo/06" style="display:inline-block;margin:3px 5px;padding:3px 10px;border:1px solid #e4b89f;border-radius:18px;color:#f0c9ae;text-decoration:none">ES</a></nav>
   <div class="container">
-    <div class="badge">Esempio di Lavoro Dimostrativo · 06</div>
-    <h1>Matrice Microcopy UX & Design System Multilingue</h1>
-    <div class="subtitle">Linee guida di scrittura per stati di interfaccia, feedback utente e accessibilità (IT / EN / FR / ES)</div>
+<div class="badge">Esempio dimostrativo · DOC 06 · Contenuti digitali</div>
+<h1>Microtesti per interfacce: confronto in quattro lingue</h1>
+<div class="subtitle">Pulsanti, messaggi di caricamento, conferme ed errori: proposte editoriali coerenti, con attenzione a chiarezza e destinatari.</div>
+<div class="disclaimer"><strong>Simulazione originale.</strong> Non si tratta di testi di un'applicazione commissionata, né di un'interfaccia sottoposta a verifiche tecniche di accessibilità. Il documento dimostra soltanto scelte di scrittura e localizzazione; non attesta conformità alle WCAG.</div>
+<h2>1. Tabella dei messaggi proposti</h2>
+<table><thead><tr><th>Funzione</th><th>Italiano</th><th>English (UK)</th><th>Français</th><th>Español</th></tr></thead><tbody>
+<tr><td>Richiesta di preventivo</td><td>Richiedi un preventivo</td><td>Request a quote</td><td>Demander un devis</td><td>Solicitar presupuesto</td></tr>
+<tr><td>Invio in corso</td><td>Invio in corso…</td><td>Sending your message…</td><td>Envoi du message en cours…</td><td>Enviando el mensaje…</td></tr>
+<tr><td>Conferma di ricezione (solo dopo riscontro del sistema)</td><td>Richiesta ricevuta. Ti risponderemo all'indirizzo indicato.</td><td>Request received. We’ll reply to the email address provided.</td><td>Demande reçue. Nous vous répondrons à l’adresse indiquée.</td><td>Solicitud recibida. Te responderemos a la dirección indicada.</td></tr>
+<tr><td>Campo email non valido</td><td>Inserisci un indirizzo email valido.</td><td>Enter a valid email address.</td><td>Indiquez une adresse e-mail valide.</td><td>Introduce una dirección de correo válida.</td></tr>
+<tr><td>Invio non riuscito</td><td>Non è stato possibile inviare la richiesta. Riprova o contattaci via email.</td><td>We couldn’t send your request. Try again or email us.</td><td>Votre demande n’a pas pu être envoyée. Réessayez ou écrivez-nous.</td><td>No se ha podido enviar tu solicitud. Vuelve a intentarlo o escríbenos.</td></tr>
+<tr><td>Consenso facoltativo</td><td>Puoi modificare questa scelta in seguito.</td><td>You can change this choice later.</td><td>Vous pourrez modifier ce choix ultérieurement.</td><td>Podrás cambiar esta opción más adelante.</td></tr>
+</tbody></table>
+<h2>2. Scheda delle scelte linguistiche</h2>
+<table><thead><tr><th>Problema</th><th>Soluzione editoriale</th><th>Controllo previsto</th></tr></thead><tbody>
+<tr><td>Etichette troppo lunghe o ambigue</td><td>Verbo specifico, frase breve, voce coerente</td><td>Verificare la resa a diverse larghezze; non sostituire la verifica grafica</td></tr>
+<tr><td>Promesse di risposta non autorizzate</td><td>Nessun termine fisso predisposto per l'esempio</td><td>Inserire un tempo solo dopo conferma del responsabile</td></tr>
+<tr><td>Errore senza istruzioni</td><td>Spiegare che cosa fare dopo</td><td>Provare il percorso di errore nell'interfaccia reale</td></tr>
+<tr><td>Ambiguità fra invio e ricezione</td><td>Messaggi di avanzamento distinti da quelli di successo</td><td>Collegare il successo solo a un esito tecnico effettivo</td></tr>
+</tbody></table>
+<h2>3. Limiti dell'elaborato</h2>
+<p>Il lavoro consiste nella redazione, revisione e localizzazione di testi. Non comprende sviluppo software, implementazione dei componenti, test di sicurezza o certificazioni di accessibilità. Prima dell'uso reale servono controllo contestuale, revisione grafica e test funzionali dell'applicazione.</p>
 
-    <div class="disclaimer">
-      <strong>Nota di Trasparenza e Tutela della Riservatezza:</strong>
-      Esempio metodologico per la progettazione di testi di interfaccia (UX Writing). Progetto dimostrativo indipendente con dati sintetici.
-    </div>
-
-    <div class="meta-box">
-      <div>
-        <strong>Disciplina</strong>
-        UX Writing & Content Design Multilingue
-      </div>
-      <div>
-        <strong>Obiettivo di Progetto</strong>
-        Ridurre gli errori d'interfaccia e rendere i messaggi più comprensibili
-      </div>
-      <div>
-        <strong>Accessibilità</strong>
-        Conformità WCAG 2.1 AA (contrasto e screen reader)
-      </div>
-      <div>
-        <strong>Autrice</strong>
-        Noemi Tomassetti · Digital Specialist
-      </div>
-    </div>
-
-    <h2>1. Matrice Multilingue degli Stati Critici di Flusso</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Scenario / Componente</th>
-          <th>Italiano</th>
-          <th>English</th>
-          <th>Français</th>
-          <th>Español</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Pulsante Invio Richiesta (CTA)</strong></td>
-          <td>Invia richiesta preventivo</td>
-          <td>Request written quote</td>
-          <td>Demander un devis écrit</td>
-          <td>Solicitar presupuesto escrito</td>
-        </tr>
-        <tr>
-          <td><strong>Stato di Caricamento</strong></td>
-          <td>Invio in corso, attendi qualche istante...</td>
-          <td>Sending your request, please wait...</td>
-          <td>Envoi en cours, veuillez patienter...</td>
-          <td>Enviando solicitud, por favor espera...</td>
-        </tr>
-        <tr>
-          <td><strong>Conferma di Ricezione</strong></td>
-          <td>Richiesta registrata. Risponderò entro 24 ore lavorative.</td>
-          <td>Request received. You will hear back within 24 business hours.</td>
-          <td>Demande bien reçue. Réponse sous 24 heures ouvrées.</td>
-          <td>Solicitud recibida. Te responderé en un plazo de 24 horas hábiles.</td>
-        </tr>
-        <tr>
-          <td><strong>Errore Campo Obbligatorio</strong></td>
-          <td>Inserisci un indirizzo email valido per consentirmi di risponderti.</td>
-          <td>Please enter a valid email address so I can reply to you.</td>
-          <td>Veuillez renseigner un email valide afin de recevoir ma réponse.</td>
-          <td>Introduce un correo válido para poder enviarte la respuesta.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="actions">
+<section><h2>4. Matrice aggiuntiva: messaggi completi in quattro lingue</h2><p>Questa integrazione mostra come mantenere coerenti senso, tono e azione richiesta. Le quattro versioni non sono calchi: usano formulazioni appropriate per ciascuna lingua.</p><table><thead><tr><th>Situazione</th><th>Italiano</th><th>English (UK)</th><th>Français</th><th>Español</th></tr></thead><tbody>
+<tr><td>Campo obbligatorio</td><td>Compila questo campo.</td><td>Complete this field.</td><td>Renseignez ce champ.</td><td>Rellena este campo.</td></tr>
+<tr><td>Allegato troppo grande</td><td>Il file supera la dimensione consentita. Scegli un file più piccolo.</td><td>The file is too large. Choose a smaller file.</td><td>Le fichier est trop volumineux. Choisissez un fichier plus petit.</td><td>El archivo es demasiado grande. Selecciona uno más pequeño.</td></tr>
+<tr><td>Formato file non supportato</td><td>Questo formato non è supportato. Controlla i formati accettati.</td><td>This file type is not supported. Check the accepted formats.</td><td>Ce format n’est pas pris en charge. Vérifiez les formats acceptés.</td><td>Este formato no es compatible. Consulta los formatos admitidos.</td></tr>
+<tr><td>Modifiche non salvate</td><td>Hai modifiche non salvate. Vuoi uscire senza salvarle?</td><td>You have unsaved changes. Leave without saving?</td><td>Vous avez des modifications non enregistrées. Quitter sans enregistrer ?</td><td>Tienes cambios sin guardar. ¿Quieres salir sin guardarlos?</td></tr>
+<tr><td>Accesso non autorizzato</td><td>Non hai i permessi per aprire questo documento.</td><td>You do not have permission to open this document.</td><td>Vous n’avez pas l’autorisation d’ouvrir ce document.</td><td>No tienes permiso para abrir este documento.</td></tr>
+<tr><td>Sessione scaduta</td><td>La sessione è scaduta. Accedi di nuovo per continuare.</td><td>Your session has expired. Sign in again to continue.</td><td>Votre session a expiré. Reconnectez-vous pour continuer.</td><td>Tu sesión ha caducado. Vuelve a iniciar sesión para continuar.</td></tr>
+<tr><td>Riprovare l'invio</td><td>L'invio non è riuscito. Riprova o scrivici via email.</td><td>We couldn’t send your message. Try again or email us.</td><td>Votre message n’a pas été envoyé. Réessayez ou écrivez-nous.</td><td>No hemos podido enviar tu mensaje. Inténtalo de nuevo o escríbenos.</td></tr>
+<tr><td>Conferma cancellazione</td><td>Eliminare questo elemento? L'operazione non può essere annullata.</td><td>Delete this item? This cannot be undone.</td><td>Supprimer cet élément ? Cette action est irréversible.</td><td>¿Eliminar este elemento? Esta acción no se puede deshacer.</td></tr>
+</tbody></table></section>
+<section><h2>5. Esempio integrale di percorso del modulo preventivi</h2><p><strong>Scenario dimostrativo.</strong> Un professionista compila un modulo per descrivere le attività che desidera affidare. I messaggi sono stati preparati per gli stati di interfaccia, non inseriti né verificati in un prodotto funzionante.</p><ol><li><strong>Schermata iniziale:</strong> «Descrivi le attività di cui hai bisogno. Non inserire password o dati riservati nel messaggio.»</li><li><strong>Campo email non valido:</strong> «Inserisci un indirizzo email valido, ad esempio nome@azienda.it.»</li><li><strong>Campo richiesta vuoto:</strong> «Descrivi brevemente il lavoro che vorresti affidarmi.»</li><li><strong>Invio in corso:</strong> «Invio della richiesta in corso… Non chiudere questa pagina.»</li><li><strong>Invio non riuscito:</strong> «Non è stato possibile inviare la richiesta. Riprova oppure scrivimi a info@noemitomassetti.it.»</li><li><strong>Invio confermato dal sistema:</strong> «Richiesta ricevuta. Esaminerò le informazioni prima di risponderti.»</li></ol><p>Lo stato «richiesta ricevuta» deve comparire soltanto dopo una conferma tecnica reale dell'invio. È un requisito di contenuto, non un test di implementazione.</p></section>
+<section><h2>6. Registro editoriale delle decisioni</h2><table><thead><tr><th>Questione</th><th>Scelta</th><th>Motivazione</th></tr></thead><tbody><tr><td>Richiesta non valida</td><td>Istruzione correttiva specifica</td><td>Aiuta l'utente a capire come procedere</td></tr><tr><td>Conferma e progresso</td><td>Due messaggi distinti</td><td>Non attribuisce un successo prima della ricezione</td></tr><tr><td>Trattamento di dati sensibili</td><td>Avviso preventivo nel modulo</td><td>Riduce la richiesta di informazioni non necessarie</td></tr><tr><td>Registro di cortesia</td><td>Coerente nella stessa lingua</td><td>Evita alternanze casuali tra formule formali e informali</td></tr><tr><td>Termini tecnici</td><td>Lessico semplice, senza omettere azioni essenziali</td><td>Consente una lettura più immediata</td></tr></tbody></table><p><strong>Consegna dell'esempio:</strong> matrice quadrilingue, sequenza completa di messaggi del modulo e registro delle decisioni. Non si dichiara alcuna certificazione tecnica o di accessibilità.</p></section>
+    <h2>4. Percorso completo: richiesta di preventivo in quattro lingue</h2><p>Le stringhe seguenti formano un unico percorso dimostrativo, dalla compilazione del modulo alla verifica dei campi, fino all'esito dell'invio. Ogni lingua utilizza il registro abituale per il proprio pubblico: italiano e spagnolo con il «tu», francese con il «vous», inglese britannico. Il materiale è esclusivamente editoriale e non è stato integrato in un'applicazione.</p>
+<table><thead><tr><th>Elemento / stato</th><th>Italiano</th><th>English (UK)</th><th>Français</th><th>Español</th></tr></thead><tbody>
+<tr><td>Titolo del modulo</td><td>Descrivimi la tua richiesta</td><td>Tell me what you need</td><td>Décrivez votre demande</td><td>Cuéntame qué necesitas</td></tr>
+<tr><td>Descrizione</td><td>Spiegami quali attività vorresti affidarmi. Ti risponderò dopo aver valutato il perimetro del lavoro.</td><td>Describe the tasks you would like support with. I will review the scope before replying.</td><td>Précisez les tâches pour lesquelles vous souhaitez un accompagnement. J'examinerai la demande avant de vous répondre.</td><td>Describe las tareas para las que necesitas apoyo. Revisaré el alcance antes de responderte.</td></tr>
+<tr><td>Nome</td><td>Nome e cognome</td><td>Full name</td><td>Nom et prénom</td><td>Nombre y apellidos</td></tr>
+<tr><td>Email</td><td>Indirizzo email</td><td>Email address</td><td>Adresse e-mail</td><td>Correo electrónico</td></tr>
+<tr><td>Tipo di richiesta</td><td>Servizio richiesto</td><td>Service required</td><td>Prestation souhaitée</td><td>Servicio solicitado</td></tr>
+<tr><td>Messaggio</td><td>Descrizione delle attività</td><td>Task description</td><td>Description des tâches</td><td>Descripción de las tareas</td></tr>
+<tr><td>Facoltativo</td><td>Facoltativo</td><td>Optional</td><td>Facultatif</td><td>Opcional</td></tr>
+<tr><td>Campo obbligatorio</td><td>Compila questo campo.</td><td>Complete this field.</td><td>Veuillez renseigner ce champ.</td><td>Completa este campo.</td></tr>
+<tr><td>Email errata</td><td>Inserisci un indirizzo email valido.</td><td>Enter a valid email address.</td><td>Indiquez une adresse e-mail valide.</td><td>Introduce una dirección de correo válida.</td></tr>
+<tr><td>Messaggio insufficiente</td><td>Descrivi brevemente le attività richieste.</td><td>Briefly describe the tasks you need help with.</td><td>Décrivez brièvement les tâches concernées.</td><td>Describe brevemente las tareas que necesitas delegar.</td></tr>
+<tr><td>Privacy</td><td>Leggi l'informativa privacy prima di inviare.</td><td>Read the privacy notice before sending.</td><td>Consultez la politique de confidentialité avant l'envoi.</td><td>Consulta la política de privacidad antes de enviar.</td></tr>
+<tr><td>Pulsante invio</td><td>Richiedi un preventivo</td><td>Request a quote</td><td>Demander un devis</td><td>Solicitar presupuesto</td></tr>
+<tr><td>Durante l'invio</td><td>Invio della richiesta in corso…</td><td>Sending your enquiry…</td><td>Envoi de votre demande en cours…</td><td>Enviando tu solicitud…</td></tr>
+<tr><td>Esito positivo verificato</td><td>Richiesta ricevuta. Ti risponderò all'indirizzo indicato.</td><td>Enquiry received. I will reply to the address you provided.</td><td>Demande reçue. Je vous répondrai à l'adresse indiquée.</td><td>Solicitud recibida. Te responderé a la dirección indicada.</td></tr>
+<tr><td>Invio fallito</td><td>Non è stato possibile inviare la richiesta. Riprova o scrivimi direttamente.</td><td>Your enquiry could not be sent. Try again or email me directly.</td><td>Votre demande n'a pas pu être envoyée. Réessayez ou écrivez-moi directement.</td><td>No se ha podido enviar tu solicitud. Vuelve a intentarlo o escríbeme directamente.</td></tr>
+<tr><td>Ripristino</td><td>Riprova</td><td>Try again</td><td>Réessayer</td><td>Reintentar</td></tr>
+<tr><td>Annulla</td><td>Annulla</td><td>Cancel</td><td>Annuler</td><td>Cancelar</td></tr>
+<tr><td>Esci senza inviare</td><td>Esci senza inviare</td><td>Leave without sending</td><td>Quitter sans envoyer</td><td>Salir sin enviar</td></tr>
+</tbody></table>
+<h2>5. Testo completo del modulo in italiano — materiale consegnabile</h2><div class="card-block"><p><strong>Descrivimi la tua richiesta</strong></p><p>Hai bisogno di supporto per la segreteria, il back office, la corrispondenza con i clienti o la traduzione di un testo? Indicami quali attività vorresti affidarmi e le informazioni essenziali per valutarle. Non inviare password, codici di accesso o dati particolarmente sensibili.</p><p><strong>Nome e cognome</strong> · Campo obbligatorio</p><p><strong>Indirizzo email</strong> · Campo obbligatorio</p><p><strong>Servizio richiesto</strong> · Scegli la voce più vicina alle tue esigenze</p><p><strong>Descrizione delle attività</strong> · Spiega che cosa ti serve, quali materiali hai già a disposizione e se esiste una scadenza indicativa.</p><p><strong>Informativa privacy</strong> · Leggi le informazioni sul trattamento dei dati prima dell'invio.</p><p><strong>Pulsante:</strong> Richiedi un preventivo</p><p><strong>Conferma di ricezione:</strong> Richiesta ricevuta. Ti risponderò all'indirizzo indicato.</p><p><strong>Errore durante l'invio:</strong> Non è stato possibile inviare la richiesta. Riprova o scrivimi direttamente.</p></div>
+<h2>6. Specifiche editoriali e registro di controllo</h2><table><thead><tr><th>Controllo</th><th>Decisione linguistica</th><th>Condizione per il rilascio</th></tr></thead><tbody>
+<tr><td>Coerenza delle persone grammaticali</td><td>IT ed ES: seconda persona singolare; FR: vous; EN: tono diretto e cortese</td><td>Rilettura di tutti i 18 stati in ciascuna lingua</td></tr>
+<tr><td>Conferma reale</td><td>Il messaggio di successo non è una promessa di servizio</td><td>Mostrare soltanto dopo la conferma tecnica della ricezione</td></tr>
+<tr><td>Tempi di risposta</td><td>Nessuna promessa di risposta entro ore o giorni di esempio</td><td>Inserire un termine soltanto se concordato</td></tr>
+<tr><td>Privacy</td><td>Nessuna richiesta di dati particolarmente sensibili</td><td>Verificare le informazioni con il responsabile privacy</td></tr>
+<tr><td>Accessibilità linguistica</td><td>Messaggi specifici, non solo «Errore»</td><td>Affiancare correttamente i messaggi ai campi nel software reale</td></tr>
+<tr><td>Dimensioni e layout</td><td>Etichette concise senza troncare il significato</td><td>Verificare il testo in tutte le lingue e su schermi piccoli</td></tr>
+</tbody></table><p><strong>Consegna:</strong> 18 stati/etichette in quattro lingue, un esempio completo di testo per modulo italiano e una scheda dei controlli editoriali. Non sono stati effettuati sviluppo web, implementazione di validazioni, analisi tecniche WCAG o invii reali.</p>
+<div class="actions">
       <a href="/it/esempi-di-lavoro" class="btn btn-secondary">← Torna agli Esempi di Lavoro</a>
       <button onclick="window.print()" class="btn">Stampa / Salva in PDF</button>
     </div>

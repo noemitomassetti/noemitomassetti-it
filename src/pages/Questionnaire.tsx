@@ -30,7 +30,7 @@ interface Question {
   options?: Record<Language, string[]>;
 }
 
-const QUESTIONS: Question[] = [
+export const QUESTIONS: Question[] = [
   // SECTION 1: Profilo e settore (Q1-Q4)
   {
     id: 1,
@@ -38,7 +38,7 @@ const QUESTIONS: Question[] = [
     question: {
       it: "Qual è la tipologia della tua attività?",
       en: "What type of professional activity do you run?",
-      fr: "Quel est le type de votre activité ?",
+      fr: "Quelle est votre activité professionnelle ?",
       es: "¿A qué tipo de actividad profesional te dedicas?",
     },
     type: "single",
@@ -71,16 +71,16 @@ const QUESTIONS: Question[] = [
     section: 1,
     question: {
       it: "Lavori principalmente con clienti in Italia o anche all'estero?",
-      en: "Does your business already serve customers in Italy?",
-      fr: "Votre activité travaille-t-elle déjà avec des clients italiens ?",
-      es: "¿Tu actividad ya atiende a clientes en Italia?",
+      en: "Do you work mainly with customers in Italy, or also abroad?",
+      fr: "Travaillez-vous principalement avec des clients en Italie ou également à l’étranger ?",
+      es: "¿Trabajas principalmente con clientes en Italia o también en el extranjero?",
     },
     type: "single",
     options: {
       it: ["Prevalentemente in Italia", "Sia in Italia che all'estero", "Esclusivamente mercati esteri"],
-      en: ["Yes, we already serve Italian customers", "Yes, we work regularly with Italy", "Not yet; we have Italian-language content to prepare"],
-      fr: ["Oui, nous avons déjà des clients italiens", "Oui, nous travaillons régulièrement avec l’Italie", "Pas encore ; nous préparons des contenus en italien"],
-      es: ["Sí, ya tenemos clientes italianos", "Sí, trabajamos habitualmente con Italia", "Todavía no; necesitamos preparar contenidos en italiano"],
+      en: ["Mainly in Italy", "Both in Italy and abroad", "Exclusively with customers abroad"],
+      fr: ["Principalement en Italie", "En Italie et à l’étranger", "Exclusivement à l’étranger"],
+      es: ["Principalmente en Italia", "Tanto en Italia como en el extranjero", "Exclusivamente en el extranjero"],
     },
   },
   {
@@ -141,7 +141,7 @@ const QUESTIONS: Question[] = [
     section: 2,
     question: {
       it: "Hai mai perso opportunità di lavoro per ritardi nel ricontattare un cliente?",
-      en: "Have you ever lost contracts due to delayed follow-ups?",
+      en: "Have you ever missed a business opportunity by following up with a customer too late?",
       fr: "Avez-vous déjà manqué des opportunités par retard de relance ?",
       es: "¿Has perdido alguna vez proyectos por tardar en responder a un cliente?",
     },
@@ -165,7 +165,7 @@ const QUESTIONS: Question[] = [
     type: "single",
     options: {
       it: ["Gestione appuntamenti e continui scambi per fissare date", "Organizzazione di file, documenti e informazioni", "Preparazione di preventivi e materiali introduttivi", "Ricerche e comparazione di fornitori/strumenti"],
-      en: ["Calendar ping-pong to schedule appointments", "Organising files, documents and information", "Drafting proposals and introductory decks", "Vendor and market research"],
+      en: ["Calendar ping-pong to schedule appointments", "Organising files, documents and information", "Drafting proposals and introductory decks", "Comparing suppliers and digital tools"],
       fr: ["Prise de rendez-vous et allers-retours d'agenda", "Classement de fichiers, documents et informations", "Préparation des devis et documents de présentation", "Recherche de prestataires et d'outils"],
       es: ["Cruces de correos para coordinar reuniones", "Organización de archivos, documentos e información", "Elaboración de presupuestos y propuestas", "Investigación de proveedores y herramientas"],
     },
@@ -177,9 +177,9 @@ const QUESTIONS: Question[] = [
     section: 3,
     question: {
       it: "Ti capita di ricevere richieste o documenti in lingue straniere (inglese, francese, spagnolo)?",
-      en: "Do you receive enquiries, messages or documents in Italian?",
-      fr: "Recevez-vous des demandes, des messages ou des documents en italien ?",
-      es: "¿Recibes consultas, mensajes o documentos en italiano?",
+      en: "Do you receive enquiries or documents in other languages (English, French or Spanish)?",
+      fr: "Recevez-vous des demandes ou des documents en langues étrangères (anglais, français ou espagnol) ?",
+      es: "¿Recibes consultas o documentos en otros idiomas (inglés, francés o español)?",
     },
     type: "single",
     options: {
@@ -194,9 +194,9 @@ const QUESTIONS: Question[] = [
     section: 3,
     question: {
       it: "Come gestisci attualmente la traduzione dei tuoi materiali e delle comunicazioni?",
-      en: "How do you currently prepare Italian-language translations and content?",
-      fr: "Comment préparez-vous vos contenus et traductions en italien ?",
-      es: "¿Cómo preparas actualmente las traducciones y los contenidos en italiano?",
+      en: "How do you currently handle translations of your materials and communications?",
+      fr: "Comment gérez-vous actuellement la traduction de vos documents et de vos communications ?",
+      es: "¿Cómo gestionas actualmente la traducción de tus materiales y comunicaciones?",
     },
     type: "single",
     options: {
@@ -211,14 +211,14 @@ const QUESTIONS: Question[] = [
     section: 3,
     question: {
       it: "Hai mai avuto il timore che una traduzione imprecisa compromettesse la tua autorevolezza?",
-      en: "Have you ever worried that unclear Italian-language content might affect customer trust?",
-      fr: "Avez-vous déjà craint qu’un texte italien imprécis nuise à la confiance de vos clients ?",
-      es: "¿Te preocupa que un texto en italiano poco claro afecte a la confianza de tus clientes?",
+      en: "Have you ever worried that an inaccurate translation might harm your professional credibility?",
+      fr: "Avez-vous déjà craint qu’une traduction imprécise nuise à votre crédibilité professionnelle ?",
+      es: "¿Alguna vez te ha preocupado que una traducción imprecisa perjudicara tu credibilidad profesional?",
     },
     type: "single",
     options: {
       it: ["Sì, è un timore concreto con clienti internazionali importanti", "A volte, soprattutto per clausole e presentazioni formali", "No, non è una mia preoccupazione"],
-      en: ["Yes, particularly with important Italian customers", "Sometimes, especially for contracts and formal decks", "No, not a major concern"],
+      en: ["Yes, especially with important international customers", "Sometimes, particularly for clauses and formal presentations", "No, it is not a concern"],
       fr: ["Oui, particulièrement avec des clients exigeants", "Parfois, notamment pour les propositions et documents professionnels", "Non, pas particulièrement"],
       es: ["Sí, especialmente ante clientes internacionales de valor", "A veces, sobre todo en propuestas y documentos profesionales", "No, no me preocupa especialmente"],
     },
@@ -228,16 +228,16 @@ const QUESTIONS: Question[] = [
     section: 3,
     question: {
       it: "In quali lingue ricevi testi da tradurre o adattare per il pubblico italiano?",
-      en: "Which type of Italian-language content do you need most?",
-      fr: "Quels contenus en italien souhaitez-vous améliorer en priorité ?",
-      es: "¿Qué contenidos en italiano te gustaría mejorar primero?",
+      en: "In which languages do you receive texts to translate or adapt for an Italian audience?",
+      fr: "Dans quelles langues recevez-vous des textes à traduire ou à adapter pour le public italien ?",
+      es: "¿En qué idiomas recibes textos que necesitas traducir o adaptar para el público italiano?",
     },
     type: "multi",
     options: {
       it: ["Inglese", "Francese", "Spagnolo", "Solo italiano"],
-      en: ["Website and landing pages in Italian", "Italian product or service descriptions", "Messages to existing Italian customers", "Other Italian-language content"],
-      fr: ["Site web et pages de destination en italien", "Descriptions de produits et services en italien", "Échanges avec les clients italiens existants", "Autres contenus en italien"],
-      es: ["Sitio web y páginas de destino en italiano", "Descripciones de productos y servicios en italiano", "Mensajes a clientes italianos existentes", "Otros contenidos en italiano"],
+      en: ["English", "French", "Spanish", "Italian only"],
+      fr: ["Anglais", "Français", "Espagnol", "Italien uniquement"],
+      es: ["Inglés", "Francés", "Español", "Solo italiano"],
     },
   },
 
@@ -264,15 +264,15 @@ const QUESTIONS: Question[] = [
     section: 4,
     question: {
       it: "Come giudichi la chiarezza dei tuoi testi promozionali e di presentazione?",
-      en: "How would you rate the clarity of your introductory copy?",
+      en: "How clear are your promotional and introductory texts?",
       fr: "Comment jugez-vous la clarté de vos textes de présentation ?",
       es: "¿Cómo valoras la claridad de tus textos corporativos y comerciales?",
     },
     type: "single",
     options: {
       it: ["Molto chiari, i clienti capiscono subito cosa offro", "Abbastanza tecnici, sento il bisogno di semplificarli", "Spesso prolissi o scritti in fretta, necessitano di revisione"],
-      en: ["Very clear, prospective clients get it right away", "Fairly technical, need simplification", "Often verbose or rushed, in need of professional editing"],
-      fr: ["Très limpides, les prospects comprennent immédiatement", "Assez techniques, mériteraient d'être vulgarisés", "Souvent trop longs ou rédigés à la va-vite"],
+      en: ["Very clear; customers immediately understand what I offer", "Fairly technical, need simplification", "Often verbose or rushed, in need of professional editing"],
+      fr: ["Très clairs : les clients comprennent immédiatement ce que je propose", "Assez techniques, mériteraient d'être vulgarisés", "Souvent trop longs ou rédigés à la va-vite"],
       es: ["Muy claros, los clientes comprenden mi valor al instante", "Demasiado técnicos, necesitan simplificación", "A menudo extensos o redactados con prisas"],
     },
   },
@@ -281,7 +281,7 @@ const QUESTIONS: Question[] = [
     section: 4,
     question: {
       it: "Riesci a pubblicare articoli o contenuti informativi con regolarità?",
-      en: "Do you publish thought leadership articles with consistency?",
+      en: "Do you regularly publish articles or informative content?",
       fr: "Parvenez-vous à publier des articles ou contenus régulièrement ?",
       es: "¿Logras publicar artículos o contenidos de valor de forma regular?",
     },
@@ -318,7 +318,7 @@ const QUESTIONS: Question[] = [
     question: {
       it: "Hai mai delegato compiti a un'assistente virtuale o a un supporto esterno?",
       en: "Have you ever delegated tasks to a virtual assistant or external support?",
-      fr: "Avez-vous déjà délégué des tâches à une assistante virtuelle ?",
+      fr: "Avez-vous déjà délégué des tâches à une assistante virtuelle ou à un prestataire externe ?",
       es: "¿Has delegado alguna vez tareas a una asistente virtual o apoyo externo?",
     },
     type: "single",
@@ -358,9 +358,9 @@ const QUESTIONS: Question[] = [
     type: "single",
     options: {
       it: ["Più tempo per i clienti e le attività principali", "Minore carico mentale e serenità a fine giornata", "Migliore immagine professionale e comunicativa", "Comunicazioni più chiare con clienti e partner già acquisiti"],
-      en: ["More time for high-value client work and billable hours", "Reduced mental fatigue and peace of mind", "Elevated professional brand image", "Clearer communication with existing Italian customers"],
-      fr: ["Plus de temps pour les clients et le cœur de métier", "Moins de charge mentale et plus de sérénité", "Une image professionnelle plus soignée", "Communiquer plus clairement avec les clients italiens existants"],
-      es: ["Más tiempo para mis clientes y actividades facturables", "Menor desgaste mental y tranquilidad al final del día", "Mejora de mi imagen corporativa y profesional", "Mejor comunicación con clientes italianos ya existentes"],
+      en: ["More time for clients and core work", "Reduced mental fatigue and peace of mind", "A clearer, more professional image", "Clearer communication with existing customers and partners"],
+      fr: ["Plus de temps pour les clients et le cœur de métier", "Moins de charge mentale et plus de sérénité", "Une image professionnelle plus soignée", "Des échanges plus clairs avec les clients et partenaires existants"],
+      es: ["Más tiempo para mis clientes y actividades principales", "Menor desgaste mental y tranquilidad al final del día", "Mejora de mi imagen corporativa y profesional", "Comunicación más clara con clientes y colaboradores actuales"],
     },
   },
   {
@@ -370,7 +370,7 @@ const QUESTIONS: Question[] = [
       it: "C'è una scadenza o un'esigenza specifica che vorresti risolvere nelle prossime 2-4 settimane?",
       en: "Is there a specific deadline or bottleneck you want to solve in the next 2-4 weeks?",
       fr: "Avez-vous une échéance ou un besoin urgent à régler d'ici 2 à 4 semaines ?",
-      es: "¿Tienes una fecha límite o una necesidad urgente que resolver en las próximas semanas?",
+      es: "¿Tienes una fecha límite o una necesidad concreta que quieras resolver en las próximas dos a cuatro semanas?",
     },
     type: "text",
   },
@@ -505,20 +505,20 @@ export default function Questionnaire() {
     setErrorMessage("");
 
     try {
-      // Direct mailto compilation fallback or API POST
+      // Prepare an email draft in the visitor’s email client; no automatic submission.
       const summaryLines = QUESTIONS.map((q) => {
         const a = answers[q.id];
-        return `Q${q.id} [${q.question.it}]: ${Array.isArray(a) ? a.join(", ") : a || "N/A"}`;
+        return `Q${q.id} [${q.question[lang]}]: ${Array.isArray(a) ? a.join(", ") : a || "N/A"}`;
       }).join("\n");
 
       const mailtoLink = `mailto:info@noemitomassetti.it?subject=${encodeURIComponent(
-        `Risultati Questionario Operativo da ${userName || "Professionista"}`
+        `${lang === "it" ? "Risposte al questionario operativo" : lang === "fr" ? "Réponses au questionnaire professionnel" : lang === "es" ? "Respuestas al cuestionario profesional" : "Operational questionnaire responses"} - ${userName || "Cliente"}`
       )}&body=${encodeURIComponent(
-        `Nome: ${userName}\nEmail: ${userEmail}\n\nRISPOSTE AL QUESTIONARIO:\n\n${summaryLines}`
+        `${lang === "it" ? "Nome" : lang === "fr" ? "Nom" : lang === "es" ? "Nombre" : "Name"}: ${userName}\nEmail: ${userEmail}\n\n${lang === "it" ? "RISPOSTE AL QUESTIONARIO" : lang === "fr" ? "RÉPONSES AU QUESTIONNAIRE" : lang === "es" ? "RESPUESTAS AL CUESTIONARIO" : "QUESTIONNAIRE RESPONSES"}:\n\n${summaryLines}`
       )}`;
 
       window.location.href = mailtoLink;
-      sessionStorage.removeItem("noemi_questionnaire_draft");
+      // Do not erase a draft before the user actually sends the email.
     } catch (err) {
       setErrorMessage(
         lang === "it"
@@ -613,7 +613,7 @@ export default function Questionnaire() {
                   >
                     <div>
                       <span className="text-xs font-bold text-primary block mb-1">
-                        Domanda {q.id} di 20
+                        {lang === "it" ? `Domanda ${q.id} di 20` : lang === "fr" ? `Question ${q.id} sur 20` : lang === "es" ? `Pregunta ${q.id} de 20` : `Question ${q.id} of 20`}
                       </span>
                       <h3 className="text-lg font-bold text-foreground leading-snug">
                         {q.question[lang]}
@@ -696,7 +696,7 @@ export default function Questionnaire() {
                         placeholder={
                           lang === "it"
                             ? "Descrivi brevemente qui (es. un lancio programmato, una traduzione da consegnare, la sistemazione della casella email)..."
-                            : "Briefly describe here (e.g., an upcoming launch, a translation deadline, clearing inbox clutter)..."
+                            : lang === "fr" ? "Décrivez brièvement votre besoin (échéance, traduction ou gestion des courriels)…" : lang === "es" ? "Describe brevemente tu necesidad (plazo, traducción u organización del correo)..." : "Briefly describe your needs (e.g. a deadline, translation or inbox organisation)..."
                         }
                         className="text-xs sm:text-sm bg-background border-border/60"
                       />
@@ -750,10 +750,10 @@ export default function Questionnaire() {
               <div className="p-6 md:p-8 rounded-2xl border border-border/60 bg-secondary/30 space-y-6">
                 <div>
                   <h3 className="text-lg font-bold text-foreground">
-                    {lang === "it" ? "Invia le tue risposte a Noemi per un riscontro personalizzato" : lang === "fr" ? "Envoyer vos réponses à Noemi pour un retour personnalisé" : lang === "es" ? "Enviar tus respuestas a Noemi para una valoración personalizada" : "Send your responses to Noemi for tailored feedback"}
+                    {lang === "it" ? "Prepara un’email con le risposte per Noemi" : lang === "fr" ? "Préparez un e-mail contenant vos réponses pour Noemi" : lang === "es" ? "Prepara un correo con tus respuestas para Noemi" : "Prepare an email with your answers for Noemi"}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {lang === "it" ? "Riceverai una panoramica sintetica su come impostare la delega per la tua attività specifica, senza alcun impegno." : lang === "fr" ? "Je pourrai examiner vos besoins et vous proposer un premier retour sur les tâches qui correspondent à mes services, sans engagement." : lang === "es" ? "Podré revisar tus necesidades y orientarte sobre las tareas que encajan con mis servicios, sin compromiso." : "You will receive a tailored overview of delegation priorities for your business, with zero obligation."}
+                    {lang === "it" ? "Si aprirà il tuo programma di posta con le risposte compilate: controlla il messaggio e premi Invia. Nessuna email viene inviata automaticamente." : lang === "fr" ? "Votre messagerie s’ouvrira avec les réponses préremplies : vérifiez le message et envoyez-le. Aucun e-mail n’est envoyé automatiquement." : lang === "es" ? "Se abrirá tu correo con las respuestas preparadas: revisa el mensaje y pulsa Enviar. No se envía ningún correo automáticamente." : "Your email application will open with your answers: review the message and press Send. No email is sent automatically."}
                   </p>
                 </div>
 
@@ -774,7 +774,7 @@ export default function Questionnaire() {
                         type="text"
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
-                        placeholder="Nome e Cognome"
+                        placeholder={lang === "it" ? "Nome e cognome" : lang === "fr" ? "Prénom et nom" : lang === "es" ? "Nombre y apellidos" : "Full name"}
                         className="text-xs bg-background"
                         required
                       />
@@ -787,7 +787,7 @@ export default function Questionnaire() {
                         type="email"
                         value={userEmail}
                         onChange={(e) => setUserEmail(e.target.value)}
-                        placeholder="nome@studio.it"
+                        placeholder={lang === "it" ? "nome@esempio.it" : lang === "fr" ? "nom@exemple.fr" : lang === "es" ? "nombre@ejemplo.es" : "name@example.com"}
                         className="text-xs bg-background"
                         required
                       />
@@ -813,7 +813,7 @@ export default function Questionnaire() {
                       className="w-full sm:w-auto font-bold text-xs uppercase tracking-wider bg-primary text-primary-foreground shadow-md hover:scale-102 transition-all px-8 py-5"
                     >
                       <Send className="w-4 h-4 mr-2" />
-                      {lang === "it" ? "Invia le risposte a Noemi" : lang === "fr" ? "Envoyer les réponses à Noemi" : lang === "es" ? "Enviar respuestas a Noemi" : "Send responses to Noemi"}
+                      {lang === "it" ? "Prepara l’email con le risposte" : lang === "fr" ? "Préparer l’e-mail avec les réponses" : lang === "es" ? "Preparar el correo con las respuestas" : "Prepare email with responses"}
                     </Button>
 
                     <BookingButton

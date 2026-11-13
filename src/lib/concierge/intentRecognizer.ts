@@ -45,34 +45,9 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
     };
   }
 
-  // 1. Boundary check: Accounting / Fiscal adempimenti (Always strictly out of scope)
-  const accountingKeywords = [
-    'contabil',
-    'dichiarazione iva',
-    'gestione completa delle fatture',
-    'fisco',
-    'fiscal',
-    'tass',
-    'f24',
-    'commercialist',
-    'dichiarazione dei redditi',
-    'invoic',
-    'accounting',
-    'tax',
-    'bookkeeping',
-    'comptab',
-    'impot',
-    'declaraci',
-    'gestor',
-  ];
-
-  if (accountingKeywords.some((kw) => normalized.includes(kw))) {
-    return {
-      serviceKey: undefined,
-      isScopeExcluded: true,
-      explanation: SCOPE_EXCLUDED_REPLY.accounting,
-    };
-  }
+  // Authoritative serviceScope check above handles accounting and administration.
+  // Broad substring checks such as 'tax', 'gestor' and 'invoic' produced
+  // false exclusions for legitimate correspondence or operational enquiries.
 
   // Curated 24/7 multilingual FAQ. Answers are deterministic; never claim a person is online.
   const faqs: Array<{ keys: string[]; answer: Record<Language, string> }> = [
@@ -142,7 +117,7 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
   // A request for a quote *for translation* should open the relevant service,
   // rather than being intercepted by the generic pricing FAQ.
   const mentionsTranslation = /traduz|tradott|tradurr|translat|localizz|localiz|traduct|traduir|traducc|traducir/.test(normalized);
-  const genericQuoteKeys = new Set(['preventivo', 'quotation', 'quote', 'devis', 'presupuesto']);
+  const genericQuoteKeys = new Set(['preventivo', 'quotation', 'quote', 'devis', 'presupuesto', 'quanto costa', 'how much', 'combien coute', 'cuanto cuesta']);
   for (const faq of faqs) {
     if (faq.keys.some((key) => {
       if (key === 'nda') return /(?:^|\W)nda(?:$|\W)/.test(normalized);
@@ -252,6 +227,9 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
         score += kw.length >= 8 ? 3 : 1;
       }
     }
+    // Translating a website or an email is a translation enquiry, not a
+    // request for website development or inbox management.
+    if (key === 'translation' && /traduz|tradott|tradurr|translat|traduct|traduir|traducc|traducir/.test(normalized)) score += 5;
     if (score > maxScore) {
       maxScore = score;
       bestService = key;
@@ -261,10 +239,10 @@ export function recognizeIntent(rawQuery: string): RecognizedIntent {
   if (bestService && maxScore > 0) {
     const explanations: Record<ServiceKey, Record<Language, string>> = {
       translation: {
-        it: 'Servizio di Traduzione & Comunicazione Multilingue: testi generali da €0,09/parola, specialistici EN-IT da €0,12/parola, localizzazione web da €0,11/parola e revisione da €0,03/parola nelle combinazioni IT, EN, FR ed ES.',
-        en: 'Translation & Multilingual Communication: general translation from €0.09/word, specialist EN-IT from €0.12/word, web localization from €0.11/word, and revision from €0.03/word across IT, EN, FR, and ES.',
-        fr: 'Traduction & Communication Multilingue : textes généraux dès 0,09 €/mot, spécialisés EN-IT dès 0,12 €/mot, localisation web dès 0,11 €/mot et révision dès 0,03 €/mot (IT, EN, FR, ES).',
-        es: 'Traducción y Comunicación Multilingüe: textos generales desde 0,09 €/palabra, especializados EN-IT desde 0,12 €/palabra, páginas web desde 0,11 €/palabra y revisión desde 0,03 €/palabra (IT, EN, FR, ES).',
+        it: 'Traduco tra italiano e inglese, francese o spagnolo in entrambe le direzioni. Per EN/FR/ES → IT le tariffe indicative partono da 0,09 €/parola sorgente; per IT → EN/FR/ES il preventivo viene definito dopo la valutazione del testo. Puoi selezionare la coppia linguistica nella richiesta guidata.',
+        en: 'Translation is available between Italian and English, French or Spanish in both directions. Indicative EN/FR/ES → IT rates start at €0.09 per source word; IT → EN/FR/ES work is individually quoted after reviewing the text. Choose your language pair in the guided enquiry.',
+        fr: 'Traductions possibles entre l’italien et l’anglais, le français ou l’espagnol, dans les deux sens. Les tarifs indicatifs EN/FR/ES → IT commencent à 0,09 € par mot source ; IT → EN/FR/ES fait l’objet d’un devis après examen du texte. Choisissez votre combinaison linguistique dans le formulaire guidé.',
+        es: 'Traducción entre el italiano y el inglés, francés o español en ambas direcciones. La tarifa orientativa EN/FR/ES → IT parte de 0,09 € por palabra de origen; IT → EN/FR/ES se presupuesta tras revisar el texto. Selecciona tu combinación de idiomas en la solicitud guiada.',
       },
       backoffice: {
         it: 'Assistenza Virtuale & Back Office: supporto operativo a €25/h, pacchetto 10 ore a €240, pacchetto 20 ore a €460 (oltre le 20 ore su preventivo personalizzato). Ideale per delegare agenda, email e organizzazione.',

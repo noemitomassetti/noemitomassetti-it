@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { BLOG_PHOTO_ATTRIBUTION_LABEL } from "@/lib/blogPhotography";
 import { useParams, useLocation, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -11,8 +12,8 @@ import type { Language } from "@/lib/i18n/types";
 const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; ctaBtn: string; authorBio: string; related: string; sample: string}> = {
   it: {
     back: "Torna al blog",
-    ctaTitle: "Hai bisogno di supporto per il tuo lavoro?",
-    ctaDesc: "Descrivimi la tua attività e le tue esigenze: valuteremo insieme le prestazioni più adatte.",
+    ctaTitle: "Hai un'attività da delegare o un testo da tradurre?",
+    ctaDesc: "Scrivimi spiegandomi di cosa hai bisogno. Valuterò la richiesta e, se rientra nei miei servizi, preparerò una proposta personalizzata.",
     ctaBtn: "Richiedi un preventivo",
     authorBio: "Assistente virtuale multilingue e traduttrice tra italiano e inglese, francese e spagnolo in entrambe le direzioni. Oltre vent'anni di esperienza professionale, laurea in Mediazione Linguistica e master in Traduzione Specialistica.",
     related: "Altri articoli",
@@ -20,28 +21,28 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
   },
   en: {
     back: "Back to the blog",
-    ctaTitle: "Need natural Italian-language communication?",
-    ctaDesc: "Tell me about your translation, localisation or existing-customer communication needs for Italy.",
+    ctaTitle: "Need an Italian-speaking virtual assistant?",
+    ctaDesc: "Whether you already work with Italy or are preparing to do so, I can help organise Italian-language email, calendar and back-office tasks, set up approved customer communication templates and support written enquiries from existing customers. Translation and localisation are also available as standalone services, without requiring virtual assistance. Tell me what you need for a tailored quote.",
     ctaBtn: "Request a quote",
-    authorBio: "Native Italian speaker, trained translator and virtual assistant. My professional experience spans more than twenty years across different roles; I hold a degree in Language Mediation and an Italian university Master’s qualification in Specialised Translation.",
+    authorBio: "Italian-speaking virtual assistant with professional experience across customer care, back office and organisational roles. A native Italian speaker, with a Language Mediation degree (110 e lode) and specialist training in translation.",
     related: "Related reading",
     sample: "This article is an editorial adaptation for English-language readers."
   },
   fr: {
     back: "Retour au blog",
-    ctaTitle: "Besoin de communiquer naturellement avec vos clients italiens ?",
-    ctaDesc: "Présentez vos besoins en traduction vers l’italien, localisation ou échanges avec vos clients existants.",
+    ctaTitle: "Vous recherchez une assistante virtuelle italophone ?",
+    ctaDesc: "Que vous travailliez déjà avec l’Italie ou prépariez votre activité sur le marché italien, je peux vous accompagner dans l’organisation des courriels, de l’agenda et du back-office en italien, ainsi que dans la préparation de modèles de communication et le suivi écrit des clients existants. La traduction et la localisation peuvent aussi faire l’objet de missions indépendantes, selon le devis.",
     ctaBtn: "Demander un devis",
-    authorBio: "Italienne de langue maternelle, traductrice formée à la traduction spécialisée et assistante virtuelle. Mon parcours professionnel dépasse vingt ans, dans des fonctions variées.",
+    authorBio: "Assistante virtuelle italophone, je m’appuie sur une expérience professionnelle variée en relation client, back-office et organisation, ainsi que sur une formation spécialisée en langues et en traduction.",
     related: "À lire également",
     sample: "Cet article a été adapté pour les lecteurs francophones."
   },
   es: {
     back: "Volver al blog",
-    ctaTitle: "¿Necesitas comunicarte de forma natural con clientes italianos?",
-    ctaDesc: "Cuéntame qué contenidos necesitas traducir al italiano o qué comunicaciones con clientes actuales deseas organizar.",
+    ctaTitle: "¿Buscas una asistente virtual que trabaje en italiano?",
+    ctaDesc: "Tanto si ya trabajas con Italia como si te preparas para entrar en el mercado italiano, puedo ayudarte a organizar el correo, la agenda y el back office en italiano, preparar modelos de comunicación y atender por escrito las consultas de clientes actuales. La traducción y la localización también pueden contratarse como servicios independientes. Cuéntame qué necesitas delegar.",
     ctaBtn: "Solicitar un presupuesto",
-    authorBio: "Italiana de lengua materna, traductora con formación especializada y asistente virtual. Mi trayectoria profesional supera los veinte años en distintas funciones.",
+    authorBio: "Asistente virtual de lengua materna italiana, con experiencia profesional en atención al cliente, back office y organización, además de formación especializada en idiomas y traducción.",
     related: "Otros artículos",
     sample: "Este artículo se ha adaptado editorialmente para lectores hispanohablantes."
   }
@@ -50,9 +51,9 @@ const COPY: Record<Language, {back: string; ctaTitle: string; ctaDesc: string; c
 // Provider plan limits checked against official provider pages on 8 November 2026.
 const FREE_PLAN_NOTICE:Record<Language,{title:string;body:string;sources:string;links:{name:string;url:string}[]}>={
   it:{title:"Piani gratuiti: verifica i limiti",body:"Informazioni verificate l’8 novembre 2026. Calendly Free include un tipo di evento e un calendario collegato; Zoom Basic limita normalmente le riunioni a 40 minuti; Asana Personal è pensato per una o due persone. Funzioni e condizioni possono cambiare: consulta le pagine ufficiali prima di scegliere.",sources:"Piani e condizioni ufficiali",links:[{name:"Calendly",url:"https://calendly.com/pricing"},{name:"Zoom",url:"https://support.zoom.com/hc/it/article?id=zm_kb&sysparm_article=KB0067973"},{name:"Asana",url:"https://asana.com/it/pricing"}]},
-  en:{title:"Free plans: check the limits",body:"Information checked on 8 November 2026. This article discusses Google Calendar, Google Drive, Trello, Notion and Google Forms. Free features, storage, collaboration limits and integrations vary by account type and plan; check the providers’ official pages before choosing.",sources:"Official plans and terms",links:[{name:"Google Workspace",url:"https://workspace.google.com/pricing/"},{name:"Trello",url:"https://trello.com/en/pricing"},{name:"Notion",url:"https://www.notion.com/pricing"}]},
-  fr:{title:"Offres gratuites : vérifiez les limites",body:"Informations vérifiées le 8 novembre 2026. Cet article présente Google Agenda, Google Drive, Trello, Notion et Google Forms. Les fonctions gratuites, le stockage, les limites de collaboration et les intégrations dépendent du type de compte et de l’offre ; consultez les pages officielles avant de choisir.",sources:"Offres et conditions officielles",links:[{name:"Google Workspace",url:"https://workspace.google.com/pricing/"},{name:"Trello",url:"https://trello.com/en/pricing"},{name:"Notion",url:"https://www.notion.com/pricing"}]},
-  es:{title:"Planes gratuitos: comprueba los límites",body:"Información comprobada el 8 de noviembre de 2026. Este artículo presenta Google Calendar, Google Drive, Trello, Notion y Google Forms. Las funciones gratuitas, el almacenamiento, los límites de colaboración y las integraciones dependen del tipo de cuenta y del plan; consulta las páginas oficiales antes de elegir.",sources:"Planes y condiciones oficiales",links:[{name:"Google Workspace",url:"https://workspace.google.com/pricing/"},{name:"Trello",url:"https://trello.com/en/pricing"},{name:"Notion",url:"https://www.notion.com/pricing"}]}
+  en:{title:"Free plans: check the limits",body:"Information checked on 8 November 2026. This article discusses Calendly, Google Calendar and Google Keep, Google Drive, Zoom or Google Meet, and Asana. Free booking, meeting and collaboration features vary by provider and plan; check the official terms before choosing.",sources:"Official plans and terms",links:[{name:"Calendly",url:"https://calendly.com/pricing"},{name:"Zoom",url:"https://www.zoom.com/en/products/virtual-meetings/"},{name:"Asana",url:"https://asana.com/pricing"}]},
+  fr:{title:"Offres gratuites : vérifiez les limites",body:"Informations vérifiées le 8 novembre 2026. Cet article présente Calendly, Google Agenda et Google Keep, Google Drive, Zoom ou Google Meet, et Asana. Les fonctions gratuites, les limites de réservation, les réunions et les outils de collaboration dépendent de l'offre ; vérifiez les conditions officielles avant de choisir.",sources:"Offres et conditions officielles",links:[{name:"Calendly",url:"https://calendly.com/pricing"},{name:"Zoom",url:"https://www.zoom.com/en/products/virtual-meetings/"},{name:"Asana",url:"https://asana.com/pricing"}]},
+  es:{title:"Planes gratuitos: comprueba los límites",body:"Información comprobada el 8 de noviembre de 2026. Este artículo presenta Calendly, Google Calendar y Google Keep, Google Drive, Zoom o Google Meet y Asana. Las funciones gratuitas, las reservas, las reuniones y las opciones de colaboración dependen del plan; consulta las condiciones oficiales antes de elegir.",sources:"Planes y condiciones oficiales",links:[{name:"Calendly",url:"https://calendly.com/pricing"},{name:"Zoom",url:"https://www.zoom.com/en/products/virtual-meetings/"},{name:"Asana",url:"https://asana.com/pricing"}]}
 };
 
 export default function BlogPost() {
@@ -114,8 +115,11 @@ export default function BlogPost() {
           <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-7">{visible.excerpt}</p>
           {copy.sample && <p className="text-xs text-muted-foreground mb-6">{copy.sample}</p>}
           <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-border/50 bg-muted/10">
-            <img src={visible.image} alt={visible.alt || visible.title} width="800" height="500" loading="eager" className="w-full max-h-[500px] h-auto object-contain" />
+            <img src={visible.image} alt={visible.alt || visible.title} width="800" height="500" loading="eager" decoding="async" referrerPolicy="no-referrer" className="w-full aspect-[8/5] object-cover" />
           </div>
+          <p className="text-xs text-muted-foreground mt-2 text-right">
+            {BLOG_PHOTO_ATTRIBUTION_LABEL[lang]}: <a href={visible.photoSource} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="underline underline-offset-2 hover:text-primary">{visible.photoCredit} · Unsplash</a>
+          </p>
         </header>
         <div className="prose prose-invert prose-lg max-w-none text-foreground/90 prose-headings:text-primary prose-strong:text-primary prose-a:text-primary prose-p:leading-relaxed prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6" dangerouslySetInnerHTML={{__html:visible.content}} />
         {visible.id===3 && <aside aria-label={FREE_PLAN_NOTICE[lang].title} className="mt-8 rounded-xl border border-border/70 bg-card px-5 py-5 text-sm leading-relaxed text-foreground/85">
