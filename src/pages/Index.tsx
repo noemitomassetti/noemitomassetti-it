@@ -133,7 +133,7 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Sans devoir interrompre continuellement votre travail principal."
           : lang === "es"
-          ? "Sin tener que interrumpir constantemente tu trabajo de fondo."
+          ? "Sin interrumpir constantemente tu actividad principal."
           : "Deliver undivided attention without constant context-switching.",
     },
     {
@@ -192,7 +192,7 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Diplôme en Médiation Linguistique – 110/110 e lode\nMaster en Traduction Spécialisée"
           : lang === "es"
-          ? "Grado en Mediación Lingüística – 110/110 e lode (distinción italiana)\nMáster en Traducción Especializada"
+          ? "Título universitario en Mediación Lingüística – 110/110 e lode (máxima distinción italiana)\nMáster de especialización en Traducción Especializada"
           : "Degree in Language Mediation – 110/110 e lode (Italian honours)\nPostgraduate training in Specialised Translation",
     },
     {
@@ -252,7 +252,7 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Si vous travaillez sur rendez-vous, je peux organiser votre agenda, vos courriels et les demandes de vos clients selon vos consignes."
           : lang === "es"
-          ? "Si trabajas con citas o clientes directos, te ayudo a gestionar agenda, correos y comunicaciones."
+          ? "Si atiendes a clientes con cita previa o gestionas personalmente sus solicitudes, puedo ayudarte con la agenda, el correo y las comunicaciones."
           : "If your work involves appointments and customers, I can manage agreed scheduling, email organisation and professional correspondence.",
     },
     {
@@ -290,7 +290,7 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Un soutien fiable pour le secrétariat organisationnel, le classement documentaire et le back-office opérationnel."
           : lang === "es"
-          ? "Un respaldo continuo para secretaría, organización de datos y gestiones de back office."
+          ? "Apoyo operativo para la secretaría, la organización de documentos y las tareas de back office acordadas."
           : "Practical organisational and back-office support for agreed day-to-day activities.",
     },
     {
@@ -412,7 +412,7 @@ export default function IndexPage() {
           : lang === "fr"
           ? "Non. Je ne propose ni gestion administrative, ni comptabilité, ni facturation, ni services fiscaux. Je peux toutefois organiser les documents et informations liés aux tâches opérationnelles convenues."
           : lang === "es"
-          ? "No. No ofrezco servicios administrativos, contables, de facturación ni fiscales. Sí puedo organizar documentos e información vinculados a las tareas operativas acordadas."
+          ? "No. No llevo la contabilidad, la facturación ni los trámites fiscales de una empresa. Sí puedo organizar los documentos y la información necesarios para las tareas de secretaría y back office acordadas."
           : "No. I do not provide business administration, bookkeeping, invoicing or tax services. I can organise documents and information related to agreed operational tasks.",
     },
     {
@@ -1061,7 +1061,7 @@ export default function IndexPage() {
               : lang === "fr"
               ? "Transparence & Preuves Concrètes"
               : lang === "es"
-              ? "Transparencia & Compromiso Real"
+              ? "Transparencia y ejemplos de trabajo"
               : "Transparent Background & Work Examples"}
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
@@ -1079,7 +1079,7 @@ export default function IndexPage() {
               : lang === "fr"
               ? "Un parcours professionnel varié, une formation spécialisée en langues et des exemples de travail originaux pour découvrir ma méthode, présentés clairement comme des démonstrations."
               : lang === "es"
-              ? "Una trayectoria profesional diversa, formación especializada en idiomas y ejemplos originales que muestran mi forma de trabajar, sin presentarlos como encargos de clientes."
+              ? "Una trayectoria profesional diversa, formación especializada en idiomas y ejemplos originales que permiten conocer cómo trabajo. Son materiales demostrativos, no encargos realizados para clientes."
               : "A varied professional background, specialist language training and original work samples that show my approach without presenting fictional scenarios as client commissions."}
           </p>
         </div>
@@ -1116,7 +1116,7 @@ export default function IndexPage() {
               <p className="text-xs text-foreground/80 leading-relaxed">
                 {lang === "it"
                   ? "Oltre vent’anni di esperienze professionali in diversi contesti, tra assistenza clienti, organizzazione e attività di back office."
-                  : lang === "fr" ? "Plus de vingt ans d’expérience dans la relation client, l’organisation, le back-office et la communication professionnelle." : lang === "es" ? "Más de veinte años de experiencia en atención al cliente, organización, back office y comunicación profesional." : "Over twenty years of professional experience across customer care, organisation, back-office tasks and client communication."}
+                  : lang === "fr" ? "Plus de vingt ans d’expérience dans la relation client, l’organisation, le back-office et la communication professionnelle." : lang === "es" ? "Más de veinte años de trayectoria laboral en distintos ámbitos, entre ellos la atención al cliente, la organización y el back office." : "Over twenty years of professional experience across customer care, organisation, back-office tasks and client communication."}
               </p>
             </div>
             <div className="text-[11px] text-primary font-semibold">
@@ -1417,7 +1417,7 @@ export default function IndexPage() {
                       <span itemProp="addressCountry">ITALIA</span>
                     </span>
                     <span className="text-muted-foreground text-xs sm:text-sm">
-                      {lang === "it" ? "Supporto da remoto in tutta Italia" : lang === "fr" ? "Prestations à distance en Italie et à l’international" : lang === "es" ? "Servicios a distancia en Italia y otros países" : "Remote support for clients in Italy and abroad"}
+                      {lang === "it" ? "Supporto da remoto in tutta Italia" : lang === "fr" ? "Prestations à distance en Italie et à l’international" : lang === "es" ? "Servicios a distancia para profesionales de Italia y otros países" : "Remote support for clients in Italy and abroad"}
                     </span>
                   </div>
                 </div>
