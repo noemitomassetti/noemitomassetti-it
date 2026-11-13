@@ -15,7 +15,9 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "inbox-calendar-triage",
       "email-inbox-italy-routing",
       "existing-customer-multilingual-email-pack",
-      "inbox-handover-cover-full"
+      "inbox-handover-cover-full",
+      "en-it-complete-italian-onboarding-communications",
+      "it-fr-complete-meeting-followup-package"
     ]
   },
   {
@@ -44,7 +46,9 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "international-client-italian-aftercare",
       "italian-customer-service-multilingual-followup",
       "existing-customer-multilingual-email-pack",
-      "written-customer-complaint-four-language-response"
+      "written-customer-complaint-four-language-response",
+      "es-it-complete-customer-help-policy-and-replies",
+      "en-it-complete-italian-onboarding-communications"
     ]
   },
   {
@@ -58,7 +62,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "order-entry-price-list",
       "customer-record-data-entry-audit",
       "approved-quotes-order-variations",
-      "orders-multi-item-exception-control"
+      "orders-multi-item-exception-control",
+      "client-records-data-quality-complete"
     ]
   },
   {
@@ -86,7 +91,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "customer-record-data-entry-audit",
       "order-entry-price-list",
       "information-research-verifiable-source-matrix",
-      "orders-multi-item-exception-control"
+      "orders-multi-item-exception-control",
+      "client-records-data-quality-complete"
     ]
   },
   {
@@ -127,7 +133,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "research-existing-italian-customers",
       "information-research-verifiable-source-matrix",
-      "course-information-source-audit"
+      "course-information-source-audit",
+      "practical-research-options-decision-pack"
     ]
   },
   {
@@ -142,7 +149,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "inbox-calendar-triage",
       "shared-drive-version-control",
       "inbox-handover-cover-full",
-      "shared-drive-handover-client-documents"
+      "shared-drive-handover-client-documents",
+      "it-en-full-operations-sop-handover"
     ]
   },
   {
@@ -158,7 +166,13 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "es-it-existing-customer-service-email-full",
       "it-en-order-status-message",
       "it-fr-customer-service-followup",
-      "it-es-support-faq-complete"
+      "it-es-support-faq-complete",
+      "en-it-complete-italian-onboarding-communications",
+      "fr-it-complete-product-information-and-faq",
+      "es-it-complete-customer-help-policy-and-replies",
+      "it-en-full-operations-sop-handover",
+      "it-fr-complete-meeting-followup-package",
+      "it-es-complete-service-information-and-faq"
     ]
   },
   {
@@ -172,7 +186,10 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "web-copy-before-after",
       "italian-market-website-copy-four-languages",
       "website-help-page-microcopy",
-      "online-service-information-multilingual-profile-pack"
+      "online-service-information-multilingual-profile-pack",
+      "italy-website-service-copy-full-localisations",
+      "en-it-complete-italian-onboarding-communications",
+      "it-es-complete-service-information-and-faq"
     ]
   },
   {
@@ -186,7 +203,9 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "catalogue-price-list-proofreading",
       "existing-client-notice-editing",
       "multilingual-proofreading-written-notices",
-      "fr-it-handmade-product"
+      "fr-it-handmade-product",
+      "fr-it-complete-product-information-and-faq",
+      "it-es-complete-service-information-and-faq"
     ]
   },
   {
