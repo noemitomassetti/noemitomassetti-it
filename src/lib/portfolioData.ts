@@ -83,7 +83,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "it": "Rendere la proposta naturale in italiano, evitare calchi e mantenere solo le promesse contenute nel testo originale.",
       "en": "Produce idiomatic Italian messaging, avoid calques and preserve the original business claims.",
       "fr": "Produire un texte italien naturel sans calques ni promesses commerciales ajoutées.",
-      "es": "Crear un mensaje natural en italiano, fiel al contenido y sin promesas inventadas."
+      "es": "Crear un mensaje natural en italiano, fiel al contenido y sin promesas de ejemplo."
     },
     "approach": {
       "it": "Analisi del testo originale, scelta della terminologia dell’arredamento e revisione di sintassi, tono e inviti all’azione.",
@@ -100,7 +100,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "en": [
         "Use «casa» to preserve a warm, personal register.",
         "Translate meaning, not the syntax of «designed around».",
-        "Keep the CTA truthful: request information, without inventing commitments."
+        "Keep the CTA truthful: request information, without adding unsupported information commitments."
       ],
       "fr": [
         "Privilégier «casa», naturel pour un texte de décoration intérieure.",
@@ -589,10 +589,10 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "es": "Una pequeña empresa de ejemplo compara cuatro opciones de embalaje para 500 unidades y un presupuesto orientativo de 450 €."
 },
     startingMaterial: {
-      "it": "Quattro schede A–D, tutte inventate, con quantità minime, prezzi unitari, costi di spedizione e tempi ipotetici. Nessuna certificazione è verificata.",
+      "it": "Quattro schede A–D, tutte di esempio, con quantità minime, prezzi unitari, costi di spedizione e tempi ipotetici. Nessuna certificazione è verificata.",
       "en": "Four wholly illustrative A–D profiles with order quantities, unit prices, shipping and lead times. No certification is verified.",
       "fr": "Quatre fiches A–D entièrement illustratives indiquant quantités, prix, transport et délais. Aucune certification vérifiée.",
-      "es": "Cuatro perfiles A–D inventados con cantidades, precios, envío y plazos. Ninguna certificación verificada."
+      "es": "Cuatro perfiles A–D de ejemplo con cantidades, precios, envío y plazos. Ninguna certificación verificada."
 },
     objective: {
       "it": "Organizzare un confronto omogeneo e segnalare quali informazioni mancano prima di un acquisto reale.",
@@ -632,7 +632,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "it": "Quattro profili simulati, tabella completa, calcoli per 500 pezzi, elenco delle verifiche e sintesi; documento 07.",
       "en": "Four illustrative supplier profiles, worked comparison, pending checks and memo; document 07.",
       "fr": "Quatre profils illustratifs, tableau comparatif, vérifications et synthèse ; document 07.",
-      "es": "Cuatro perfiles inventados, tabla con cálculos, verificaciones y síntesis; documento 07."
+      "es": "Cuatro perfiles de ejemplo, tabla con cálculos, verificaciones y síntesis; documento 07."
 },
     tableData: {
       "headers": {
@@ -832,13 +832,13 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "it": "Un consulente immaginario vuole organizzare informazioni sull’offerta di quattro studi dimostrativi, senza svolgere attività di acquisizione clienti.",
       "en": "An illustrative consultant wants to organise a comparison of four imaginary professional practices, without looking for sales leads.",
       "fr": "Un consultant illustratif compare quatre cabinets imaginaires, sans rechercher de prospects.",
-      "es": "Un consultor de ejemplo compara cuatro despachos inventados sin buscar clientes potenciales."
+      "es": "Un consultor de ejemplo compara cuatro despachos de ejemplo sin buscar clientes potenciales."
 },
     startingMaterial: {
-      "it": "Quattro profili A–D interamente inventati; servizi, prezzi e modalità di contatto non provengono da fonti di mercato.",
-      "en": "Four invented A–D profiles; service, price and contact details are not sourced from actual firms.",
-      "fr": "Quatre profils A–D inventés ; les services et tarifs ne proviennent pas de sociétés réelles.",
-      "es": "Cuatro perfiles A–D inventados; los servicios y precios no proceden de empresas reales."
+      "it": "Quattro profili A–D interamente di esempio; servizi, prezzi e modalità di contatto non provengono da fonti di mercato.",
+      "en": "Four example A–D profiles; service, price and contact details are not sourced from actual firms.",
+      "fr": "Quatre profils A–D présentés en exemple ; les services et tarifs ne proviennent pas de sociétés réelles.",
+      "es": "Cuatro perfiles A–D de ejemplo; los servicios y precios no proceden de empresas reales."
 },
     objective: {
       "it": "Mostrare un confronto omogeneo, senza attribuire alle aziende reali dati o conclusioni ricavati da simulazioni.",
@@ -878,7 +878,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "it": "Quattro schede dimostrative, tabella comparativa e sintesi dei limiti della ricerca; documento 08.",
       "en": "Four illustrative profiles, a completed comparison table and a caveats memo; document 08.",
       "fr": "Quatre profils illustratifs, tableau comparatif et note sur les limites ; document 08.",
-      "es": "Cuatro perfiles inventados, tabla comparativa y nota sobre las limitaciones; documento 08."
+      "es": "Cuatro perfiles de ejemplo, tabla comparativa y nota sobre las limitaciones; documento 08."
 },
     tableData: {
       "headers": {
@@ -1063,8 +1063,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     startingMaterial: {
       "it": "Sei comunicazioni simulate, una disponibilità dell'agenda da verificare e dati d'ordine non confermati.",
       "en": "Six illustrative messages, unverified calendar availability and unresolved order information.",
-      "fr": "Six messages inventés, disponibilités de calendrier et informations de commande non confirmées.",
-      "es": "Seis mensajes inventados, horarios y datos de pedido todavía sin verificar."
+      "fr": "Six messages présentés en exemple, disponibilités de calendrier et informations de commande non confirmées.",
+      "es": "Seis mensajes de ejemplo, horarios y datos de pedido todavía sin verificar."
 },
     objective: {
       "it": "Mostrare la classificazione delle richieste, due risposte complete e un riepilogo senza invii o conferme non autorizzati.",
@@ -1800,7 +1800,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
         "Il registro conserva solo i dati operativi necessari."
       ],
       "en": [
-        "Never invent a delivery date.",
+        "never claim unverified a delivery date.",
         "Refer billing/accounting issues to the responsible team; do not handle them.",
         "Record only necessary operational data."
       ],
@@ -1810,7 +1810,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
         "Ne conserver que les données nécessaires."
       ],
       "es": [
-        "No inventar fechas de entrega.",
+        "no introducir datos sin verificar fechas de entrega.",
         "Derivar cuestiones contables o de facturación al responsable.",
         "Registrar únicamente datos necesarios."
       ]
@@ -2141,12 +2141,12 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
     },
     "keyDecisions": {
       "it": [
-        "Non inventare link o scadenze: inserire solo dati verificati.",
+        "non introdurre informazioni non verificate link o scadenze: inserire solo dati verificati.",
         "Le domande didattiche sono inoltrate al docente.",
         "I dati dei partecipanti sono trattati solo secondo istruzioni concordate."
       ],
       "en": [
-        "Do not invent links or deadlines.",
+        "do not claim unverified links or deadlines.",
         "Refer academic questions to the instructor.",
         "Handle participant data only as instructed."
       ],
@@ -2156,7 +2156,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
         "Limiter le traitement des données."
       ],
       "es": [
-        "No inventar enlaces ni plazos.",
+        "no introducir datos sin verificar enlaces ni plazos.",
         "Derivar preguntas académicas al docente.",
         "Respetar los permisos sobre datos."
       ]
@@ -2175,9 +2175,9 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "localizedText": "Benvenuta e benvenuto al corso! Prima della lezione, consulta la cartella dei materiali condivisa dal docente. Se non riesci ad accedere, rispondi a questa email indicando il problema: verificheremo le istruzioni e ti aggiorneremo.",
       "notes": {
         "it": "Da un avviso vago a istruzioni verificabili, senza inventare link o promettere assistenza tecnica illimitata.",
-        "en": "Clear Italian instructions; no invented links or unsupported commitments.",
+        "en": "Clear Italian instructions; no example links or unsupported commitments.",
         "fr": "Consignes italiennes claires, sans lien illustratif ni promesse disproportionnée.",
-        "es": "Instrucciones claras en italiano, sin enlaces inventados ni promesas excesivas."
+        "es": "Instrucciones claras en italiano, sin enlaces de ejemplo ni promesas excesivas."
       }
     }
   ,
@@ -2213,9 +2213,9 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
     },
     "objective": {
       "it": "Aumentare chiarezza e uniformità, senza inventare caratteristiche né modificare prezzi.",
-      "en": "Improve clarity and consistency without inventing specifications or changing prices.",
+      "en": "Improve clarity and consistency without adding unsupported information specifications or changing prices.",
       "fr": "Clarifier les textes sans inventer de caractéristiques ni changer les prix.",
-      "es": "Mejorar claridad y coherencia sin inventar prestaciones ni cambiar precios."
+      "es": "Mejorar claridad y coherencia sin añadir datos sin confirmar prestaciones ni cambiar precios."
     },
     "approach": {
       "it": "Inventario dei campi, schema stilistico, riscrittura del testo, verifica con scheda tecnica e controllo versioni.",
@@ -2241,7 +2241,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       ],
       "es": [
         "Sustituir elogios vacíos por información verificable.",
-        "No inventar medidas ni materiales.",
+        "no introducir datos sin verificar medidas ni materiales.",
         "Respetar los precios aprobados."
       ]
     },
@@ -2344,7 +2344,7 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   {
     num: "10",
     title: { it: "Revisione editoriale: comunicato prima e dopo", en: "Editorial revision: business notice before and after", fr: "Révision d'un communiqué : avant et après", es: "Revisión editorial de un comunicado: antes y después" },
-    subtitle: { it: "Bozza, testo riscritto e tabella delle correzioni, senza promesse inventate", en: "Original, edited text and change log, without invented promises", fr: "Version initiale, révision et tableau des changements", es: "Borrador, texto revisado y tabla de cambios, sin promesas inventadas" },
+    subtitle: { it: "Bozza, testo riscritto e tabella delle correzioni, senza promesse non verificati", en: "Original, edited text and change log, without example promises", fr: "Version initiale, révision et tableau des changements", es: "Borrador, texto revisado y tabla de cambios, sin promesas de ejemplo" },
     category: "writing",
     url: "/portfolio-documenti/doc-10-scheda-revisione-editoriale.html",
   },
