@@ -6,7 +6,7 @@ export interface OperationalArtifact {
   title: Localised;
   /** Work sample can be in Italian or another displayed language. */
   language?: "it" | "en" | "fr" | "es";
-  /** Demonstration deliverable, always labelled as fictional. */
+  /** Demonstration deliverable, always labelled as illustrative. */
   content: string;
   explanation: Localised;
 }
