@@ -17,7 +17,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "existing-customer-multilingual-email-pack",
       "inbox-handover-cover-full",
       "en-it-complete-italian-onboarding-communications",
-      "it-fr-complete-meeting-followup-package"
+      "it-fr-complete-meeting-followup-package",
+      "italian-customer-inbox-weekly-operations"
     ]
   },
   {
@@ -31,7 +32,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "calendar-conflict-timezone-confirmations",
       "inbox-calendar-triage",
       "multilingual-course-secretariat-schedule",
-      "diary-conflict-multilingual-rebooking"
+      "diary-conflict-multilingual-rebooking",
+      "italy-partner-fr-es-schedule-followup"
     ]
   },
   {
@@ -48,7 +50,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "existing-customer-multilingual-email-pack",
       "written-customer-complaint-four-language-response",
       "es-it-complete-customer-help-policy-and-replies",
-      "en-it-complete-italian-onboarding-communications"
+      "en-it-complete-italian-onboarding-communications",
+      "italian-customer-inbox-weekly-operations"
     ]
   },
   {
@@ -134,7 +137,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "research-existing-italian-customers",
       "information-research-verifiable-source-matrix",
       "course-information-source-audit",
-      "practical-research-options-decision-pack"
+      "practical-research-options-decision-pack",
+      "italian-market-existing-customer-documents"
     ]
   },
   {
@@ -189,7 +193,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "online-service-information-multilingual-profile-pack",
       "italy-website-service-copy-full-localisations",
       "en-it-complete-italian-onboarding-communications",
-      "it-es-complete-service-information-and-faq"
+      "it-es-complete-service-information-and-faq",
+      "italian-market-existing-customer-documents"
     ]
   },
   {
@@ -205,7 +210,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
       "multilingual-proofreading-written-notices",
       "fr-it-handmade-product",
       "fr-it-complete-product-information-and-faq",
-      "it-es-complete-service-information-and-faq"
+      "it-es-complete-service-information-and-faq",
+      "italian-products-catalogue-editorial-quality"
     ]
   },
   {
@@ -218,7 +224,8 @@ export const PORTFOLIO_SERVICE_GROUPS = [
     "ids": [
       "blog-editorial-feature-four-languages",
       "newsletter-existing-clients-multilingual",
-      "professional-social-editorial-series-italy"
+      "professional-social-editorial-series-italy",
+      "italian-products-catalogue-editorial-quality"
     ]
   }
 ] as const;
