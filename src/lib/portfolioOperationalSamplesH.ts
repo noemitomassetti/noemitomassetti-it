@@ -292,9 +292,9 @@ export const OPERATIONAL_SAMPLES_H: OperationalDeepCase[] = [
       },
       {
         "it": "Non si attribuiscono titoli, clienti o risultati non documentati.",
-        "en": "No invented credentials, customers or results.",
+        "en": "No unsubstantiated credentials, customer references or results.",
         "fr": "Aucun titre ni résultat non justifié.",
-        "es": "Sin títulos ni resultados inventados."
+        "es": "Sin títulos ni resultados di esempio."
       }
     ],
     "limits": {
