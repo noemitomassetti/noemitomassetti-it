@@ -26,10 +26,10 @@ export interface OperationalDeepCase {
   handoff: Localised;
 }
 
-/** Not a client testimonial or real project. No customer records are disclosed. */
+/** Independently authored operations samples: no real customer records are disclosed. */
 export const OPERATIONAL_NOTICE: Localised = {
-  it: "Elaborato operativo originale preparato per il portfolio, con situazione, azienda e dati inventati per l’esempio. Non documenta un incarico commissionato. Mostra materiali e procedure utilizzabili come modello di lavoro.",
-  en: "An original operational work sample prepared for this portfolio. The scenario, company, messages and details are invented; it is not a client commission. The documents illustrate how the agreed work could be organised.",
-  fr: "Exemple de travail opérationnel original préparé pour ce portfolio. La situation, l’entreprise, les messages et les données sont inventés ; il ne s’agit pas d’une commande de client. Les documents montrent une méthode de travail possible.",
-  es: "Muestra original de trabajo operativo preparada para este porfolio. La situación, la empresa, los mensajes y los datos son inventados; no procede de un encargo de un cliente. Los documentos ilustran una forma de organizar el trabajo."
+  it: "Elaborato originale realizzato per illustrare un incarico operativo e il mio metodo di lavoro. Non deriva da una commissione e non utilizza dati di clienti reali.",
+  en: "Original operational sample prepared to demonstrate my working method. It is not commissioned client work and contains no real customer records.",
+  fr: "Exemple opérationnel original illustrant ma méthode de travail. Il ne provient pas d’une commande de client et ne contient aucune donnée de clients réels.",
+  es: "Trabajo operativo original que muestra mi método. No procede de un encargo ni utiliza datos de clientes reales."
 };
