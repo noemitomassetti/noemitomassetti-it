@@ -19,9 +19,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Una consulente immaginaria riceve 27 email di clienti già acquisiti in tre giorni, ha due appuntamenti provvisori e deve predisporre un quadro attendibile delle priorità.",
-      "en": "A fictional consultant has 27 emails from existing customers, two tentative appointments and no clear way to track priorities.",
-      "fr": "Une consultante fictive reçoit 27 e-mails de clients existants et doit clarifier deux rendez-vous provisoires.",
-      "es": "Una consultora ficticia recibe 27 correos de clientes actuales y necesita organizar dos citas provisionales."
+      "en": "An illustrative consultant has 27 emails from existing customers, two tentative appointments and no clear way to track priorities.",
+      "fr": "Une consultante illustrative reçoit 27 e-mails de clients existants et doit clarifier deux rendez-vous provisoires.",
+      "es": "Una consultora de ejemplo recibe 27 correos de clientes actuales y necesita organizar dos citas provisionales."
     },
     "objective": {
       "it": "Separare richieste urgenti, attività rinviabili e messaggi informativi; predisporre risposte autorizzabili e un'agenda senza prenotazioni inventate.",
@@ -31,9 +31,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "27 messaggi di prova, disponibilità settimanali inventate, policy ipotetica di risposta entro due giorni lavorativi e una casella condivisa.",
-      "en": "27 synthetic messages, illustrative availability windows and a fictional two-business-day response policy.",
-      "fr": "27 messages fictifs, créneaux inventés et règle illustrative de réponse sous deux jours ouvrables.",
-      "es": "27 mensajes ficticios, disponibilidad inventada y una norma de respuesta de dos días laborables."
+      "en": "27 synthetic messages, illustrative availability windows and an illustrative two-business-day response policy.",
+      "fr": "27 messages illustratifs, créneaux inventés et règle illustrative de réponse sous deux jours ouvrables.",
+      "es": "27 mensajes de ejemplo, disponibilidad inventada y una norma de respuesta de dos días laborables."
     },
     "workflow": [
       {
@@ -90,7 +90,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "fr": "Courriel de proposition de rendez-vous",
           "es": "Correo de propuesta de cita"
         },
-        "content": "Oggetto: proposta di nuovo orario per il confronto sul progetto Beta\nBuongiorno,\nabbiamo ricevuto la richiesta di anticipare l'incontro. Prima di confermare una modifica, stiamo verificando le disponibilità aggiornate. Le proporremo eventuali alternative non appena avremo un riscontro attendibile; nel frattempo, l'appuntamento concordato in precedenza resta invariato.\nPer evitare fraintendimenti, nessuno spostamento sarà effettuato senza la sua conferma. Grazie per la collaborazione.\nCordiali saluti,\nSegreteria organizzativa — Studio dimostrativo\nNOTA INTERNA: messaggio da approvare; non inviare prima del controllo dell'agenda.",
+        "content": "Oggetto: proposta di nuovo orario per il confronto sul progetto Beta\nBuongiorno,\nabbiamo ricevuto la richiesta di anticipare l'incontro. Prima di confermare una modifica, stiamo verificando le disponibilità aggiornate. Le proporremo eventuali alternative non appena avremo un riscontro attendibile; nel frattempo, l'appuntamento concordato in precedenza resta invariato.\nPer evitare fraintendimenti, nessuno spostamento sarà effettuato senza la sua conferma. Grazie per la collaborazione.\nCordiali saluti,\nSegreteria organizzativa — Studio utilizzato nell’esempio\nNOTA INTERNA: messaggio da approvare; non inviare prima del controllo dell'agenda.",
         "explanation": {
           "it": "La bozza non promette una disponibilità non verificata e conserva l’appuntamento già concordato.",
           "en": "The draft avoids offering unverified times and preserves the existing appointment.",
@@ -164,9 +164,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un negozio immaginario riceve richieste di assistenza su disponibilità, reso e articolo danneggiato. L’assistente deve rispondere nei limiti delle procedure, senza inventare diritti o rimborsi.",
-      "en": "A fictional shop receives availability, return and damage enquiries from existing customers; replies must follow approved policies.",
-      "fr": "Une boutique fictive traite trois demandes de clients existants en respectant les procédures.",
-      "es": "Una tienda ficticia atiende tres consultas sin inventar derechos ni reembolsos."
+      "en": "An illustrative shop receives availability, return and damage enquiries from existing customers; replies must follow approved policies.",
+      "fr": "Une boutique illustrative traite trois demandes de clients existants en respectant les procédures.",
+      "es": "Una tienda de ejemplo atiende tres consultas sin inventar derechos ni reembolsos."
     },
     "objective": {
       "it": "Preparare risposte empatiche e operative, assegnare correttamente i casi delicati e mantenere una traccia delle verifiche.",
@@ -175,10 +175,10 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       "es": "Redactar respuestas útiles, escalar decisiones sensibles y registrar cada caso."
     },
     "inputs": {
-      "it": "Tre ticket fittizi, estratto delle condizioni commerciali non completo, stato degli ordini non verificato e matrice di autorizzazioni esemplificativa.",
-      "en": "Three fictional tickets, incomplete terms, unverified stock/order states and an illustrative approval matrix.",
-      "fr": "Trois tickets fictifs, conditions incomplètes et matrice d’autorisations.",
-      "es": "Tres tickets ficticios, condiciones incompletas y matriz de autorizaciones."
+      "it": "Tre ticket dimostrativi, estratto delle condizioni commerciali non completo, stato degli ordini non verificato e matrice di autorizzazioni esemplificativa.",
+      "en": "Three illustrative tickets, incomplete terms, unverified stock/order states and an illustrative approval matrix.",
+      "fr": "Trois tickets illustratifs, conditions incomplètes et matrice d’autorisations.",
+      "es": "Tres tickets de ejemplo, condiciones incompletas y matriz de autorizaciones."
     },
     "workflow": [
       {
@@ -319,9 +319,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un distributore immaginario deve registrare un ordine per un cliente già acquisito usando un listino approvato, senza sostituirsi al commerciale nelle decisioni su prezzi o conferme.",
-      "en": "A fictional distributor needs an existing-customer order recorded against an approved price list without independent price decisions.",
-      "fr": "Un distributeur fictif doit vérifier une commande déjà reçue selon les tarifs approuvés.",
-      "es": "Un distribuidor ficticio debe registrar un pedido existente sin decidir precios."
+      "en": "An illustrative distributor needs an existing-customer order recorded against an approved price list without independent price decisions.",
+      "fr": "Un distributeur illustratif doit vérifier une commande déjà reçue selon les tarifs approuvés.",
+      "es": "Un distribuidor de ejemplo debe registrar un pedido existente sin decidir precios."
     },
     "objective": {
       "it": "Individuare codici errati, controllare moltiplicazioni e mantenere lo stato «da validare» fino alla conferma autorizzata.",
@@ -331,9 +331,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Listino dimostrativo: AR-101 €22,50; AR-205 €68,00; AR-310 €14,00. Ordine di prova: 2 × AR-101; 1 × AR-205; una riga con codice incompleto.",
-      "en": "Fictional catalogue: AR-101 €22.50, AR-205 €68.00, AR-310 €14.00; sample order with an incomplete code.",
-      "fr": "Tarifs fictifs : AR-101 22,50 €, AR-205 68 €, AR-310 14 € ; une ligne incomplète.",
-      "es": "Tarifas ficticias y un pedido con una referencia incompleta."
+      "en": "Illustrative catalogue: AR-101 €22.50, AR-205 €68.00, AR-310 €14.00; sample order with an incomplete code.",
+      "fr": "Tarifs illustratifs : AR-101 22,50 €, AR-205 68 €, AR-310 14 € ; une ligne incomplète.",
+      "es": "Tarifas de ejemplo y un pedido con una referencia incompleta."
     },
     "workflow": [
       {
@@ -474,9 +474,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Uno studio professionale inventato conserva presentazioni, cataloghi e comunicazioni in cartelle con nomi incoerenti e versioni duplicate.",
-      "en": "A fictional professional studio has inconsistent folder names and duplicate versions of catalogues, communications and presentations.",
-      "fr": "Un cabinet fictif retrouve difficilement ses documents, avec doublons et versions incertaines.",
-      "es": "Un despacho ficticio tiene carpetas desordenadas y documentos duplicados."
+      "en": "An illustrative professional studio has inconsistent folder names and duplicate versions of catalogues, communications and presentations.",
+      "fr": "Un cabinet illustratif retrouve difficilement ses documents, avec doublons et versions incertaines.",
+      "es": "Un despacho de ejemplo tiene carpetas desordenadas y documentos duplicados."
     },
     "objective": {
       "it": "Definire una struttura semplice per i materiali operativi e ridurre il rischio di usare file non approvati, senza richiedere accesso a dati non necessari.",
@@ -486,9 +486,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Cartelle di prova con 42 file sintetici, cinque tipologie documentali e tre ruoli: titolare, collaboratore, revisore esterno.",
-      "en": "42 entirely synthetic files, five document groups and three fictional access roles.",
-      "fr": "42 fichiers fictifs, cinq types de documents et trois rôles d’accès.",
-      "es": "42 archivos ficticios, cinco grupos y tres roles."
+      "en": "42 entirely synthetic files, five document groups and three illustrative access roles.",
+      "fr": "42 fichiers illustratifs, cinq types de documents et trois rôles d’accès.",
+      "es": "42 archivos de ejemplo, cinco grupos y tres roles."
     },
     "workflow": [
       {
@@ -629,9 +629,9 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Una formatrice immaginaria deve organizzare un webinar per partecipanti già iscritti: inviti, link, materiali, domande frequenti e follow-up informativo.",
-      "en": "A fictional trainer needs operational assistance for a webinar with already registered participants, not marketing or recruitment.",
-      "fr": "Une formatrice fictive prépare un webinaire pour des participants déjà inscrits, sans recrutement.",
-      "es": "Una formadora ficticia organiza un webinar para inscritos existentes, sin captación."
+      "en": "An illustrative trainer needs operational assistance for a webinar with already registered participants, not marketing or recruitment.",
+      "fr": "Une formatrice illustrative prépare un webinaire pour des participants déjà inscrits, sans recrutement.",
+      "es": "Una formadora de ejemplo organiza un webinar para inscritos existentes, sin captación."
     },
     "objective": {
       "it": "Consegne corrette, comunicazioni puntuali e informazioni coerenti, senza assumere il ruolo di docente o reclutare partecipanti.",
@@ -640,10 +640,10 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
       "es": "Organizar sin impartir clases ni captar participantes."
     },
     "inputs": {
-      "it": "Evento simulato: 12 novembre, ore 17:00–18:30, fuso Europe/Rome; iscritti fittizi già confermati e link dimostrativo non attivo.",
-      "en": "Fictional event 12 November 17:00–18:30 Europe/Rome; existing synthetic registrants and a placeholder meeting link.",
-      "fr": "Événement fictif le 12 novembre, 17 h–18 h 30, Europe/Rome ; inscrits fictifs.",
-      "es": "Evento ficticio el 12 de noviembre, 17:00–18:30, Europe/Rome; inscritos inventados."
+      "it": "Evento simulato: 12 novembre, ore 17:00–18:30, fuso Europe/Rome; iscritti dimostrativi già confermati e link dimostrativo non attivo.",
+      "en": "Illustrative event 12 November 17:00–18:30 Europe/Rome; existing synthetic registrants and a placeholder meeting link.",
+      "fr": "Événement illustratif le 12 novembre, 17 h–18 h 30, Europe/Rome ; inscrits illustratifs.",
+      "es": "Evento de ejemplo el 12 de noviembre, 17:00–18:30, Europe/Rome; inscritos inventados."
     },
     "workflow": [
       {
@@ -731,7 +731,7 @@ export const OPERATIONAL_SAMPLES_A: OperationalDeepCase[] = [
           "es": "Registro de inscritos y comunicaciones completas"
         },
         "language": "it",
-        "content": "PACCHETTO DI SEGRETERIA PER WEBINAR — SCENARIO INVENTATO\nEvento di prova: «Comunicazioni professionali più chiare», 12 novembre, ore 17:00–18:30 (Europe/Rome). Nessun webinar reale è stato programmato, nessuna iscrizione acquisita e nessuna email inviata.\n\nREGISTRO DI CINQUE PARTECIPANTI GIÀ ISCRITTI\nP-01 | Iscrizione fittizia registrata | Istruzioni da verificare | Nessuna segnalazione.\nP-02 | Iscrizione fittizia registrata | Chiede conferma dell'orario | Bozza pronta.\nP-03 | Iscrizione fittizia registrata | Non trova il collegamento | Chiedere al referente il link approvato.\nP-04 | Iscrizione fittizia registrata | Chiede materiali successivi | Autorizzazione da verificare.\nP-05 | Iscrizione fittizia registrata | Domanda sui contenuti | Inoltro alla formatrice.\n\nEMAIL COMPLETA — CHIARIMENTO ORARIO\nOggetto: Orario del webinar — richiesta ricevuta\nBuongiorno,\ngrazie per il suo messaggio. Nel programma dimostrativo l'incontro è previsto per il 12 novembre dalle 17:00 alle 18:30, ora italiana. Prima di inviare una conferma definitiva dobbiamo verificare con l'organizzatrice che data, orario e istruzioni di accesso siano quelli aggiornati.\nLe daremo riscontro dopo tale verifica. Se ha ricevuto comunicazioni diverse, può indicarcelo rispondendo a questa email.\nCordiali saluti,\nSegreteria organizzativa\n\nEMAIL COMPLETA — RICHIESTA DI MATERIALI\nOggetto: Materiali del webinar — informazioni disponibili\nBuongiorno,\nabbiamo registrato la sua richiesta relativa ai materiali dell'incontro. Stiamo verificando con l'organizzatrice quali documenti possano essere distribuiti ai partecipanti e attraverso quale canale.\nNon possiamo confermare la disponibilità di una registrazione o di altri materiali finché non riceviamo le indicazioni approvate. Non è necessario inviare ulteriori dati personali.\nCordiali saluti,\nSegreteria organizzativa\n\nMEMO ALLA FORMATRICE\nHo organizzato cinque registrazioni di prova. Sono aperte tre verifiche: conferma dell'orario per P-02, disponibilità del collegamento per P-03 e autorizzazione dei materiali per P-04. La domanda didattica di P-05 richiede una risposta da parte sua. Le due email sono pronte per l'approvazione; non sono state spedite.\nPrima dell'evento: verificare elenco iscritti, fuso orario, link, eventuali accessibilità e materiali consentiti. Dopo l'evento: condividere esclusivamente le risorse approvate e registrare le richieste residue.\nNon è stata svolta attività didattica, promozionale o di reclutamento.",
+        "content": "PACCHETTO DI SEGRETERIA PER WEBINAR — SCENARIO INVENTATO\nEvento di prova: «Comunicazioni professionali più chiare», 12 novembre, ore 17:00–18:30 (Europe/Rome). Nessun webinar reale è stato programmato, nessuna iscrizione acquisita e nessuna email inviata.\n\nREGISTRO DI CINQUE PARTECIPANTI GIÀ ISCRITTI\nP-01 | Iscrizione dimostrativa registrata | Istruzioni da verificare | Nessuna segnalazione.\nP-02 | Iscrizione dimostrativa registrata | Chiede conferma dell'orario | Bozza pronta.\nP-03 | Iscrizione dimostrativa registrata | Non trova il collegamento | Chiedere al referente il link approvato.\nP-04 | Iscrizione dimostrativa registrata | Chiede materiali successivi | Autorizzazione da verificare.\nP-05 | Iscrizione dimostrativa registrata | Domanda sui contenuti | Inoltro alla formatrice.\n\nEMAIL COMPLETA — CHIARIMENTO ORARIO\nOggetto: Orario del webinar — richiesta ricevuta\nBuongiorno,\ngrazie per il suo messaggio. Nel programma dimostrativo l'incontro è previsto per il 12 novembre dalle 17:00 alle 18:30, ora italiana. Prima di inviare una conferma definitiva dobbiamo verificare con l'organizzatrice che data, orario e istruzioni di accesso siano quelli aggiornati.\nLe daremo riscontro dopo tale verifica. Se ha ricevuto comunicazioni diverse, può indicarcelo rispondendo a questa email.\nCordiali saluti,\nSegreteria organizzativa\n\nEMAIL COMPLETA — RICHIESTA DI MATERIALI\nOggetto: Materiali del webinar — informazioni disponibili\nBuongiorno,\nabbiamo registrato la sua richiesta relativa ai materiali dell'incontro. Stiamo verificando con l'organizzatrice quali documenti possano essere distribuiti ai partecipanti e attraverso quale canale.\nNon possiamo confermare la disponibilità di una registrazione o di altri materiali finché non riceviamo le indicazioni approvate. Non è necessario inviare ulteriori dati personali.\nCordiali saluti,\nSegreteria organizzativa\n\nMEMO ALLA FORMATRICE\nHo organizzato cinque registrazioni di prova. Sono aperte tre verifiche: conferma dell'orario per P-02, disponibilità del collegamento per P-03 e autorizzazione dei materiali per P-04. La domanda didattica di P-05 richiede una risposta da parte sua. Le due email sono pronte per l'approvazione; non sono state spedite.\nPrima dell'evento: verificare elenco iscritti, fuso orario, link, eventuali accessibilità e materiali consentiti. Dopo l'evento: condividere esclusivamente le risorse approvate e registrare le richieste residue.\nNon è stata svolta attività didattica, promozionale o di reclutamento.",
         "explanation": {
           "it": "Tracciamento organizzativo dei partecipanti già iscritti, bozze email e relazione per la formatrice.",
           "en": "Organisation for existing registrants, complete email drafts and a trainer handover.",
