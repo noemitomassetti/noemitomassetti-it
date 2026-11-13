@@ -142,7 +142,7 @@ export const TRANSLATION_SAMPLES_B: TranslationDeepCase[] = [
       "es": "Respeta programa, duración y requisitos."
     },
     "review": {
-      "it": "Controllo numerico 3 × 2 = 6 ore; nessun attestato inventato; nessun requisito software aggiunto.",
+      "it": "Controllo numerico 3 × 2 = 6 ore; nessun attestato di esempio; nessun requisito software aggiunto.",
       "en": "Verified total duration and absence of certificate or required paid tools.",
       "fr": "Durée de six heures vérifiée, sans certificat inventé.",
       "es": "Se comprueba la duración y que no se ofrece certificado."
