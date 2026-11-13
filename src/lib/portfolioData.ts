@@ -169,7 +169,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     objective: {
       it: "Mantenere precisione e coerenza terminologica nella resa italiana di un testo economico-commerciale dimostrativo.",
       en: "Ensure economic precision and terminological consistency between industry standard terms and transparent Italian phrasing.",
-      fr: "Préserver la précision et la cohérence de la terminologie d’un texte économique fictif adapté en italien.",
+      fr: "Préserver la précision et la cohérence de la terminologie d’un texte économique illustratif adapté en italien.",
       es: "Asegurar la precisión conceptual entre la terminología financiera anglosajona y su redacción en italiano.",
     },
     approach: {
@@ -573,7 +573,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     title: {
       "it": "Ricerca informativa: confronto tra quattro fornitori dimostrativi",
       "en": "Illustrative research: four illustrative packaging suppliers",
-      "fr": "Recherche documentaire : quatre fournisseurs fictifs",
+      "fr": "Recherche documentaire : quatre fournisseurs illustratifs",
       "es": "Investigación informativa: cuatro proveedores de ejemplo"
 },
     subtitle: {
@@ -586,7 +586,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "it": "Una piccola attività immaginaria deve confrontare quattro opzioni di imballaggio per un lotto di 500 pezzi, senza superare un budget indicativo di 450 €.",
       "en": "An illustrative small business compares four packaging options for a batch of 500 units and an indicative budget of €450.",
       "fr": "Une petite entreprise illustrative compare quatre solutions pour 500 emballages et un budget indicatif de 450 €.",
-      "es": "Una pequeña empresa ficticia compara cuatro opciones de embalaje para 500 unidades y un presupuesto orientativo de 450 €."
+      "es": "Una pequeña empresa de ejemplo compara cuatro opciones de embalaje para 500 unidades y un presupuesto orientativo de 450 €."
 },
     startingMaterial: {
       "it": "Quattro schede A–D, tutte inventate, con quantità minime, prezzi unitari, costi di spedizione e tempi ipotetici. Nessuna certificazione è verificata.",
@@ -619,7 +619,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       ],
       "fr": [
             "B impose 1 000 pièces : comparaison impossible à quantité égale.",
-            "A et D ont des totaux fictifs proches mais des délais différents.",
+            "A et D ont des totaux illustratifs proches mais des délais différents.",
             "Aucune certification environnementale n’est présentée comme vérifiée."
       ],
       "es": [
@@ -631,7 +631,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     deliverable: {
       "it": "Quattro profili simulati, tabella completa, calcoli per 500 pezzi, elenco delle verifiche e sintesi; documento 07.",
       "en": "Four illustrative supplier profiles, worked comparison, pending checks and memo; document 07.",
-      "fr": "Quatre profils fictifs, tableau comparatif, vérifications et synthèse ; document 07.",
+      "fr": "Quatre profils illustratifs, tableau comparatif, vérifications et synthèse ; document 07.",
       "es": "Cuatro perfiles inventados, tabla con cálculos, verificaciones y síntesis; documento 07."
 },
     tableData: {
@@ -820,7 +820,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
       "it": "Ricerca informativa: confronto tra quattro offerte dimostrative",
       "en": "Desk research example: four illustrative service profiles",
       "fr": "Recherche documentaire : quatre offres illustratives",
-      "es": "Investigación documental: cuatro ofertas ficticias"
+      "es": "Investigación documental: cuatro ofertas de ejemplo"
 },
     subtitle: {
       "it": "Tabella compilata su servizi, prezzi dichiarati, lingue e contatti",
@@ -831,8 +831,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     brief: {
       "it": "Un consulente immaginario vuole organizzare informazioni sull’offerta di quattro studi dimostrativi, senza svolgere attività di acquisizione clienti.",
       "en": "An illustrative consultant wants to organise a comparison of four imaginary professional practices, without looking for sales leads.",
-      "fr": "Un consultant fictif compare quatre cabinets imaginaires, sans rechercher de prospects.",
-      "es": "Un consultor ficticio compara cuatro despachos inventados sin buscar clientes potenciales."
+      "fr": "Un consultant illustratif compare quatre cabinets imaginaires, sans rechercher de prospects.",
+      "es": "Un consultor de ejemplo compara cuatro despachos inventados sin buscar clientes potenciales."
 },
     startingMaterial: {
       "it": "Quattro profili A–D interamente inventati; servizi, prezzi e modalità di contatto non provengono da fonti di mercato.",
@@ -864,7 +864,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
             "Listed languages alone do not demonstrate service quality or justify a ranking."
       ],
       "fr": [
-            "Les profils A–D sont fictifs, non issus d’une enquête réelle.",
+            "Les profils A–D sont illustratifs, non issus d’une enquête réelle.",
             "Un tarif absent ne signifie pas qu’il soit élevé.",
             "La liste de langues ne prouve pas la qualité d’un service."
       ],
@@ -877,7 +877,7 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     deliverable: {
       "it": "Quattro schede dimostrative, tabella comparativa e sintesi dei limiti della ricerca; documento 08.",
       "en": "Four illustrative profiles, a completed comparison table and a caveats memo; document 08.",
-      "fr": "Quatre profils fictifs, tableau comparatif et note sur les limites ; document 08.",
+      "fr": "Quatre profils illustratifs, tableau comparatif et note sur les limites ; document 08.",
       "es": "Cuatro perfiles inventados, tabla comparativa y nota sobre las limitaciones; documento 08."
 },
     tableData: {
@@ -897,14 +897,14 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
                   "Languages"
             ],
             "fr": [
-                  "Cabinet fictif",
+                  "Cabinet illustratif",
                   "Prestations",
                   "Informations tarifaires",
                   "Contact",
                   "Langues"
             ],
             "es": [
-                  "Despacho ficticio",
+                  "Despacho de ejemplo",
                   "Servicios",
                   "Precios declarados",
                   "Contacto",
@@ -1057,8 +1057,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     brief: {
       "it": "Un professionista immaginario deve classificare sei richieste ricevute e preparare le risposte che rientrano nelle istruzioni concordate.",
       "en": "An illustrative professional has six incoming emails to sort and needs draft replies for the cases within an agreed scope.",
-      "fr": "Un professionnel fictif doit classer six courriels et préparer des réponses dans le cadre convenu.",
-      "es": "Un profesional ficticio necesita clasificar seis correos y preparar respuestas dentro del alcance acordado."
+      "fr": "Un professionnel illustratif doit classer six courriels et préparer des réponses dans le cadre convenu.",
+      "es": "Un profesional de ejemplo necesita clasificar seis correos y preparar respuestas dentro del alcance acordado."
 },
     startingMaterial: {
       "it": "Sei comunicazioni simulate, una disponibilità dell'agenda da verificare e dati d'ordine non confermati.",
@@ -1339,8 +1339,8 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     brief: {
       it: "Revisione di un comunicato di assistenza clienti dimostrativo, scritto con formule burocratiche ed enfasi superflua.",
       en: "Revision of an illustrative Italian customer-service announcement with unnecessarily formal language.",
-      fr: "Révision d’un communiqué italien fictif sur une nouvelle procédure d’assistance.",
-      es: "Revisión de un comunicado italiano ficticio sobre una nueva gestión de solicitudes.",
+      fr: "Révision d’un communiqué italien illustratif sur une nouvelle procédure d’assistance.",
+      es: "Revisión de un comunicado italiano de ejemplo sobre una nueva gestión de solicitudes.",
     },
     startingMaterial: {
       it: "Bozza iniziale: «In data odierna ci pregiamo di comunicare a tutta la gentile clientela…»",
@@ -1605,7 +1605,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "it": "Marchio francese immaginario di articoli per la casa che vuole presentare un prodotto sul proprio sito italiano.",
       "en": "An illustrative French homeware brand needs a consistent Italian product listing.",
       "fr": "Une marque illustrative française d’articles pour la maison prépare une fiche en italien.",
-      "es": "Una marca francesa ficticia prepara una ficha de producto para Italia."
+      "es": "Una marca francesa de ejemplo prepara una ficha de producto para Italia."
     },
     "startingMaterial": {
       "it": "Titolo, descrizione e specifiche in francese, con informazioni di prodotto non negoziabili.",
@@ -1688,8 +1688,8 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
     "brief": {
       "it": "Un fornitore spagnolo immaginario risponde a un cliente italiano già attivo chiedendo un riscontro su una proposta precedentemente inviata.",
       "en": "An illustrative Spanish supplier follows up with an existing Italian customer about a previously requested proposal.",
-      "fr": "Un fournisseur espagnol fictif écrit à un client italien déjà acquis au sujet d’une proposition demandée.",
-      "es": "Un proveedor español ficticio escribe a un cliente italiano ya existente sobre una propuesta solicitada."
+      "fr": "Un fournisseur espagnol illustratif écrit à un client italien déjà acquis au sujet d’une proposition demandée.",
+      "es": "Un proveedor español de ejemplo escribe a un cliente italiano ya existente sobre una propuesta solicitada."
     },
     "startingMaterial": {
       "it": "Messaggio di follow-up in spagnolo, con richiesta di conferma e disponibilità a chiarire le informazioni.",
@@ -1773,12 +1773,12 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "it": "Scenario di lavoro: un piccolo negozio online deve gestire richieste su disponibilità, ordini e tempi di consegna da clienti esistenti.",
       "en": "Illustrative small online shop needs organised Italian replies to current customers about stock, orders and delivery.",
       "fr": "Boutique en ligne illustrative : demandes de clients italiens sur stock, commandes et livraison.",
-      "es": "Tienda online ficticia: consultas de clientes italianos sobre stock, pedidos y entregas."
+      "es": "Tienda online de ejemplo: consultas de clientes italianos sobre stock, pedidos y entregas."
     },
     "startingMaterial": {
       "it": "Tre richieste simulate e riferimenti di articolo e ordine; disponibilità e data di consegna non sono confermate.",
       "en": "Three synthetic customer messages, approved product details and escalation instructions.",
-      "fr": "Trois e-mails fictifs, informations approuvées et consignes d’escalade.",
+      "fr": "Trois e-mails illustratifs, informations approuvées et consignes d’escalade.",
       "es": "Tres correos de ejemplo, información aprobada y reglas de consulta."
     },
     "objective": {
@@ -1840,7 +1840,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
             ],
             "es": [
                   "Caso",
-                  "Consulta ficticia",
+                  "Consulta de ejemplo",
                   "Resumen de la respuesta italiana"
             ]
       },
@@ -1938,7 +1938,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "it": "Un'attività immaginaria deve trascrivere ordini già acquisiti e mantenere coerenti i prezzi pubblicati con un listino approvato.",
       "en": "An illustrative business needs to log existing orders and check published prices against an approved list.",
       "fr": "Entreprise illustrative : enregistrer des commandes reçues et contrôler les tarifs affichés.",
-      "es": "Empresa ficticia: registrar pedidos recibidos y comprobar precios publicados."
+      "es": "Empresa de ejemplo: registrar pedidos recibidos y comprobar precios publicados."
     },
     "startingMaterial": {
       "it": "Ordini ricevuti, foglio di inserimento, catalogo e listino validato dal titolare.",
@@ -2118,8 +2118,8 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
     "brief": {
       "it": "Un formatore immaginario organizza un corso per partecipanti italiani e deve coordinare messaggi e materiali approvati.",
       "en": "An illustrative educator offers a course to Italian learners and needs organised communications and files.",
-      "fr": "Formateur fictif proposant un cours à des apprenants italiens.",
-      "es": "Formador ficticio que ofrece un curso a participantes italianos."
+      "fr": "Formateur illustratif proposant un cours à des apprenants italiens.",
+      "es": "Formador de ejemplo que ofrece un curso a participantes italianos."
     },
     "startingMaterial": {
       "it": "Programma, calendario del corso, accessi forniti dal responsabile e file di lezione non organizzati.",
@@ -2176,7 +2176,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "notes": {
         "it": "Da un avviso vago a istruzioni verificabili, senza inventare link o promettere assistenza tecnica illimitata.",
         "en": "Clear Italian instructions; no invented links or unsupported commitments.",
-        "fr": "Consignes italiennes claires, sans lien fictif ni promesse disproportionnée.",
+        "fr": "Consignes italiennes claires, sans lien illustratif ni promesse disproportionnée.",
         "es": "Instrucciones claras en italiano, sin enlaces inventados ni promesas excesivas."
       }
     }
@@ -2203,7 +2203,7 @@ Non si congedò. Un respiro, il leggero scatto metallico del gas che veniva abba
       "it": "Un piccolo marchio immaginario deve rendere coerenti i testi di schede prodotto, listino e FAQ.",
       "en": "An illustrative small brand needs consistent Italian product descriptions, price-list labels and FAQs.",
       "fr": "Marque illustrative : harmoniser les fiches produits, les tarifs et la FAQ en italien.",
-      "es": "Marca ficticia: unificar fichas, lista de precios y preguntas frecuentes en italiano."
+      "es": "Marca de ejemplo: unificar fichas, lista de precios y preguntas frecuentes en italiano."
     },
     "startingMaterial": {
       "it": "Descrizioni italiane vaghe, titoli non uniformi e schede con informazioni ripetute.",
@@ -2322,7 +2322,7 @@ export const PORTFOLIO_DOCUMENTS: PortfolioDocument[] = [
   },
   {
     num: "07",
-    title: { it: "Confronto fornitori: tabella e sintesi dimostrativa", en: "Supplier comparison: illustrative table and summary", fr: "Comparaison de fournisseurs : tableau et synthèse fictifs", es: "Comparación de proveedores: tabla y síntesis ficticias" },
+    title: { it: "Confronto fornitori: tabella e sintesi dimostrativa", en: "Supplier comparison: illustrative table and summary", fr: "Comparaison de fournisseurs : tableau et synthèse illustratifs", es: "Comparación de proveedores: tabla y síntesis de ejemplo" },
     subtitle: { it: "Quattro opzioni di esempio, calcoli, criteri e dati da verificare prima della scelta", en: "Four sample options, calculations, criteria and checks", fr: "Quatre options d'exemple, calculs, critères et vérifications", es: "Cuatro opciones de ejemplo, cálculos, criterios y comprobaciones" },
     category: "research",
     url: "/portfolio-documenti/doc-07-benchmark-fornitori-logistica.html",
