@@ -18,19 +18,19 @@ const COPY: Record<Language, {title: string; heading: string; introduction: stri
   en: {
     title: "Italian Virtual Assistant | Business Support & Communication Blog | Noemi Tomassetti",
     heading: "Virtual assistance for working with the Italian market",
-    introduction: "Practical guides for professionals and small businesses already working with Italy or preparing to enter the Italian market. Explore Italian-speaking virtual assistance, email and back-office organisation, written customer care and the preparation of Italian-language communications. Translation and localisation support these services.",
+    introduction: "Practical guides for professionals and small businesses already working with Italy or preparing to enter the Italian market. Explore Italian-speaking virtual assistance, email and back-office organisation, written customer care and the preparation of Italian-language communications. Translation and localisation are also standalone professional services, available independently of virtual assistance.",
     read: "Read article"
   },
   fr: {
     title: "Assistante virtuelle italophone | Blog et conseils | Noemi Tomassetti",
     heading: "Assistance virtuelle pour vos activités avec le marché italien",
-    introduction: "Des conseils destinés aux indépendants et petites entreprises qui travaillent déjà avec l’Italie ou préparent leur arrivée sur le marché italien. Découvrez comment organiser le secrétariat à distance, le back-office, les courriels et les échanges écrits en italien. Traduction et localisation viennent compléter cet accompagnement opérationnel.",
+    introduction: "Des conseils destinés aux indépendants et petites entreprises qui travaillent déjà avec l’Italie ou préparent leur arrivée sur le marché italien. Découvrez comment organiser le secrétariat à distance, le back-office, les courriels et les échanges écrits en italien. La traduction et la localisation sont également des prestations professionnelles à part entière, proposées indépendamment de l’assistance virtuelle.",
     read: "Lire l’article"
   },
   es: {
     title: "Asistencia virtual en italiano | Blog y recursos | Noemi Tomassetti",
     heading: "Asistencia virtual para trabajar con el mercado italiano",
-    introduction: "Guías para profesionales y pequeñas empresas que ya trabajan con Italia o se preparan para entrar en el mercado italiano. Aprende a organizar la secretaría a distancia, el correo, el back office y las comunicaciones escritas en italiano. La traducción y la localización complementan este apoyo operativo.",
+    introduction: "Guías para profesionales y pequeñas empresas que ya trabajan con Italia o se preparan para entrar en el mercado italiano. Aprende a organizar la secretaría a distancia, el correo, el back office y las comunicaciones escritas en italiano. La traducción y la localización también son servicios profesionales independientes que pueden contratarse por separado.",
     read: "Leer el artículo"
   }
 };
