@@ -2,7 +2,8 @@ import type { Language } from "./i18n/types";
 
 /**
  * Curated editorial photography for every blog article, shared across four
- * languages. Each source and image must be checked before the release.\n * November 2026 editorial replacements were individually checked on Unsplash\n * and labelled "Free to use under the Unsplash License". Existing images\n * retain source links for independent verification and visual review.
+ * languages. Every image has an explicit source URL, credit and four alt texts.
+ * Source links and usage rights require final review before publication.
  *
  * The source ID + CDN image URL are recorded together for a verifiable audit.
  * Image requests are to Unsplash's public image CDN, not an OpenAI generator.
