@@ -4,14 +4,14 @@ export const enLocale: TranslationDictionary = {
   lang: 'en',
   meta: {
     siteName: 'Noemi Tomassetti',
-    homeTitle: "Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti",
-    homeDesc: "Italian-language communication and localisation for international professionals, plus written customer care, virtual assistance and back-office services. Translation IT ↔ EN/FR/ES.",
-    servicesTitle: 'Italian Communication, Translation & Virtual Assistance | Noemi Tomassetti',
-    servicesDesc: 'Italian-market localisation, professional translation, website and landing-page copy, social content and customer emails. The full range of multilingual virtual-assistance and back-office services is also available.',
+    homeTitle: "Italian Virtual Assistant & Back-Office Support | Noemi Tomassetti",
+    homeDesc: "Italian-speaking virtual assistance, secretarial and back-office support, written customer care and business communication for professionals working with Italy. Translation IT ↔ EN/FR/ES.",
+    servicesTitle: 'Italian Virtual Assistance & Business Communication | Noemi Tomassetti',
+    servicesDesc: 'Italian-speaking virtual assistance, email and calendar coordination, order support, back office and written customer care for business in Italy, alongside translation and localisation.',
     noetomTitle: 'NoeTom | Internal operations project',
     noetomDesc: 'NoeTom is Noemi Tomassetti’s internal operations project, currently in private development and testing.',
     aboutTitle: 'About Noemi Tomassetti | Background & Philosophy',
-    aboutDesc: 'Over 20 years of experience in back office, customer care and professional communication, supported by specialist language training.',
+    aboutDesc: 'Over 20 years of professional experience across different roles, including customer service and operational support, alongside specialist language training.',
     resourcesTitle: 'Resources & Insights | Noemi Tomassetti',
     resourcesDesc: 'Actionable perspectives on delegation, multilingual communication, operational clarity, and AI-assisted workflows for solopreneurs.',
     contactTitle: 'Contact & Quotes | Noemi Tomassetti',
@@ -34,16 +34,16 @@ export const enLocale: TranslationDictionary = {
   },
   hero: {
     badge: 'MULTILINGUAL VIRTUAL ASSISTANT',
-    titleLine1: 'Italian-language communication, translation and localisation',
-    titleHighlight: 'for businesses working with Italy',
-    subtitle: "Italian translation and localisation, customer correspondence, written customer care, website content and multilingual virtual assistance for professionals working with Italy.",
-    headline: "Natural, professional communication for your Italian audience",
-    desc1: "I help international professionals and small businesses communicate clearly in Italian, with the right tone, terminology and attention to professional context.",
-    desc2: "My work also covers agreed secretarial tasks, back-office activities, written customer support and professional translation between Italian and English, French or Spanish.",
+    titleLine1: 'Italian-speaking virtual assistance and back-office support',
+    titleHighlight: 'for your work with Italy',
+    subtitle: "Italian-speaking virtual assistance, email and calendar support, back office, written customer care, professional communication and translation for work with Italy.",
+    headline: "Your Italian-speaking virtual assistant for day-to-day operations",
+    desc1: "I help professionals and small businesses manage everyday tasks involving Italy: Italian-language emails, appointments, documents and enquiries from existing customers.",
+    desc2: "Alongside practical virtual assistance, I prepare and revise professional texts and translate between Italian and English, French or Spanish, in both directions. We agree the scope before work begins.",
     ctaButton: 'REQUEST A QUOTE',
     callReassurance: 'No-obligation enquiry',
     description:
-      "Italian-market communication and localisation, with practical operational support and a clearly agreed scope for each assignment.",
+      "Italian-speaking virtual assistance and written customer care, with language services and clearly agreed responsibilities for each assignment.",
     ctaServices: 'Explore services',
     ctaNoeTom: 'Explore NoeTom (in development)',
     quickStats: {
@@ -81,7 +81,7 @@ export const enLocale: TranslationDictionary = {
     tag: 'WHAT I DO',
     title: "How I can help",
     subtitle:
-      "I provide language services and practical virtual assistance. Each assignment is agreed around the tasks, material and deliverables actually required; the full list is not automatically included in any quote. The written quote specifies exactly what is included.",
+      "My core service is practical virtual assistance, including Italian-speaking secretarial, back-office and written customer support for work with Italy. Translation, localisation and content revision are also available. Each written quote specifies the agreed tasks and deliverables.",
     viewAllCta: 'View Full Service Details',
     categories: [
       {
