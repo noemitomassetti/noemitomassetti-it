@@ -121,7 +121,7 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Approvazioni distinguibili dalle bozze.",
         "en": "Approvals are distinguishable from drafts.",
@@ -273,7 +273,7 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Inviti e bozze distinti; nessuna prenotazione dichiarata senza conferma.",
         "en": "Drafts and confirmed bookings remain separate.",
@@ -419,7 +419,7 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Le tre email non contraddicono lo stato della pratica.",
         "en": "All three replies match the case status.",
@@ -565,7 +565,7 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Non confondere listino e preventivo approvato.",
         "en": "Never confuse a price list with an approved offer.",
@@ -711,7 +711,7 @@ export const OPERATIONAL_SAMPLES_E: OperationalDeepCase[] = [
         }
       }
     ],
-    "checks": [
+    "qualityChecks": [
       {
         "it": "Le comunicazioni non inventano orari o collegamenti.",
         "en": "No invented joining links or times.",
