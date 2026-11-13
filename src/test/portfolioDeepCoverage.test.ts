@@ -62,7 +62,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
     ];
     for(const id of required) expect(OPERATIONAL_DEEP_CASES.some(x=>x.id===id),id).toBe(true);
     const multilingual=OPERATIONAL_DEEP_CASES.find(x=>x.id==="existing-customer-multilingual-email-pack");
-    expect(multilingual?.artifacts.map(x=>x.language)).toEqual(["en","fr","es"]);
+    expect(multilingual?.artifacts.map(x=>x.language)).toEqual(["en","fr","es","it"]);
     expect(read("src/pages/PortfolioDeepCase.tsx")).toContain('lang={art.language ?? "it"}');
     for(const item of OPERATIONAL_DEEP_CASES){
       expect(item.artifacts.length,item.id).toBeGreaterThanOrEqual(2);
