@@ -23,6 +23,15 @@ export const ROUTES: Record<PageKey, RouteConfig> = {
       es: '/es/servicios',
     },
   },
+  tutoring: {
+    key: 'tutoring',
+    paths: {
+      en: '/learning-tutoring',
+      it: '/it/tutor-apprendimento',
+      fr: '/fr/accompagnement-scolaire',
+      es: '/es/apoyo-escolar',
+    },
+  },
   noetom: {
     key: 'noetom',
     paths: {
