@@ -81,6 +81,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
   const homePath = getLocalizedPath("home", currentLang);
   const italianLocalisationPath = getLocalizedPath("italianLocalisation", currentLang);
   const portfolioPath = getLocalizedPath("portfolio", currentLang);
+  const tutorLabel = ({it:"Tutor dell’apprendimento", en:"Learning tutoring", fr:"Accompagnement scolaire", es:"Tutoría del aprendizaje"} as const)[currentLang];
   const tutorPath = ({it:"/it/tutor-apprendimento",en:"/learning-tutoring",fr:"/fr/accompagnement-scolaire",es:"/es/apoyo-escolar"} as const)[currentLang];
   const questionnairePath = getLocalizedPath("questionnaire", currentLang);
   const resourcesPath = getLocalizedPath("resources", currentLang);
@@ -147,7 +148,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
       isPage: true,
       badge: undefined,
     },
-    { href: tutorPath, label: { it:"Tutor dell'apprendimento", en:"Learning tutoring", fr:"Accompagnement scolaire", es:"Tutoría del aprendizaje" }[currentLang], isPage: true },
+    { href: tutorPath, label: tutorLabel, isPage: true },
     { href: portfolioPath, label: currentLang === "it" ? "Esempi di Lavoro" : currentLang === "fr" ? "Exemples de Projets" : currentLang === "es" ? "Ejemplos de Trabajo" : "Work Examples", isPage: true },
     { href: resourcesPath, label: currentLang === "it" ? "Risorse" : currentLang === "fr" ? "Ressources" : currentLang === "es" ? "Recursos" : "Resources", isPage: true },
     ...(PUBLICATIONS_VISIBLE ? [{ href: getLocalizedPath("publications", currentLang),
@@ -205,7 +206,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
             className="hidden xl:flex 2xl:hidden items-center gap-3 text-sm whitespace-nowrap"
           >
             <Link to={getLocalizedPath("services", currentLang)} className="font-medium text-foreground/80 hover:text-primary">{dict.nav.services}</Link>
-            <Link to={tutorPath} className="font-medium text-foreground/80 hover:text-primary">{ it:"Tutor dell'apprendimento", en:"Learning tutoring", fr:"Accompagnement scolaire", es:"Tutoría del aprendizaje" }[currentLang]</Link>
+            <Link to={tutorPath} className="font-medium text-foreground/80 hover:text-primary">tutorLabel</Link>
             <Link to={portfolioPath} className="font-medium text-foreground/80 hover:text-primary">{navLinks.find(item => item.href === portfolioPath)?.label}</Link>
             <Link to={getLocalizedPath("contact", currentLang)} className="font-medium text-foreground/80 hover:text-primary">{dict.nav.contact}</Link>
           </nav>
