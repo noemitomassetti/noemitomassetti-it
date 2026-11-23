@@ -55,7 +55,6 @@ const App = () => (
             {/* ── ENGLISH / INTERNATIONAL (DEFAULT) ── */}
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
-          <Route path="/learning-tutoring" element={<Tutoring />} />
             <Route path="/italian-localisation" element={<ItalianLocalisation />} />
           <Route path="/italian-localization" element={<ItalianLocalisation />} />
           <Route path="/work-examples" element={<Portfolio />} />
@@ -88,7 +87,6 @@ const App = () => (
           <Route path="/fr" element={<Index />} />
           <Route path="/fr/" element={<Index />} />
           <Route path="/fr/services" element={<Services />} />
-          <Route path="/fr/accompagnement-scolaire" element={<Tutoring />} />
           <Route path="/fr/localisation-italien" element={<ItalianLocalisation />} />
           <Route path="/fr/exemples-de-projets" element={<Portfolio />} />
           <Route path="/fr/exemples-de-projets/exemple/:num" element={<PortfolioDocument />} />
@@ -104,7 +102,6 @@ const App = () => (
           <Route path="/es" element={<Index />} />
           <Route path="/es/" element={<Index />} />
           <Route path="/es/servicios" element={<Services />} />
-          <Route path="/es/apoyo-escolar" element={<Tutoring />} />
           <Route path="/es/localizacion-italiano" element={<ItalianLocalisation />} />
           <Route path="/es/ejemplos-de-trabajo" element={<Portfolio />} />
           <Route path="/es/ejemplos-de-trabajo/ejemplo/:num" element={<PortfolioDocument />} />

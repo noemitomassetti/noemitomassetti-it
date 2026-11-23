@@ -1,35 +1,35 @@
 import { describe, expect, it } from "vitest";
-import { getHreflangAlternates, getLocalizedPath, getPageKeyFromPath, switchLanguageUrl } from "../lib/i18n/routes";
+import { getPageKeyFromPath, switchLanguageUrl } from "../lib/i18n/routes";
 import { readFileSync } from "node:fs";
 
-const routes = {
-  it: "/it/tutor-apprendimento",
-  en: "/learning-tutoring",
-  fr: "/fr/accompagnement-scolaire",
-  es: "/es/apoyo-escolar",
-} as const;
-
-describe("Inclusive tutoring landing in four languages", () => {
-  it("retains the tutoring page when switching between any of the four languages", () => {
-    for (const source of Object.values(routes)) {
-      expect(getPageKeyFromPath(source)).toBe("tutoring");
-      for (const [lang, target] of Object.entries(routes)) {
-        expect(switchLanguageUrl(source, lang as keyof typeof routes)).toBe(target);
-        expect(getLocalizedPath("tutoring", lang as keyof typeof routes)).toBe(target);
-      }
+describe("Tutoraggio riservato alla versione italiana", () => {
+  it("shows tutoraggio as an Italian-only service and excludes translated routes", () => {
+    const app=readFileSync("src/App.tsx","utf8");
+    const layout=readFileSync("src/components/Layout.tsx","utf8");
+    const home=readFileSync("src/pages/Index.tsx","utf8");
+    const build=readFileSync("scripts/build-portfolio-social-pages.ts","utf8");
+    expect(app).toContain('<Route path="/it/tutor-apprendimento" element={<Tutoring />} />');
+    for(const path of ["/learning-tutoring","/fr/accompagnement-scolaire","/es/apoyo-escolar"]) {
+      expect(app).not.toContain('path="'+path+'"');
+      expect(build).not.toContain(path);
     }
+    expect(layout).toContain('currentLang === "it"');
+    expect(home).toContain('lang === "it"');
+    expect(build).toContain('render(tutorPath,"it"');
   });
-  it("provides five coherent and reciprocal hreflang links", () => {
-    const alternates = getHreflangAlternates("tutoring");
-    expect(alternates.map(x => x.hrefLang)).toEqual(["en","it","fr","es","x-default"]);
-    for (const [lang,path] of Object.entries(routes)) {
-      expect(alternates.find(x=>x.hrefLang===lang)?.href).toBe("https://www.noemitomassetti.it"+path);
-    }
+  it("switches to the destination language home rather than an unavailable translation", () => {
+    expect(getPageKeyFromPath("/it/tutor-apprendimento")).toBe("home");
+    expect(switchLanguageUrl("/it/tutor-apprendimento","en")).toBe("/");
+    expect(switchLanguageUrl("/it/tutor-apprendimento","fr")).toBe("/fr");
+    expect(switchLanguageUrl("/it/tutor-apprendimento","es")).toBe("/es");
   });
-  it("does not falsely claim a regulated or clinical qualification", () => {
-    const content=readFileSync("src/pages/Tutoring.tsx", "utf8");
-    expect(content).toContain("non clinico");
-    expect(content).toContain("not clinical");
-    expect(content).not.toMatch(/tutor certificata|psychologist|psicologa iscritta|diagnosi professionale/i);
+  it("states in-person and online availability within Italy without clinical claims", () => {
+    const page=readFileSync("src/pages/Tutoring.tsx","utf8");
+    expect(page).toContain("In presenza a Castelfidardo e dintorni");
+    expect(page).toContain("Online in tutta Italia");
+    expect(page).toContain("non clinico");
+    expect(page).not.toMatch(/tutor certificata|psicologa iscritta|diagnosi professionale/i);
+    expect(page).toContain('hrefLang: "it"');
+    expect(page).not.toContain('hrefLang: "fr"');
   });
 });
