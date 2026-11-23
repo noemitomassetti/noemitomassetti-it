@@ -143,7 +143,7 @@ for (const entry of DEEP_PORTFOLIO_ITEMS) {
 // publish this landing page in Italian only, without multilingual alternates.
 const tutorPath="/it/tutor-apprendimento";
 const tutorTitle="Tutor dell’apprendimento in presenza e online | Noemi Tomassetti";
-const tutorDescription="Ripetizioni, lingue straniere e metodo di studio: tutor in presenza esclusivamente a Castelfidardo oppure online in tutta Italia, anche per studenti con DSA, ADHD e BES.";
+const tutorDescription="Potenziamento degli apprendimenti, metodo di studio e tutoraggio linguistico in presenza esclusivamente a Castelfidardo oppure online in tutta Italia, anche per studenti con DSA, ADHD e BES.";
 render(tutorPath,"it",tutorTitle,tutorDescription,()=>tutorPath,tutorDescription);
 count++;
 

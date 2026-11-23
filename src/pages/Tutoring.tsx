@@ -4,15 +4,24 @@ import { BookOpen, Languages, Brain, GraduationCap, ShieldCheck, Mail, MapPin, M
 
 const PAGE_URL = "https://www.noemitomassetti.it/it/tutor-apprendimento";
 
+// L'app didattica sarà presentata qui soltanto dopo l'approvazione del lancio beta.
+// Nessun rimando commerciale viene mostrato mentre il prodotto è in sviluppo.
+const SHOW_LEARNING_APP = false;
+const LEARNING_APP = {
+  title: "Un'app per imparare con il proprio metodo",
+  description: "Percorsi di studio guidati, ripasso attivo e strumenti digitali per favorire autonomia e apprendimento.",
+  href: "", // Inserire un URL ufficiale e verificato prima di abilitare la scheda.
+} as const;
+
 const services = [
   {
     title: "Lingue straniere",
-    body: "Ripetizioni e recupero scolastico di inglese, francese e spagnolo, con esercizi di comprensione, produzione scritta e orale adeguati al livello dello studente.",
+    body: "Potenziamento linguistico individuale in inglese, francese e spagnolo, con attività mirate di comprensione, espressione scritta e orale, lessico e grammatica.",
     icon: Languages,
   },
   {
-    title: "Compiti e metodo di studio",
-    body: "Organizzazione del lavoro, ripasso, preparazione di verifiche e interrogazioni, mappe, sintesi e strategie per sviluppare autonomia nello studio.",
+    title: "Potenziamento e metodo di studio",
+    body: "Potenziamento delle abilità di apprendimento, organizzazione dello studio, comprensione e rielaborazione dei contenuti, mappe, sintesi e strategie per acquisire maggiore autonomia.",
     icon: BookOpen,
   },
   {
@@ -31,7 +40,7 @@ const steps = [
 export default function TutoringPage() {
   useSEO({
     title: "Tutor dell’apprendimento in presenza e online | Noemi Tomassetti",
-    description: "Ripetizioni e tutoraggio dell'apprendimento in presenza esclusivamente a Castelfidardo oppure online in tutta Italia. Lingue, metodo di studio e supporto educativo anche per DSA, ADHD e BES.",
+    description: "Potenziamento degli apprendimenti, metodo di studio e tutoraggio linguistico in presenza esclusivamente a Castelfidardo oppure online in tutta Italia, anche per studenti con DSA, ADHD e BES.",
     canonical: PAGE_URL,
     alternates: [
       { hrefLang: "it", href: PAGE_URL },
@@ -49,7 +58,7 @@ export default function TutoringPage() {
           <p className="mb-4 text-xs font-bold uppercase tracking-widest text-primary">Per studenti e famiglie in Italia</p>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground">Tutor dell’apprendimento in presenza e online</h1>
           <p className="mt-6 text-lg leading-relaxed text-foreground/85">
-            Ripetizioni scolastiche, lingue straniere e metodo di studio, anche per studenti con DSA, ADHD e altri bisogni educativi speciali.
+            Potenziamento degli apprendimenti, metodo di studio e tutoraggio delle lingue straniere, anche per studenti con DSA, ADHD e altri bisogni educativi speciali.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium"><MapPin aria-hidden="true" className="h-4 w-4 text-primary"/> In presenza esclusivamente a Castelfidardo, su appuntamento</span>
@@ -109,6 +118,18 @@ export default function TutoringPage() {
           </article>
         </div>
       </section>
+
+      {SHOW_LEARNING_APP && LEARNING_APP.href && (
+        <section className="border-t border-border/50 py-16">
+          <div className="container max-w-5xl px-4 sm:px-6">
+            <div className="rounded-2xl border border-border bg-card p-7 md:p-9">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">{LEARNING_APP.title}</h2>
+              <p className="text-foreground/80 leading-relaxed mb-5">{LEARNING_APP.description}</p>
+              <a href={LEARNING_APP.href} className="font-semibold text-primary underline underline-offset-4">Scopri l'app didattica</a>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="border-t border-border/50 bg-secondary/20 py-16">
         <div className="container max-w-3xl px-4 sm:px-6 text-center">

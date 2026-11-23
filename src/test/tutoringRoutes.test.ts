@@ -27,10 +27,15 @@ describe("Tutoraggio riservato alla versione italiana", () => {
     const page=readFileSync("src/pages/Tutoring.tsx","utf8");
     expect(page).toContain("In presenza esclusivamente a Castelfidardo");
     expect(page).not.toContain("dintorni");
+    expect(page).toContain("Potenziamento e metodo di studio");
+    expect(page).toContain("Potenziamento degli apprendimenti");
+    expect(page).not.toMatch(/aiuto compiti|aiuti compiti|compiti e metodo di studio/i);
     expect(page).toContain("Online in tutta Italia");
     expect(page).toContain("non clinico");
     expect(page).not.toMatch(/tutor certificata|psicologa iscritta|diagnosi professionale/i);
     expect(page).toContain('hrefLang: "it"');
     expect(page).not.toContain('hrefLang: "fr"');
+    expect(page).toContain("const SHOW_LEARNING_APP = false;");
+    expect(page).toContain("SHOW_LEARNING_APP && LEARNING_APP.href");
   });
 });

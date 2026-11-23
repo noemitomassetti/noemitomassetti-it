@@ -883,7 +883,7 @@ export default function IndexPage() {
             <div className="max-w-3xl">
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">Tutor dell’apprendimento in presenza e online</h2>
               <p className="text-foreground/85 leading-relaxed">
-                Ripetizioni, lingue straniere e metodo di studio, anche per studenti con DSA, ADHD e BES.
+                Potenziamento degli apprendimenti, metodo di studio e tutoraggio linguistico, anche per studenti con DSA, ADHD e BES.
                 Incontri in presenza esclusivamente a Castelfidardo oppure online in tutta Italia.
               </p>
             </div>
