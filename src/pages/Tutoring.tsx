@@ -31,7 +31,7 @@ const steps = [
 export default function TutoringPage() {
   useSEO({
     title: "Tutor dell’apprendimento in presenza e online | Noemi Tomassetti",
-    description: "Ripetizioni e tutoraggio dell'apprendimento a Castelfidardo e dintorni oppure online in tutta Italia. Lingue, metodo di studio e supporto educativo anche per DSA, ADHD e BES.",
+    description: "Ripetizioni e tutoraggio dell'apprendimento in presenza esclusivamente a Castelfidardo oppure online in tutta Italia. Lingue, metodo di studio e supporto educativo anche per DSA, ADHD e BES.",
     canonical: PAGE_URL,
     alternates: [
       { hrefLang: "it", href: PAGE_URL },
@@ -52,7 +52,7 @@ export default function TutoringPage() {
             Ripetizioni scolastiche, lingue straniere e metodo di studio, anche per studenti con DSA, ADHD e altri bisogni educativi speciali.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium"><MapPin aria-hidden="true" className="h-4 w-4 text-primary"/> In presenza a Castelfidardo e dintorni, su appuntamento</span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium"><MapPin aria-hidden="true" className="h-4 w-4 text-primary"/> In presenza esclusivamente a Castelfidardo, su appuntamento</span>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium"><Monitor aria-hidden="true" className="h-4 w-4 text-primary"/> Online in tutta Italia</span>
           </div>
           <p className="mt-5 text-sm text-muted-foreground">Supporto per studenti della scuola primaria e secondaria</p>

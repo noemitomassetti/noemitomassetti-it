@@ -25,7 +25,8 @@ describe("Tutoraggio riservato alla versione italiana", () => {
   });
   it("states in-person and online availability within Italy without clinical claims", () => {
     const page=readFileSync("src/pages/Tutoring.tsx","utf8");
-    expect(page).toContain("In presenza a Castelfidardo e dintorni");
+    expect(page).toContain("In presenza esclusivamente a Castelfidardo");
+    expect(page).not.toContain("dintorni");
     expect(page).toContain("Online in tutta Italia");
     expect(page).toContain("non clinico");
     expect(page).not.toMatch(/tutor certificata|psicologa iscritta|diagnosi professionale/i);
