@@ -5,6 +5,7 @@ export const SUPPORTED_LANGUAGES: Language[] = ['en', 'it', 'fr', 'es'];
 export type PageKey =
   | 'home'
   | 'services'
+  | 'tutoring'
   | 'noetom'
   | 'about'
   | 'resources'
