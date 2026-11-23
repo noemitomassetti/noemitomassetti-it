@@ -16,6 +16,8 @@ describe("Tutoraggio riservato alla versione italiana", () => {
     expect(layout).toContain('currentLang === "it"');
     expect(home).toContain('lang === "it"');
     expect(build).toContain('render(tutorPath,"it"');
+    expect(build).toContain('tutorDescription,"WebPage",["it"]');
+    expect(build).toContain('supportedAlternates:readonly Language[]=LANGS');
   });
   it("switches to the destination language home rather than an unavailable translation", () => {
     expect(getPageKeyFromPath("/it/tutor-apprendimento")).toBe("home");

@@ -69,7 +69,7 @@ function updateMeta(html:string, attr:string, key:string, value:string) {
   return html.replace(rex,replacement);
 }
 
-function render(path:string, lang:Language, title:string, description:string, alternates:(l:Language)=>string, summary:string, pageType:"WebPage"|"BlogPosting"="WebPage") {
+function render(path:string, lang:Language, title:string, description:string, alternates:(l:Language)=>string, summary:string, pageType:"WebPage"|"BlogPosting"="WebPage", supportedAlternates:readonly Language[]=LANGS) {
   const canonical = BASE + path;
   let html = template.replace(/<html lang="[^"]+"/, '<html lang="'+lang+'"');
   html = html.replace(/<title>[\s\S]*?<\/title>/, "<title>"+esc(title)+"</title>");
@@ -86,8 +86,9 @@ function render(path:string, lang:Language, title:string, description:string, al
   html = updateMeta(html,"name","twitter:image",OG_IMAGE);
   html = html.replace(/<link rel="canonical"[^>]+>/i,'<link rel="canonical" href="'+canonical+'">');
   html = html.replace(/\s*<link rel="alternate"[^>]+>/g,"");
-  const altTags = [...LANGS.map(l=>'<link rel="alternate" hreflang="'+l+'" href="'+BASE+alternates(l)+'">'),
-    '<link rel="alternate" hreflang="x-default" href="'+BASE+alternates("en")+'">'];
+  const defaultLocale:Language=supportedAlternates.includes("en") ? "en" : lang;
+  const altTags = [...supportedAlternates.map(l=>'<link rel="alternate" hreflang="'+l+'" href="'+BASE+alternates(l)+'">'),
+    '<link rel="alternate" hreflang="x-default" href="'+BASE+alternates(defaultLocale)+'">'];
   const isFictionalExample=path.includes("/dossier/") || Object.values(ROOTS).includes(path) || /\/(?:sample|esempio|exemple|ejemplo)\/\d{2}$/.test(path);
   const schema = {
     "@context":"https://schema.org",
@@ -104,7 +105,8 @@ function render(path:string, lang:Language, title:string, description:string, al
   const built = readFileSync(out,"utf8");
   if (!built.includes('<meta property="og:url" content="'+canonical+'">') ||
       !built.includes('<link rel="canonical" href="'+canonical+'">') ||
-      !built.includes('hreflang="fr"') ||
+      !supportedAlternates.every(l=>built.includes('hreflang="'+l+'"')) ||
+      (supportedAlternates.length===1 && LANGS.some(l=>l!==lang && built.includes('hreflang="'+l+'"'))) ||
       built.includes("NoeTom, the AI operations assistant")) {
     throw new Error("Invalid share preview output: "+path);
   }
@@ -144,7 +146,7 @@ for (const entry of DEEP_PORTFOLIO_ITEMS) {
 const tutorPath="/it/tutor-apprendimento";
 const tutorTitle="Tutor dell’apprendimento in presenza e online | Noemi Tomassetti";
 const tutorDescription="Potenziamento degli apprendimenti, metodo di studio e tutoraggio linguistico in presenza esclusivamente a Castelfidardo oppure online in tutta Italia, anche per studenti con DSA, ADHD e BES.";
-render(tutorPath,"it",tutorTitle,tutorDescription,()=>tutorPath,tutorDescription);
+render(tutorPath,"it",tutorTitle,tutorDescription,()=>tutorPath,tutorDescription,"WebPage",["it"]);
 count++;
 
 // The 22 full-document readers are first-class portfolio routes, not invisible SPA links.
