@@ -14,6 +14,10 @@ export const ROUTES: Record<PageKey, RouteConfig> = {
       es: '/es',
     },
   },
+  learningTutor: {
+    key: 'learningTutor',
+    paths: { en: '/learning-tutor', it: '/it/tutor-apprendimento', fr: '/fr/soutien-scolaire', es: '/es/apoyo-aprendizaje' },
+  },
   services: {
     key: 'services',
     paths: {
@@ -146,6 +150,7 @@ export function getPageKeyFromPath(pathname: string): PageKey {
   // Check prefix or partial match
   if (clean.includes('esempi-di-lavoro') || clean.includes('work-examples') || clean.includes('exemples-de-projets') || clean.includes('ejemplos-de-trabajo') || clean.includes('portfolio')) return 'portfolio';
   if (clean.includes('ricerca-professionisti') || clean.includes('professional-research') || clean.includes('recherche-professionnels') || clean.includes('investigacion-profesionales')) return 'questionnaire';
+  if (clean.includes('learning-tutor') || clean.includes('tutor-apprendimento') || clean.includes('soutien-scolaire') || clean.includes('apoyo-aprendizaje')) return 'learningTutor';
   if (clean.includes('servizi') || clean.includes('services') || clean.includes('servicios')) return 'services';
   if (clean.includes('noetom')) return 'noetom';
   if (clean.includes('chi-sono') || clean.includes('about') || clean.includes('a-propos') || clean.includes('sobre-mi')) return 'about';

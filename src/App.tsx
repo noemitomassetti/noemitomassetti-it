@@ -10,6 +10,7 @@ import { lazy, Suspense } from "react";
 const Index = lazy(() => import("./pages/Index"));
 const Services = lazy(() => import("./pages/Services"));
 const About = lazy(() => import("./pages/About"));
+const LearningTutor = lazy(() => import("./pages/LearningTutor"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -54,6 +55,7 @@ const App = () => (
             {/* ── ENGLISH / INTERNATIONAL (DEFAULT) ── */}
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/learning-tutor" element={<LearningTutor />} />
             <Route path="/italian-localisation" element={<ItalianLocalisation />} />
           <Route path="/italian-localization" element={<ItalianLocalisation />} />
           <Route path="/work-examples" element={<Portfolio />} />
@@ -69,6 +71,7 @@ const App = () => (
           {/* ── ITALIAN (IT) ── */}
           <Route path="/it" element={<Index />} />
           <Route path="/it/" element={<Index />} />
+          <Route path="/it/tutor-apprendimento" element={<LearningTutor />} />
           <Route path="/it/servizi" element={<Services />} />
           <Route path="/it/localizzazione-italiano" element={<ItalianLocalisation />} />
           <Route path="/it/esempi-di-lavoro" element={<Portfolio />} />
@@ -84,6 +87,7 @@ const App = () => (
           {/* ── FRENCH (FR) ── */}
           <Route path="/fr" element={<Index />} />
           <Route path="/fr/" element={<Index />} />
+          <Route path="/fr/soutien-scolaire" element={<LearningTutor />} />
           <Route path="/fr/services" element={<Services />} />
           <Route path="/fr/localisation-italien" element={<ItalianLocalisation />} />
           <Route path="/fr/exemples-de-projets" element={<Portfolio />} />
@@ -99,6 +103,7 @@ const App = () => (
           {/* ── SPANISH (ES) ── */}
           <Route path="/es" element={<Index />} />
           <Route path="/es/" element={<Index />} />
+          <Route path="/es/apoyo-aprendizaje" element={<LearningTutor />} />
           <Route path="/es/servicios" element={<Services />} />
           <Route path="/es/localizacion-italiano" element={<ItalianLocalisation />} />
           <Route path="/es/ejemplos-de-trabajo" element={<Portfolio />} />

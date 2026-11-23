@@ -14,7 +14,8 @@ export type PageKey =
   | 'portfolio'
   | 'publications'
   | 'questionnaire'
-  | 'italianLocalisation';
+  | 'italianLocalisation'
+  | 'learningTutor';
 
 export interface RouteConfig {
   key: PageKey;

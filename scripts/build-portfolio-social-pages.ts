@@ -33,6 +33,12 @@ const PAGE_META = [
 const BASE = "https://www.noemitomassetti.it";
 const OG_IMAGE = BASE + "/noemi-tomassetti.png";
 const LOCALES: Record<Language, string> = { it: "it_IT", en: "en_GB", fr: "fr_FR", es: "es_ES" };
+const TUTOR_META: Record<Language,{title:string;description:string}> = {
+  it: {title:"Tutor dell’apprendimento e delle lingue | Noemi Tomassetti",description:"Ripetizioni linguistiche, aiuto compiti e metodo di studio, anche per studenti con DSA, ADHD e BES. Supporto educativo online e in presenza."},
+  en: {title:"Language & learning tutor | Noemi Tomassetti",description:"Personalised language tutoring, homework support and study skills, including educational support for learners with dyslexia, ADHD or additional learning needs."},
+  fr: {title:"Tutorat linguistique et soutien scolaire | Noemi Tomassetti",description:"Cours de langues, aide aux devoirs et méthodes de travail, également pour les élèves présentant des troubles DYS, un TDAH ou des besoins éducatifs particuliers."},
+  es: {title:"Tutoría de idiomas y apoyo al aprendizaje | Noemi Tomassetti",description:"Clases de idiomas, ayuda con los deberes y técnicas de estudio, también para estudiantes con dificultades específicas de aprendizaje, TDAH o necesidades educativas."},
+};
 const ROOTS: Record<Language, string> = {
   it: "/it/esempi-di-lavoro", en: "/work-examples",
   fr: "/fr/exemples-de-projets", es: "/es/ejemplos-de-trabajo"
@@ -125,6 +131,11 @@ for (const [key,titleKey,descKey] of PAGE_META) {
   }
 }
 for (const lang of LANGS) {
+  const page=TUTOR_META[lang];
+  render(ROUTES.learningTutor.paths[lang],lang,page.title,page.description,l=>ROUTES.learningTutor.paths[l],page.description);
+  count++;
+}
+for (const lang of LANGS) {
   render(ROOTS[lang],lang,TITLES[lang],DESCRIPTIONS[lang],l=>ROOTS[l],DESCRIPTIONS[lang]);
   count++;
 }
@@ -186,7 +197,7 @@ for(const lang of LANGS) {
     l=>ROUTES.questionnaire.paths[l],details.description);
   count++;
 }
-const expected = PAGE_META.length*LANGS.length-1 + 4 + DEEP_PORTFOLIO_ITEMS.length*4
+const expected = PAGE_META.length*LANGS.length-1 + 4 + 4 + DEEP_PORTFOLIO_ITEMS.length*4
   + PORTFOLIO_DOCUMENTS.length*LANGS.length + 4 + publishedIds.length*4 + 4;
 if (count !== expected) throw new Error("Incomplete page generation: "+count+"/"+expected);
 
