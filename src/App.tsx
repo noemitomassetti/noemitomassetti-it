@@ -9,6 +9,7 @@ import { lazy, Suspense } from "react";
 
 const Index = lazy(() => import("./pages/Index"));
 const Services = lazy(() => import("./pages/Services"));
+const Tutoring = lazy(() => import("./pages/Tutoring"));
 const About = lazy(() => import("./pages/About"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -54,6 +55,7 @@ const App = () => (
             {/* ── ENGLISH / INTERNATIONAL (DEFAULT) ── */}
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
+          <Route path="/learning-tutoring" element={<Tutoring />} />
             <Route path="/italian-localisation" element={<ItalianLocalisation />} />
           <Route path="/italian-localization" element={<ItalianLocalisation />} />
           <Route path="/work-examples" element={<Portfolio />} />
@@ -70,6 +72,7 @@ const App = () => (
           <Route path="/it" element={<Index />} />
           <Route path="/it/" element={<Index />} />
           <Route path="/it/servizi" element={<Services />} />
+          <Route path="/it/tutor-apprendimento" element={<Tutoring />} />
           <Route path="/it/localizzazione-italiano" element={<ItalianLocalisation />} />
           <Route path="/it/esempi-di-lavoro" element={<Portfolio />} />
           <Route path="/it/esempi-di-lavoro/esempio/:num" element={<PortfolioDocument />} />
@@ -85,6 +88,7 @@ const App = () => (
           <Route path="/fr" element={<Index />} />
           <Route path="/fr/" element={<Index />} />
           <Route path="/fr/services" element={<Services />} />
+          <Route path="/fr/accompagnement-scolaire" element={<Tutoring />} />
           <Route path="/fr/localisation-italien" element={<ItalianLocalisation />} />
           <Route path="/fr/exemples-de-projets" element={<Portfolio />} />
           <Route path="/fr/exemples-de-projets/exemple/:num" element={<PortfolioDocument />} />
@@ -100,6 +104,7 @@ const App = () => (
           <Route path="/es" element={<Index />} />
           <Route path="/es/" element={<Index />} />
           <Route path="/es/servicios" element={<Services />} />
+          <Route path="/es/apoyo-escolar" element={<Tutoring />} />
           <Route path="/es/localizacion-italiano" element={<ItalianLocalisation />} />
           <Route path="/es/ejemplos-de-trabajo" element={<Portfolio />} />
           <Route path="/es/ejemplos-de-trabajo/ejemplo/:num" element={<PortfolioDocument />} />

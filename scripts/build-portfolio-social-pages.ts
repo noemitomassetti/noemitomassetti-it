@@ -139,6 +139,16 @@ for (const entry of DEEP_PORTFOLIO_ITEMS) {
   }
 }
 
+// Public tutor section: all four landing pages have canonical and hreflang metadata.
+const tutorPaths:Record<Language,string>={en:"/learning-tutoring",it:"/it/tutor-apprendimento",fr:"/fr/accompagnement-scolaire",es:"/es/apoyo-escolar"};
+const tutorMeta:Record<Language,{title:string;desc:string}>={
+  it:{title:"Tutor dell'apprendimento e delle lingue straniere | Noemi Tomassetti",desc:"Ripetizioni, lingue straniere e metodo di studio: tutoraggio educativo personalizzato, anche per studenti con DSA, ADHD e BES."},
+  en:{title:"Learning and language tutoring | Noemi Tomassetti",desc:"Language tutoring, homework and study skills, including inclusive educational support for learners with dyslexia, ADHD or additional learning needs."},
+  fr:{title:"Accompagnement scolaire et langues étrangères | Noemi Tomassetti",desc:"Soutien scolaire et linguistique individualisé, notamment pour les élèves présentant des troubles des apprentissages ou un TDAH."},
+  es:{title:"Tutoría del aprendizaje y de idiomas | Noemi Tomassetti",desc:"Apoyo educativo individual en idiomas, deberes y técnicas de estudio, también para estudiantes con dislexia o TDAH."}
+};
+for(const lang of LANGS){ const m=tutorMeta[lang];render(tutorPaths[lang],lang,m.title,m.desc,l=>tutorPaths[l],m.desc);count++; }
+
 // The 22 full-document readers are first-class portfolio routes, not invisible SPA links.
 for(const doc of PORTFOLIO_DOCUMENTS){
   for(const lang of LANGS){
@@ -187,7 +197,7 @@ for(const lang of LANGS) {
   count++;
 }
 const expected = PAGE_META.length*LANGS.length-1 + 4 + DEEP_PORTFOLIO_ITEMS.length*4
-  + PORTFOLIO_DOCUMENTS.length*LANGS.length + 4 + publishedIds.length*4 + 4;
+  + PORTFOLIO_DOCUMENTS.length*LANGS.length + 4 + publishedIds.length*4 + 4 + 4;
 if (count !== expected) throw new Error("Incomplete page generation: "+count+"/"+expected);
 
 if (!isProduction) {

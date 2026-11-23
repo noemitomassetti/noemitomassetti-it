@@ -876,6 +876,24 @@ export default function IndexPage() {
         </div>
       </section>
 
+      {/* ── TUTORAGGIO: AREA DEDICATA A STUDENTI E FAMIGLIE ── */}
+      <section className="border-y border-border/40 bg-secondary/15 py-12 md:py-16">
+        <div className="container max-w-6xl px-4 sm:px-6 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
+              {({it:"Un percorso dedicato anche a studenti e famiglie",en:"Dedicated support for students and families",fr:"Un accompagnement dédié aux élèves et aux familles",es:"Apoyo también para estudiantes y familias"} as const)[lang]}
+            </h2>
+            <p className="text-foreground/85 leading-relaxed">
+              {({it:"Oltre ai servizi per professionisti, propongo tutoraggio linguistico e supporto al metodo di studio, anche per studenti con DSA, ADHD e BES.",en:"Alongside my professional services, I offer language tutoring and study-skills support, including for learners with dyslexia, ADHD or additional learning needs.",fr:"En complément de mes services professionnels, je propose un soutien en langues et en méthodes de travail, notamment aux élèves présentant des troubles des apprentissages ou un TDAH.",es:"Además de mis servicios profesionales, ofrezco apoyo en idiomas y técnicas de estudio, también para estudiantes con dislexia, TDAH u otras necesidades educativas."} as const)[lang]}
+            </p>
+          </div>
+          <Link to={({it:"/it/tutor-apprendimento",en:"/learning-tutoring",fr:"/fr/accompagnement-scolaire",es:"/es/apoyo-escolar"} as const)[lang]}
+            className="shrink-0 inline-flex items-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:opacity-90">
+            {({it:"Scopri il tutoraggio",en:"Explore tutoring",fr:"Découvrir l'accompagnement",es:"Conocer la tutoría"} as const)[lang]}
+          </Link>
+        </div>
+      </section>
+
       {/* ── SECTION 6: UN SUPPORTO PENSATO PER ATTIVITÀ DIVERSE (#supporto) ── */}
       <section
         id="supporto"
