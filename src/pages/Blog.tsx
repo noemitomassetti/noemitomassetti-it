@@ -11,26 +11,26 @@ import { Button } from "@/components/ui/button";
 const COPY: Record<Language, {title: string; heading: string; introduction: string; read: string}> = {
   it: {
     title: "Blog e approfondimenti | Noemi Tomassetti",
-    heading: "Blog e risorse professionali",
-    introduction: "Approfondimenti pratici su organizzazione, comunicazione, back office e traduzione. Gli articoli già pubblicati mantengono i loro indirizzi originali.",
+    heading: "Idee e strumenti per lavorare e comunicare meglio",
+    introduction: "Articoli su organizzazione del lavoro, comunicazione professionale, traduzione e strumenti digitali, con esempi e suggerimenti applicabili alle attività quotidiane.",
     read: "Leggi l’articolo"
   },
   en: {
-    title: "Blog | Italian Translation and Operational Support | Noemi Tomassetti",
-    heading: "Articles for businesses working with Italy",
-    introduction: "Practical guidance on Italian-language communication, localisation and organised customer operations. These articles are editorially adapted for international readers.",
+    title: "Italian Virtual Assistant | Business Support & Communication Blog | Noemi Tomassetti",
+    heading: "Virtual assistance for working with the Italian market",
+    introduction: "Practical guides for professionals and small businesses already working with Italy or preparing to enter the Italian market. Explore Italian-speaking virtual assistance, email and back-office organisation, written customer care and the preparation of Italian-language communications. Translation and localisation are also standalone professional services, available independently of virtual assistance.",
     read: "Read article"
   },
   fr: {
-    title: "Blog | Traduction vers l’italien et soutien opérationnel | Noemi Tomassetti",
-    heading: "Articles pour les professionnels travaillant avec l’Italie",
-    introduction: "Des conseils concrets sur la communication avec les clients italiens, la localisation des contenus et l’organisation opérationnelle. Les articles sont adaptés aux lecteurs francophones.",
+    title: "Assistante virtuelle italophone | Blog et conseils | Noemi Tomassetti",
+    heading: "Assistance virtuelle pour vos activités avec le marché italien",
+    introduction: "Des conseils destinés aux indépendants et petites entreprises qui travaillent déjà avec l’Italie ou préparent leur arrivée sur le marché italien. Découvrez comment organiser le secrétariat à distance, le back-office, les courriels et les échanges écrits en italien. La traduction et la localisation sont également des prestations professionnelles à part entière, proposées indépendamment de l’assistance virtuelle.",
     read: "Lire l’article"
   },
   es: {
-    title: "Blog | Traducción al italiano y apoyo operativo | Noemi Tomassetti",
-    heading: "Artículos para profesionales que trabajan con Italia",
-    introduction: "Consejos prácticos sobre comunicación en italiano, localización de contenidos y organización del trabajo. Los artículos están adaptados para lectores hispanohablantes.",
+    title: "Asistencia virtual en italiano | Blog y recursos | Noemi Tomassetti",
+    heading: "Asistencia virtual para trabajar con el mercado italiano",
+    introduction: "Guías para profesionales y pequeñas empresas que ya trabajan con Italia o se preparan para entrar en el mercado italiano. Aprende a organizar la secretaría a distancia, el correo, el back office y las comunicaciones escritas en italiano. La traducción y la localización también son servicios profesionales independientes que pueden contratarse por separado.",
     read: "Leer el artículo"
   }
 };
@@ -74,7 +74,7 @@ export default function Blog() {
           {posts.map((post,index) => (
             <Card key={post.id} className="flex flex-col h-full bg-card border-border/50 hover:border-primary/50 transition-colors overflow-hidden">
               <div className="h-48 w-full bg-muted overflow-hidden">
-                <img src={post.image} alt={post.alt || post.title} loading={index < 2 ? "eager" : "lazy"} width="600" height="300" className="w-full h-full object-contain bg-background" />
+                <img src={post.image} alt={post.alt || post.title} loading={index < 2 ? "eager" : "lazy"} width="600" height="300" className="w-full h-full object-cover bg-background" decoding="async" referrerPolicy="no-referrer" />
               </div>
               <CardHeader className="pt-4">
                 <div className="flex items-center justify-between mb-2 gap-2">

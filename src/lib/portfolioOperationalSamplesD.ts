@@ -1,6 +1,6 @@
 import type { OperationalDeepCase } from "./portfolioOperationalTypes";
 
-/** All four cases and every deliverable are original fictional portfolio demonstrations. */
+/** All four cases and every deliverable are original illustrative portfolio demonstrations. */
 export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
   {
     "id": "course-information-source-audit",
@@ -19,21 +19,21 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un'organizzatrice immaginaria deve inviare una guida a 42 partecipanti già iscritti a una formazione online. Tre file interni riportano orari e istruzioni differenti: occorre verificare quale versione sia stata approvata prima di pubblicare la FAQ.",
-      "en": "A fictional course organiser is preparing information for 42 already-registered attendees. Three internal documents disagree about timing and access instructions, so their status must be checked before publication.",
-      "fr": "Une organisatrice fictive prépare les informations destinées à 42 participants déjà inscrits. Trois documents internes indiquent des horaires différents et doivent être confrontés aux validations.",
-      "es": "Una organizadora ficticia prepara la información para 42 personas ya inscritas. Tres documentos internos presentan horarios distintos y deben revisarse antes de publicar la información."
+      "en": "An illustrative course organiser is preparing information for 42 already-registered attendees. Three internal documents disagree about timing and access instructions, so their status must be checked before publication.",
+      "fr": "Une organisatrice illustrative prépare les informations destinées à 42 participants déjà inscrits. Trois documents internes indiquent des horaires différents et doivent être confrontés aux validations.",
+      "es": "Una organizadora de ejemplo prepara la información para 42 personas ya inscritas. Tres documentos internos presentan horarios distintos y deben revisarse antes de publicar la información."
     },
     "objective": {
       "it": "Ricostruire la provenienza delle informazioni, distinguere dati confermati da dati in attesa e proporre una FAQ utilizzabile senza inventare orari, link o autorizzazioni.",
       "en": "Document the provenance of each statement, label outstanding decisions and prepare a draft FAQ without fabricating times or access links.",
       "fr": "Retracer l'origine des données et élaborer une FAQ provisoire sans inventer des horaires ou des liens.",
-      "es": "Rastrear la procedencia de los datos y preparar una guía sin inventar horarios ni accesos."
+      "es": "Rastrear la procedencia de los datos y preparar una guía sin añadir datos sin confirmar horarios ni accesos."
     },
     "inputs": {
-      "it": "Programma P-v02, programma P-v03, bozza email E-v01 e nota dell'organizzatrice N-04: tutti documenti inventati. P-v02 indica 17:30; P-v03 indica 18:00; la nota N-04 non dichiara ancora l'approvazione definitiva.",
-      "en": "Invented schedule versions P-v02 and P-v03, email E-v01 and owner note N-04; 17:30 and 18:00 remain unresolved.",
-      "fr": "Programmes fictifs P-v02 et P-v03, courriel E-v01 et note N-04 ; l'horaire n'est pas encore validé.",
-      "es": "Programas ficticios P-v02 y P-v03, correo E-v01 y nota N-04; el horario sigue pendiente."
+      "it": "Programma P-v02, programma P-v03, bozza email E-v01 e nota dell'organizzatrice N-04: tutti documenti di esempio. P-v02 indica 17:30; P-v03 indica 18:00; la nota N-04 non dichiara ancora l'approvazione definitiva.",
+      "en": "example schedule versions P-v02 and P-v03, email E-v01 and owner note N-04; 17:30 and 18:00 remain unresolved.",
+      "fr": "Programmes illustratifs P-v02 et P-v03, courriel E-v01 et note N-04 ; l'horaire n'est pas encore validé.",
+      "es": "Programas de ejemplo P-v02 y P-v03, correo E-v01 y nota N-04; el horario sigue pendiente."
     },
     "workflow": [
       {
@@ -75,7 +75,7 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "Registre des sources",
           "es": "Registro de fuentes"
         },
-        "content": "REGISTRO DOCUMENTALE — SCENARIO COMPLETAMENTE INVENTATO\nF-01 | P-v02 | Programma | Orario indicato: 17:30 | Stato: versione precedente; NON confermare.\nF-02 | P-v03 | Programma | Orario indicato: 18:00 | Stato: bozza più recente; approvazione NON documentata.\nF-03 | E-v01 | Email partecipanti | Dice «link nella prossima comunicazione» | Stato: bozza, NON inviata.\nF-04 | N-04 | Nota organizzatrice | Chiede verifica dell'orario | Stato: istruzione attiva, non una conferma.\nDECISIONE APERTA D-01: l'orario definitivo deve essere confermato dall'organizzatrice. DECISIONE APERTA D-02: indicare soltanto il canale ufficiale per ottenere il link quando verrà effettivamente distribuito.\nRegola: registrare sempre data, origine, versione, decisione e persona che approva.",
+        "content": "REGISTRO DOCUMENTALE — CASO DIMOSTRATIVO\nF-01 | P-v02 | Programma | Orario indicato: 17:30 | Stato: versione precedente; NON confermare.\nF-02 | P-v03 | Programma | Orario indicato: 18:00 | Stato: bozza più recente; approvazione NON documentata.\nF-03 | E-v01 | Email partecipanti | Dice «link nella prossima comunicazione» | Stato: bozza, NON inviata.\nF-04 | N-04 | Nota organizzatrice | Chiede verifica dell'orario | Stato: istruzione attiva, non una conferma.\nDECISIONE APERTA D-01: l'orario definitivo deve essere confermato dall'organizzatrice. DECISIONE APERTA D-02: indicare soltanto il canale ufficiale per ottenere il link quando verrà effettivamente distribuito.\nRegola: registrare sempre data, origine, versione, decisione e persona che approva.",
         "explanation": {
           "it": "Un file più recente non equivale automaticamente a una fonte approvata.",
           "en": "A recent file is not necessarily an authorised source.",
@@ -90,7 +90,7 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "FAQ provisoire",
           "es": "Preguntas frecuentes provisionales"
         },
-        "content": "FAQ PER PARTECIPANTI GIÀ ISCRITTI — BOZZA DIMOSTRATIVA\nD. Quando si svolge l'incontro?\nR. L'orario è in corso di verifica. L'organizzatrice comunicherà la conferma attraverso il canale già utilizzato per le iscrizioni. Non considerare definitive le indicazioni delle vecchie versioni del programma.\nD. Come riceverò le istruzioni di accesso?\nR. Le istruzioni verranno inviate dall'organizzatrice dopo la verifica dei dati tecnici. Non pubblichiamo qui un link fittizio.\nD. È possibile utilizzare il materiale dopo l'incontro?\nR. La disponibilità di eventuali materiali deve essere confermata dall'organizzatrice; la presente bozza non promette registrazioni né attestati.\nSTATO: testo da approvare, non comunicazione inviata. Nessun nuovo partecipante viene cercato o contattato.",
+        "content": "FAQ PER PARTECIPANTI GIÀ ISCRITTI — BOZZA DIMOSTRATIVA\nD. Quando si svolge l'incontro?\nR. L'orario è in corso di verifica. L'organizzatrice comunicherà la conferma attraverso il canale già utilizzato per le iscrizioni. Non considerare definitive le indicazioni delle vecchie versioni del programma.\nD. Come riceverò le istruzioni di accesso?\nR. Le istruzioni verranno inviate dall'organizzatrice dopo la verifica dei dati tecnici. Non pubblichiamo qui un link dimostrativo.\nD. È possibile utilizzare il materiale dopo l'incontro?\nR. La disponibilità di eventuali materiali deve essere confermata dall'organizzatrice; la presente bozza non promette registrazioni né attestati.\nSTATO: testo da approvare, non comunicazione inviata. Nessun nuovo partecipante viene cercato o contattato.",
         "explanation": {
           "it": "Le risposte sono utili anche quando manca una conferma, perché non trasformano una bozza in promessa.",
           "en": "An informative FAQ can be clear without presenting unknowns as promises.",
@@ -112,6 +112,22 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "La note sépare les vérifications des décisions.",
           "es": "La entrega separa verificaciones y decisiones pendientes."
         }
+      },
+      {
+        "title": {
+          "it": "Relazione integrale sulle fonti e comunicazioni ai partecipanti",
+          "en": "Complete source-verification report and participant communications",
+          "fr": "Rapport complet de vérification des sources et des messages",
+          "es": "Informe completo de verificación de fuentes y comunicaciones"
+        },
+        "language": "it",
+        "content": "DOSSIER DI CONTROLLO DELLE INFORMAZIONI — CASO DIMOSTRATIVO\nEvento online destinato a 42 persone già iscritte. Fonti: P-v02, P-v03, E-v01 e N-04, tutte create per la simulazione. Non è stato inviato alcun messaggio né effettuato alcun reclutamento.\n\nREGISTRO DELLE FONTI\nF-01 | Programma P-v02 | Orario: 17:30 | Data di prova: 03/11 | Stato: versione precedente, non utilizzare come conferma.\nF-02 | Programma P-v03 | Orario: 18:00 | Data di prova: 05/11 | Stato: versione più recente, ma approvazione non documentata.\nF-03 | Bozza email E-v01 | Orario: 17:30 | Data di prova: 04/11 | Stato: discordante da P-v03, da bloccare.\nF-04 | Nota N-04 | Orario: non confermato | Data di prova: 06/11 | Stato: non identifica una versione definitiva.\nESITO: non esiste nello scenario una fonte autorizzata che permetta di confermare pubblicamente l'orario.\n\nBOZZA DI RISPOSTA A UN PARTECIPANTE GIÀ ISCRITTO\nOggetto: Conferma dell'orario dell'incontro — verifica in corso\nBuongiorno,\ngrazie per averci scritto. Stiamo verificando l'orario definitivo del prossimo incontro con l'organizzatrice, perché i documenti di lavoro attualmente disponibili riportano informazioni diverse.\nPer evitare di comunicarle un'indicazione non confermata, le invieremo l'orario e le istruzioni di accesso soltanto dopo aver ricevuto la versione approvata del programma.\nNon è necessario che completi una nuova iscrizione o ci invii altri dati personali.\nCordiali saluti,\nSegreteria organizzativa\nStato: bozza non inviata.\n\nEMAIL ALL'ORGANIZZATRICE — RICHIESTA DI APPROVAZIONE\nOggetto: Informazioni discordanti sul corso — conferma necessaria\nBuongiorno,\nho confrontato i quattro materiali di prova. Il programma P-v02 riporta le 17:30, mentre P-v03 indica le 18:00; la bozza E-v01 riprende il primo orario e la nota N-04 non conferma quale versione sia approvata.\nPrima di preparare il promemoria definitivo per le 42 persone già iscritte chiedo di indicare per iscritto: programma approvato, fuso orario, canale autorizzato di invio e link effettivamente utilizzabile. Non ho modificato i documenti originali né comunicato un orario ai partecipanti.\nCordiali saluti,\nSegreteria organizzativa\n\nFAQ PROVVISORIA, NON PUBBLICABILE SENZA CONFERMA\nD. A che ora inizia l'incontro?\nR. L'orario è in fase di verifica con l'organizzazione. Le persone già iscritte riceveranno una conferma attraverso il canale previsto.\nD. Dove trovo il collegamento?\nR. Il link sarà comunicato dall'organizzazione dopo le verifiche necessarie.\nD. Devo iscrivermi di nuovo?\nR. La richiesta riguarda un evento per partecipanti già iscritti. Non risulta necessaria una nuova iscrizione in questo scenario.\n\nCONSEGNA: registro delle quattro fonti, due email complete, FAQ provvisoria e lista delle decisioni aperte. Nessun orario definitivo è stato di esempio.",
+        "explanation": {
+          "it": "Confronto delle versioni discordanti, comunicazione cautelativa e nota al responsabile: nessun orario di esempio.",
+          "en": "Comparison of conflicting source versions, careful holding reply and organiser handover.",
+          "fr": "Comparaison des versions contradictoires, réponse provisoire et note à l'organisatrice.",
+          "es": "Comparación de versiones contradictorias y entrega al responsable."
+        }
       }
     ],
     "qualityChecks": [
@@ -122,10 +138,10 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
         "es": "No se confirma ningún horario no aprobado."
       },
       {
-        "it": "Tutti i riferimenti a persone e documenti sono inventati; nessuna fonte reale viene citata falsamente.",
-        "en": "All references are fictional; no real sources are falsely cited.",
-        "fr": "Les références sont fictives et clairement présentées comme telles.",
-        "es": "Todas las referencias son ficticias."
+        "it": "Tutti i riferimenti a persone e documenti sono di esempio; nessuna fonte reale viene citata falsamente.",
+        "en": "All references are illustrative; no real sources are falsely cited.",
+        "fr": "Les références sont illustratives et clairement présentées comme telles.",
+        "es": "Todas las referencias son de ejemplo."
       },
       {
         "it": "La guida riguarda partecipanti già iscritti e non il reclutamento di nuovi nominativi.",
@@ -163,10 +179,10 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
       "es": "Redacción y revisión de comunicaciones"
     },
     "scenario": {
-      "it": "Un'azienda fittizia deve informare clienti già acquisiti dell'aggiornamento della procedura di assistenza. La bozza originale usa frasi poco chiare e promette tempi di risposta e rimborsi che non risultano approvati.",
-      "en": "A fictional business needs to update existing customers about its support process. The draft contains unclear terms and unsupported response-time and refund guarantees.",
-      "fr": "Une entreprise fictive informe ses clients existants d'une nouvelle procédure. Le brouillon promet des délais sans approbation.",
-      "es": "Una empresa ficticia informa a clientes actuales sobre su proceso de ayuda, pero el borrador incluye promesas no autorizadas."
+      "it": "Un'azienda dimostrativa deve informare clienti già acquisiti dell'aggiornamento della procedura di assistenza. La bozza originale usa frasi poco chiare e promette tempi di risposta e rimborsi che non risultano approvati.",
+      "en": "An illustrative business needs to update existing customers about its support process. The draft contains unclear terms and unsupported response-time and refund guarantees.",
+      "fr": "Une entreprise illustrative informe ses clients existants d'une nouvelle procédure. Le brouillon promet des délais sans approbation.",
+      "es": "Una empresa de ejemplo informa a clientes actuales sobre su proceso de ayuda, pero el borrador incluye promesas no autorizadas."
     },
     "objective": {
       "it": "Rendere il messaggio leggibile, preciso e cortese, distinguendo la presa in carico dalla risoluzione e segnalando gli elementi da approvare.",
@@ -220,7 +236,7 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "Texte source avant révision",
           "es": "Texto antes de la revisión"
         },
-        "content": "BOZZA ORIGINALE — MATERIALE INVENTATO\nOggetto: comunicazione importante a tutti i nostri utenti!!!\nCiao a tutti, abbiamo cambiato il sistema di gestione delle richieste e da ora vi garantiamo la risposta a qualunque problema entro 24 ore. Per tutto quello che non funziona provvediamo al rimborso immediato e automatico. Vi chiediamo di scrivere al nostro indirizzo email allegando tutti i documenti che avete, anche se non sono pertinenti, così riusciamo a sapere tutto subito.\nSe non ricevete risposta, riscrivete ogni giorno e usate anche gli altri canali. Per favore non telefonate perché è tutto online. Grazie per la comprensione.\nDIAGNOSI EDITORIALE: promessa di 24 ore priva di prova; rimborsi e automatismi non verificati; raccolta eccessiva di dati; tono brusco e indicazioni contraddittorie sui canali.",
+        "content": "BOZZA ORIGINALE — MATERIALE di esempio\nOggetto: comunicazione importante a tutti i nostri utenti!!!\nCiao a tutti, abbiamo cambiato il sistema di gestione delle richieste e da ora vi garantiamo la risposta a qualunque problema entro 24 ore. Per tutto quello che non funziona provvediamo al rimborso immediato e automatico. Vi chiediamo di scrivere al nostro indirizzo email allegando tutti i documenti che avete, anche se non sono pertinenti, così riusciamo a sapere tutto subito.\nSe non ricevete risposta, riscrivete ogni giorno e usate anche gli altri canali. Per favore non telefonate perché è tutto online. Grazie per la comprensione.\nDIAGNOSI EDITORIALE: promessa di 24 ore priva di prova; rimborsi e automatismi non verificati; raccolta eccessiva di dati; tono brusco e indicazioni contraddittorie sui canali.",
         "explanation": {
           "it": "La bozza dimostra cosa correggere: linguaggio enfatico, promesse non verificate e richiesta indiscriminata di documenti.",
           "en": "The draft exposes unsupported guarantees and excessive data requests.",
@@ -238,9 +254,9 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
         "content": "VERSIONE RIVISTA — BOZZA DA APPROVARE\nOggetto: Come inviare una richiesta al servizio clienti\nGentile cliente,\nabbiamo aggiornato le modalità con cui organizziamo le richieste di assistenza, per gestirle in modo più chiaro e tracciabile. Se hai bisogno di informazioni su un ordine o su un servizio già acquistato, puoi rispondere a questa email indicando il riferimento della pratica e una breve descrizione della richiesta.\nTi chiediamo di inviare soltanto i documenti necessari alla verifica del caso. Se serviranno ulteriori dettagli, ti contatteremo attraverso il canale concordato.\nLa ricezione del messaggio non equivale alla risoluzione immediata della richiesta: tempi e possibili soluzioni verranno comunicati dopo le verifiche previste.\nGrazie per la collaborazione.\nAssistenza clienti — azienda dimostrativa\nNOTA DI LAVORO: il testo non viene inviato finché il responsabile non approva la procedura.",
         "explanation": {
           "it": "Il testo revisionato definisce il passo successivo senza inventare tempi, rimborsi o condizioni commerciali.",
-          "en": "The rewrite explains the next step without inventing response times or refund policies.",
+          "en": "The rewrite explains the next step without adding unsupported information response times or refund policies.",
           "fr": "La nouvelle version clarifie l'étape suivante sans promesse injustifiée.",
-          "es": "La versión revisada explica el procedimiento sin inventar garantías."
+          "es": "La versión revisada explica el procedimiento sin añadir datos sin confirmar garantías."
         }
       },
       {
@@ -256,6 +272,22 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "en": "Each key edit is documented with a reason.",
           "fr": "Chaque modification importante est justifiée.",
           "es": "Cada cambio importante queda documentado."
+        }
+      },
+      {
+        "title": {
+          "it": "Comunicazione definitiva da approvare, FAQ e relazione delle modifiche",
+          "en": "Complete customer notice, FAQ and editorial change report",
+          "fr": "Communication complète, FAQ et suivi des modifications",
+          "es": "Comunicación completa, preguntas frecuentes e informe editorial"
+        },
+        "language": "it",
+        "content": "PACCHETTO DI REVISIONE EDITORIALE — AZIENDA E CLIENTI di esempio\nScopo: comunicare a persone con rapporti già avviati un cambiamento nel trattamento delle richieste di assistenza. Nessun invio reale.\n\nVERSIONE REVISIONATA — EMAIL COMPLETA\nOggetto: Come inviare e seguire una richiesta al servizio clienti\nGentile cliente,\nabbiamo aggiornato le modalità con cui organizziamo i messaggi di assistenza relativi agli ordini e ai servizi già acquistati.\nPer inviarci una richiesta può utilizzare il canale di contatto indicato nelle nostre comunicazioni ufficiali. La invitiamo a descrivere brevemente il problema e, quando pertinente, a riportare il numero dell'ordine o della pratica. Non è necessario comunicare password, dati di pagamento o altre informazioni riservate non richieste.\nUna volta ricevuta la richiesta, verificheremo gli elementi disponibili e, se necessario, le chiederemo informazioni aggiuntive. Alcune questioni potrebbero richiedere il coinvolgimento del referente competente prima di una risposta definitiva.\nLe eventuali condizioni per modifiche d'ordine, resi o rimborsi saranno valutate sulla base delle procedure effettivamente applicabili. Questa comunicazione non modifica tali condizioni.\nLa ringraziamo per la collaborazione.\nCordiali saluti,\nServizio clienti\nStato: bozza dimostrativa da approvare.\n\nVERSIONE BREVE PER UNA PAGINA INFORMATIVA\nTitolo: Richieste di assistenza\nTesto: Hai un ordine già effettuato o una pratica in corso? Descrivi il problema e indica il riferimento, se disponibile. Verificheremo la richiesta e ti comunicheremo gli eventuali passaggi successivi. Non inviare password o dati di pagamento.\nPulsante: Invia una richiesta.\n\nFAQ COMPLEMENTARI\nD. Riceverò una risposta entro 24 ore?\nR. I tempi dipendono dalle modalità di assistenza effettivamente comunicate. Questa pagina non prevede una garanzia di risposta entro un termine non approvato.\nD. Il modulo autorizza automaticamente un reso?\nR. No. La ricezione di una richiesta non equivale alla sua accettazione.\nD. Devo inviare informazioni bancarie?\nR. No. Il primo messaggio non deve contenere credenziali o dati di pagamento.\n\nREGISTRO DELLE SCELTE EDITORIALI\nR-01: eliminata la promessa «risposta entro 24 ore» perché non supportata da accordi.\nR-02: rimossa ogni promessa automatica di rimborso o di risoluzione.\nR-03: sostituito il tono allarmistico con un'informazione utile.\nR-04: distinta la conferma di ricezione dalla chiusura effettiva della pratica.\nR-05: introdotta una richiesta di dati pertinente e limitata.\n\nNOTA AL RESPONSABILE\nIl testo è pronto per la valutazione editoriale. Prima dell'invio confermare canale ufficiale, procedura realmente adottata e condizioni dei servizi. Nessun cliente è stato contattato.",
+        "explanation": {
+          "it": "Una comunicazione riscritta per i clienti esistenti, con messaggi coerenti e senza promesse non autorizzate.",
+          "en": "A complete edited customer notice without example service levels or refund promises.",
+          "fr": "Message destiné aux clients existants, sans engagements non validés.",
+          "es": "Aviso a clientes actuales sin promesas de servicio no aprobadas."
         }
       }
     ],
@@ -309,9 +341,9 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un negozio online immaginario ha una pagina Assistenza per i clienti esistenti con formule vaghe, campi poco comprensibili e richieste di dati non necessarie. L'incarico riguarda esclusivamente i testi, non lo sviluppo del sito.",
-      "en": "A fictional online shop has a confusing existing-customer support page. The scope is editorial copy, not coding, layout implementation or hosting.",
-      "fr": "Une boutique fictive possède une page d'aide difficile à comprendre. Le travail porte uniquement sur les textes.",
-      "es": "Una tienda ficticia tiene una página de ayuda confusa. El encargo solo incluye redacción, no programación."
+      "en": "An illustrative online shop has a confusing existing-customer support page. The scope is editorial copy, not coding, layout implementation or hosting.",
+      "fr": "Une boutique illustrative possède une page d'aide difficile à comprendre. Le travail porte uniquement sur les textes.",
+      "es": "Una tienda de ejemplo tiene una página de ayuda confusa. El encargo solo incluye redacción, no programación."
     },
     "objective": {
       "it": "Preparare testi da inserire nel CMS: titoli, istruzioni, etichette dei campi, messaggi di conferma e FAQ, senza promettere funzionalità non verificate.",
@@ -320,15 +352,15 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
       "es": "Preparar títulos, etiquetas y FAQ para que el cliente los incorpore al sitio."
     },
     "inputs": {
-      "it": "Pagina iniziale fittizia e brief: destinatari solo clienti esistenti, canale di contatto da verificare, richiesta numero ordine facoltativa se pertinente, nessuna registrazione obbligatoria dichiarata.",
-      "en": "Fictional existing page, help-page brief and an unverified contact process.",
-      "fr": "Page fictive et procédure de contact à confirmer.",
-      "es": "Página ficticia y proceso de contacto por verificar."
+      "it": "Pagina iniziale dimostrativa e brief: destinatari solo clienti esistenti, canale di contatto da verificare, richiesta numero ordine facoltativa se pertinente, nessuna registrazione obbligatoria dichiarata.",
+      "en": "Illustrative existing page, help-page brief and an unverified contact process.",
+      "fr": "Page illustrative et procédure de contact à confirmer.",
+      "es": "Página de ejemplo y proceso de contacto por verificar."
     },
     "workflow": [
       {
         "it": "Mappare le domande principali del cliente già acquisito.",
-        "en": "Map real informational questions within the fictional brief.",
+        "en": "Map real informational questions within the illustrative brief.",
         "fr": "Lister les questions essentielles.",
         "es": "Identificar preguntas frecuentes."
       },
@@ -365,7 +397,7 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "Page initiale",
           "es": "Página original"
         },
-        "content": "ESTRATTO ORIGINALE — SITO E AZIENDA COMPLETAMENTE FITTIZI\nH1: AIUTO E ALTRO\nTesto iniziale: Per qualsiasi cosa scrivici e risolveremo tutto subito. Le risposte arrivano subito in automatico, quindi niente problemi!\nCampo: Nome / Cognome / Indirizzo completo / Telefono / Data di nascita / Codice fiscale / Numero ordine / Messaggio.\nPulsante: VAI\nMessaggio di invio: Perfetto, il problema è risolto!\nFAQ: Come si fa? — Scrivici. Quanto ci mettete? — Pochissimo. Devo inviare documenti? — Tutti.\nPROBLEMI: promessa non verificata di risposta e soluzione; etichette vaghe; dati superflui per molte richieste; messaggio di conferma che confonde l'invio con la chiusura del caso; FAQ priva di risposte utili.",
+        "content": "ESTRATTO ORIGINALE — SITO E AZIENDA COMPLETAMENTE dimostrativi\nH1: AIUTO E ALTRO\nTesto iniziale: Per qualsiasi cosa scrivici e risolveremo tutto subito. Le risposte arrivano subito in automatico, quindi niente problemi!\nCampo: Nome / Cognome / Indirizzo completo / Telefono / Data di nascita / Codice fiscale / Numero ordine / Messaggio.\nPulsante: VAI\nMessaggio di invio: Perfetto, il problema è risolto!\nFAQ: Come si fa? — Scrivici. Quanto ci mettete? — Pochissimo. Devo inviare documenti? — Tutti.\nPROBLEMI: promessa non verificata di risposta e soluzione; etichette vaghe; dati superflui per molte richieste; messaggio di conferma che confonde l'invio con la chiusura del caso; FAQ priva di risposte utili.",
         "explanation": {
           "it": "Il testo confonde l'invio di una richiesta con la sua soluzione e richiede troppe informazioni.",
           "en": "The original confuses submission with resolution and overcollects personal data.",
@@ -395,12 +427,28 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "FAQ et notes",
           "es": "FAQ y notas de integración"
         },
-        "content": "FAQ EDITORIALE PROPOSTA — AZIENDA FITTIZIA\nD. Dove trovo il numero d'ordine?\nR. Se hai ricevuto una conferma d'acquisto, verifica il riferimento riportato nel messaggio. Se non lo trovi, descrivi comunque la richiesta.\nD. Posso modificare l'ordine con questo modulo?\nR. Il modulo consente di inviare una richiesta di verifica: non modifica automaticamente ordini già effettuati. Eventuali modifiche dipendono dalle procedure approvate dall'azienda.\nD. La conferma di invio significa che il problema è risolto?\nR. No. Significa che il sistema ha accettato la richiesta, se l'invio è effettivamente andato a buon fine. La soluzione dipende dalle verifiche successive.\nNOTE PER IL RESPONSABILE WEB: confermare che il modulo invii davvero, che il messaggio di successo sia mostrato soltanto dopo esito positivo, che la gestione privacy sia corretta, che eventuali link funzionino e che non si presentino funzionalità inesistenti. L'incarico editoriale non sostituisce sviluppo, test tecnici o consulenza privacy.",
+        "content": "FAQ EDITORIALE PROPOSTA — AZIENDA dimostrativa\nD. Dove trovo il numero d'ordine?\nR. Se hai ricevuto una conferma d'acquisto, verifica il riferimento riportato nel messaggio. Se non lo trovi, descrivi comunque la richiesta.\nD. Posso modificare l'ordine con questo modulo?\nR. Il modulo consente di inviare una richiesta di verifica: non modifica automaticamente ordini già effettuati. Eventuali modifiche dipendono dalle procedure approvate dall'azienda.\nD. La conferma di invio significa che il problema è risolto?\nR. No. Significa che il sistema ha accettato la richiesta, se l'invio è effettivamente andato a buon fine. La soluzione dipende dalle verifiche successive.\nNOTE PER IL RESPONSABILE WEB: confermare che il modulo invii davvero, che il messaggio di successo sia mostrato soltanto dopo esito positivo, che la gestione privacy sia corretta, che eventuali link funzionino e che non si presentino funzionalità inesistenti. L'incarico editoriale non sostituisce sviluppo, test tecnici o consulenza privacy.",
         "explanation": {
           "it": "Le FAQ gestiscono aspettative realistiche e distinguono il lavoro editoriale dall'implementazione tecnica.",
           "en": "FAQs set truthful expectations; implementation remains outside the editing service.",
           "fr": "Les FAQ séparent le contenu de l'intégration.",
           "es": "Las FAQ separan redacción e implementación."
+        }
+      },
+      {
+        "title": {
+          "it": "Pagina Assistenza completa e messaggi del modulo",
+          "en": "Complete Help page and form messages",
+          "fr": "Page d’aide complète et messages de formulaire",
+          "es": "Página de ayuda completa y mensajes de formulario"
+        },
+        "language": "it",
+        "content": "TESTI PER UNA PAGINA «ASSISTENZA» — NEGOZIO ONLINE IMMAGINARIO\nConsegna editoriale per un sito già esistente: non comprende realizzazione di codice, moduli funzionanti o certificazioni di accessibilità.\n\nH1: Assistenza per ordini già effettuati\nIntroduzione: Hai bisogno di informazioni su un acquisto già concluso o su una richiesta in corso? Scrivici indicando il numero dell'ordine, se lo hai a disposizione, e descrivendo brevemente il problema. Il nostro team verificherà le informazioni prima di comunicarti gli eventuali passaggi successivi.\n\nH2: Per quali richieste puoi contattarci\n• Aggiornamenti sullo stato di un ordine esistente, subordinati a una verifica.\n• Chiarimenti sulle comunicazioni o sui documenti ricevuti.\n• Segnalazioni relative a un articolo o a una consegna.\n• Richieste da sottoporre a un referente competente.\nNon vengono promesse modifiche, sostituzioni o rimborsi prima della relativa approvazione.\n\nH2: Come inviare la richiesta\n1. Se disponibile e pertinente, indica il codice dell'ordine.\n2. Descrivi il problema in modo concreto e senza dati riservati non necessari.\n3. Utilizza il canale di contatto indicato dal negozio.\n4. Conserva l'eventuale numero di riferimento mostrato dopo la conferma tecnica dell'invio.\n\nFAQ COMPLETE\nD. Non trovo il numero d'ordine: posso scrivere lo stesso?\nR. Sì, descrivi la richiesta e indica le informazioni non riservate che permettano al personale autorizzato di identificare la pratica.\nD. Posso cambiare l'indirizzo di consegna dopo l'acquisto?\nR. Puoi chiedere una verifica; la possibilità di modifica dipende dallo stato dell'ordine e dalle condizioni previste.\nD. Riceverò subito un nuovo prodotto se segnalo un danno?\nR. La segnalazione verrà esaminata secondo le condizioni applicabili. Non è possibile confermare una sostituzione prima della verifica.\nD. Che cosa significa «richiesta ricevuta»?\nR. Significa che il sistema ha registrato il messaggio, non che il problema sia stato risolto.\n\nTESTI DEL MODULO\nTitolo del campo: Numero d'ordine (se pertinente).\nAiuto: Inserisci il riferimento riportato nella conferma dell'acquisto, se disponibile.\nCampo descrizione: Descrivi la tua richiesta.\nAvviso: Non inserire password o dati di pagamento.\nErrore email: Inserisci un indirizzo email valido.\nInvio in corso: Invio della richiesta in corso…\nErrore di invio: Non è stato possibile inviare il messaggio. Riprova oppure utilizza il canale email indicato.\nSuccesso, da mostrare solo dopo risposta tecnica positiva: Abbiamo ricevuto la tua richiesta.\n\nSCHEDA DI CONSEGNA PER LO SVILUPPATORE O IL PROPRIETARIO\nVerificare che tutti i testi corrispondano alle funzioni realmente disponibili, che la conferma di ricezione dipenda dall'esito dell'invio, che i collegamenti informativi siano corretti e che le informazioni sui dati personali riflettano le condizioni applicabili. Le verifiche tecniche, di sicurezza e di conformità non sono comprese nell'incarico editoriale.\n\nRISULTATO: pagina completa, quattro FAQ, etichette e messaggi di stato, con note sui limiti della pubblicazione.",
+        "explanation": {
+          "it": "Testi pronti per un sito esistente: introduzione, istruzioni, FAQ, microtesti e verifiche tecniche da affidare allo sviluppatore.",
+          "en": "Full content for an existing website, with FAQs, forms and handover limits.",
+          "fr": "Textes complets, FAQ, formulaires et limites de la prestation éditoriale.",
+          "es": "Textos completos, preguntas frecuentes, formularios y comprobaciones."
         }
       }
     ],
@@ -454,9 +502,9 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
     },
     "scenario": {
       "it": "Un'attività immaginaria che segue clienti internazionali già acquisiti deve scrivere tre email: in inglese per chiarire un codice ordine, in francese per richiedere l'approvazione di un documento, in spagnolo per proporre una modifica di appuntamento.",
-      "en": "A fictional business needs three messages for existing international customers: order clarification in English, document approval in French and a tentative appointment change in Spanish.",
-      "fr": "Une entreprise fictive rédige trois courriels pour des clients existants en anglais, français et espagnol, sans prospection.",
-      "es": "Una empresa ficticia necesita tres correos para clientes actuales en inglés, francés y español, sin captación."
+      "en": "An illustrative business needs three messages for existing international customers: order clarification in English, document approval in French and a tentative appointment change in Spanish.",
+      "fr": "Une entreprise illustrative rédige trois courriels pour des clients existants en anglais, français et espagnol, sans prospection.",
+      "es": "Una empresa de ejemplo necesita tres correos para clientes actuales en inglés, francés y español, sin captación."
     },
     "objective": {
       "it": "Mostrare comunicazioni complete, naturali e prudenti nelle tre lingue, distinguendo chiarimenti, approvazioni e appuntamenti non confermati.",
@@ -466,9 +514,9 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
     },
     "inputs": {
       "it": "Tre pratiche e tre destinatari di fantasia: ORD-041 con codice ambiguo, DOC-018 in attesa di approvazione, agenda CAL-09 senza conferma.",
-      "en": "Three wholly fictional existing-customer scenarios and no verified live order, file or calendar data.",
-      "fr": "Trois situations fictives, sans données réelles.",
-      "es": "Tres situaciones inventadas y ningún dato real."
+      "en": "Three wholly illustrative existing-customer scenarios and no verified live order, file or calendar data.",
+      "fr": "Trois situations illustratives, sans données réelles.",
+      "es": "Tres situaciones de ejemplo y ningún dato real."
     },
     "workflow": [
       {
@@ -481,7 +529,7 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
         "it": "Preparare messaggi senza introdurre fatti o autorizzazioni non verificati.",
         "en": "Draft without introducing unapproved facts.",
         "fr": "Rédiger sans inventer d'autorisations.",
-        "es": "Redactar sin inventar autorizaciones."
+        "es": "Redactar sin añadir datos sin confirmar autorizaciones."
       },
       {
         "it": "Evidenziare esattamente l'informazione richiesta al cliente.",
@@ -511,7 +559,7 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "Anglais : vérification d'une référence",
           "es": "Inglés: aclaración de pedido"
         },
-        "content": "Subject: Clarification required — order reference ORD-041\nDear Customer,\nThank you for your message regarding order ORD-041. We have reviewed the information provided and noticed that the item reference in the attachment does not match the code shown in the original order summary.\nBefore we update the internal record, could you please confirm which item reference you intended to use? There is no need to resend the full order or any unrelated personal information; the correct product code is sufficient for this check.\nWe have not changed the order or its delivery arrangements at this stage. Once we receive your clarification, we will review the next steps in accordance with the agreed procedure.\nKind regards,\nCustomer Support — fictional company\nINTERNAL STATUS: draft only; no customer contact or database update has occurred.",
+        "content": "Subject: Clarification required — order reference ORD-041\nDear Customer,\nThank you for your message regarding order ORD-041. We have reviewed the information provided and noticed that the item reference in the attachment does not match the code shown in the original order summary.\nBefore we update the internal record, could you please confirm which item reference you intended to use? There is no need to resend the full order or any unrelated personal information; the correct product code is sufficient for this check.\nWe have not changed the order or its delivery arrangements at this stage. Once we receive your clarification, we will review the next steps in accordance with the agreed procedure.\nKind regards,\nCustomer Support — illustrative company\nINTERNAL STATUS: draft only; no customer contact or database update has occurred.",
         "explanation": {
           "it": "La richiesta evita modifiche non autorizzate e non pretende documenti superflui.",
           "en": "The email asks for one precise detail without changing the order.",
@@ -527,7 +575,7 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "Français : demande de validation",
           "es": "Francés: aprobación documental"
         },
-        "content": "Objet : Document DOC-018 — demande de validation de la version révisée\nBonjour,\nNous vous transmettons, pour examen, la version révisée du document DOC-018. Les modifications proposées concernent uniquement la présentation des informations et les références que vous nous aviez signalées. Aucun changement supplémentaire ne sera considéré comme accepté sans votre confirmation.\nPourriez-vous vérifier cette version et nous indiquer, en réponse à ce courriel, si elle peut être validée ou si vous souhaitez apporter d'autres corrections ? Si certains éléments nécessitent une décision de votre part, nous les laisserons en attente jusqu'à réception de vos instructions.\nLa version jointe reste un projet de travail et ne doit pas être considérée comme un document approuvé.\nBien cordialement,\nÉquipe de coordination — entreprise fictive\nSTATUT INTERNE : projet non envoyé, validation à obtenir.",
+        "content": "Objet : Document DOC-018 — demande de validation de la version révisée\nBonjour,\nNous vous transmettons, pour examen, la version révisée du document DOC-018. Les modifications proposées concernent uniquement la présentation des informations et les références que vous nous aviez signalées. Aucun changement supplémentaire ne sera considéré comme accepté sans votre confirmation.\nPourriez-vous vérifier cette version et nous indiquer, en réponse à ce courriel, si elle peut être validée ou si vous souhaitez apporter d'autres corrections ? Si certains éléments nécessitent une décision de votre part, nous les laisserons en attente jusqu'à réception de vos instructions.\nLa version jointe reste un projet de travail et ne doit pas être considérée comme un document approuvé.\nBien cordialement,\nÉquipe de coordination — entreprise illustrative\nSTATUT INTERNE : projet non envoyé, validation à obtenir.",
         "explanation": {
           "it": "Il francese distingue proposta, revisione e approvazione definitiva.",
           "en": "The French text distinguishes an edited draft from an approved document.",
@@ -543,12 +591,28 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
           "fr": "Espagnol : proposition de rendez-vous",
           "es": "Español: propuesta de horario"
         },
-        "content": "Asunto: Propuesta de cambio de horario — referencia CAL-09\nEstimado/a cliente:\nHemos recibido su solicitud relativa a la reunión prevista en la referencia CAL-09. Antes de realizar cualquier cambio en la agenda, necesitamos comprobar las disponibilidades y confirmar con usted la alternativa que resulte adecuada.\nPor el momento, la cita acordada anteriormente sigue vigente. En cuanto dispongamos de una opción verificada, se la comunicaremos para que pueda aceptarla o proponer otra posibilidad. No consideraremos modificada la reunión hasta que ambas partes hayan confirmado el nuevo horario.\nGracias por su comprensión. Quedamos a su disposición para cualquier aclaración relacionada con esta cita.\nAtentamente,\nSecretaría de coordinación — empresa ficticia\nESTADO INTERNO: borrador pendiente de aprobación; no se ha modificado ninguna reserva.",
+        "content": "Asunto: Propuesta de cambio de horario — referencia CAL-09\nEstimado/a cliente:\nHemos recibido su solicitud relativa a la reunión prevista en la referencia CAL-09. Antes de realizar cualquier cambio en la agenda, necesitamos comprobar las disponibilidades y confirmar con usted la alternativa que resulte adecuada.\nPor el momento, la cita acordada anteriormente sigue vigente. En cuanto dispongamos de una opción verificada, se la comunicaremos para que pueda aceptarla o proponer otra posibilidad. No consideraremos modificada la reunión hasta que ambas partes hayan confirmado el nuevo horario.\nGracias por su comprensión. Quedamos a su disposición para cualquier aclaración relacionada con esta cita.\nAtentamente,\nSecretaría de coordinación — empresa de ejemplo\nESTADO INTERNO: borrador pendiente de aprobación; no se ha modificado ninguna reserva.",
         "explanation": {
           "it": "Il testo spagnolo non scambia la proposta di modifica per un appuntamento confermato.",
           "en": "The Spanish email preserves the original meeting until both parties agree.",
           "fr": "Le rendez-vous initial reste maintenu.",
           "es": "La cita original se mantiene hasta la confirmación."
+        }
+      },
+      {
+        "title": {
+          "it": "Registro multilingue dei tre messaggi e nota di revisione",
+          "en": "Multilingual email register and quality-review handover",
+          "fr": "Registre des trois courriels et note de révision",
+          "es": "Registro de los tres correos y revisión lingüística"
+        },
+        "language": "it",
+        "content": "REGISTRO DI CORRISPONDENZA MULTILINGUE — TUTTI I DATI SONO di esempio\nScenario: tre clienti già acquisiti, tre pratiche indipendenti e tre messaggi interamente predisposti in inglese, francese e spagnolo. Nessun messaggio è stato inviato.\n\nEN — ORD-041\nLingua e destinatario: inglese britannico, cliente esistente.\nOggetto: Clarification required — order reference ORD-041.\nFunzione: richiedere la verifica di un codice articolo senza assumere che il cliente abbia commesso un errore.\nControlli: mantenere invariato ORD-041; distinguere la presa in carico dalla conferma dell'ordine; non dichiarare modifiche o spedizioni già effettuate.\nStato: testo inglese completo redatto, in attesa di approvazione.\n\nFR — DOC-018\nLingua e destinatario: francese professionale, referente che deve esaminare un documento.\nOggetto: Document DOC-018 — demande de validation de la version révisée.\nFunzione: trasmettere una versione da sottoporre a verifica, non presentarla come già approvata.\nControlli: coerenza fra «version révisée» e «validation»; corretta distinzione tra approvazione richiesta e ottenuta; registro di cortesia uniforme.\nStato: email francese completa redatta, in attesa di approvazione.\n\nES — CAL-09\nLingua e destinatario: spagnolo professionale, cliente esistente.\nOggetto: Propuesta de cambio de horario — referencia CAL-09.\nFunzione: proporre una verifica di disponibilità senza modificare l'agenda.\nControlli: conservare CAL-09; distinguere data proposta da data confermata; non dichiarare prenotazioni modificate.\nStato: email spagnola completa redatta, in attesa di approvazione.\n\nNOTA DI CONSEGNA INTERNA — TESTO INTEGRALE\nOggetto: Tre comunicazioni a clienti esistenti — verifica linguistica e operativa\nBuongiorno,\nho predisposto tre bozze in lingue diverse, relative a pratiche già avviate. Nell'email inglese ho mantenuto una richiesta di chiarimento precisa, evitando di attribuire responsabilità al cliente. In francese ho distinto esplicitamente la revisione del documento dalla sua approvazione. In spagnolo ho presentato la riprogrammazione come proposta da verificare e non come appuntamento già modificato.\nHo verificato la coerenza dei codici ORD-041, DOC-018 e CAL-09, il registro di cortesia e le indicazioni che richiedono autorizzazione. I tre messaggi non includono promesse di risposta immediata, impegni economici o operazioni già eseguite.\nPer procedere servono le conferme dei referenti competenti: codice ordine corretto, versione del documento da validare e disponibilità effettiva in agenda. Nessuna email è stata inviata durante la simulazione.\nCordiali saluti,\nSupporto alle comunicazioni multilingue\n\nESITO: tre email effettive consultabili, registro quadrilingue di accompagnamento e nota di revisione. Il lavoro mostra scrittura e gestione di comunicazioni, non telemarketing, reclutamento o acquisizione clienti.",
+        "explanation": {
+          "it": "Controllo integrato su inglese, francese e spagnolo: richieste, stato, tono e autorizzazioni prima dell'invio.",
+          "en": "Joined-up review of three complete customer messages, terminology and approvals.",
+          "fr": "Vérification des trois messages, du registre et des validations.",
+          "es": "Revisión de tres mensajes, registro y autorizaciones."
         }
       }
     ],
@@ -567,9 +631,9 @@ export const OPERATIONAL_SAMPLES_D: OperationalDeepCase[] = [
       },
       {
         "it": "I testi sono bozze dimostrative, non corrispondenza inviata.",
-        "en": "All content remains fictional and unsent.",
-        "fr": "Tous les messages sont fictifs et non envoyés.",
-        "es": "Todos son borradores ficticios."
+        "en": "All content remains illustrative and unsent.",
+        "fr": "Tous les messages sont illustratifs et non envoyés.",
+        "es": "Todos son borradores de ejemplo."
       }
     ],
     "limits": {

@@ -189,31 +189,31 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
     serviceKey: 'translation',
     serviceId: CONCIERGE_TO_OFFICIAL_SERVICE_ID.translation,
     title: {
-      it: 'Traduzione e localizzazione verso l’italiano',
-      en: 'Translation and Localisation into Italian',
-      fr: 'Traduction et localisation vers l’italien',
-      es: 'Traducción y localización al italiano',
+      it: 'Traduzioni IT ↔ EN/FR/ES e localizzazione',
+      en: 'IT ↔ EN/FR/ES Translation and Localisation',
+      fr: 'Traduction IT ↔ EN/FR/ES et localisation',
+      es: 'Traducción IT ↔ EN/FR/ES y localización',
     },
     shortDescription: {
-      it: 'Traduzione EN/FR/ES → IT, revisione e localizzazione per il mercato italiano',
-      en: 'EN/FR/ES → IT translation, Italian editing and market localisation',
-      fr: 'Traduction FR/EN/ES → IT, révision et localisation pour le marché italien',
-      es: 'Traducción ES/EN/FR → IT, revisión y localización para el mercado italiano',
+      it: 'Traduzioni tra italiano e inglese, francese o spagnolo in entrambe le direzioni; revisione e localizzazione',
+      en: 'Translation between Italian and English, French or Spanish in both directions, editing and localisation',
+      fr: 'Traduction entre l’italien et l’anglais, le français ou l’espagnol dans les deux sens ; révision et localisation',
+      es: 'Traducción del italiano al inglés, francés o español y viceversa, revisión y localización',
     },
     questions: [
       {
         id: 'language_pair',
         prompt: {
-          it: 'Da quale lingua desideri tradurre verso l’italiano?',
-          en: 'Which language would you like to translate into Italian?',
-          fr: 'Depuis quelle langue souhaitez-vous traduire vers l’italien ?',
-          es: '¿Desde qué idioma necesitas traducir al italiano?',
+          it: 'Qual è la combinazione linguistica della traduzione?',
+          en: 'Which translation language pair do you need?',
+          fr: 'Quelle combinaison linguistique souhaitez-vous pour la traduction ?',
+          es: '¿Qué combinación de idiomas necesitas para la traducción?',
         },
         placeholder: {
-          it: 'Seleziona una lingua di partenza',
-          en: 'Choose the source language',
-          fr: 'Choisissez la langue source',
-          es: 'Selecciona el idioma de origen',
+          it: 'Seleziona la coppia linguistica',
+          en: 'Select a language pair',
+          fr: 'Choisissez la combinaison linguistique',
+          es: 'Selecciona el par de idiomas',
         },
         choices: [
           {
@@ -243,6 +243,15 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
               es: 'Español → Italiano',
             },
           },
+          {
+            id: 'it_to_en', label: {it:'Italiano → Inglese',en:'Italian → English',fr:'Italien → Anglais',es:'Italiano → Inglés'},
+          },
+          {
+            id: 'it_to_fr', label: {it:'Italiano → Francese',en:'Italian → French',fr:'Italien → Français',es:'Italiano → Francés'},
+          },
+          {
+            id: 'it_to_es', label: {it:'Italiano → Spagnolo',en:'Italian → Spanish',fr:'Italien → Espagnol',es:'Italiano → Español'},
+          },
         ],
         allowCustomText: false,
       },
@@ -258,19 +267,19 @@ export const INTAKE_SCHEMAS: Record<ServiceKey, ServiceIntakeSchema> = {
           {
             id: 'translation_general',
             label: {
-              it: 'Traduzione generale & adattamento (da 0,09 €/parola)',
-              en: 'General translation & adaptation (from €0.09/word)',
-              fr: 'Traduction générale & adaptation (dès 0,09 €/mot)',
-              es: 'Traducción general y adaptación (desde 0,09 €/palabra)',
+              it: 'Traduzione generale e adattamento (tariffa da definire per coppia linguistica)',
+              en: 'General translation and adaptation (rate depends on language pair)',
+              fr: 'Traduction générale et adaptation (tarif selon la combinaison linguistique)',
+              es: 'Traducción general y adaptación (tarifa según los idiomas)',
             },
           },
           {
             id: 'translation_specialized',
             label: {
-              it: 'Traduzione specialistica / tecnica EN ↔ IT (da 0,12 €/parola)',
-              en: 'Specialized / technical translation EN ↔ IT (from €0.12/word)',
-              fr: 'Traduction spécialisée / technique EN ↔ IT (dès 0,12 €/mot)',
-              es: 'Traducción especializada / técnica EN ↔ IT (desde 0,12 €/palabra)',
+              it: 'Traduzione specialistica / tecnica (prezzo dopo esame del testo)',
+              en: 'Specialist translation (quoted after source review)',
+              fr: 'Traduction spécialisée (devis après examen du texte)',
+              es: 'Traducción especializada (presupuesto tras evaluar el texto)',
             },
           },
           {

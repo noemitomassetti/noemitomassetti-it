@@ -4,8 +4,8 @@ export const itPosts = [
   {
     id: 11,
     slug: "sito-web-o-landing-page",
-    title: "Sito web o landing page? Come capire di cosa ha davvero bisogno la tua attività",
-    excerpt: "Sito web o landing page? Scopri quale soluzione può essere più adatta alla tua attività, ai tuoi obiettivi e alla tua presenza online.",
+    title: "Sito web o landing page? Valutare i contenuti di cui hai bisogno",
+    excerpt: "Come scegliere una struttura informativa adatta alla tua attività e preparare testi chiari per il pubblico a cui ti rivolgi.",
     date: "31 agosto 2026",
     dateISO: "2026-08-31",
     category: "Comunicazione e Presenza Online",
@@ -112,8 +112,8 @@ export const itPosts = [
   { 
     id: 1, 
     slug: "come-organizzare-la-tua-agenda-in-5-step",
-    title: "Come organizzare la tua agenda in 5 step", 
-    excerpt: "Gestire un'agenda piena di appuntamenti senza sentirsi in affanno è possibile. Scopri come trasformare il caos in un sistema ordinato e sostenibile per la tua attività.", 
+    title: "Organizzare l'agenda: cinque passaggi pratici", 
+    excerpt: "Cinque abitudini per coordinare appuntamenti, scadenze e attività senza riempire ogni momento della giornata.", 
     date: "04 maggio 2026", 
     dateISO: "2026-05-04",
     category: "Organizzazione",
@@ -165,8 +165,8 @@ export const itPosts = [
   { 
     id: 2, 
     slug: "perche-delegare-e-la-scelta-piu-efficace-per-far-crescere-la-tua-attivita",
-    title: "Perché delegare è la scelta più efficace per far crescere la tua attività", 
-    excerpt: "Smetti di rincorrere le urgenze e inizia a guidare la tua attività. Scopri come la delega strategica può liberare il tuo tempo e le tue energie per ciò che conta davvero.", 
+    title: "Delegare attività operative senza perdere il controllo", 
+    excerpt: "Come definire compiti, responsabilità e verifiche prima di affidare a una collaboratrice le attività ricorrenti.", 
     date: "20 aprile 2026", 
     dateISO: "2026-04-20",
     category: "Mindset",
@@ -210,8 +210,8 @@ export const itPosts = [
   { 
     id: 3, 
     slug: "5-strumenti-gratuiti-utili-per-organizzare-meglio-il-lavoro-con-clienti-e-appuntamenti",
-    title: "5 strumenti gratuiti utili per organizzare meglio il lavoro con clienti e appuntamenti", 
-    excerpt: "La tecnologia può essere la tua migliore alleata. Scopri 5 strumenti gratuiti e intuitivi che semplificheranno la tua gestione quotidiana e libereranno il tuo tempo.", 
+    title: "5 strumenti digitali per gestire attività e appuntamenti", 
+    excerpt: "Calendari, prenotazioni, documenti, riunioni e gestione delle attività: come valutare le funzionalità e i limiti dei diversi piani.", 
     date: "06 aprile 2026", 
     dateISO: "2026-04-06",
     category: "Strumenti",
@@ -268,8 +268,8 @@ export const itPosts = [
   { 
     id: 4, 
     slug: "gestione-email-come-organizzare-la-posta-in-arrivo-e-riprendere-il-controllo-del-tuo-tempo",
-    title: "Gestione Email: come organizzare la posta in arrivo e riprendere il controllo del tuo tempo", 
-    excerpt: "Scopri come trasformare la tua casella di posta da fonte di distrazione a strumento organizzato ed efficiente con 5 strategie pratiche e immediate.", 
+    title: "Gestire le email: un metodo per organizzare la posta in arrivo", 
+    excerpt: "Come distinguere messaggi urgenti, risposte da preparare e attività da monitorare con un metodo sostenibile.", 
     date: "18 maggio 2026", 
     dateISO: "2026-05-18",
     category: "Organizzazione",
@@ -364,8 +364,8 @@ export const itPosts = [
   { 
     id: 5, 
     slug: "supporto-multilingue-come-gestire-richieste-e-comunicazioni-in-inglese-francese-e-spagnolo",
-    title: "Supporto multilingue: comunica in modo professionale anche oltre i confini italiani", 
-    excerpt: "Hai mai ricevuto una richiesta in lingua straniera e non hai saputo come rispondere? Scopri come un supporto multilingue flessibile può aiutarti a comunicare in modo professionale oltre i confini italiani.", 
+    title: "Comunicazioni multilingue: scegliere lingua, tono e contesto", 
+    excerpt: "Come rendere più chiare e naturali le comunicazioni con interlocutori internazionali, rispettando il destinatario e lo scopo del messaggio.", 
     date: "01 giugno 2026",
     dateISO: "2026-06-01",
     category: "Comunicazione",
@@ -422,8 +422,8 @@ export const itPosts = [
   { 
     id: 6, 
     slug: "organizzare-un-corso-online-la-checklist-operativa-per-non-dimenticare-nulla",
-    title: "Organizzare un corso online: la checklist operativa per non dimenticare nulla", 
-    excerpt: "Lanciare un corso o un percorso online richiede metodo e precisione. Ecco la guida operativa per gestire iscrizioni, materiali e comunicazioni senza stress.", 
+    title: "Organizzare un corso online: una checklist operativa", 
+    excerpt: "Materiali, iscrizioni, informazioni di accesso e comunicazioni: i passaggi da predisporre prima dell'avvio.", 
     date: "15 giugno 2026", 
     dateISO: "2026-06-15",
     category: "Organizzazione",
@@ -436,8 +436,8 @@ export const itPosts = [
       <h3>1. Gestione pre-lancio e iscrizioni automatizzate</h3>
       <p>Il caos organizzativo inizia spesso nella fase di vendita. È fondamentale avere un sistema chiaro e testato per raccogliere i dati degli iscritti, confermare l'avvenuto pagamento e inviare immediatamente un'email di benvenuto.</p>
       <ul>
-        <li><strong>Automazione del benvenuto:</strong> Un'email automatica che spieghi chiaramente i prossimi passi riduce del 50% le domande di assistenza e rassicura subito il cliente.</li>
-        <li><strong>Gestione fatturazione:</strong> Assicurati che i sistemi di pagamento e la generazione delle ricevute siano snelli e tracciabili.</li>
+        <li><strong>Automazione del benvenuto:</strong> Un messaggio di benvenuto che spieghi i prossimi passi può prevenire domande ripetitive e chiarire a chi rivolgersi in caso di difficoltà.</li>
+        <li><strong>Passaggi amministrativi separati:</strong> indica chiaramente quale referente autorizzato gestisce pagamenti, ricevute e fatture, mantenendo distinta la segreteria organizzativa.</li>
       </ul>
 
       <h3>2. Organizzazione dei materiali e della piattaforma</h3>
@@ -460,14 +460,15 @@ export const itPosts = [
 
       <h3>In conclusione</h3>
       <p>Un corso online di successo è il risultato di ottimi contenuti uniti a un'organizzazione impeccabile. Delegando la parte operativa e di back-office a un'assistente virtuale, potrai vivere il lancio del tuo corso con serenità e mantenere il focus al 100% sui tuoi studenti. Scopri il mio <a href="/it/servizi" class="text-primary hover:underline">servizio di Supporto per Corsi</a>.</p>
+      <h3>Una prova completa prima dell'apertura delle iscrizioni</h3><p>Prima di comunicare la data di partenza, percorri l'esperienza dal punto di vista di un partecipante. Apri il messaggio di benvenuto su un telefono, controlla che il calendario riporti correttamente il fuso orario, prova il collegamento alla lezione e verifica che i materiali siano leggibili anche senza installare programmi particolari. Se il corso prevede incontri in diretta, prepara una procedura per inviare il link corretto e per gestire chi comunica di non averlo ricevuto.</p><p>Immagina una partecipante che scrive dieci minuti prima della lezione: «Ho ricevuto due link diversi, quale devo usare?». Un'organizzazione efficace consente di individuare subito la versione approvata e rispondere senza improvvisare. È utile definire in anticipo chi può dare indicazioni tecniche, chi decide su eventuali recuperi e quando una richiesta deve essere inoltrata al docente o al responsabile del corso.</p><h3>Dopo la lezione: il lavoro che evita problemi al modulo successivo</h3><p>La gestione non finisce quando si chiude la videoconferenza. Occorre verificare che eventuali materiali promessi siano stati condivisi, registrare le richieste ancora aperte e aggiornare il calendario delle comunicazioni. Una breve verifica settimanale permette di distinguere gli intoppi ricorrenti dai casi isolati. Il supporto di segreteria può occuparsi di elenchi, messaggi, materiali e promemoria secondo istruzioni approvate; pagamenti, fatture e decisioni commerciali restano invece in carico ai soggetti competenti.</p>
       <p>Sei pronto a lanciare il tuo percorso ma la parte tecnica e organizzativa ti frena? <a href="/it/contatti#contact-section" class="text-primary font-bold hover:underline">Raccontami le tue esigenze e richiedi un preventivo scritto</a>: struttureremo insieme il supporto operativo ideale per il tuo prossimo successo.</p>
     `
   },
   { 
     id: 7, 
     slug: "come-preparare-la-tua-attivita-per-le-ferie-estive-senza-stress",
-    title: "Come organizzare il lavoro prima delle ferie estive senza stress", 
-    excerpt: "Non aspettare l'ultimo minuto per organizzare la tua assenza. Scopri le strategie per organizzare il lavoro prima di andare in vacanza e come un'Assistente Virtuale può gestire email e clienti mentre tu ti riposi.", 
+    title: "Preparare le attività prima delle ferie: una guida pratica", 
+    excerpt: "Quali richieste, scadenze e comunicazioni organizzare per una pausa senza lasciare questioni operative in sospeso.", 
     date: "15 giugno 2026", 
     dateISO: "2026-06-15",
     category: "Organizzazione",
@@ -551,8 +552,8 @@ export const itPosts = [
   { 
     id: 8, 
     slug: "customer-care-come-migliorare-esperienza-dei-tuoi-clienti-fin-dal-primo-contatto",
-    title: "Customer Care: come migliorare l'esperienza dei tuoi clienti fin dal primo contatto", 
-    excerpt: "Il customer care non è solo risolvere problemi, ma far sentire i clienti accolti fin dal primo momento. Scopri come migliorare il tuo servizio e perché delegarlo può fare la differenza.", 
+    title: "Assistenza clienti: l'importanza di una prima risposta chiara", 
+    excerpt: "Indicazioni pratiche per rispondere ai clienti in modo accurato, coerente e rispettoso dei tempi concordati.", 
     date: "29 giugno 2026", 
     dateISO: "2026-06-29",
     category: "Gestione Clienti",
@@ -683,8 +684,8 @@ export const itPosts = [
   { 
     id: 9, 
     slug: "disdette-ultimo-minuto-come-gestirle-senza-stress",
-    title: "Disdette dell'ultimo minuto: come gestirle senza stress e senza perdere clienti", 
-    excerpt: "Le disdette improvvise possono creare vuoti in agenda, farti perdere tempo e incidere sul fatturato della tua attività. Con qualche accorgimento e un'organizzazione efficace puoi ridurre gli imprevisti.", 
+    title: "Disdette e cambi di appuntamento: come gestirli con chiarezza", 
+    excerpt: "Condizioni concordate, comunicazioni cortesi e aggiornamenti dell'agenda quando un appuntamento viene annullato o spostato.", 
     date: "13 luglio 2026", 
     dateISO: "2026-07-13",
     category: "Gestione Clienti",
@@ -796,8 +797,8 @@ export const itPosts = [
   {
     id: 10,
     slug: "come-organizzare-agenda-libero-professionista",
-    title: "Come organizzare l'agenda di un libero professionista senza sentirsi sempre di corsa",
-    excerpt: "Scopri come organizzare la tua agenda, gestire meglio gli appuntamenti e recuperare tempo con strategie pratiche pensate per liberi professionisti.",
+    title: "L'agenda di un libero professionista: trovare un ritmo sostenibile",
+    excerpt: "Un metodo per organizzare appuntamenti, lavoro concentrato e richieste impreviste senza sovraccaricare la settimana.",
     date: "27 luglio 2026",
     dateISO: "2026-07-27",
     category: "Organizzazione",
@@ -847,10 +848,10 @@ export const itPosts = [
   {
     id: 12,
     slug: "desk-research-ricerche-online-metodo",
-    title: "Desk Research e Ricerche Online: Come Raccogliere, Verificare e Sintetizzare Dati per Decisioni Strategiche",
-    excerpt: "Nel mare magnum del web, trovare dati affidabili richiede metodo. Scopri come impostare ricerche mirate, validare le fonti e strutturare report di sintesi operativi per la tua attività.",
-    date: "Settembre 2026",
-    dateISO: "2026-09-01",
+    title: "Ricerche online: come verificare le fonti e sintetizzare i risultati",
+    excerpt: "Un metodo per raccogliere informazioni pubbliche, confrontare fonti e preparare sintesi utili a progetti già definiti.",
+    date: "14 settembre 2026",
+    dateISO: "2026-09-14",
     category: "Ricerche e Dati",
     image: "https://vibe.filesafe.space/1776423224485175331/assets/2b1b861e-80f0-4b85-9f25-b2156af0871d.png",
     alt: "Desk research e ricerche online: metodo e strumenti",
@@ -883,16 +884,17 @@ export const itPosts = [
         <li><strong>Riferimenti e link diretti:</strong> ogni dato numerico deve avere un link verificabile alla fonte originaria, garantendo trasparenza e tracciabilità.</li>
       </ul>
 
+      <h3>Esempio: confrontare tre servizi senza confondere le condizioni</h3><p>Supponiamo che una piccola attività debba scegliere un software per fissare appuntamenti con clienti italiani e stranieri. Cercare «miglior calendario online» non basta: i risultati possono mescolare pubblicità, recensioni datate e funzioni riservate ai piani a pagamento. Un confronto utile parte da esigenze misurabili: numero di calendari da collegare, gestione dei fusi orari, possibilità di inviare conferme in più lingue, esportazione dei dati e modalità di assistenza.</p><p>Per ogni soluzione conviene raccogliere il collegamento alla documentazione ufficiale, la data della verifica, il piano a cui si riferisce la funzione e l'eventuale limite ancora da chiarire. Le recensioni possono segnalare difficoltà pratiche, ma non sostituiscono le condizioni del fornitore. Se un dato non è disponibile, va indicato come «da confermare», non trasformato in una conclusione.</p><h3>Una sintesi che aiuti davvero a decidere</h3><p>Il risultato migliore non è necessariamente un documento lungo. Può essere una tabella essenziale accompagnata da poche righe che spieghino quali opzioni rispondono ai criteri stabiliti, quali comportano compromessi e quali verifiche mancano. Separare fatti, valutazioni e raccomandazioni rende la ricerca riutilizzabile anche dopo settimane, quando cambiano i prezzi o arriva una nuova esigenza. La ricerca di informazioni a supporto di attività già avviate è diversa dalla ricerca di contatti finalizzata ad acquisire nuovi clienti: obiettivo e perimetro vanno definiti prima di iniziare.</p>
       <p>Se devi prendere decisioni strategiche per la tua attività o preparare una proposta commerciale ma non hai il tempo di passare ore a setacciare il web, posso supportarti con <a href="/it/servizi" class="text-primary font-bold hover:underline">ricerche online strutturate e report di benchmark su misura</a>.</p>
     `
   },
   {
     id: 13,
     slug: "procedure-operative-standard-sop-delega",
-    title: "Procedure Operative Standard (SOP): Come Documentare i Processi del Back Office per Delegare con Successo",
-    excerpt: "Documentare come si fanno le cose non è burocrazia: è la chiave per delegare senza ansia, eliminare errori ripetitivi e garantire continuità alla tua attività anche quando sei assente.",
-    date: "Settembre 2026",
-    dateISO: "2026-09-02",
+    title: "Procedure operative: documentare le attività da delegare",
+    excerpt: "Come descrivere le attività ricorrenti, definire i controlli e chiarire quando è necessaria un'approvazione.",
+    date: "28 settembre 2026",
+    dateISO: "2026-09-28",
     category: "Organizzazione e Processi",
     image: "https://vibe.filesafe.space/1776423224485175331/assets/2b1b861e-80f0-4b85-9f25-b2156af0871d.png",
     alt: "Procedure operative standard e documentazione di processo",
@@ -927,16 +929,17 @@ export const itPosts = [
       
       <p>Un'assistente virtuale organizzata potrà poi trascrivere la registrazione, trasformarla in una checklist scritta su Notion, Google Docs o Trello, e mantenerla aggiornata nel tempo.</p>
 
-      <p>Vuoi mappare i flussi della tua attività e creare procedure chiare per liberare il tuo tempo? <a href="/it/contatti#contact-section" class="text-primary font-bold hover:underline">Contattami per una consulenza conoscitiva gratuita di 30 minuti</a>: metterò a tua disposizione la mia esperienza ventennale nell'organizzazione operativa.</p>
+      <h3>Un esempio di procedura: confermare un appuntamento</h3><p>Immagina uno studio professionale che riceve richieste di modifica degli appuntamenti. Una procedura utile non si limita a «controllare l'agenda». Indica quale calendario consultare, come verificare che la richiesta provenga da un cliente già in carico, quali disponibilità possono essere comunicate e chi autorizza eventuali eccezioni. Specifica inoltre il modello di messaggio da utilizzare, il luogo in cui registrare la conferma e il momento in cui considerare chiusa l'attività.</p><p>È importante prevedere anche i casi fuori standard. Che cosa succede se due persone chiedono la stessa fascia oraria? Se il cliente scrive in francese ma l'appuntamento si svolgerà in Italia, quale lingua usare per la conferma? Se mancano informazioni, chi deve essere interpellato prima di rispondere? Sono proprio questi passaggi, spesso lasciati sottintesi, a generare errori quando il lavoro viene delegato.</p><h3>Provare la procedura con una persona che non l'ha scritta</h3><p>Il controllo più efficace consiste nel far seguire le istruzioni a qualcuno che non conosce già l'attività. Dove si ferma? Quale termine è ambiguo? Quale autorizzazione viene data per scontata? Le risposte indicano che cosa modificare. Una procedura non è un documento immutabile: deve avere un responsabile, una data di revisione e una versione riconoscibile. Per un piccolo team bastano spesso poche pagine chiare, esempi di comunicazioni approvate e una checklist finale.</p>
+      <p>Vuoi mappare i flussi della tua attività e creare procedure chiare per liberare il tuo tempo? <a href="/it/contatti#contact-section" class="text-primary font-bold hover:underline">Richiedi un preventivo scritto</a> per definire il supporto operativo più adatto alla tua attività.</p>
     `
   },
   {
     id: 14,
     slug: "collaborazione-remoto-sicurezza-digitale",
-    title: "Collaborazione da Remoto e Sicurezza Digitale: Gestire Accessi, Password e Riservatezza Senza Rischi",
-    excerpt: "Come condividere credenziali, gestire cartelle cloud e tutelare i dati riservati dei tuoi clienti quando collabori a distanza con un'assistente virtuale o fornitori esterni.",
-    date: "Settembre 2026",
-    dateISO: "2026-09-03",
+    title: "Collaborare da remoto: accessi, documenti e riservatezza",
+    excerpt: "Buone pratiche per condividere materiali di lavoro, limitare i permessi e proteggere le informazioni trattate a distanza.",
+    date: "12 ottobre 2026",
+    dateISO: "2026-10-12",
     category: "Supporto Digitale e Sicurezza",
     image: "https://vibe.filesafe.space/1776423224485175331/assets/2b1b861e-80f0-4b85-9f25-b2156af0871d.png",
     alt: "Collaborazione remota sicura e protezione dati aziendali",
@@ -945,7 +948,7 @@ export const itPosts = [
       
       <p><em>“Come posso condividere i miei account, le caselle email o i file dei miei clienti garantendo la massima sicurezza e riservatezza?”</em></p>
 
-      <p>È una domanda legittima e doverosa. Condividere password su WhatsApp o inviare credenziali in chiaro via email sono pratiche rischiose che mettono in pericolo la sicurezza informatica e violano le normative sulla privacy (GDPR). Fortunatamente, oggi esistono protocolli consolidati e strumenti semplici per collaborare a distanza con assoluta tranquillità.</p>
+      <p>È una domanda legittima e doverosa. Condividere password in chiaro su WhatsApp o via email aumenta il rischio di accessi non autorizzati. Esistono strumenti e procedure che aiutano a limitare questi rischi, ma la riservatezza richiede attenzione costante.</p>
 
       <h3>1. Non condividere mai password in chiaro: usa un Password Manager</h3>
       <p>Il primo pilastro della sicurezza remota è l'eliminazione dei file di testo con elenchi di password. Utilizzare un password manager professionale (come 1Password, Bitwarden o Dashlane) consente di:</p>
@@ -966,14 +969,94 @@ export const itPosts = [
       <p>La sicurezza digitale non è solo una questione di software, ma anche di responsabilità professionale e giuridica. Prima di avviare una collaborazione operativa continuativa, è fondamentale formalizzare:</p>
       <ul>
         <li><strong>Accordo di Riservatezza (Non-Disclosure Agreement - NDA):</strong> tutela le informazioni riservate, i listini commerciali, i dati dei tuoi clienti e il know-how aziendale.</li>
-        <li><strong>Nomina a Responsabile del Trattamento (Art. 28 GDPR):</strong> definisce formalmente i limiti e le modalità con cui l'assistente virtuale tratta i dati personali per tuo conto.</li>
+        <li><strong>Ruoli privacy e accordi:</strong> se il tipo di collaborazione lo richiede, i ruoli e gli accordi sul trattamento dei dati personali devono essere definiti in conformità alla normativa applicabile, con il supporto dei professionisti competenti.</li>
       </ul>
 
       <h3>La mia garanzia di serietà professionale</h3>
-      <p>Nel mio lavoro quotidiano con liberi professionisti e aziende, la riservatezza e la sicurezza dei dati non sono un dettaglio accessorio, ma la base stessa della fiducia. Utilizzo esclusivamente connessioni protette, ambienti cloud criptati e rigorosi standard di conservazione dei file.</p>
+      <p>Nel mio lavoro quotidiano con liberi professionisti e aziende, la riservatezza e la sicurezza dei dati non sono un dettaglio accessorio, ma la base stessa della fiducia. Le modalità di accesso, scambio e conservazione dei file devono essere definite e concordate in base agli strumenti del cliente e ai dati trattati.</p>
       
-      <p>Se vuoi strutturare la tua organizzazione operativa in modo sicuro, professionale e trasparente, <a href="/it/contatti#contact-section" class="text-primary font-bold hover:underline">scrivimi per una valutazione e un preventivo</a>: analizzeremo le tue esigenze di sicurezza e imposteremo insieme un metodo di lavoro a prova di rischio.</p>
+      <h3>Il caso concreto: affidare l'accesso a una casella condivisa</h3><p>Prendiamo una professionista che desidera delegare la gestione delle email organizzative. La soluzione non è consegnare la password del proprio account personale. Dove il servizio lo consente, è preferibile attribuire un accesso dedicato, limitato alla casella o alle funzioni necessarie. Prima di iniziare si chiariscono le categorie di messaggi che possono essere lette, quelle che devono restare riservate, le risposte consentite e le informazioni che richiedono l'approvazione del titolare.</p><p>Per i documenti condivisi vale lo stesso principio: una cartella con accesso specifico per l'incarico è più controllabile di un intero archivio aperto a chiunque abbia il collegamento. Quando la collaborazione termina, è opportuno verificare in modo ordinato la revoca degli accessi, la restituzione del materiale e la gestione delle eventuali copie autorizzate, secondo gli accordi stipulati.</p><h3>La riservatezza richiede anche buone abitudini</h3><p>Gli strumenti contano, ma non sostituiscono procedure e responsabilità. Un messaggio indirizzato alla persona sbagliata, un allegato con dati non pertinenti o una bozza condivisa senza controllo possono creare problemi anche con un sistema tecnicamente sicuro. Per questo conviene stabilire regole su destinatari, autorizzazioni, conservazione e segnalazione degli incidenti. Gli obblighi applicabili in materia di protezione dei dati vanno valutati in base ai ruoli effettivi e al tipo di trattamento, con il supporto dei professionisti competenti quando necessario.</p>
+      <p>Se vuoi strutturare la tua organizzazione operativa in modo sicuro, professionale e trasparente, <a href="/it/contatti#contact-section" class="text-primary font-bold hover:underline">scrivimi per una valutazione e un preventivo</a>: analizzeremo le tue esigenze di sicurezza e imposteremo insieme un metodo di collaborazione con responsabilità e controlli chiari.</p>
     `
+  },
+  {
+    id: 15,
+    slug: "richieste-clienti-italiani-risposte-scritte",
+    title: "Richieste dei clienti italiani: dal messaggio alla risposta approvata",
+    excerpt: "Un metodo concreto per seguire le richieste dei clienti già acquisiti, preparare risposte in italiano e sapere quando serve un'autorizzazione.",
+    date: "26 ottobre 2026",
+    dateISO: "2026-10-26",
+    category: "Assistenza clienti e Comunicazione",
+    image: "https://images.unsplash.com/photo-1743796055651-41c743ff2465?auto=format&fit=crop&w=1200&q=75",
+    alt: "Persona che prepara una risposta scritta accanto al computer",
+    content: `
+      <p>Quando un cliente scrive per avere aggiornamenti su una consegna, chiarire una condizione già concordata o spostare un appuntamento, la qualità del servizio dipende anche da come viene gestito il messaggio. Una risposta rapida ma imprecisa può creare più lavoro di una risposta preparata con metodo.</p>
+      <p>Per un professionista che lavora con clienti in Italia, il problema non è soltanto tradurre correttamente. Occorre riconoscere il tipo di richiesta, recuperare l'informazione approvata e usare un italiano naturale, con il registro adatto al destinatario.</p>
+      <h2>1. Classificare la richiesta prima di rispondere</h2>
+      <p>Un primo controllo permette di distinguere le comunicazioni ordinarie dai casi che richiedono una decisione. Le richieste più comuni possono riguardare appuntamenti, documentazione, stato di un ordine, informazioni su servizi già acquistati o chiarimenti su messaggi precedenti.</p>
+      <p>Un registro operativo essenziale può includere: riferimento della richiesta, data di arrivo, cliente, argomento, informazione da verificare, persona responsabile, stato della risposta e data del prossimo controllo. Non è necessario un software complesso: conta che le informazioni siano reperibili e aggiornate.</p>
+      <h2>2. Separare fatti verificati, bozze e decisioni</h2>
+      <p>Prima di scrivere, occorre sapere da dove proviene ogni dato. Una data di consegna non ancora confermata, per esempio, non va presentata come definitiva. Lo stesso vale per prezzi, modifiche contrattuali, condizioni commerciali ed eccezioni alla procedura.</p>
+      <ul>
+        <li><strong>Informazioni confermate:</strong> possono essere utilizzate secondo le istruzioni ricevute.</li>
+        <li><strong>Informazioni da controllare:</strong> vanno segnalate al referente e non devono diventare promesse al cliente.</li>
+        <li><strong>Decisioni riservate al titolare:</strong> richiedono un'approvazione esplicita prima dell'invio.</li>
+      </ul>
+      <h2>3. Scrivere in italiano con chiarezza e misura</h2>
+      <p>Una buona risposta professionale indica il motivo del messaggio, ciò che si sa davvero e il passo successivo. È preferibile una frase diretta a formule eccessivamente solenni o tradotte alla lettera da un'altra lingua. Il tono, naturalmente, dipende dal rapporto con il cliente e dal settore.</p>
+      <p><strong>Esempio dimostrativo:</strong> un cliente italiano chiede quando riceverà la documentazione necessaria per avviare un servizio. La data non è stata ancora approvata dal referente. Una possibile bozza è:</p>
+      <blockquote><p>Buongiorno, grazie per il messaggio. Abbiamo preso in carico la sua richiesta e stiamo verificando la disponibilità della documentazione. Le invieremo un aggiornamento non appena avremo ricevuto conferma dal referente. Cordiali saluti.</p></blockquote>
+      <p>Questo testo è un esempio originale creato per illustrare un metodo di lavoro: non è una comunicazione inviata a un cliente reale. Prima di utilizzarlo occorre verificare che rispecchi le procedure e la voce dell'azienda.</p>
+      <h2>4. Registrare il seguito della comunicazione</h2>
+      <p>Il lavoro non termina quando la bozza è pronta. Bisogna indicare chi deve approvarla, se è stata inviata, quale risposta si attende e quando ricontrollare. Una voce di registro potrebbe essere: «IT-021 · documentazione del servizio · conferma interna in attesa · bozza preparata · invio non autorizzato».</p>
+      <p>Un controllo conclusivo evita i problemi più comuni: destinatario sbagliato, allegato mancante, promessa non approvata, duplicazione di un messaggio o richiesta lasciata senza seguito.</p>
+      <h2>Che cosa può delegare un'azienda</h2>
+      <p>Un'assistente virtuale che lavora in italiano può organizzare la casella di posta concordata, classificare richieste di clienti esistenti, preparare risposte, aggiornare registri e segnalare ciò che necessita di una decisione. Non deve invece inventare condizioni, negoziare senza mandato o occuparsi di acquisizione di nuovi clienti.</p>
+      <h3>Un esempio di risposta approvata, senza promesse involontarie</h3><p>Un cliente italiano scrive: «Ho inviato i documenti lunedì, mi confermate che riceverò tutto entro venerdì?». Se la data non è stata confermata dal responsabile, rispondere «Certamente, entro venerdì» trasformerebbe un'aspettativa in un impegno. Una bozza più corretta può essere: «Buongiorno, grazie per il messaggio. Abbiamo ricevuto la documentazione e stiamo verificando con il referente le tempistiche previste. Le daremo un aggiornamento non appena avremo una conferma». Anche questo testo deve rispettare i fatti disponibili e le regole approvate dall'attività.</p><p>La qualità della risposta si misura anche nel seguito: chi effettua la verifica? Entro quando? Dove viene annotata la richiesta aperta? Una comunicazione cortese ma priva di un responsabile rischia di restare sospesa. Per questo è utile collegare ogni messaggio a una semplice scadenza di controllo, senza inventare date da comunicare al cliente.</p>
+      <p>Se lavori con interlocutori italiani, possiamo definire un incarico circoscritto: tipologie di messaggi, strumenti autorizzati, modelli, controlli, tempi e responsabili. <a href="/it/contatti#contact-section">Richiedi un preventivo</a> per il supporto scritto e operativo di cui hai bisogno.</p>
+    `,
+  },
+  {
+    id: 16,
+    slug: "ordini-listini-preventivi-controlli-operativi",
+    title: "Ordini, listini e preventivi: organizzare i dati senza equivoci",
+    excerpt: "Come preparare documenti operativi coerenti, controllare versioni e informazioni approvate e gestire i passaggi che richiedono una conferma.",
+    date: "9 novembre 2026",
+    dateISO: "2026-11-09",
+    category: "Back office e Organizzazione",
+    image: "https://images.unsplash.com/photo-1762341112870-1eb70d45b23e?auto=format&fit=crop&w=1200&q=75",
+    alt: "Persona che controlla documenti e appunti su una scrivania",
+    content: `
+      <p>Un listino aggiornato, una richiesta d'ordine o una bozza di preventivo possono sembrare documenti semplici. Eppure, quando i dati sono distribuiti fra email, file e annotazioni, basta utilizzare una versione superata per creare un'informazione incoerente.</p>
+      <p>Il back office operativo aiuta a mantenere ordinati questi passaggi. Non significa occuparsi di contabilità o fatturazione: si tratta di lavorare su informazioni e documenti relativi ad attività commerciali già avviate, seguendo condizioni e istruzioni approvate dal responsabile.</p>
+      <h2>Partire da un'unica fonte di informazioni approvate</h2>
+      <p>Prima di preparare un documento, è utile identificare il file di riferimento e la persona che può confermarne il contenuto. Prezzi, disponibilità, specifiche del servizio, tempi e condizioni devono provenire da fonti riconoscibili, non da ricordi o conversazioni isolate.</p>
+      <ul>
+        <li><strong>Listino di riferimento:</strong> nome del file, versione, data dell'ultimo aggiornamento e approvazione.</li>
+        <li><strong>Richiesta ricevuta:</strong> identificativo, cliente già acquisito, oggetto e informazioni necessarie.</li>
+        <li><strong>Documento di lavoro:</strong> bozza distinta dalla versione approvata e da quella effettivamente inviata.</li>
+        <li><strong>Controlli:</strong> campi mancanti, incongruenze e domande da sottoporre al referente.</li>
+      </ul>
+      <h2>Un piccolo flusso di lavoro in cinque passaggi</h2>
+      <ol>
+        <li><strong>Ricezione.</strong> Registrare la richiesta e collegarla ai documenti autorizzati.</li>
+        <li><strong>Verifica.</strong> Controllare descrizioni, quantità, codici, riferimenti e versione del listino.</li>
+        <li><strong>Preparazione.</strong> Compilare una bozza con dati già confermati, indicando chiaramente ciò che manca.</li>
+        <li><strong>Approvazione.</strong> Inoltrare al referente le decisioni commerciali, le variazioni e le eccezioni.</li>
+        <li><strong>Tracciamento.</strong> Conservare la versione autorizzata e annotare l'eventuale invio o seguito.</li>
+      </ol>
+      <p>Questo flusso non stabilisce automaticamente quale sistema usare. Per alcune attività è sufficiente un foglio di calcolo ben strutturato; per altre è più adatto il gestionale già in uso. L'importante è evitare di mantenere più archivi indipendenti e non sincronizzati.</p>
+      <h2>Esempio operativo: una richiesta da un cliente italiano</h2>
+      <p>Immaginiamo che un cliente già acquisito chieda una proposta per un servizio aggiuntivo. Nelle email precedenti compare un prezzo, ma nel listino aggiornato è indicata una diversa tariffa. L'assistente non sceglie autonomamente quale applicare: registra l'incongruenza, collega le due fonti e prepara una richiesta di chiarimento.</p>
+      <p><strong>Nota interna dimostrativa:</strong> «RIF-042 · richiesta ricevuta il 9/11 · descrizione verificata · tariffa da confermare fra listino v3 e precedente comunicazione · bozza non inviata · referente avvisato».</p>
+      <p>È un caso interamente fittizio, pensato per mostrare il contenuto di un possibile registro operativo. Non è un progetto svolto per un cliente reale.</p>
+      <h2>Quando la comunicazione è in più lingue</h2>
+      <p>Se la richiesta proviene da un'azienda estera che lavora con l'Italia, oltre al controllo dei dati serve attenzione alla terminologia. Lo stesso servizio deve avere una descrizione coerente nel listino, nella proposta e nel messaggio al cliente. Tradurre letteralmente espressioni commerciali può produrre ambiguità: occorre usare il lessico adatto al settore e al destinatario italiano.</p>
+      <h2>Che cosa rientra nel supporto operativo</h2>
+      <p>Posso aiutare a organizzare dati e documenti, aggiornare registri e listini secondo istruzioni approvate, preparare bozze operative di ordini e preventivi e curare la corrispondenza con clienti già acquisiti. Rimangono esclusi contabilità, fatturazione, consulenza fiscale, negoziazioni non autorizzate e ricerca di potenziali clienti.</p>
+      <h3>Il controllo incrociato prima di inviare un documento</h3><p>Consideriamo una richiesta di preventivo da parte di un cliente già acquisito. Nel messaggio compare un nome commerciale del servizio diverso da quello indicato nell'ultimo listino. Prima di compilare una bozza è opportuno verificare se si tratta di un cambio di denominazione, di una vecchia versione del documento o di una prestazione distinta. Il supporto operativo può mettere a confronto le fonti, evidenziare l'incongruenza e chiedere conferma: non deve scegliere autonomamente un prezzo né presumere condizioni commerciali.</p><p>Un ultimo controllo distingue i dati ricevuti da quelli verificati, conferma il destinatario e controlla la presenza di allegati corretti. Se sono coinvolte più lingue, è importante confrontare non solo il lessico, ma anche codici, unità di misura, descrizioni e tempi: un testo linguisticamente fluido può comunque contenere un errore operativo. Il documento definitivo dovrebbe essere identificabile e conservato secondo le istruzioni del cliente, evitando che una bozza venga scambiata per una proposta approvata.</p>
+      <p>Prima di iniziare definiamo quali informazioni posso consultare, quali modelli utilizzare, quali documenti preparare e quali decisioni devono restare a te. <a href="/it/contatti#contact-section">Richiedi un preventivo</a> per un supporto di back office commisurato alle tue esigenze.</p>
+    `,
   }
 ];
 
@@ -996,6 +1079,7 @@ import { enBlogContent } from './blogLocalizedEn';
 import { frBlogContent } from './blogLocalizedFr';
 import { esBlogContent } from './blogLocalizedEs';
 import type { LocalizedBlogCopy } from './blogLocalizationTypes';
+import { BLOG_PHOTOGRAPHS } from './blogPhotography';
 
 const LOCALIZED_COPY: Record<'en' | 'fr' | 'es', Record<number, LocalizedBlogCopy>> = {
   en: enBlogContent,
@@ -1011,16 +1095,33 @@ export function getBlogPostPath(slug: string, lang: Language): string {
   return `${getBlogIndexPath(lang)}/${slug}`;
 }
 
-export const getAllBlogPosts = () => itPosts;
+/**
+ * Each article has exactly one authenticated photographic source (across all
+ * languages), with localized descriptive alt text and verifiable attribution.
+ */
+function withEditorialPhoto<T extends {id:number}>(post:T,lang:Language) {
+  const photo=BLOG_PHOTOGRAPHS[post.id];
+  if(!photo)throw new Error(`Missing verified photograph for blog article ${post.id}`);
+  return {
+    ...post,
+    image:photo.url,
+    alt:photo.alt[lang],
+    photoSource:photo.sourceUrl,
+    photoCredit:photo.photographer,
+    photoLicense:photo.license,
+  };
+}
+export const getAllBlogPosts = () => getBlogPosts('it');
 
 export function getBlogPosts(language: string = 'it') {
-  if (language !== 'en' && language !== 'fr' && language !== 'es') return itPosts;
+  if (language !== 'en' && language !== 'fr' && language !== 'es')
+    return itPosts.map(base=>withEditorialPhoto(base,'it'));
   const dictionary = LOCALIZED_COPY[language];
   return itPosts.map((base) => {
     const local = dictionary[base.id];
     // Never silently advertise Italian copy as translated content.
     if (!local) throw new Error(`Missing ${language} editorial adaptation for article ${base.id}`);
-    return { ...base, ...local, alt: local.title };
+    return withEditorialPhoto({ ...base, ...local },language);
   });
 }
 

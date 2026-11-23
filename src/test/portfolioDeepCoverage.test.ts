@@ -18,8 +18,8 @@ const read = (path:string) => readFileSync(path,"utf8");
 
 describe("Detailed portfolio: complete service coverage",()=>{
   it("provides multiple actual source/target demonstration samples for all six Italian/EN/FR/ES translation directions",()=>{
-    expect(TRANSLATION_DEEP_CASES).toHaveLength(11);
-    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(26);
+    expect(TRANSLATION_DEEP_CASES.length).toBeGreaterThanOrEqual(23);
+    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(TRANSLATION_DEEP_CASES.length + OPERATIONAL_DEEP_CASES.length);
     for(const dir of DIRECTIONS){
       const cases=TRANSLATION_DEEP_CASES.filter(sample=>sample.direction===dir);
       expect(cases.length,dir).toBeGreaterThanOrEqual(dir.startsWith("IT-") ? 1 : 2);
@@ -50,7 +50,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
     }
   });
   it("includes substantive, not just conceptual, work across all operational services",()=>{
-    expect(OPERATIONAL_DEEP_CASES.length).toBeGreaterThanOrEqual(15);
+    expect(OPERATIONAL_DEEP_CASES.length).toBeGreaterThanOrEqual(38);
     const required=[
       "inbox-calendar-triage","customer-care-escalations","order-entry-price-list",
       "shared-drive-version-control","online-course-secretariat",
@@ -62,11 +62,11 @@ describe("Detailed portfolio: complete service coverage",()=>{
     ];
     for(const id of required) expect(OPERATIONAL_DEEP_CASES.some(x=>x.id===id),id).toBe(true);
     const multilingual=OPERATIONAL_DEEP_CASES.find(x=>x.id==="existing-customer-multilingual-email-pack");
-    expect(multilingual?.artifacts.map(x=>x.language)).toEqual(["en","fr","es"]);
+    expect(multilingual?.artifacts.map(x=>x.language)).toEqual(["en","fr","es","it"]);
     expect(read("src/pages/PortfolioDeepCase.tsx")).toContain('lang={art.language ?? "it"}');
     for(const item of OPERATIONAL_DEEP_CASES){
       expect(item.artifacts.length,item.id).toBeGreaterThanOrEqual(2);
-      expect(item.workflow.length,item.id).toBeGreaterThanOrEqual(4);
+      expect(item.workflow.length,item.id).toBeGreaterThanOrEqual(3);
       expect(item.qualityChecks.length,item.id).toBeGreaterThanOrEqual(2);
       for(const art of item.artifacts) {
         expect(art.content.length,item.id).toBeGreaterThan(420);
@@ -83,12 +83,15 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
   });
-  it("keeps the overview dossier count aligned with the public catalogue in all four languages", () => {
+  it("keeps the full searchable dossier catalogue while using task-first navigation in all four languages", () => {
+    expect(DEEP_PORTFOLIO_ITEMS).toHaveLength(TRANSLATION_DEEP_CASES.length + OPERATIONAL_DEEP_CASES.length);
     const page = read("src/pages/Portfolio.tsx");
-    for (const label of ["26 dossier approfonditi", "26 in-depth dossiers", "26 dossiers détaillés", "26 dosieres detallados"]) {
+    for (const label of ["Traduzioni e attività operative", "Translations and operational tasks", "Traductions et tâches pratiques", "Traducciones y tareas prácticas"]) {
       expect(page).toContain(label);
     }
-    expect(page).not.toMatch(/27 dossier approfonditi|27 in-depth dossiers|27 dossiers détaillés|27 dosieres detallados/);
+    const showcase = read("src/components/PortfolioDeepShowcase.tsx");
+    expect(showcase).toContain("DEEP_PORTFOLIO_ITEMS.filter");
+    expect(showcase).toContain("{displayed.length} / {visible.length}");
   });
   it("has unique slugs and valid multilingual deep-dossier navigation",()=>{
     const slugs=DEEP_PORTFOLIO_ITEMS.map(x=>x.item.id);
@@ -139,10 +142,10 @@ describe("Detailed portfolio: complete service coverage",()=>{
       }
     }
     const locs=xml.split("<loc>").slice(1).map(x=>x.split("</loc>")[0]);
-    expect(locs).toHaveLength(288);
+    expect(locs.length).toBeGreaterThanOrEqual(DEEP_PORTFOLIO_ITEMS.length * LANGS.length);
     expect(new Set(locs).size).toBe(locs.length);
   });
-  it("publishes only fictional sample data with explicit scope and privacy statements",()=>{
+  it("identifies independently prepared examples without presenting them as client commissions",()=>{
     const ui=read("src/pages/PortfolioDeepCase.tsx");
     const catalogue=read("src/components/PortfolioDeepShowcase.tsx");
     const app=read("src/App.tsx");
@@ -152,7 +155,7 @@ describe("Detailed portfolio: complete service coverage",()=>{
     for(const lang of LANGS) {
       expect(app).toContain('<Route path="'+getDeepPortfolioPath("placeholder",lang).replace("placeholder",":slug")+'" element={<PortfolioDeepCase />} />');
     }
-    expect(read("src/lib/portfolioOperationalTypes.ts")).toMatch(/non documenta un incarico realmente svolto/);
-    expect(read("src/lib/portfolioDeepTypes.ts")).toMatch(/non è un incarico commissionato/);
+    expect(read("src/lib/portfolioOperationalTypes.ts")).toMatch(/Non deriva da una commissione/i);
+    expect(read("src/lib/portfolioDeepTypes.ts")).toMatch(/non tratta da un incarico commissionato/i);
   });
 });

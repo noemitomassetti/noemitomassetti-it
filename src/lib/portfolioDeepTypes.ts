@@ -24,12 +24,12 @@ export interface TranslationDeepCase {
   output: Localised;
 }
 
-/** Demonstrations only: all companies, products, dates and correspondence are invented. */
+/** Original source-and-target translation work; not commissioned client projects. */
 export const TRANSLATION_SAMPLE_NOTICE: Localised = {
-  it: "Esercizio professionale originale con brand, testi e dati fittizi: non è un incarico commissionato da un cliente né una testimonianza. Il confronto illustra scelte traduttive e non certifica una revisione esterna.",
-  en: "An original professional demonstration using fictional brands, texts and details: not a commissioned client project or testimonial. The comparison illustrates translation decisions; it does not certify external proofreading.",
-  fr: "Démonstration professionnelle originale à partir de marques, de textes et de données fictifs : ni mission réelle ni témoignage. La comparaison illustre les choix de traduction et n’atteste pas une révision externe.",
-  es: "Muestra profesional original con marcas, textos y datos ficticios: no es un encargo real ni un testimonio. La comparación explica decisiones traductoras y no acredita una revisión externa."
+  it: "Traduzione originale preparata per questo portfolio, non tratta da un incarico commissionato. I testi di partenza sono originali; le note illustrano le scelte linguistiche senza attestare revisioni esterne.",
+  en: "Original translation prepared for this portfolio, not a client commission. The source material is original; the notes explain translation decisions without implying independent proofreading.",
+  fr: "Traduction originale préparée pour ce portfolio, hors commande client. Le texte source est original ; les commentaires présentent les choix linguistiques sans prétendre à une relecture externe.",
+  es: "Traducción original preparada para este portfolio, no procedente de un encargo. El texto de partida es original y las notas explican las decisiones lingüísticas sin atribuir una revisión externa."
 };
 
 export const DIRECTION_LABELS: Record<PublicTranslationDirection, string> = {

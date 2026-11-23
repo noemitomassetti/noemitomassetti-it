@@ -1,0 +1,30 @@
+name: Cloudflare portability dry-run (NO DEPLOY)
+on:
+  push:
+    branches:
+      - 'chatgpt/final-quality-polish-2026-11-10'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cloudflare-portability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install existing site dependencies
+        run: npm install --no-audit --no-fund
+      - name: Generate static SEO site and legacy Cloudflare routes
+        run: npm run build:cloudflare
+      - name: Verify Worker gateway configuration, no billing keys and SEO redirects
+        run: node scripts/check-cloudflare-config.cjs
+      - name: Compile Cloudflare Worker without publishing
+        run: |
+          npx --yes wrangler@4 deploy --dry-run --outdir /tmp/noetom-cloudflare-bundle
+          test -d /tmp/noetom-cloudflare-bundle
+          echo 'PASS Wrangler --dry-run: no account login, no network deployment, no DNS change'

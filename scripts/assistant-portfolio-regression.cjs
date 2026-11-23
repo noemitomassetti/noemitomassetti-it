@@ -21,7 +21,7 @@ const cases=[
  ['Si può avere un pacchetto di assistenza?', undefined],
  ['Gestione ordini clienti e dati CRM', undefined],
  ['Mi serve la dichiarazione dei redditi', undefined],
- ['How much does translation cost?', undefined],
+ ['How much does translation cost?', 'translation'],
 ];
 for(const [input,service] of cases){const x=recognizeIntent(input);assert.equal(x.serviceKey,service,`${input}: ${x.serviceKey}`);for(const l of ['it','en','fr','es'])assert.ok(x.explanation[l].length>35,`${l}: ${input}`)}
 for(const input of ['fiscal returns for a client','voglio pagare l F24']) assert.equal(recognizeIntent(input).isScopeExcluded,true,input);

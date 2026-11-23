@@ -26,19 +26,20 @@ describe('Pre-release editorial and multilingual integrity checks', () => {
     }
   });
 
-  it('limits the digital assistant translation choices to English, French and Spanish into Italian', () => {
+  it('supports translation between Italian and each of English, French and Spanish in both directions', () => {
     const choices = INTAKE_SCHEMAS.translation.questions.find((q) => q.id === 'language_pair')?.choices;
-    expect(choices?.map((choice) => choice.id)).toEqual(['en_to_it', 'fr_to_it', 'es_to_it']);
+    expect(choices?.map((choice) => choice.id)).toEqual(['en_to_it', 'fr_to_it', 'es_to_it', 'it_to_en', 'it_to_fr', 'it_to_es']);
     expect(choices?.every((choice) => choice.label.it.includes('Italiano'))).toBe(true);
   });
 
-  it('does not offer translation in the opposite direction in international service descriptions', () => {
+  it('describes bidirectional translations in all international service descriptions', () => {
     for (const lang of ['en', 'fr', 'es'] as const) {
       const category = getDictionary(lang).servicesSection.categories.find((service) => service.id === 'translation-localization');
       expect(category).toBeDefined();
       const description = category?.description ?? '';
       expect(description.length).toBeGreaterThan(100);
-      expect(description).not.toMatch(/to and from Italian|depuis et vers l.italien|desde y hacia el italiano/i);
+      expect(description).toMatch(/Italian|italien|italiano/i);
+      expect(description).toMatch(/English|anglais|ingl[eé]s/i);
     }
   });
 

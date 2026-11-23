@@ -139,13 +139,14 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
         currentLang === "it"
           ? "Localizzazione IT"
           : currentLang === "fr"
-          ? "Localisation Italien"
+          ? "Localisation en italien"
           : currentLang === "es"
-          ? "Localización Italiano"
+          ? "Localización al italiano"
           : "Italian Localisation",
       isPage: true,
-      badge: currentLang === "it" ? undefined : "Flagship",
+      badge: undefined,
     },
+    ...(currentLang === "it" ? [{ href: "/it/tutor-apprendimento", label: "Tutor dell’apprendimento", isPage: true }] : []),
     { href: portfolioPath, label: currentLang === "it" ? "Esempi di Lavoro" : currentLang === "fr" ? "Exemples de Projets" : currentLang === "es" ? "Ejemplos de Trabajo" : "Work Examples", isPage: true },
     { href: resourcesPath, label: currentLang === "it" ? "Risorse" : currentLang === "fr" ? "Ressources" : currentLang === "es" ? "Recursos" : "Resources", isPage: true },
     ...(PUBLICATIONS_VISIBLE ? [{ href: getLocalizedPath("publications", currentLang),
@@ -203,6 +204,9 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
             className="hidden xl:flex 2xl:hidden items-center gap-3 text-sm whitespace-nowrap"
           >
             <Link to={getLocalizedPath("services", currentLang)} className="font-medium text-foreground/80 hover:text-primary">{dict.nav.services}</Link>
+            {currentLang === "it" && (
+              <Link to="/it/tutor-apprendimento" className="font-medium text-foreground/80 hover:text-primary">Tutor dell’apprendimento</Link>
+            )}
             <Link to={portfolioPath} className="font-medium text-foreground/80 hover:text-primary">{navLinks.find(item => item.href === portfolioPath)?.label}</Link>
             <Link to={getLocalizedPath("contact", currentLang)} className="font-medium text-foreground/80 hover:text-primary">{dict.nav.contact}</Link>
           </nav>
@@ -253,7 +257,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
                   href="https://www.instagram.com/noemitomassetti_va"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram Profile"
+                  aria-label={currentLang === "it" ? "Profilo Instagram" : currentLang === "fr" ? "Profil Instagram" : currentLang === "es" ? "Perfil de Instagram" : "Instagram profile"}
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
@@ -268,7 +272,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
                   href="https://www.facebook.com/profile.php?id=61588891083364"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Facebook Page"
+                  aria-label={currentLang === "it" ? "Pagina Facebook" : currentLang === "fr" ? "Page Facebook" : currentLang === "es" ? "Página de Facebook" : "Facebook page"}
                 >
                   <Facebook className="h-4 w-4" />
                 </a>
@@ -283,7 +287,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
                   href="https://www.linkedin.com/in/noemi-tomassetti/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn Profile"
+                  aria-label={currentLang === "it" ? "Profilo LinkedIn" : currentLang === "fr" ? "Profil LinkedIn" : currentLang === "es" ? "Perfil de LinkedIn" : "LinkedIn profile"}
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -304,7 +308,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
                         ? "text-primary font-bold"
                         : "text-muted-foreground hover:text-foreground"
                     )}
-                    aria-label={`Switch language to ${langCode.toUpperCase()}`}
+                    aria-label={`${currentLang === "it" ? "Passa alla lingua" : currentLang === "fr" ? "Changer la langue vers" : currentLang === "es" ? "Cambiar idioma a" : "Switch language to"} ${langCode === "it" ? "Italiano" : langCode === "fr" ? "Français" : langCode === "es" ? "Español" : "English"}`}
                   >
                     {langCode}
                   </button>
@@ -516,7 +520,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
                   href="https://www.instagram.com/noemitomassetti_va"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Profilo Instagram"
+                  aria-label={currentLang === "it" ? "Profilo Instagram" : currentLang === "fr" ? "Profil Instagram" : currentLang === "es" ? "Perfil de Instagram" : "Instagram profile"}
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
@@ -531,7 +535,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
                   href="https://www.facebook.com/profile.php?id=61588891083364"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Pagina Facebook"
+                  aria-label={currentLang === "it" ? "Pagina Facebook" : currentLang === "fr" ? "Page Facebook" : currentLang === "es" ? "Página de Facebook" : "Facebook page"}
                 >
                   <Facebook className="h-4 w-4" />
                 </a>
@@ -546,7 +550,7 @@ export const Layout = ({ children, lang: explicitLang }: LayoutProps) => {
                   href="https://www.linkedin.com/in/noemi-tomassetti/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Profilo LinkedIn"
+                  aria-label={currentLang === "it" ? "Profilo LinkedIn" : currentLang === "fr" ? "Profil LinkedIn" : currentLang === "es" ? "Perfil de LinkedIn" : "LinkedIn profile"}
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>

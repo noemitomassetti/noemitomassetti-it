@@ -6,7 +6,7 @@ export interface OperationalArtifact {
   title: Localised;
   /** Work sample can be in Italian or another displayed language. */
   language?: "it" | "en" | "fr" | "es";
-  /** Demonstration deliverable, always labelled as fictional. */
+  /** Demonstration deliverable, always labelled as illustrative. */
   content: string;
   explanation: Localised;
 }
@@ -26,10 +26,10 @@ export interface OperationalDeepCase {
   handoff: Localised;
 }
 
-/** Not a client testimonial or real project. No customer records are disclosed. */
+/** Independently authored operations samples: no real customer records are disclosed. */
 export const OPERATIONAL_NOTICE: Localised = {
-  it: "Caso dimostrativo originale con situazioni, aziende, corrispondenza e dati inventati: non documenta un incarico realmente svolto. I materiali dei clienti non vengono pubblicati senza autorizzazione; riservatezza e minimizzazione dei dati restano centrali nel lavoro.",
-  en: "An original fictional work sample, not a client commission or testimonial. Names, emails, orders and other details are invented. Client materials are not published without permission; confidentiality and data minimisation are essential.",
-  fr: "Exemple original fictif, et non mission client ou témoignage. Entreprises, messages et données sont inventés. Aucun document client n’est publié sans autorisation ; la confidentialité et la minimisation des données sont essentielles.",
-  es: "Ejemplo original ficticio, no un encargo real ni un testimonio. Empresas, correos y datos son inventados. Los materiales de clientes no se publican sin autorización; la confidencialidad y la minimización de datos son esenciales."
+  it: "Elaborato originale realizzato per illustrare un incarico operativo e il mio metodo di lavoro. Non deriva da una commissione e non utilizza dati di clienti reali.",
+  en: "Original operational sample prepared to demonstrate my working method. It is not commissioned client work and contains no real customer records.",
+  fr: "Exemple opérationnel original illustrant ma méthode de travail. Il ne provient pas d’une commande de client et ne contient aucune donnée de clients réels.",
+  es: "Trabajo operativo original que muestra mi método. No procede de un encargo ni utiliza datos de clientes reales."
 };

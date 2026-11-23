@@ -24,7 +24,7 @@ const cases=[
  ['Quanto costa il servizio?', 'it','stima indicativa'],
  ['Vorrei la dichiarazione dei redditi', 'it','Non offro contabilità'],
  ['Can you build a website?', 'en','not a standard listed service'],
- ['Vorrei tradurre una brochure dal francese in italiano','it','Traduzione'],
+ ['Vorrei tradurre una brochure dal francese in italiano','it','Traduco tra italiano'],
 ];
 for(const [query,lang,needle] of cases){const r=recognize(query);assert.ok(r.explanation[lang].includes(needle),`${query}: ${r.explanation[lang]}`);}
 console.log(`PASS ${cases.length} assistant FAQ and service scope tests`);

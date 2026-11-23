@@ -19,7 +19,7 @@ describe('Blog article #3 free-plan claims', () => {
   });
 
   it('uses accurate digital-tool titles in the other three languages', () => {
-    expect(getBlogPosts('en').find(post => post.id === 3)?.title).toBe('Five digital tools for organising customer work and appointments');
+    expect(getBlogPosts('en').find(post => post.id === 3)?.title).toBe('Five digital tools for managing client work and appointments');
     expect(getBlogPosts('fr').find(post => post.id === 3)?.title).toBe('Cinq outils numériques pour organiser le suivi client et les rendez-vous');
     expect(getBlogPosts('es').find(post => post.id === 3)?.title).toBe('Cinco herramientas digitales para organizar el trabajo con clientes y citas');
   });
